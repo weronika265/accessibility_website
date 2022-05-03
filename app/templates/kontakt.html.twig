@@ -1,0 +1,57 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    Kontakt
+{% endblock %}
+
+{% block body %}
+    {% include 'header.html.twig' %}
+    <main id="main" class="page">
+        <h2>Skontaktuj się</h2>
+        <form>
+            <div class="align-left" style="padding: 0; flex-wrap: wrap;">
+                <div class="space-right">
+                    <label for="name">Imię</label><br/>
+                    <input type="text" id="name" name="name"/><br/>
+                    <label for="email">Email</label><br/>
+                    <input type="email" id="email" name="email"/><br/>
+                    <label for="subject">Temat wiadomości</label><br/>
+                    <input type="textarea" id="subject" name="subject"/><br/>
+                </div>
+                <div>
+                    <label for="message">Treść wiadomości</label><br/>
+                    <textarea type="message" id="message" name="message" rows="14" cols="35"></textarea><br/>
+                </div>
+            </div>
+            <input type="submit" value="Wyślij" class="center-item-send" style="padding: 0.5em 3em;"/>
+        </form>
+        <article >
+            <h2>Opinie o serwisie</h2>
+            <div class="indent" style="flex-wrap: wrap;">
+                <section class="opinion">
+                    <inline class="user-info">Tomasz, 16.02.2022</inline>
+                    <div class="message-style">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </div>
+                </section>
+                <section class="opinion">
+                    <inline class="user-info">Tomasz, 16.02.2022</inline>
+                    <div class="message-style">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </div>
+                </section>
+                <section class="opinion">
+                    <inline class="user-info">Tomasz, 16.02.2022</inline>
+                    <div class="message-style">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </div>
+                </section>
+            </div>
+            <form>
+                <textarea type="opinion-field" id="opinion-field" name="opinion-field" rows="10" cols="70"></textarea><br/>
+                <input type="submit" value="Dodaj opinię" class="center-item-opinion" style="padding: 0.5em 3em; margin-top: 1em;"/>
+            </form>
+        </article>
+    </main>
+    {% include 'footer.html.twig' %}
+{% endblock %}

@@ -1,0 +1,394 @@
+@import url("https://fonts.googleapis.com/css2?family=Assistant&family=DM+Sans&family=Varta&display=swap");
+
+/* strona glowna + base */
+html,
+body {
+    margin: 0;
+    padding: 0;
+    /* height: 100%; */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+h1 {
+    font-family: "DM Sans", sans-serif;
+    font-size: 3em;
+    -webkit-text-stroke: 0.5px black;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 1em;
+}
+h2 {
+    font-family: "Assistant", sans-serif;
+    font-weight: 600;
+    -webkit-text-stroke: 0.5px black;
+    font-size: 2.4em;
+    margin-block-start: 0.55em;
+    margin-block-end: 0.55em;
+    margin-top: 1em;
+}
+h3 {
+    font-family: "Assistant", sans-serif;
+    font-weight: 600;
+    font-size: 1em;
+    color: white;
+}
+ul {
+    padding-inline-start: 0;
+}
+a {
+    text-decoration: none;
+}
+#register,
+.button-style,
+button,
+input[type=submit] {
+    background-color: #4a9ce0;
+    border-radius: 90px;
+    padding: 1em 3em;
+    font-family: "Varta", sans-serif;
+    font-weight: 400;
+    font-size: 1.2rem;
+    -webkit-text-stroke: 0.2px black;
+    text-align: center;
+    text-decoration: none;
+    list-style-type: none;
+    border: none;
+}
+#skip-link {
+    font-family: "Varta", sans-serif;
+    padding: 4px;
+    position: absolute;
+    transform: translateY(-100%);
+}
+#skip-link:focus {
+    transform: translateY(0%);
+}
+#back {
+    background-color: #f5f5f5;
+    padding: 2em 0 2em 0;
+}
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-around;
+    background-color: #f5f5f5;
+}
+#user-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 1.3em 13em;
+    background-color: #1e7dcc;
+}
+#user-actions li {
+    display: inline;
+}
+#user-actions ul {
+    padding-top: 0.5em;
+}
+#user-actions ul #login {
+    background-color: transparent;
+}
+#logo {
+    display: inline;
+    padding-left: 0.1em;
+    width: 180px;
+    height: 75px;
+}
+.image {
+    object-fit: cover;
+    border-radius: 20px;
+    width: 385px;
+    height: 356px;
+    margin-top: 0.5em;
+}
+nav li {
+    display: inline-block;
+    margin: 0.7em 2em;
+    width: 7em;
+}
+.page {
+    display: flex;
+    flex-direction: column;
+    max-width: 1100px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+}
+article {
+    padding-block-end: 5em;
+}
+article p,
+article li,
+.font-styling {
+    font-family: "Varta", sans-serif;
+    font-weight: 400;
+    -webkit-text-stroke: 0.2px black;
+    font-size: 1.2em;
+    margin: 0;
+}
+#target {
+    margin-right: 8em;
+    margin-left: 8em;
+    text-align: center;
+    padding-top: 2em;
+}
+#beginning {
+    display: flex;
+    flex-flow: row-reverse;
+    justify-content: center;
+    margin-left: 7.5em;
+}
+#how-to-use,
+.content-right {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    flex-flow: row;
+    flex-direction: row;
+    padding-bottom: 5em;
+}
+.content-left,
+.content-right,
+.blank {
+    margin-bottom: 20px;
+    width: 100%;
+    padding-right: 5em;
+    padding-left: 5em;
+    margin-right: auto;
+    margin-left: auto;
+}
+.btn-description {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-bottom: 3em;
+}
+.btn-description p {
+    width: 25em;
+    margin-right: 3.5em;
+}
+.btn-description button {
+    border: none;
+    width: 17.3em;
+}
+footer {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+.data {
+    background-color: #66b4d85e;
+    -webkit-text-stroke: 0.5px black;
+}
+.important-text {
+    font-weight: 300;
+    -webkit-text-stroke: 1px black;
+}
+#info {
+    font-family: "Assistant";
+    font-weight: 500;
+    font-size: 1.4em;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color: #1e7dcc;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1.3em;
+    padding-bottom: 0.3em;
+}
+#author {
+    font-family: "Assistant";
+    font-weight: 400;
+    font-size: 0.9rem;
+    color: white;
+    background-color: #0957a7;
+    text-align: center;
+}
+#logo2 {
+    width: 87.4px;
+    height: 78.8px;
+}
+#a11y-options {
+    background-color: rgba(225, 225, 225);
+    z-index: 999;
+    position: fixed;
+    right: 0px;
+    top: 350px;
+    padding: 40px 2px 40px 2px;
+    border-radius: 8px 0 0 8px;
+    border: 1px solid rgb(194, 193, 193);
+}
+/* Po wciśnięciu przycisku */
+#a11y-options-extended {
+    background-color: rgba(225, 225, 225);
+    z-index: 999;
+    position: fixed;
+    right: 0px;
+    top: 350px;
+    padding: 40px 2px 40px 2px;
+    border-radius: 8px 0 0 8px;
+    border: 1px solid rgb(194, 193, 193);
+}
+
+#a11y-options img {
+    width: 50px;
+    height: 50px;
+}
+
+/* dla czytelnika */
+.list-clear-set {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    text-decoration: none;
+    list-style-type: none;
+    font-family: "Assistant";
+    font-weight: 400;
+    font-size: 1.1em;
+}
+.bg-list-clear {
+    background-color: rgb(166, 208, 244, 0.8);
+    padding: 1em;
+}
+.center-text {
+    text-align: center;
+}
+article ul {
+    margin-top: 0.3rem;
+    margin-bottom: 0.3rem;
+    margin-left: 3em;
+}
+.align-left {
+    display: flex;
+    /* flex-wrap: wrap; */
+    padding-left: 20em;
+    padding-right: 20em;
+    padding-bottom: 3.2em;
+    /*max-width: 1100px;*/
+}
+.align-right {
+    display: flex;
+    /* flex-wrap: wrap; */
+    flex-direction: row-reverse;
+    padding-left: 20em;
+    padding-right: 20em;
+    padding-top: 3.2em;
+    padding-bottom: 3.2em;
+    /* max-width: 1100px; */
+}
+.align-top {
+    display: flex;
+    /* flex-wrap: wrap; */
+    flex-direction: column;
+    align-items: center;
+    padding-left: 20em;
+    padding-right: 20em;
+    padding-top: 3.2em;
+    padding-bottom: 3.2em;
+}
+.centered-unaligned {
+    padding-left: 30em;
+    padding-right: 30em;
+    padding-top: 3.2em;
+    padding-bottom: 3.2em;
+    /* coś z margin */
+}
+/* przypisać align do koloru, żeby się powtarzało, bez wpisywania style w każdą sekcję ? */
+hr {
+    width: 70%;
+    margin-bottom: 1.5em;
+}
+label {
+    font-family: 'DM Sans', serif;
+    font-weight: bold;
+}
+input:not(input[type=submit]) {
+    width: 20em;
+    height: 2.9em;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-bottom: 2em;
+}
+form {
+    margin-left: 3em;
+}
+.space-right {
+    margin-right: 3em;
+}
+.center-item-send {
+    margin-left: 20%;
+}
+.center-item-opinion {
+    margin-left: 15%;
+}
+.opinion {
+    font-family: 'Assistant', serif;
+    font-size: 18px;
+/*    !!!!!!!!!!!!! to EM*/
+}
+.user-info {
+    font-weight: 600;
+}
+/* Why nth-child doesn't work */
+.message-style:nth-child(2n) {
+    background-color: #4A9CE0;
+    border-radius: 10px;
+    padding: 0.5em 1em;
+    margin-bottom: 1.5em;
+}
+.indent {
+    margin-left: 2.8em;
+}
+.font-styling {
+    margin-bottom: 1em;
+    max-width: 630px;
+}
+label {
+    font-size: 1.1em;
+}
+.inline-form-text {
+    font-family: 'DM Sans', serif;
+    font-size: 0.92em;
+}
+.inline-form-text strong {
+    color: #207ECC
+}
+#reg-log {
+    display: flex;
+    border: 1px solid black;
+    border-radius: 8px;
+    width: 450px;
+    /* left: 200px; */
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 5em auto 0 auto;
+}
+.qst-style {
+    font-family: 'Assistant', serif;
+    font-weight: 600;
+    font-size: 0.98em;
+}
+.submit-btn-space {
+    padding: 0.5em 3em;
+    margin-top: 1em;
+    margin-bottom: 2.5em;
+}
+/* Centered unaligned doesn't work properly (while resizing) becuse of paddings etc. ? */
+/* Footer nieresponsywny - naprawić */
+#reg-log form {
+    margin-left: 0;
+}
+.tighter {
+    /*padding-left: 50em;*/
+    /*padding-right: 50em;*/
+}

@@ -1,0 +1,92 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    Dla czytelnika
+{% endblock %}
+
+{% block body %}
+    {% include 'header.html.twig' %}
+    <main id="main">
+        <!-- sticky, appears on scrolling -->
+        <div class="bg-list-clear" style="position: -webkit-sticky; position: sticky; top: 0;">
+            <ul class="list-clear-set">
+
+                {# !!!! Odstęp między header a listą  + smooth scrolling !!!! #}
+                <li><a href="#dostepnosc">Dostępność stron internetowych</a></li>
+                <li><a href="#regulacje">Regulacje prawne</a></li>
+                <li><a href="#typy">Typy niepełnosprawności</a></li>
+                <li><a href="#technologie">Technologie asystujące</a></li>
+                <li><a href="#wcag">O WCAG</a></li>
+                <li><a href="#aria">O WAI-ARIA</a></li>
+                <li><a href="#wiecej">Co więcej na stronie</a></li>
+            </ul>
+        </div>
+        <article id="dostepnosc">
+            <!-- h1 ?? + dodać do section -->
+            <h2 class="center-text" style="background-color: #2880C9; padding-top: 1em; padding-bottom: 1em; margin: 0;">Dostępność stron internetowych</h2>
+            <!-- <hr/> -->
+            <!-- <div class="content-left"> -->
+            <section class="align-left tighter" style="background-color: #2880C9;">
+                <div>
+                    <p>
+                        Dostępność stron internetowych (eng. web accessibility) jest ważną, choć często pomijaną częścią projektów stron. Zakłada, że dostęp do przekazywanych informacji jest taki sam, bez względu na:
+                    <ul>
+                        <li>niepełnosprawności,</li>
+                        <li>sposób korzystania z Internetu,</li>
+                        <li>umiejętności, </li>
+                        <li>wiek.</li>
+                    </ul>
+                    </p>
+                </div>
+                <img src="{{ asset('img/disabled_lesson.jpg') }}" class="image" alt="Mężczyzna, który tłumaczy coś niewidzącej dziewczynce. Siedzą przy laptopie."/>
+            </section>
+            <section class="align-right tighter" style="background-color: rgb(40, 128, 201, 0.4)">
+                <div>
+                    <p>
+                        Dostępność stron nie zawsze jest traktowana poważnie. Wiele osób uznaje, że wystarczy dodać tekst alternatywy do obrazów lub szybko zmodyfikować stronę po jej ukończeniu.
+                        Prawda jest zupełnie inna – podczas projektowania musimy zastosować różne zabiegi, które uwzględnią nie tylko „standardowego” odbiorcę, ale także użytkownika, który m.in.:
+                    <ul>
+                        <li>nie korzysta z myszy,</li>
+                        <li>używa czytnika teksu, </li>
+                        <li>ma dysleksję lub wady wzroku, takie jak niedowidzenie lub daltonizm.</li>
+                    </ul>
+                    </p>
+                </div>
+                <img src="{{ asset('img/disabled_lesson.jpg') }}" class="image" alt="Mężczyzna, który tłumaczy coś niewidzącej dziewczynce. Siedzą przy laptopie."/>
+            </section>
+            <section class="align-top tighter" style="background-color: rgb(195, 195, 195, 0.4)">
+                <div>
+                    <p>
+                        Wprowadzenie elementów, których celem jest polepszenie dostępności, w początkowych fazach projektu nie są problemem.  W końcowej fazie – już tak, i są to inwestycje kosztowne.
+                    </p>
+                    <br/>
+                    <p>
+                        Internet nie jest miejscem idealnym, ale istnieją grupy, które pracują nad równym traktowaniem użytkowników sieci. Zajmują się one nie tylko szerzeniem świadomości o dostępności, ale także pokazaniem, że jest to istotny element dobrze zaprojektowanych stron.
+                    </p>
+                </div>
+                <img src="{{ asset('img/disabled_lesson.jpg') }}" class="image" alt="Mężczyzna, który tłumaczy coś niewidzącej dziewczynce. Siedzą przy laptopie."/>
+            </section>
+            <section class="centered-unaligned tighter" style="background-color: rgb(40, 128, 201, 0.4)">
+                <p>
+                    Jedną z głównych instytucji jest World Wide Web Consortium (W3C), które stworzyło listę oficjalnych zaleceń dla inkluzywnych stron – dokument Web Content Accessibility Guidelines (WCAG), w obecnej wersji 2.1.
+                </p>
+                <br/>
+                <p>
+                    Musisz wiedzieć, że niestosowanie się do zasad może prowadzić do konsekwencji prawnych.
+                </p>
+                <br/>
+                <p>
+                    Dzięki zaleceniom znacznie łatwiej zrozumiesz i wprowadzisz na własnej stronie elementy, które sprawią, że korzystanie z niej przyniesie korzyści szerokiej grupie odwiedzających.
+                </p>
+            </section>
+            <!-- </div> -->
+        </article>
+        <article></article>
+        <article></article>
+        <article></article>
+        <article></article>
+        <article></article>
+        <article></article>
+    </main>
+    {% include 'footer.html.twig' %}
+{% endblock %}

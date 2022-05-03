@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <a id="skip-link" href="#main" tabindex="4">Przejdź do głównej zawartości</a>
+{#    <header style="position: -webkit-sticky; position: sticky; top: 0;">#}
+    <header>
+        <div id="user-actions">
+            <a href="{{ url('home_index') }}">
+                <img
+                        id="logo"
+                        src="{{ asset('img/logo_flat.png')}}"
+                        alt="Logo strony - strona dostępności z emblematem 6 łez w kolorach tęczy."
+                />
+            </a>
+            <ul>
+                <li id="login" class="button-style" tabindex="5"><a href="{{ url('rejestracja_index') }}">Zarejestruj</a></li>
+                <li id="register" class="button-style" tabindex="6"><a href="{{ url('logowanie_index') }}">Zaloguj</a></li>
+            </ul>
+        </div>
+        <nav>
+            <ul>
+                <li class="button-style" tabindex="1"><a href="{{ url('czytelnik_index') }}">Strefa czytelnika</a></li>
+                <li class="button-style" tabindex="2"><a href="{{ url('tworca_index') }}">Strefa twórcy</a></li>
+                <li class="button-style" tabindex="3"><a href="{{ url('kontakt_index') }}">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+{% endblock %}
