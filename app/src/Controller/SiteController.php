@@ -68,23 +68,23 @@ class SiteController extends AbstractController
         );
     }
 
-    /**
-     * Kontakt.
-     *
-     * @return \Symfony\Component\HttpFoundation\Response HTTP response
-     *
-     * @Route(
-     *     "/kontakt",
-     *     methods={"GET"},
-     *     name="kontakt_index",
-     * )
-     */
-    public function kontakt(): Response
-    {
-        return $this->render(
-            'kontakt.html.twig',
-        );
-    }
+//    /**
+//     * Kontakt.
+//     *
+//     * @return \Symfony\Component\HttpFoundation\Response HTTP response
+//     *
+//     * @Route(
+//     *     "/kontakt",
+//     *     methods={"GET"},
+//     *     name="kontakt_index",
+//     * )
+//     */
+//    public function kontakt(): Response
+//    {
+//        return $this->render(
+//            'kontakt.html.twig',
+//        );
+//    }
 
     /**
      * Informacja o stronie.

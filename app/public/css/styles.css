@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Assistant&family=DM+Sans&family=Varta&display=swap");
 
-/* strona glowna + base */
+/* strona główna + base */
 html,
 body {
     margin: 0;
@@ -38,6 +38,15 @@ ul {
 }
 a {
     text-decoration: none;
+}
+a:link, a:visited {
+    color: black;
+}
+a:hover {
+    color: white;
+}
+a:active {
+    color: blue;
 }
 #register,
 .button-style,
@@ -383,7 +392,7 @@ label {
     margin-top: 1em;
     margin-bottom: 2.5em;
 }
-/* Centered unaligned doesn't work properly (while resizing) becuse of paddings etc. ? */
+/* Centered unaligned doesn't work properly (while resizing) because of paddings etc. ? */
 /* Footer nieresponsywny - naprawić */
 #reg-log form {
     margin-left: 0;
@@ -392,3 +401,5 @@ label {
     /*padding-left: 50em;*/
     /*padding-right: 50em;*/
 }
+
+/* !!! CHANGE INLINE TO SPAN !!! */
