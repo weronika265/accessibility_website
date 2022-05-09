@@ -19,7 +19,7 @@ h1 {
     padding-top: 1em;
 }
 h2 {
-    font-family: "Assistant", sans-serif;
+    font-family: 'Assistant', serif;
     font-weight: 600;
     -webkit-text-stroke: 0.5px black;
     font-size: 2.4em;
@@ -28,7 +28,7 @@ h2 {
     margin-top: 1em;
 }
 h3 {
-    font-family: "Assistant", sans-serif;
+    font-family: 'Assistant', serif;
     font-weight: 600;
     font-size: 1em;
     color: white;
@@ -42,11 +42,12 @@ a {
 a:link, a:visited {
     color: black;
 }
+/* TODO: animate whole button */
 a:hover {
-    color: white;
+    color: rgba(255, 255, 255, 0.79);
 }
 a:active {
-    color: blue;
+    color: rgba(255, 255, 255, 0.79);
 }
 #register,
 .button-style,
@@ -54,7 +55,7 @@ button,
 input[type=submit] {
     background-color: #4a9ce0;
     border-radius: 90px;
-    padding: 1em 3em;
+    padding: 0.8em 3em;
     font-family: "Varta", sans-serif;
     font-weight: 400;
     font-size: 1.2rem;
@@ -63,6 +64,14 @@ input[type=submit] {
     text-decoration: none;
     list-style-type: none;
     border: none;
+}
+button {
+    padding: 1em 3em;
+}
+input[type=submit]:hover {
+    color: white;
+    cursor: pointer;
+    -webkit-text-stroke: 0.2px white;
 }
 #skip-link {
     font-family: "Varta", sans-serif;
@@ -115,7 +124,7 @@ nav {
 }
 nav li {
     display: inline-block;
-    margin: 0.7em 2em;
+    margin: 0.4em 2em;
     width: 7em;
 }
 .page {
@@ -200,7 +209,7 @@ footer {
     -webkit-text-stroke: 1px black;
 }
 #info {
-    font-family: "Assistant";
+    font-family: 'Assistant', serif;
     font-weight: 500;
     font-size: 1.4em;
     color: white;
@@ -214,7 +223,7 @@ footer {
     padding-bottom: 0.3em;
 }
 #author {
-    font-family: "Assistant";
+    font-family: 'Assistant', serif;
     font-weight: 400;
     font-size: 0.9rem;
     color: white;
@@ -260,7 +269,7 @@ footer {
     flex-wrap: wrap;
     text-decoration: none;
     list-style-type: none;
-    font-family: "Assistant";
+    font-family: 'Assistant', serif;
     font-weight: 400;
     font-size: 1.1em;
 }

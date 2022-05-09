@@ -84,12 +84,14 @@ class OpinionController extends AbstractController
             $request->query->getInt('page', 1)
         );
 
-        $contact = new Opinion();
-        $form = $this->createForm(OpinionType::class, $contact);
+        $opinion = new Opinion();
+        $form = $this->createForm(OpinionType::class, $opinion);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $this->opinionService->save($contact);
+            $this->opinionService->save($opinion);
+
+            $this->addFlash('success', 'Utworzono Opinię. Czekaj na zatwierdzenie przez administratora.');
 
             return $this->redirectToRoute('kontakt_index');
         }

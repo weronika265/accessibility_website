@@ -7,9 +7,11 @@
 namespace App\Entity;
 
 use App\Repository\CommentRepository;
+use DateTimeImmutable;
 use DateTimeInterface;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Class Comment.
@@ -44,6 +46,12 @@ class Comment
      *     length=255,
      *     unique=false,
      * )
+     *
+     * @Assert\Type(type="string")
+     * @Assert\NotBlank
+     * @Assert\Length(
+     *     max="255",
+     * )
      */
     private $message;
 
@@ -52,9 +60,10 @@ class Comment
      *
      * @var DateTimeInterface
      *
-     * @ORM\Column(
-     *     type="datetime",
-     * )
+     * @ORM\Column(type="datetime")
+     *
+     * @ORM\Column(type="datetime")
+     * @Assert\NotBlank
      */
     private $date;
 

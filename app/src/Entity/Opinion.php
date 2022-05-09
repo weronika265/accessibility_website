@@ -7,8 +7,10 @@
 namespace App\Entity;
 
 use App\Repository\OpinionRepository;
+use DateTimeImmutable;
 use DateTimeInterface;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Class Opinion.
@@ -43,6 +45,12 @@ class Opinion
      *     length=255,
      *     unique=false,
      * )
+     *
+     * @Assert\Type(type="string")
+     * @Assert\NotBlank
+     * @Assert\Length(
+     *     max="255",
+     * )
      */
     private $message;
 
@@ -52,8 +60,22 @@ class Opinion
      * @var DateTimeInterface
      *
      * @ORM\Column(type="datetime")
+     *
+     * @ORM\Column(type="datetime")
+     * @Assert\NotBlank
      */
     private $date;
+
+//    /**
+//     * Date.
+//     *
+//     * @var DateTimeImmutable|null
+//     *
+//     * @ORM\Column(type="datetime_immutable")
+//     *
+//     * @Gedmo\Timestampable(on: 'create', 'edit')
+//     */
+//    private ?DateTimeImmutable $date;
 
     /**
      * Author.
