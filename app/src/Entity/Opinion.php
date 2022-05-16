@@ -6,8 +6,6 @@
 
 namespace App\Entity;
 
-use App\Repository\OpinionRepository;
-use DateTimeImmutable;
 use DateTimeInterface;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
@@ -76,19 +74,6 @@ class Opinion
 //     * @Gedmo\Timestampable(on: 'create', 'edit')
 //     */
 //    private ?DateTimeImmutable $date;
-
-    /**
-     * Author.
-     *
-     * @var User
-     *
-     * @ORM\ManyToOne(
-     *     targetEntity="App\Entity\User",
-     *     inversedBy="opinions",
-     * )
-     * @ORM\JoinColumn(nullable=false)
-     */
-    private ?User $user = null;
 
     /**
      * Acceptance of the message.
@@ -167,25 +152,5 @@ class Opinion
     public function setIsAccepted(bool $is_accepted): void
     {
         $this->is_accepted = $is_accepted;
-    }
-
-    /**
-     * Getter for Author.
-     *
-     * @return User|null Author entity
-     */
-    public function getUser(): ?User
-    {
-        return $this->user;
-    }
-
-    /**
-     * Setter for Author.
-     *
-     * @param User|null $user Author entity
-     */
-    public function setUser(?User $user): void
-    {
-        $this->user = $user;
     }
 }

@@ -6,7 +6,6 @@
 
 namespace App\Entity;
 
-use App\Repository\ContentRepository;
 use Doctrine\ORM\Mapping as ORM;
 
 /**

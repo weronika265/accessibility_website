@@ -48,9 +48,10 @@ class OpinionRepository extends ServiceEntityRepository
     public function queryAll(): QueryBuilder
     {
         return $this->getOrCreateQueryBuilder()
-            ->select('opinion', 'user')
-            ->join('opinion.user', 'user')
-            ->orderBy('opinion.date', 'DESC');
+            ->select('opinion');
+//            ->select('opinion', 'user')
+//            ->join('opinion.user', 'user')
+//            ->orderBy('opinion.date', 'DESC');
     }
 
     /**

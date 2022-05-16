@@ -46,6 +46,18 @@
 {#        </div>#}
         {% include 'default/_flash_messages.html.twig' %}
         {% block body %}
+
+            {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+            <div>{{ app.user.username }}</div>
+            <div>
+                <a href="{{ url('app_logout') }}">{{ 'Wyloguj' }}</a>
+            </div>
+            {% else %}
+            <div>
+                <a href="{{ url('app_login') }}">{{ 'Zaloguj' }}</a>
+            </div>
+            {% endif %}
+
             {% block javascripts %}
                 {{ encore_entry_script_tags('app') }}
                 <script rel="script" type="text/javascript" src="{{ asset('js/scripts.js') }}"></script>

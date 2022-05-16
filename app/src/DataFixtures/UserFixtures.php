@@ -1,5 +1,4 @@
 <?php
-
 /**
  * User fixtures.
  */
@@ -7,28 +6,59 @@
 namespace App\DataFixtures;
 
 use App\Entity\User;
-use Doctrine\Persistence\ObjectManager;
+use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 
 /**
  * Class UserFixtures.
- *
- * @psalm-suppress MissingConstructor
  */
 class UserFixtures extends AbstractBaseFixtures
 {
     /**
-     * Load data.
-     *
-     * @psalm-suppress PossiblyNullReference
-     * @psalm-suppress UnusedClosureParam
+     * Password hasher.
      */
-    public function loadData(): void
+    private UserPasswordHasherInterface $passwordHasher;
+
+    /**
+     * UserFixtures constructor.
+     *
+     * @param UserPasswordHasherInterface $passwordHasher Password hasher
+     */
+    public function __construct(UserPasswordHasherInterface $passwordHasher)
     {
-        $this->createMany(10, 'users', function (int $i) {
+        $this->passwordHasher = $passwordHasher;
+    }
+
+    /**
+     * Load data.
+     */
+    protected function loadData(): void
+    {
+        $this->createMany(3, 'users', function ($i) {
             $user = new User();
-            $user->setUsername($this->faker->userName);
-            $user->setEmail($this->faker->email);
-            $user->setPassword('1234');
+            $user->setUsername(sprintf('user%d', $i));
+            $user->setEmail(sprintf('user%d@example.com', $i));
+            $user->setRoles([User::ROLE_USER]);
+            $user->setPassword(
+                $this->passwordHasher->hashPassword(
+                    $user,
+                    'user1234'
+                )
+            );
+
+            return $user;
+        });
+
+        $this->createMany(1, 'admins', function ($i) {
+            $user = new User();
+            $user->setUsername(sprintf('admin%d', $i));
+            $user->setEmail(sprintf('admin%d@example.com', $i));
+            $user->setRoles([User::ROLE_ADMIN]);
+            $user->setPassword(
+                $this->passwordHasher->hashPassword(
+                    $user,
+                    'admin1234'
+                )
+            );
 
             return $user;
         });
