@@ -1,4 +1,4 @@
-{% extends 'base.html.twig' %}
+{% extends '../base.html.twig' %}
 
 {% block title %}
     Rejestracja
@@ -18,12 +18,12 @@
         <h2>Rejestracja</h2>
         <form>
             {# TODO: Change email - add different class than in login #}
-            <label for="email">Email</label><inline class="inline-form-text" style="margin-left: 3em;">Masz już konto? <strong><a href="{{ url('logowanie_index') }}">Zaloguj się</a></strong> </inline><br/>
+            <label for="email">Email</label><span class="inline-form-text" style="margin-left: 3em;">Masz już konto? <strong><a href="{{ url('logowanie_index') }}">Zaloguj się</a></strong> </span><br/>
             <input type="email" id="email" name="email"/><br/>
-            <label for="password">Hasło</label><inline class="inline-form-text" style="margin-left: 11.5em;">Pokaż hasło</inline><br/>
+            <label for="password">Hasło</label><span class="inline-form-text" style="margin-left: 11.5em;"><i class='fa fa-eye' style="margin-right:0.3em;"></i>Pokaż hasło</span><br/>
             <input type="password" id="password" name="password"/><br/>
             <input type="submit" value="Zarejestruj się" class="submit-btn-space"/>
         </form>
     </div>
-    {% include 'footer.html.twig' %}
+    {% include '../footer.html.twig' %}
 {% endblock %}

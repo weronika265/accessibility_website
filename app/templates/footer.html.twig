@@ -25,12 +25,31 @@
             <p>Weronika Ruszel | Elektroniczne Przetwarzanie Informacji | 2022</p>
         </div>
     </footer>
-    <span id="a11y-options" style="cursor: pointer;" onclick="displayA11y">
-        <img
-                src="{{ asset('img/accessibility.png') }}"
-                alt="Człowieczek – oznaczenie dostępności."
-        />
-{#        <div id="a11y-options-extended"></div>#}
+    <button id="scroll-btn" tabindex="0"><div id="arrow"></div></button>
+
+    <!-- ten span jest ok? -->
+    <span aria-role="button">
+        <div aria-role="button" tabindex="0" id="a11y-options"><img src="img/accessibility.png" alt="Człowieczek – oznaczenie dostępności."/></div>
+        <div id="a11y-options-expanded">
+            <div>
+                <span style="color: green;">Kontrast</span><br/>
+                <button id="contrast-std">Standard</button>
+                <button id="contrast-high">Wysoki</button>
+                <button id="dark-mode">Ciemny</button>
+            </div>
+            <div>
+                <span style="color: green;">Odstęp</span><br/>
+                <button id="space-std">Standard</button>
+                <button id="space-small">Mały</button>
+                <button id="space-big">Duży</button>
+            </div>
+            <div>
+                <span style="color: green;">Wielkość fontu</span><br/>
+                <button id="font-std">Standard</button>
+                <button id="font-small">Mała</button>
+                <button id="font-big">Duża</button>
+            </div>
+        </div>
     </span>
 
     {% block javascripts %}

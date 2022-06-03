@@ -7,6 +7,7 @@
 namespace App\DataFixtures;
 
 use App\Entity\Opinion;
+use App\Entity\User;
 use Doctrine\Common\DataFixtures\DependentFixtureInterface;
 use Doctrine\Persistence\ObjectManager;
 
@@ -29,13 +30,13 @@ class OpinionFixtures extends AbstractBaseFixtures
             return;
         }
 
-        $this->createMany(20, 'opinions', function (int $i) {
+        $this->createMany(5, 'opinions', function (int $i) {
             $opinion = new Opinion();
             $opinion->setMessage($this->faker->sentence);
-            $opinion->setDate($this->faker->dateTimeBetween($startDate = '-1 years', $endDate = '+1 years', $timezone = null));
+            $opinion->setDate(\DateTimeImmutable::createFromMutable($this->faker->dateTimeBetween($startDate = '-1 years', $endDate = '+1 years', $timezone = null)));
             $opinion->setIsAccepted(false);
-//            $user = $this->getRandomReference('users');
-//            $opinion->setUser($user);
+            $author = $this->getRandomReference('users');
+            $opinion->setAuthor($author);
 
             return $opinion;
         });
@@ -43,16 +44,16 @@ class OpinionFixtures extends AbstractBaseFixtures
         $this->manager->flush();
     }
 
-//    /**
-//     * This method must return an array of fixtures classes
-//     * on which the implementing class depends on.
-//     *
-//     * @return string[] of dependencies
-//     *
-//     * @psalm-return array{0: UserFixtures::class}
-//     */
-//    public function getDependencies(): array
-//    {
-//        return [UserFixtures::class];
-//    }
+    /**
+     * This method must return an array of fixtures classes
+     * on which the implementing class depends on.
+     *
+     * @return string[] of dependencies
+     *
+     * @psalm-return array{0: UserFixtures::class}
+     */
+    public function getDependencies(): array
+    {
+        return [UserFixtures::class];
+    }
 }

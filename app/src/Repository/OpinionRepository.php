@@ -72,12 +72,10 @@ class OpinionRepository extends ServiceEntityRepository
      * @throws ORMException
      * @throws OptimisticLockException
      */
-    public function add(Opinion $entity, bool $flush = true): void
+    public function add(Opinion $entity): void
     {
         $this->_em->persist($entity);
-        if ($flush) {
-            $this->_em->flush();
-        }
+        $this->_em->flush();
     }
 
     /**
@@ -86,12 +84,10 @@ class OpinionRepository extends ServiceEntityRepository
      * @throws ORMException
      * @throws OptimisticLockException
      */
-    public function remove(Opinion $entity, bool $flush = true): void
+    public function delete(Opinion $entity): void
     {
         $this->_em->remove($entity);
-        if ($flush) {
-            $this->_em->flush();
-        }
+        $this->_em->flush();
     }
 
     /**

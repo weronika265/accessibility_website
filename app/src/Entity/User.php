@@ -7,6 +7,8 @@
 namespace App\Entity;
 
 use App\Repository\UserRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
@@ -109,6 +111,26 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
      * )
      */
     private $password;
+
+    /**
+     * Comments.
+     *
+     * @ORM\OneToMany(targetEntity=Comment::class, mappedBy="author")
+     */
+    private $comments;
+
+    /**
+     * Opinions.
+     *
+     * @ORM\OneToMany(targetEntity=Opinion::class, mappedBy="author")
+     */
+    private $opinions;
+
+    public function __construct()
+    {
+        $this->comments = new ArrayCollection();
+        $this->opinions = new ArrayCollection();
+    }
 
     /**
      * Getter for the id.
@@ -236,5 +258,80 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     {
         // If you store any temporary, sensitive data on the user, clear it here
         // $this->plainPassword = null;
+    }
+
+    /**
+     * Getter for Comments
+     *
+     * @return Collection<int, Comment> Comment collection
+     */
+    public function getComments(): Collection
+    {
+        return $this->comments;
+    }
+
+    /**
+     * Add Comment
+     * @param Comment $comment Comment entity
+     * @return void
+     */
+    public function addComment(Comment $comment): void
+    {
+        if (!$this->comments->contains($comment)) {
+            $this->comments[] = $comment;
+            $comment->setAuthor($this);
+        }
+    }
+
+    /**
+     * Remove Comment
+     * @param Comment $comment Comment entity
+     * @return void
+     */
+    public function removeComment(Comment $comment): void
+    {
+        if ($this->comments->removeElement($comment)) {
+            // set the owning side to null (unless already changed)
+            if ($comment->getAuthor() === $this) {
+                $comment->setAuthor(null);
+            }
+        }
+    }
+
+    /**
+     * Getter for Opinions
+     *
+     * @return Collection<int, Opinion> Opinion collection
+     */
+    public function getOpinions(): Collection
+    {
+        return $this->opinions;
+    }
+
+    /**
+     * Add Opinion
+     *
+     * @param Opinion $opinion Opinion entity
+     */
+    public function addOpinion(Opinion $opinion): void
+    {
+        if (!$this->opinions->contains($opinion)) {
+            $this->opinions[] = $opinion;
+            $opinion->setAuthor($this);
+        }
+    }
+
+    /**
+     * Remove Opinion
+     * @param Opinion $opinion Opinion entity
+     */
+    public function removeOpinion(Opinion $opinion): void
+    {
+        if ($this->opinions->removeElement($opinion)) {
+            // set the owning side to null (unless already changed)
+            if ($opinion->getAuthor() === $this) {
+                $opinion->setAuthor(null);
+            }
+        }
     }
 }

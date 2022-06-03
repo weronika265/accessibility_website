@@ -73,7 +73,7 @@ class Comment
      *     targetEntity="App\Entity\Content")
      * @ORM\JoinColumn(nullable=false)
      */
-    private ?Content $content = null;
+    private $content;
 
     /**
      * Acceptance of the message.
@@ -85,6 +85,22 @@ class Comment
      * )
      */
     private $is_accepted;
+
+    /**
+     * Author.
+     *
+     * @ORM\ManyToOne(targetEntity=User::class, inversedBy="comments")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $author;
+
+//    /**
+//     * Location.
+//     *
+//     * @ORM\ManyToOne(targetEntity=Content::class, inversedBy="comments")
+//     * @ORM\JoinColumn(nullable=true)
+//     */
+//    private $location;
 
     /**
      * Getter for the id.
@@ -176,4 +192,36 @@ class Comment
         $this->content = $content;
 
     }
+
+    /**
+     * Getter for Author.
+     *
+     * @return User|null User entity
+     */
+    public function getAuthor(): ?User
+    {
+        return $this->author;
+    }
+
+    /**
+     * Setter for Author.
+     *
+     * @param User|null $author User entity
+     */
+    public function setAuthor(?User $author): void
+    {
+        $this->author = $author;
+    }
+
+//    public function getLocation(): ?Content
+//    {
+//        return $this->location;
+//    }
+//
+//    public function setLocation(?Content $location): self
+//    {
+//        $this->location = $location;
+//
+//        return $this;
+//    }
 }

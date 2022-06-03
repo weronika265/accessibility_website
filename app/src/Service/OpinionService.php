@@ -65,11 +65,43 @@ class OpinionService
      */
     public function save(Opinion $opinion): void
     {
-//        if ($opinion->getId() == null) {
-//            $opinion->setDate(new \DateTimeImmutable());
-//        }
-//        $opinion->setDate(new \DateTimeImmutable());
+        if ($opinion->getId() == null) {
+            $opinion->setDate(new \DateTimeImmutable());
+            $opinion->setIsAccepted(0);
+        }
+        $opinion->setDate(new \DateTimeImmutable());
+        $opinion->setIsAccepted(0);
 
         $this->opinionRepository->save($opinion);
+    }
+
+    /**
+     * Save entity.
+     *
+     * @param Opinion $opinion Opinion entity
+     */
+    public function accept(Opinion $opinion): void
+    {
+        if ($opinion->getId() == null) {
+            $opinion->setDate(new \DateTimeImmutable());
+            $opinion->setIsAccepted(1);
+        }
+        $opinion->setDate(new \DateTimeImmutable());
+        $opinion->setIsAccepted(1);
+
+        $this->opinionRepository->save($opinion);
+    }
+
+    /**
+     * Save entity.
+     *
+     * @param Opinion $opinion Opinion entity
+     *
+     * @throws \Doctrine\ORM\ORMException
+     * @throws \Doctrine\ORM\OptimisticLockException
+     */
+    public function delete(Opinion $opinion): void
+    {
+        $this->opinionRepository->delete($opinion);
     }
 }

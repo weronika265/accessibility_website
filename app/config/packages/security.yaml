@@ -30,7 +30,10 @@ security:
                 path: app_logout
                 # where to redirect after logout
                 # target: app_any_route
-                target: app_login
+#                target: app_login
+                target: home_index
+#            form_login:
+#                default_target_path: home_index
 
             # activate different ways to authenticate
             # https://symfony.com/doc/current/security.html#the-firewall
@@ -43,8 +46,9 @@ security:
     access_control:
         # - { path: ^/admin, roles: ROLE_ADMIN }
         # - { path: ^/profile, roles: ROLE_USER }
-        - { path: ^/login, roles: PUBLIC_ACCESS }
-        - { path: ^/, roles: ROLE_USER }
+#        - { path: ^/login, roles: PUBLIC_ACCESS }
+#        - { path: ^/, roles: ROLE_USER }
+        - { path: ^/, roles: PUBLIC_ACCESS }
 
 when@test:
     security:

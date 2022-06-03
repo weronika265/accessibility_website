@@ -33,8 +33,8 @@ class CommentFixtures extends AbstractBaseFixtures implements DependentFixtureIn
             $comment->setMessage($this->faker->sentence);
             $comment->setDate($this->faker->dateTimeBetween($startDate = '-1 years', $endDate = '+1 years', $timezone = null));
             $comment->setIsAccepted(false);
-//            $user = $this->getRandomReference('users');
-//            $comment->setUser($user);
+            $author = $this->getRandomReference('users');
+            $comment->setAuthor($author);
             $content = $this->getRandomReference('content');
             $comment->setContent($content);
 
@@ -50,11 +50,11 @@ class CommentFixtures extends AbstractBaseFixtures implements DependentFixtureIn
      *
      * @return string[] of dependencies
      *
-//     * @psalm-return array{0: UserFixtures::class}
+//     * @psalm-return array{0: UserFixtures::class, 1:ContentFixtures::class}
      */
     public function getDependencies(): array
     {
 //        return [UserFixtures::class, ContentFixtures::class];
-        return [ContentFixtures::class];
+        return [UserFixtures::class, ContentFixtures::class];
     }
 }

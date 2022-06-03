@@ -1,0 +1,54 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    Panel administratora
+{% endblock %}
+
+{% block body %}
+    {% include 'header.html.twig' %}
+    <main id="main" class="page">
+        <article>
+            <h2>Dostępne opinie o serwisie</h2>
+            {% if pagination is defined and pagination.items|length %}
+                <div class="indent" style="flex-wrap: wrap;">
+                    {% for opinion in pagination.items %}
+                        {% if not opinion.is_accepted %}
+                            <section class="opinion" style="background-color: lightgray; margin-bottom: 1.2em;">
+                                <inline class="user-info">{{ opinion.author.username }}, {{ opinion.date|date('Y/m/d') }}</inline>
+                                <div class="message-style">
+                                    {{ opinion.message }}
+                                </div>
+{#                                <form method="post">#}
+{#                                    <input type="button" id="akceptuj" name="akceptuj" value="Akceptuj" style="cursor: pointer; background-color: lightgreen;"/>#}
+{#                                    <input type="button" id="odrzuc" name="odrzuc" value="Odrzuć" style="cursor: pointer; background-color: lightcoral;"/>#}
+{#                                </form>#}
+
+{# !!! CURRENT #}
+{#                                {{ form_start(form) }}#}
+{#                                {{ form_widget(form) }}#}
+{#                                <div class="form-group row float-sm-right">#}
+{#                                    <input type="button" id="akceptuj" name="akceptuj" value="Akceptuj" style="cursor: pointer; background-color: lightgreen;"/>#}
+{#                                    <input type="submit" id="odrzuc" name="odrzuc" value="Odrzuć" style="cursor: pointer; background-color: lightcoral;"/>#}
+{#                                </div>#}
+{#                                {{ form_end(form) }}#}
+{# !!! CURRENT #}
+
+{#                                <form method="post">#}
+{#                                    <input type="button" id="odrzuc" name="odrzuc" value="Odrzuć" style="cursor: pointer; background-color: lightcoral;"/>#}
+{#                                </form>#}
+                            </section>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            {% else %}
+                <div>
+                    {{ 'Brak opinii do zmoderowania' }}
+                </div>
+            {% endif %}
+            <div>
+                {{ knp_pagination_render(pagination) }}
+            </div>
+        </article>
+    </main>
+    {% include 'footer.html.twig' %}
+{% endblock %}

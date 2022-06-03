@@ -9,6 +9,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    scroll-behavior: smooth;
 }
 h1 {
     font-family: "DM Sans", sans-serif;
@@ -138,7 +139,7 @@ nav li {
     width: 100%;
 }
 article {
-    padding-block-end: 5em;
+    /*padding-block-end: 5em;*/
 }
 article p,
 article li,
@@ -244,17 +245,6 @@ footer {
     border-radius: 8px 0 0 8px;
     border: 1px solid rgb(194, 193, 193);
 }
-/* Po wciśnięciu przycisku */
-#a11y-options-extended {
-    background-color: rgba(225, 225, 225);
-    z-index: 999;
-    position: fixed;
-    right: 0px;
-    top: 350px;
-    padding: 40px 2px 40px 2px;
-    border-radius: 8px 0 0 8px;
-    border: 1px solid rgb(194, 193, 193);
-}
 
 #a11y-options img {
     width: 50px;
@@ -272,6 +262,10 @@ footer {
     font-family: 'Assistant', serif;
     font-weight: 400;
     font-size: 1.1em;
+}
+.list-clear-set a:hover {
+    color: black;
+    font-weight: bolder;
 }
 .bg-list-clear {
     background-color: rgb(166, 208, 244, 0.8);
@@ -293,6 +287,15 @@ article ul {
     padding-bottom: 3.2em;
     /*max-width: 1100px;*/
 }
+.align-left-reader {
+    display: flex;
+    justify-content: center;
+    /* flex-wrap: wrap; */
+    padding-left: 40em;
+    padding-right: 40em;
+    padding-bottom: 3.2em;
+    /* max-width: 1100px; */
+}
 .align-right {
     display: flex;
     /* flex-wrap: wrap; */
@@ -303,6 +306,21 @@ article ul {
     padding-bottom: 3.2em;
     /* max-width: 1100px; */
 }
+.align-right-reader {
+    display: flex;
+    /* flex-wrap: wrap; */
+    flex-direction: row-reverse;
+    justify-content: center;
+    padding-left: 40em;
+    padding-right: 40em;
+    padding-top: 3.2em;
+    padding-bottom: 3.2em;
+    /* max-width: 1100px; */
+}
+/*.tighter {*/
+/*    padding-left: 45em;*/
+/*    padding-right: 45em;*/
+/*}*/
 .align-top {
     display: flex;
     /* flex-wrap: wrap; */
@@ -313,7 +331,26 @@ article ul {
     padding-top: 3.2em;
     padding-bottom: 3.2em;
 }
+.align-top-reader {
+    display: flex;
+    /* flex-wrap: wrap; */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 40em;
+    padding-right: 40em;
+    padding-top: 3.2em;
+    padding-bottom: 3.2em;
+}
 .centered-unaligned {
+    padding-left: 30em;
+    padding-right: 30em;
+    padding-top: 3.2em;
+    padding-bottom: 3.2em;
+    /* coś z margin */
+}
+.centered-unaligned-reader {
+    justify-content: center;
     padding-left: 30em;
     padding-right: 30em;
     padding-top: 3.2em;
@@ -341,6 +378,12 @@ form {
 }
 .space-right {
     margin-right: 3em;
+}
+.img-space {
+    margin-left: 4em;
+    margin-right: 4em;
+    margin-top: 2em;
+    margin-bottom: 1em;
 }
 .center-item-send {
     margin-left: 20%;
@@ -406,9 +449,71 @@ label {
 #reg-log form {
     margin-left: 0;
 }
-.tighter {
-    /*padding-left: 50em;*/
-    /*padding-right: 50em;*/
-}
 
 /* !!! CHANGE INLINE TO SPAN !!! */
+
+#a11y-options:hover {
+    cursor: pointer;
+}
+#a11y-options-expanded {
+    display: none;
+    background-color: rgba(225, 225, 225);
+    z-index: 999;
+    position: fixed;
+    right: 0;
+    top: 342px;
+    /* padding: 80px 4px 80px 4px; */
+    width: 150px;
+    height: 150px;
+    border-radius: 8px 0 0 8px;
+    border: 1px solid rgb(194, 193, 193);
+}
+/* a:focus, a:hover {
+  border: 3px solid black;
+} */
+#scroll-btn {
+    /*position: relative;*/
+    position: fixed;
+    display: none;
+    bottom: 25px;
+    right: 25px;
+    background-color: #57a8eb;
+    cursor: pointer;
+    padding: 30px;
+    border-radius: 50%;
+    border: none;
+    /* box-shadow: 2px 4px 12px 0 rgba(189, 189, 189, 0.411); */
+}
+#arrow {
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    left: 25px;
+    bottom: 20px;
+    border-style: solid;
+    border-width: 2.5px 0px 0px 2.5px;
+    border-color: white;
+    transform: rotate(45deg);
+    background-clip: content-box;
+}
+
+/* TESTOWY */
+#a11y-options-expanded button {
+    padding: 0.5em;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 1em;
+}
+.subsection {
+    font-size: 2em;
+    color: black;
+}
+.sub-subsection {
+    font-size: 1.5em;
+    font-family: 'Assistant', serif;
+    font-weight: 600;
+    color: black;
+}
+strong a:hover {
+    color: #357eaf;
+}

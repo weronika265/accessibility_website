@@ -13,8 +13,20 @@
                 />
             </a>
             <ul>
-                <li id="login" class="button-style" tabindex="5"><a href="{{ url('rejestracja_index') }}">Zarejestruj</a></li>
-                <li id="register" class="button-style" tabindex="6"><a href="{{ url('logowanie_index') }}">Zaloguj</a></li>
+                {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                    {% if is_granted('ROLE_ADMIN') %}
+                        <li id="login" class="button-style" tabindex="5"><a href="{{ url('admin_index') }}">Panel administratora</a></li>
+                    {% else %}
+                        <li id="login" class="button-style" tabindex="5"><a href="{{ url('user_index') }}">Moje konto</a></li>
+                    {% endif %}
+
+                    <li id="register" class="button-style" tabindex="6"><a href="{{ url('app_logout') }}">Wyloguj</a></li>
+                {% else %}
+                    {# {{ url('app_register') }} #}
+                    <li id="login" class="button-style" tabindex="5"><a href="#">Zarejestruj</a></li>
+
+                    <li id="register" class="button-style" tabindex="6"><a href="{{ url('app_login') }}">Zaloguj</a></li>
+                {% endif %}
             </ul>
         </div>
         <nav>

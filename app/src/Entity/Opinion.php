@@ -6,8 +6,10 @@
 
 namespace App\Entity;
 
+use DateTimeImmutable;
 use DateTimeInterface;
 use Doctrine\ORM\Mapping as ORM;
+use Gedmo\Mapping\Annotation as Gedmo;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
@@ -52,28 +54,28 @@ class Opinion
      */
     private $message;
 
-    /**
-     * Date.
-     *
-     * @var DateTimeInterface
-     *
-     * @ORM\Column(type="datetime")
-     *
-     * @ORM\Column(type="datetime")
-     * @Assert\NotBlank
-     */
-    private $date;
-
 //    /**
 //     * Date.
 //     *
-//     * @var DateTimeImmutable|null
+//     * @var DateTimeInterface
 //     *
-//     * @ORM\Column(type="datetime_immutable")
+//     * @ORM\Column(type="datetime")
 //     *
-//     * @Gedmo\Timestampable(on: 'create', 'edit')
+//     * @ORM\Column(type="datetime")
+//     * @Assert\NotBlank
 //     */
-//    private ?DateTimeImmutable $date;
+//    private $date;
+
+    /**
+     * Date.
+     *
+     * @var DateTimeImmutable|null
+     *
+     * @psalm-suppress PropertyNotSetInConstructor
+     *
+     * @ORM\Column(type="datetime_immutable")
+     */
+    private ?DateTimeImmutable $date;
 
     /**
      * Acceptance of the message.
@@ -82,7 +84,16 @@ class Opinion
      *
      * @ORM\Column(type="boolean")
      */
-    private $is_accepted;
+    public $is_accepted;
+    //private by default
+
+    /**
+     * Author.
+     *
+     * @ORM\ManyToOne(targetEntity=User::class, inversedBy="opinions")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $author;
 
     /**
      * Getter for Id.
@@ -117,9 +128,9 @@ class Opinion
     /**
      * Getter for the date.
      *
-     * @return DateTimeInterface|null Date
+     * @return DateTimeImmutable|null Date
      */
-    public function getDate(): ?DateTimeInterface
+    public function getDate(): ?DateTimeImmutable
     {
         return $this->date;
     }
@@ -127,9 +138,9 @@ class Opinion
     /**
      * Setter for the date.
      *
-     * @param DateTimeInterface $date Date
+     * @param DateTimeImmutable $date Date
      */
-    public function setDate(DateTimeInterface $date): void
+    public function setDate(DateTimeImmutable $date): void
     {
         $this->date = $date;
     }
@@ -152,5 +163,25 @@ class Opinion
     public function setIsAccepted(bool $is_accepted): void
     {
         $this->is_accepted = $is_accepted;
+    }
+
+    /**
+     * Getter for Author.
+     *
+     * @return User|null User
+     */
+    public function getAuthor(): ?User
+    {
+        return $this->author;
+    }
+
+    /**
+     * Setter for Author.
+     *
+     * @param User|null $author Author
+     */
+    public function setAuthor(?User $author): void
+    {
+        $this->author = $author;
     }
 }

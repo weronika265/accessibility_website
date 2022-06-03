@@ -84,7 +84,9 @@ class OpinionController extends AbstractController
             $request->query->getInt('page', 1)
         );
 
+        $user = $this->getUser();
         $opinion = new Opinion();
+        $opinion->setAuthor($user);
         $form = $this->createForm(OpinionType::class, $opinion);
         $form->handleRequest($request);
 

@@ -103,41 +103,4 @@ class SiteController extends AbstractController
             'projekt_info.html.twig',
         );
     }
-
-
-    /**
-     * Rejestracja.
-     *
-     * @return \Symfony\Component\HttpFoundation\Response HTTP response
-     *
-     * @Route(
-     *     "/rejestracja",
-     *     methods={"GET"},
-     *     name="rejestracja_index",
-     * )
-     */
-    public function rejestracja(): Response
-    {
-        return $this->render(
-            'rejestracja.html.twig',
-        );
-    }
-
-    /**
-     * Logowanie.
-     *
-     * @return \Symfony\Component\HttpFoundation\Response HTTP response
-     *
-     * @Route(
-     *     "/logowanie",
-     *     methods={"GET"},
-     *     name="logowanie_index",
-     * )
-     */
-    public function logowanie(): Response
-    {
-        return $this->render(
-            'logowanie.html.twig',
-        );
-    }
 }
