@@ -10,6 +10,7 @@ use App\Entity\Opinion;
 use App\Form\Type\OpinionType;
 use App\Service\OpinionService;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\Form\Extension\Core\Type\FormType;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -22,6 +23,7 @@ class OpinionController extends AbstractController
     /**
      * Opinion service.
      *
+     * @var \App\Service\OpinionService Opinion service
      */
     private OpinionService $opinionService;
 
@@ -106,7 +108,75 @@ class OpinionController extends AbstractController
             ]
         );
     }
+
+    /**
+     * Usun opinie
+     *
+     * @param \Symfony\Component\HttpFoundation\Request $request HTTP Request
+     *
+     * @return \Symfony\Component\HttpFoundation\Response HTTP response
+     *
+     * throws \Doctrine\ORM\ORMException
+     * @throws \Doctrine\ORM\OptimisticLockException
+     *
+     * @Route(
+     *     "/admin/delete/{id}",
+     *     methods={"GET", "DELETE"},
+     *     name="opinion_delete",
+     * )
+     */
+    public function delete(Request $request, Opinion $opinion): Response
+    {
+//        $form = $this->createForm(FormType::class, $opinion, ['method' => 'DELETE']);
+//        $form->handleRequest($request);
+//
+//        if ($request->isMethod('DELETE') && !$form->isSubmitted()) {
+//            $form->submit($request->request->get($form->getName()));
+//        }
+//
+//        if ($form->isSubmitted() && $form->isValid()) {
+//            $this->opinionService->delete($opinion);
+//            $this->addFlash('success', 'Odrzucono opinię');
+//
+//            return $this->redirectToRoute('admin_index');
+//        }
+//
+//        return $this->render(
+//            'opinion/delete.html.twig',
+//            [
+//                'form' => $form->createView(),
+//                'opinion' => $opinion,
+//            ]
+//        );
+
+            $this->opinionService->delete($opinion);
+            $this->addFlash('success', 'Odrzucono opinię');
+
+            return $this->redirectToRoute('admin_index');
+    }
+
+    /**
+     * Zaakceptuj opinie
+     *
+     * @param Request $request HTTP Request
+     *
+     * @return Response HTTP response
+     *
+     * @Route(
+     *     "/admin/accept/{id}",
+     *     methods={"GET", "PUT"},
+     *     name="opinion_accept",
+     * )
+     */
+    public function accept(Request $request, Opinion $opinion): Response
+    {
+            $this->opinionService->accept($opinion);
+            $this->addFlash('success', 'Zaakceptowana opinię');
+
+            return $this->redirectToRoute('admin_index');
+    }
 //    TODO:
+//    ZROBIĆ BEZPIECZNE USUWANIE, NIE PO LINKACH
 //    Display only accepted comments.
 //    If send -> save and display only form admin -> if accepted [display] -> if not accepted [delete]
 }

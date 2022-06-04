@@ -365,6 +365,7 @@ hr {
 label {
     font-family: 'DM Sans', serif;
     font-weight: bold;
+    font-size: 1.1em;
 }
 input:not(input[type=submit]) {
     width: 20em;
@@ -412,9 +413,6 @@ form {
 .font-styling {
     margin-bottom: 1em;
     max-width: 630px;
-}
-label {
-    font-size: 1.1em;
 }
 .inline-form-text {
     font-family: 'DM Sans', serif;
@@ -516,4 +514,36 @@ label {
 }
 strong a:hover {
     color: #357eaf;
+}
+.register-custom input:not(input[type=submit]) {
+    width: 20em;
+    height: 2.9em;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-bottom: 2em;
+}
+.register-custom label {
+    font-family: 'DM Sans', serif;
+    font-weight: bold;
+    font-size: 1.1em;
+    text-align: left;
+    /*margin-left: 3em;*/
+}
+.register-custom label::after {
+    content: "\A";
+    white-space: pre;
+}
+
+
+/* HIGH CONTRAST */
+body.contrasty {
+    background-color: black;
+    color: yellow;
+    -webkit-text-stroke: unset;
+    /*filter: invert(100%);*/
+}
+body.contrasty h2, body.contrasty b, body.contrasty inline {
+    color: yellow;
+    -webkit-text-stroke: unset;
+    /*filter: invert(100%);*/
 }

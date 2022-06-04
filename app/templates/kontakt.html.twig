@@ -30,7 +30,7 @@
             {% if pagination is defined and pagination.items|length %}
                 <div class="indent" style="flex-wrap: wrap;">
                     {% for opinion in pagination.items %}
-                        {% if not opinion.is_accepted %}
+                        {% if opinion.is_accepted %}
                             <section class="opinion">
                                 <inline class="user-info">{{ opinion.author.username }}, {{ opinion.date|date('Y/m/d') }}</inline>
                                 <div class="message-style">

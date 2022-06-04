@@ -39,13 +39,6 @@ class OpinionType extends AbstractType
                 'attr' => ['max_length' => 255],
 
             ]);
-//        $builder->add(
-//            'date',
-//            DateType::class,
-//            [
-//                'label' => 'Data',
-//                'required' => true,
-//            ]);
     }
 
     /**

@@ -7,7 +7,31 @@
 {% block body %}
     {% include 'header.html.twig' %}
     <main id="main" class="page">
-
+        <article>
+            <h2>Opinie o serwisie</h2>
+            {% if pagination is defined and pagination.items|length %}
+{#                {% if is_granted('IS_AUTHENTICATED_FULLY') and is_granted('ROLE_USER') %}#}
+                <div class="indent" style="flex-wrap: wrap;">
+                    {% for opinion in pagination.items %}
+                        {% if not opinion.is_accepted %}
+                            <section id="opinions" class="opinion" style="background-color: lightgray; margin-bottom: 1.2em;">
+                                <inline class="user-info">{{ opinion.author.username }}, {{ opinion.date|date('Y/m/d') }}</inline>
+                                <div class="message-style">
+                                    {{ opinion.message }}
+                                </div>
+                            </section>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            {% else %}
+                <div>
+                    {{ 'Brak opinii do zmoderowania' }}
+                </div>
+            {% endif %}
+            <div>
+                {{ knp_pagination_render(pagination) }}
+            </div>
+        </article>
     </main>
     {% include 'footer.html.twig' %}
 {% endblock %}

@@ -50,24 +50,6 @@ class SiteController extends AbstractController
         );
     }
 
-    /**
-     * Strona Dla twórcy.
-     *
-     * @return \Symfony\Component\HttpFoundation\Response HTTP response
-     *
-     * @Route(
-     *     "/tworca",
-     *     methods={"GET"},
-     *     name="tworca_index",
-     * )
-     */
-    public function tworca(): Response
-    {
-        return $this->render(
-            'tworca.html.twig',
-        );
-    }
-
 //    /**
 //     * Kontakt.
 //     *

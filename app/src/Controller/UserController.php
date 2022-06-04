@@ -39,40 +39,38 @@ class UserController extends AbstractController
      * Panel administatora.
      *
      * @param Request $request HTTP Request
-     * @param Opinion $opinion Opinion entity
      *
      * @return \Symfony\Component\HttpFoundation\Response HTTP response
      *
      * @Route(
      *     "/admin",
-     *     methods={"GET", "DELETE"},
+     *     methods={"GET"},
      *     name="admin_index",
      * )
      */
-    public function admin(Request $request, Opinion $opinion): Response
+    public function admin(Request $request): Response
     {
         $pagination = $this->opinionService->getPaginatedList(
             $request->query->getInt('page', 1)
         );
 
-        $form = $this->createForm(FormType::class, $opinion, [
-            'method' => 'DELETE',
-            'action' => $this->generateUrl('admin_index', ['id' => $opinion->getId()]),
-        ]);
-        $form->handleRequest($request);
-
-        if ($form->isSubmitted() && $form->isValid()) {
-            $this->opinionService->delete($opinion);
-
-            $this->addFlash('success', 'Usunięto opinię');
-
-            return $this->redirectToRoute('admin_index');
-        }
+//        $form = $this->createForm(FormType::class, $opinion, [
+//            'method' => 'DELETE',
+//            'action' => $this->generateUrl('admin_index', ['id' => $opinion->getId()]),
+//        ]);
+//        $form->handleRequest($request);
+//
+//        if ($form->isSubmitted() && $form->isValid()) {
+//            $this->opinionService->delete($opinion);
+//
+//            $this->addFlash('success', 'Usunięto opinię');
+//
+//            return $this->redirectToRoute('admin_index');
+//        }
 
         return $this->render(
             'user/admin.html.twig',
             [
-                'form' => $form->createView(),
                 'pagination' => $pagination,
             ]
         );
@@ -80,6 +78,8 @@ class UserController extends AbstractController
 
     /**
      * Konto użytkownika.
+     *
+     * @param Request $request HTTP Request
      *
      * @return \Symfony\Component\HttpFoundation\Response HTTP response
      *
@@ -89,10 +89,17 @@ class UserController extends AbstractController
      *     name="user_index",
      * )
      */
-    public function konto(): Response
+    public function konto(Request $request): Response
     {
+        $pagination = $this->opinionService->getPaginatedList(
+            $request->query->getInt('page', 1)
+        );
+
         return $this->render(
             'user/user_profile.html.twig',
+            [
+                'pagination' => $pagination,
+            ]
         );
     }
 }

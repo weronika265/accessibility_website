@@ -1,0 +1,11 @@
+{% include 'default/_form.html.twig' with {
+    page_title: 'Odrzuć opinię',
+    page_title_param: {'%id%': opinion.id},
+    attr: {
+        method: 'DELETE',
+        action: url('opinion_delete', {'id': opinion.id}),
+    },
+    form: form,
+    submit_label: 'Odrzuć opinię'|trans,
+    back_to_list_path: 'admin_index',
+} %}

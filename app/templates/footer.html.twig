@@ -35,13 +35,13 @@
                 <span style="color: green;">Kontrast</span><br/>
                 <button id="contrast-std">Standard</button>
                 <button id="contrast-high">Wysoki</button>
-                <button id="dark-mode">Ciemny</button>
+{#                <button id="dark-mode">Ciemny</button>#}
             </div>
             <div>
                 <span style="color: green;">Odstęp</span><br/>
                 <button id="space-std">Standard</button>
-                <button id="space-small">Mały</button>
                 <button id="space-big">Duży</button>
+                <button id="space-bigger">Duży+</button>
             </div>
             <div>
                 <span style="color: green;">Wielkość fontu</span><br/>
@@ -53,7 +53,9 @@
     </span>
 
     {% block javascripts %}
-        {{ parent() }}
+        <script>
+            {{ parent() }}
+        </script>
     {% endblock %}
 
 {% endblock %}

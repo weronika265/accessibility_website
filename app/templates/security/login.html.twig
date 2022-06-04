@@ -27,8 +27,9 @@
                 </div>
             {% endif %}
             <h2>Logowanie</h2>
+            {# dac h1 #}
 
-            <label for="email">Email</label><span class="inline-form-text" style="margin-left: 3em;">Nie masz konta? <strong><a href="#">Zarejestruj się</a></strong> </span><br/>
+            <label for="email">Email</label><span class="inline-form-text" style="margin-left: 3em;">Nie masz konta? <strong><a href="{{ url('app_register') }}">Zarejestruj się</a></strong> </span><br/>
             <input type="email" value="{{ last_username }}" id="email" name="email" autocomplete="email" required autofocus/><br/>
             <label for="password">Hasło</label><span id="show" class="inline-form-text" style="margin-left: 11.5em; cursor: pointer;"><i class='fa fa-eye' style="margin-right:0.3em;"></i>Pokaż hasło</span><br/>
             <input type="password" id="password" name="password" style="margin-bottom: 0.5em;" autocomplete="current-password" required/><br/>
@@ -41,19 +42,22 @@
     </div>
     {% include 'footer.html.twig' %}
 
-    <script>
-        const passwd = document.getElementById('password');
-        const showElem = document.getElementById('show');
+    {% block javascripts %}
+        <script>
+            const passwd = document.getElementById('password');
+            const showElem = document.getElementById('show');
 
-        function showPasswd() {
-            if (passwd.type === 'password') {
-                passwd.type = 'text';
+            function showPasswd() {
+                if (passwd.type === 'password') {
+                    passwd.type = 'text';
+                }
+                else {
+                    passwd.type = 'password';
+                }
             }
-            else {
-                passwd.type = 'password';
-            }
-        }
 
-        showElem.addEventListener('click', showPasswd);
-    </script>
+            showElem.addEventListener('click', showPasswd);
+        </script>
+    {% endblock %}
+
 {% endblock %}

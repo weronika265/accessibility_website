@@ -13,11 +13,13 @@
                 <div class="indent" style="flex-wrap: wrap;">
                     {% for opinion in pagination.items %}
                         {% if not opinion.is_accepted %}
-                            <section class="opinion" style="background-color: lightgray; margin-bottom: 1.2em;">
+                            <section id="opinions" class="opinion" style="background-color: lightgray; margin-bottom: 1.2em;">
                                 <inline class="user-info">{{ opinion.author.username }}, {{ opinion.date|date('Y/m/d') }}</inline>
                                 <div class="message-style">
                                     {{ opinion.message }}
                                 </div>
+                                <a href="{{ url('opinion_delete', {id: opinion.id}) }}" class="delete-opinion" data-id="{{ opinion.id }}" style="background-color: darkred; padding: 0.5em;">Odrzuć</a>
+                                <a href="{{ url('opinion_accept', {id: opinion.id}) }}" class="delete-opinion" data-id="{{ opinion.id }}" style="background-color: lightgreen; padding: 0.5em;">Zaakceptuj</a>
 {#                                <form method="post">#}
 {#                                    <input type="button" id="akceptuj" name="akceptuj" value="Akceptuj" style="cursor: pointer; background-color: lightgreen;"/>#}
 {#                                    <input type="button" id="odrzuc" name="odrzuc" value="Odrzuć" style="cursor: pointer; background-color: lightcoral;"/>#}
@@ -51,4 +53,23 @@
         </article>
     </main>
     {% include 'footer.html.twig' %}
+
+{#    {% block javascripts %}#}
+{#        <script>#}
+{#            const opinions = document.getElementById('opinions');#}
+{#            if(opinions) {#}
+{#                opinions.addEventListener('click', (e) => {#}
+{#                    if(e.target.className === 'delete-opinion') {#}
+{#                        if(confirm('Czy na pewno usunąć?')) {#}
+{#                            const id = e.target.getAttribute('data-id');#}
+
+{#                            fetch(`/article/delete/${id}`, {#}
+{#                                method: 'DELETE'#}
+{#                            }).then(res => window.location.reload())#}
+{#                        }#}
+{#                    }#}
+{#                });#}
+{#            }#}
+{#        </script>#}
+{#    {% endblock %}#}
 {% endblock %}

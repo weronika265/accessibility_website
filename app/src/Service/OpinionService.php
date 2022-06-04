@@ -83,10 +83,8 @@ class OpinionService
     public function accept(Opinion $opinion): void
     {
         if ($opinion->getId() == null) {
-            $opinion->setDate(new \DateTimeImmutable());
             $opinion->setIsAccepted(1);
         }
-        $opinion->setDate(new \DateTimeImmutable());
         $opinion->setIsAccepted(1);
 
         $this->opinionRepository->save($opinion);

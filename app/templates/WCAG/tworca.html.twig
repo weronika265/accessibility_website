@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+{# skonfigurowane include, zeby nie zchodzic ponizej templates? #}
+{# zrobic normalne style #}
+{# poprawic sidebar, zeby byl accessible #}
+{# cos nie dziala grafika a11y #}
+{% block title %}
+    Dla twórcy
+{% endblock %}
+
+{% block body %}
+    {% include 'header.html.twig' %}
+    {% include 'sidebar.html.twig' %}
+    <main id="main" class="page">
+        <div style="margin-left: 15em;">
+            <h1>Moduł dedykowany twórcom</h1>
+            <p class="txt-format">
+                W tym module strony znajdziesz przydatne informacje i narzędzia. Pomogą Tobie w tworzeniu bardziej dostępnych treści internetowych.
+            </p>
+            <p class="txt-format">
+                Główną częścią modułu jest poradnik o wytycznych WCAG 2.1. Znajdziesz tam opisy wytycznych, a co najważniejsze - wizualizację problemów z przykładami.
+            </p>
+            <p class="txt-format">
+                Lista zasad <strong>(wsadzić to w jakieś sensowne miejsce)</strong>:
+            <ol>
+                <li>Postrzegalność - Przedstawiaj użytkownikom informacje i komponenty interfejsu w sposób dostrzegalny dla ich zmysłów.</li>
+                <li>Funkcjonalność - Zapewnij, aby komponenty interfejsu użytkownika i nawigacja były możliwe do użycia.</li>
+                <li>Zrozumiałość - Zadbaj o to, aby informacje i obsługa interfejsu były zrozumiałe.</li>
+                <li>Solidność - Twórz treści solidnie, aby mogły być skutecznie interpretowane przez różne programy użytkownika, w tym technologie wspomagające.</li>
+            </ol>
+            </p>
+            <p class="txt-format">
+                Znajdują się tu także podstawowe informacje o atrybutach WAI-ARIA, które służą do tworzenia jeszcze bardziej dostępnych treści. Związane są często z językiem JavaScript.
+            </p>
+            <p class="txt-format">
+                Dodatkowo możesz posłużyć się Checklistą WCAG 2.1, aby zobaczyć, na ile spełniasz wytyczne dokumentu.<br/>
+                Warto też otworzyć zakładkę o przydatnych narzędziach podczas tworzenia stron. Pomogą one w tworzeniu i testowaniu Twojej strony pod kątem dostępności.
+            </p><br/>
+            <p class="txt-format">
+            <h3>UWAGA</h3>
+            W związku ze specyfiką tego modułu, część treści może nie być w dostępna.
+            </p>
+        </div>
+        </div>
+
+        <!-- Każdy li, np. 4.1 włącza stronę z table of content z "głębszymi" kryteriami -->
+        <!-- Dodać komentarze z możliwością wyboru kryterium? + pole w tabeli w bazie?  -->
+    </main>
+    {% include 'footer.html.twig' %}
+{% endblock %}
