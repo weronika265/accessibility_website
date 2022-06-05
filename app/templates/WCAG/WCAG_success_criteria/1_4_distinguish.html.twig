@@ -1,0 +1,374 @@
+{% extends 'base.html.twig' %}
+{# skonfigurowane include, zeby nie zchodzic ponizej templates? #}
+{# zrobic normalne style #}
+{# poprawic sidebar, zeby byl accessible #}
+{# cos nie dziala grafika a11y #}
+{% block title %}
+    1.4 Rozróżnialność
+{% endblock %}
+
+{% block body %}
+    {% include 'header.html.twig' %}
+    {% include 'sidebar.html.twig' %}
+    <main id="main" class="page">
+        <div style="margin-left: 15em;">
+            <h1>Wytyczna 1.4 Rozróżnialność</h1>
+            <p class="txt-format-main">Ułatwiaj oglądanie i słuchanie treści oraz oddzielanie informacji od tła.</p>
+            <div id="table-of-content">
+                <h2>Spis treści</h2>
+                <ul>
+                    <li><a href="#1_4_1">Kryterium sukcesu 1.4.1 Użycie koloru (Poziom A)</a></li>
+                    <li><a href="#1_4_2">Kryterium sukcesu 1.4.2 Kontrola odtwarzania dźwięku (Poziom A)</a></li>
+                    <li><a href="#1_4_3">Kryterium sukcesu 1.4.3 Kontrast (minimalny) (Poziom AA)</a></li>
+                    <li><a href="#1_4_4">Kryterium sukcesu 1.4.4 Zmiana rozmiaru tekstu (Poziom AA)</a></li>
+                    <li><a href="#1_4_5">Kryterium sukcesu 1.4.5 Obrazy tekstu (Poziom AA)</a></li>
+                    <li><a href="#1_4_6">Kryterium sukcesu 1.4.6 Kontrast (wzmocniony) (Poziom AAA)</a></li>
+                    <li><a href="#1_4_7">Kryterium sukcesu 1.4.7 Niska głośność lub bez dźwięków w tle (Poziom AAA)</a></li>
+                    <li><a href="#1_4_8">Kryterium sukcesu 1.4.8 Prezentacja wizualna (Poziom AAA)</a></li>
+                    <li><a href="#1_4_9">Kryterium sukcesu 1.4.9 Obrazy tekstu (bez wyjątków) (Poziom AAA)</a></li>
+                    <li><a href="#1_4_10">Kryterium sukcesu 1.4.10 Dopasowanie do ekranu (Poziom AA)</a></li>
+                    <li><a href="#1_4_11">Kryterium sukcesu 1.4.11 Kontrast elementów nietekstowych (Poziom AA)</a></li>
+                    <li><a href="#1_4_12">Kryterium sukcesu 1.4.12 Odstępy w tekście (Poziom AA)</a></li>
+                    <li><a href="#1_4_13">Kryterium sukcesu 1.4.13 Treść spod kursora lub fokusu (Poziom AA)</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 id="1_4_1">Kryterium sukcesu 1.4.1 Użycie koloru (Poziom A)</h3>
+                <p class="txt-format">
+                    Przekazując informacje, wyróżniając informacje lub wskazując czynności do wykonania, <b>nie polegaj tylko na kolorze</b>.<br/>
+                    Osoby z zaburzeniem postrzegania barw nie widzą niektórych kolorów. Jeśli na swojej stronie przekazujesz informacje tylko za pomocą koloru,
+                    takie osoby mogą nie być wstanie wykonać polecenia lub go rozumieć.<br/>
+                    Przez to elementy, które chcesz podkreślić, muszą być oznaczone w dodatkowy sposób niż tylko za pomocą koloru.<br/>
+                    <strong>Grafiki jak jest dobrze, jak jest źle i jak ktoś może postrzegać</strong>
+                </p>
+                <p>
+                    Tutaj jest przykład złego użycia koloru do przekazania ważnej informacji:
+                <div>
+                    <label style="color: red;">Imię<input type="text"/></label><br/>
+                    <label style="color: red;">Nazwisko<input type="text"/></label><br/>
+                    <label style="color: red;">Adres<input type="text"/></label><br/>
+                    <label>Wiek<input type="text"/></label><br/>
+                </div>
+                </p>
+                <p>
+                    A tu jest przykład poprawny:
+                <div>
+                    Pola oznaczone znakiem "*" są wymagane.<br/>
+                    <label style="color: red;">*Imię<input type="text"/></label><br/>
+                    <label style="color: red;">*Nazwisko<input type="text"/></label><br/>
+                    <label style="color: red;">*Adres<input type="text"/></label><br/>
+                    <label>Wiek<input type="text"/></label><br/>
+
+                </div>
+                </p>
+                <p class="txt-format">
+                    <b>WAŻNE</b><br/>
+                    Jeśli używać koloru do podkreślenia elementu, musi on być nie tylko w innym odcieniu, ale także innej jasności - kontrast wyróżnionego elementu
+                    musi wynosić minimum 3:1 w stosunku do niewyróżnionej treści.
+                </p>
+            </div>
+            <div>
+                <h3 id="1_4_2">Kryterium sukcesu 1.4.2 Kontrola odtwarzania dźwięku (Poziom A)</h3>
+                <p class="txt-format">
+                    Jeśli na stronie zamieszczone jest nagranie, które włącza się po załadowaniu strony i trwa dłużej niż 3 sekundy,
+                    musisz zapewnić:
+                <ul>
+                    <li>możliwość wyłączenia takiego nagrania</li>
+                    LUB
+                    <li>umożliwić ściszenie dźwięku na stronie, który jest niezależny od głośności systemu.</li>
+                </ul>
+                <strong>osobna strona z przykładem i film, jak ktoś to słyszy z technologią asystującą. + dobry przykład z link na górze strony</strong><br/>
+                <b>Uwaga</b><br/>
+                W przypadku, kiedy nie zastosujesz się do kryterium, reszta treści też okaże się niedostępna.<br/>
+                Spójrz na taką sytuację: użytkownik korzysta z technologii asystujących do nawigacji po stronie, takich jak czytniki tekstu i treści.
+                Jeśli po odwiedzeniu strony usłyszy dźwięk z nagrania, ścieżka audio nagrania i dźwięk z czytnika treści będą się nachodziły.
+                Użytkownik będzie miał problem ze zrozumieniem, jaką informację przekazuje mu czytnik.<br/>
+                </p>
+                <p class="txt-format">
+                    Ważne, abyś umożliwiał ściszanie nagrania niezależnie od dźwięku systemu. Wtedy użytkownik ściszy jedynie nagranie na stronie, a nie również
+                    głośność używanego czytnika.
+                </p>
+                <p class="txt-format">
+                    Z tej funkcjonalności skorzystają także osoby, które mają problem z czytaniem, kiedy słyszą dźwięki w tle.
+                </p>
+                <p class="txt-format">
+                    <b>WAŻNE</b>
+                    Najlepiej, aby nagranie było domyślnie wyłączone. Wtedy użytkownik może zdecydować, czy chce włączyć odtwarzacz.<br/>
+                    Możesz oczywiście zadecydować, że nagranie będzie włączało się po załadowaniu strony, ale pomyśl - czy nie irytuje Cię, kiedy
+                    ładujesz zakładkę lub stronę i nie wiesz, skąd dokładnie pochodzi dźwięk?
+                </p>
+            </div>
+            <div>
+                <h3 id="1_4_3">Kryterium sukcesu 1.4.3 Kontrast (minimalny) (Poziom AA)</h3>
+                <p class="txt-format">
+                    Tekst do czytania lub który jest częścią obrazka (obrazy tekstu), muszą mieć kontrast przynajmniej 4.5:1, poza wyjątkami:
+                <ul>
+                    <li>Duży tekst (18px lub 16px z pogrubieniem) i obrazy zawierające duży tekst muszą mieć kontrast przynajmniej 3:1.</li>
+                    <li>Tekst w treści czysto dekoracyjnej, nieaktywnych i niewidocznych elementach interfejsu, lub w kompozycji, gdzie inne treści pełnią są najwazniejszą częścią przekazu.</li>
+                    <li>Logotyp - nazwa marki w formie tekstowej.</li>
+                </ul>
+                <strong>Pokazane, czego nie trzeba? (grafika z podpisanym kontrastem, ...)</strong>
+                </p>
+                <p class="txt-format">
+                    Kiedy zadbasz o odpowiedni kontrast na stronie, osoby z problemami ze wzrokiem także będą mogły łatwo zapoznać się z zawartością.
+                    Mogą to być m.in.:
+                <ul>
+                    <li>osoby niedowidzące, którym łatwiej jest odczytać tekst kontrastujący z tłem,</li>
+                    <li>osoby ze ślepotą barw. Mogą one mieć problemy z poprawnym rozpoznawaniem jasności barw i porównaniem jasności tekstu i tła.</li>
+                </ul>
+                <strong>Pokazanie przykładu kontrastu i wielkości fontu.</strong>
+                </p>
+                <p class="txt-format">
+                    Niektóre grafiki mają tekst, który jest istotny dla odbiorcy. Tekst w tego rodzaju treściach należy:
+                <ul>
+                    <li>dołączyć osobno w postaci normalnego tekstu i nanieść na grafikę,</li>
+                    albo
+                    <li>tworzyć grafiki w większych rozdzielczościach.</li>
+                </ul>
+                <strong>Przykład/y obrazujący</strong><br/>
+                Lepszą opcją jest zazwyczaj dodanie tekstu osobno. Wtedy znacznie łatwiej zmienisz kontrast między zawartością a tłem.<br/>
+                Natomiast jeśli powiększasz zawartość z tekstem, nie straci on na czytelności.
+                </p>
+            </div>
+            <div>
+                <h3 id="1_4_4">Kryterium sukcesu 1.4.4 Zmiana rozmiaru tekstu (Poziom AA)</h3>
+                <p class="txt-format">
+                    Musisz zapewnić, aby tekst na stronie można było powiększyć bez użycia technologii asystujących do 200%.
+                    Powiekszona zawartość ma być tak samo funkcjonalna i postrzegalna, jak w widoku domyślnym.<br/>
+                    Kryterium nie dotyczy napisów do nagrań oraz tekstu, który jest częścią grafiki.
+                </p>
+                <p class="txt-format">
+                    Możliwość powiększenia zawartości bez użycia dodatkowych narzędzi jest bardzo pomocna dla osób, które słabo widzą.<br/>
+                    Pozwól użytkownikowi na powiększanie zawartości przez opcję zoom w przeglądarce lub przy użyciu zaprogramowanych przycisków.<br/>
+                    Przyciski powinny pomóc w zmianie wielkości czcionki lub modyfikować ułożenie treści na stronie.
+                </p>
+                <p class="txt-format">
+                    Pamiętaj, że strona ma być zaprojektowana tak, aby przy powiększaniu zawartość nie "rozjeżdżała się".
+                </p>
+                <strong>Film dobrze i źle (rozjazd i nie)</strong> (cos jak 1.3.4 + powiekszanie tekstu, kod)<br/>
+                <a style="color: darkblue;" href="examples/1_4_4_dobry.html">Przykład spełniający kryterium</a> <a style="color: darkblue;" href="examples/1_4_4_zly.html">Przykład, który nie spełnia kryterium</a>
+            </div>
+            <div>
+                <h3 id="1_4_5">Kryterium sukcesu 1.4.5 Obrazy tekstu (Poziom AA)</h3>
+                <p class="txt-format">
+                    Jest planujesz użyć grafik, na których będą się znajdować napisy, musisz zadbać o to, aby były one tekstem.
+                    Nie dotyczy to obrazów z tekstem, gdzie:
+                <ul>
+                    <li>możliwe jest dostosowanie przez użytkownika,</li>
+                    <li>tekst, który jest częścią grafiki pełni ważną funkcję (np. logotyp, zrzut ekranu, wykres).</li>
+                </ul>
+                Dzięki temu rozwiązaniu użytkownicy nie muszą polegać na tekście stworzonym przez autora. Mogą go modyfikować różne sposoby, m.in. zmieniajac czcionce:
+                <ul>
+                    <li>krój,</li>
+                    <li>kolor,</li>
+                    <li>wyrównanie,</li>
+                    <li>odstępy międzyliterowe i międzywyrazowe.</li>
+                </ul>
+                </p>
+                <p class="txt-format">
+                    Osoby, które mają słaby wzrok lub problemy z czytaniem na pewno Ci podziękują.
+                    Niektóre opcje pisma są dla takich użytkowników nieczytelne i zostają zmieniane według preferencji.
+                </p>
+                <strong>Przykkłąd grafiki z tekstem, który można zmienić + grafiki, do których nie trzeba dodawać opcji</strong>
+            </div>
+            <div>
+                <h3 id="1_4_6">Kryterium sukcesu 1.4.6 Kontrast (wzmocniony) (Poziom AAA)</h3>
+                <p class="txt-format">
+                    <strong>Dać tylko?: + przykład i porównanie z 1.4.3</strong><br/>
+                    Jest to modyfikacja kryterium <a href="#1_4_3">1.4.3 Kontrast (minimalny)</a>.<br/>
+                    W tym przypadku kontrast musi być większy i wynosić przynajmniej 7:1.<br/>
+                    Duży tekst i obrazy zawierające duży tekst muszą mieć kontrast przynajmniej 4.5:1.
+                </p>
+            </div>
+            <div>
+                <h3 id="1_4_7">Kryterium sukcesu 1.4.7 Niska głośność lub bez dźwięków w tle (Poziom AAA)</h3>
+                <p class="txt-format">
+                    Materiały tylko audio, które:
+                <ol>
+                    <li>zawiera głównie mowę, która nie jest tłem nagrania,</li>
+                    <li>nie jest dźwiękową wersją testu CAPTCHA lub logo w postaci dźwięku,</li>
+                    <li>nie jest nagraniem o charakterze muzycznym, np. śpiew</li>
+                </ol>
+                muszą spełnić co najmniej jedno z założeń:
+                <ul>
+                    <li>nagranie nie zawiera dźwięków w tle,</li>
+                    <li>dźwięki w tle można wyłączyć,</li>
+                    <li>głośność tła jest przynajmniej 20dB (z definicji decybela 4x) niższa od pierwszoplanowych dźwięków mowy. Wyjątkiem są okazyjne, jedno- lub dwusekundowe dźwięki tła.</li>
+                </ul>
+                </p>
+                <p class="txt-format">
+                    Dzięki kryterium osoby słabo słyszące mogą łatwiej oddzielić mowę od dźwięków tła.
+                </p>
+                <strong>Grafiki i filmy/ tylko to lub tylko to?</strong>
+            </div>
+            <div>
+                <h3 id="1_4_8">Kryterium sukcesu 1.4.8 Prezentacja wizualna (Poziom AAA)</h3>
+                <p class="txt-format">
+                    Dla wizualnego przedstawienia bloków tekstu, zastosuj się do kilku zasad:
+                <ul>
+                    <li>Kolory na pierwszym planie i kolory tła mogą być zmieniane przez użytkownika.</li>
+                    <li>Szerokość bloków nie przekracza 80 znaków (40 w przypadku alfabetów: chińskiego, japońskiego i koreańskiego).</li>
+                    <li>Tekst nie jest wyjustowany (wyrównany do lewego i prawego marginesu).</li>
+                    <li>Odstępy między wierszami.</li>
+                    <li>Tekst można powiekszyć do 200% bez korzystania z technologii asystujących w taki sposób, żeby użytkownik nie musiał przesuwać zmaksymalizowanego ekranu w poziomie.</li>
+                </ul>
+                <strong>Opis każdego z przykładem.</strong>
+                </p>
+                <p class="txt-format">
+                    Wymienione techniki pomagają szerokiej grupie odbiorców zapoznać się z treścią strony.
+                    Jeśli treść jest wyświetlana w sposób nieprzystępny, wielu użytkowników nie będzie moglo oglądać zawartości, lub będzie robiła to z trudem.
+                </p>
+                <p class="txt-format">
+                    <i>Zamiana kolorów na pierwszym planie i w tle</i><br/>
+                    Część osób inaczej postrzega barwy (inny kontrast, postrzeganie) i jeśli może zmienić wyświetlane kolory, dostosuje je do własnych potrzeb.
+                    Również niektóre połączenia kolorów mogą być nieintuicyjne.
+                </p>
+                <p class="txt-format">
+                    <i>Bloki tekstu są szerokie na maksymalnie 80 znaków (40 w przypadku alfabetów: chińskiego, japońskiego i koreańskiego).</i><br/>
+                    Niektórzy użytkownicy radzą sobie źle z długimi blokami tekstu. Ich skrócenie pozwala na łatwiejsze śledzenie wzrokiem kolejnych linii tekstu.<br/>
+                    Dla alfabetów chińskiego, japońskiego i koreańskiego maksymalna liczba znakow jest mniejsza. Wynika to z szerszych znaków w tych językach.
+                </p>
+                <p class="txt-format">
+                    <i>Tekst nie jest wyjustowany</i><br/>
+                    Teskt wyrównany do lewej i prawej strony gorzej się czyta. Efekt justowania może spowodować, że
+                    odstępy między literami są nieregularne i albo za duże, albo za małe.
+                </p>
+                <p class="txt-format">
+                    <i>Powiększanie ekranu bez przewijania w poziomie</i><br/>
+                    Musisz zapewnić możliwość powiększania strony, nie wyłączaj tej funkcjonalności! <strong>kod, co za to odpowiada</strong><br/>
+                    Przy powiększaniu zawartość musi zwijać się do następnych linijek, aby użytkownik nie musiać przesuwać zawartości w lewo i prawo podczas czytania.
+                    Użytkownik nie będzie zdezorientowany, kiedy powiększa czytany tekst.
+                </p>
+            </div>
+            <div>
+                <h3 id="1_4_9">Kryterium sukcesu 1.4.9 Obrazy tekstu (bez wyjątków) (Poziom AAA)</h3>
+                <p class="txt-format">
+                    Stosuj obrazy na których widać tekst tylko w przypadku, kiedy taki sposób prezentacji jest ważny lub czysto dekoracyjny.<br/>
+                    Pozwala to użytkownikowi modyfikować wyświetlane napisy ma wielu grafikach, co znacznie ogranicza korzystanie z treści, gdzie
+                    tekst jest "zlany" z obrazem. Nie każy może taką zawartość odczytać, np. osoby korzystające z czytnika tekst lub słabo czytające użytą czcionkę.<br/>
+                    <strong>Obraz tekstu i kiedy nie trzeba? (jakieś nawiązanie do poprzednich?)</strong>
+                </p>
+            </div>
+            <div>
+                <h3 id="1_4_10">Kryterium sukcesu 1.4.10 Dopasowanie do ekranu (Poziom AA)</h3>
+                <p class="txt-format">
+                    Treść nie traci na czytelności i funkcjonalności, oraz nie trzeba jest przesuwać w poziomie (i pionie?),
+                    dla przewijania treści przy powiększeniu 400% w rozdzielczości 720p.<br/>
+                    Wyjątkiem są epementy, które wymagają przewijania w pionie i poziomie, takie jak mapy, wykresy i gry.
+                </p>
+                <p class="txt-format">
+                    Zawartość strony powiększona 400% powinna zawijać się do jednej pionowej kolumny.
+                </p>
+                <p class="txt-format">
+                    Powiększanie na stronie jest kluczowe, ponieważ pozwala osobom niewidzącym i niedowidzącym na czytanie tekstu, który będzie wystarczająco duży.<br/>
+                    Musi być dostosowany do przewijania tylko w pionie (/poziomie?), aby czytaną zawartość można było łatwo śledzić.
+                </p>
+                <p class="txt-format">
+                    Najlepszym sposobem na zastosowanie się do kryterium jest podejście responsywne do tworzenia stron.<br/>
+                    Dzięki responywności Twoja strona będzie dostosowywać się do ekranu w zależności od jego wielkości.
+                    Część zawartości może zmieniać wygląd i ułożenie przy mniejszych ekranach, np. zwijane menu na urządzeniach mobilnych.
+                    <strong>(film polazujący reflow lub prośba o przetestowanie z przeglądarką na stronie/ osobna strona. Czego nie trzeba i jak jest niepoprawnie)</strong>
+                </p>
+            </div>
+            <div>
+                <h3 id="1_4_11">Kryterium sukcesu 1.4.11 Kontrast elementów nietekstowych (Poziom AA)</h3>
+                <p class="txt-format">
+                    Wizualne elementy, które są prezentowane na stronie, powinny mieć kontrast przynajmniej 3:1 w stosunku do pobliskich elementów:
+                <ul>
+                    <li>Informacje wizualne, które identyfikują komponenty interfejsu użytkownika i informują o ich stanach.
+                        Wyjątkiem są nieaktywne elementy i elementy, nad których wyglądem twórca nie ma kontroli.</li>
+                    <li>Część grafiki, która jest kluczowa do zrozumienia jej treści. Nie dotyczy to elementów graficznych, które w przedstawionej
+                        formie są kluczowe l, aby zrozumieć treść.</li>
+                </ul>
+                </p>
+                <p class="txt-format">
+                    Treści o słabym kontraście są znacznie mniej czytelne. Jeśli zastosujesz się do kryterium, tworzone przez Ciebie treści
+                    będą bardziej dostępne dla osób słabowidzących i niepostrzegających poprawnie barw. Przykładowo, ta grupa odbiorców nie przeoczy niektórych treści.<br/>
+                    Skorzystają również osoby, które używają urządzeniaa w silnym nasłonecznieniu, gdzie elementy strony są słabiej widoczne.
+                </p>
+                <p class="txt-format">
+                    Chcąc zadbać o odpowiedni kontrast, musisz wziąć pod uwagę kilka sytuacji: <strong>Dać jednak tylko przykłady, bez opisów?</strong>
+                </p>
+                <p class="txt-format">
+                    <i>Aktywne elementy interfejsu użytkownika</i><br/>
+                    Elementy, z którymi użytkownik może wejść w interakcję, muszą mieć kontrast przynajmniej 3:1.
+                    Podobnie jest ze stanem (np. fokus, wybrany), jeśli element go posiada. Dzięki temu każdy użytkownik będzie widział elementy interfejsu.<br/>
+                    <strong>element interaktywny, zachowania przy stanach?</strong>
+                </p>
+                <p class="txt-format">
+                    <i>Granice obiektów na stronie</i><br/>
+                    Kiedy na stronie dodasz element interaktywny, warto go zaznaczyć w jakikolwiek sposób, np. przy użyciu obwódki z odpowiednim kontraście.
+                    <strong>Przykład granicy</strong>
+                </p>
+                <p class="txt-format">
+                    <i>Granice obiektów na stronie</i><br/>
+                    Jeśli kolory elementów lub tła wpływają na ich postrzeganie, musisz zadbać, aby elementy odpowiednio kontrastowały ze sobą.<br/>
+                    <strong>przykład, np. formularz, przycisk</strong>
+                </p>
+                <p class="txt-format">
+                    <i>Użycie koloru w elementach</i><br/>
+                    <strong>Te gwiazdki, czy to w ogóle odpuścić i "scalić" całość</strong>
+                </p>
+                <p class="txt-format">
+                    <i>Fokus na elementach</i><br/>
+                    <strong>Grafika z fokusem i inteaktywny przykład na osobnej stronie? Jak powinien wyglądać, a jak nie</strong>
+                </p>
+                <p class="txt-format">
+                    <i>Obiekty graficzne</i><br/>
+                    Zadbaj o odpowiedni kontrast grafiki i ich części, jeśli przekazują ważne informacje.
+                    <strong>Pokazane ikony?</strong>
+                </p>
+                <p class="txt-format">
+                    <i>Gradient</i><br/>
+                    Najlepiej nie stosować gradientów, jeśli chcesz przestrzegać odpowiedniego kontrastu. Jeśli jednak zdecydujesz się na gradientowy element,
+                    musisz sprawdzić, czy jest wystarczajaco kontrastowy.
+                    <strong>Przykład gradientu i jak testować?</strong>
+                </p>
+                <p class="txt-format">
+                    <i>Elementy dynamiczne</i><br/>
+                    Kiedy najeżdżasz na
+                    <strong>Przykład gradientu i jak testować?</strong>
+                </p>
+            </div>
+            <div>
+                <h3 id="1_4_12">Kryterium sukcesu 1.4.12 Odstępy w tekście (Poziom AA)</h3>
+                <p class="txt-format">
+                    W zawartości tworzonej za pomocą języka znaczników, możliwa jest zmiana parametrów.
+                    Mogą zostać zmienone wszystkie parametry lub ich część, jednak bez zmiany funkcjonalności lub postrzegania zawartości:
+                <ul>
+                    <li>Wysokość linii (odstęp między wierszami) wynosi przynajmniej 1.5-krotności rozmiaru czcionki;</li>
+                    <li>Odstęp między akapitami jest przynajmniej 2x większy od rozmiaru czcionki;</li>
+                    <li>Odstępy między literami (tracking) wynoszą przynajmniej 0.12-krotności rozmiaru czcionki;</li>
+                    <li>Odstępy między wyrazami to co najmniej 0.16 wielkości czcionki.</li>
+                </ul>
+                </p>
+                <p class="txt-format">
+                    Pozwól użytkownikowi dostosować wyświetlany tekst do jego preferencji.
+                    Kiedy użytkownik modyfikuje parametry tekstu, strona ma być tak samo czytelna i funkcjonalna jak w standardowych stylach strony.<br/>
+                    Taka możliwość pomaga m.in. osobom, które mają problemy z czytaniem, np. dyslektycy.
+                    <strong>Pokazane te parametry z i bez. Co się może złego stać - na co uważać.</strong>
+                </p>
+            </div>
+            <div>
+                <h3 id="1_4_13">Kryterium sukcesu 1.4.13 Treść spod kursora lub fokusu (Poziom AA)</h3>
+                <p class="txt-format">
+                    Wszystkie dodatkowe treści, które pojawiają się po najechaniu myszą lub sfokusowaniu klawiaturą i po
+                    usunięciu wskaźnika znikają, muszą spełniać poniższe warunki:
+                <ul>
+                    <li>Dodatkowa treść może być odrzucona bez przesuwania myszy lub fokusu klawiatury.
+                        Wyjątkiem są dodatkowe elementy, które są komunikatem o błędzie wprowadzanej treści, nie przesłaniają lub nie zastępują innej treści.
+                        Możesz to zrobić przez umieszczenie dodatkowej zawartości w miejscu, gdzie nie będzie nachodziła na inną ważną zawartość lub
+                        przez jej odrzucenie przy pomocy klawisza, np. ESCAPE;</li>
+                    <li>Aktywowana dodatkowa zawartość nie znika, kiedy użytkownik najeżdża na nią myszą;</li>
+                    <li>Dodatkowa zawartość jest widoczna do czasu, kiedy użytkownik usunie wskaźnik ze źródła jej wyzwalania lub fokusu,
+                        odrzuci zawartość lub zawartość nie jest już istotna.</li>
+                </ul>
+                Nie dotyczy to treści, które są niezależne od autora strony.<br/>
+                <strong>Dać gdziesz przykłady, że podpowiedzi, podmenu i inne niemodalne okienka w dymku + przykład dla każdego podpunktu?</strong>
+                </p>
+            </div>
+        </div>
+        </div>
+    </main>
+    {% include 'footer.html.twig' %}
+{% endblock %}

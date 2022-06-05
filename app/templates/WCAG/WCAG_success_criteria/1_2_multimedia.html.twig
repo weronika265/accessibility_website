@@ -1,0 +1,177 @@
+{% extends 'base.html.twig' %}
+{# skonfigurowane include, zeby nie zchodzic ponizej templates? #}
+{# zrobic normalne style #}
+{# poprawic sidebar, zeby byl accessible #}
+{# cos nie dziala grafika a11y #}
+{% block title %}
+    1.2 Multimedia
+{% endblock %}
+
+{% block body %}
+    {% include 'header.html.twig' %}
+    {% include 'sidebar.html.twig' %}
+    <main id="main" class="page">
+        <div style="margin-left: 15em;">
+            <h1>Wytyczna 1.2 Multimedia</h1>
+            <p class="txt-format-main">Zapewnij rozwiązania alternatywne dla mediów opartych na czasie.</p>
+            <div id="table-of-content">
+                <h2>Spis treści</h2>
+                <ul>
+                    <li><a href="#1_2_1">Kryterium sukcesu 1.2.1 Tylko audio lub tylko wideo (nagranie) (poziom A)</a></li>
+                    <li><a href="#1_2_2">Kryterium sukcesu 1.2.2 Napisy rozszerzone (nagranie) (poziom A)</a></li>
+                    <li><a href="#1_2_3">Kryterium sukcesu 1.2.3 Audiodeskrypcja lub alternatywa tekstowa dla mediów (nagranie) (poziom A)</a></li>
+                    <li><a href="#1_2_4">Kryterium sukcesu 1.2.4 Napisy rozszerzone (na żywo) (poziom AA)</a></li>
+                    <li><a href="#1_2_5">Kryterium sukcesu 1.2.5 Audiodeskrypcja (nagranie) (poziom AA)</a></li>
+                    <li><a href="#1_2_6">Kryterium sukcesu 1.2.6 Język migowy (nagranie) (poziom AAA)</a></li>
+                    <li><a href="#1_2_7">Kryterium sukcesu 1.2.7 Rozszerzona audiodeskrypcja (nagranie) (poziom AAA)</a></li>
+                    <li><a href="#1_2_8">Kryterium sukcesu 1.2.8 Alternatywa dla mediów (nagranie) (poziom AAA)</a></li>
+                    <li><a href="#1_2_9">Kryterium sukcesu 1.2.9 Tylko audio (na żywo) (poziom AAA)</a></li>
+                </ul>
+            </div>
+            <div>
+                (wszędzie - nie trzeba się stosować, jeśli ta forma jest alternatywą do tekstu na stronie i jest to widocznie oznaczone?)
+                <h3 id="1_2_1">Kryterium sukcesu 1.2.1 Tylko audio lub tylko wideo (nagranie) (poziom A)</h3>
+                <p class="txt-format">
+                    Multimedia, które zawierają tylko dźwięk lub tylko obraz, muszą zawierać alternatywę.
+                    Alternatywny sposób prezentacji przedstawia tą samą treść.
+                </p>
+                <p class="txt-format">
+                    W przypadku nagrania tylko wideo są to napisy lub audiodeskrypcja.
+                </p>
+                <strong>(nagrane wideo + napisy do nagrania i audiodeskrypcja)</strong><br/>
+                <p class="txt-format">
+                    W przypadku nagrania tylko audio jest to alteratywa tekstowa.
+                </p>
+                <strong>(nagranie audio i dołączony tekst)</strong>
+            </div>
+            <div>
+                <h3 id="1_2_2">Kryterium sukcesu 1.2.2 Napisy rozszerzone (nagranie) (poziom A)</h3>
+                <p class="txt-format">
+                    Multimedia, które składają się jednocześnie z obrazu i dźwięku (media zsynchronizowane), muszą zawierać <strong>napisy rozszerzone</strong> -
+                    tekst zsynchronizowany z obrazem, który opisuje wszystkie treści dźwiękowe niezbędne do zrozumienia przekazu multimediów.
+                    Napisy rozszerzone są podobne do napisów dialogowych, jednak opisują dodatkowe informacje, które nie są dialogami:
+                <ul>
+                    <li>opis ważnych dźwięków otoczenia (np. odgłos syreny, dźwięk spadającego drzewa),</li>
+                    <li>identyfikacja mówiących.</li>
+                </ul>
+                Wyjątkiem jest nagranie, które jest alternatywą do tekstu.
+                </p>
+                <p class="txt-format">
+                    Istnieją dwa rodzaje napisów rozszerzonych, stosowane w zależności od potrzeb:
+                <ul>
+                    <li>Napisy zamknięte - CC (Closed Caption) - napisy, które da się wyłączyć w nagraniu (są na innej ścieżce multimedia(?)),</li>
+                    <li>Napisy otwarte - OC (Open Caption) - napisy, których nie da się wyłączyć w nagraniu.</li>
+                </ul>
+                </p>
+                <p class="txt-format">
+                    Napisy rozszerzone pozwalają osobom nieslyszącym i głuchym zapoznać się z treścią prezentowaną na stronie.
+                    <!-- Dodać jako osobne info, komu to pomaga? -->
+                </p>
+                <strong>WAŻNE! Napisy nie powinny zasłaniać ważnych elementów w nagraniu (przykład i jak powinno wyglądać).</strong><br/>
+                <strong>(przykład nagrania z opcjami CC i OC)</strong>
+            </div>
+            <div>
+                <h3 id="1_2_3">Kryterium sukcesu 1.2.3 Audiodeskrypcja lub alternatywa tekstowa dla mediów (nagranie) (poziom A)</h3>
+                <p class="txt-format">
+                    W przypadku multimediów, które są nagraniem, musisz:
+                <ol type="a">
+                    <li>zapewnić alternatywę tekstową dla multimediów,</li>
+                    lub
+                    <li>dołaczyć audiodekrypcję dla multimediów zsynchronizowanych.</li>
+                </ol>
+                <strong>Przykład do a i b</strong><br/>
+                a. tekst dołączony do nagrania ma opisywać wszystko, co dzieje się na nagraniu - także dialogi.
+                Dzięki temu użytkownik może zapoznać się z całością pokazywanej treści, również z tym, co dzieje się podczas dialogów
+                (np. mimika aktorów w filmie).<br/>
+                b. audiodeskypcja dołączona do nagrania ma opisywać elementy pozadialogowe, kiedy dialogi nie są słyszalne.
+                Opis dźwiękowy opisuje np.: wygląd otoczenia i jego zmianę, działania postaci czy napisy widoczne na nagraniu.
+                </p>
+                <p class="txt-format">
+                    Taki sposób prezentowania treści wideo pozwala zapoznać się treścią nie tylko osobom niesłyszącym lub nieodosłyszącym. Użytkownicy, którzy mają
+                    problemy z rozpoznawaniem obrazów lub nie widzą dobrze, też zyskają na udogodnieniu.
+                </p>
+                <strong>(nagrane wideo + napisy do nagrania i audiodeskrypcja)</strong><br/>
+            </div>
+            <div>
+                <h3 id="1_2_4">Kryterium sukcesu 1.2.4 Napisy rozszerzone (na żywo) (poziom AA)</h3>
+                <p class="txt-format">
+                    Jeśli nagranie audio-wideo jest transmitowane na żywo, musi zawierać napisy rozszerzone.
+                    <strong>Grafika, że wideo live.</strong>
+                    Dzięki temu więcej osób może zapoznać się z transmisjami na żywo.
+                </p>
+            </div>
+            <div>
+                <h3 id="1_2_5">Kryterium sukcesu 1.2.5 Audiodeskrypcja (nagranie) (poziom AA)</h3>
+                <p class="txt-format">
+                    We <strong>wszystkich</strong> nagraniach audio-wideo, część wideo musi zawierać audiodeskrypcję. (podobnie jak w 1.2.3, ale wszystkie?)
+                </p>
+            </div>
+            <div>
+                <h3 id="1_2_6">Kryterium sukcesu 1.2.6 Język migowy (nagranie) (poziom AAA)</h3>
+                <p class="txt-format">
+                    Wszystkie nagrania, które zawierają audio i wideo, muszą być tłumaczone także na język migowy.
+                </p>
+                <p class="txt-format">
+                    Wszystkie nagrania, które zawierają audio i wideo, muszą być tłumaczone także na język migowy.
+                </p>
+                <p class="txt-format">
+                    Wiele osób, które nie słyszą od dziecka, wykorzystuje język migowy jako główną formę komunikacji.
+                    Takie osoby mogą mieć problemy z rozumieniem tekstu pisanego. Multimedia tłumaczone na język migowy są dla nich dużym ułatwieniem.
+                </p>
+                <strong>grafika, że migowy??</strong>
+            </div>
+            <div>
+                <h3 id="1_2_7">Kryterium sukcesu 1.2.7 Rozszerzona audiodeskrypcja (nagranie) (poziom AAA)</h3>
+                <p class="txt-format">
+                    Jeśli przerwy między dialogami w nagraniu są niewystarczające, aby przekazać wszystkie istostne informacje pozadiologowe, nagranie musi
+                    zawierać rozszerzoną audiodeskrypcję.
+                </p>
+                <p class="txt-format">
+                    Rozszerzona audiodeskrypcja to audiodeskrypcja, która jest podobna do
+                    <strong>kryterium sukcesu 1.2.5 Audiodeskrypcja (nagranie)</strong>. Jednak w tym przypadku nagranie zostaje zatrzymane do momentu, kiedy za pomocą
+                    audiodeskrypcji przekazane zostaną wszystkie ważne informacje.
+                </p>
+                <p class="txt-format">
+                    Dzięki temu osoba, która korzysta
+                    z tej formy pomocy, zapozna się ze wszystkimi ważnymi informacjami z części wideo nagrania.
+                </p>
+                <strong>Przykład nagrania</strong>
+            </div>
+            <div>
+                <h3 id="1_2_8">Kryterium sukcesu 1.2.8 Alternatywa dla mediów (nagranie) (poziom AAA) -> CHECK</h3>
+                <p class="txt-format">
+                    Musisz udostępnić alternatywę dla całej zawartości audio-wideo i wideo na stronie.<br/>
+                    Zrobisz to przy użyciu tekstu przygotowanego do nagrania. Tekst ma opisywać całą zawartość nagrania (wizualną i słyszalną) i zawiera:
+                <ul>
+                    <li>dialogi,</li>
+                    <li>działania, zachowanie i mimikę postaci,</li>
+                    <li>szczegółowe opisy wyświetlanych scen,</li>
+                    <li>napisy i teksty widoczne na nagraniu,</li>
+                    <li>słyszalne dźwięki.</li>
+                </ul>
+                </p>
+                <p class="txt-format">
+                    Tekstowy sposób prezentacji tych informacji sprawia, że każda osoba może skorzystać
+                    z szczegółowych opisów nagrania, przy użyciu technologii asystujących (czytnik tekstu, Braille'a).
+                </p>
+                <strong>Nagranie audio-wideo/ wideo z pełnym opisem tekstem?</strong>
+            </div>
+            <div>
+                <h3 id="1_2_9">Kryterium sukcesu 1.2.9 Tylko audio (na żywo) (poziom AAA)</h3>
+                <p class="txt-format">
+                    Wytyczna wymaga, aby zawartość audio w transmisjach na żywo miała alternatywę w postaci tekstu.<br/>
+                    Istnieją różne sposoby, aby spełnić kryterium:
+                <ul>
+                    <li>specjalne programy, które tłumaczą mowę i dźwięki tekst w momencie transmisji,</li>
+                    <li>pomoc tłumacza, który tworzy transkrypcję transmisji w momencie nadawania,</li>
+                    <li>jeśli przebieg transmiji jest zaplanowany, można dołączyć wcześniej przygotowany transkrypt.</li>
+                </ul>
+                Przygotowywane napisy na żywo można dołączyć do nagrania lub umieścić na stronie internetowej.
+                </p>
+                <strong>Grafika przedstawiająca?</strong>
+            </div>
+        </div>
+        </div>
+    </main>
+    {% include 'footer.html.twig' %}
+{% endblock %}

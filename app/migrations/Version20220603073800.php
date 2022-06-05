@@ -23,7 +23,7 @@ final class Version20220603073800 extends AbstractMigration
         $this->addSql('ALTER TABLE comments CHANGE content_id content_id INT DEFAULT NULL');
 //        $this->addSql('ALTER TABLE comments ADD CONSTRAINT FK_5F9E962A64D218E FOREIGN KEY (location_id) REFERENCES content (id)');
 //        $this->addSql('CREATE INDEX IDX_5F9E962A64D218E ON comments (location_id)');
-        $this->addSql('ALTER TABLE comments RENAME INDEX fk_5f9e962af675f31b TO IDX_5F9E962AF675F31B');
+//        $this->addSql('ALTER TABLE comments RENAME INDEX fk_5f9e962af675f31b TO IDX_5F9E962AF675F31B'); ZAKOMENTOWANE OSTATNIO!
         $this->addSql('ALTER TABLE opinions ADD author_id INT UNSIGNED DEFAULT NULL');
 //        $this->addSql('ALTER TABLE opinions ADD CONSTRAINT FK_BEAF78D0F675F31B FOREIGN KEY (author_id) REFERENCES users (id)');
         $this->addSql('CREATE INDEX IDX_BEAF78D0F675F31B ON opinions (author_id)');

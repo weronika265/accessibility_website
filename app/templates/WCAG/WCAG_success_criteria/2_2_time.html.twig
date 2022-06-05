@@ -1,0 +1,144 @@
+{% extends 'base.html.twig' %}
+{# skonfigurowane include, zeby nie zchodzic ponizej templates? #}
+{# zrobic normalne style #}
+{# poprawic sidebar, zeby byl accessible #}
+{# cos nie dziala grafika a11y #}
+{% block title %}
+    2.2 Wystarczający czas
+{% endblock %}
+
+{% block body %}
+    {% include 'header.html.twig' %}
+    {% include 'sidebar.html.twig' %}
+    <main id="main" class="page">
+        <div style="margin-left: 15em;">
+            <h1>Wytyczna 2.2 Wystarczający czas</h1>
+            <p class="txt-format-main">Zapewnij użytkownikom wystarczająco dużo czasu na przeczytanie i skorzystanie z treści.</p>
+            <div id="table-of-content">
+                <h2>Spis treści</h2>
+                <ul>
+                    <li><a href="#2_2_1">Kryterium sukcesu 2.2.1 Dostosowanie czasu (Poziom A)</a></li>
+                    <li><a href="#2_2_2">Kryterium sukcesu 2.2.2 Pauza, zatrzymanie, ukrycie (Poziom A)</a></li>
+                    <li><a href="#2_2_3">Kryterium sukcesu 2.2.3 Bez ograniczeń czasowych (Poziom AAA)</a></li>
+                    <li><a href="#2_2_4">Kryterium sukcesu 2.2.4 Przerywanie (Poziom AAA)</a></li>
+                    <li><a href="#2_2_5">Kryterium sukcesu 2.2.5 Ponowne potwierdzenie autentyczności (Poziom AAA)</a></li>
+                    <li><a href="#2_2_6">Kryterium sukcesu 2.2.6 Ostrzeżenie o limicie czasu (Poziom AAA)</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 id="2_2_1">Kryterium sukcesu 2.2.1 Dostosowanie czasu (Poziom A)</h3>
+                <p class="txt-format">
+                    Kiedy treść na Twojej stronie ma ograniczenia czasowe (zamówienie, odświerzanie strony, animacja), musisz zastosować się przynajmniej do jednego z warunków:
+                <ul>
+                    <li>można wyłączyć limit czasowy lub zatrzymać zegar;</li>
+                    <li>można swobodnie dostosować limit czasowy (minimum 10x więcej niż domyślny limit),</li>
+                    <li>
+                        przed upływem czasu użytkownik otrzymuje powiadomienie i ma przynajmniej 20 sekund na łatwe przedłużenie limitu. przedłużenie
+                        czasu to minimum 10x więcej niż domyślny limit;
+                    </li>
+                    <li>limit czasowy jest związany z wydarzeniem na żywo, przez co nie da się go zmienić,</li>
+                    <li>limit czasowy jest istotny, a wprowadzenie limitu zaburzałoby lub anulowałoby czynność;</li>
+                    <li>limit czasowy przekracza 20 godzin.</li>
+                </ul>
+                Modyfikacja limitu czasu pomaga wielu osobom na bezstresowe wykonanie czynności lub na jej pomyślne zakończenie.<br/>
+                Część użytkowników potrzebuje więcej czasu na przeczytanie tekstu, inni zaś na rozpoznanie struktury strony (np. osoby niewidome korzystające
+                z technologii asystujących).
+                </p>
+                <strong>grafiki z przykladem i pokazany interaktywny licznik</strong>
+            </div>
+            <div>
+                <h3 id="2_2_2">Kryterium sukcesu 2.2.2 Pauza, zatrzymanie, ukrycie (Poziom A)</h3>
+                <p class="txt-format">
+                    Treści animowane muszą spełniać poniższe warunki:
+                <ul>
+                    <li>
+                        treści, które się poruszają, migoczą, przesuwają lub automatycznie aktualizują oraz: włączają się automatycznie,
+                        trwają powyżej 5 sekund, pokazywane są równolegle z innymi treściami - jeśli taka prezentacja treści nie jest ważna, użytkownik może ją
+                        wstrzymać, zatrzymać lub wyłączyć.
+                    </li>
+                    <li>samoaktualizujące się treści, które: włączają się automatycznie i są przedstawiane równolegle z inną treścią - użytkownik może ją
+                        wstrzymać, zatrzymać, kontrolować częstotiwość jej aktualizacji, jeśli nie jest to niezbędne.
+                    </li>
+                </ul>
+                </p>
+                <p class="txt-format">
+                    Do treści spełniających te kryteria należą:
+                <ul>
+                    <li>poruszające się grafiki,</li>
+                    <li>animacje,</li>
+                    <li>automatycznie odświerzające się informacje o pogodzie czy kursach walut,</li>
+                    <li>reklamy, których zaawartość sama się przełącza.</li>
+                </ul>
+                </p>
+                <p class="txt-format">
+                    Jeśli treści są animowane, część użytkowników może:
+                <ul>
+                    <li>mieć problem ze skupieniem się na poruszajacej się zawartości,</li>
+                    <li>mieć niewystarczającą ilość czasu na przeczytanie zawartości.</li>
+                </ul>
+                </p>
+                <strong>przykładowa treść z możliwością strzymania, zatrzymania, wyłączania, ...</strong>
+            </div>
+            <div>
+                <h3 id="2_2_3">Kryterium sukcesu 2.2.3 Bez ograniczeń czasowych (Poziom AAA)</h3>
+                <p class="txt-format">
+                    Twórz zawartość, która nie jest ograniczona czasowo.<br/>
+                    Kryterium to wymusza, aby cała zawartość nie była oparta na limitach czasowych, z wyjątkiem wydarzeń na żywo.
+                </p>
+                <strong>Jakaś grafika, że wszytsko bez, np. formularz z przekreślonym czasem, a na żywo już tak, że jakieś aukcje.</strong>
+            </div>
+            <div>
+                <h3 id="2_2_4">Kryterium sukcesu 2.2.4 Przerywanie (Poziom AAA)</h3>
+                <p class="txt-format">
+                    Dodatkowe powiadomienia i informacje mogą zostać wyłączone lub odroczone, jeśli treść nie przedstawia sytuacji wyjątkowej.<br/>
+                    Sytuacją wyjątkową są m.in. rządowe powiadomienia o niebezpieczeństwie narodowym i prywatnym (zdrowie, dobytek), a także
+                    powiadomieniach o utracie danych, braku połączenia internetowego, wylogowaniu użytkownika.
+                </p>
+                <p class="txt-format">
+                    Wyłączenie lub odroczenie informacji pozwala skupić się na czytanej treści.
+                    Każdy może się rozkojarzyć, kiedy w trakcie czytania, na ekranie niespodziewanie pojawia się nowa treść.<br/>
+                    Jednak część użytkowników, np. osoby z deficytem uwagi, takie sytuacje znoszą gorzej od użytkownika bez niepełnosprawności.
+                </p>
+                <strong>Wyskakujący pop + ważna informacja -> grafika/ html</strong>
+            </div>
+            <div>
+                <h3 id="2_2_5">Kryterium sukcesu 2.2.5 Ponowne potwierdzenie autentyczności (Poziom AAA)</h3>
+                <p class="txt-format">
+                    Kiedy sesja autoryzowana przez użytkownika kończy się lub skończyła, użytkownik może ją kontynuować bez utraty danych.
+                    Wystarczy, że się ponownie zautoryzuje.
+                </p>
+                <p class="txt-format">
+                    Kryterium sukcesu pozwala na dokończenie czynności, która wymaga autoryzowania przez użytkownika i zawiera zabezpieczenia wylogowujące użytkownika, np. limit nieaktywności.<br/>
+                    Przykładami są:
+                <ul>
+                    <li>transakcja za zamówienie w sklepie internetowych,</li>
+                    <li>aplikacja internetowa do wypełniana dokumentów rządowych,</li>
+                    <li>ankieta, która wymaga zalogowania się przez użytkownika.</li>
+                </ul>
+                Część użytkowników wykonuje czynności wolniej. Może to wynikać z wolniejszego czytania lub ograniczonych możliwości ruchowych.<br/>
+                Ważne, aby użytkownik, który przekroczył limit autoryzacji, nie utracił wprowadzanych danych i mógł kontynuować ich wprowadzanie.
+                Jedyne, co musi zrobić, to ponownie potwierdzić swoją tożsamość.<br/>
+                <strong>Jakaś animacja film, który to pokazuje. - limit czasu, ponowna autentyfikacja i kontynuacja -> formularz/ koszyk?</strong>
+                </p>
+            </div>
+            <div>
+                <h3 id="2_2_6">Kryterium sukcesu 2.2.6 Ostrzeżenie o limicie czasu (Poziom AAA)</h3>
+                <p class="txt-format">
+                    Kiedy bezczynność użytkownika spowoduje utratę danych, użytkownik musi być wcześniej poinformowany o limicie czasu bezczynności. Wyjątkiem jest sytuacja, kiedy
+                    informacje są przechowywane ponad 20 godzin od ostatniej aktywności użytkownika.
+                </p>
+                <p class="txt-format">
+                    Osoby z pewnymi niepełnosprawnościami, np. natury poznawczej, mogą mieć problem ze skupieniem uwagi przez dłuższy czas.
+                    Wypełnianie formularzy, np. zamówienie biletu lotniczego, może być dla nich wyzwaniem.  Takie osoby zazwyczaj robią przerwy w trakcie wykonywania zadania.
+                </p>
+                <p class="txt-format">
+                    Najlepiej zostawić dane wypełnione przez użytkownika przez okres około 20 godzin od ostatniej aktywności użytkownika. Jeśli nie jest to możliwe,
+                    należy powiadomić użytkownika o czasie utraty danych za każdym razem, kiedy wykonuje kolejne czynności.
+                </p>
+                <strong>Pokazany formularz z opisem o przechowywaniu informacji i strona X do wypełniania danych z informacją, że po niekatywności po x h utracimy dane?</strong>
+            </div>
+        </div>
+        </div>
+    </main>
+    {% include 'footer.html.twig' %}
+{% endblock %}

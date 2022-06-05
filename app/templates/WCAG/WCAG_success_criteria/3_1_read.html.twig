@@ -1,0 +1,157 @@
+{% extends 'base.html.twig' %}
+{# skonfigurowane include, zeby nie zchodzic ponizej templates? #}
+{# zrobic normalne style #}
+{# poprawic sidebar, zeby byl accessible #}
+{# cos nie dziala grafika a11y #}
+{% block title %}
+    3.1 Możliwość odczytania
+{% endblock %}
+
+{% block body %}
+    {% include 'header.html.twig' %}
+    {% include 'sidebar.html.twig' %}
+    <main id="main" class="page">
+        <div style="margin-left: 15em;">
+            <h1>Wytyczna 3.1 Możliwość odczytania</h1>
+            <p class="txt-format-main">
+                Twórz treści możliwe do odczytania i zrozumienia.
+            </p>
+            <div id="table-of-content">
+                <h2>Spis treści</h2>
+                <ul>
+                    <li><a href="#3_1_1">Kryterium sukcesu 3.1.1 Język strony (Poziom A)</a></li>
+                    <li><a href="#3_1_2">Kryterium sukcesu 3.1.2 Język części (Poziom AA)</a></li>
+                    <li><a href="#3_1_3">Kryterium sukcesu 3.1.3 Nietypowe słowa (Poziom AAA)</a></li>
+                    <li><a href="#3_1_4">Kryterium sukcesu 3.1.4 Skróty (Poziom AAA)</a></li>
+                    <li><a href="#3_1_5">Kryterium sukcesu 3.1.5 Poziom umiejętności czytania (Poziom AAA)</a></li>
+                    <li><a href="#3_1_6">Kryterium sukcesu 3.1.6 Wymowa (Poziom AAA)</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 id="3_1_1">Kryterium sukcesu 3.1.1 Język strony (Poziom A)</h3>
+                <p class="txt-format">
+                    Strona musi mieć określony domyślny język naturalny, który będzie odczytywany przez program.
+                </p>
+                <p class="txt-format">
+                    Musisz ustalić język strony, ponieważ pozwala to określić, w jaki sposób technologie mają odczytywać zawartość.
+                </p>
+                <p class="txt-format">
+                    Dzięki określeniu języka, technologie zmieniające tekst na mowę lub czytniki tekstu i ekranu będą odczytywać treść w odpowiedni sposób.
+                    Filmy będą wyświetlać odpowiednie napisy.
+                </p>
+                <p class="txt-format">
+                    Przykładem jest strona w języku francuskim. Kiedy ma ustalony domyślny język francuski, treść strony będzie również wymówiona po francusku, a nie np. angielsku.
+                </p>
+                <p class="txt-format">
+                    Jeśli strona obsługuje kilka języków, należy wybrać najczęściej używany lub ten, w którym treść jest najbardziej kompletna.
+                </p>
+                <strong>Pokazany lang i porównanie filmem, jak strona zostałaby przeczytana w dobrym i złym języku</strong>
+            </div>
+            <div>
+                <h3 id="3_1_2">Kryterium sukcesu 3.1.2 Język części (Poziom AA)</h3>
+                <p class="txt-format">
+                    Język części tekstu lub fraz powinien mieć określony inny język niż język domyślny strony, jeśli jest to wymagane do prawidłowego zrozumienia
+                    lub odczytania zawartości.</br/>
+                    Wyjątkiem są:
+                <ul>
+                    <li>nazwy własne,</li>
+                    <li>wyrażenia techniczne,</li>
+                    <li>słowa w nieokreślonym języku,</li>
+                    <li>słowa i frazy w żargonie powiązanego tekstu.</li>
+                </ul>
+                </p>
+                <p class="txt-format">
+                    Kiedy określić język części tekstu, pozwoli to m.in. na jego prawidłowe odczytanie lub wyświetlenie przez technologie asystujące.<br/>
+                    Pamiętaj jednak, że niektóre słowa są zapożyczone z innych języków, więc ich język nie musi być określany (np. <i>fast food</i>).
+                </p>
+                <strong>Pokazana treść, która musi być określona w części + kod i co nie powinno być oznaczone</strong>
+            </div>
+            <div>
+                <h3 id="3_1_3">Kryterium sukcesu 3.1.3 Nietypowe słowa (Poziom AAA)</h3>
+                <p class="txt-format">
+                    Na stronie musisz dodać mechanizm, który pozwala określić znaczenie słów użytych w nietypowy lub ograniczony sposób, w tym idiomów i żargonów.
+                </p>
+                <p class="txt-format">
+                    Osoby z niektórymi niepełnosprawnościami mogą nie rozumieć słów użytych w taki sposób. Mogą mieć problem z ich odszyfrowaniem lub
+                    nie są w stanie wywnioskować znaczenia słowa z kontekstu.
+                </p>
+                <p class="txt-format">
+                    Nietypowe słowa możesz objaśnić na różne sposoby:
+                <ul>
+                    <li>zdefiniować niezrozumiałe słowa w tekście lub na dole strony,</li>
+                    <li>utworzyć słowniczek z definicjami niezrozumiałych słów.</li>
+                </ul>
+                </p>
+                <strong>Przykład niezrozumiałych treści i jak to zdefiniować</strong>
+            </div>
+            <div>
+                <h3 id="3_1_4">Kryterium sukcesu 3.1.4 Skróty (Poziom AAA)</h3>
+                <p class="txt-format">
+                    Spraw, aby użytkownicy mogli zrozumieć skróty użyte na stronie przez ich rozwinięcie.
+                </p>
+                <p class="txt-format">
+                    Część osób może:
+                <ul>
+                    <li>nie rozumieć znaczenia skrótów,</li>
+                    <li>nie umieć wywnioskować znaczenia skrótów z kontekstu,</li>
+                    <li>mieć problem z zapamiętaniem rozszerzenia skrótów.</li>
+                </ul>
+                </p>
+                <p class="txt-format">
+                    Skróty możesz objaśnić przez m.in.:
+                <ul>
+                    <li>rozszerzenie skrótu, kiedy jest pierwszy raz użyty;</li>
+                    <li>wyświetlenie rozszerzenia skrótu w tooltipie.</li>
+                </ul>
+                </p>
+            </div>
+            <div>
+                <h3 id="3_1_5">Kryterium sukcesu 3.1.5 Poziom umiejętności czytania (Poziom AAA)</h3>
+                <p class="txt-format">
+                    Jeśli tekst na stronie, po usunięciu nazw własnych i tytułów, wymaga umiejętności czytania na poziomie wyższym niż gimnazjalny, udostępnij:
+                <ul>
+                    <li>treść wyjaśniającą tekst,</li>
+                    lub
+                    <li>alternatywną wersję, która nie wymaga umiejętności czytania powyżej poziomu gimnazjalnego.</li>
+                </ul>
+                </p>
+                <p class="txt-format">
+                    Tekst napisany prostym językiem będzie zrozumiały nie tylko dla osób, które mają umiejętności czytania na poziomie gimnazjalnym.
+                    Taki tekst jest bardziej przystępny dla każdego odbiorcy, w tym znacznie pomaga osobom z problemami z czytaniem (np. dysleksja)
+                    lub nie mogą skupić się przez dłuższą ilość czasu (np. ADHD, ADD).
+                </p>
+                <p class="txt-format">
+                    Co możesz zrobić, aby język na stronie był prostszy:
+                <ul>
+                    <li></li>
+                </ul>
+                Dodatkowe informacje znajdziesz ... <strong>Dokończyć</strong>
+                </p>
+                <strong>porównanie trudny a prosty język na przykładzie</strong>
+            </div>
+            <div>
+                <h3 id="3_1_6">Kryterium sukcesu 3.1.6 Wymowa (Poziom AAA)</h3>
+                <p class="txt-format">
+                    Dodaj na swojej stronie mechanizm pozwalający na sprawdzenie wymowy słów, jeśli są dwuznaczne.
+                </p>
+                <p class="txt-format">
+                    Osoby niewidome, słabowidzące, czy z problemami z czytaniem korzystają z czytników ekranu. Czytnik czyta użytkownikowi tekst strony.
+                    Znaczenie większości słów pisanych tak samo można wywnioskować z kontekstu.
+                    Czasami jednak nie jest to proste i należy wskazać użytkownikowi wymowę słowa.
+                </p>
+                <p class="txt-format">
+                    Zrobisz to przykładowo przez:
+                <ul>
+                    <li>zamianę dwuznacznego słowa na inne,</li>
+                    <li>dołączenie wymowy do problematycznego słowa, np. w nawiasie po słowie,</li>
+                    <li>dodanie słownika z wymową niektórych słów,</li>
+                    <li>dodanie pliku dźwiękowego z wymową słowa.</li>
+                </ul>
+                </p>
+                <strong>Przykład takiego słowa i jak można temu zaradzić?</strong>
+            </div>
+        </div>
+        </div>
+    </main>
+    {% include 'footer.html.twig' %}
+{% endblock %}

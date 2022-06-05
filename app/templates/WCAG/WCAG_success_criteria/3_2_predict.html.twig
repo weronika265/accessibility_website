@@ -1,0 +1,134 @@
+{% extends 'base.html.twig' %}
+{# skonfigurowane include, zeby nie zchodzic ponizej templates? #}
+{# zrobic normalne style #}
+{# poprawic sidebar, zeby byl accessible #}
+{# cos nie dziala grafika a11y #}
+{% block title %}
+    3.2 Przewidywalność
+{% endblock %}
+
+{% block body %}
+    {% include 'header.html.twig' %}
+    {% include 'sidebar.html.twig' %}
+    <main id="main" class="page">
+        <div style="margin-left: 15em;">
+            <h1>Wytyczna 3.2 Przewidywalność</h1>
+            <p class="txt-format-main">
+                Twórz strony internetowe tak, aby otwierały się, wyglądały i działały w sposób przewidywalny.
+            </p>
+            <div id="table-of-content">
+                <h2>Spis treści</h2>
+                <ul>
+                    <li><a href="#3_2_1">Kryterium sukcesu 3.2.1 Po otrzymaniu fokusu (Poziom A)</a></li>
+                    <li><a href="#3_2_2">Kryterium sukcesu 3.2.2 Podczas wprowadzania danych (Poziom A)</a></li>
+                    <li><a href="#3_2_3">Kryterium sukcesu 3.2.3 Spójna nawigacja (Poziom AA)</a></li>
+                    <li><a href="#3_2_4">Kryterium sukcesu 3.2.4 Spójna identyfikacja (Poziom AA)</a></li>
+                    <li><a href="#3_2_5">Kryterium sukcesu 3.2.5 Zmiana na żądanie (Poziom AAA)</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 id="3_2_1">Kryterium sukcesu 3.2.1 Po otrzymaniu fokusu (Poziom A)</h3>
+                <p class="txt-format">
+                    Kiedy komponent interfejsu użytkownika uzyska fokus, nie może on nieoczekiwanie zmienić kontekstu (np. otwierać nowych elementów).
+                    Zmiana powinna nastąpić przy wyraźnym potwierdzeniu użytkownika, np. przez naciśnięcie wybranego klawisza (Spacja, Enter).
+                </p>
+                <p class="txt-format">
+                    Dzięki temu użytkownicy nie zostaną zaskoczeni przez uruchomienie innego elementu lub funkcjonalności.<br/>
+                    Przykładami są:
+                <ul>
+                    <li>automatyczne wysłanie formularza przy sfokusowaniu przycisku wysyłania;</li>
+                    <li>otwarcie nowego okna lub skupienie na innym elemencie przy sfokusowaniu klawiaturą.</li>
+                </ul>
+                </p>
+                <strong>Jak to powinno wyglądać, a jak nie - przykład 1 i 2</strong>
+            </div>
+            <div>
+                <h3 id="3_2_2">Kryterium sukcesu 3.2.2 Podczas wprowadzania danych (Poziom A)</h3>
+                <p class="txt-format">
+                    Kiedy użytkownik wprowadza zmiany w komponencie użytkownika, nie mogą one powodować automatycznej zmiany kontekstu
+                    (np. otwierać nowych elementów, okien, zmieniać fokusu).
+                    Komponenty, które zachowują zmiany wprowadzone przez użytkownika to m.in:
+                <ul>
+                    <li>pole formularza,</li>
+                    <li>pole checkbox,</li>
+                    <li>rozwijana lista z elementami do wyboru.</li>
+                </ul>
+                </p>
+                <p class="txt-format">
+                    Kontekst może zmienić się automatycznie tylko w przypadku, gdy wcześniej powiadomisz o tym użytkownika.<br/>
+                    Przykładkowo, niedopuszczalne jest, gdy użytkownik wypełnia formularz i nie zostanie powiadomiony, że:
+                <ul>
+                    <li>kolejne pole zostanie automatycznie podświetlone po wypełnieniu pola poprzedzającego;</li>
+                    <li>po wypełnieniu wszystkich pól formularz zostanie automatycznie wysłany;</li>
+                </ul>
+                </p>
+                <p class="txt-format">
+                    Wszelkie nieoczekiwane zmiany kontekstu mogą zaskoczyć użytkownika.
+                    Nieoczekiwane zmiany jeszcze gorzej znoszą użytkownicy, którzy mają kłopot z postrzeganiem zmian lub rozpraszają się przez nie.
+                    Osoby niewidome, jeśli nie zostaną powiadomione o zmianie kontekstu, mogą nawet nie zdawać sobie sprawy ze zmian na stronie.
+                </p>
+                <strong>symulacja wysyłania formularza dobrze i źle w osobnych podstronach z różnymi kontrolkami</strong>
+            </div>
+            <div>
+                <h3 id="3_2_3">Kryterium sukcesu 3.2.3 Spójna nawigacja (Poziom AA)</h3>
+                <p class="txt-format">
+                    Nawigacja, która jest powtarzana na wielu stronach musi być taka sama, o ile nie zostanie dostosowana przez użytkownika.
+                </p>
+                <p class="txt-format">
+                    Powtarzalny i spójny układ nawigacji jest przewidywalny, a także bardzo pomocny dla osób, które mają niepełnosprawności natury intelektualnej, poznawczej,
+                    słabo widzą lub nie widzą wcale.<br/>
+                    Lokalizowanie potrzebnych podstron staje się w takim przypadku znacznie prostsze.
+                </p>
+                <strong>Pokazane menu, które się powtarza na różnych stronach - grafiki</strong>
+            </div>
+            <div>
+                <h3 id="3_2_4">Kryterium sukcesu 3.2.4 Spójna identyfikacja (Poziom AA)</h3>
+                <p class="txt-format">
+                    Komponenty strony, które mają taką samą funkcję powinny wyglądać i zostać nazwane tak samo (za pomocą nazwy, etykiety, tekstu alternatywnego).
+                </p>
+                <p class="txt-format">
+                    Pozwala to na spójną identyfikację komponentów, które pełnią tą samą funkcję na różnych podstronach.
+                    Wtedy użytkownicy mogą nawigować po stronie lub szukać konkretnych elementów po ich opisach lub wyglądzie.
+                </p>
+                <p class="txt-format">
+                    Tyczy się to osób widzących, również z niepełnosprawnościami poznawczymi, które czują się przytłoczone, kiedy muszą pracować na dużej ilości informacji.
+                </p>
+                <p class="txt-format">
+                    Jeśli chodzi o osoby niewidzące, spójna identyfikacja elementów pozwala im na łatwiejszą nawigację.
+                    Takie osoby wiedzą, elementów o jakiej nazwie powinny szukać.
+                </p>
+                <strong>Grafiki, że na różnych stronach pewne komponentu są takie same, z tą samą nazwą, kod pokazany</strong>
+            </div>
+            <div>
+                <h3 id="3_2_5">Kryterium sukcesu 3.2.5 Zmiana na żądanie (Poziom AAA)</h3>
+                <p class="txt-format">
+                    Tylko użytkownik może zmienić kontekst na stronie lub można wyłączyć takie zmiany.
+                </p>
+                <p class="txt-format">
+                    Kryterium wymaga od Ciebie, abyś dał pełną kontrolę użytkownikowi na stronie.
+                    Na stronie nie mogą pojawić się działania niespodziewane, np.:
+                <ul>
+                    <li>automatyczne otwarcie nowego okna,</li>
+                    <li>niespodziewane pojawienie się okna pomocniczego,</li>
+                    <li>automatyczne wysłanie formularza po wypełnieniu wszystkich pól, bez zatwierdzenia przez użytkownika,</li>
+                    <li>automatyczne odświerzanie strony.</li>
+                </ul>
+                </p>
+                <p class="txt-format">
+                    Możesz też sprawić, aby domyślne, automatyczne zmiany kontekstu mogły zostać wyłączone.<br/>
+                    Niektóre funkcjonalności mogą być przydatne dla użytkownika, jednak i tak musisz pozwolić, aby
+                    to on zdecydował, czy funckjonalność ma być aktywna, czy powinna zostać wyłączona.
+                </p>
+                <p class="txt-format">
+                    Zastosowanie się do kryterium sprawia, że użytkownik nie będzie czuł się zaskoczony zawartością na Twojej stronie.
+                    Tyczy się to m.in. osób, które nie widzą i korzystają z czytników ekranu. Nie będą one początkowo wiedziały, że
+                    doszło do niespodziewanej zmiany treści lub jej odświerzenia.
+                </p>
+                <strong>Pokazanie, jak dać użytkownikowi kontrolę, np. przyciski z otwórz stronę, odświerz stronę, a nie automatycznie. Przykład dobry i zły?
+                </strong>
+            </div>
+        </div>
+        </div>
+    </main>
+    {% include 'footer.html.twig' %}
+{% endblock %}

@@ -68,16 +68,16 @@ class OpinionController extends AbstractController
 //    }
 
     /**
-     * Kontakt
+     * Opinie.
      *
      * @param Request $request HTTP Request
      *
      * @return Response HTTP response
      *
      * @Route(
-     *     "/kontakt",
+     *     "/opinie",
      *     methods={"GET", "POST"},
-     *     name="kontakt_index",
+     *     name="opinie_index",
      * )
      */
     public function index(Request $request): Response
@@ -110,7 +110,7 @@ class OpinionController extends AbstractController
     }
 
     /**
-     * Usun opinie
+     * Usuń opinię
      *
      * @param \Symfony\Component\HttpFoundation\Request $request HTTP Request
      *

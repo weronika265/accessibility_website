@@ -32,7 +32,6 @@ h3 {
     font-family: 'Assistant', serif;
     font-weight: 600;
     font-size: 1em;
-    color: white;
 }
 ul {
     padding-inline-start: 0;
@@ -489,7 +488,7 @@ form {
     left: 25px;
     bottom: 20px;
     border-style: solid;
-    border-width: 2.5px 0px 0px 2.5px;
+    border-width: 2.5px 0 0 2.5px;
     border-color: white;
     transform: rotate(45deg);
     background-clip: content-box;
@@ -542,8 +541,126 @@ body.contrasty {
     -webkit-text-stroke: unset;
     /*filter: invert(100%);*/
 }
-body.contrasty h2, body.contrasty b, body.contrasty inline {
+body.contrasty h2, body.contrasty b, body.contrasty span {
     color: yellow;
     -webkit-text-stroke: unset;
     /*filter: invert(100%);*/
 }
+body.contrasty nav, body.contrasty #info, body.contrasty .message-style {
+    background-color: #333333;
+}
+body.contrasty li.button-style, body.contrasty button, body.contrasty .submit-btn-space {
+    background-color: #dedede;
+}
+body.contrasty div#user-actions, body.contrasty #author {
+    background-color: #111111;
+}
+body.contrasty #login a, body.contrasty #info a {
+    color: white;
+}
+body.contrasty #login a:hover {
+    font-weight: bold;
+    /*color: white;*/
+}
+body.contrasty #register, body.contrasty input.center-item-opinion {
+    background-color: white;
+    /*color: white;*/
+}
+body.contrasty a:hover, body.contrasty .submit-btn-space:hover, body.contrasty input.center-item-opinion:hover {
+    color: black;
+    font-weight: bold;
+}
+body.contrasty .submit-btn-space:hover, body.contrasty input.center-item-opinion:hover {
+    -webkit-text-stroke: 0.5px black;
+}
+body.contrasty div#reg-log {
+    border: 3px solid white;
+}
+body.contrasty span.inline-form-text a {
+    color: #e8e8e8;
+}
+body.contrasty span.inline-form-text a:hover {
+    color: yellow;
+    -webkit-text-stroke: 0.3px yellow;
+}
+body.contrasty #scroll-btn {
+    background-color: white;
+}
+body.contrasty #arrow {
+    border-color: black;
+}
+
+
+/* TWÓRCA */
+.content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    border-radius: 10px;
+}
+.subnav-content ul {
+    background-color: lightgray;
+}
+li:last-child {
+    border-bottom: none;
+}
+#navbar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: fixed;
+}
+.subnav, .subnav-content, .navbar-wcag-content {
+    display: none;
+}
+.navbar-wcag:hover .subnav, .subnav:hover .subnav-content, .subnav:focus .subnav-content,
+.navbar-wcag:hover .navbar-wcag-content, .navbar-wcag:focus .navbar-wcag-content {
+    display: flex;
+    /* focus-within? */
+}
+.btn-creator-style button {
+    border: none;
+    background-color: lightblue;
+    padding: 2em;
+    /* border-bottom: 1px solid black; */
+    width: 10em;
+    text-align: left;
+    border-radius: 10px;
+}
+/* .full-navbar-wcag {
+    display: flex;
+} */
+
+/* zmienić menu, żeby nie latało?
+li zamiast brzycisków, bo tabowanie źle działa
+menu nie może przemieszczać zawartości strony
+zmienić flexboksa na zmiane media w pewnej wielkości?
+Z podmenu ma się później zrobić kolumna */
+#table-of-content {
+    /* width: 20em;
+    height: 8em; */
+    max-width: 25em;
+    background-color: blueviolet;
+    padding: 0.5em 2em;
+}
+.txt-format-main {
+    margin-left: 1em;
+    max-width: 70%;
+}
+.txt-format {
+    margin-left: 1em;
+    max-width: 40%;
+}
+fieldset {
+    border: none;
+}
+legend {
+    font-size: 1.5em;
+    font-weight: bold;;
+}
+/* zmienić sidebar i usunąć te buttony */

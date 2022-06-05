@@ -1,0 +1,86 @@
+{% extends 'base.html.twig' %}
+{# skonfigurowane include, zeby nie zchodzic ponizej templates? #}
+{# zrobic normalne style #}
+{# poprawic sidebar, zeby byl accessible #}
+{# cos nie dziala grafika a11y #}
+{% block title %}
+    2.3 Ataki padaczki
+{% endblock %}
+
+{% block body %}
+    {% include 'header.html.twig' %}
+    {% include 'sidebar.html.twig' %}
+    <main id="main" class="page">
+        <div style="margin-left: 15em;">
+            <h1>Wytyczna 2.3 Ataki padaczki</h1>
+            <p class="txt-format-main">
+                Prezentuj treść tak, aby nie wywoływała napadów padaczkowych.
+            </p>
+            <div id="table-of-content">
+                <h2>Spis treści</h2>
+                <ul>
+                    <li><a href="#2_3_1">Kryterium sukcesu 2.3.1 Trzy błyski lub wartości poniżej progu (Poziom A)</a></li>
+                    <li><a href="#2_3_2">Kryterium sukcesu 2.3.2 Trzy błyski (Poziom AAA)</a></li>
+                    <li><a href="#2_3_3">Kryterium sukcesu 2.3.3 Animacja po interakcji (Poziom AAA)</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 id="2_3_1">Kryterium sukcesu 2.3.1 Trzy błyski lub wartości poniżej progu (Poziom A)</h3>
+                <p class="txt-format">
+                    Treści, które tworzysz na stronę nie mogą:
+                <ul>
+                    <li>błyskać częściej niż 3 razy na sekundę,</li>
+                    LUB
+                    <li>błysk ogólny i czerwony nie przekracza wartości granicznych - rozmiaru treści błyskającej i jej jasności.</li>
+                </ul>
+                <strong>UWAGA</strong><br/>
+                Z tym info, że bez tego kryterium strona nie może być w pełni dostępna.<br/>
+                </p>
+                <p class="txt-format">
+                    Strony, które zawierają treści błyskające 3 razy na sekundę lub częściej, mogą wywoływać m.in. ataki padaczki fotogennej.<br/>
+                    Użytkownicy są jeszcze bardziej czuli na błyski czerwonego światła.<br/>
+                    Takie osoby nie mogą swobodnie korzystać ze stron, które zawierają takie treści lub w zależności od twórcy, mogą zapoznać się tylko z tekstem alternatywnym treści.
+                </p>
+                <p class="txt-format">
+                    Twoim obowiązkiem jest dopilnowanie, aby wszystkie treści nad którymi masz kontrolę, nie błyskały częściej niż 3 razy na sekundę lub błyskały na odpowiednio ograniczonym obszarze i z ograniczoną jasnością.<br/>
+                    Szczegóły dotyczące charakterystyki i parametrów błysków znajdziesz w <i>oficjalnym dokumencie WCAG 2.1</i>.
+                </p>
+                <strong>Błysk do włączenia zły/ dobry i wielkość pola.</strong>
+            </div>
+            <div>
+                <h3 id="2_3_2">Kryterium sukcesu 2.3.2 Trzy błyski (Poziom AAA)</h3>
+                <p class="txt-format">
+                    Krytrium ogranicza jeszcze bardziej błyski w porównaniu do <a href="#2_3_1">Kryterium sukcesu 2.3.1 Trzy błyski lub wartości poniżej progu (Poziom A)</a>.
+                    Sprawia to, że ograniczenia dotyczą nawwet jednego piksela ekranu.<br/>
+                    <strong>Grafika, że ograniczone błysyki i przekreślone wielkości i jaści, że to nie przejdzie.</strong>
+                </p>
+            </div>
+            <div>
+                <h3 id="2_3_3">Kryterium sukcesu 2.3.3 Animacja po interakcji (Poziom AAA)</h3>
+                <p class="txt-format">
+                    Powinieneś umożliwić użytkownikowi, aby animowane elementy na stronie mogły być wyłączone. Wyjątkiem są animacje, które są ważną częścią pokazywanej treści.
+                </p>
+                <p class="txt-format">
+                    Część użytkowników reaguje negatywnie na ruch pojawiający się na stronie i może odczuwać:
+                <ul>
+                    <li>dezorientację,</li>
+                    <li>zawroty głowy,</li>
+                    <li>ból głowy,</li>
+                    <li>mdłości.</li>
+                </ul>
+                </p>
+                <p class="txt-format">
+                    Co możesz zrobić, aby zapobiegać takim reakcjom:
+                <ul>
+                    <li>twórz tylko potrzebne animacje,</li>
+                    <li>pozwól użytkownikowi wyłączyć animację,</li>
+                    <li>jeśli animujesz przesuwanie strony (scrolling), rób to w sposób odpowiedzialny. Nie skupiaj się tylko na efekcie wizualnym.</li>
+                </ul>
+                <strong>wyłączenie animacji, pokazany scroll inny, np. parallax scrolling?</strong>
+                </p>
+            </div>
+        </div>
+        </div>
+    </main>
+    {% include 'footer.html.twig' %}
+{% endblock %}

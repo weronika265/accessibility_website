@@ -1,0 +1,11 @@
+{% include 'default/_form.html.twig' with {
+    page_title: 'Zaakceptuj komentarz',
+    page_title_param: {'%id%': comment.id},
+    attr: {
+        method: 'PUT',
+        action: url('comment_accept', {'id': comment.id}),
+    },
+    form: form,
+    submit_label: 'Zaakceptuj komentarz'|trans,
+    back_to_list_path: 'admin_index',
+} %}

@@ -1,0 +1,223 @@
+{% extends 'base.html.twig' %}
+{# skonfigurowane include, zeby nie zchodzic ponizej templates? #}
+{# zrobic normalne style #}
+{# poprawic sidebar, zeby byl accessible #}
+{# cos nie dziala grafika a11y #}
+{% block title %}
+    2.4 Możliwość nawigacji
+{% endblock %}
+
+{% block body %}
+    {% include 'header.html.twig' %}
+    {% include 'sidebar.html.twig' %}
+    <main id="main" class="page">
+        <div style="margin-left: 15em;">
+            <h1>Wytyczna 2.4 Możliwość nawigacji</h1>
+            <p class="txt-format-main">
+                Zapewnij użytkownikowi narzędzia pomagające w nawigacji, znalezieniu treści i określeniu, gdzie się aktualnie znajduje.
+            </p>
+            <div id="table-of-content">
+                <h2>Spis treści</h2>
+                <ul>
+                    <li><a href="#2_4_1">Kryterium sukcesu 2.4.1 Możliwość pominięcia bloków (Poziom A)</a></li>
+                    <li><a href="#2_4_2">Kryterium sukcesu 2.4.2 Tytuły stron (Poziom A)</a></li>
+                    <li><a href="#2_4_3">Kryterium sukcesu 2.4.3 Kolejność fokusu (Poziom A)</a></li>
+                    <li><a href="#2_4_4">Kryterium sukcesu 2.4.4 Cel łącza (w kontekście) (Poziom A)</a></li>
+                    <li><a href="#2_4_5">Kryterium sukcesu 2.4.5 Wiele dróg (Poziom AA)</a></li>
+                    <li><a href="#2_4_6">Kryterium sukcesu 2.4.6 Nagłówki i etykiety (Poziom AA)</a></li>
+                    <li><a href="#2_4_7">Kryterium sukcesu 2.4.7 Widoczny fokus (Poziom AA)</a></li>
+                    <li><a href="#2_4_8">Kryterium sukcesu 2.4.8 Lokalizacja (Poziom AAA)</a></li>
+                    <li><a href="#2_4_9">Kryterium sukcesu 2.4.9 Cel łącza (z samego łącza) (Poziom AAA)</a></li>
+                    <li><a href="#2_4_10">Kryterium sukcesu 2.4.10 Nagłówki sekcji (Poziom AAA)</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 id="2_4_1">Kryterium sukcesu 2.4.1 Możliwość pominięcia bloków (Poziom A)</h3>
+                <p class="txt-format">
+                    Kiedy na Twojej stronie bloki treści na podstronach powtarzają się, pozwól użytkownikowi je pominąć.
+                </p>
+                <p class="txt-format">
+                    Część treści na stronach internetowych zazwyczaj się powtarza, takie jak menu główne czy sekcje z reklamami.
+                </p>
+                <p class="txt-format">
+                    Użytkownik, który nie ma niepełnosprawności może pominąć takie informacje wzrokiem. Osoby niepełnosprawne mogą mieć jednak kłopot z pomijaniem
+                    bloków powtarzającej się treści.
+                </p>
+                <p class="txt-format">
+                    Przykładowo, osoby niewidzące, które korzystają z technologii asystujących i użytkownicy używający tylko klawiatury, aby przejść do najważniejszej treści,
+                    musieliby przebić się przez wiele linków.<br/>
+                    Rozwiązanie w postaci linku prowadzącego do głównej treści strony jest bardzo pomocne.<br/>
+                    <strong>Podstrona z pokazaniem skip to main content</strong>
+                </p>
+            </div>
+            <div>
+                <h3 id="2_4_2">Kryterium sukcesu 2.4.2 Tytuły stron (Poziom A)</h3>
+                <p class="txt-format">
+                    Strony internetowe powinny zawierać tytuły, które opisują ich temat lub cel.
+                </p>
+                <p class="txt-format">
+                    Dzięki tytułom użytkownik nie będzie musiał wnioskować z treści, co zawiera odwiedzana strona.
+                    Przez to użytkownik może łatwo zorientować się, którą stronę powinnien otworzyć.
+                </p>
+                <p class="txt-format">
+                    Pomaga to np. osobom, które mają problem z pamięcią lub czytaniem. Kiedy są zagubieni, mogą szybko dostać się do treści po jej tytule.
+                </p>
+                <p class="txt-format">
+                    Technologie asystujące czytają użytkownikom tytuły strony. Takie osoby mogą zdecydować, czy otwarta strona zawiera treść, której szukają.
+                </p>
+                <p class="txt-format">
+                    Warto łączyć tytuły stron z linkami, które do nich prowadzą.<br/>
+                    Kiedy na stronie dodajesz link prowadzący do dokumentu, obie treści powinny być powiązane.
+                    To sprawi, że zachowasz ciągłość przy nawigacji między zawartością podstron.
+                </p>
+                <strong>Pokazanie screenów z tytulem i jak to się ma do treści</strong>
+            </div>
+            <div>
+                <h3 id="2_4_3">Kryterium sukcesu 2.4.3 Kolejność fokusu (Poziom A)</h3>
+                <p class="txt-format">
+                    Kiedy Twoja strona może być nawigowana klawiaturą w określonej kolejności, a to wpływa na jej zrozumienie lub
+                    funkcjonalność, musisz ustalić odpowiednią kolejność fokusu na stronie.
+                </p>
+                <p class="txt-format">
+                    Pozwala to użytkownikom, którzy korzystają z klawiatury lub innego interfejsu, na zapoznanie się z treścią
+                    w logicznej kolejności, często ustalonej przez twórcę, czyli Ciebie.<br/>
+                    Nie zawsze trzeba ją ustawiać, jednak warto przetestować stronę i zobaczyć, czy nawigacja jest zrozumiała i odpowiada naszej wizji.
+                </p>
+                <p class="txt-format">
+                    Odpowiednia kolejność nie zdezorientuje odbiorcy, który nie przewidział niestandardowego układu treści na stronie.
+                    Nie sprawi także, że użytkownik będzie korzystał ze strony w sposób nieprzewidziany.<br/>
+                    Niewidomi użytkownicy natomiast mogą wybrazić sobie stronę jako przewidywalną całość.
+                </p>
+                <strong>Odpowiednia tabowanie i złe przykład interaktywny (z numerami elementów?)</strong>
+            </div>
+            <div>
+                <h3 id="2_4_4">Kryterium sukcesu 2.4.4 Cel łącza (w kontekście) (Poziom A)</h3>
+                <p class="txt-format">
+                    Cel linków ma wynikać z ich treści lub z kontekstu, w którym są umieszczone.<br/>
+                    Nie uwzględnia to łącz, które i tak byłyby niezrozumiałe lub mają być tajemnicą dla odbiorcy, dopóki nie zostaną załadowane.
+                </p>
+                <p class="txt-format">
+                    Odpowiedni opis linków pozwoli na zorientowanie się, dokąd prowadzi link.
+                    Użytkownicy, który korzystają z czytników treści, mogą też zdecydować, czy chcą odwiedzić link, czy go pominąć.
+                </p>
+                <p class="txt-format">
+                    Linki mogą zostać umieszczone w kontekście (blok tekstu, element listy, komórka w tabeli).
+                    Jeśli jest to tekst, link powinien znajdować się na końcu treści.
+                </p>
+                <p class="txt-format">
+                    Kiedy link prowadzi do aplikacji lub dokumentu, wystarczy, że link opiszesz nazwą tej apliakcji lub dokumentu.
+                </p>
+                <p class="txt-format">
+                    Warto łączyć tytuły stron z linkami, które do nich prowadzą.
+                    Kiedy na stronie dodajesz link prowadzący do dokumentu, obie treści powinny być powiązane.
+                    To sprawi, że zachowasz ciągłość przy nawigacji między zawartością podstron.
+                </p>
+                <strong>Linki nazwane i w kontekście + nagranie z czytnika?</strong>
+            </div>
+            <div>
+                <h3 id="2_4_5">Kryterium sukcesu 2.4.5 Wiele dróg (Poziom AA)</h3>
+                <p class="txt-format">
+                    Istnieje wiele dróg, aby dostać się do strony w serwisie internetowym lub aplikacji. Nie dotyczy to sytuacji, kiedy strona jest
+                    wynikiem procedury lub jednym z jej etapów.
+                </p>
+                <p class="txt-format">
+                    Jeśli zaprojektujesz serwis w powyższy sposób, użytkownicy mogą korzystać z treści według własnych potrzeb.
+                    Użytkownik może korzystać z różnych narzędzi i sposobów przeglądania, takich jak:
+                <ul>
+                    <li>wyszukiwarka treści na stronie,</li>
+                    <li>mapa serwisu, która umożliwia przegląd treści,</li>
+                    <li>przęglądanie podstron w celu zrozumienia budowy serwisu.</li>
+                </ul>
+                </p>
+                <p class="txt-format">
+                    Musisz pamiętać, że część zawartości nie będzie ogólnodostępna. Żaden link na stronie nie będzie do niej prowadził. Może być to np.:
+                <ul>
+                    <li>podsumowanie zamówienia w sklepie internetowym,</li>
+                    <li>potwierdzenie transakcji w aplikacji banku.</li>
+                </ul>
+                </p>
+                <strong>Jakie są opcje + grafika z chronologią, jak można przechodzić?</strong>
+            </div>
+            <div>
+                <h3 id="2_4_6">Kryterium sukcesu 2.4.6 Nagłówki i etykiety (Poziom AA)</h3>
+                <p class="txt-format">
+                    Wszelkie nagłówki i etykiety na stronie muszą opisywać wyświetlaną zawartość. Do opisu najlepiej używać pojedyńczych słów lub krótkich opisów.
+                </p>
+                <p class="txt-format">
+                    Pozwala to zrozumieć, co zawiera strona i jak została ułożona treść.<br/>
+                    Dzięki zrozumiałym oznaczeniom treści, szukaną zawartość jest znacznie łatwiej zlokalizować.
+                </p>
+                <strong>Przykład nagłówków do segregowania treści + formularz z opisem pól</strong>
+            </div>
+            <div>
+                <h3 id="2_4_7">Kryterium sukcesu 2.4.7 Widoczny fokus (Poziom AA)</h3>
+                <p class="txt-format">
+                    Kiedy strona jest obługiwana przy użyciu klawiatury, jej fokus (skupienie) musi być zawsze widoczny dla użytkownika.
+                </p>
+                <p class="txt-format">
+                    Widoczny fokus na stronie pozwala zorientować się, w którym miejscu na stronie i na którym elemencie skupiona jest klawiatura.<br/>
+                    Skupienie na elemencie pozwala również zrozumieć jego funkcje, np. przy
+                    podświetleniu pola formularza widzimy, że można wprowadzić tekst.
+                </p>
+                <strong>Podstrona z pokazanym działaniem fokusu i bez (pola, że tu działa, a tu nie?)</strong>
+            </div>
+            <div>
+                <h3 id="2_4_8">Kryterium sukcesu 2.4.8 Lokalizacja (Poziom AAA)</h3>
+                <p class="txt-format">
+                    Musisz dostarczyć użytkownikowi informacje, gdzie obecnie znajduje się na stronie.
+                </p>
+                <p class="txt-format">
+                    Użytkownik będzie wiedział, gdzie się znajduje i jest mniej prawdopodobne, że zgubi się na stronie.
+                    Kiedy widzi, którą podstronę obecnie przegląda, będzie mu łatwiej wyszukiwać powiązane informacje: może m.in. cofać się do poprzedniej podstrony,
+                    jeśli obecne wyniki go niesatysfakcjonują.
+                </p>
+                <p class="txt-format">
+                    Zalety lokalizowania użytkownika są bardziej widoczne, kiedy znajdujemy się na rozbudowanej stronie z wieloma podstronami.<br/>
+                    Ta funkcjonalność pomaga znacznie osobom z deficytem uwagi. Bez pomocy mogą poczuć się zdezorientowane, kiedy przez długi czas korzystają z
+                    rozbudowanej strony.
+                </p>
+                <p class="txt-format">
+                    Jednym ze sposobów na pokazanie obecnej lokalizacji na stronie jest menu okruszkowe. Pokazuje ono ścieżkę odwiedzanych stron.<br/>
+                    Standardem jest także możliwość powrotu do strony głównej po kliknięciu w ikonę, która jest zazwyczaj widoczna na górze strony.
+                </p>
+                <strong>Menu okruszkowe, przejście na stronę główną po wciśnięciu ikony - grafiki</strong>
+            </div>
+            <div>
+                <h3 id="2_4_9">Kryterium sukcesu 2.4.9 Cel łącza (z samego łącza) (Poziom AAA)</h3>
+                <p class="txt-format">
+                    Cel łączy na stronie musi być zrozumiały od razu z opisu łącza, a nie z jego kontekstu.
+                    Nawet jeśli cel łącza wynika z kontekstu, musisz dołączyć jego opis.<br/>
+                    Nie uwzględnia to łącz, które i tak byłyby niezrozumiałe lub mają być tajemnicą dla odbiorcy, dopóki nie zostaną załadowane.
+                </p>
+                <p class="txt-format">
+                    Jest to kryterium podobne do <a href="#2_4_4">Kryterium sukcesu 2.4.4 Cel łącza (w kontekście) (Poziom A)</a>. Różnica jest taka, że
+                    cel łącza musi wynikać z jego treści, a nie z kontekstu, w którym się znajduje.
+                </p>
+                <p class="txt-format">
+                    Najlepiej, aby linki, które prowadzą do tej samej treści miały ten sam opis.
+                    Natomiast łącza, które wskzują na inną treść, dla odróżnienia zawierały inny opis.
+                </p>
+                <strong>Pokazane na grafice, że muszą być nazwane, z kontekstem skreślone.</strong>
+            </div>
+            <div>
+                <h3 id="2_4_10">Kryterium sukcesu 2.4.10 Nagłówki sekcji (Poziom AAA)</h3>
+                <p class="txt-format">
+                    Nagłówki są używane do porządkowania treści i oznaczają podziały na sekcje.
+                    <strong>WAŻNE</strong><br/>
+                    Dotyczy to treści tekstowych, a nie komponentów interfejsu, co jest opisane w <strong>DODAĆ ZAŁĄCZNIK DO TREŚCI Kryterium sukcesu 4.1.2 Nazwa, rola, wartość (Poziom A)</strong>.
+                </p>
+                <p class="txt-format">
+                    Porządkuj treść w taki sposób, aby była podzielona na zrozumiałe bloki - sekcje.<br/>
+                    Nagłówki pozwalają na łatwiejszą organizację treści i nawigację. W sposób widoczny oznaczają zmiany tematu oraz streszczają treść, aby czytelnik
+                    wiedział, czego będzie dotyczył segment tekstu.
+                </p>
+                <p class="txt-format">
+                    Korzytanie z nagłówków pozwala także użytkownikom na przeskakiwanie po nagłówkach, bez potrzeby czytania powiązanego tekstu.
+                </p>
+                <strong>Pokazane nagłówki na stronie, które oznaczają treści - grafika</strong>
+            </div>
+        </div>
+        </div>
+    </main>
+    {% include 'footer.html.twig' %}
+{% endblock %}

@@ -7,6 +7,7 @@
 namespace App\Controller;
 
 use App\Entity\Opinion;
+use App\Repository\CommentRepository;
 use App\Service\OpinionService;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Form\Extension\Core\Type\FormType;
@@ -48,11 +49,13 @@ class UserController extends AbstractController
      *     name="admin_index",
      * )
      */
-    public function admin(Request $request): Response
+    public function admin(Request $request, CommentRepository $commentRepository): Response
     {
         $pagination = $this->opinionService->getPaginatedList(
             $request->query->getInt('page', 1)
         );
+
+        $comments = $commentRepository->findAll();
 
 //        $form = $this->createForm(FormType::class, $opinion, [
 //            'method' => 'DELETE',
@@ -72,6 +75,7 @@ class UserController extends AbstractController
             'user/admin.html.twig',
             [
                 'pagination' => $pagination,
+                'comments' => $comments
             ]
         );
     }

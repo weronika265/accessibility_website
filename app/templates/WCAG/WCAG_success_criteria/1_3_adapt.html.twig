@@ -1,0 +1,280 @@
+{% extends 'base.html.twig' %}
+{# skonfigurowane include, zeby nie zchodzic ponizej templates? #}
+{# zrobic normalne style #}
+{# poprawic sidebar, zeby byl accessible #}
+{# cos nie dziala grafika a11y #}
+{% block title %}
+    1.3 Możliwość adaptacji
+{% endblock %}
+
+{% block body %}
+    {% include 'header.html.twig' %}
+    {% include 'sidebar.html.twig' %}
+    <main id="main" class="page">
+        <div style="margin-left: 15em;">
+            <h1>Wytyczna 1.3 Możliwość adaptacji</h1>
+            <p class="txt-format-main">Twórz treści, które mogą być prezentowane na różne sposoby bez utraty informacji czy struktury.</p>
+            <div id="table-of-content">
+                <h2>Spis treści</h2>
+                <ul>
+                    <li><a href="#1_3_1">Kryterium sukcesu 1.3.1 Informacje i relacje (Poziom A)</a></li>
+                    <li><a href="#1_3_2">Kryterium sukcesu 1.3.2 Zrozumiała kolejność (Poziom A)</a></li>
+                    <li><a href="#1_3_3">Kryterium sukcesu 1.3.3 Właściwości zmysłowe (Poziom A)</a></li>
+                    <li><a href="#1_3_4">Kryterium sukcesu 1.3.4 Orientacja (Poziom AA)</a></li>
+                    <li><a href="#1_3_5">Kryterium sukcesu 1.3.5 Określenie pożądanej wartości (Poziom AA)</a></li>
+                    <li><a href="#1_3_6">Kryterium sukcesu 1.3.6 Określenie przeznaczenia (Poziom AAA)</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 id="1_3_1">Kryterium sukcesu 1.3.1 Informacje i relacje (Poziom A)</h3>
+                <p class="txt-format">
+                    Struktura strony, jej zawartość i relacje pomiędzy elementami widoczne na stronie, mają być przedstawione w formie tekstowej lub są
+                    <strong>określone programowo</strong>. Oznacza to, że mają być obsługiwane przez technologie asystujące.
+                </p>
+                <p class="txt-format">
+                    Zazwyczaj treści określone programowo są lepsze od tekstu.
+                </p>
+                <p class="txt-format">
+                    Taki sposób prezentacji pozwala zrozumieć treść zarówno w przypadku, kiedy ktoś widzi stronę i jej nie widzi (osoby niewidome).<br/>
+                    Przykładowo, część użytkowników ważnye informacje będzie szukać po kolorze czerwonym.
+                    Inni będą kierowali się oznaczniem "*" lub "Wymagane".
+                </p>
+                <p class="txt-format">
+                    Część użytkowników będzie postrzegała stronę wizualnie, a inne osoby będą rozumiały ją przez układ list, nagłówków, akapitów.<br/>
+                    Dzięki temu każdy może zrozumieć treść strony.
+                </p>
+                <p>
+                <div style="border: 2px solid red;">
+                    Jak stronę będzie widział czytnik
+                    <h1>Główny nagłówek</h1>
+                    <h2>Mniej ważny nagłówek</h2>
+                    <p>Akapit</p>
+                    <h2>Mniej ważny nagłówek</h2>
+                    <p>
+                        Akapit
+                    <ul> Lista
+                        <li>Element listy 1</li>
+                        <li>Element listy 2</li>
+                        <li>Element listy 3</li>
+                    </ul>
+                    </p>
+                    <p>
+                    <h3>Jeszcze mniej ważny nagłówek</h3>
+                    <fieldset> Zgrupowane elementy &lt;checkbox&gt;
+                        <legend>Opis grupy elementów</legend><br/>
+                        <label>Element checkbox i jego opis<input type="chcekbox"/></label><br/>
+                        <label>Element checkbox i jego opis<input type="chcekbox"/></label><br/>
+                        <label>Element checkbox i jego opis<input type="chcekbox"/></label>
+                    </fieldset>
+                    </p>
+                </div>
+                <code>
+                    Kod struktura<br/>
+                    &lt;h1&gt;Główny nagłówek&lt;/h1&gt;<br/>
+                    &lt;h2&gt;Mniej ważny nagłówek&lt;/h2&gt;<br/>
+                    &lt;p&gt;Akapit&lt;/p&gt;<br/>
+                    &lt;h2>Mniej ważny nagłówek&lt;/h2&gt;<br/>
+                    &lt;p&gt;<br/>
+                    Akapit<br/>
+                    &lt;ul&gt; Lista<br/>
+                    &lt;li&gt;Element listy 1&lt;/li&gt;<br/>
+                    &lt;li&gt;Element listy 2&lt;/li&gt;<br/>
+                    &lt;li&gt;Element listy 3&lt;/li&gt;<br/>
+                    &lt;/ul&gt;<br/>
+                    &lt;/p&gt;<br/>
+                    &lt;p&gt;<br/>
+                    &lt;h3&gt;Jeszcze mniej ważny nagłówek&lt;/h3&gt;<br/>
+                    &lt;fieldset&gt;Zgrupowane elementy &lt;checkbox&gt;<br/>
+                    &lt;legend&gt;Opis grupy elementów&lt;/legend&gt;<br/>
+                    <t/>&lt;label&gt;&lt;input type="checkbox"/&gt;Element checkbox i jego opis&lt;/label&gt;<br/>
+                    &lt;label&lt;input type="checkbox"/&gt;Element checkbox i jego opis&lt;/label&gt<br/>
+                    &lt;label>&lt;input type="checkbox"/&gt;Element checkbox i jego opis&lt;/label&gt;
+                    &lt;/fieldset>
+                    &lt;/p>
+                </code>
+                <div style="border: 2px solid red;">
+                    Jak widzi stronę użytkownik bez problemów ze wzrokiem
+                </div>
+                <!-- <p>
+                    <div>
+                        Jak widzi osoba ...<br/>
+                        <label style="color: red;">*Imię<input type="text"/></label><br/>
+                        <label style="color: red;">*Nazwisko<input type="text"/></label><br/>
+                        <label style="color: red;">*Adres<input type="text"/></label><br/>
+                        <label>Wiek<input type="text"/></label><br/>
+                    </div>
+                    <code>
+                        &lt;label style="color: red;"&gt;*Imię&lt;input type="text"/&gt;&lt;/label&gt;<br/>
+                        &lt;label style="color: red;"&gt;*Nazwisko&lt;input type="text"/&gt;&lt;/label&gt;<br/>
+                        &lt;label style="color: red;"&gt;*Adres&lt;input type="text"/&gt;&lt;/label&gt;<br/>
+                        &lt;label&gt;Wiek&lt;input type="text"/&gt;&lt;/label&gt;<br/>
+                    </code>
+                </p> -->
+                </p>
+                <strong>Pokazanie, jak to wygląda (np. czytanie formularza z wymaganymi polami) / film jak obsługują technologie i kod?</strong>
+            </div>
+            <div>
+                <h3 id="1_3_2">Kryterium sukcesu 1.3.2 Zrozumiała kolejność (Poziom A)</h3>
+                <p class="txt-format">
+                    Jeśli kolejność odczytu treści na stronie ma znaczenie, musisz zadbać, aby technologie asystujące mogły wyświetlać stronę w taki sposób.
+                    W przeciwnym przypadku część użytkowników może nie zrozumieć przekazu, przez złą kolejność odczytywania zawartości.
+                </p>
+                <p class="txt-format">
+                    Dzięki klejności określonej programowo, użytkownicy z różnymi problemami mogą zapoznać się z treścią w sposób zamierzony przez twórcę.
+                </p>
+                <a href="examples/1_3_2_dobry.html" style="color: blue;">Dobra implementacja</a>
+                <a href="examples/1_3_2_zly.html" style="color: blue;">Zła implementacja</a><br/>
+                <strong>Osobna strona z przykładem -> dobry na jednej, zły na drugiej?</strong>
+            </div>
+            <div>
+                <h3 id="1_3_3">Kryterium sukcesu 1.3.3 Właściwości zmysłowe (Poziom A)</h3>
+                <p class="txt-format">
+                    Instrukcje, które pozwalają zrozumieć cel i sposób korzystania z treści strony, nie opierają się tylko na właściwościach zmysłowych.
+                    Są to np.:
+                <ul>
+                    <li>kolor,</li>
+                    <li>kształt,</li>
+                    <li>rozmiar,</li>
+                    <li>lokalizacja na stronie,</li>
+                    <li>dźwięk.</li>
+                </ul>
+                Część osób nie rozpoznaje kolorów lub używa z technologii asystujących, które korzytają ze struktury strony i ją "czytają".
+                Taki użytkownik nie będzie widział kształtu czy położenia elementu na stronie.
+                Przez to nie będzie mógł go zlokalizować, co ogranicza funkcjonalności dostępne na stronie.
+                </p>
+                <p class="txt-format">
+                    Kryterium nie dotyczy narzędzi fizycznych, takich jak klawiatura z klawiszami strzałek.
+                    Jeśli interakcja na stronie wiąże się z naciśnięciem konkretnego klawisza, treść strony powinienna powiadomić o tym użytkownika.
+                </p>
+                <p class="txt-format">
+                    Możesz stosować wyrażenia takie jak "poniżej" i "powyżej", kiedy kolejność treści na stronie jest ustalona i odwołanie do niej jednoznaczne.
+                    W takim przypadku użytkownik technologii asystujących zrozumie to jako treść, która pojawiła się wcześniej lub później.
+                </p>
+                <p>
+                    <b>ŹLE</b> Aby przejść dalej, wciśnij okrągły przycisk w kolorze zielonym, który znajduje się po lewej <br/>
+                    <button style="border-radius: 50px; width: 5em; height: 5em; background-color: green; cursor: pointer;">Kliknij mnie</button>
+                </p>
+                <p>
+                    <b>DOBRZE</b> Aby przejść dalej, kliknij poniższy przycisk<br/>
+                    <button style="border-radius: 50px; background-color: green; cursor: pointer;">Etap II: Wypełnianie danych adresowych</button>
+                </p>
+                <strong>Przykłady dobrze i źle.</strong>
+            </div>
+            <div>
+                <h3 id="1_3_4">Kryterium sukcesu 1.3.4 Orientacja (Poziom AA)</h3>
+                <p class="txt-format">
+                    Zawartość strony ma być wyświetlana zarówno w orientacji pionowej, jak i poziomej.
+                </p>
+                <p class="txt-format">
+                    Wyjątkiem są sytuacje, kiedy orientacja urządzenia jest ważna. Przykładem jest aplikacja do odczytywania nut.
+                    W orientacji pionowej użytkownik będzie miał problem z odczytywaniem i nawigowaniem po kolejnych stronach z nutami.
+                    <strong>Grafika pion-poziom, przykład na osobnej stronie/ film?</strong>
+                </p>
+                <p>
+                    <a href="examples/1_3_4_dobry.html" style="color: blue;">Dobra implementacja</a>
+                    <a href="examples/1_3_4_zly.html" style="color: blue;">Zła implementacja</a><br/>
+                    <strong>Zły i dobry przykład z rotate - wcisniej F12 i ikonę - instrukcja</strong>
+                </p>
+            </div>
+            <div>
+                <h3 id="1_3_5">Kryterium sukcesu 1.3.5 Określenie pożądanej wartości (Poziom AA)</h3>
+                <p class="txt-format">
+                    Pola formularzy i ich cel są odczytywane i przedstawiane przez technologie wspomagające, kiedy:
+                <ul>
+                    <li>pole w formularzu służy celowi, który jest opisany w <i>Przeznaczenie pól danych w komponentach interfejsu użytkowników</i> w dokumencie WCAG 2.1,</li> (dołączyć listę rozwijaną/ link/ to i to)
+                    oraz
+                    <li>użyta technologia do wywietlania treści pozwala na odczytywanie celu pól w formularzach. CHECK!!!</li>
+                </ul>
+                </p>
+                <p class="txt-format">
+                    Dzięki określeniu celu pól, użytkownikowi jest znacznie łatwiej wypełniać formularze.<br/>
+                    <strong>Przykłady z atrybutem type, autouzupełnianie + kod (jak też w innych)</strong>
+                </p>
+                <p class="txt-format">
+                    Podstawowym sposobem na określenie celu formularza jest dodanie atrybutu 'type' do pola formualrza 'input'.
+                    <strong>przykład formularza z type</strong><br/>
+                    Pole hasła:<br/>
+                    <input type="password"><br/>
+                    <code>
+                        &lt;input type="password"&gt;
+                    </code>
+                </p>
+                <p class="txt-format">
+                    Aby jeszcze dokładniej określić cel pola, trzeba skorzystać z atrybutu 'autocomplete'. Ten atrybut pozwala na dookreślenie znaczenia pola,
+                    np. imienia (pierwsze, drugie, użytkownika) + wymienić inne?.<br/>
+                    Atrybut 'autocomplete' pozwala także wypełnić pola wcześniej zapamiętanymi danymi. Jest to dużym ułatwieniem, również dla osób, które (:)
+                    mają problem z pamięcią lub wypełniają formularze w obcym języku - funkcjonalność ta działa niezależnie od języka strony.
+                    <strong>Przykład autocomplete, kod</strong><br/>
+                    Pole email z autouzupełnianiem:<br/>
+                    <input type="email" name="email"><br/>
+                    <code>
+                        &lt;input type="email" name="email"&gt;
+                    </code>
+                </p>
+                <p class="txt-format">
+                    Technologie asystujące dla zdefiniowanych pól mogą wyświetlać ikony, które dla części użytkowników są lepiej zrozumiałe niż tekst.<br/>
+                    Są to osoby z zaburzeniami poznawczymi, którym jest trudno czytać tekst oraz osoby mające dysleksję lub nieumiejące czytać.
+                    <strong>Oprogramowanie z ikonami screen</strong><br/>
+                    Pole email z ikoną:<br/>
+                    (ikona koperty)<input type="email" name="email"><br/>
+                </p>
+            </div>
+            <div>
+                <h3 id="1_3_6">Kryterium sukcesu 1.3.6 Określenie przeznaczenia (Poziom AAA)</h3>
+                <p class="txt-format">
+                    Treści, które tworzysz w języku znaczników (np. HTML) muszą być odczytywane przez technologie asystujące. Tymi treściami są:
+                <ul>
+                    <li>komponenty interfejsu użytkownika (przyciski, linki, pola formularzy),</li>
+                    <li>ikony,</li>
+                    <li>obszary kluczowe.</li>
+                </ul>
+                </p>
+                <p class="txt-format">
+                    Dzięki temu technologie asystujące mogą przekazać informacje o przeznaczeniu elementów strony.
+                    Kiedy element jest opisany, użytkownik może zdecydować, w jaki sposób informacje będą przekazywane.
+                    Istnieje wiele możliwości: modyfikacja w postaci dodania znajomego słownictwa, skrótów klawiszowych oprogramowania lub spersonalizowanych ikon.
+                </p>
+                <p class="txt-format">
+                    Treść musi być oznaczona w taki sposób, aby technologie wspomagające mogły określić, co przedstawia/ jej cel. Może to być m.in.:
+                <ul>
+                    <li>
+                        informacja, do czego służy link (odnośnik do logowania, strony głownej),
+                        <div>
+                            <a href="#" style="color: blue;">Pobierz raport ludności w Polsce na rok 2020</a><br/>
+                            <a href="#" style="color: blue;">Wyświetl książkę online (i grafika książki)</a>
+                        </div>
+                    </li>
+                    <li>
+                        oznaczone obszary na stronie - użytkownik może je pomijać lub wyłączać.
+                        <div>
+                            <code>
+                                &lt;header&gt;&lt;/header&gt;<br/>
+                                &nbsp;&lt;nav&gt;&lt;/nav&gt;<br/>
+                                &lt;main&gt;<br/>
+                                &lt;article&gt;<br/>
+                                &lt;section>&lt;/section&gt;<br/>
+                                &lt;section>&lt;/section&gt;<br/>
+                                &lt;/article&gt;<br/>
+                                &lt;aside&lt;/aside&gt;<br/>
+                                &lt;/main&gt;<br/>
+                                &lt;footer>&lt;/footer&gt;
+                            </code>
+                            (do tego grafika z boku z wizualizacją tego kodu)
+                        </div>
+                    </li>
+                </ul>
+                </p>
+                <strong>Jak to wygląda w HTML (grafika i oznaczenia) i modyfikacje użytkownika, jak to wygląda -> możliwa zamiana ikon grafika + strona/ layout z oznaczeniami landmarks</strong>
+            </div>
+        </div>
+        </div>
+
+        <!-- Każdy li, np. 4.1 włącza stronę z table of content z "głębszymi" kryteriami -->
+        <!-- Poziomy w różnych kolorach -->
+        <!-- Zrobić coś z poziomem w nawiasie -->
+        <!-- Filtrowanie po poziomach? -->
+        <!-- Scroll do góry wszędzie? -->
+        <!-- + komu to pomaga -->
+    </main>
+    {% include 'footer.html.twig' %}
+{% endblock %}

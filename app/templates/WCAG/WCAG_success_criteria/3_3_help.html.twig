@@ -1,0 +1,145 @@
+{% extends 'base.html.twig' %}
+{# skonfigurowane include, zeby nie zchodzic ponizej templates? #}
+{# zrobic normalne style #}
+{# poprawic sidebar, zeby byl accessible #}
+{# cos nie dziala grafika a11y #}
+{% block title %}
+    3.3 Pomoc przy wprowadzaniu informacji
+{% endblock %}
+
+{% block body %}
+    {% include 'header.html.twig' %}
+    {% include 'sidebar.html.twig' %}
+    <main id="main" class="page">
+        <div style="margin-left: 15em;">
+            <h1>Wytyczna 3.3 Pomoc przy wprowadzaniu informacji</h1>
+            <p class="txt-format-main">
+                Pomagaj użytkownikom unikać błędów i je korygować.
+            </p>
+            <div id="table-of-content">
+                <h2>Spis treści</h2>
+                <ul>
+                    <li><a href="#3_3_1">Kryterium sukcesu 3.3.1 Identyfikacja błędu (Poziom A)</a></li>
+                    <li><a href="#3_3_2">Kryterium sukcesu 3.3.2 Etykiety lub instrukcje (Poziom A)</a></li>
+                    <li><a href="#3_3_3">Kryterium sukcesu 3.3.3 Sugestie korekty błędów (Poziom AA)</a></li>
+                    <li><a href="#3_3_4">Kryterium sukcesu 3.3.4 Zapobieganie błędom (prawnym, finansowym, w danych) (Poziom AA)</a></li>
+                    <li><a href="#3_3_5">Kryterium sukcesu 3.3.5 Pomoc (Poziom AAA)</a></li>
+                    <li><a href="#3_3_6">Kryterium sukcesu 3.3.6 Zapobieganie błędom (wszystkim) (Poziom AAA)</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 id="3_3_1">Kryterium sukcesu 3.3.1 Identyfikacja błędu (Poziom A)</h3>
+                <p class="txt-format">
+                    Jeśli na stronie zostanie automatycznie wykryty błąd we wprowadzanych danych (niewypełnione lub błędne dane):
+                <ul>
+                    <li>wskazany zostanie błędny element,</li>
+                    <li>użytkownik otrzyma tekstowy opis błędu.</li>
+                </ul>
+                </p>
+                <p class="txt-format">
+                    Wskazanie błędów na stronie pozwala użytkownikowi na zapoznanie się z nimi i poprawę źle wypełnionych pól.
+                    Błędy powinny być wyświetlane w trakcie wprowadzania danych, ewentualnie przy próbie wysłania błędnego formularza
+                    ma on być ponownie wyświetlany ze wcześniej wprowadzonymi danymi.
+                </p>
+                <p class="txt-format">
+                    Tekstowe informacje o źle wypełnionych polach pozwalają użytkownikom niewidzącym zrozumieć popełniony błąd. Osoby, które mają problemy ze
+                    zrozumieniem znaków lub innych wizualnych elementów mogą skorzystać z podpowiedzi tekstowych podczas poprawniania formularza.
+                </p>
+                <p class="txt-format">
+                    Kiedy pole wprowadza domyślne informacje po wprowadzeniu błędnych danych, musisz również o tym powiadomić.
+                    Wyświetl komunikat odnośnie przyczyzny błędu.
+                </p>
+                <p class="txt-format">
+                    Warto, aby korzystać z rozwiązań, które uwzględniają technologie asystujące. Niektóre programy mogą informowwać użytkownika o błędach,
+                    typie przyjmowanej wartości lub przedziale wartości możliwych do wybrania (np. rok, kwota).
+                </p>
+                <strong>Pokazane błędy na przykładowym formularzu i jak jest poprawnie je opisać</strong>
+                <p>
+                <form>
+                    <label>Imię<input type="text" required></label><br/>
+                    <label>Nazwisko<input type="text" required></label><br/>
+                    <label>Wiek<input type="text"></label><br/>
+                    <input type="submit" value="Submit"/>
+                </form>
+                </p>
+            </div>
+            <div>
+                <h3 id="3_3_2">Kryterium sukcesu 3.3.2 Etykiety lub instrukcje (Poziom A)</h3>
+                <p class="txt-format">
+                    Kiedy pola muszą być wypełnione danymi przez użytkownika, dołącz do nich etykiety lub instrukcje.
+                    Dostarcz informacji zwięzłych, które przekażą kluczowe informacje.
+                </p>
+                <p class="txt-format">
+                    Pozwoli to użytkownikom zrozumieć cel formularza i dane, które powinni wpisać w poszczególne pola.
+                    Ograniczy to błędy i zmiejszy czas potrzebny na poprawne przesłanie formularza.
+                </p>
+                <strong>Przykład etykiet i instrukcji wprowadzania poprawnych danych + instrukcje chowane, jeśli dłuższe?</strong>
+            </div>
+            <div>
+                <h3 id="3_3_3">Kryterium sukcesu 3.3.3 Sugestie korekty błędów (Poziom AA)</h3>
+                <p class="txt-format">
+                    Jeśli na stronie zostanie automatycznie wykryty błąd we wprowadzanych danych, użytkownik powinien otrzymać sugestię poprawy błędu.
+                    Wyjątkiem są sugestie, które wpływałyby na bezpieczeństwo treści lub zmieniało jej cel.
+                </p>
+                <p class="txt-format">
+                    Zdarzają się pola, gdzie użytkownik nie wie, jakie dane ma wprowadzić.
+                    Może to doprowadzić do sytuacji w której użytkownik będzie zmuszony poprawiać dane do skutku lub zrezygnuje z wypełniania.<br/>
+                    Kiedy pokażesz sugestie z poprawnymi danymi, użytkownik będzie mógł zrozumieć cel pola i go wypełnić.
+                </p>
+                <strong>Interaktywne, że pokazuje, co ma być wprowadzone, jaki format i co</strong>
+            </div>
+            <div>
+                <h3 id="3_3_4">Kryterium sukcesu 3.3.4 Zapobieganie błędom (prawnym, finansowym, w danych) (Poziom AA)</h3>
+                <p class="txt-format">
+                    Część stron powoduje zobowiązania prawne lub użytkownik przeprowadza transakcje finansowe,
+                    udziela opowiedzi na testy lub zmienia bądź usuwa dane, które są pod jego kontrolą. W takich sytuacjach strona powinna pozwalać na:
+                <ul>
+                    <li>wycofywanie wprowadzanych danych;</li>
+                    <li>wprowadzane dane sa sprawdzane pod kątem błędów i użytkownik może je poprawić;</li>
+                    <li>sprawdzenie, potwierdzenie i poprawę informacji przed ich wysłaniem.</li>
+                </ul>
+                </p>
+                <p class="txt-format">
+                    Kryterium ogranicza popełnianie poważnych błędów podczas wypełniania danych, których po zatwierdzeniu nie można wycofać.
+                </p>
+                <p class="txt-format">
+                    Przykładowo, bez tych ograniczeń użytkownik nie mógłby poprawić informacji podczas wykonywania transakcji bankowej,
+                    lub zrezygnować z niej.
+                </p>
+                <strong>Grafika, że można zmienić lub wycofać dane/ film</strong>
+            </div>
+            <div>
+                <h3 id="3_3_5">Kryterium sukcesu 3.3.5 Pomoc (Poziom AAA)</h3>
+                <p class="txt-format">
+                    Zapewnij użytkownikowi pomoc kontekstową, która podpowiada kolejne kroki przy wykonywaniu czynności.
+                </p>
+                <p class="txt-format">
+                    Informacje kontekstowe pozwalają na wytłumaczenie użytkownikowi, jakie czynności powinien wykonać podczas korzystania z funkcjonalności na stronie.
+                </p>
+                <p class="txt-format">
+                    <strong>WAŻNE</strong><br/>
+                    Informacja kontekstowa jest potrzebna w sytuacji, kiedy etykieta komponentu nie opisuje wystarczająco jego celu i funkcjonalności.
+                </p>
+                <strong>Okienko z pomocą (interaktywne) lub odnośniku do kraków z instrukcją, jak je wykonać - film/ grafika</strong>
+            </div>
+            <div>
+                <h3 id="3_3_6">Kryterium sukcesu 3.3.6 Zapobieganie błędom (wszystkim) (Poziom AAA)</h3>
+                <p class="txt-format">
+                    Kiedy strona wymaga wprowadzania informacji przez użytkownika, strona powinna pozwalać na:
+                <ul>
+                    <li>wycofywanie wprowadzanych danych;</li>
+                    <li>wprowadzane dane sa sprawdzane pod kątem błędów i użytkownik może je poprawić;</li>
+                    <li>sprawdzenie, potwierdzenie i poprawę informacji przed ich wysłaniem.</li>
+                </ul>
+                </p>
+                <p class="txt-format">
+                    Kryterium jest rozszerzeniem <a href="#3_3_3">Kryterium sukcesu 3.3.4 Zapobieganie błędom (prawnym, finansowym, w danych) (Poziom AA)</a>.
+                    W tym przypadku musisz zapewnić, aby podczas wypełniania <b>każdego</b> formularza można było wycofać, sprawdzać i modyfikować dane.
+                </p>
+                <strong>Pokazane, że nawet zwykły formularz musi działać tak jak w 3.3.4</strong>
+            </div>
+        </div>
+        </div>
+    </main>
+    {% include 'footer.html.twig' %}
+{% endblock %}

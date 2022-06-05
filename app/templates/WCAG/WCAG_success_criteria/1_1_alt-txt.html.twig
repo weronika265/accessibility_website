@@ -1,0 +1,59 @@
+{% extends 'base.html.twig' %}
+{# skonfigurowane include, zeby nie zchodzic ponizej templates? #}
+{# zrobic normalne style #}
+{# poprawic sidebar, zeby byl accessible #}
+{# cos nie dziala grafika a11y #}
+{% block title %}
+    1.1 Alternatywa tekstowa
+{% endblock %}
+
+{% block body %}
+    {% include 'header.html.twig' %}
+    {% include 'sidebar.html.twig' %}
+    <main id="main" class="page">
+        <div style="margin-left: 15em;">
+            <h1>Wytyczna 1.1 Alternatywa tekstowa</h1>
+            <p class="txt-format-main">
+                Zapewnij tekstowe zamienniki wszystkich treści nietekstowych, aby można je było zamienić na inne formy
+                (np. powiększony druk, brajl, mowa syntetyczna, symbole lub prostszy język).
+            </p>
+            <div id="table-of-content">
+                <h2>Spis treści</h2>
+                <ul>
+                    <li><a href="#1_1_1">Kryterium sukcesu 1.1.1 Treść nietekstowa (Poziom A)</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 id="1_1_1">Kryterium sukcesu 1.1.1 Treść nietekstowa (Poziom A)</h3>
+                <p class="txt-format">
+                    Do elementów, które nie są tekstem, musisz dodać tekstową alternatywę.
+                    W zależności od elementu tekst ma opisywać, co pokazuje element, czym jest element lub co robi.
+                    Dzięki temu technologie asystujące (czytnik tekstu, czytnik Braille'a) mogą przeczytać zawartość.
+                </p>
+                <p>
+                    <p>
+                        Grafika wyświetlana: <img src="{{ asset('img/thumbs-up.png') }}" alt="Kciuk uniesiony w górę." style="width: 250px; height: 250px;"/>
+                        Grafika niewyświetlana: <img src="" alt="Kciuk uniesiony w górę." style="width: 250px; height: 250px;"/><br/>
+                        <code>
+                            &lt;img src="thumbs-up.png" alt="Kciuk uniesiony w górę." /&gt;
+                        </code>
+                        <br/>
+                        <strong>
+                            (strona z obrazem normalnie wyświetlana, strona bez poprawnie wyświetlanego obrazu + filmu + ..., kod strony - obraz + coś jeszcze)<br/>
+                        </strong>
+                    </p>
+                    <p class="txt-format">
+                        Z wyjątkiem:<br/>
+                        <strong>+ osobno do tych wyjątkowych?</strong>
+                    </p>
+                </p>
+            </div>
+        </div>
+        </div>
+{#        TODO: Czemu footer źle działa przy usunięciu "zbędnego" diva? #}
+{#        TODO: dac inline block zamiast br? #}
+        <!-- Każdy li, np. 4.1 włącza stronę z table of content z "głębszymi" kryteriami -->
+        <!-- Dodać komentarze z możliwością wyboru kryterium? + pole w tabeli w bazie?  -->
+    </main>
+    {% include 'footer.html.twig' %}
+{% endblock %}

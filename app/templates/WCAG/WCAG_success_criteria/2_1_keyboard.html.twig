@@ -1,0 +1,93 @@
+{% extends 'base.html.twig' %}
+{# skonfigurowane include, zeby nie zchodzic ponizej templates? #}
+{# zrobic normalne style #}
+{# poprawic sidebar, zeby byl accessible #}
+{# cos nie dziala grafika a11y #}
+{% block title %}
+    2.1 Dostępność z klawiatury
+{% endblock %}
+
+{% block body %}
+    {% include 'header.html.twig' %}
+    {% include 'sidebar.html.twig' %}
+    <main id="main" class="page">
+        <div style="margin-left: 15em;">
+            <h1>Wytyczna 2.1 Dostępność z klawiatury</h1>
+            <p class="txt-format-main">Zapewnij dostępność wszystkich funkcjonalności za pomocą klawiatury.</p>
+            <div id="table-of-content">
+                <h2>Spis treści</h2>
+                <ul>
+                    <li><a href="#2_1_1">Kryterium sukcesu 2.1.1 Klawiatura (Poziom A)</a></li>
+                    <li><a href="#2_1_2">Kryterium sukcesu 2.1.2 Bez pułapki na klawiaturę (Poziom A)</a></li>
+                    <li><a href="#2_1_3">Kryterium sukcesu 2.1.3 Klawiatura (bez wyjątków) (Poziom AAA)</a></li>
+                    <li><a href="#2_1_4">Kryterium sukcesu 2.1.4 Jednoznakowe skróty klawiaturowe (Poziom A)</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 id="2_1_1">Kryterium sukcesu 2.1.1 Klawiatura (Poziom A)</h3>
+                <p class="txt-format">
+                    Wszystkie treści mają być obsługiwane nie tylko przy pomocy myszy, ale także klawitury lub interfejsu klawiatury (dla innych technologii).
+                    Klawiatura ma być używana swobodnie, bez ograniczeń
+                    co do określonego czasu na wciśnięcie klawisza i długości jego przytrzymania.<br/>
+                    Wyjątkiem są treści strony, których nie da się obsłużyć przez standardowe użycie klawiatury.
+                    Przykładem jest program gaficzny, który do malowania wymaga pociągnięć o zróżnicowanej szybkości i długości trwania.
+                    Taka forma interakcji nie jest możliwa, kiedy korzystamy z klawiatury.
+                </p>
+                <p class="txt-format">
+                    Pomaga to znacznie użytkownikom, którzy nie korzystają z myszy lub korzystają z niej z trudnością:
+                <ul>
+                    <li>osoby niewidzące, które korzystają z technologi asystujących, takich jak czytnik ekranu,</li>
+                    <li>osoby słabowidzące, które źle widzą małe elementy, takie jak kursor myszy,</li>
+                    <li>osoby, które mają problem z poruszaniem rękami i wykonywaniem precyzyjnych ruchów.</li>
+                </ul>
+                <strong>Pokazana obsługa klawiatury i bez + jakie wyjątki? (film)</strong>
+                </p>
+            </div>
+            <div>
+                <h3 id="2_1_2">Kryterium sukcesu 2.1.2 Bez pułapki na klawiaturę (Poziom A)</h3>
+                <p class="txt-format">
+                    Niektóre elementy strony wymagają, aby fokus klawiatury przemieścił się do ich wnętrza (np. menu podstrony).
+                    Musisz pozwolić, aby użytkownik mógł z tego elementu wyjść. Jeśli wyjście z elementu wymaga niestandardowego użycia klawiszy, musisz dostarczyć odpowiednią podpowiedź.
+                </p>
+                <p class="txt-format">
+                    <strong>WAŻNE</strong>
+                    Jeśli nie zastosujesz się do tego kryterium, strona okaże się niefunkcjonalna dla osób, które do nawigacji wykorzystują klawiaturę.<br/>
+                    (poprawić jak tam inny wcześniejszy)
+                </p>
+                <strong>Osobne strony: jak wygląda z pułapką i bez/ film-animacja</strong>
+            </div>
+            <div>
+                <h3 id="2_1_3">Kryterium sukcesu 2.1.3 Klawiatura (bez wyjątków) (Poziom AAA)</h3>
+                <p class="txt-format">
+                    Ze wszystkich treści na stronie i funkcjonalności da się korzystać także tylko przy użyciu klawiatury lub interfejsu klawiatury.
+                    Kryterium rozszerza <a href="#2_1_1">Kryterium sukcesu 2.1.1 Klawiatura (Poziom A)</a> o brak wyjątków.
+                </p>
+                <strong>Pokazać, że obsługuje też wyjątki/ info, że po prostu jak się nie uda, to po prosty jesteśmy w AA? </strong>
+            </div>
+            <div>
+                <h3 id="2_1_4">Kryterium sukcesu 2.1.4 Jednoznakowe skróty klawiaturowe (Poziom A)</h3>
+                <p class="txt-format">
+                    Jeśli na stronie wprowadzasz skróty, które są obsługiwane przez naciśnięcie jednego znaku na klawiaturze, musisz pozwolić przynajmniej na:
+                <ul>
+                    <li>wyłączenie skrótu,</li>
+                    lub
+                    <li>zmianę kombinacji znaków dla skrótu (mapowanie),</li>
+                    lub
+                    <li>możliwość aktywacji skrótu tylko, kiedy ma fokus.</li>
+                </ul>
+                </p>
+                <p class="txt-format">
+                    Skróty klawiaturowe pomagają użytkownikom sprawniej poruszać się po stronie. Warto jednak pamiętać, że część osób ma kłopot z korzystaniem ze skrótów
+                    jednoklawiszowych. Takimi użytkownikami są m.in.:
+                <ul>
+                    <li>osoby korzystające z poleceń głosowych - jednoliterowe skróty mogą zostać rozpoznane w mowie i niecelowo aktywować elementy na stronie,</li>
+                    <li>osoby mające problem z wykonywaniem ruchów rękami - uderzanie przypadkowych klawiszy.</li>
+                </ul>
+                <strong>Jak działają skróty i film, jak wygląda problem z mową?</strong>
+                </p>
+            </div>
+        </div>
+        </div>
+    </main>
+    {% include 'footer.html.twig' %}
+{% endblock %}
