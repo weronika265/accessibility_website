@@ -97,7 +97,7 @@ class OpinionController extends AbstractController
 
             $this->addFlash('success', 'Utworzono Opinię. Czekaj na zatwierdzenie przez administratora.');
 
-            return $this->redirectToRoute('kontakt_index');
+            return $this->redirectToRoute('opinie_index');
         }
 
         return $this->render(
@@ -148,7 +148,6 @@ class OpinionController extends AbstractController
 //                'opinion' => $opinion,
 //            ]
 //        );
-
             $this->opinionService->delete($opinion);
             $this->addFlash('success', 'Odrzucono opinię');
 
@@ -171,7 +170,7 @@ class OpinionController extends AbstractController
     public function accept(Request $request, Opinion $opinion): Response
     {
             $this->opinionService->accept($opinion);
-            $this->addFlash('success', 'Zaakceptowana opinię');
+            $this->addFlash('success', 'Zaakceptowano opinię');
 
             return $this->redirectToRoute('admin_index');
     }

@@ -70,7 +70,9 @@ class Comment
      * @var Content
      *
      * @ORM\ManyToOne(
-     *     targetEntity="App\Entity\Content")
+     *     targetEntity="App\Entity\Content",
+     *     inversedBy="comments",
+     * )
      * @ORM\JoinColumn(nullable=false)
      */
     private $content;

@@ -49,7 +49,11 @@ class Content
     /**
      * Comments.
      *
-     * @ORM\OneToMany(targetEntity=Comment::class, mappedBy="content", orphanRemoval=true)
+     * @ORM\OneToMany(
+     *     targetEntity=Comment::class,
+     *     mappedBy="content",
+     *     orphanRemoval=true
+     * )
      */
     private $comments;
 
