@@ -1,14 +1,27 @@
-<ul>
-    <li><a href="#" tabindex="3">Menu 1</a></li>
-    <li><a href="#" tabindex="1">Menu 2</a></li>
-    <li><a href="#" tabindex="2">Menu 3</a></li>
-</ul>
-<ul>
-    <li><a href="#" tabindex="4">Link 1</a></li>
-    <li><a href="#" tabindex="5">Link 2</a></li>
-    <li><a href="#" tabindex="6">Link 3</a></li>
-</ul>
-<h2>Najważniejsze informacje</h2>
-<a href="#">Zawartość</a>
-<h3>Dodatkowe informacje</h3>
-<a href="../1_3_adapt.html#1_3_2">Powrót do kryteriów sukcesu</a>
+{% extends 'base.html.twig' %}
+{# skonfigurowane include, zeby nie zchodzic ponizej templates? #}
+{# zrobic normalne style #}
+{# poprawic sidebar, zeby byl accessible #}
+{# cos nie dziala grafika a11y #}
+{% block title %}
+    1.3.2 Zły przykład
+{% endblock %}
+
+{% block body %}
+    <main>
+        <ul>
+            <li><a href="#" tabindex="3">Menu 1</a></li>
+            <li><a href="#" tabindex="1">Menu 2</a></li>
+            <li><a href="#" tabindex="2">Menu 3</a></li>
+        </ul>
+        <ul>
+            <li><a href="#" tabindex="4">Link 1</a></li>
+            <li><a href="#" tabindex="5">Link 2</a></li>
+            <li><a href="#" tabindex="6">Link 3</a></li>
+        </ul>
+        <h2>Najważniejsze informacje</h2>
+        <a href="#">Zawartość</a>
+        <h3>Dodatkowe informacje</h3>
+        <a href="{{ url('adapt_index') }}#1_3_2">Powrót do kryteriów sukcesu</a>
+    </main>
+{% endblock %}

@@ -322,5 +322,77 @@ class wcagController extends AbstractController
             'WCAG/WCAG_success_criteria/4_1_compatible.html.twig',
         );
     }
-//    TODO: Dodać routing do examples
+
+//  EXAMPLES
+    /**
+     * 1.3.2 Dobry przykład.
+     *
+     * @return \Symfony\Component\HttpFoundation\Response HTTP response
+     *
+     * @Route(
+     *     "/Postrzegalnosc/1_3_2_dobry",
+     *     methods={"GET"},
+     *     name="_1_3_2_dobry",
+     * )
+     */
+    public function _1_3_2_dobry(): Response
+    {
+        return $this->render(
+            'WCAG/WCAG_success_criteria/examples/1_3_2_dobry.html.twig',
+        );
+    }
+
+    /**
+     * 1.3.2 Zły przykład.
+     *
+     * @return \Symfony\Component\HttpFoundation\Response HTTP response
+     *
+     * @Route(
+     *     "/Postrzegalnosc/1_3_2_zly",
+     *     methods={"GET"},
+     *     name="_1_3_2_zly",
+     * )
+     */
+    public function _1_3_2_zly(): Response
+    {
+        return $this->render(
+            'WCAG/WCAG_success_criteria/examples/1_3_2_zly.html.twig',
+        );
+    }
+
+    /**
+     * 1.3.4 Dobry przykład.
+     *
+     * @return \Symfony\Component\HttpFoundation\Response HTTP response
+     *
+     * @Route(
+     *     "/Postrzegalnosc/1_3_4_dobry",
+     *     methods={"GET"},
+     *     name="_1_3_4_dobry",
+     * )
+     */
+    public function _1_3_4_dobry(): Response
+    {
+        return $this->render(
+            'WCAG/WCAG_success_criteria/examples/1_3_4_dobry.html.twig',
+        );
+    }
+
+    /**
+     * 1.3.4 Zły przykład.
+     *
+     * @return \Symfony\Component\HttpFoundation\Response HTTP response
+     *
+     * @Route(
+     *     "/Postrzegalnosc/1_3_4_zly",
+     *     methods={"GET"},
+     *     name="_1_3_4_zly",
+     * )
+     */
+    public function _1_3_4_zly(): Response
+    {
+        return $this->render(
+            'WCAG/WCAG_success_criteria/examples/1_3_4_zly.html.twig',
+        );
+    }
 }

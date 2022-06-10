@@ -33,16 +33,32 @@
                 <h3 id="1_2_1">Kryterium sukcesu 1.2.1 Tylko audio lub tylko wideo (nagranie) (poziom A)</h3>
                 <p class="txt-format">
                     Multimedia, które zawierają tylko dźwięk lub tylko obraz, muszą zawierać alternatywę.
-                    Alternatywny sposób prezentacji przedstawia tą samą treść.
+                    Alternatywny sposób prezentacji przedstawia tę samą treść.
                 </p>
                 <p class="txt-format">
-                    W przypadku nagrania tylko wideo są to napisy lub audiodeskrypcja.
+                    W przypadku nagrania tylko wideo są to napisy lub audiodeskrypcja.<br/>
+
+                    Napisy:
+                    <video width="320" height="240" controls>
+                        <source src="{{ asset('img/1_2_1_video.mp4') }}" type="video/mp4" />
+                        <track src="{{ asset('img/1_2_1_video_subtitles.vtt') }}" kind="subtitles" srclang="pl" label="Polski" />
+                        Twoja przeglądarka nie wspiera elementów wideo.
+                    </video>
+
+                    Audiodeskrypcja:
+                    <audio controls>
+                        <source src="{{ asset('img/1_2_1_video_trans.mp3') }}" type="audio/mpeg" />
+                        Twoja przeglądarka nie wspiera elementów audio.
+                    </audio>
                 </p>
-                <strong>(nagrane wideo + napisy do nagrania i audiodeskrypcja)</strong><br/>
                 <p class="txt-format">
-                    W przypadku nagrania tylko audio jest to alteratywa tekstowa.
+                    W przypadku nagrania tylko audio jest to alternatywa tekstowa.
+                    <audio controls>
+                        <source src="{{ asset('img/1_2_1_audio.mp3') }}" type="audio/mpeg" />
+                        Twoja przeglądarka nie wspiera elementów audio.
+                    </audio><br/>
+                    Jest to próbne nagranie audio. Nie każda osoba może je usłyszeć. Przez to dołączono tekst, który przedstawia nagranie w formie pisemnej.
                 </p>
-                <strong>(nagranie audio i dołączony tekst)</strong>
             </div>
             <div>
                 <h3 id="1_2_2">Kryterium sukcesu 1.2.2 Napisy rozszerzone (nagranie) (poziom A)</h3>
@@ -59,12 +75,25 @@
                 <p class="txt-format">
                     Istnieją dwa rodzaje napisów rozszerzonych, stosowane w zależności od potrzeb:
                 <ul>
-                    <li>Napisy zamknięte - CC (Closed Caption) - napisy, które da się wyłączyć w nagraniu (są na innej ścieżce multimedia(?)),</li>
-                    <li>Napisy otwarte - OC (Open Caption) - napisy, których nie da się wyłączyć w nagraniu.</li>
+                    <li>
+                        Napisy zamknięte - CC (Closed Caption) - napisy, które da się wyłączyć w nagraniu (są na innej ścieżce multimedia(?)),
+                        <video width="320" height="240" controls>
+                            <source src="{{ asset('img/1_2_2_CC.mp4') }}" type="video/mp4">
+                            <track src="{{ asset('img/1_2_2_video_subtitles.vtt') }}" kind="subtitles" srclang="pl" label="Polski" />
+                            Twoja przeglądarka nie wspiera elementów wideo.
+                        </video>
+                    </li>
+                    <li>
+                        Napisy otwarte - OC (Open Caption) - napisy, których nie da się wyłączyć w nagraniu.
+                        <video width="320" height="240" controls>
+                            <source src="{{ asset('img/1_2_2_OC.mp4') }}" type="video/mp4" />
+                            Twoja przeglądarka nie wspiera elementów wideo.
+                        </video>
+                    </li>
                 </ul>
                 </p>
                 <p class="txt-format">
-                    Napisy rozszerzone pozwalają osobom nieslyszącym i głuchym zapoznać się z treścią prezentowaną na stronie.
+                    Napisy rozszerzone pozwalają osobom niesłyszącym i głuchym zapoznać się z treścią prezentowaną na stronie.
                     <!-- Dodać jako osobne info, komu to pomaga? -->
                 </p>
                 <strong>WAŻNE! Napisy nie powinny zasłaniać ważnych elementów w nagraniu (przykład i jak powinno wyglądać).</strong><br/>
@@ -77,26 +106,34 @@
                 <ol type="a">
                     <li>zapewnić alternatywę tekstową dla multimediów,</li>
                     lub
-                    <li>dołaczyć audiodekrypcję dla multimediów zsynchronizowanych.</li>
+                    <li>dołączyć audiodekrypcję dla multimediów zsynchronizowanych.</li>
                 </ol>
                 <strong>Przykład do a i b</strong><br/>
                 a. tekst dołączony do nagrania ma opisywać wszystko, co dzieje się na nagraniu - także dialogi.
                 Dzięki temu użytkownik może zapoznać się z całością pokazywanej treści, również z tym, co dzieje się podczas dialogów
-                (np. mimika aktorów w filmie).<br/>
+                (np. mimika aktorów w filmie).
+                <video width="320" height="240" controls>
+                    <source src="{{ asset('img/1_2_3_alt_txt.mp4') }}" type="video/mp4" />
+                    Twoja przeglądarka nie wspiera elementów wideo.
+                </video>
+                <br/>
                 b. audiodeskypcja dołączona do nagrania ma opisywać elementy pozadialogowe, kiedy dialogi nie są słyszalne.
                 Opis dźwiękowy opisuje np.: wygląd otoczenia i jego zmianę, działania postaci czy napisy widoczne na nagraniu.
+                <video width="320" height="240" controls>
+                    <source src="{{ asset('img/1_2_3_adesc.mp4') }}" type="video/mp4" />
+                    Twoja przeglądarka nie wspiera elementów wideo.
+                </video>
                 </p>
                 <p class="txt-format">
-                    Taki sposób prezentowania treści wideo pozwala zapoznać się treścią nie tylko osobom niesłyszącym lub nieodosłyszącym. Użytkownicy, którzy mają
+                    Taki sposób prezentowania treści wideo pozwala zapoznać się treścią nie tylko osobom niesłyszącym lub niedosłyszącym. Użytkownicy, którzy mają
                     problemy z rozpoznawaniem obrazów lub nie widzą dobrze, też zyskają na udogodnieniu.
                 </p>
-                <strong>(nagrane wideo + napisy do nagrania i audiodeskrypcja)</strong><br/>
             </div>
             <div>
                 <h3 id="1_2_4">Kryterium sukcesu 1.2.4 Napisy rozszerzone (na żywo) (poziom AA)</h3>
                 <p class="txt-format">
                     Jeśli nagranie audio-wideo jest transmitowane na żywo, musi zawierać napisy rozszerzone.
-                    <strong>Grafika, że wideo live.</strong>
+                    <img src="{{ asset('img/NiloferMerchant_2013-embed_live.jpg') }}" style="width: 576px; height: 324px;" />
                     Dzięki temu więcej osób może zapoznać się z transmisjami na żywo.
                 </p>
             </div>
@@ -112,18 +149,15 @@
                     Wszystkie nagrania, które zawierają audio i wideo, muszą być tłumaczone także na język migowy.
                 </p>
                 <p class="txt-format">
-                    Wszystkie nagrania, które zawierają audio i wideo, muszą być tłumaczone także na język migowy.
-                </p>
-                <p class="txt-format">
                     Wiele osób, które nie słyszą od dziecka, wykorzystuje język migowy jako główną formę komunikacji.
                     Takie osoby mogą mieć problemy z rozumieniem tekstu pisanego. Multimedia tłumaczone na język migowy są dla nich dużym ułatwieniem.
                 </p>
-                <strong>grafika, że migowy??</strong>
+                <img src="{{ asset('img/migowy.jpg') }}" style="width: 507px; height: 328px;"/>
             </div>
             <div>
                 <h3 id="1_2_7">Kryterium sukcesu 1.2.7 Rozszerzona audiodeskrypcja (nagranie) (poziom AAA)</h3>
                 <p class="txt-format">
-                    Jeśli przerwy między dialogami w nagraniu są niewystarczające, aby przekazać wszystkie istostne informacje pozadiologowe, nagranie musi
+                    Jeśli przerwy między dialogami w nagraniu są niewystarczające, aby przekazać wszystkie istotne informacje pozadialogowe, nagranie musi
                     zawierać rozszerzoną audiodeskrypcję.
                 </p>
                 <p class="txt-format">
@@ -135,7 +169,10 @@
                     Dzięki temu osoba, która korzysta
                     z tej formy pomocy, zapozna się ze wszystkimi ważnymi informacjami z części wideo nagrania.
                 </p>
-                <strong>Przykład nagrania</strong>
+                <video width="320" height="240" controls>
+                    <source src="{{ asset('img/1_2_7.mp4') }}" type="video/mp4" />
+                    Twoja przeglądarka nie wspiera elementów wideo.
+                </video>
             </div>
             <div>
                 <h3 id="1_2_8">Kryterium sukcesu 1.2.8 Alternatywa dla mediów (nagranie) (poziom AAA) -> CHECK</h3>
@@ -152,9 +189,9 @@
                 </p>
                 <p class="txt-format">
                     Tekstowy sposób prezentacji tych informacji sprawia, że każda osoba może skorzystać
-                    z szczegółowych opisów nagrania, przy użyciu technologii asystujących (czytnik tekstu, Braille'a).
+                    ze szczegółowych opisów nagrania, przy użyciu technologii asystujących (czytnik tekstu, Braille'a).
                 </p>
-                <strong>Nagranie audio-wideo/ wideo z pełnym opisem tekstem?</strong>
+                <img src="{{ asset('img/1_2_8.png') }}" style="width: 620px; height: 360px;">
             </div>
             <div>
                 <h3 id="1_2_9">Kryterium sukcesu 1.2.9 Tylko audio (na żywo) (poziom AAA)</h3>
@@ -164,11 +201,11 @@
                 <ul>
                     <li>specjalne programy, które tłumaczą mowę i dźwięki tekst w momencie transmisji,</li>
                     <li>pomoc tłumacza, który tworzy transkrypcję transmisji w momencie nadawania,</li>
-                    <li>jeśli przebieg transmiji jest zaplanowany, można dołączyć wcześniej przygotowany transkrypt.</li>
+                    <li>jeśli przebieg transmisji jest zaplanowany, można dołączyć wcześniej przygotowany transkrypt.</li>
                 </ul>
                 Przygotowywane napisy na żywo można dołączyć do nagrania lub umieścić na stronie internetowej.
                 </p>
-                <strong>Grafika przedstawiająca?</strong>
+                <img src="{{ asset('img/1_2_9.png') }}" style="width: 620px; height: 360px;">
             </div>
         </div>
         </div>

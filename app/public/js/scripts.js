@@ -62,72 +62,85 @@ $(document).ready(function() {
         fontSize = 'standard';
         localStorage.setItem('fontSize', theme);
     });
-});
 
-$(document).ready(function() {
     $(smallFont).click(function() {
         $('html').css('font-size', '0.7em');
         fontSize = 'small';
         localStorage.setItem('fontSize', theme);
     });
-});
 
-$(document).ready(function() {
     $(bigFont).click(function() {
         $('html').css('font-size', '1.3em');
         fontSize = 'big';
         localStorage.setItem('fontSize', theme);
     });
-});
 
-if (fontSize === 'standard') {
-    $(document).ready(function() {
+    if (fontSize === 'standard') {
         $(stdFont).click(function() {
             $('html').css('font-size', '1em');
         });
-    });
-}
-if (fontSize === 'small') {
-    $(document).ready(function() {
+    }
+
+    if (fontSize === 'small') {
         $(smallFont).click(function() {
             $('html').css('font-size', '0.7em');
         });
-    });
-}
-if (fontSize === 'big') {
-    $(document).ready(function() {
+    }
+
+    if (fontSize === 'big') {
         $(bigFont).click(function() {
             $('html').css('font-size', '1.3em');
         });
-    });
-}
+    }
+});
+
+// if (fontSize === 'standard') {
+//     $(document).ready(function() {
+//         $(stdFont).click(function() {
+//             $('html').css('font-size', '1em');
+//         });
+//     });
+// }
+// if (fontSize === 'small') {
+//     $(document).ready(function() {
+//         $(smallFont).click(function() {
+//             $('html').css('font-size', '0.7em');
+//         });
+//     });
+// }
+// if (fontSize === 'big') {
+//     $(document).ready(function() {
+//         $(bigFont).click(function() {
+//             $('html').css('font-size', '1.3em');
+//         });
+//     });
+// }
+
 <!-- a11y options font space + doprogramowac klawiature do opcji + zgodnie z WCAG 2.1 + poprawic, zeby sie zapisywalo w sesji -->
 const stdSpace = document.getElementById('space-std');
 const bigSpace = document.getElementById('space-big');
 const biggerSpace = document.getElementById('space-bigger');
+const html_tag = document.getElementsByTagName('html');
 // letter-spacing, line-height, word-spacing
 $(document).ready(function() {
     $(stdSpace).click(function() {
-        $('html').css('line-height', 'normal');
-        $('html').css('letter-spacing', 'normal');
-        $('html').css('word-spacing', 'normal');
+        $(html_tag).css('line-height', 'normal');
+        $(html_tag).css('letter-spacing', 'normal');
+        $(html_tag).css('word-spacing', 'normal');
     //    + między p
     });
-});
-$(document).ready(function() {
+
     $(bigSpace).click(function() {
-        $('html').css('line-height', '1.5em');
-        $('html').css('letter-spacing', '0.12em');
-        $('html').css('word-spacing', '0.16em');
+        $(html_tag).css('line-height', '1.5em');
+        $(html_tag).css('letter-spacing', '0.12em');
+        $(html_tag).css('word-spacing', '0.16em');
         //    + między p
     });
-});
-$(document).ready(function() {
+
     $(biggerSpace).click(function() {
-        $('html').css('line-height', '2em');
-        $('html').css('letter-spacing', '0.24em');
-        $('html').css('word-spacing', '0.32em');
-        //    + między p
+        $(html_tag).css('line-height', '2em');
+        $(html_tag).css('letter-spacing', '0.24em');
+        $(html_tag).css('word-spacing', '0.32em');
     });
 });
 
