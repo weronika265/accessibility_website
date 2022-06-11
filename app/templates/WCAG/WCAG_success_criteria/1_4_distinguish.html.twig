@@ -37,7 +37,7 @@
                 <p class="txt-format">
                     Przekazując informacje, wyróżniając informacje lub wskazując czynności do wykonania, <b>nie polegaj tylko na kolorze</b>.<br/>
                     Osoby z zaburzeniem postrzegania barw nie widzą niektórych kolorów. Jeśli na swojej stronie przekazujesz informacje tylko za pomocą koloru,
-                    takie osoby mogą nie być wstanie wykonać polecenia lub go rozumieć.<br/>
+                    takie osoby mogą nie być w stanie wykonać polecenia lub go rozumieć.<br/>
                     Przez to elementy, które chcesz podkreślić, muszą być oznaczone w dodatkowy sposób niż tylko za pomocą koloru.<br/>
                     <strong>Grafiki jak jest dobrze, jak jest źle i jak ktoś może postrzegać</strong>
                 </p>
@@ -77,7 +77,6 @@
                     LUB
                     <li>umożliwić ściszenie dźwięku na stronie, który jest niezależny od głośności systemu.</li>
                 </ul>
-                <strong>osobna strona z przykładem i film, jak ktoś to słyszy z technologią asystującą. + dobry przykład z link na górze strony</strong><br/>
                 <b>Uwaga</b><br/>
                 W przypadku, kiedy nie zastosujesz się do kryterium, reszta treści też okaże się niedostępna.<br/>
                 Spójrz na taką sytuację: użytkownik korzysta z technologii asystujących do nawigacji po stronie, takich jak czytniki tekstu i treści.
@@ -97,6 +96,17 @@
                     Możesz oczywiście zadecydować, że nagranie będzie włączało się po załadowaniu strony, ale pomyśl - czy nie irytuje Cię, kiedy
                     ładujesz zakładkę lub stronę i nie wiesz, skąd dokładnie pochodzi dźwięk?
                 </p>
+                Poprawnie działający film na stronie<br/>
+                <video width="320" height="240" controls>
+                    <source src="{{ asset('img/1_4_2_dobry.mp4') }}" type="video/mp4" />
+                    Twoja przeglądarka nie wspiera elementów wideo.
+                </video>
+                <br/>
+                Źle działający film na stronie<br/>
+                <video width="320" height="240" controls>
+                    <source src="{{ asset('img/1_4_2_zly.mp4') }}" type="video/mp4" />
+                    Twoja przeglądarka nie wspiera elementów wideo.
+                </video>
             </div>
             <div>
                 <h3 id="1_4_3">Kryterium sukcesu 1.4.3 Kontrast (minimalny) (Poziom AA)</h3>
@@ -104,19 +114,21 @@
                     Tekst do czytania lub który jest częścią obrazka (obrazy tekstu), muszą mieć kontrast przynajmniej 4.5:1, poza wyjątkami:
                 <ul>
                     <li>Duży tekst (18px lub 16px z pogrubieniem) i obrazy zawierające duży tekst muszą mieć kontrast przynajmniej 3:1.</li>
-                    <li>Tekst w treści czysto dekoracyjnej, nieaktywnych i niewidocznych elementach interfejsu, lub w kompozycji, gdzie inne treści pełnią są najwazniejszą częścią przekazu.</li>
+                    <li>Tekst w treści czysto dekoracyjnej, nieaktywnych i niewidocznych elementach interfejsu, lub w kompozycji, gdzie inne treści pełnią są najważniejszą częścią przekazu.</li>
                     <li>Logotyp - nazwa marki w formie tekstowej.</li>
                 </ul>
-                <strong>Pokazane, czego nie trzeba? (grafika z podpisanym kontrastem, ...)</strong>
+                Mały tekst:<br/>
+                <img src="{{ asset('img/small_4_5.png') }}" /><br/>
+                Duży tekst:<br/>
+                <img src="{{ asset('img/big_3_1.png') }}" /><br/>
                 </p>
-                <p class="txt-format">
-                    Kiedy zadbasz o odpowiedni kontrast na stronie, osoby z problemami ze wzrokiem także będą mogły łatwo zapoznać się z zawartością.
-                    Mogą to być m.in.:
-                <ul>
-                    <li>osoby niedowidzące, którym łatwiej jest odczytać tekst kontrastujący z tłem,</li>
-                    <li>osoby ze ślepotą barw. Mogą one mieć problemy z poprawnym rozpoznawaniem jasności barw i porównaniem jasności tekstu i tła.</li>
-                </ul>
-                <strong>Pokazanie przykładu kontrastu i wielkości fontu.</strong>
+                    <p class="txt-format">
+                        Kiedy zadbasz o odpowiedni kontrast na stronie, osoby z problemami ze wzrokiem także będą mogły łatwo zapoznać się z zawartością.
+                        Mogą to być m.in.:
+                    <ul>
+                        <li>osoby niedowidzące, którym łatwiej jest odczytać tekst kontrastujący z tłem,</li>
+                        <li>osoby ze ślepotą barw. Mogą one mieć problemy z poprawnym rozpoznawaniem jasności barw i porównaniem jasności tekstu i tła.</li>
+                    </ul>
                 </p>
                 <p class="txt-format">
                     Niektóre grafiki mają tekst, który jest istotny dla odbiorcy. Tekst w tego rodzaju treściach należy:
@@ -125,7 +137,6 @@
                     albo
                     <li>tworzyć grafiki w większych rozdzielczościach.</li>
                 </ul>
-                <strong>Przykład/y obrazujący</strong><br/>
                 Lepszą opcją jest zazwyczaj dodanie tekstu osobno. Wtedy znacznie łatwiej zmienisz kontrast między zawartością a tłem.<br/>
                 Natomiast jeśli powiększasz zawartość z tekstem, nie straci on na czytelności.
                 </p>
@@ -134,7 +145,7 @@
                 <h3 id="1_4_4">Kryterium sukcesu 1.4.4 Zmiana rozmiaru tekstu (Poziom AA)</h3>
                 <p class="txt-format">
                     Musisz zapewnić, aby tekst na stronie można było powiększyć bez użycia technologii asystujących do 200%.
-                    Powiekszona zawartość ma być tak samo funkcjonalna i postrzegalna, jak w widoku domyślnym.<br/>
+                    Powiększona zawartość ma być tak samo funkcjonalna i postrzegalna, jak w widoku domyślnym.<br/>
                     Kryterium nie dotyczy napisów do nagrań oraz tekstu, który jest częścią grafiki.
                 </p>
                 <p class="txt-format">
@@ -145,8 +156,11 @@
                 <p class="txt-format">
                     Pamiętaj, że strona ma być zaprojektowana tak, aby przy powiększaniu zawartość nie "rozjeżdżała się".
                 </p>
-                <strong>Film dobrze i źle (rozjazd i nie)</strong> (cos jak 1.3.4 + powiekszanie tekstu, kod)<br/>
-                <a style="color: darkblue;" href="examples/1_4_4_dobry.html">Przykład spełniający kryterium</a> <a style="color: darkblue;" href="examples/1_4_4_zly.html">Przykład, który nie spełnia kryterium</a>
+                <strong id="txt-example">Powiększanie tekstu przez użytkownika</strong><br/>
+                <button id="zoom-txt-btn" style="cursor: pointer;">Powiększ napis wyżej</button>
+                <button id="reset-btn" style="cursor: pointer;"><i class="fa fa-rotate-left"></i></button>
+                <br/>
+                <strong>Spróbuj powiększyć stronę ('Ctrl' + '+') do wartości 200%. Zobacz, że strona jest nadal czytelna.</strong>
             </div>
             <div>
                 <h3 id="1_4_5">Kryterium sukcesu 1.4.5 Obrazy tekstu (Poziom AA)</h3>
@@ -169,7 +183,11 @@
                     Osoby, które mają słaby wzrok lub problemy z czytaniem na pewno Ci podziękują.
                     Niektóre opcje pisma są dla takich użytkowników nieczytelne i zostają zmieniane według preferencji.
                 </p>
-                <strong>Przykkłąd grafiki z tekstem, który można zmienić + grafiki, do których nie trzeba dodawać opcji</strong>
+                <img src="{{ asset('img/1_4_5_tekst.png') }}" /><br/>
+                <div class="inside">
+                    <img src="{{ asset('img/1_4_5.png') }}" />
+                    <div class="txt-inside">TESTOWY<br/>TEKST</div>
+                </div>
             </div>
             <div>
                 <h3 id="1_4_6">Kryterium sukcesu 1.4.6 Kontrast (wzmocniony) (Poziom AAA)</h3>
@@ -178,6 +196,12 @@
                     Jest to modyfikacja kryterium <a href="#1_4_3">1.4.3 Kontrast (minimalny)</a>.<br/>
                     W tym przypadku kontrast musi być większy i wynosić przynajmniej 7:1.<br/>
                     Duży tekst i obrazy zawierające duży tekst muszą mieć kontrast przynajmniej 4.5:1.
+                </p>
+                <p>
+                    Mały tekst:<br/>
+                    <img src="{{ asset('img/small_7_1.png') }}" /><br/>
+                    Duży tekst:<br/>
+                    <img src="{{ asset('img/big_4_5.png') }}" /><br/>
                 </p>
             </div>
             <div>
@@ -199,7 +223,6 @@
                 <p class="txt-format">
                     Dzięki kryterium osoby słabo słyszące mogą łatwiej oddzielić mowę od dźwięków tła.
                 </p>
-                <strong>Grafiki i filmy/ tylko to lub tylko to?</strong>
             </div>
             <div>
                 <h3 id="1_4_8">Kryterium sukcesu 1.4.8 Prezentacja wizualna (Poziom AAA)</h3>
@@ -210,51 +233,54 @@
                     <li>Szerokość bloków nie przekracza 80 znaków (40 w przypadku alfabetów: chińskiego, japońskiego i koreańskiego).</li>
                     <li>Tekst nie jest wyjustowany (wyrównany do lewego i prawego marginesu).</li>
                     <li>Odstępy między wierszami.</li>
-                    <li>Tekst można powiekszyć do 200% bez korzystania z technologii asystujących w taki sposób, żeby użytkownik nie musiał przesuwać zmaksymalizowanego ekranu w poziomie.</li>
+                    <li>Tekst można powiększyć do 200% bez korzystania z technologii asystujących w taki sposób, żeby użytkownik nie musiał przesuwać zmaksymalizowanego ekranu w poziomie.</li>
                 </ul>
-                <strong>Opis każdego z przykładem.</strong>
                 </p>
                 <p class="txt-format">
                     Wymienione techniki pomagają szerokiej grupie odbiorców zapoznać się z treścią strony.
-                    Jeśli treść jest wyświetlana w sposób nieprzystępny, wielu użytkowników nie będzie moglo oglądać zawartości, lub będzie robiła to z trudem.
+                    Jeśli treść jest wyświetlana w sposób nieprzystępny, wielu użytkowników nie będzie mogło oglądać zawartości, lub będzie robiła to z trudem.
                 </p>
                 <p class="txt-format">
                     <i>Zamiana kolorów na pierwszym planie i w tle</i><br/>
                     Część osób inaczej postrzega barwy (inny kontrast, postrzeganie) i jeśli może zmienić wyświetlane kolory, dostosuje je do własnych potrzeb.
                     Również niektóre połączenia kolorów mogą być nieintuicyjne.
+                    <img src="{{ asset('img/1_4_8_bg.jpg') }}" style="width: 472px; height: 258px;"/>
                 </p>
                 <p class="txt-format">
                     <i>Bloki tekstu są szerokie na maksymalnie 80 znaków (40 w przypadku alfabetów: chińskiego, japońskiego i koreańskiego).</i><br/>
                     Niektórzy użytkownicy radzą sobie źle z długimi blokami tekstu. Ich skrócenie pozwala na łatwiejsze śledzenie wzrokiem kolejnych linii tekstu.<br/>
-                    Dla alfabetów chińskiego, japońskiego i koreańskiego maksymalna liczba znakow jest mniejsza. Wynika to z szerszych znaków w tych językach.
+                    Dla alfabetów chińskiego, japońskiego i koreańskiego maksymalna liczba znaków jest mniejsza. Wynika to z szerszych znaków w tych językach.
+                    <img src="{{ asset('img/1_4_8_size.jpg') }}" style="width: 650px; height: 258px;"/>
                 </p>
                 <p class="txt-format">
                     <i>Tekst nie jest wyjustowany</i><br/>
-                    Teskt wyrównany do lewej i prawej strony gorzej się czyta. Efekt justowania może spowodować, że
+                    Teskt wyrównany do lewej i prawej strony lepiej się czyta. Efekt justowania może spowodować, że
                     odstępy między literami są nieregularne i albo za duże, albo za małe.
+                    <img src="{{ asset('img/1_4_8_center.jpg') }}" style="width: 515px; height: 258px;"/>
                 </p>
                 <p class="txt-format">
                     <i>Powiększanie ekranu bez przewijania w poziomie</i><br/>
                     Musisz zapewnić możliwość powiększania strony, nie wyłączaj tej funkcjonalności! <strong>kod, co za to odpowiada</strong><br/>
-                    Przy powiększaniu zawartość musi zwijać się do następnych linijek, aby użytkownik nie musiać przesuwać zawartości w lewo i prawo podczas czytania.
+                    Przy powiększaniu zawartość musi zwijać się do następnych linijek, aby użytkownik nie musiał przesuwać zawartości w lewo i prawo podczas czytania.
                     Użytkownik nie będzie zdezorientowany, kiedy powiększa czytany tekst.
+                    <img src="{{ asset('img/1_4_8_scroll.jpg') }}" style="width: 500px; height: 100px;"/>
                 </p>
             </div>
             <div>
                 <h3 id="1_4_9">Kryterium sukcesu 1.4.9 Obrazy tekstu (bez wyjątków) (Poziom AAA)</h3>
                 <p class="txt-format">
-                    Stosuj obrazy na których widać tekst tylko w przypadku, kiedy taki sposób prezentacji jest ważny lub czysto dekoracyjny.<br/>
+                    Stosuj obrazy, na których widać tekst tylko w przypadku, kiedy taki sposób prezentacji jest ważny lub czysto dekoracyjny.<br/>
                     Pozwala to użytkownikowi modyfikować wyświetlane napisy ma wielu grafikach, co znacznie ogranicza korzystanie z treści, gdzie
-                    tekst jest "zlany" z obrazem. Nie każy może taką zawartość odczytać, np. osoby korzystające z czytnika tekst lub słabo czytające użytą czcionkę.<br/>
+                    tekst jest "zlany" z obrazem. Nie każdy może taką zawartość odczytać, np. osoby korzystające z czytnika tekst lub słabo czytające użytą czcionkę.<br/>
                     <strong>Obraz tekstu i kiedy nie trzeba? (jakieś nawiązanie do poprzednich?)</strong>
                 </p>
             </div>
             <div>
                 <h3 id="1_4_10">Kryterium sukcesu 1.4.10 Dopasowanie do ekranu (Poziom AA)</h3>
                 <p class="txt-format">
-                    Treść nie traci na czytelności i funkcjonalności, oraz nie trzeba jest przesuwać w poziomie (i pionie?),
+                    Treść nie traci na czytelności i funkcjonalności, oraz nie trzeba ich przesuwać w poziomie (i pionie?),
                     dla przewijania treści przy powiększeniu 400% w rozdzielczości 720p.<br/>
-                    Wyjątkiem są epementy, które wymagają przewijania w pionie i poziomie, takie jak mapy, wykresy i gry.
+                    Wyjątkiem są elementy, które wymagają przewijania w pionie i poziomie, takie jak mapy, wykresy i gry.
                 </p>
                 <p class="txt-format">
                     Zawartość strony powiększona 400% powinna zawijać się do jednej pionowej kolumny.
@@ -267,7 +293,7 @@
                     Najlepszym sposobem na zastosowanie się do kryterium jest podejście responsywne do tworzenia stron.<br/>
                     Dzięki responywności Twoja strona będzie dostosowywać się do ekranu w zależności od jego wielkości.
                     Część zawartości może zmieniać wygląd i ułożenie przy mniejszych ekranach, np. zwijane menu na urządzeniach mobilnych.
-                    <strong>(film polazujący reflow lub prośba o przetestowanie z przeglądarką na stronie/ osobna strona. Czego nie trzeba i jak jest niepoprawnie)</strong>
+                    <strong>Powiększ obecną stronę i zobacz, jak się zachowuje.</strong>
                 </p>
             </div>
             <div>
@@ -284,57 +310,37 @@
                 <p class="txt-format">
                     Treści o słabym kontraście są znacznie mniej czytelne. Jeśli zastosujesz się do kryterium, tworzone przez Ciebie treści
                     będą bardziej dostępne dla osób słabowidzących i niepostrzegających poprawnie barw. Przykładowo, ta grupa odbiorców nie przeoczy niektórych treści.<br/>
-                    Skorzystają również osoby, które używają urządzeniaa w silnym nasłonecznieniu, gdzie elementy strony są słabiej widoczne.
+                    Skorzystają również osoby, które używają urządzenia a w silnym nasłonecznieniu, gdzie elementy strony są słabiej widoczne.
                 </p>
                 <p class="txt-format">
-                    Chcąc zadbać o odpowiedni kontrast, musisz wziąć pod uwagę kilka sytuacji: <strong>Dać jednak tylko przykłady, bez opisów?</strong>
+                    Chcąc zadbać o odpowiedni kontrast, musisz wziąć pod uwagę m.in:
                 </p>
                 <p class="txt-format">
                     <i>Aktywne elementy interfejsu użytkownika</i><br/>
                     Elementy, z którymi użytkownik może wejść w interakcję, muszą mieć kontrast przynajmniej 3:1.
                     Podobnie jest ze stanem (np. fokus, wybrany), jeśli element go posiada. Dzięki temu każdy użytkownik będzie widział elementy interfejsu.<br/>
-                    <strong>element interaktywny, zachowania przy stanach?</strong>
+                    <button style="background-color: #612776; color: white; cursor: pointer;">Przycisk o odpowiednim kontraście</button>
                 </p>
                 <p class="txt-format">
                     <i>Granice obiektów na stronie</i><br/>
-                    Kiedy na stronie dodasz element interaktywny, warto go zaznaczyć w jakikolwiek sposób, np. przy użyciu obwódki z odpowiednim kontraście.
-                    <strong>Przykład granicy</strong>
-                </p>
-                <p class="txt-format">
-                    <i>Granice obiektów na stronie</i><br/>
-                    Jeśli kolory elementów lub tła wpływają na ich postrzeganie, musisz zadbać, aby elementy odpowiednio kontrastowały ze sobą.<br/>
-                    <strong>przykład, np. formularz, przycisk</strong>
-                </p>
-                <p class="txt-format">
-                    <i>Użycie koloru w elementach</i><br/>
-                    <strong>Te gwiazdki, czy to w ogóle odpuścić i "scalić" całość</strong>
-                </p>
-                <p class="txt-format">
-                    <i>Fokus na elementach</i><br/>
-                    <strong>Grafika z fokusem i inteaktywny przykład na osobnej stronie? Jak powinien wyglądać, a jak nie</strong>
+                    Kiedy na stronie dodasz element interaktywny, warto go zaznaczyć w jakikolwiek sposób, np. przy użyciu obwódki z odpowiednim kontraście.<br/>
+                    Przycisk bez tła nie byłby inaczej(?) widoczny:
+                    <button style="background-color: transparent; color: #612776; border: 3px solid #612776; cursor: pointer;">Cały interaktywny element jest widoczny</button>
                 </p>
                 <p class="txt-format">
                     <i>Obiekty graficzne</i><br/>
-                    Zadbaj o odpowiedni kontrast grafiki i ich części, jeśli przekazują ważne informacje.
-                    <strong>Pokazane ikony?</strong>
-                </p>
-                <p class="txt-format">
-                    <i>Gradient</i><br/>
-                    Najlepiej nie stosować gradientów, jeśli chcesz przestrzegać odpowiedniego kontrastu. Jeśli jednak zdecydujesz się na gradientowy element,
-                    musisz sprawdzić, czy jest wystarczajaco kontrastowy.
-                    <strong>Przykład gradientu i jak testować?</strong>
-                </p>
-                <p class="txt-format">
-                    <i>Elementy dynamiczne</i><br/>
-                    Kiedy najeżdżasz na
-                    <strong>Przykład gradientu i jak testować?</strong>
+                    Zadbaj o odpowiedni kontrast grafiki i ich części, jeśli przekazują ważne informacje.<br/><br/>
+                    Poprawny wykres:<br/>
+                    <img src="{{ asset('img/wykres_dobry.png') }}" style="width: 600px; height: 300px;"/><br/>
+                    Zły wykres:<br/>
+                    <img src="{{ asset('img/wykres_zly.png') }}" style="width: 600px; height: 300px;"/>
                 </p>
             </div>
             <div>
                 <h3 id="1_4_12">Kryterium sukcesu 1.4.12 Odstępy w tekście (Poziom AA)</h3>
                 <p class="txt-format">
                     W zawartości tworzonej za pomocą języka znaczników, możliwa jest zmiana parametrów.
-                    Mogą zostać zmienone wszystkie parametry lub ich część, jednak bez zmiany funkcjonalności lub postrzegania zawartości:
+                    Mogą zostać zmienione wszystkie parametry lub ich część, jednak bez zmiany funkcjonalności lub postrzegania zawartości:
                 <ul>
                     <li>Wysokość linii (odstęp między wierszami) wynosi przynajmniej 1.5-krotności rozmiaru czcionki;</li>
                     <li>Odstęp między akapitami jest przynajmniej 2x większy od rozmiaru czcionki;</li>
@@ -342,11 +348,21 @@
                     <li>Odstępy między wyrazami to co najmniej 0.16 wielkości czcionki.</li>
                 </ul>
                 </p>
+                <p class="txt-format" style="background-color: lightgray;">
+                    <span id="txt2-example">
+                        Przykładowy tekst do zmiany odstępów.
+                        Przykładowy tekst do zmiany odstępów.
+                        Przykładowy tekst do zmiany odstępów.
+                    </span>
+                    <button id="line-height" style="cursor: pointer;">Wysokość linii</button>
+                    <button id="letter-space" style="cursor: pointer;">Odstępy między literami</button>
+                    <button id="word-space" style="cursor: pointer;">Odstępy między wyrazami</button>
+                    <button id="reset-space" style="cursor: pointer;"><i class="fa fa-rotate-left"></i></button>
+                </p>
                 <p class="txt-format">
                     Pozwól użytkownikowi dostosować wyświetlany tekst do jego preferencji.
                     Kiedy użytkownik modyfikuje parametry tekstu, strona ma być tak samo czytelna i funkcjonalna jak w standardowych stylach strony.<br/>
                     Taka możliwość pomaga m.in. osobom, które mają problemy z czytaniem, np. dyslektycy.
-                    <strong>Pokazane te parametry z i bez. Co się może złego stać - na co uważać.</strong>
                 </p>
             </div>
             <div>
@@ -358,17 +374,100 @@
                     <li>Dodatkowa treść może być odrzucona bez przesuwania myszy lub fokusu klawiatury.
                         Wyjątkiem są dodatkowe elementy, które są komunikatem o błędzie wprowadzanej treści, nie przesłaniają lub nie zastępują innej treści.
                         Możesz to zrobić przez umieszczenie dodatkowej zawartości w miejscu, gdzie nie będzie nachodziła na inną ważną zawartość lub
-                        przez jej odrzucenie przy pomocy klawisza, np. ESCAPE;</li>
+                        przez jej odrzucenie przy pomocy klawisza, np. ESCAPE;<br/>
+                        <div id="hover-esc" style="background-color: lightgray; width: 8em; padding: 1em;">
+                            Treść usuniesz przez naciśnięcie klawisza ESC
+                            <span id="tooltip">Wiadomość w okienku</span>
+                        </div>
+                    </li>
                     <li>Aktywowana dodatkowa zawartość nie znika, kiedy użytkownik najeżdża na nią myszą;</li>
                     <li>Dodatkowa zawartość jest widoczna do czasu, kiedy użytkownik usunie wskaźnik ze źródła jej wyzwalania lub fokusu,
                         odrzuci zawartość lub zawartość nie jest już istotna.</li>
                 </ul>
                 Nie dotyczy to treści, które są niezależne od autora strony.<br/>
-                <strong>Dać gdziesz przykłady, że podpowiedzi, podmenu i inne niemodalne okienka w dymku + przykład dla każdego podpunktu?</strong>
                 </p>
             </div>
         </div>
         </div>
     </main>
     {% include 'footer.html.twig' %}
+
+    {# 1.4.4 #}
+    <script>
+        const test_elem = document.getElementById('txt-example');
+        const zoom_txt_btn = document.getElementById('zoom-txt-btn');
+        const reset_btn = document.getElementById('reset-btn');
+
+        zoom_txt_btn.addEventListener('click', () => {
+            test_elem.style.fontSize = '1.5em';
+        });
+        reset_btn.addEventListener('click', () => {
+            test_elem.style.fontSize = '1em';
+        });
+    </script>
+
+    {# 1.4.12 #}
+    <script>
+        const test_elem2 = document.getElementById('txt2-example');
+        const line_height = document.getElementById('line-height');
+        const letter_space = document.getElementById('letter-space');
+        const word_space = document.getElementById('word-space');
+        const reset_space = document.getElementById('reset-space');
+        let lh = false;
+        let ps = false;
+        let ls = false;
+        let ws = false;
+
+        reset_space.addEventListener('click', () => {
+            test_elem2.style.lineHeight = 'normal';
+            test_elem2.style.letterSpacing = 'normal';
+            test_elem2.style.wordSpacing = 'normal';
+        });
+        line_height.addEventListener('click', () => {
+            if (!lh) {
+                test_elem2.style.lineHeight = '1.5em';
+                lh = true;
+            }
+            else {
+                test_elem2.style.lineHeight = 'normal';
+                lh = false;
+            }
+        });
+        letter_space.addEventListener('click', () => {
+            if (!ls) {
+                test_elem2.style.letterSpacing = '0.12em';
+                ls = true;
+            }
+            else {
+                test_elem2.style.letterSpacing = 'normal';
+                ls = false;
+            }
+        });
+        word_space.addEventListener('click', () => {
+            if (!ws) {
+                test_elem2.style.wordSpacing = '0.16em';
+                ws = true;
+            }
+            else {
+                test_elem2.style.wordSpacing = 'normal';
+                ws = false;
+            }
+        });
+    </script>
+
+    {# 1.4.13 #}
+    <script>
+        const hover_esc = document.getElementById('hover-esc');
+        const tooltip = document.getElementById('tooltip');
+        // tooltip.style.visibility = 'visible';
+        window.onkeydown = function(e) {
+            if (e.key === 'Escape') {
+                tooltip.style.visibility = 'hidden';
+            }
+        }
+        window.onmouseout = function(e) {
+            tooltip.style.visibility = 'visible';
+        }
+    </script>
+
 {% endblock %}

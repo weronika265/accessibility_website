@@ -730,3 +730,44 @@ legend {
     font-weight: bold;;
 }
 /* zmienić sidebar i usunąć te buttony */
+.inside {
+    position: relative;
+}
+.txt-inside {
+    position: absolute;
+    top: 30%;
+    left: 23%;
+    font-size: 2.7em;
+    font-family: Arial, serif;
+}
+
+#hover-esc {
+    position: relative;
+    display: inline-block;
+}
+#hover-esc #tooltip {
+    position: absolute;
+    visibility: hidden;
+    width: 5em;
+    padding: 1em;
+    text-align: center;
+    z-index: 1;
+    bottom: 10%;
+    left: 100%;
+    opacity: 0;
+    background-color: white;
+    border: 2px solid black;
+}
+#hover-esc:hover #tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+/*#hover_esc .tooltip::after {*/
+/*    position: absolute;*/
+/*    !*top: 100%;*!*/
+/*    !*left: 50%;*!*/
+/*    margin-left: -5px;*/
+/*    border-width: 5px;*/
+/*    border-style: solid;*/
+/*    border-color: #555 transparent transparent transparent;*/
+/*}*/
