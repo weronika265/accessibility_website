@@ -60,7 +60,11 @@
             <div>
                 <h3 id="2_4_2">Kryterium sukcesu 2.4.2 Tytuły stron (Poziom A)</h3>
                 <p class="txt-format">
-                    Strony internetowe powinny zawierać tytuły, które opisują ich temat lub cel.
+                    Strony internetowe powinny zawierać niepowtarzające się tytuły, które opisują temat lub cel strony.<br/>
+                    <img src="{{ asset('img/2_4_2.jpg') }}" /><br/>
+                    <code>
+                        &lt;title&gt;2.4 Możliwość nawigacji&lt;/title&gt;
+                    </code>
                 </p>
                 <p class="txt-format">
                     Dzięki tytułom użytkownik nie będzie musiał wnioskować z treści, co zawiera odwiedzana strona.
@@ -72,18 +76,15 @@
                 <p class="txt-format">
                     Technologie asystujące czytają użytkownikom tytuły strony. Takie osoby mogą zdecydować, czy otwarta strona zawiera treść, której szukają.
                 </p>
-                <p class="txt-format">
-                    Warto łączyć tytuły stron z linkami, które do nich prowadzą.<br/>
-                    Kiedy na stronie dodajesz link prowadzący do dokumentu, obie treści powinny być powiązane.
-                    To sprawi, że zachowasz ciągłość przy nawigacji między zawartością podstron.
-                </p>
-                <strong>Pokazanie screenów z tytułem i jak to się ma do treści</strong>
             </div>
             <div>
                 <h3 id="2_4_3">Kryterium sukcesu 2.4.3 Kolejność fokusu (Poziom A)</h3>
                 <p class="txt-format">
                     Kiedy Twoja strona może być nawigowana klawiaturą w określonej kolejności, a to wpływa na jej zrozumienie lub
                     funkcjonalność, musisz ustalić odpowiednią kolejność fokusu na stronie.
+                </p>
+                <p class="txt-format">
+                    Kolejność możesz narzucić przez użycie atrybutu tabindex w znaczniku HTML.
                 </p>
                 <p class="txt-format">
                     Pozwala to użytkownikom, którzy korzystają z klawiatury lub innego interfejsu, na zapoznanie się z treścią
@@ -95,7 +96,9 @@
                     Nie sprawi także, że użytkownik będzie korzystał ze strony w sposób nieprzewidziany.<br/>
                     Niewidomi użytkownicy natomiast mogą wyobrazić sobie stronę jako przewidywalną całość.
                 </p>
-                <strong>Odpowiednia tabowanie i złe przykład interaktywny (z numerami elementów?)</strong>
+                <p>
+                    <a href="{{ url('_2_4_3_example') }}" style="color: blue;">Przykład</a><br/>
+                </p>
             </div>
             <div>
                 <h3 id="2_4_4">Kryterium sukcesu 2.4.4 Cel łącza (w kontekście) (Poziom A)</h3>
@@ -112,20 +115,25 @@
                     Jeśli jest to tekst, link powinien znajdować się na końcu treści.
                 </p>
                 <p class="txt-format">
-                    Kiedy link prowadzi do aplikacji lub dokumentu, wystarczy, że link opiszesz nazwą tej apliakcji lub dokumentu.
+                    Kiedy link prowadzi do aplikacji lub dokumentu, wystarczy, że link opiszesz nazwą tej aplikacji lub dokumentu.
                 </p>
                 <p class="txt-format">
                     Warto łączyć tytuły stron z linkami, które do nich prowadzą.
                     Kiedy na stronie dodajesz link prowadzący do dokumentu, obie treści powinny być powiązane.
                     To sprawi, że zachowasz ciągłość przy nawigacji między zawartością podstron.
                 </p>
-                <strong>Linki nazwane i w kontekście + nagranie z czytnika?</strong>
+                <p>
+                    Przykładowo:<br/>
+                    W jednym z kryteriów dla wytycznej <i>2.3 Ataki padaczki</i>, użytkownik powinien mieć możliwość
+                    <a style="color: blue;" href="{{ url('epilepsy_index') }}#2_3_3">wyłączenia animacji dla elementów interaktywnych.</a>
+                </p>
             </div>
             <div>
                 <h3 id="2_4_5">Kryterium sukcesu 2.4.5 Wiele dróg (Poziom AA)</h3>
                 <p class="txt-format">
                     Istnieje wiele dróg, aby dostać się do strony w serwisie internetowym lub aplikacji. Nie dotyczy to sytuacji, kiedy strona jest
-                    wynikiem procedury lub jednym z jej etapów.
+                    wynikiem procedury lub jednym z jej etapów.<br/>
+                    <img src="{{ asset('img/rozne_miejsca.jpg') }}" style="width: 300px; height: auto;" />
                 </p>
                 <p class="txt-format">
                     Jeśli zaprojektujesz serwis w powyższy sposób, użytkownicy mogą korzystać z treści według własnych potrzeb.
@@ -135,6 +143,7 @@
                     <li>mapa serwisu, która umożliwia przegląd treści,</li>
                     <li>przeglądanie podstron w celu zrozumienia budowy serwisu.</li>
                 </ul>
+                <img src="{{ asset('img/searchbar.jpg') }}" style="width: 250px; height: auto;" />
                 </p>
                 <p class="txt-format">
                     Musisz pamiętać, że część zawartości nie będzie ogólnodostępna. Żaden link na stronie nie będzie do niej prowadził. Może być to np.:
@@ -143,18 +152,36 @@
                     <li>potwierdzenie transakcji w aplikacji banku.</li>
                 </ul>
                 </p>
-                <strong>Jakie są opcje + grafika z chronologią, jak można przechodzić?</strong>
             </div>
             <div>
                 <h3 id="2_4_6">Kryterium sukcesu 2.4.6 Nagłówki i etykiety (Poziom AA)</h3>
                 <p class="txt-format">
-                    Wszelkie nagłówki i etykiety na stronie muszą opisywać wyświetlaną zawartość. Do opisu najlepiej używać pojedyńczych słów lub krótkich opisów.
+                    Wszelkie nagłówki i etykiety na stronie muszą opisywać wyświetlaną zawartość. Do opisu najlepiej używać pojedynczych słów lub krótkich opisów.
+                </p>
+                <p class="txt-format">
+                    <pre>
+                    <code>
+                        &lt;h1&gt;Nowy plac zabaw&lt;/h1&gt;
+                        &lt;p&gt;W dniu 21 kwietnia odbędzie się oficjalne otwarcie nowego placu zabaw.&lt;/p&gt;
+                        &lt;h3&gt;Atrakcje&lt;/h3&gt;
+                        &lt;p&gt;Podczas uroczystości wystąpią młode talenty z pobliskich szkół.&lt;/p&gt;
+                    </code>
+                    </pre>
+                </p>
+                <p class="txt-format">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email">
+                <pre>
+                    <code>
+                        &lt;label for="email"&gt;Email&lt;/label&gt;
+                        &lt;input type="email" name="email" id="email"/&gt;
+                    </code>
+                    </pre>
                 </p>
                 <p class="txt-format">
                     Pozwala to zrozumieć, co zawiera strona i jak została ułożona treść.<br/>
                     Dzięki zrozumiałym oznaczeniom treści, szukaną zawartość jest znacznie łatwiej zlokalizować.
                 </p>
-                <strong>Przykład nagłówków do segregowania treści + formularz z opisem pól</strong>
             </div>
             <div>
                 <h3 id="2_4_7">Kryterium sukcesu 2.4.7 Widoczny fokus (Poziom AA)</h3>
@@ -166,7 +193,7 @@
                     Skupienie na elemencie pozwala również zrozumieć jego funkcje, np. przy
                     podświetleniu pola formularza widzimy, że można wprowadzić tekst.
                 </p>
-                <strong>Podstrona z pokazanym działaniem fokusu i bez (pola, że tu działa, a tu nie?)</strong>
+                <img src="{{ asset('img/2_4_7.jpg') }}">
             </div>
             <div>
                 <h3 id="2_4_8">Kryterium sukcesu 2.4.8 Lokalizacja (Poziom AAA)</h3>
@@ -185,9 +212,9 @@
                 </p>
                 <p class="txt-format">
                     Jednym ze sposobów na pokazanie obecnej lokalizacji na stronie jest menu okruszkowe. Pokazuje ono ścieżkę odwiedzanych stron.<br/>
-                    Standardem jest także możliwość powrotu do strony głównej po kliknięciu ikony, która jest zazwyczaj widoczna na górze strony.
+                    Standardem jest także możliwość powrotu do strony głównej po kliknięciu ikony, która jest zazwyczaj widoczna na górze strony.<br/><br/>
+                    <img src="{{ asset('img/breadcrumb.jpg') }}" style="width: 250px; height: auto;" />
                 </p>
-                <strong>Menu okruszkowe, przejście na stronę główną po wciśnięciu ikony - grafiki</strong>
             </div>
             <div>
                 <h3 id="2_4_9">Kryterium sukcesu 2.4.9 Cel łącza (z samego łącza) (Poziom AAA)</h3>
@@ -197,19 +224,23 @@
                     Nie uwzględnia to łącz, które i tak byłyby niezrozumiałe lub mają być tajemnicą dla odbiorcy, dopóki nie zostaną załadowane.
                 </p>
                 <p class="txt-format">
-                    Jest to kryterium podobne do <a href="#2_4_4">Kryterium sukcesu 2.4.4 Cel łącza (w kontekście) (Poziom A)</a>. Różnica jest taka, że
+                    Jest to kryterium podobne do <a style="color: blue;" href="#2_4_4">Kryterium sukcesu 2.4.4 Cel łącza (w kontekście) (Poziom A)</a>. Różnica jest taka, że
                     cel łącza musi wynikać z jego treści, a nie z kontekstu, w którym się znajduje.
                 </p>
                 <p class="txt-format">
                     Najlepiej, aby linki, które prowadzą do tej samej treści miały ten sam opis.
                     Natomiast łącza, które wskazują na inną treść, dla odróżnienia zawierały inny opis.
                 </p>
-                <strong>Pokazane na grafice, że muszą być nazwane, z kontekstem skreślone.</strong>
+                <p>
+                    Przykładowo:<br/>
+                    <a style="color: blue;" href="{{ url('epilepsy_index') }}#2_3_3">Kryterium sukcesu 2.3.3 Animacja po interakcji</a>
+                    pozwala użytkownikowi na wyłączenie animacji elementów interaktywnych.
+                </p>
             </div>
             <div>
                 <h3 id="2_4_10">Kryterium sukcesu 2.4.10 Nagłówki sekcji (Poziom AAA)</h3>
                 <p class="txt-format">
-                    Nagłówki są używane do porządkowania treści i oznaczają podziały na sekcje.
+                    Nagłówki są używane do porządkowania treści i oznaczają podziały na sekcje.<br/><br/>
                     <strong>WAŻNE</strong><br/>
                     Dotyczy to treści tekstowych, a nie komponentów interfejsu, co jest opisane w <strong>DODAĆ ZAŁĄCZNIK DO TREŚCI Kryterium sukcesu 4.1.2 Nazwa, rola, wartość (Poziom A)</strong>.
                 </p>
@@ -221,7 +252,28 @@
                 <p class="txt-format">
                     Korzystanie z nagłówków pozwala także użytkownikom na przeskakiwanie po nagłówkach, bez potrzeby czytania powiązanego tekstu.
                 </p>
-                <strong>Pokazane nagłówki na stronie, które oznaczają treści - grafika</strong>
+                <p>
+                <h1>Najważniejsza część</h1>
+                <section>Treść powiązana z nagłówkiem &lt;h1&gt;.</section>
+                <h2>Mniej ważna część</h2>
+                <section>
+                    Treść powiązana z nagłówkiem &lt;h2&gt;.
+                        <h3>Jeszcze mniej ważna część</h3>
+                        <section>Treść powiązana z nagłówkiem &lt;h3&gt;.</section>
+                </section>
+                </p>
+                <pre>
+                    <code>
+                        &lt;h1&gt;Najważniejsza część&lt;/h1&gt;
+                        &lt;section&gt;Treść powiązana z nagłówkiem &lt;h1&gt;.&lt;/section&gt;
+                        &lt;h2&gt;Mniej ważna część&lt;/h2&gt;
+                        &lt;section&gt;
+                            Treść powiązana z nagłówkiem &lt;h2&gt;.
+                            &lt;h3&gt;Jeszcze mniej ważna część&lt;/h3&gt;
+                            &lt;section&gt;Treść powiązana z nagłówkiem &lt;h3&gt;.&lt;/section&gt;
+                        &lt;/section&gt;
+                    </code>
+                </pre>
             </div>
         </div>
         </div>

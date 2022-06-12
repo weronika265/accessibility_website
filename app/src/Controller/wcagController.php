@@ -413,4 +413,22 @@ class wcagController extends AbstractController
             'WCAG/WCAG_success_criteria/examples/2_1_2_example.html.twig',
         );
     }
+
+    /**
+     * 2.4.3 Przykład.
+     *
+     * @return \Symfony\Component\HttpFoundation\Response HTTP response
+     *
+     * @Route(
+     *     "/Postrzegalnosc/2_4_3",
+     *     methods={"GET"},
+     *     name="_2_4_3_example",
+     * )
+     */
+    public function _2_4_3_(): Response
+    {
+        return $this->render(
+            'WCAG/WCAG_success_criteria/examples/2_4_3_example.html.twig',
+        );
+    }
 }

@@ -85,4 +85,22 @@ class SiteController extends AbstractController
             'projekt_info.html.twig',
         );
     }
+
+    /**
+     * Mapa serwisu.
+     *
+     * @return \Symfony\Component\HttpFoundation\Response HTTP response
+     *
+     * @Route(
+     *     "/mapa_serwisu",
+     *     methods={"GET"},
+     *     name="mapa_serwisu_index",
+     * )
+     */
+    public function mapa_serwisu(): Response
+    {
+        return $this->render(
+            'mapa_serwisu.html.twig',
+        );
+    }
 }
