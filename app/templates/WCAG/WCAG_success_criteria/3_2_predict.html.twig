@@ -40,7 +40,8 @@
                     <li>otwarcie nowego okna lub skupienie na innym elemencie przy sfokusowaniu klawiaturą.</li>
                 </ul>
                 </p>
-                <strong>Jak to powinno wyglądać, a jak nie - przykład 1 i 2</strong>
+                <a href="{{ url('_3_2_1_dobry') }}" style="color: blue;">Dobry przykład</a><br/>
+                <a href="{{ url('_3_2_1_zly') }}" style="color: blue;">Zły przykład</a>
             </div>
             <div>
                 <h3 id="3_2_2">Kryterium sukcesu 3.2.2 Podczas wprowadzania danych (Poziom A)</h3>
@@ -56,7 +57,7 @@
                 </p>
                 <p class="txt-format">
                     Kontekst może zmienić się automatycznie tylko w przypadku, gdy wcześniej powiadomisz o tym użytkownika.<br/>
-                    Przykładkowo, niedopuszczalne jest, gdy użytkownik wypełnia formularz i nie zostanie powiadomiony, że:
+                    Przykładowo, niedopuszczalne jest, gdy użytkownik wypełnia formularz i nie zostanie powiadomiony, że:
                 <ul>
                     <li>kolejne pole zostanie automatycznie podświetlone po wypełnieniu pola poprzedzającego;</li>
                     <li>po wypełnieniu wszystkich pól formularz zostanie automatycznie wysłany;</li>
@@ -67,19 +68,20 @@
                     Nieoczekiwane zmiany jeszcze gorzej znoszą użytkownicy, którzy mają kłopot z postrzeganiem zmian lub rozpraszają się przez nie.
                     Osoby niewidome, jeśli nie zostaną powiadomione o zmianie kontekstu, mogą nawet nie zdawać sobie sprawy ze zmian na stronie.
                 </p>
-                <strong>symulacja wysyłania formularza dobrze i źle w osobnych podstronach z różnymi kontrolkami</strong>
+                <img src="{{ asset('img/3_2_2.jpg') }}" />
             </div>
             <div>
                 <h3 id="3_2_3">Kryterium sukcesu 3.2.3 Spójna nawigacja (Poziom AA)</h3>
                 <p class="txt-format">
-                    Nawigacja, która jest powtarzana na wielu stronach musi być taka sama, o ile nie zostanie dostosowana przez użytkownika.
+                    Nawigacja, która jest powtarzana na wielu stronach musi być taka sama, o ile nie zostanie dostosowana przez użytkownika.<br/><br/>
+                    Znajoma nawigacja powtarza się na innych stronach serwisu:<br/>
+                    <img style="width: 550px; height: auto;" src="{{ asset('img/3_2_3.jpg') }}" /><br/>
                 </p>
                 <p class="txt-format">
                     Powtarzalny i spójny układ nawigacji jest przewidywalny, a także bardzo pomocny dla osób, które mają niepełnosprawności natury intelektualnej, poznawczej,
                     słabo widzą lub nie widzą wcale.<br/>
                     Lokalizowanie potrzebnych podstron staje się w takim przypadku znacznie prostsze.
                 </p>
-                <strong>Pokazane menu, które się powtarza na różnych stronach - grafiki</strong>
             </div>
             <div>
                 <h3 id="3_2_4">Kryterium sukcesu 3.2.4 Spójna identyfikacja (Poziom AA)</h3>
@@ -95,9 +97,16 @@
                 </p>
                 <p class="txt-format">
                     Jeśli chodzi o osoby niewidzące, spójna identyfikacja elementów pozwala im na łatwiejszą nawigację.
-                    Takie osoby wiedzą, elementów o jakiej nazwie powinny szukać.
+                    Takie osoby wiedzą, elementów, o jakiej nazwie powinny szukać.
                 </p>
-                <strong>Grafiki, że na różnych stronach pewne komponentu są takie same, z tą samą nazwą, kod pokazany</strong>
+                <p class="txt-format">
+                    Przykładowo, w tym serwisie<br/><br/>
+                    przyciski<br/>
+                    <button>Przycisk</button><br/><br/>
+                    i pola formularza<br/>
+                    <label>Pole formularza<input type="txt" /></label>
+                    wyglądają podobnie.
+                </p>
             </div>
             <div>
                 <h3 id="3_2_5">Kryterium sukcesu 3.2.5 Zmiana na żądanie (Poziom AAA)</h3>
@@ -124,8 +133,11 @@
                     Tyczy się to m.in. osób, które nie widzą i korzystają z czytników ekranu. Nie będą one początkowo wiedziały, że
                     doszło do niespodziewanej zmiany treści lub jej odświeżenia.
                 </p>
-                <strong>Pokazanie, jak dać użytkownikowi kontrolę, np. przyciski z otwórz stronę, odśwież stronę, a nie automatycznie. Przykład dobry i zły?
-                </strong>
+                <p class="txt-format" style="background-color: lightgray;">
+                    Przykład:<br/>
+                    Ta akcja wymaga odświeżenia strony<br/>
+                    <button style="cursor: pointer;">Odśwież stronę</button>
+                </p>
             </div>
         </div>
         </div>

@@ -97,8 +97,28 @@
                 <h3 id="2_5_3">Kryterium sukcesu 2.5.3 Etykieta w nazwie (Poziom A)</h3>
                 <p class="txt-format">
                     Kiedy komponent interfejsu użytkownika ma widoczną tekstową etykietę (często label),
-                    zachowaj spójność między nią, a nazwą komponentu (często atrybut name, który jest identyfikatorem dla oprogramowania).<br/>
+                    zachowaj spójność między nią a nazwą komponentu (odczytywaną przez technologie).<br/>
                     Najlepszą praktyką jest opisanie tak samo etykiety i nazwy komponentu.<br/>
+                    <video width="320" height="240" controls>
+                        <source src="{{ asset('img/2_5_3.mp4') }}" type="video/mp4">
+                        Twoja przeglądarka nie wspiera elementów wideo.
+                    </video><br/>
+                </p>
+                <p class="txt-format">
+                    <label>Email<input type="email" name="email"/></label>
+                    <pre>
+                        <code>
+                            &lt;label&gt;Email&lt;input type="email" name="email"/&gt;&lt;/label&gt;
+                        </code>
+                    </pre>
+                </p>
+                <p class="txt-format">
+                    <button type="button" aria-label="Kup produkt">Kup</button>
+                    <pre>
+                        <code>
+                            &lt;button type="button" aria-label="Kup produkt"&gt;Kup&lt;/button&gt;
+                        </code>
+                    </pre>
                 </p>
                 <p class="txt-format">
                     Dzięki podobnemu nazewnictwu, użytkownicy widzący i niewidzący będą rozumieli komponenty interfejsu w ten sam sposób.
@@ -108,25 +128,21 @@
                 </p>
                 <p class="txt-format">
                     Natomiast dla użytkowników, którzy widzą i używają czytnika tekstu,
-                    czytana przez oprogramowanie nazwa obiektu (name), będzie odpowiadała widocznemu opisowi.
+                    czytana przez oprogramowanie nazwa obiektu, będzie odpowiadała widocznemu opisowi.
                 </p>
                 <p class="txt-format">
                     <strong>WAŻNE</strong><br/>
                     Komponenty, które nie zawierają opisu wizualnego, nie muszą go posiadać.
                     Wystarczy, żeby były nazwane dla oprogramowania, np. przez nadanie atrybutu name.
                 </p>
-                <p class="txt-format">
-                    Pamiętaj o odpowiednim układzie powiązanych etykiet z komponentami:<br/>
-                    <strong>Tu grafiki</strong>
-                </p>
-                <strong>Przykładowe połączenie label i nazwy (kod i wizualizacja) + odpowiednie ułożenie opisów do komponentów</strong>
             </div>
             <div>
                 <h3 id="2_5_4">Kryterium sukcesu 2.5.4 Aktywowanie ruchem (Poziom A)</h3>
                 <p class="txt-format">
                     Funkcjonalności strony nie mogą polegać tylko na użyciu gestów. Musisz dostarczyć alternatywę dla takiego sposobu sterowania przez dodanie
                     komponentów interfejsu, które mają tę samą funkcję co gesty. Dodatkowo obsługa gestami może zostać całkowicie wyłączona.<br/>
-                    Wyjątkiem są gesty, które są obsługiwane również przez technologie asystujące i gesty kluczowe dla działania Funkcjonalności (np. krokomierz).
+                    Wyjątkiem są gesty, które są obsługiwane również przez technologie asystujące i gesty kluczowe dla działania Funkcjonalności (np. krokomierz).<br/>
+                    <img style="width: 300px; height: auto;" src="{{ asset('img/2_5_4a.jpg') }}" />
                 </p>
                 <p class="txt-format">
                     Urządzenia zawierają różne czujniki (np. żyroskop, akcelerometr), które dodają funkcjonalności:
@@ -135,12 +151,12 @@
                     <li>anulowanie operacji przez potrząśnięcie;</li>
                     <li>przesunięcie po ekranie kilkoma palcami, aby wykonać zrzut ekranu.</li>
                 </ul>
+                <img style="width: 250px; height: auto;" src="{{ asset('img/2_5_4b.jpg') }}" />
                 </p>
                 <p class="txt-format">
                     Część osób nie może wykonać takich gestów lub robi to z trudnością. Niektórzy mogą także przypadkowo aktywować funkcjonalność, np.
                     przez niekontrolowane drżenie rąk.
                 </p>
-                <strong>Nagranie, które pokazuje, że można i tak, i tak + grafiki?</strong>
             </div>
             <div>
                 <h3 id="2_5_5">Kryterium sukcesu 2.5.5 Rozmiar celu dotykowego (Poziom AAA)</h3>
@@ -150,16 +166,19 @@
                     Nie jest to jednak wymagane, gdy:
                 <ul>
                     <li>Inny element na tej stronie także wynosi minimum 44px x 44px i pełni tę samą funkcję;</li>
-                    <li>Element znajduje się w środku tekstu lub jest jego częścią;</li>
+                    <li>Element znajduje się w środku tekstu lub jest jego częścią (np. link w tekście);</li>
                     <li>Autor nie może zmodyfikować elementu, ponieważ jest ustalany przez przeglądarkę;</li>
                     <li>Taki sposób prezentacji jest ważny, a zmiany mogą spowodować zmianę funkcjonalności lub prezentowanej treści.</li>
                 </ul>
                 </p>
                 <p class="txt-format">
+                    Minimalny rozmiar przycisku:<br/>
+                    <input type="button" style="width: 44px; height: 44px;"/>
+                </p>
+                <p class="txt-format">
                     Kryterium narzuca, aby obszar dotykowy był na tyle duży, aby każdy użytkownik mógł bezproblemowo kliknąć obiekt.
                     Dobrze zrobione obszary pozwalają na obsługę przy użyciu różnych urządzeń.
                 </p>
-                <strong>Wielkość obiektu i porównanie dobrze źle</strong>
             </div>
             <div>
                 <h3 id="2_5_6">Kryterium sukcesu 2.5.6 Równoległy mechanizm wprowadzania danych (Poziom AAA)</h3>
@@ -178,7 +197,6 @@
                     Wyjątkiem są sytuacje, kiedy ograniczenie obsługiwanych technologii jest istotne (np. aplikacja do nauki szybkiego pisania na klawiaturze),
                     pozwala na ochronę treści lub respektuje ustawienia użytkownika.
                 </p>
-                <strong>Film, że obsługa przez różne urządzenia?</strong>
             </div>
         </div>
         </div>

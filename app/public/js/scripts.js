@@ -60,19 +60,20 @@ $(document).ready(function() {
     $(stdFont).click(function() {
         $('html').css('font-size', '1em');
         fontSize = 'standard';
-        localStorage.setItem('fontSize', theme);
+        localStorage.setItem('fontSize', fontSize);
     });
 
     $(smallFont).click(function() {
+        console.log('x');
         $('html').css('font-size', '0.7em');
         fontSize = 'small';
-        localStorage.setItem('fontSize', theme);
+        localStorage.setItem('fontSize', fontSize);
     });
 
     $(bigFont).click(function() {
         $('html').css('font-size', '1.3em');
         fontSize = 'big';
-        localStorage.setItem('fontSize', theme);
+        localStorage.setItem('fontSize', fontSize);
     });
 
     if (fontSize === 'standard') {

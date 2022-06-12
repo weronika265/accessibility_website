@@ -804,3 +804,25 @@ legend {
         transform: rotate(360deg);
     }
 }
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+.tooltip .tooltip-content {
+    visibility: hidden;
+    width: 180px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    /*padding: 5px 0;*/
+    position: absolute;
+    left: -50%;
+    top: 100%;
+    z-index: 1;
+}
+.tooltip:hover .tooltip-content {
+    visibility: visible;
+}

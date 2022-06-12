@@ -431,4 +431,40 @@ class wcagController extends AbstractController
             'WCAG/WCAG_success_criteria/examples/2_4_3_example.html.twig',
         );
     }
+
+    /**
+     * 3.2.1 Dobry przykład.
+     *
+     * @return \Symfony\Component\HttpFoundation\Response HTTP response
+     *
+     * @Route(
+     *     "/Postrzegalnosc/3_2_1_dobry",
+     *     methods={"GET"},
+     *     name="_3_2_1_dobry",
+     * )
+     */
+    public function _3_2_1_dobry(): Response
+    {
+        return $this->render(
+            'WCAG/WCAG_success_criteria/examples/3_2_1_dobry.html.twig',
+        );
+    }
+
+    /**
+     * 3.2.1 Zły przykład.
+     *
+     * @return \Symfony\Component\HttpFoundation\Response HTTP response
+     *
+     * @Route(
+     *     "/Postrzegalnosc/3_2_1_zly",
+     *     methods={"GET"},
+     *     name="_3_2_1_zly",
+     * )
+     */
+    public function _3_2_1_zly(): Response
+    {
+        return $this->render(
+            'WCAG/WCAG_success_criteria/examples/3_2_1_zly.html.twig',
+        );
+    }
 }

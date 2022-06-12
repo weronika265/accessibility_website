@@ -30,7 +30,17 @@
             <div>
                 <h3 id="3_1_1">Kryterium sukcesu 3.1.1 Język strony (Poziom A)</h3>
                 <p class="txt-format">
-                    Strona musi mieć określony domyślny język naturalny, który będzie odczytywany przez program.
+                    Strona musi mieć określony domyślny język naturalny, który będzie odczytywany przez program.<br/>
+                Przykład:
+                    <pre>
+                        <code>
+                            &lt;html lang="pl"&gt;
+
+                            &lt;html lang="en"&gt;
+
+                            &lt;html lang="fr"&gt;
+                        </code>
+                    </pre>
                 </p>
                 <p class="txt-format">
                     Musisz ustalić język strony, ponieważ pozwala to określić, w jaki sposób technologie mają odczytywać zawartość.
@@ -45,7 +55,6 @@
                 <p class="txt-format">
                     Jeśli strona obsługuje kilka języków, należy wybrać najczęściej używany lub ten, w którym treść jest najbardziej kompletna.
                 </p>
-                <strong>Pokazany lang i porównanie filmem, jak strona zostałaby przeczytana w dobrym i złym języku</strong>
             </div>
             <div>
                 <h3 id="3_1_2">Kryterium sukcesu 3.1.2 Język części (Poziom AA)</h3>
@@ -61,10 +70,18 @@
                 </ul>
                 </p>
                 <p class="txt-format">
+                    Przykład:<br/>
+                    Christopher wziął bagietkę ze stoiska i powiedział głośno: <span lang="fr">J'aime le pain</span>.
+                    <pre>
+                        <code>
+                            Christopher wziął bagietkę ze stoiska i powiedział głośno: &lt;span lang="fr"&gt;J'aime le pain&lt;/span&gt;.
+                        </code>
+                    </pre>
+                </p>
+                <p class="txt-format">
                     Kiedy określić język części tekstu, pozwoli to m.in. na jego prawidłowe odczytanie lub wyświetlenie przez technologie asystujące.<br/>
                     Pamiętaj jednak, że niektóre słowa są zapożyczone z innych języków, więc ich język nie musi być określany (np. <i>fast food</i>).
                 </p>
-                <strong>Pokazana treść, która musi być określona w części + kod i co nie powinno być oznaczone</strong>
             </div>
             <div>
                 <h3 id="3_1_3">Kryterium sukcesu 3.1.3 Nietypowe słowa (Poziom AAA)</h3>
@@ -82,7 +99,13 @@
                     <li>utworzyć słowniczek z definicjami niezrozumiałych słów.</li>
                 </ul>
                 </p>
-                <strong>Przykład niezrozumiałych treści i jak to zdefiniować</strong>
+                <p class="txt-format">
+                    Przykłady:<br/>
+                    <ul>
+                        <li><i>Mamy problem z naszą sąsiadką. Drzemy z nią koty (drzeć koty - być z kimś w konflikcie, kłócić się) od kiedy pamiętam.</i></li>
+                        <li><i>Na Pawle ciężko polegać, niczego nie traktuje poważnie. Z niego to zawsze była straszna szaławiła (szałwiła - mężczyzna lubiący zabawę, lekkoduch).</i></li>
+                    </ul>
+                </p>
             </div>
             <div>
                 <h3 id="3_1_4">Kryterium sukcesu 3.1.4 Skróty (Poziom AAA)</h3>
@@ -99,10 +122,16 @@
                 </p>
                 <p class="txt-format">
                     Skróty możesz objaśnić przez m.in.:
-                <ul>
-                    <li>rozszerzenie skrótu, kiedy jest pierwszy raz użyty;</li>
-                    <li>wyświetlenie rozszerzenia skrótu w elemencie tooltip.</li>
+                <ul style="all: unset;">
+                    <li>
+                        <b>Rozszerzenie skrótu, kiedy jest pierwszy raz użyty:</b><br/>
+                        JAWS (Job Access with Speech) to czytnik ekranu, który współpracuje z różnymi aplikacjami w systemie Windows.
+                    </li>
+                    <li>
+                        <b>Wyświetlenie rozszerzenia skrótu w elemencie tooltip:</b><br/>
+                    </li>
                 </ul>
+                <div class="tooltip">JAWS <span class="tooltip-content">Job Access with Speech</span></div> to czytnik ekranu, który współpracuje z różnymi aplikacjami w systemie Windows.
                 </p>
             </div>
             <div>
@@ -127,7 +156,6 @@
                 </ul>
                 Dodatkowe informacje znajdziesz ... <strong>Dokończyć</strong>
                 </p>
-                <strong>porównanie trudny a prosty język na przykładzie</strong>
             </div>
             <div>
                 <h3 id="3_1_6">Kryterium sukcesu 3.1.6 Wymowa (Poziom AAA)</h3>
@@ -148,7 +176,19 @@
                     <li>dodanie pliku dźwiękowego z wymową słowa.</li>
                 </ul>
                 </p>
-                <strong>Przykład takiego słowa i jak można temu zaradzić?</strong>
+                <p class="txt-format">
+                    Przykład - angielskie słowo <i>invalid</i>:<br/>
+                    1. przymiotnik (nieprawidłowy) /ɪnˈvæl.ɪd/
+                    <audio controls>
+                        <source src="{{ asset('img/3_1_6a.mp3') }}" type="audio/mpeg" />
+                        Twoja przeglądarka nie wspiera elementów audio.
+                    </audio><br/>
+                    2. rzeczownik (inwalida) /ˈɪn.və.lɪd/
+                    <audio controls>
+                        <source src="{{ asset('img/3_1_6b.mp3') }}" type="audio/mpeg" />
+                        Twoja przeglądarka nie wspiera elementów audio.
+                    </audio>
+                </p>
             </div>
         </div>
         </div>
