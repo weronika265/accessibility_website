@@ -762,12 +762,45 @@ legend {
     visibility: visible;
     opacity: 1;
 }
-/*#hover_esc .tooltip::after {*/
-/*    position: absolute;*/
-/*    !*top: 100%;*!*/
-/*    !*left: 50%;*!*/
-/*    margin-left: -5px;*/
-/*    border-width: 5px;*/
-/*    border-style: solid;*/
-/*    border-color: #555 transparent transparent transparent;*/
-/*}*/
+
+#disable-anim {
+    cursor: pointer;
+}
+#rect-anim {
+    position: relative;
+    width: 10em;
+    height: 6em;
+    background-color: #b93b3b;
+    border: 2px solid black;
+    animation: move 5s infinite;
+}
+@keyframes move {
+        0% {
+            left: 0;
+        }
+        50% {
+            left: calc(50% - 100px);
+        }
+        100% {
+            left: 0;
+        }
+}
+
+#inter-anim {
+    position: relative;
+    width: 6em;
+    height: 6em;
+    background-color: #30afa0;
+    border: 2px solid black;
+    animation: none;
+    /*animation: inter 5s;*/
+    cursor: pointer;
+}
+@keyframes inter {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

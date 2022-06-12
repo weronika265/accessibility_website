@@ -32,7 +32,24 @@
                     <li>błyskać częściej niż 3 razy na sekundę,</li>
                     LUB
                     <li>błysk ogólny i czerwony nie przekracza wartości granicznych - rozmiaru treści błyskającej i jej jasności.</li>
-                </ul>
+                </ul><br/>
+                <strong>OSTRZEŻENIE</strong><br/>
+                Poniższe przykłady mogą wywołać atak padaczki.<br/><br/>
+                Światło białe:<br/>
+                <video width="320" height="240" controls>
+                    <source src="{{ asset('img/2_3_1.mp4') }}" type="video/mp4" />
+                    Twoja przeglądarka nie wspiera elementów wideo.
+                </video><br/><br/>
+                Światło czerwone:<br/>
+                <video width="320" height="240" controls>
+                    <source src="{{ asset('img/2_3_1_red.mp4') }}" type="video/mp4" />
+                    Twoja przeglądarka nie wspiera elementów wideo.
+                </video><br/><br/>
+                Błysk spełniający kryterium:<br/>
+                <video width="320" height="240" controls>
+                    <source src="{{ asset('img/2_3_1_dobry.mp4') }}" type="video/mp4" />
+                    Twoja przeglądarka nie wspiera elementów wideo.
+                </video><br/><br/>
                 <strong>UWAGA</strong><br/>
                 Z tym info, że bez tego kryterium strona nie może być w pełni dostępna.<br/>
                 </p>
@@ -42,23 +59,25 @@
                     Takie osoby nie mogą swobodnie korzystać ze stron, które zawierają takie treści lub w zależności od twórcy, mogą zapoznać się tylko z tekstem alternatywnym treści.
                 </p>
                 <p class="txt-format">
-                    Twoim obowiązkiem jest dopilnowanie, aby wszystkie treści nad którymi masz kontrolę, nie błyskały częściej niż 3 razy na sekundę lub błyskały na odpowiednio ograniczonym obszarze i z ograniczoną jasnością.<br/>
+                    Twoim obowiązkiem jest dopilnowanie, aby wszystkie treści, nad którymi masz kontrolę, nie błyskały częściej niż 3 razy na sekundę lub błyskały na odpowiednio ograniczonym obszarze i z ograniczoną jasnością.<br/>
                     Szczegóły dotyczące charakterystyki i parametrów błysków znajdziesz w <i>oficjalnym dokumencie WCAG 2.1</i>.
                 </p>
-                <strong>Błysk do włączenia zły/ dobry i wielkość pola.</strong>
             </div>
             <div>
                 <h3 id="2_3_2">Kryterium sukcesu 2.3.2 Trzy błyski (Poziom AAA)</h3>
                 <p class="txt-format">
-                    Krytrium ogranicza jeszcze bardziej błyski w porównaniu do <a href="#2_3_1">Kryterium sukcesu 2.3.1 Trzy błyski lub wartości poniżej progu (Poziom A)</a>.
-                    Sprawia to, że ograniczenia dotyczą nawwet jednego piksela ekranu.<br/>
-                    <strong>Grafika, że ograniczone błysyki i przekreślone wielkości i jaści, że to nie przejdzie.</strong>
+                    Kryterium ogranicza jeszcze bardziej błyski w porównaniu do <a href="#2_3_1">Kryterium sukcesu 2.3.1 Trzy błyski lub wartości poniżej progu (Poziom A)</a>.
+                    Sprawia to, że ograniczenia dotyczą nawet jednego piksela ekranu.<br/>
                 </p>
             </div>
             <div>
                 <h3 id="2_3_3">Kryterium sukcesu 2.3.3 Animacja po interakcji (Poziom AAA)</h3>
                 <p class="txt-format">
-                    Powinieneś umożliwić użytkownikowi, aby animowane elementy wyzwalane przez interakcję na stronie mogły być wyłączone. Wyjątkiem są animacje, które są ważną częścią pokazywanej treści.
+                    Powinieneś umożliwić użytkownikowi, aby animacje elementów podczas interakcji mogły być wyłączone.<br/><br/>
+
+                    <input type="button" value="Prześlij" id="inter-anim" /><br/>
+
+                    Wyjątkiem są animacje, które są ważną częścią pokazywanej treści.
                 </p>
                 <p class="txt-format">
                     Część użytkowników reaguje negatywnie na ruch pojawiający się na stronie i może odczuwać:
@@ -74,13 +93,31 @@
                 <ul>
                     <li>twórz tylko potrzebne animacje,</li>
                     <li>pozwól użytkownikowi wyłączyć animację,</li>
-                    <li>jeśli animujesz przesuwanie strony (scrolling), rób to w sposób odpowiedzialny. Nie skupiaj się tylko na efekcie wizualnym.</li>
+                    <li>jeśli animujesz stronę, np. jej przesuwanie, rób to w sposób odpowiedzialny. Nie skupiaj się tylko na efekcie wizualnym.</li>
                 </ul>
-                <strong>wyłączenie animacji, pokazany scroll inny, np. parallax scrolling?</strong>
                 </p>
             </div>
         </div>
         </div>
     </main>
     {% include 'footer.html.twig' %}
+
+    <script>
+        const sub_btn = document.getElementById('inter-anim');
+        let enabled = false;
+
+        sub_btn.onclick = function() {
+            if (!enabled) {
+                enabled = true;
+                sub_btn.style.animation = 'inter 5s';
+                sub_btn.value = "Przesłano";
+            }
+            else {
+                enabled = false;
+                sub_btn.style.animation = 'none';
+                sub_btn.value = "Prześlij";
+            }
+        }
+    </script>
+
 {% endblock %}
