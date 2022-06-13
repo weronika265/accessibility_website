@@ -10,7 +10,8 @@
 {% block body %}
     {% include 'header.html.twig' %}
     {% include 'sidebar.html.twig' %}
-    <main id="main" class="page">
+
+    <main id="main">
         <div style="margin-left: 15em;">
             <h1>Wytyczna 1.1 Alternatywa tekstowa</h1>
             <p class="txt-format-main">
@@ -40,12 +41,58 @@
                     </p>
                 </p>
             </div>
+            </div>
         </div>
-        </div>
-{#        TODO: Czemu footer źle działa przy usunięciu "zbędnego" diva? #}
-{#        TODO: dac inline block zamiast br? #}
         <!-- Każdy li, np. 4.1 włącza stronę z table of content z "głębszymi" kryteriami -->
         <!-- Dodać komentarze z możliwością wyboru kryterium? + pole w tabeli w bazie?  -->
+        <div>
+            <h2>Komentarze</h2>
+            {% if pagination is defined and pagination.items|length %}
+                <div class="indent" style="flex-wrap: wrap;">
+                    {% for comment in pagination.items %}
+{#                        {% if comment.is_accepted %}#}
+                            <section class="opinion">
+                                <span class="user-info">{{ comment.author.username }}, {{ comment.date|date('Y/m/d') }}</span>
+                                <div class="message-style">
+                                    {{ comment.message }}
+                                </div>
+                            </section>
+{#                        {% endif %}#}
+                    {% endfor %}
+                </div>
+            {% else %}
+                <div>
+                    {{ 'Brak opinii' }}
+                </div>
+            {% endif %}
+            <div>
+                {{ knp_pagination_render(pagination) }}
+            </div>
+            {#            <form>#}
+            {#                <label for="opinion-field">Treść opinii</label><br/>#}
+            {#                <textarea id="opinion-field" name="opinion-field" rows="10" cols="70"></textarea><br/>#}
+            {#                <input type="submit" value="Dodaj opinię" class="center-item-opinion" style="padding: 0.5em 3em; margin-top: 1em;"/>#}
+            {#            </form>#}
+
+
+            {#            {{ form_start(form) }}#}
+            {#            {{ form_label(form.message) }}#}
+            {#            {{ form_widget(form) }}#}
+            {#                <div>#}
+            {#                    <input type="submit" value="Dodaj opinię" class="center-item-opinion" style="padding: 0.5em 3em; margin-top: 1em;"/>#}
+            {#                </div>#}
+            {#            {{ form_end(form) }}#}
+
+            {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                {{ form_start(form) }}
+                <div>{{ form_label(form.message) }}</div>
+                <div>{{ form_widget(form.message, { 'attr': {'rows' : '6', 'cols' : '60'} } ) }}</div>
+                <div>
+                    <input type="submit" value="{{ 'Dodaj opinię' }}" class="center-item-opinion" style="padding: 0.5em 3em; margin-top: 1em; cursor: pointer;"/>
+                </div>
+                {{ form_end(form) }}
+            {% endif %}
+        </div>
     </main>
     {% include 'footer.html.twig' %}
 {% endblock %}

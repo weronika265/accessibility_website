@@ -1,7 +1,7 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}
-    Kontakt
+    Opinie
 {% endblock %}
 
 {% block body %}
@@ -25,7 +25,6 @@
 {#            </div>#}
 {#            <input type="submit" value="Wyślij" class="center-item-send" style="padding: 0.5em 3em;"/>#}
 {#        </form>#}
-        <article>
             <h2>Opinie o serwisie</h2>
             {% if pagination is defined and pagination.items|length %}
                 <div class="indent" style="flex-wrap: wrap;">
@@ -94,7 +93,6 @@
 {#                </section>#}
 {#            </div>#}
 
-        </article>
     </main>
     {% include 'footer.html.twig' %}
 {% endblock %}

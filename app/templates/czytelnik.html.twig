@@ -17,6 +17,7 @@
                 <li><a href="#typy">Typy niepełnosprawności</a></li>
                 <li><a href="#technologie">Technologie asystujące</a></li>
                 <li><a href="#wcag">O WCAG</a></li>
+                <li><a href="#aria">O WAI-ARIA</a></li>
                 <li><a href="#wiecej">Co więcej na stronie</a></li>
             </ul>
         </div>
@@ -625,6 +626,62 @@
             </section>
         </article>
 
+        <article id="aria">
+            <!-- h1 ?? + dodać do section -->
+            <h2 class="center-text" style="background-color: #2880C9; padding-top: 2.5em; padding-bottom: 1em; margin: 0;">O WAI-ARIA</h2>
+            <!-- <hr/> -->
+            <!-- <div class="content-left"> -->
+            <section class="align-left-reader" style="background-color: #2880C9;">
+                <div>
+                    <h3 class="subsection">Czym jest WAI-ARIA</h3>
+                    <p>
+                        Zawartość na stronie jest dostępna jedynie, kiedy może być obsługiwana przez użytkowników z niepełnosprawnościami.
+                        Musi być dostosowana w taki sposób, aby każdy mógł korzystać ze wszystkich funkcjonalności strony: przycisków, formularzy, linków. Strona musi obsługiwać też technologie asystujące.
+                    </p>
+                    <p>
+                        Dokument WCAG – Web Accessibility Content Guidelines jest zbiorem wytycznych, które pomagają twórcom w projektowaniu stron również z myślą o osobach niepełnosprawnych.
+                        Dokument publikowany jest przez Web Accessibility Initiative (WAI), które jest częścią World Wide Web Consortium (W3C).
+                        World Wide Web Consortium jest organizacją, która ustala standard WWW: HTML, CSS i innych. Dba o rozwój sieci, tworzy różnorodne wytyczne dla stron internetowych, w tym właśnie WCAG.
+                    </p>
+                    <p>
+                        Wytyczne współtworzą osoby z różnych środowisk: przemysł, rząd, edukacja, organizacje non-profit.
+                    </p>
+                </div>
+                <img src="{{ asset('img/disabled_lesson.jpg') }}" class="image img-space" alt="Mężczyzna, który tłumaczy coś niewidzącej dziewczynce. Siedzą przy laptopie."/>
+            </section>
+            <section class="align-left-reader" style="background-color: #2880C9;">
+                <div>
+                    <h3 class="subsection">Historia Web Content Accessibility Guidelines</h3>
+                    <p>
+                        WCAG 1.0
+                        5 (19?) maja 1999 roku konsorcjum WAI uchwala standard WCAG (po polsku Wytyczne dostępności stron internetowych). Jest to jedna z pierwszych prób udokumentowania praktyk, które skupiają się na projektowaniu zawartości cyfrowej dostępnej cyfrowo. W tej wersji dokumentu skupiono się głównie na języku HTML.
+                        <br/>
+                        WCAG 2.0
+                        Kolejna wersja wydana 11 grudnia 2008 roku. Skupiła się na uwzględnieniu większej liczby dostępnych technologii. W tej wersji wprowadzono też cztery główne zasady: postrzegalność, funkcjonalność, zrozumiałość i solidność. Jest do obecny standard, aktualizowany do kolejnych wersji.
+                        <br/>
+                        WCAG 2.1 (aktualny standard)
+                        Wersja wydana 5 czerwca 2018 roku wprowadza aktualizcje, aby dostosować się do rozwoju technologii i sieci. Obecna wersja wprowadza dodatkowe kryteria dla urządzeń mobilnych i dla osób z problemami ze wzrokiem i zaburzeń poznawczych
+                    </p>
+                </div>
+                <img src="{{ asset('img/disabled_lesson.jpg') }}" class="image img-space" alt="Mężczyzna, który tłumaczy coś niewidzącej dziewczynce. Siedzą przy laptopie."/>
+            </section>
+            <section class="align-left-reader" style="background-color: #2880C9;">
+                <div>
+                    <h3 class="subsection">Struktura dokumentu</h3>
+                    <p>
+                        Dokument WCAG 2.1 bazuje na 4 zasadach:
+                    <ul>
+                        <li>Postrzegalność – zawartość strony musi być odbierana za pomocą różnych zmysłów. Osoby pozbawione jednego zmysły mogą korzystać z innego zmysłu bez utraty niektórych funkcjonalności strony.</li>
+                        <li>Funkcjonalność – zawartość musi myć obsługiwana przy pomocy różnych urządzeń, nie tylko klawiatury lub tylko myszy. Wiele osób niepełnosprawnych korzysta także z innych urządzeń, które umożliwiają nawigację po stronie.</li>
+                        <li>Zrozumiałość – treść strony i jej działanie muszą być zrozumiałe dla użytkownika, także z zaburzeniami poznawczymi lub posługującego się innym językiem ojczystym.</li>
+                        <li>Solidność (w prawie polskim i unijnym to Kompatybilność) – zawartość musi stosować się do standardów oraz działać na różnych urządzeniach i w wielu programach użytkownika (przeglądarka, oprogramowanie czytnika ekranu).</li>
+                    </ul>
+                    </p>
+                </div>
+                <img src="{{ asset('img/disabled_lesson.jpg') }}" class="image img-space" alt="Mężczyzna, który tłumaczy coś niewidzącej dziewczynce. Siedzą przy laptopie."/>
+            </section>
+        </article>
+
         <article id="wiecej">
             <h2 class="center-text" style="background-color: #2880C9; padding-top: 1em; padding-bottom: 1em; margin: 0;">Co więcej na stronie</h2>
             <!-- <hr/> -->
@@ -632,10 +689,10 @@
             <section class="align-left-reader" style="background-color: #2880C9;">
                 <div>
                     <p>
-                        Jeśli jesteś twórcą i chcesz dowiedzieć się więcej o informacjach pomocnych w zbudowaniu dostępnej strony, przejdź do Strony twórcy. Osoby zainteresowane tematyką WCAG i WAI-ARIA też z niej skorzystają.
+                        Jeśli jesteś twórcą i chcesz dowiedzieć się więcej o informacjach pomocnych w zbudowaniu dostępnej strony, przejdź do Strony twórcy. Osoby zainteresowane tematyką WCAG też z niej skorzystają.
                     </p>
                     <p>
-                        Masz do mnie uwagi albo sugestie? A może chciałbyś zostawić opinię o stronie? Przejdź do strony kontaktowej.
+                        Masz do mnie uwagi, sugestie, strona Ci się podoba? Przejdź do strony Opinia i zostaw ocenę strony.
                     </p>
                 </div>
                 <img src="{{ asset('img/disabled_lesson.jpg') }}" class="image img-space" alt="Mężczyzna, który tłumaczy coś niewidzącej dziewczynce. Siedzą przy laptopie."/>

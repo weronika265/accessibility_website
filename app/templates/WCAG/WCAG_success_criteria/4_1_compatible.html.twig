@@ -33,8 +33,16 @@
                     <li>elementy są zagnieżdżone według swojej specyfikacji;</li>
                     <li>znaczniki nie posiadają zduplikowanych atrybutów;</li>
                     <li>wszystkie ID są unikalne.</li>
-                </ul>
-                Miej jednak na uwadze, że specyfikacja pozwala czasem na stosowanie powyższych zabiegów.
+                </ul><br/>
+                <img src="{{ asset('img/4_1_1.jpg') }}" style="width: 500px; height: auto;"/><br/><br/>
+                <pre>
+                    <code>
+                        &lt;button&gt;&lt;/button&gt;<br/>
+                        &lt;div&gt;&lt;/div&gt;<br/>
+                        &lt;span&gt;&lt;/span&gt;<br/>
+                        &lt;i&gt;&lt;/i&gt;
+                    </code>
+                </pre>
                 </p>
                 <p class="txt-format">
                     Kiedy zadbasz o poprawność kodu, unikniesz błędów związanych z nieprawidłowym wyświetlaniem strony.
@@ -44,7 +52,6 @@
                     Jeśli strona nie jest prawidłowo zbudowana, np. zawiera niedomknięte znaczniki lub niepoprawnie zagnieżdżone elementy,
                     czytnik nie będzie mógł prawidłowo przekazać informacji o stronie.
                 </p>
-                <strong>Pokazanie przykładów prawidłowego i błędnego kodu + jak mogą to odczytywać technologie asystujące?</strong>
             </div>
             <div>
                 <h3 id="4_1_2">Kryterium sukcesu 4.1.2 Nazwa, rola, wartość (Poziom A)</h3>
@@ -64,9 +71,43 @@
                 </ul>
                 </p>
                 <p class="txt-format">
-                    Aby dowiedzieć się więcej o parametrach, które musisz zastosować, wejdź do <a href="ARIA.html">Wstępu do atrybutów ARIA</a>.
+                    <video width="320" height="240" controls>
+                        <source src="{{ asset('img/4_1_2a.mp4') }}" type="video/mp4" />
+                        Twoja przeglądarka nie wspiera elementów wideo.
+                    </video>
+                    <pre>
+                        <code>
+                            &lt;input type="text" /&gt;<br/>
+
+                            &lt;label for="imie">Imię&lt;/label&gt;
+                            &lt;input type="text" id="imie"/&gt;
+                        </code>
+                    </pre>
                 </p>
-                <strong>Nagranie, jak to działa dla niestandardowych elementów przy korzystaniu z czytnika - dobrze i źle zrobione</strong>
+                <p class="txt-format">
+                    <video width="320" height="240" controls>
+                        <source src="{{ asset('img/4_1_2b.mp4') }}" type="video/mp4" />
+                        Twoja przeglądarka nie wspiera elementów wideo.
+                    </video>
+                    <pre>
+                        <code>
+                            &lt;a href="#"&gt;Przejdź do menu&lt;/a&gt;<br/>
+                            &lt;a href="#" role="button"&gt;Przejdź do menu&lt;/a&gt;
+                        </code>
+                    </pre>
+                </p>
+                <p class="txt-format">
+                    <video width="320" height="240" controls>
+                        <source src="{{ asset('img/4_1_2c.mp4') }}" type="video/mp4" />
+                        Twoja przeglądarka nie wspiera elementów wideo.
+                    </video>
+                    <pre>
+                        <code>
+                            &lt;button>&lt;/button&gt;<br/>
+                            &lt;button aria-label="Zresetuj"&gt;&lt;/button&gt;
+                        </code>
+                    </pre>
+                </p>
             </div>
             <div>
                 <h3 id="4_1_3">Kryterium sukcesu 4.1.3 Komunikaty o stanie (Poziom AA)</h3>
@@ -90,7 +131,41 @@
                     Komunikaty o stanie nie zostaną odczytywane przez technologie asystujące, jeśli nie są odpowiednio oznaczone.
                     To ważne dla osób, które nie widzą. Kiedy komunikat nie jest odpowiednio oznaczony, użytkownik niewidzący nie będzie wiedział o jego istnieniu.
                 </p>
-                <strong>Przykładowe komunikaty + kod</strong>
+                <p class="txt-format">
+                    Wiadomość bez powiadomienia użytkownika:<br/>
+                    <video width="320" height="240" controls>
+                        <source src="{{ asset('img/4_1_3_noalert.mp4') }}" type="video/mp4" />
+                        Twoja przeglądarka nie wspiera elementów wideo.
+                    </video>
+                    <pre>
+                        <code>
+                            &lt;div&gt;
+                                Utworzono Opinię. Czekaj na zatwierdzenie przez administratora.
+                            &lt;/div&gt;
+                        </code>
+                    </pre>
+                </p>
+                <p class="txt-format">
+                    Wiadomość z powiadomieniem użytkownika:<br/>
+                    <video width="320" height="240" controls>
+                        <source src="{{ asset('img/4_1_3_alert.mp4') }}" type="video/mp4" />
+                        Twoja przeglądarka nie wspiera elementów wideo.
+                    </video>
+                    <pre>
+                        <code>
+                            &lt;div role="alert"&gt;
+                                Utworzono Opinię. Czekaj na zatwierdzenie przez administratora.
+                            &lt;/div&gt;
+                        </code>
+                    </pre>
+                </p>
+                <p class="txt-format">
+                    Wiadomość nie uzyskuje fokusu<br/>
+                    <video width="320" height="240" controls>
+                        <source src="{{ asset('img/4_1_3_fokus.mp4') }}" type="video/mp4" />
+                        Twoja przeglądarka nie wspiera elementów wideo.
+                    </video>
+                </p>
             </div>
         </div>
         </div>

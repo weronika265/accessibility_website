@@ -1,4 +1,4 @@
-{% extends 'base.html.twig' %}
+{#{% extends 'base.html.twig' %}#}
 
 {% block body %}
     <footer>
@@ -26,37 +26,36 @@
             <p>Weronika Ruszel | Elektroniczne Przetwarzanie Informacji | 2022</p>
         </div>
     </footer>
-    <button id="scroll-btn" tabindex="0"><div id="arrow"></div></button>
+    <button aria-label="Przejdź na górę strony" id="scroll-btn" tabindex="0"><div id="arrow"></div></button>
 
     <!-- ten span jest ok? -->
     <span aria-role="button">
-        <div aria-role="button" tabindex="0" id="a11y-options"><img src="{{ asset('img/accessibility.png') }}" alt="Człowieczek – oznaczenie dostępności."/></div>
+        <div aria-role="button" aria-label="Opcje dostępności" tabindex="0" id="a11y-options"><img src="{{ asset('img/accessibility.png') }}" alt=""/></div>
         <div id="a11y-options-expanded">
-            <div>
-                <span style="color: green;">Kontrast</span><br/>
-                <button id="contrast-std">Standard</button>
-                <button id="contrast-high">Wysoki</button>
-{#                <button id="dark-mode">Ciemny</button>#}
+            <div class="a11y-options-space">
+                Kontrast<br/>
+                <button aria-label="Normalny kontrast" id="contrast-std"><i class='fa fa-circle-o' style="font-size: 25px;"></i></button>
+                <button aria-label="Wysoki kontrast" id="contrast-high"><i class="fa fa-lg fa-adjust" style="font-size: 25px;"></i></button>
             </div>
-            <div>
-                <span style="color: green;">Odstęp</span><br/>
-                <button id="space-std">Standard</button>
-                <button id="space-big">Duży</button>
-                <button id="space-bigger">Duży+</button>
+            <div class="a11y-options-space">
+                Odstęp<br/>
+                <button id="space-std"><i class='fa fa-text-width' style="font-size: 15px;"></i></button>
+                <button id="space-big"><i class='fa fa-text-width' style="font-size: 20px;"></i></button>
+                <button id="space-bigger"><i class='fa fa-text-width' style="font-size: 30px;"></i></button>
             </div>
-            <div>
-                <span style="color: green;">Wielkość fontu</span><br/>
-                <button id="font-std">Standard</button>
-                <button id="font-small">Mała</button>
-                <button id="font-big">Duża</button>
+            <div class="a11y-options-space">
+                Wielkość fontu<br/>
+                <button id="font-small"><i class="fa fa-font" style="font-size: 15px;"></i></button>
+                <button id="font-std"><i class="fa fa-font" style="font-size: 20px;"></i></button>
+                <button id="font-big"><i class="fa fa-font" style="font-size: 25px;"></i></button>
             </div>
         </div>
     </span>
 
-    {% block javascripts %}
-        <script>
-            {{ parent() }}
-        </script>
-    {% endblock %}
+{#    {% block javascripts %}#}
+{#        <script>#}
+{#            {{ parent() }}#}
+{#        </script>#}
+{#    {% endblock %}#}
 
 {% endblock %}

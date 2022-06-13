@@ -5,7 +5,7 @@ let expanded = false;
 
 function a11yMenu() {
     if (!expanded) {
-        a11yButton.style.transform = 'translateX(-150px)';
+        a11yButton.style.transform = 'translateX(-180px)';
         a11yButtonExpanded.style.display = 'block';
         expanded = true;
     }

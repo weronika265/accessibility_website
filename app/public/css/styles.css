@@ -44,10 +44,12 @@ a:link, a:visited {
 }
 /* TODO: animate whole button */
 a:hover {
-    color: rgba(255, 255, 255, 0.79);
+    color: black;
+    -webkit-text-stroke: 0.7px black;
 }
 a:active {
-    color: rgba(255, 255, 255, 0.79);
+    color: #2c2c2c;
+    -webkit-text-stroke: 0.2px #2c2c2c;
 }
 #register,
 .button-style,
@@ -69,9 +71,9 @@ button {
     padding: 1em 3em;
 }
 input[type=submit]:hover {
-    color: white;
+    color: black;
     cursor: pointer;
-    -webkit-text-stroke: 0.2px white;
+    -webkit-text-stroke: 1px black;
 }
 #skip-link {
     font-family: "Varta", sans-serif;
@@ -235,21 +237,6 @@ footer {
     width: 87.4px;
     height: 78.8px;
 }
-#a11y-options {
-    background-color: rgba(225, 225, 225);
-    z-index: 999;
-    position: fixed;
-    right: 0px;
-    top: 350px;
-    padding: 40px 2px 40px 2px;
-    border-radius: 8px 0 0 8px;
-    border: 1px solid rgb(194, 193, 193);
-}
-
-#a11y-options img {
-    width: 50px;
-    height: 50px;
-}
 
 /* dla czytelnika */
 .list-clear-set {
@@ -266,7 +253,7 @@ footer {
 }
 .list-clear-set a:hover {
     color: black;
-    font-weight: bolder;
+    -webkit-text-stroke: 1px black;
 }
 .bg-list-clear {
     background-color: rgb(166, 208, 244, 0.8);
@@ -292,8 +279,8 @@ article ul {
     display: flex;
     justify-content: center;
     /* flex-wrap: wrap; */
-    padding-left: 40em;
-    padding-right: 40em;
+    /*padding-left: 40em;*/
+    /*padding-right: 40em;*/
     padding-bottom: 3.2em;
     /* max-width: 1100px; */
 }
@@ -312,8 +299,8 @@ article ul {
     /* flex-wrap: wrap; */
     flex-direction: row-reverse;
     justify-content: center;
-    padding-left: 40em;
-    padding-right: 40em;
+    /*padding-left: 40em;*/
+    /*padding-right: 40em;*/
     padding-top: 3.2em;
     padding-bottom: 3.2em;
     /* max-width: 1100px; */
@@ -338,8 +325,8 @@ article ul {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-left: 40em;
-    padding-right: 40em;
+    /*padding-left: 40em;*/
+    /*padding-right: 40em;*/
     padding-top: 3.2em;
     padding-bottom: 3.2em;
 }
@@ -352,8 +339,8 @@ article ul {
 }
 .centered-unaligned-reader {
     justify-content: center;
-    padding-left: 30em;
-    padding-right: 30em;
+    /*padding-left: 30em;*/
+    /*padding-right: 30em;*/
     padding-top: 3.2em;
     padding-bottom: 3.2em;
     /* coś z margin */
@@ -368,13 +355,19 @@ label {
     font-weight: bold;
     font-size: 1.1em;
 }
-input:not(input[type=submit]) {
+input:not(input[type=submit], input[type=checkbox]) {
     width: 20em;
     height: 2.9em;
     padding-left: 1em;
     padding-right: 1em;
     margin-bottom: 2em;
 }
+input[type=checkbox] {
+    width: 3em;
+    height: 2em;
+    margin: 1em 0;
+}
+
 form {
     margin-left: 3em;
 }
@@ -433,12 +426,6 @@ form {
     margin-top: 0.7em;
     margin-left: 0.5em;
 }
-/*.message-action-accept a {*/
-/*    color: white;*/
-/*}*/
-/*.message-action-delete a {*/
-/*    color: white;*/
-/*}*/
 .indent {
     margin-left: 2.8em;
 }
@@ -480,8 +467,21 @@ form {
     margin-left: 0;
 }
 
-/* !!! CHANGE INLINE TO SPAN !!! */
+#a11y-options {
+    background-color: rgba(225, 225, 225);
+    z-index: 999;
+    position: fixed;
+    right: 0;
+    top: 350px;
+    padding: 40px 2px 40px 2px;
+    border-radius: 8px 0 0 8px;
+    border: 1px solid rgb(194, 193, 193);
+}
 
+#a11y-options img {
+    width: 50px;
+    height: 50px;
+}
 #a11y-options:hover {
     cursor: pointer;
 }
@@ -491,18 +491,20 @@ form {
     z-index: 999;
     position: fixed;
     right: 0;
-    top: 342px;
+    top: 280px;
     /* padding: 80px 4px 80px 4px; */
-    width: 150px;
-    height: 150px;
+    width: 180px;
+    height: auto;
     border-radius: 8px 0 0 8px;
     border: 1px solid rgb(194, 193, 193);
+    font-family: "Varta", sans-serif;
+    color: black;
+    font-weight: bold;
 }
-/* a:focus, a:hover {
-  border: 3px solid black;
-} */
+.a11y-options-space {
+    margin: 1em;
+}
 #scroll-btn {
-    /*position: relative;*/
     position: fixed;
     display: none;
     bottom: 25px;
@@ -512,7 +514,6 @@ form {
     padding: 30px;
     border-radius: 50%;
     border: none;
-    /* box-shadow: 2px 4px 12px 0 rgba(189, 189, 189, 0.411); */
 }
 #arrow {
     position: absolute;
@@ -527,7 +528,6 @@ form {
     background-clip: content-box;
 }
 
-/* TESTOWY */
 #a11y-options-expanded button {
     padding: 0.5em;
     background-color: transparent;
@@ -726,8 +726,9 @@ fieldset {
     border: none;
 }
 legend {
-    font-size: 1.5em;
-    font-weight: bold;;
+    font-size: 2em;
+    font-weight: bold;
+    font-family: "Varta", sans-serif;
 }
 /* zmienić sidebar i usunąć te buttony */
 .inside {
@@ -825,4 +826,10 @@ legend {
 }
 .tooltip:hover .tooltip-content {
     visibility: visible;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }

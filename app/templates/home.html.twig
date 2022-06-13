@@ -68,7 +68,8 @@
                 </div>
                 <div class="btn-description">
                     <p>
-                        Jesteś twórcą stron i chcesz dowiedzieć się, na czym polegają wytyczne WCAG 2.1 bez czytania ściany tekstu? Dobrze trafiłeś – w strefie twórcy znajdziesz najważniejsze informacje i interaktywne przykłady. Przeczytasz też<br/>o atrybutach ARIA oraz narzędziach, jakie możesz wykorzystać przy tworzeniu własnych stron internetowych.
+                        Jesteś twórcą stron i chcesz dowiedzieć się, na czym polegają wytyczne WCAG 2.1? Dobrze trafiłeś – w strefie twórcy znajdziesz najważniejsze informacje i interaktywne przykłady.
+                        Przy tworzeniu własnych stron możesz skorzystać z checklisty WCAG 2.1, która pozwoli śledzić spełnione kryteria.
                     </p>
                     <button><a href="{{ url('tworca_index') }}">Przejdź do strefy twórcy</a></button>
                 </div>
@@ -76,4 +77,11 @@
         </article>
     </main>
     {% include 'footer.html.twig' %}
+
+    {% block javascripts %}
+        <script>
+            {{ parent() }}
+        </script>
+    {% endblock %}
+
 {% endblock %}

@@ -5,6 +5,9 @@
 
 namespace App\Controller;
 
+use App\Repository\CommentRepository;
+use Knp\Component\Pager\PaginatorInterface;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -52,58 +55,34 @@ class wcagController extends AbstractController
         );
     }
 
-    /**
-     * ARIA.
-     *
-     * @return \Symfony\Component\HttpFoundation\Response HTTP response
-     *
-     * @Route(
-     *     "/ARIA",
-     *     methods={"GET"},
-     *     name="ARIA_index",
-     * )
-     */
-    public function ARIA(): Response
-    {
-        return $this->render(
-            'WCAG/ARIA.html.twig',
-        );
-    }
-
-    /**
-     * Narzędzia.
-     *
-     * @return \Symfony\Component\HttpFoundation\Response HTTP response
-     *
-     * @Route(
-     *     "/tools",
-     *     methods={"GET"},
-     *     name="tools_index",
-     * )
-     */
-    public function tools(): Response
-    {
-        return $this->render(
-            'WCAG/tools.html.twig',
-        );
-    }
-
 //    KRYTERIA
     /**
      * 1.1 Alternatywa tekstowa
      *
-     * @return \Symfony\Component\HttpFoundation\Response HTTP response
+     * @param Request $request HTTP request
+     * @param CommentRepository $commentRepository Comment repository
+     *
+     * @return Response HTTP response
      *
      * @Route(
      *     "/Postrzegalnosc/1_1",
-     *     methods={"GET"},
+     *     methods={"GET", "POST"},
      *     name="alt-txt_index",
      * )
      */
-    public function altTxt(): Response
+    public function altTxt(Request $request, CommentRepository $commentRepository, PaginatorInterface $paginator): Response
     {
+//        $comments = $commentRepository->queryAll();
+
+        $pagination = $paginator->paginate(
+            $commentRepository->queryAll(),
+            $request->query->getInt('page', 1),
+            CommentRepository::PAGINATOR_ITEMS_PER_PAGE
+        );
+
         return $this->render(
             'WCAG/WCAG_success_criteria/1_1_alt-txt.html.twig',
+            ['pagination' => $pagination]
         );
     }
 

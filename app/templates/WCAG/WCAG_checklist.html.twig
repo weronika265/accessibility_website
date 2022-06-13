@@ -10,9 +10,10 @@
 {% block body %}
     {% include 'header.html.twig' %}
     {% include 'sidebar.html.twig' %}
+
 {#    <main id="main" class="page"></main>#}
 
-    <main style="margin-left: 15em;">
+    <main style="margin-left: 20em;">
         <h1>Checklista wytycznych WCAG 2.1</h1>
         <p class="txt-format-main">
             <!-- Zrobić tak lub pole zaznaczone i strzałka prowadząca dalej - nie tak lepiej? -->
@@ -126,7 +127,7 @@
     <!-- Filtrowanie po poziomach? -->
     <!-- Scroll do góry wszędzie? -->
     {% block javascripts %}
-        {{ parent() }}
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
         <script>
             const checkboxesAll = $('input[type="checkbox"]');
             const checkboxAll_count = checkboxesAll.length;
@@ -151,37 +152,37 @@
                     let checkedAA_count = $('input[name="scAA"]:checked').length;
                     let checkedAAA_count = $('input[name="scAAA"]:checked').length;
 
-                    if (!completedA && checkboxA == checkedA_count) {
+                    if (!completedA && checkboxA === checkedA_count) {
                         completedA = true;
                         headerA.style.textDecoration = 'line-through';
                         successA.textContent = 'Spełniono kryteria dla poziomu A.';
                         successA.style.backgroundColor = 'yellow';
                     }
-                    else if (checkboxA != checkedA_count) {
+                    else if (checkboxA !== checkedA_count) {
                         completedA = false;
                         headerA.style.textDecoration = 'none';
                         successA.textContent = '';
                     }
 
-                    if (completedA && checkboxAA == checkedAA_count) {
+                    if (completedA && checkboxAA === checkedAA_count) {
                         completedAA = true;
                         headerAA.style.textDecoration = 'line-through';
                         successAA.textContent = 'Spełniono kryteria dla poziomu AA.';
                         successAA.style.backgroundColor = 'yellow';
                     }
-                    else if (completedA == false || checkboxAA != checkedAA_count) {
+                    else if (completedA === false || checkboxAA !== checkedAA_count) {
                         completedAA = false;
                         headerAA.style.textDecoration = 'none';
                         successAA.textContent = '';
                     }
 
-                    if (completedA && completedAA && checkboxAAA == checkedAAA_count) {
+                    if (completedA && completedAA && checkboxAAA === checkedAAA_count) {
                         completedAAA = true;
                         headerAAA.style.textDecoration = 'line-through';
                         successAAA.textContent = 'Spełniono kryteria dla poziomu AAA.';
                         successAAA.style.backgroundColor = 'yellow';
                     }
-                    else if (completedAA == false || checkboxAAA != checkedAAA_count) {
+                    else if (completedAA === false || checkboxAAA !== checkedAAA_count) {
                         completedAAA = false;
                         headerAAA.style.textDecoration = 'none';
                         successAAA.textContent = '';
