@@ -15,8 +15,13 @@
         <div style="margin-left: 15em;">
             <h1>Wytyczna 1.1 Alternatywa tekstowa</h1>
             <p class="txt-format-main">
-                Zapewnij tekstowe zamienniki wszystkich treści nietekstowych, aby można je było zamienić na inne formy
-                (np. powiększony druk, brajl, mowa syntetyczna, symbole lub prostszy język).
+                Wszystkie treści, które nie są tekstem, powinny mieć tekstowe zamienniki. Dzięki temu można je zamienić na inne formy, takie jak:
+                <ul>
+                    <li>powiększony druk,</li>
+                    <li>Braille,</li>
+                    <li>mowa syntetyczna,</li>
+                    <li>symbole.</li>
+                </ul>
             </p>
             <div id="table-of-content">
                 <h2>Spis treści</h2>
@@ -28,13 +33,17 @@
                 <h3 id="1_1_1">Kryterium sukcesu 1.1.1 Treść nietekstowa (Poziom A)</h3>
                 <p class="txt-format">
                     Do elementów, które nie są tekstem, musisz dodać tekstową alternatywę.
-                    W zależności od elementu tekst ma opisywać, co pokazuje element, czym jest element lub co robi.
-                    Dzięki temu technologie asystujące (czytnik tekstu, czytnik Braille'a) mogą przeczytać zawartość.
+                    Tekst ma opisywać:
+                    <ul>
+                        <li>co przedstawia element,</li>
+                        <li>jaka jest funkcja elementu.</li>
+                    </ul>
+                    Tekst pisany rozpoznają technologie asystujące: czytniki tekstu, czytniki Braille'a. Mogą one przeczytać zawartość użytkownikowi.
                 </p>
                 <p>
                     <p>
-                        Grafika wyświetlana: <img src="{{ asset('img/thumbs-up.png') }}" alt="Kciuk uniesiony w górę." style="width: 250px; height: 250px;"/>
-                        Grafika niewyświetlana: <img src="" alt="Kciuk uniesiony w górę." style="width: 250px; height: 250px;"/><br/>
+                        Grafika wyświetlana: <img src="{{ asset('img/thumbs-up.png') }}" alt="Kciuk uniesiony w górę." style="width: 250px; height: 250px;"/><br/><br/>
+                        Grafika niewyświetlana: <img src="" alt="Kciuk uniesiony w górę." style="width: 250px; height: auto;"/><br/><br/>
                         <code>
                             &lt;img src="thumbs-up.png" alt="Kciuk uniesiony w górę." /&gt;
                         </code>
@@ -51,13 +60,14 @@
                 <div class="indent" style="flex-wrap: wrap;">
                     {% for comment in pagination.items %}
 {#                        {% if comment.is_accepted %}#}
+                        {% if comment.content.category == 'eos' %}
                             <section class="opinion">
                                 <span class="user-info">{{ comment.author.username }}, {{ comment.date|date('Y/m/d') }}</span>
                                 <div class="message-style">
                                     {{ comment.message }}
                                 </div>
                             </section>
-{#                        {% endif %}#}
+                        {% endif %}
                     {% endfor %}
                 </div>
             {% else %}
@@ -88,7 +98,7 @@
                 <div>{{ form_label(form.message) }}</div>
                 <div>{{ form_widget(form.message, { 'attr': {'rows' : '6', 'cols' : '60'} } ) }}</div>
                 <div>
-                    <input type="submit" value="{{ 'Dodaj opinię' }}" class="center-item-opinion" style="padding: 0.5em 3em; margin-top: 1em; cursor: pointer;"/>
+                    <input type="submit" value="{{ 'Dodaj komentarz' }}" class="center-item-opinion" style="padding: 0.5em 3em; margin-top: 1em; cursor: pointer;"/>
                 </div>
                 {{ form_end(form) }}
             {% endif %}

@@ -5,7 +5,14 @@
 
 namespace App\Controller;
 
+use App\Entity\Comment;
+use App\Entity\Content;
+use App\Form\Type\CommentType;
 use App\Repository\CommentRepository;
+use App\Repository\ContentRepository;
+use App\Repository\OpinionRepository;
+use Doctrine\Persistence\ManagerRegistry;
+use Entity\Category;
 use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -19,6 +26,34 @@ use Symfony\Component\Routing\Annotation\Route;
  */
 class wcagController extends AbstractController
 {
+
+    /**
+     * Opinion repository.
+     *
+     * @var CommentRepository
+     */
+    private CommentRepository $commentRepository;
+
+//    /**
+//     * Content repository.
+//     *
+//     * @var ContentRepository
+//     */
+//    private ContentRepository $contentRepository;
+
+    private ManagerRegistry $doctrine;
+
+
+//    Add Content Repository
+    /**
+     * Contructor.
+     */
+    public function __construct(CommentRepository $commentRepository)
+    {
+        $this->commentRepository = $commentRepository;
+//        $this->contentRepository = $contentRepository;
+    }
+
     /**
      * Strona Dla twórcy.
      *
@@ -55,12 +90,16 @@ class wcagController extends AbstractController
         );
     }
 
+
 //    KRYTERIA
+
+//    setCategory()
     /**
      * 1.1 Alternatywa tekstowa
      *
      * @param Request $request HTTP request
      * @param CommentRepository $commentRepository Comment repository
+     * @param ContentRepository $contentRepository Content repository
      *
      * @return Response HTTP response
      *
@@ -70,7 +109,7 @@ class wcagController extends AbstractController
      *     name="alt-txt_index",
      * )
      */
-    public function altTxt(Request $request, CommentRepository $commentRepository, PaginatorInterface $paginator): Response
+    public function altTxt(Request $request, CommentRepository $commentRepository, ContentRepository $contentRepository, PaginatorInterface $paginator): Response
     {
 //        $comments = $commentRepository->queryAll();
 
@@ -80,9 +119,32 @@ class wcagController extends AbstractController
             CommentRepository::PAGINATOR_ITEMS_PER_PAGE
         );
 
+//        $content = $this->contentRepository->findOneById(11);
+
+        $user = $this->getUser();
+        $comment = new Comment();
+        $comment->setAuthor($user);
+
+//        $comment->setContent($content);
+
+//        $comment->setContent($content_name); // w setContent musi byc obiekt Content (czyli w zmiennej $content_name)
+        $form = $this->createForm(CommentType::class, $comment);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $this->save($comment);
+
+            $this->addFlash('success', 'Utworzono Komentarz. Czekaj na zatwierdzenie przez administratora.');
+
+            return $this->redirectToRoute('alt-txt_index');
+        }
+
         return $this->render(
             'WCAG/WCAG_success_criteria/1_1_alt-txt.html.twig',
-            ['pagination' => $pagination]
+            [
+                'pagination' => $pagination,
+                'form' => $form->createView()
+            ]
         );
     }
 
@@ -445,5 +507,96 @@ class wcagController extends AbstractController
         return $this->render(
             'WCAG/WCAG_success_criteria/examples/3_2_1_zly.html.twig',
         );
+    }
+
+//  KOMENTARZE
+    /**
+     * Save entity.
+     *
+     * @param Comment $comment Opinion entity
+     */
+    public function save(Comment $comment): void
+    {
+        if ($comment->getId() == null) {
+            $comment->setDate(new \DateTimeImmutable());
+            $comment->setIsAccepted(0);
+        }
+        $comment->setDate(new \DateTimeImmutable());
+        $comment->setIsAccepted(0);
+
+        $this->commentRepository->save($comment);
+    }
+
+    /**
+     * Save entity.
+     *
+     * @param Comment $comment Opinion entity
+     */
+    public function accept(Comment $comment): void
+    {
+        if ($comment->getId() == null) {
+            $comment->setIsAccepted(1);
+        }
+        $comment->setIsAccepted(1);
+
+        $this->commentRepository->save($comment);
+    }
+
+    /**
+     * Save entity.
+     *
+     * @param Comment $comment Opinion entity
+     *
+     * @throws \Doctrine\ORM\ORMException
+     * @throws \Doctrine\ORM\OptimisticLockException
+     */
+    public function delete(Comment $comment): void
+    {
+        $this->commentRepository->delete($comment);
+    }
+
+    /**
+     * Usuń opinię
+     *
+     * @param \Symfony\Component\HttpFoundation\Request $request HTTP Request
+     *
+     * @return \Symfony\Component\HttpFoundation\Response HTTP response
+     *
+     * @throws \Doctrine\ORM\ORMException
+     * @throws \Doctrine\ORM\OptimisticLockException
+     *
+     * @Route(
+     *     "/admin/delete/{id}",
+     *     methods={"GET", "DELETE"},
+     *     name="comment_delete",
+     * )
+     */
+    public function adminDelete(Request $request, Comment $comment): Response
+    {
+        $this->delete($comment);
+        $this->addFlash('success', 'Odrzucono komentarz');
+
+        return $this->redirectToRoute('admin_index');
+    }
+
+    /**
+     * Zaakceptuj opinie
+     *
+     * @param Request $request HTTP Request
+     *
+     * @return Response HTTP response
+     *
+     * @Route(
+     *     "/admin/accept/{id}",
+     *     methods={"GET", "PUT"},
+     *     name="comment_accept",
+     * )
+     */
+    public function adminAccept(Request $request, Comment $comment): Response
+    {
+        $this->accept($comment);
+        $this->addFlash('success', 'Zaakceptowano komentarz');
+
+        return $this->redirectToRoute('admin_index');
     }
 }

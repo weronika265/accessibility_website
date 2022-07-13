@@ -64,7 +64,6 @@ $(document).ready(function() {
     });
 
     $(smallFont).click(function() {
-        console.log('x');
         $('html').css('font-size', '0.7em');
         fontSize = 'small';
         localStorage.setItem('fontSize', fontSize);

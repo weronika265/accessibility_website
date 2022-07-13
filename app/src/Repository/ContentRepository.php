@@ -18,33 +18,48 @@ use Doctrine\Persistence\ManagerRegistry;
  */
 class ContentRepository extends ServiceEntityRepository
 {
+//    /**
+//     * Content repository.
+//     */
+//    private ContentRepository $contentRepository;
+
+    //    Add Content Repository
     public function __construct(ManagerRegistry $registry)
     {
         parent::__construct($registry, Content::class);
+//        $this->contentRepository = $contentRepository;
     }
+
+//    /**
+//     * Find by Id.
+//     *
+//     * @param int $id Content Id
+//     *
+//     * @return Content|null Content entity
+//     */
+//    public function findOneById(int $id): ?Content
+//    {
+//        return $this->contentRepository->findOneById($id);
+//    }
 
     /**
      * @throws ORMException
      * @throws OptimisticLockException
      */
-    public function add(Content $entity, bool $flush = true): void
+    public function add(Content $entity): void
     {
         $this->_em->persist($entity);
-        if ($flush) {
             $this->_em->flush();
-        }
     }
 
     /**
      * @throws ORMException
      * @throws OptimisticLockException
      */
-    public function remove(Content $entity, bool $flush = true): void
+    public function remove(Content $entity): void
     {
         $this->_em->remove($entity);
-        if ($flush) {
             $this->_em->flush();
-        }
     }
 
     // /**
@@ -75,4 +90,51 @@ class ContentRepository extends ServiceEntityRepository
         ;
     }
     */
+
+    /**
+     * Data.
+     *
+     * @var array<int, array<string, mixed>>
+     */
+    private array $data = [
+        1 => '1.1',
+        2 => '1.2',
+        3 => '1.3',
+        4 => '1.4',
+        5 => '2.1',
+        6 => '2.2',
+        7 => '2.3',
+        8 => '2.4',
+        9 => '2.5',
+        10 => '3.1',
+        11 => '3.2',
+        12 => '3.3',
+        13 => '4.1',
+    ];
+
+    /**
+     * Find all.
+     *
+     * @return array[] Result
+     *
+     * @psalm-return array<int, array<string, mixed>>
+     */
+    public function findAllEntries(): array
+    {
+        return $this->data;
+    }
+
+    /**
+     * Find one by Id.
+     *
+     * @param int $id Id
+     *
+     * @return array<string, mixed>|null Result
+     */
+    public function findOneById(int $id): ?array
+    {
+        return count($this->data) && isset($this->data[$id])
+            ? $this->data[$id]
+            : null;
+    }
 }

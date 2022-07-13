@@ -116,7 +116,7 @@ class OpinionController extends AbstractController
      *
      * @return \Symfony\Component\HttpFoundation\Response HTTP response
      *
-     * throws \Doctrine\ORM\ORMException
+     * @throws \Doctrine\ORM\ORMException
      * @throws \Doctrine\ORM\OptimisticLockException
      *
      * @Route(
@@ -174,8 +174,4 @@ class OpinionController extends AbstractController
 
             return $this->redirectToRoute('admin_index');
     }
-//    TODO:
-//    ZROBIĆ BEZPIECZNE USUWANIE, NIE PO LINKACH
-//    Display only accepted comments.
-//    If send -> save and display only form admin -> if accepted [display] -> if not accepted [delete]
 }

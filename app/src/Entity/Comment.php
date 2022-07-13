@@ -6,6 +6,7 @@
 
 namespace App\Entity;
 
+use DateTimeImmutable;
 use DateTimeInterface;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
@@ -55,14 +56,13 @@ class Comment
     /**
      * Date.
      *
-     * @var DateTimeInterface
+     * @var DateTimeImmutable|null
      *
-     * @ORM\Column(type="datetime")
+     * @psalm-suppress PropertyNotSetInConstructor
      *
-     * @ORM\Column(type="datetime")
-     * @Assert\NotBlank
+     * @ORM\Column(type="datetime_immutable")
      */
-    private $date;
+    private ?DateTimeImmutable $date;
 
     /**
      * Location of the message.
@@ -86,7 +86,7 @@ class Comment
      *     type="boolean",
      * )
      */
-    private $is_accepted;
+    public $is_accepted;
 
     /**
      * Author.
@@ -137,9 +137,9 @@ class Comment
     /**
      * Getter for the date.
      *
-     * @return DateTimeInterface|null Date
+     * @return DateTimeImmutable|null Date
      */
-    public function getDate(): ?DateTimeInterface
+    public function getDate(): ?DateTimeImmutable
     {
         return $this->date;
     }
@@ -147,9 +147,9 @@ class Comment
     /**
      * Setter for the date.
      *
-     * @param DateTimeInterface $date Date
+     * @param DateTimeImmutable $date Date
      */
-    public function setDate(DateTimeInterface $date): void
+    public function setDate(DateTimeImmutable $date): void
     {
         $this->date = $date;
     }

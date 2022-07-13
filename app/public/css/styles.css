@@ -3,18 +3,18 @@
 /* strona główna + base */
 html,
 body {
+    scroll-behavior: smooth;
     margin: 0;
     padding: 0;
-    /* height: 100%; */
+    /* Footer at bottom */
+    /*height: 100%;*/
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    scroll-behavior: smooth;
 }
 h1 {
     font-family: "DM Sans", sans-serif;
     font-size: 3em;
-    -webkit-text-stroke: 0.5px black;
     text-align: center;
     margin: 0 auto;
     padding-top: 1em;
@@ -22,7 +22,6 @@ h1 {
 h2 {
     font-family: 'Assistant', serif;
     font-weight: 600;
-    -webkit-text-stroke: 0.5px black;
     font-size: 2.4em;
     margin-block-start: 0.55em;
     margin-block-end: 0.55em;
@@ -121,7 +120,7 @@ nav {
 .image {
     object-fit: cover;
     border-radius: 20px;
-    width: 385px;
+    max-width: 385px;
     height: 356px;
     margin-top: 0.5em;
 }
@@ -134,8 +133,8 @@ nav li {
     display: flex;
     flex-direction: column;
     max-width: 1100px;
-    padding-right: 15px;
-    padding-left: 15px;
+    /*padding-right: 15px;*/
+    /*padding-left: 15px;*/
     margin-right: auto;
     margin-left: auto;
     width: 100%;
@@ -177,11 +176,11 @@ article li,
 .content-right,
 .blank {
     margin-bottom: 20px;
-    width: 100%;
+    /*width: 100%;*/
     padding-right: 5em;
     padding-left: 5em;
-    margin-right: auto;
-    margin-left: auto;
+    /*margin-right: auto;*/
+    /*margin-left: auto;*/
 }
 .btn-description {
     display: flex;
@@ -190,18 +189,23 @@ article li,
     padding-bottom: 3em;
 }
 .btn-description p {
-    width: 25em;
+    /*width: 25em;*/
+    max-width: 25em;
     margin-right: 3.5em;
 }
 .btn-description button {
     border: none;
-    width: 17.3em;
+    max-width: 17.3em;
 }
 footer {
     margin-top: auto;
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;
+    /* Footer at bottom */
+    /*width: 100%;*/
+    /*position: absolute;*/
+    /*bottom: 0;*/
 }
 .data {
     background-color: #66b4d85e;
@@ -402,13 +406,13 @@ form {
     background-color: #4A9CE0;
     border-radius: 10px;
     padding: 0.5em 1em;
-    margin-bottom: 1.5em;
+    /*margin-bottom: 1.5em;*/
 }
 .message-style {
     background-color: #4A9CE0;
     border-radius: 10px;
     padding: 0.5em 1em;
-    margin-bottom: 1.5em;
+    margin-bottom: 0.5em;
 }
 .message-action-accept {
     background-color: #2d782d;
@@ -437,9 +441,13 @@ form {
     font-family: 'DM Sans', serif;
     font-size: 0.92em;
 }
-.inline-form-text strong {
-    color: #207ECC
+span.inline-form-text strong a {
+    color: #207ECC;
 }
+/* TODO: hover color not working - another style interfering? */
+/*.inline-form-text strong a:hover {*/
+/*    color: #207ECC;*/
+/*}*/
 #reg-log {
     display: flex;
     border: 1px solid black;
@@ -465,6 +473,7 @@ form {
 /* Footer nieresponsywny - naprawić */
 #reg-log form {
     margin-left: 0;
+
 }
 
 #a11y-options {
@@ -832,4 +841,121 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
+}
+
+/*.opinions-disabled {*/
+/*    color: blue;*/
+/*    text-decoration: underline;*/
+/*    cursor: pointer;*/
+/*}*/
+/*.opinions-disabled:hover {*/
+/*    font-weight: bold;*/
+/*}*/
+
+/*.comments-enabled, .opinions-enabled {*/
+/*    display: none;*/
+/*}*/
+/*.comments-close, .opinions-close {*/
+/*    display: inline-block;*/
+/*    color: blue;*/
+/*    text-decoration: underline;*/
+/*    cursor: pointer;*/
+/*}*/
+
+
+/* RESPONSIVE */
+@media screen and (max-width: 1000px) {
+    nav {
+        display: none;
+    }
+}
+@media screen and (max-width: 1140px) {
+    #beginning {
+        flex-flow: column-reverse;
+        align-items: center;
+        margin-left: 0;
+        width: auto;
+        max-width: 1100px;
+    }
+    .btn-description {
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    #how-to-use {
+        justify-content: normal;
+        margin-bottom: 20px;
+        padding-right: 5em;
+        padding-left: 5em;
+        display: block;
+    }
+    .content-left {
+        width: auto;
+        padding-right: 5em;
+        padding-left: 5em;
+        display: block;
+    }
+}
+@media screen and (max-width: 570px) {
+    .btn-description p {
+        margin-right: 0;
+    }
+    #how-to-use p {
+        margin-bottom: 0.5em;
+    }
+    #user-actions {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    #target {
+        margin-left: unset;
+        margin-right: unset;
+        padding-right: 5em;
+        padding-left: 5em;
+    }
+}
+@media screen and (max-width: 400px) {
+    .image {
+        max-width: 100%;
+        height: auto;
+    }
+}
+@media screen and (max-width: 460px) {
+    #reg-log, #reg-log form {
+        max-width: 100%;
+        height: auto;
+        border: none;
+    }
+    input {
+        max-width: 100%;
+        height: auto;
+    }
+}
+/**:focus {*/
+/*    outline: black;*/
+/*    */
+/*}*/
+
+/* ADMIN */
+div.opinions-enabled, div.comments-enabled {
+    display: none;
+}
+button.opinions-edit, button.comments-edit {
+    /*width: 2.8em;*/
+}
+button.opinions-edit, button.comments-edit, button.opinions-close, button.comments-close {
+    cursor: pointer;
+    background-color: gray;
+    padding: 0.7em;
+    border-radius: 5px;
+    font-family: 'Assistant', serif;
+    font-size: 18px;
+}
+div.opinions-enabled, div.comments-enabled{
+    display: none;
+    cursor: pointer;
+}
+button.opinions-close, button.comments-close {
+    display: none;
+    /*width: 3.4em;*/
 }

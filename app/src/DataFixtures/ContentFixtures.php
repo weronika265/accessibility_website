@@ -24,7 +24,7 @@ class ContentFixtures extends AbstractBaseFixtures
      */
     public function loadData(): void
     {
-        $this->createMany(10, 'content', function (int $i) {
+        $this->createMany(13, 'content', function (int $i) {
             $content = new Content();
             $content->setCategory($this->faker->word);
 

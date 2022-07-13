@@ -10,9 +10,15 @@
 
         <article>
             <h2>Dostępne opinie o serwisie</h2>
-            {% if pagination is defined and pagination.items|length %}
+            {% if pagination_opinions is defined and pagination_opinions.items|length %}
                 <div class="indent" style="flex-wrap: wrap;">
-                    {% for opinion in pagination.items %}
+                    <button class="message-action-space opinions-edit">
+                        Zarządzaj dostępnymi opiniami
+                    </button>
+                    <button class="message-action-space opinions-close">
+                        Zamknij
+                    </button>
+                    {% for opinion in pagination_opinions.items %}
                         {% if not opinion.is_accepted %}
                             <section id="opinions" class="opinion">
                                 <span class="user-info">{{ opinion.author.username }}, {{ opinion.date|date('Y/m/d') }}</span>
@@ -20,9 +26,15 @@
                                     <div class="message-style" style="margin-top: 0.2em;">
                                         {{ opinion.message }}
                                     </div>
-                                    <div class="message-action-space">
-                                        <a href="{{ url('opinion_delete', {id: opinion.id}) }}" class="message-action-delete" data-id="{{ opinion.id }}">Odrzuć</a>
-                                        <a href="{{ url('opinion_accept', {id: opinion.id}) }}" class="message-action-accept" data-id="{{ opinion.id }}">Zaakceptuj</a>
+{#                                    <div class="message-action-space opinions-edit">#}
+{#                                        Edytuj#}
+{#                                    </div>#}
+                                    <div class="message-action-space opinions-enabled">
+                                        <a href="{{ url('opinion_accept', {id: opinion.id}) }}" onclick="return confirm('Czy na pewno chcesz zaakceptować opinię?')" class="message-action-accept" data-id="{{ opinion.id }}">Zaakceptuj</a>
+                                        <a href="{{ url('opinion_delete', {id: opinion.id}) }}" onclick="return confirm('Czy na pewno chcesz usunąć opinię?')" class="message-action-delete" data-id="{{ opinion.id }}">Odrzuć</a>
+{#                                        <div class="message-action-space opinions-close">#}
+{#                                            Zamknij#}
+{#                                        </div>#}
                                     </div>
                                 </div>
 {#                                <form method="post">#}
@@ -53,51 +65,102 @@
                 </div>
             {% endif %}
             <div>
-                {{ knp_pagination_render(pagination) }}
+                {{ knp_pagination_render(pagination_opinions) }}
             </div>
         </article>
 
-{#        <article>#}
-{#                <div class="indent" style="flex-wrap: wrap;">#}
-{#                {% if comments is defined and comments|length %}#}
-{#                    {% for comment in comments %}#}
-{#                            <section id="opinions" class="opinion" style="background-color: lightgray; margin-bottom: 1.2em;">#}
-{#                                <inline class="user-info">{{ comment.author.username }}, {{ comment.date|date('Y/m/d') }}, {{ comment.content.category }}</inline>#}
-{#                                <div class="message-style">#}
-{#                                    {{ comment.message }}#}
-{#                                </div>#}
-{#                                <a href="{{ url('comment_delete', {id: comment.id}) }}" class="delete-opinion" data-id="{{ comment.id }}" style="background-color: darkred; padding: 0.5em;">Odrzuć</a>#}
-{#                                <a href="{{ url('comment_accept', {id: comment.id}) }}" class="delete-opinion" data-id="{{ comment.id }}" style="background-color: lightgreen; padding: 0.5em;">Zaakceptuj</a>#}
-{#                                #}{#                                <form method="post">#}
-{#                                #}{#                                    <input type="button" id="akceptuj" name="akceptuj" value="Akceptuj" style="cursor: pointer; background-color: lightgreen;"/>#}
-{#                                #}{#                                    <input type="button" id="odrzuc" name="odrzuc" value="Odrzuć" style="cursor: pointer; background-color: lightcoral;"/>#}
-{#                                #}{#                                </form>#}
-
-{#                                #}{# !!! CURRENT #}
-{#                                #}{#                                {{ form_start(form) }}#}
-{#                                #}{#                                {{ form_widget(form) }}#}
-{#                                #}{#                                <div class="form-group row float-sm-right">#}
-{#                                #}{#                                    <input type="button" id="akceptuj" name="akceptuj" value="Akceptuj" style="cursor: pointer; background-color: lightgreen;"/>#}
-{#                                #}{#                                    <input type="submit" id="odrzuc" name="odrzuc" value="Odrzuć" style="cursor: pointer; background-color: lightcoral;"/>#}
-{#                                #}{#                                </div>#}
-{#                                #}{#                                {{ form_end(form) }}#}
-{#                                #}{# !!! CURRENT #}
-
-{#                                #}{#                                <form method="post">#}
-{#                                #}{#                                    <input type="button" id="odrzuc" name="odrzuc" value="Odrzuć" style="cursor: pointer; background-color: lightcoral;"/>#}
-{#                                #}{#                                </form>#}
-{#                            </section>#}
-{#                    {% endfor %}#}
-{#                </div>#}
-{#            {% else %}#}
-{#                <div>#}
-{#                    {{ 'Brak opinii do zmoderowania' }}#}
-{#                </div>#}
-{#            {% endif %}#}
-{#        </article>#}
+        <article>
+            <h2>Dostępne komentarze</h2>
+            {% if pagination_comments is defined and pagination_comments.items|length %}
+                <div class="indent" style="flex-wrap: wrap;">
+                    <button class="message-action-space comments-edit">
+                        Zarządzaj dostępnymi komentarzami
+                    </button>
+                    <button class="message-action-space comments-close">
+                        Zamknij
+                    </button>
+                    {% for comment in pagination_comments.items %}
+                        {% if not comment.is_accepted %}
+                            <section id="opinions" class="opinion">
+                                <span class="user-info">{{ comment.author.username }}, {{ comment.date|date('Y/m/d') }}</span>
+                                <div style="display: flex;">
+                                    <div class="message-style">
+                                        {{ comment.message }}
+                                    </div>
+{#                                    <div class="message-action-space comments-edit">#}
+{#                                        Edytuj#}
+{#                                    </div>#}
+                                    <div class="message-action-space comments-enabled">
+                                        <a href="{{ url('comment_accept', {id: comment.id}) }}" onclick="return confirm('Czy na pewno chcesz zaakceptować komentarz?')" class="message-action-accept" data-id="{{ comment.id }}">Zaakceptuj</a>
+                                        <a href="{{ url('comment_delete', {id: comment.id}) }}" onclick="return confirm('Czy na pewno chcesz usunąć komentarz?')" class="message-action-delete" data-id="{{ comment.id }}">Odrzuć</a>
+{#                                        <div class="message-action-space comments-close">#}
+{#                                            Zamknij#}
+{#                                        </div>#}
+                                    </div>
+                                </div>
+                            </section>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            {% else %}
+                <div>
+                    {{ 'Brak komentarzy do zmoderowania' }}
+                </div>
+            {% endif %}
+            <div>
+                {{ knp_pagination_render(pagination_comments) }}
+            </div>
+        </article>
 
     </main>
     {% include 'footer.html.twig' %}
+
+    {% block javascripts %}
+        <script>
+            const opinions_enabled = document.querySelector('.opinions-enabled');
+            const opinions_edit = document.querySelector('.opinions-edit');
+            const opinions_close = document.querySelector('.opinions-close');
+            const comments_enabled = document.querySelector('.comments-enabled');
+            const comments_edit = document.querySelector('.comments-edit');
+            const comments_close = document.querySelector('.comments-close');
+
+            const opinions = $('.opinions-enabled:hidden');
+            const comments = $('.comments-enabled:hidden');
+
+            $(document).ready(function() {
+                opinions_edit.addEventListener('click', function () {
+                    opinions_edit.style.display = 'none';
+                    opinions_close.style.display = 'block';
+                    for(let i of opinions) {
+                        i.style.display = 'block';
+                    }
+                });
+                opinions_close.addEventListener('click', function () {
+                    opinions_edit.style.display = 'block';
+                    opinions_close.style.display = 'none';
+                    for(let i of opinions) {
+                        i.style.display = 'none';
+                    }
+                });
+
+                comments_edit.addEventListener('click', function () {
+                    comments_edit.style.display = 'none';
+                    comments_close.style.display = 'block';
+                    for(let i of comments) {
+                        i.style.display = 'block';
+                    }
+                });
+
+                comments_close.addEventListener('click', function () {
+                    comments_edit.style.display = 'block';
+                    comments_close.style.display = 'none';
+                    for(let i of comments) {
+                        i.style.display = 'none';
+                    }
+                });
+            });
+        </script>
+    {% endblock %}
 
 {#    {% block javascripts %}#}
 {#        <script>#}

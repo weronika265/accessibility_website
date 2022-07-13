@@ -13,7 +13,7 @@
     <main id="main" class="page">
         <div style="margin-left: 15em;">
             <h1>Wytyczna 1.3 Możliwość adaptacji</h1>
-            <p class="txt-format-main">Twórz treści, które mogą być prezentowane na różne sposoby bez utraty informacji czy struktury.</p>
+            <p class="txt-format-main">Twórz treści, które mogą być prezentowane na różne sposoby, bez utraty informacji czy struktury.</p>
             <div id="table-of-content">
                 <h2>Spis treści</h2>
                 <ul>
@@ -28,20 +28,19 @@
             <div>
                 <h3 id="1_3_1">Kryterium sukcesu 1.3.1 Informacje i relacje (Poziom A)</h3>
                 <p class="txt-format">
-                    Struktura strony, jej zawartość i relacje pomiędzy elementami widoczne na stronie, mają być przedstawione w formie tekstowej lub są
+                    Struktura strony, jej zawartość i relacje pomiędzy elementami mają być przedstawione w formie tekstowej lub są
                     <strong>określone programowo</strong>. Oznacza to, że mają być obsługiwane przez technologie asystujące.
                 </p>
                 <p class="txt-format">
                     Zazwyczaj treści określone programowo są lepsze od tekstu.
                 </p>
                 <p class="txt-format">
-                    Taki sposób prezentacji pozwala zrozumieć treść zarówno w przypadku, kiedy ktoś widzi stronę i jej nie widzi (osoby niewidome).<br/>
-                    Przykładowo, część użytkowników ważnye informacje będzie szukać po kolorze czerwonym.
-                    Inni będą kierowali się oznaczniem "*" lub "Wymagane".
+                    Ten sposób prezentacji pozwala zrozumieć treść zarówno w przypadku, kiedy ktoś widzi stronę, jak i jej nie widzi (osoby niewidome).<br/>
+                    Przykładowo, część użytkowników ważne informacje będzie szukać po kolorze czerwonym.
+                    Inni będą kierowali się oznaczeniem "*" lub "Wymagane".
                 </p>
                 <p class="txt-format">
-                    Część użytkowników będzie postrzegała stronę wizualnie, a inne osoby będą rozumiały ją przez układ list, nagłówków, akapitów.<br/>
-                    Dzięki temu każdy może zrozumieć treść strony.
+                    Część użytkowników będzie oglądać stronę, a inne osoby będą rozumiały ją przez układ list, nagłówków, akapitów.<br/>
                 </p>
                 <p>
                 <div style="border: 2px solid red;">
@@ -125,7 +124,7 @@
                     W przeciwnym przypadku część użytkowników może nie zrozumieć przekazu, przez złą kolejność odczytywania zawartości.
                 </p>
                 <p class="txt-format">
-                    Dzięki klejności określonej programowo, użytkownicy z różnymi problemami mogą zapoznać się z treścią w sposób zamierzony przez twórcę.
+                    Dzięki kolejności określonej programowo, użytkownicy z różnymi problemami mogą zapoznać się z treścią w sposób zamierzony przez twórcę.
                 </p>
                 <a href="{{ url('_1_3_2_dobry') }}" style="color: blue;">Dobra implementacja</a>
                 <a href="{{ url('_1_3_2_zly') }}" style="color: blue;">Zła implementacja</a><br/>
@@ -142,7 +141,7 @@
                     <li>lokalizacja na stronie,</li>
                     <li>dźwięk.</li>
                 </ul>
-                Część osób nie rozpoznaje kolorów lub używa z technologii asystujących, które korzytają ze struktury strony i ją "czytają".
+                Część osób nie rozpoznaje kolorów lub używa z technologii asystujących, które korzystają ze struktury strony i ją "czytają".
                 Taki użytkownik nie będzie widział kształtu czy położenia elementu na stronie.
                 Przez to nie będzie mógł go zlokalizować, co ogranicza funkcjonalności dostępne na stronie.
                 </p>
@@ -176,7 +175,7 @@
                 <p>
                     <a href="{{ url('_1_3_4_dobry') }}" style="color: blue;">Dobra implementacja</a>
                     <a href="{{ url('_1_3_4_zly') }}" style="color: blue;">Zła implementacja</a><br/>
-                    <strong>Zły i dobry przykład z rotate - wciśnij F12 i ikonę - instrukcja</strong>
+                    <strong>Zły i dobry przykład z rotate – wciśnij F12 i ikonę - instrukcja</strong>
                 </p>
             </div>
             <div>
@@ -204,7 +203,7 @@
                     Aby jeszcze dokładniej określić cel pola, trzeba skorzystać z atrybutu 'autocomplete'. Ten atrybut pozwala na dookreślenie znaczenia pola,
                     np. imienia (pierwsze, drugie, użytkownika) + wymienić inne?.<br/>
                     Atrybut 'autocomplete' pozwala także wypełnić pola wcześniej zapamiętanymi danymi. Jest to dużym ułatwieniem, również dla osób, które (:)
-                    mają problem z pamięcią lub wypełniają formularze w obcym języku - funkcjonalność ta działa niezależnie od języka strony.
+                    mają problem z pamięcią lub wypełniają formularze w obcym języku – funkcjonalność ta działa niezależnie od języka strony.
                     Pole email z autouzupełnianiem:<br/>
                     <input type="email" name="email"><br/>
                     <code>
@@ -244,7 +243,7 @@
                         </div>
                     </li>
                     <li>
-                        oznaczone obszary na stronie - użytkownik może je pomijać lub wyłączać.
+                        oznaczone obszary na stronie – użytkownik może je pomijać lub wyłączać.
                         <div>
                             <code>
                                 &lt;header&gt;&lt;/header&gt;<br/>
@@ -258,7 +257,7 @@
                                 &lt;/main&gt;<br/>
                                 &lt;footer>&lt;/footer&gt;<br/>
                             </code>
-                            <img src="{{ asset('img/html_struct.png') }}" style="width: 300px; height: 400px;" />
+                            <img src="{{ asset('img/html_struct.png') }}" style="width: 300px; height: auto;" />
                         </div>
                     </li>
                 </ul>
