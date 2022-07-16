@@ -34,67 +34,87 @@
             <div>
                 <h3 id="2_4_1">Kryterium sukcesu 2.4.1 Możliwość pominięcia bloków (Poziom A)</h3>
                 <p class="txt-format">
-                    Kiedy na Twojej stronie bloki treści na podstronach powtarzają się, pozwól użytkownikowi je pominąć.
+                    Kiedy treści na podstronach powtarzają się, pozwól użytkownikowi je pominąć.
                 </p>
                 <p class="txt-format">
-                    Część treści na stronach internetowych zazwyczaj się powtarza, takie jak menu główne czy sekcje z reklamami.
+                    Na stronie zazwyczaj będzie się powtarzać:
+                    <ul>
+                        <li>menu główne,</li>
+                        <li>sekcje z reklamami.</li>
+                    </ul>
                 </p>
                 <p class="txt-format">
-                    Użytkownik, który nie ma niepełnosprawności może pominąć takie informacje wzrokiem. Osoby niepełnosprawne mogą mieć jednak kłopot z pomijaniem
-                    bloków powtarzającej się treści.
+                    Użytkownik, który nie ma niepełnosprawności, może pominąć takie informacje wzrokiem.
                 </p>
                 <p class="txt-format">
-                    Przykładowo, osoby niewidzące, które korzystają z technologii asystujących i użytkownicy używający tylko klawiatury, aby przejść do najważniejszej treści,
-                    musieliby przebić się przez wiele linków.<br/>
-                    Rozwiązanie w postaci linku prowadzącego do głównej treści strony jest bardzo pomocne.<br/>
+                    Odbiorca niepełnosprawny może mieć jednak kłopot z pomijaniem bloków powtarzającej się treści.
+                </p>
+                <p class="txt-format">
+                    Osoby
+                    <ul>
+                        <li>niewidzące, które korzystają z technologii asystujących;</li>
+                        <li>używające tylko klawiatury,</li>
+                    </ul>
+                    aby przeczytać najważniejszą treść, musiałyby przemieścić się po wielu elementach strony.<br/>
+                    W takiej sytuacji bardzo pomocny staje się link, który prowadzi do głównej treści.<br/>
                     <img src="{{ asset('img/2_4_1.jpg') }}" /><br/>
-                    <b>Działanie linku możesz zobaczyć:</b>
+                    <b>Możesz zobaczyć, jak działa taki link:</b>
                     <ol>
                         <li>Kliknij myszą na samej górze strony,</li>
                         <li>Wciśnij klawisz Tab,</li>
                         <li>Wciśnij kombinację klawiszy 'Shift + 'Tab',</li>
-                        <li>Po otrzymaniu fokusu na widocznym linku wciśnij klawisz 'Enter'.</li>
+                        <li>Po otrzymaniu fokusu, na widocznym linku wciśnij klawisz 'Enter'.</li>
                     </ol>
                 </p>
             </div>
             <div>
                 <h3 id="2_4_2">Kryterium sukcesu 2.4.2 Tytuły stron (Poziom A)</h3>
                 <p class="txt-format">
-                    Strony internetowe powinny zawierać niepowtarzające się tytuły, które opisują temat lub cel strony.<br/>
+                    Każda podstrona ma zawierać niepowtarzający się tytuł. Tytuł opisuje i streszcza jej:
+                    <ul>
+                        <li>temat,</li>
+                        <li>cel,</li>
+                        <li>zawartość.</li>
+                    </ul>
                     <img src="{{ asset('img/2_4_2.jpg') }}" /><br/>
                     <code>
                         &lt;title&gt;2.4 Możliwość nawigacji&lt;/title&gt;
                     </code>
                 </p>
                 <p class="txt-format">
-                    Dzięki tytułom użytkownik nie będzie musiał wnioskować z treści, co zawiera odwiedzana strona.
-                    Przez to użytkownik może łatwo zorientować się, którą stronę powinien otworzyć.
+                    Osoby, które mają problem z pamięcią, podczas przeglądania mogą poczuć się zagubione.
+                    Tytuły pozwalają szybko zorientować się w obecnym położeniu na stronie.
                 </p>
                 <p class="txt-format">
-                    Pomaga to np. osobom, które mają problem z pamięcią lub czytaniem. Kiedy są zagubieni, mogą szybko dostać się do treści po jej tytule.
-                </p>
-                <p class="txt-format">
-                    Technologie asystujące czytają użytkownikom tytuły strony. Takie osoby mogą zdecydować, czy otwarta strona zawiera treść, której szukają.
+                    Technologie asystujące czytają użytkownikom tytuły strony. Takie osoby mogą zdecydować, czy otwarta strona zawiera szukaną treść.
                 </p>
             </div>
             <div>
                 <h3 id="2_4_3">Kryterium sukcesu 2.4.3 Kolejność fokusu (Poziom A)</h3>
                 <p class="txt-format">
-                    Kiedy Twoja strona może być nawigowana klawiaturą w określonej kolejności, a to wpływa na jej zrozumienie lub
-                    funkcjonalność, musisz ustalić odpowiednią kolejność fokusu na stronie.
+                    Kiedy
+                    <ol>
+                        <li>użytkownik do przemieszczania się po stronie używa klawiatury;</li>
+                        <li>kolejność czytania zawartości jest ważna,</li>
+                </ol>
+                    ustal odpowiednią kolejność fokusu na stronie.
                 </p>
                 <p class="txt-format">
-                    Kolejność możesz narzucić przez użycie atrybutu tabindex w znaczniku HTML.
+                    Kolejność możesz narzucić przez użycie atrybutu <i>tabindex</i> w znaczniku HTML elementu.
                 </p>
                 <p class="txt-format">
-                    Pozwala to użytkownikom, którzy korzystają z klawiatury lub innego interfejsu, na zapoznanie się z treścią
-                    w logicznej kolejności, często ustalonej przez twórcę, czyli Ciebie.<br/>
-                    Nie zawsze trzeba ją ustawiać, jednak warto przetestować stronę i zobaczyć, czy nawigacja jest zrozumiała i odpowiada naszej wizji.
+                    Odpowiednia kolejność pozwala użytkownikowi na zapoznanie się z treścią w logicznej kolejności.
                 </p>
                 <p class="txt-format">
-                    Odpowiednia kolejność nie zdezorientuje odbiorcy, który nie przewidział niestandardowego układu treści na stronie.
-                    Nie sprawi także, że użytkownik będzie korzystał ze strony w sposób nieprzewidziany.<br/>
-                    Niewidomi użytkownicy natomiast mogą wyobrazić sobie stronę jako przewidywalną całość.
+                    Nie trzeba jej zawsze ustawiać, jednak warto przetestować stronę i zobaczyć, czy nawigacja jest zrozumiała i zgodna z naszą wizją.
+                </p>
+                <p class="txt-format">
+                    Odpowiednia kolejność sprawi, że:
+                    <ul>
+                        <li>odbiorca nie będzie zdezorientowany przez niestandardowy układ treści;</li>
+                        <li>użytkownik nie będzie korzystał ze strony w sposób nieprzewidziany;</li>
+                        <li>niewidomi użytkownicy mogą wyobrazić sobie stronę jako przewidywalną całość.</li>
+                    </ul>
                 </p>
                 <p>
                     <a href="{{ url('_2_4_3_example') }}" style="color: blue;">Przykład</a><br/>
@@ -103,12 +123,20 @@
             <div>
                 <h3 id="2_4_4">Kryterium sukcesu 2.4.4 Cel łącza (w kontekście) (Poziom A)</h3>
                 <p class="txt-format">
-                    Cel linków ma wynikać z ich treści lub z kontekstu, w którym są umieszczone.<br/>
-                    Nie uwzględnia to łączy, które i tak byłyby niezrozumiałe lub mają być tajemnicą dla odbiorcy, dopóki nie zostaną załadowane.
+                    Cel linku ma wynikać z jego:
+                    <ul>
+                        <li>treści,</li>
+                        <li>kontekstu, w którym został umieszczony.</li>
+                    </ul>
+                    Nie uwzględnia to łączy, gdzie:
+                    <ul>
+                        <li>mimo opisu, cel łącza nadal nie będzie zrozumiały;</li>
+                        <li>łącze zawiera informacje, które powinny zostać tajemnicą do czasu otwarcia.</li>
+                    </ul>
                 </p>
                 <p class="txt-format">
-                    Odpowiedni opis linków pozwoli na zorientowanie się, dokąd prowadzi link.
-                    Użytkownicy, którzy korzystają z czytników treści, mogą też zdecydować, czy chcą odwiedzić link, czy go pominąć.
+                    Odpowiedni opis linku pozwala określić, dokąd on prowadzi.
+                    Użytkownicy, którzy korzystają z czytników treści, mogą zdecydować, czy chcą odwiedzić link, czy go pominąć.
                 </p>
                 <p class="txt-format">
                     Linki mogą zostać umieszczone w kontekście (blok tekstu, element listy, komórka w tabeli).
@@ -118,9 +146,7 @@
                     Kiedy link prowadzi do aplikacji lub dokumentu, wystarczy, że link opiszesz nazwą tej aplikacji lub dokumentu.
                 </p>
                 <p class="txt-format">
-                    Warto łączyć tytuły stron z linkami, które do nich prowadzą.
-                    Kiedy na stronie dodajesz link prowadzący do dokumentu, obie treści powinny być powiązane.
-                    To sprawi, że zachowasz ciągłość przy nawigacji między zawartością podstron.
+                    Warto zachować spójność w nazewnictwie tytułów stron i linków, które do tych stron prowadzą.
                 </p>
                 <p>
                     Przykładowo:<br/>
@@ -131,13 +157,13 @@
             <div>
                 <h3 id="2_4_5">Kryterium sukcesu 2.4.5 Wiele dróg (Poziom AA)</h3>
                 <p class="txt-format">
-                    Istnieje wiele dróg, aby dostać się do strony w serwisie internetowym lub aplikacji. Nie dotyczy to sytuacji, kiedy strona jest
-                    wynikiem procedury lub jednym z jej etapów.<br/>
+                    Istnieje wiele dróg, aby dostać się do konkretnej podstrony w serwisie internetowym lub aplikacji.<br/>
+                    Nie dotyczy to sytuacji, kiedy strona jest wynikiem operacji lub jednym z jej etapów.<br/>
                     <img src="{{ asset('img/rozne_miejsca.jpg') }}" style="width: 300px; height: auto;" />
                 </p>
                 <p class="txt-format">
-                    Jeśli zaprojektujesz serwis w powyższy sposób, użytkownicy mogą korzystać z treści według własnych potrzeb.
-                    Użytkownik może korzystać z różnych narzędzi i sposobów przeglądania, takich jak:
+                    Jeśli zaprojektujesz serwis w powyższy sposób, odbiorcy będą mogli z niego korzystać według własnych potrzeb.
+                    Użytkownik może używać różnych narzędzi i sposobów przeglądania, takich jak:
                 <ul>
                     <li>wyszukiwarka treści na stronie,</li>
                     <li>mapa serwisu, która umożliwia przegląd treści,</li>
@@ -146,9 +172,9 @@
                 <img src="{{ asset('img/searchbar.jpg') }}" style="width: 250px; height: auto;" />
                 </p>
                 <p class="txt-format">
-                    Musisz pamiętać, że część zawartości nie będzie ogólnodostępna. Żaden link na stronie nie będzie do niej prowadził. Może być to np.:
+                    Musisz pamiętać, że część zawartości nie będzie ogólnodostępna i żadne łącze nie będzie do niej prowadziło. Może być to np.:
                 <ul>
-                    <li>podsumowanie zamówienia w sklepie internetowym,</li>
+                    <li>podsumowanie zamówienia w sklepie internetowym;</li>
                     <li>potwierdzenie transakcji w aplikacji banku.</li>
                 </ul>
                 </p>
@@ -156,7 +182,7 @@
             <div>
                 <h3 id="2_4_6">Kryterium sukcesu 2.4.6 Nagłówki i etykiety (Poziom AA)</h3>
                 <p class="txt-format">
-                    Wszelkie nagłówki i etykiety na stronie muszą opisywać wyświetlaną zawartość. Do opisu najlepiej używać pojedynczych słów lub krótkich opisów.
+                    Nagłówki i etykiety na stronie mają opisywać wyświetlaną zawartość. Najlepiej użyć pojedynczych słów lub krótkich opisów.
                 </p>
                 <p class="txt-format">
                     <pre>
@@ -179,8 +205,8 @@
                     </pre>
                 </p>
                 <p class="txt-format">
-                    Pozwala to zrozumieć, co zawiera strona i jak została ułożona treść.<br/>
-                    Dzięki zrozumiałym oznaczeniom treści, szukaną zawartość jest znacznie łatwiej zlokalizować.
+                    Dzięki opisom użytkownik rozumie, co zawiera strona i jak została rozmieszczona treść.<br/>
+                    Jasne oznaczenie treści pozwala na jej łatwiejsze odnalezienie.
                 </p>
             </div>
             <div>
@@ -189,29 +215,32 @@
                     Kiedy strona jest obsługiwana przy użyciu klawiatury, jej fokus (skupienie) musi być zawsze widoczny dla użytkownika.
                 </p>
                 <p class="txt-format">
-                    Widoczny fokus na stronie pozwala zorientować się, w którym miejscu na stronie i na którym elemencie skupiona jest klawiatura.<br/>
-                    Skupienie na elemencie pozwala również zrozumieć jego funkcje, np. przy
-                    podświetleniu pola formularza widzimy, że można wprowadzić tekst.
+                    Widoczny fokus na stronie pozwala zorientować się, w którym miejscu na stronie i na którym elemencie znajduje się jest klawiatura.
+                </p>
+                <p class="txt-format">
+                Skupienie na elemencie umożliwia zrozumienie jego funkcji, np. podświetlone pole formularza informuje, że można wprowadzić tekst.
                 </p>
                 <img src="{{ asset('img/2_4_7.jpg') }}">
             </div>
             <div>
                 <h3 id="2_4_8">Kryterium sukcesu 2.4.8 Lokalizacja (Poziom AAA)</h3>
                 <p class="txt-format">
-                    Musisz dostarczyć użytkownikowi informacje, gdzie obecnie znajduje się na stronie.
+                    Informuj użytkownika, gdzie obecnie znajduje się na stronie.
                 </p>
                 <p class="txt-format">
-                    Użytkownik będzie wiedział, gdzie się znajduje i jest mniej prawdopodobne, że zgubi się na stronie.
-                    Kiedy widzi, którą podstronę obecnie przegląda, będzie mu łatwiej wyszukiwać powiązane informacje: może m.in. cofać się do poprzedniej podstrony,
-                    jeśli obecne wyniki go niesatysfakcjonują.
+                    Jest wtedy mniej prawdopodobne, że zgubi się na stronie.
+                    Także łatwiej wyszukuje się informacje powiązane z podstroną. Można m.in. cofać się do poprzedniej podstrony,
+                    jeśli obecne wyniki nie są wystarczające.
                 </p>
                 <p class="txt-format">
-                    Zalety lokalizowania użytkownika są bardziej widoczne, kiedy znajdujemy się na rozbudowanej stronie z wieloma podstronami.<br/>
-                    Ta funkcjonalność pomaga znacznie osobom z deficytem uwagi. Bez pomocy mogą poczuć się zdezorientowane, kiedy przez długi czas korzystają z
+                    Lokalizowania użytkownika są bardzo przydatne, kiedy znajdujemy się na rozbudowanej stronie z wieloma podstronami.
+                </p>
+                <p class="txt-format">
+                Ta funkcjonalność pomaga osobom z deficytem uwagi. Bez pomocy mogą poczuć się zdezorientowani, kiedy przez długi czas korzystają z
                     rozbudowanej strony.
                 </p>
                 <p class="txt-format">
-                    Jednym ze sposobów na pokazanie obecnej lokalizacji na stronie jest menu okruszkowe. Pokazuje ono ścieżkę odwiedzanych stron.<br/>
+                    Jednym ze sposobów na pokazanie obecnej lokalizacji na stronie jest menu okruszkowe. Pokazuje ono ścieżkę odwiedzanych podstron.<br/>
                     Standardem jest także możliwość powrotu do strony głównej po kliknięciu ikony, która jest zazwyczaj widoczna na górze strony.<br/><br/>
                     <img src="{{ asset('img/breadcrumb.jpg') }}" style="width: 250px; height: auto;" />
                 </p>
