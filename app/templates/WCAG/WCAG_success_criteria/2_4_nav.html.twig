@@ -212,53 +212,60 @@
             <div>
                 <h3 id="2_4_7">Kryterium sukcesu 2.4.7 Widoczny fokus (Poziom AA)</h3>
                 <p class="txt-format">
-                    Kiedy strona jest obsługiwana przy użyciu klawiatury, jej fokus (skupienie) musi być zawsze widoczny dla użytkownika.
+                    Kiedy użytkownik korzysta z klawiatury do nawigacji po stronie, fokus klawiatury musi być zawsze widoczny.
                 </p>
                 <p class="txt-format">
-                    Widoczny fokus na stronie pozwala zorientować się, w którym miejscu na stronie i na którym elemencie znajduje się jest klawiatura.
+                    Widoczny fokus pozwala użytkownikowi zorientować się, w którym miejscu na stronie się znajduje.
                 </p>
                 <p class="txt-format">
-                Skupienie na elemencie umożliwia zrozumienie jego funkcji, np. podświetlone pole formularza informuje, że można wprowadzić tekst.
+                    Fokus umożliwia także zrozumienie roli elementów, np. podświetlone pole formularza informuje, że można wprowadzić tekst.
                 </p>
                 <img src="{{ asset('img/2_4_7.jpg') }}">
             </div>
             <div>
                 <h3 id="2_4_8">Kryterium sukcesu 2.4.8 Lokalizacja (Poziom AAA)</h3>
                 <p class="txt-format">
-                    Informuj użytkownika, gdzie obecnie znajduje się na stronie.
+                    Pokaż użytkownikowi, gdzie znajduje się na stronie. Dzięki informacji o obecnym położeniu:
+                    <ul>
+                        <li>użytkownikowi trudniej się „zgubić”;</li>
+                        <li>łatwiej zrozumieć strukturę strony;</li>
+                        <li>można szybko przemieszczać się między powiązanymi podstronami.</li>
+                    </ul>
                 </p>
                 <p class="txt-format">
-                    Jest wtedy mniej prawdopodobne, że zgubi się na stronie.
-                    Także łatwiej wyszukuje się informacje powiązane z podstroną. Można m.in. cofać się do poprzedniej podstrony,
-                    jeśli obecne wyniki nie są wystarczające.
+                    Lokalizowanie użytkownika jest bardzo przydatne, kiedy znajdujemy się na rozbudowanej stronie.
                 </p>
                 <p class="txt-format">
-                    Lokalizowania użytkownika są bardzo przydatne, kiedy znajdujemy się na rozbudowanej stronie z wieloma podstronami.
+                    Funkcjonalność jest też dużym ułatwieniem dla osoby z deficytem uwagi. Takiemu odbiorcy trudniej skupić się na zadaniu.
+                    Bez pomocy może poczuć się zdezorientowany, kiedy dłużej przegląda rozbudowaną stronę.
                 </p>
                 <p class="txt-format">
-                Ta funkcjonalność pomaga osobom z deficytem uwagi. Bez pomocy mogą poczuć się zdezorientowani, kiedy przez długi czas korzystają z
-                    rozbudowanej strony.
-                </p>
-                <p class="txt-format">
-                    Jednym ze sposobów na pokazanie obecnej lokalizacji na stronie jest menu okruszkowe. Pokazuje ono ścieżkę odwiedzanych podstron.<br/>
-                    Standardem jest także możliwość powrotu do strony głównej po kliknięciu ikony, która jest zazwyczaj widoczna na górze strony.<br/><br/>
+                    Jednym ze sposobów na pokazanie obecnej lokalizacji na stronie jest <b>menu okruszkowe</b>. Wyświetla ono ścieżkę odwiedzanych podstron.
                     <img src="{{ asset('img/breadcrumb.jpg') }}" style="width: 250px; height: auto;" />
+                </p>
+                <p class="txt-format">
+                    Standardem jest także możliwość powrotu do strony głównej po kliknięciu logo na górze strony.
+{#                    TODO: dodać przykład? #}
                 </p>
             </div>
             <div>
                 <h3 id="2_4_9">Kryterium sukcesu 2.4.9 Cel łącza (z samego łącza) (Poziom AAA)</h3>
                 <p class="txt-format">
-                    Cel łączy na stronie musi być zrozumiały od razu z opisu łącza, a nie z jego kontekstu.
-                    Nawet jeśli cel łącza wynika z kontekstu, musisz dołączyć jego opis.<br/>
-                    Nie uwzględnia to łącz, które i tak byłyby niezrozumiałe lub mają być tajemnicą dla odbiorcy, dopóki nie zostaną załadowane.
+                    Cel łącza musi być zrozumiały z jego opisu, a nie z kontekstu, w jakim się znajduje.
+                    Jeśli cel łącza wynika z kontekstu, nadal musisz dołączyć jego opis.
                 </p>
                 <p class="txt-format">
-                    Jest to kryterium podobne do <a style="color: blue;" href="#2_4_4">Kryterium sukcesu 2.4.4 Cel łącza (w kontekście) (Poziom A)</a>. Różnica jest taka, że
-                    cel łącza musi wynikać z jego treści, a nie z kontekstu, w którym się znajduje.
+                    Nie uwzględnia to łączy, gdzie:
+                    <ul>
+                        <li>mimo opisu, cel łącza nadal nie będzie zrozumiały;</li>
+                        <li>łącze zawiera informacje, które powinny zostać tajemnicą do czasu otwarcia.</li>
+                    </ul>
                 </p>
                 <p class="txt-format">
-                    Najlepiej, aby linki, które prowadzą do tej samej treści miały ten sam opis.
-                    Natomiast łącza, które wskazują na inną treść, dla odróżnienia zawierały inny opis.
+                    Jest to rozszerzenie <a style="color: blue;" href="#2_4_4">Kryterium sukcesu 2.4.4 Cel łącza (w kontekście) (Poziom A)</a>.
+                </p>
+                <p class="txt-format">
+                    Linki, które prowadzą do tej samej treści, powinny być tak samo nazwane.
                 </p>
                 <p>
                     Przykładowo:<br/>
@@ -269,15 +276,16 @@
             <div>
                 <h3 id="2_4_10">Kryterium sukcesu 2.4.10 Nagłówki sekcji (Poziom AAA)</h3>
                 <p class="txt-format">
-                    Nagłówki są używane do porządkowania treści i oznaczają podziały na sekcje.<br/><br/>
+                    Używaj nagłówków do organizowania treści i oznaczania sekcji* na stronie.
                 </p>
                 <p class="txt-format">
-                    Porządkuj treść w taki sposób, aby była podzielona na zrozumiałe bloki – sekcje.<br/>
-                    Nagłówki pozwalają na łatwiejszą organizację treści i nawigację. W sposób widoczny oznaczają zmiany tematu oraz streszczają treść, aby czytelnik
-                    wiedział, czego będzie dotyczył segment tekstu.
+                    Nagłówki pozwalają łatwiej nawigować po stronie. W sposób widoczny oznaczają zmianę tematu oraz wprowadzają w powiązaną treść.
                 </p>
                 <p class="txt-format">
-                    Korzystanie z nagłówków pozwala także użytkownikom na przeskakiwanie po nagłówkach, bez potrzeby czytania powiązanego tekstu.
+                    Dzięki nagłówkom czytelnik może wcześniej zobaczyć, czego będzie dotyczył tekst i czy chce go przeczytać.
+                </p>
+                <p class="txt-format">
+                    *Sekcje dzielą treści na mniejsze, logicznie powiązane bloki.
                 </p>
                 <p>
                 <h1>Najważniejsza część</h1>
