@@ -29,16 +29,18 @@
             <div>
                 <h3 id="3_2_1">Kryterium sukcesu 3.2.1 Po otrzymaniu fokusu (Poziom A)</h3>
                 <p class="txt-format">
-                    Kiedy komponent interfejsu użytkownika uzyska fokus, nie może on nieoczekiwanie zmienić kontekstu (np. otwierać nowych elementów).
-                    Zmiana powinna nastąpić przy wyraźnym potwierdzeniu użytkownika, np. przez naciśnięcie wybranego klawisza (Spacja, Enter).
+                    Kiedy element interfejsu użytkownika uzyska fokus, nie może dojść do nieoczekiwanej zmiany kontekstu (np. otwarcie nowego okna).
+                    Zmiana może nastąpić tylko po wyraźnym potwierdzeniu ze strony użytkownika. Na przykład jest to naciśnięcie wybranego klawisza (Spacja, Enter).
                 </p>
                 <p class="txt-format">
-                    Dzięki temu użytkownicy nie zostaną zaskoczeni przez uruchomienie innego elementu lub funkcjonalności.<br/>
-                    Przykładami są:
-                <ul>
-                    <li>automatyczne wysłanie formularza przy sfokusowaniu przycisku wysyłania;</li>
-                    <li>otwarcie nowego okna lub skupienie na innym elemencie przy sfokusowaniu klawiaturą.</li>
-                </ul>
+                    Odbiorca nie będzie wtedy zaskoczony, kiedy uruchomi się nowy element lub funkcjonalność.
+                </p>
+                <p class="txt-format">
+                    Na stronie nie może dojść do sytuacji takich jak:
+                    <ul>
+                        <li>automatyczne wysłanie formularza po sfokusowaniu na przycisku wysyłania;</li>
+                        <li>otwarcie nowego okna lub skupienie na innej zawartości po sfokusowaniu na elemencie.</li>
+                    </ul>
                 </p>
                 <a href="{{ url('_3_2_1_dobry') }}" style="color: blue;">Dobry przykład</a><br/>
                 <a href="{{ url('_3_2_1_zly') }}" style="color: blue;">Zły przykład</a>
@@ -46,61 +48,71 @@
             <div>
                 <h3 id="3_2_2">Kryterium sukcesu 3.2.2 Podczas wprowadzania danych (Poziom A)</h3>
                 <p class="txt-format">
-                    Kiedy użytkownik wprowadza zmiany w komponencie użytkownika, nie mogą one powodować automatycznej zmiany kontekstu
-                    (np. otwierać nowych elementów, okien, zmieniać fokusu).
-                    Komponenty, które zachowują zmiany wprowadzone przez użytkownika to m.in:
-                <ul>
-                    <li>pole formularza,</li>
-                    <li>pole checkbox,</li>
-                    <li>rozwijana lista z elementami do wyboru.</li>
-                </ul>
+                    Kiedy odbiorca wprowadza dane, powiązane elementy nie mogą powodować automatycznej zmiany kontekstu
+                    (np. zmiana fokusu, otwarcie nowej zawartości, okien).
+                </p>
+                <p class="txt-format">
+                    Elementy interfejsu użytkownika, które przyjmują dane to m.in:
+                    <ul>
+                        <li>pole formularza,</li>
+                        <li>pole checkbox,</li>
+                        <li>rozwijana lista z elementami do wyboru.</li>
+                    </ul>
                 </p>
                 <p class="txt-format">
                     Kontekst może zmienić się automatycznie tylko w przypadku, gdy wcześniej powiadomisz o tym użytkownika.<br/>
-                    Przykładowo, niedopuszczalne jest, gdy użytkownik wypełnia formularz i nie zostanie powiadomiony, że:
-                <ul>
-                    <li>kolejne pole zostanie automatycznie podświetlone po wypełnieniu pola poprzedzającego;</li>
-                    <li>po wypełnieniu wszystkich pól formularz zostanie automatycznie wysłany;</li>
-                </ul>
+                    Przykładowo, nie możesz dopuścić do sytuacji, gdy użytkownik wypełnia formularz i nie zostanie powiadomiony o tym, że:
+                    <ul>
+                        <li>kolejne pole zostanie automatycznie podświetlone po wypełnieniu wcześniejszego pola;</li>
+                        <li>po wypełnieniu wszystkich pól formularz zostanie automatycznie wysłany.</li>
+                    </ul>
                 </p>
                 <p class="txt-format">
-                    Wszelkie nieoczekiwane zmiany kontekstu mogą zaskoczyć użytkownika.
-                    Nieoczekiwane zmiany jeszcze gorzej znoszą użytkownicy, którzy mają kłopot z postrzeganiem zmian lub rozpraszają się przez nie.
-                    Osoby niewidome, jeśli nie zostaną powiadomione o zmianie kontekstu, mogą nawet nie zdawać sobie sprawy ze zmian na stronie.
+                    Nieoczekiwane zmiany kontekstu mogą zaskoczyć użytkownika.
+                    Musisz pamiętać, że odbiorcami strony są również osoby, które:
+                    <ul>
+                        <li>mają kłopot z postrzeganiem zmian na stronie;</li>
+                        <li>rozpraszają się przez niespodziewane zamiany na stronie.</li>
+                    </ul>
+                    Pomyśl o osobie niewidomej, która odwiedza Twoją stronę. Kiedy nie powiadomisz jej o zmianie kontekstu na stronie, nie będzie ona wiedziała o zmianie.
                 </p>
                 <img src="{{ asset('img/3_2_2.jpg') }}" />
             </div>
             <div>
                 <h3 id="3_2_3">Kryterium sukcesu 3.2.3 Spójna nawigacja (Poziom AA)</h3>
                 <p class="txt-format">
-                    Nawigacja, która jest powtarzana na wielu stronach musi być taka sama, o ile nie zostanie dostosowana przez użytkownika.<br/><br/>
+                    Nawigacja powtarzana na wielu stronach musi być taka sama, o ile nie zostanie dostosowana przez użytkownika.<br/><br/>
                     Znajoma nawigacja powtarza się na innych stronach serwisu:<br/>
                     <img style="width: 550px; height: auto;" src="{{ asset('img/3_2_3.jpg') }}" /><br/>
                 </p>
                 <p class="txt-format">
-                    Powtarzalny i spójny układ nawigacji jest przewidywalny, a także bardzo pomocny dla osób, które mają niepełnosprawności natury intelektualnej, poznawczej,
-                    słabo widzą lub nie widzą wcale.<br/>
-                    Lokalizowanie potrzebnych podstron staje się w takim przypadku znacznie prostsze.
+                    Spójny i powtarzający się układ nawigacji jest bardziej zrozumiały i łatwiejszy do odnalezienia. Jest też bardzo pomocny dla osób, które:
+                    <ul>
+                        <li>mają niepełnosprawności natury intelektualnej, poznawczej;</li>
+                        <li>słabo widzą;</li>
+                        <li>nie widzą wcale.</li>
+                    </ul>
                 </p>
             </div>
             <div>
                 <h3 id="3_2_4">Kryterium sukcesu 3.2.4 Spójna identyfikacja (Poziom AA)</h3>
                 <p class="txt-format">
-                    Komponenty strony, które mają taką samą funkcję powinny wyglądać i zostać nazwane tak samo (za pomocą nazwy, etykiety, tekstu alternatywnego).
+                    Elementy na stronie, które pełnią tę samą funkcję powinny wyglądać tak samo i mieć spójnie nazewnictwo. Spójne nazewnictwo to m.in. taka sama:
+                    <ul>
+                        <li>widoczna nazwa na stronie,</li>
+                        <li>etykieta elementu,</li>
+                        <li>tekst alternatywny.</li>
+                    </ul>
                 </p>
                 <p class="txt-format">
-                    Pozwala to na spójną identyfikację komponentów, które pełnią tę samą funkcję na różnych podstronach.
-                    Wtedy użytkownicy mogą nawigować po stronie lub szukać konkretnych elementów po ich opisach, lub wyglądzie.
+                    W ten sposób pozwolisz użytkownikowi szybko znaleźć elementy o tej samej funkcjonalności na różnych podstronach.
                 </p>
                 <p class="txt-format">
-                    Tyczy się to osób widzących, również z niepełnosprawnościami poznawczymi, które czują się przytłoczone, kiedy muszą pracować na dużej ilości informacji.
+                    Przyśpiesza to wyszukiwanie i nawigację, ponieważ odbiorca może szybko namierzyć wcześniej poznany element.
+                    Wystarczy, że odnajdzie element o tym samym wyglądzie lub opisie.
                 </p>
                 <p class="txt-format">
-                    Jeśli chodzi o osoby niewidzące, spójna identyfikacja elementów pozwala im na łatwiejszą nawigację.
-                    Takie osoby wiedzą, elementów, o jakiej nazwie powinny szukać.
-                </p>
-                <p class="txt-format">
-                    Przykładowo, w tym serwisie<br/><br/>
+                    Na przykład w tym serwisie<br/><br/>
                     przyciski<br/>
                     <button>Przycisk</button><br/><br/>
                     i pola formularza<br/>
@@ -111,31 +123,32 @@
             <div>
                 <h3 id="3_2_5">Kryterium sukcesu 3.2.5 Zmiana na żądanie (Poziom AAA)</h3>
                 <p class="txt-format">
-                    Tylko użytkownik może zmienić kontekst na stronie lub można wyłączyć takie zmiany.
+                    Zmiana treści jest możliwa tylko przez działanie użytkownika lub można wyłączyć takie zmiany.
                 </p>
                 <p class="txt-format">
                     Kryterium wymaga od Ciebie, abyś dał pełną kontrolę użytkownikowi na stronie.
                     Na stronie nie mogą pojawić się działania niespodziewane, np.:
                 <ul>
                     <li>automatyczne otwarcie nowego okna,</li>
-                    <li>niespodziewane pojawienie się okna pomocniczego,</li>
+                    <li>niespodziewane pojawienie się okna z powiadomieniem,</li>
                     <li>automatyczne wysłanie formularza po wypełnieniu wszystkich pól, bez zatwierdzenia przez użytkownika,</li>
                     <li>automatyczne odświeżanie strony.</li>
                 </ul>
                 </p>
                 <p class="txt-format">
-                    Możesz też sprawić, aby domyślne, automatyczne zmiany kontekstu mogły zostać wyłączone.<br/>
-                    Niektóre funkcjonalności mogą być przydatne dla użytkownika, jednak i tak musisz pozwolić, aby
-                    to on zdecydował, czy funkcjonalność ma być aktywna, czy powinna zostać wyłączona.
+                    Pozwól odbiorcy wyłączyć automatyczne zmiany treści na stronie.
+                    Niektóre funkcjonalności są pomocne dla użytkownika. Jednak to on musi zdecydować, czy funkcjonalność ma być aktywna, czy wyłączona.
                 </p>
                 <p class="txt-format">
-                    Zastosowanie się do kryterium sprawia, że użytkownik nie będzie czuł się zaskoczony zawartością na Twojej stronie.
-                    Tyczy się to m.in. osób, które nie widzą i korzystają z czytników ekranu. Nie będą one początkowo wiedziały, że
-                    doszło do niespodziewanej zmiany treści lub jej odświeżenia.
+                    Kiedy zastosujesz się do kryterium, zmniejszysz prawdopodobieństwo, że zaskoczysz użytkownika przy pojawieniu się nowej zawartości na stronie.
+                </p>
+                <p class="txt-format">
+                    Pamiętaj też, że część odbiorców nie widzi i korzysta z czytników ekranu.
+                    Automatyczne odświeżenia strony i elementy, które pojawią się niespodziewanie, mogą być niezauważone przez te osoby.
                 </p>
                 <p class="txt-format" style="background-color: lightgray;">
                     Przykład:<br/>
-                    Ta akcja wymaga odświeżenia strony<br/>
+                    Ta akcja wymaga odświeżenia strony.<br/>
                     <button style="cursor: pointer;">Odśwież stronę</button>
                 </p>
             </div>

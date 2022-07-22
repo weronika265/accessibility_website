@@ -30,51 +30,56 @@
             <div>
                 <h3 id="3_3_1">Kryterium sukcesu 3.3.1 Identyfikacja błędu (Poziom A)</h3>
                 <p class="txt-format">
-                    Jeśli na stronie zostanie automatycznie wykryty błąd we wprowadzanych danych (niewypełnione lub błędne dane):
-                <ul>
-                    <li>wskazany zostanie błędny element,</li>
-                    <li>użytkownik otrzyma tekstowy opis błędu.</li>
-                </ul>
+                    Jeśli zostanie wykryty błąd we wprowadzanych danych (niewypełnione lub błędne dane):
+                    <ul>
+                        <li>zostanie wskazany błędny element,</li>
+                        <li>wyświetli się tekstowy opis błędu.</li>
+                    </ul>
                 </p>
                 <p class="txt-format">
-                    Wskazanie błędów na stronie pozwala użytkownikowi na zapoznanie się z nimi i poprawę źle wypełnionych pól.
-                    Błędy powinny być wyświetlane w trakcie wprowadzania danych, ewentualnie przy próbie wysłania błędnego formularza
-                    ma on być ponownie wyświetlany ze wcześniej wprowadzonymi danymi.
+                    Kiedy wskażesz błędy we wprowadzanych danych, użytkownik może się z nimi zapoznać i poprawić źle wypełnione pola.
                 </p>
                 <p class="txt-format">
-                    Tekstowe informacje o źle wypełnionych polach pozwalają użytkownikom niewidzącym zrozumieć popełniony błąd. Osoby, które mają problemy ze
-                    zrozumieniem znaków lub innych wizualnych elementów mogą skorzystać z podpowiedzi tekstowych podczas poprawiania formularza.
-                </p>
-                <p class="txt-format">
-                    Kiedy pole wprowadza domyślne informacje po wprowadzeniu błędnych danych, musisz również o tym powiadomić.
-                    Wyświetl komunikat odnośnie do przyczyny błędu.
-                </p>
-                <p class="txt-format">
-                    Warto, aby korzystać z rozwiązań, które uwzględniają technologie asystujące. Niektóre programy mogą informować użytkownika o błędach,
-                    typie przyjmowanej wartości lub przedziale wartości możliwych do wybrania (np. rok, kwota).
+                    Informuj użytkownika o błędach:
+                    <ul>
+                        <li>w trakcie wprowadzania danych,</li>
+                        <li>kiedy wysyła formularz. Użytkownik zostanie cofnięty do wcześniej wypełnionego formularza z oznaczonymi błędnymi danymi.</li>
+                    </ul>
                 </p>
                 <p>
-                Jeśli nie wypełnisz jednego z pól, pojawi się komunikat o znalezionym błędzie.
-                <form>
-                    * Pola wymagane<br/>
-                    <label>*Imię<input type="text" required></label><br/>
-                    <label>*Nazwisko<input type="text" required></label><br/>
-                    <input type="submit" value="Prześlij"/>
-                </form>
+                    Jeśli nie wypełnisz jednego z pól, pojawi się komunikat o znalezionym błędzie:
+                    <form>
+                        * Pola wymagane<br/>
+                        <label>*Imię<input type="text" required></label><br/>
+                        <label>*Nazwisko<input type="text" required></label><br/>
+                        <input type="submit" value="Prześlij"/>
+                    </form>
                 </p>
             </div>
             <div>
                 <h3 id="3_3_2">Kryterium sukcesu 3.3.2 Etykiety lub instrukcje (Poziom A)</h3>
                 <p class="txt-format">
-                    Kiedy pola muszą być wypełnione danymi przez użytkownika, dołącz do nich etykiety lub instrukcje.
-                    Dostarcz informacji zwięzłych, które przekażą kluczowe informacje.
+                    Do pól formularzy dołącz etykiety lub instrukcje.
+                    Mają one być krótkie i przekazywać najważniejsze informacje.
                 </p>
                 <p class="txt-format">
-                    Pozwoli to użytkownikom zrozumieć cel formularza i dane, które powinni wpisać w poszczególne pola.
-                    Ograniczy to błędy i zmniejszy czas potrzebny na poprawne przesłanie formularza.
+                    Etykiety i instrukcje dla pól pozwolą:
+                    <ul>
+                        <li>zrozumieć wymagane dane i cel formularza;</li>
+                        <li>ograniczyć błędy;</li>
+                        <li>zmniejszyć czas potrzebny na poprawne przesłanie formularza.</li>
+                    </ul>
+                </p>
+                <p class="txt-format">
+                    Korzystaj z rozwiązań, które uwzględniają technologie asystujące. Wiele programów może informować użytkownika o:
+                    {#                TODO: dodać, jak technologie asystujące to wyświetlają? #}
+                    <ul>
+                        <li>typie przyjmowanej wartości przez pole,</li>
+                        <li>przedziale wartości możliwych do wybrania w polu formularza (np. rok, kwota).</li>
+                    </ul>
                 </p>
                 <form>
-                    <span style="background-color: lightgray;">Instrukcja: Wszystkie pola oznaczone * są wymagane</span><br/>
+                    <span style="background-color: lightgray;"><u>Instrukcja</u>: Wszystkie pola oznaczone * są wymagane</span><br/>
                     <label>*Pierwsze imię<input type="text" required></label><br/>
                     <label>*Drugie Imię<input type="text" required></label><br/>
                     <label>*Nazwisko<input type="text"></label><br/>
@@ -86,9 +91,16 @@
                 <h3 id="3_3_3">Kryterium sukcesu 3.3.3 Sugestie korekty błędów (Poziom AA)</h3>
                 <p class="txt-format">
                     Jeśli na stronie zostanie automatycznie wykryty błąd we wprowadzanych danych, użytkownik powinien otrzymać sugestię poprawy błędu.
-                    Wyjątkiem są sugestie, które wpływałyby na bezpieczeństwo treści lub zmieniało jej cel.
+                </p>
+                <p class="txt-format">
+                    Wyjątkiem są sugestie, które mogłyby:
+                    <ul>
+                        <li>zagrozić bezpieczeństwu treści;</li>
+                        <li>zmienić cel treści.</li>
+                    </ul>
                 </p>
                 <p>
+                    Pole zostało błędnie wypełnione:
                     <div style="border: 1px solid black;">
                         <label>Kod pocztowy<input type="number" /></label>
                         <div style="background-color: orangered;">
@@ -98,41 +110,49 @@
                     </div>
                 </p>
                 <p class="txt-format">
-                    Zdarzają się pola, gdzie użytkownik nie wie, jakie dane ma wprowadzić.
-                    Może to doprowadzić do sytuacji, w której użytkownik będzie zmuszony poprawiać dane do skutku lub zrezygnuje z wypełniania.<br/>
-                    Kiedy pokażesz sugestie z poprawnymi danymi, użytkownik będzie mógł zrozumieć cel pola i go wypełnić.
+                    Użytkownik czasem nie wie, jakie dane wprowadzić do pola formularza.
+                    Może dojść do sytuacji, kiedy poprawia dane do skutku lub ostatecznie rezygnuje z wypełniania.
+                    Kiedy pokażesz sugestie poprawy błędów, użytkownik będzie mógł zrozumieć cel pola i poprawnie go wypełnić.
                 </p>
             </div>
             <div>
                 <h3 id="3_3_4">Kryterium sukcesu 3.3.4 Zapobieganie błędom (prawnym, finansowym, w danych) (Poziom AA)</h3>
                 <p class="txt-format">
-                    Część stron powoduje zobowiązania prawne lub użytkownik przeprowadza transakcje finansowe,
-                    udziela odpowiedzi na testy lub zmienia bądź usuwa dane, które są pod jego kontrolą. W takich sytuacjach strona powinna pozwalać na:
-                <ul>
-                    <li>wycofywanie wprowadzanych danych;</li>
-                    <li>wprowadzane dane sa sprawdzane pod kątem błędów i użytkownik może je poprawić;</li>
-                    <li>sprawdzenie, potwierdzenie i poprawę informacji przed ich wysłaniem.</li>
-                </ul>
+                    Strony mogą powodować zobowiązania prawne lub na których użytkownik:
+                    <ul>
+                        <li>przeprowadza transakcje finansowe,</li>
+                        <li>udziela odpowiedzi na testy,</li>
+                        <li>zmienia bądź usuwa dane, które są pod jego kontrolą.</li>
+                    </ul>
                 </p>
                 <p class="txt-format">
-                    Kryterium ogranicza popełnianie poważnych błędów podczas wypełniania danych, których po zatwierdzeniu nie można wycofać.
+                    W takich sytuacjach zapewnij, aby użytkownik mógł:
+                    <ul>
+                        <li>wycofać wprowadzane dane;</li>
+                        <li>poprawić dane, które będą sprawdzane pod kątem błędów;</li>
+                        <li>sprawdzić, poprawić i potwierdzić informacje przed wysłaniem.</li>
+                    </ul>
                 </p>
                 <p class="txt-format">
-                    Przykładowo, bez tych ograniczeń użytkownik nie mógłby poprawić informacji podczas wykonywania transakcji bankowej,
-                    lub zrezygnować z niej.
+                    W ten sposób ograniczysz popełniane poważnych błędów podczas wypełniania danych.
+                    Jest to ważne, ponieważ kiedy zatwierdzasz dane, wielu nie można już wycofać.
+                </p>
+                <p class="txt-format">
+                    Za przykład weźmy transakcję w banku. Dzięki zabezpieczeniom użytkownik może poprawić informacje podczas wykonywania transakcji lub z niej zrezygnować.
                 </p>
             </div>
             <div>
                 <h3 id="3_3_5">Kryterium sukcesu 3.3.5 Pomoc (Poziom AAA)</h3>
                 <p class="txt-format">
-                    Zapewnij użytkownikowi pomoc kontekstową, która podpowiada kolejne kroki przy wykonywaniu czynności.
+                    Zapewnij użytkownikowi pomoc kontekstową, która pomaga w wypełnianiu kolejnych pól formularzy.<br/>
+                    Musisz zadbać, aby była łatwo dostępna.
                 </p>
                 <p class="txt-format">
-                    Informacje kontekstowe pozwalają na wytłumaczenie użytkownikowi, jakie czynności powinien wykonać podczas korzystania z funkcjonalności na stronie.
+                    Pomoc kontekstowa zawiera tekst, który dostarcza informacji o aktualnie wykonywanej czynności.
                 </p>
                 <p class="txt-format">
                     <strong>WAŻNE</strong><br/>
-                    Informacja kontekstowa jest potrzebna w sytuacji, kiedy etykieta komponentu nie opisuje wystarczająco jego celu i funkcjonalności.
+                    Informacja kontekstowa jest potrzebna w sytuacji, kiedy etykieta pola nie opisuje wystarczająco jego celu.
                 </p>
                 <p class="txt-format">
                     <label>Kod pocztowy<input type="number" placeholder="00-000"/></label>
@@ -146,16 +166,11 @@
             <div>
                 <h3 id="3_3_6">Kryterium sukcesu 3.3.6 Zapobieganie błędom (wszystkim) (Poziom AAA)</h3>
                 <p class="txt-format">
-                    Kiedy strona wymaga wprowadzania informacji przez użytkownika, strona powinna pozwalać na:
-                <ul>
-                    <li>wycofywanie wprowadzanych danych;</li>
-                    <li>wprowadzane dane są sprawdzane pod kątem błędów i użytkownik może je poprawić;</li>
-                    <li>sprawdzenie, potwierdzenie i poprawę informacji przed ich wysłaniem.</li>
-                </ul>
+                    Kryterium jest rozszerzeniem <a href="#3_3_4">Kryterium sukcesu 3.3.4 Zapobieganie błędom (prawnym, finansowym, w danych) (Poziom AA)</a>, które
+                    uwzględnia konkretne przypadki zapobiegania błędom.
                 </p>
                 <p class="txt-format">
-                    Kryterium jest rozszerzeniem <a href="#3_3_3">Kryterium sukcesu 3.3.4 Zapobieganie błędom (prawnym, finansowym, w danych) (Poziom AA)</a>.
-                    W tym przypadku musisz zapewnić, aby podczas wypełniania <b>każdego</b> formularza można było wycofać, sprawdzać i modyfikować dane.
+                    To kryterium ma zapewnić, że podczas wypełniania <b>każdego</b> formularza można sprawdzić, modyfikować i wycofać dane.
                 </p>
             </div>
         </div>
