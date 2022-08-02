@@ -11,93 +11,192 @@
         <section class="font-styling">
             <ul style="all: unset;">
                 <li>
-                    Strona główna
+                    <a href="{{ url('home_index') }}">Strona główna</a>
                     <ul style="all: unset;">
                         <li>
                             <a href="{{ url('czytelnik_index') }}">Strefa czytelnika</a>
-                            <ul>
-                                <li>Dostępność stron internetowych</li>
-                                <li>Regulacje prawne</li>
-                                <li>Typy niepełnosprawności</li>
-                                <li>Technologie asystujące</li>
-                                <li>O WCAG</li>
-                                <li>Co więcej na stronie</li>
+                            <ul style="margin-left: 2em;">
+                                <li><a href="{{ url('czytelnik_index') }}#dostepnosc">Dostępność stron internetowych</a></li>
+                                <li><a href="{{ url('czytelnik_index') }}#regulacje">Regulacje prawne</a></li>
+                                <li><a href="{{ url('czytelnik_index') }}#rodzaje">Rodzaje niepełnosprawności</a></li>
+                                <li><a href="{{ url('czytelnik_index') }}#technologie">Technologie asystujące</a></li>
+                                <li><a href="{{ url('czytelnik_index') }}#wcag">WCAG</a></li>
+                                <li><a href="{{ url('czytelnik_index') }}#aria">WAI-ARIA</a></li>
+                                <li><a href="{{ url('czytelnik_index') }}#wiecej">Co więcej na stronie</a></li>
                             </ul>
                         </li>
                         <li>
                             <a href="{{ url('tworca_index') }}">Strefa twórcy</a>
-                            <ul>
+                            <ul style="margin-left: 2em;">
                                 <li>
                                     Wytyczne WCAG 2.1
-                                    <ul>
+                                    <ul style="margin-left: 2em;">
                                         <li>
                                             Postrzegalność
-                                            <ul>
+                                            <ul style="margin-left: 2em;">
                                                 <li>
                                                     <a href="{{ url('alt-txt_index') }}">1.1 Alternatywa tekstowa</a>
-                                                    <ul>
+                                                    <ul style="margin-left: 2em;">
                                                         <li><a href="{{ url('alt-txt_index') }}#1_1_1">Kryterium sukcesu 1.1.1 Treść nietekstowa (Poziom A)</a></li>
                                                     </ul>
                                                 </li>
                                                 <li>
                                                     <a href="{{ url('multimedia_index') }}">1.2 Multimedia</a>
-                                                    <ul>
-                                                        <li>Kryterium sukcesu 1.1.1 Treść nietekstowa (Poziom A)</li>
+                                                    <ul style="margin-left: 2em;">
+                                                        <li><a href="{{ url('multimedia_index') }}#1_2_1">Kryterium sukcesu 1.2.1 Tylko audio lub tylko wideo (nagranie) (poziom A)</a></li>
+                                                        <li><a href="{{ url('multimedia_index') }}#1_2_2">Kryterium sukcesu 1.2.2 Napisy rozszerzone (nagranie) (poziom A)</a></li>
+                                                        <li><a href="{{ url('multimedia_index') }}#1_2_3">Kryterium sukcesu 1.2.3 Audiodeskrypcja lub alternatywa tekstowa dla mediów (nagranie) (poziom A)</a></li>
+                                                        <li><a href="{{ url('multimedia_index') }}#1_2_4">Kryterium sukcesu 1.2.4 Napisy rozszerzone (na żywo) (poziom AA)</a></li>
+                                                        <li><a href="{{ url('multimedia_index') }}#1_2_5">Kryterium sukcesu 1.2.5 Audiodeskrypcja (nagranie) (poziom AA)</a></li>
+                                                        <li><a href="{{ url('multimedia_index') }}#1_2_6">Kryterium sukcesu 1.2.6 Język migowy (nagranie) (poziom AAA)</a></li>
+                                                        <li><a href="{{ url('multimedia_index') }}#1_2_7">Kryterium sukcesu 1.2.7 Rozszerzona audiodeskrypcja (nagranie) (poziom AAA)</a></li>
+                                                        <li><a href="{{ url('multimedia_index') }}#1_2_8">Kryterium sukcesu 1.2.8 Alternatywa dla mediów (nagranie) (poziom AAA)</a></li>
+                                                        <li><a href="{{ url('multimedia_index') }}#1_2_9">Kryterium sukcesu 1.2.9 Tylko audio (na żywo) (poziom AAA)</a></li>
                                                     </ul>
                                                 </li>
                                                 <li>
                                                     <a href="{{ url('adapt_index') }}">1.3 Możliwość adaptacji</a>
+                                                    <ul style="margin-left: 2em;">
+                                                        <li><a href="{{ url('adapt_index') }}#1_3_1">Kryterium sukcesu 1.3.1 Informacje i relacje (Poziom A)</a></li>
+                                                        <li><a href="{{ url('adapt_index') }}#1_3_2">Kryterium sukcesu 1.3.2 Zrozumiała kolejność (Poziom A)</a></li>
+                                                        <li><a href="{{ url('adapt_index') }}#1_3_3">Kryterium sukcesu 1.3.3 Właściwości zmysłowe (Poziom A)</a></li>
+                                                        <li><a href="{{ url('adapt_index') }}#1_3_4">Kryterium sukcesu 1.3.4 Orientacja (Poziom AA)</a></li>
+                                                        <li><a href="{{ url('adapt_index') }}#1_3_5">Kryterium sukcesu 1.3.5 Określenie pożądanej wartości (Poziom AA)</a></li>
+                                                        <li><a href="{{ url('adapt_index') }}#1_3_6">Kryterium sukcesu 1.3.6 Określenie przeznaczenia (Poziom AAA)</a></li>
+                                                    </ul>
                                                 </li>
                                                 <li>
                                                     <a href="{{ url('distinguish_index') }}">1.4 Rozróżnialność</a>
+                                                    <ul style="margin-left: 2em;">
+                                                        <li><a href="{{ url('distinguish_index') }}#1_4_1">Kryterium sukcesu 1.4.1 Użycie koloru (Poziom A)</a></li>
+                                                        <li><a href="{{ url('distinguish_index') }}#1_4_2">Kryterium sukcesu 1.4.2 Kontrola odtwarzania dźwięku (Poziom A)</a></li>
+                                                        <li><a href="{{ url('distinguish_index') }}#1_4_3">Kryterium sukcesu 1.4.3 Kontrast (minimalny) (Poziom AA)</a></li>
+                                                        <li><a href="{{ url('distinguish_index') }}#1_4_4">Kryterium sukcesu 1.4.4 Zmiana rozmiaru tekstu (Poziom AA)</a></li>
+                                                        <li><a href="#{{ url('distinguish_index') }}1_4_5">Kryterium sukcesu 1.4.5 Obrazy tekstu (Poziom AA)</a></li>
+                                                        <li><a href="#{{ url('distinguish_index') }}1_4_6">Kryterium sukcesu 1.4.6 Kontrast (wzmocniony) (Poziom AAA)</a></li>
+                                                        <li><a href="#{{ url('distinguish_index') }}1_4_7">Kryterium sukcesu 1.4.7 Niska głośność lub bez dźwięków w tle (Poziom AAA)</a></li>
+                                                        <li><a href="#{{ url('distinguish_index') }}1_4_8">Kryterium sukcesu 1.4.8 Prezentacja wizualna (Poziom AAA)</a></li>
+                                                        <li><a href="#{{ url('distinguish_index') }}1_4_9">Kryterium sukcesu 1.4.9 Obrazy tekstu (bez wyjątków) (Poziom AAA)</a></li>
+                                                        <li><a href="#{{ url('distinguish_index') }}1_4_10">Kryterium sukcesu 1.4.10 Dopasowanie do ekranu (Poziom AA)</a></li>
+                                                        <li><a href="#{{ url('distinguish_index') }}1_4_11">Kryterium sukcesu 1.4.11 Kontrast elementów nietekstowych (Poziom AA)</a></li>
+                                                        <li><a href="#{{ url('distinguish_index') }}1_4_12">Kryterium sukcesu 1.4.12 Odstępy w tekście (Poziom AA)</a></li>
+                                                        <li><a href="#{{ url('distinguish_index') }}1_4_13">Kryterium sukcesu 1.4.13 Treść spod kursora lub fokusu (Poziom AA)</a></li>
+                                                    </ul>
                                                 </li>
                                             </ul>
                                         </li>
                                         <li>
                                             Funkcjonalność
-                                            <ul>
+                                            <ul style="margin-left: 2em;">
                                                 <li>
                                                     <a href="{{ url('keyboard_index') }}">2.1 Dostępność z klawiatury</a>
+                                                    <ul style="margin-left: 2em;">
+                                                        <li><a href="{{ url('keyboard_index') }}#2_1_1">Kryterium sukcesu 2.1.1 Klawiatura (Poziom A)</a></li>
+                                                        <li><a href="{{ url('keyboard_index') }}#2_1_2">Kryterium sukcesu 2.1.2 Bez pułapki na klawiaturę (Poziom A)</a></li>
+                                                        <li><a href="{{ url('keyboard_index') }}#2_1_3">Kryterium sukcesu 2.1.3 Klawiatura (bez wyjątków) (Poziom AAA)</a></li>
+                                                        <li><a href="{{ url('keyboard_index') }}#2_1_4">Kryterium sukcesu 2.1.4 Jednoznakowe skróty klawiaturowe (Poziom A)</a></li>
+                                                    </ul>
                                                 </li>
                                                 <li>
                                                     <a href="{{ url('time_index') }}">2.2 Wystarczający czas</a>
+                                                    <ul style="margin-left: 2em;">
+                                                        <li><a href="{{ url('time_index') }}#2_2_1">Kryterium sukcesu 2.2.1 Dostosowanie czasu (Poziom A)</a></li>
+                                                        <li><a href="{{ url('time_index') }}#2_2_2">Kryterium sukcesu 2.2.2 Pauza, zatrzymanie, ukrycie (Poziom A)</a></li>
+                                                        <li><a href="{{ url('time_index') }}#2_2_3">Kryterium sukcesu 2.2.3 Bez ograniczeń czasowych (Poziom AAA)</a></li>
+                                                        <li><a href="{{ url('time_index') }}#2_2_4">Kryterium sukcesu 2.2.4 Przerywanie (Poziom AAA)</a></li>
+                                                        <li><a href="{{ url('time_index') }}#2_2_5">Kryterium sukcesu 2.2.5 Ponowne potwierdzenie autentyczności (Poziom AAA)</a></li>
+                                                        <li><a href="{{ url('time_index') }}#2_2_6">Kryterium sukcesu 2.2.6 Ostrzeżenie o limicie czasu (Poziom AAA)</a></li>
+                                                    </ul>
                                                 </li>
                                                 <li>
                                                     <a href="{{ url('epilepsy_index') }}">2.3 Ataki padaczki</a>
+                                                    <ul style="margin-left: 2em;">
+                                                        <li><a href="{{ url('epilepsy_index') }}#2_3_1">Kryterium sukcesu 2.3.1 Trzy błyski lub wartości poniżej progu (Poziom A)</a></li>
+                                                        <li><a href="{{ url('epilepsy_index') }}#2_3_2">Kryterium sukcesu 2.3.2 Trzy błyski (Poziom AAA)</a></li>
+                                                        <li><a href="{{ url('epilepsy_index') }}#2_3_3">Kryterium sukcesu 2.3.3 Animacja po interakcji (Poziom AAA)</a></li>
+                                                    </ul>
                                                 </li>
                                                 <li>
                                                     <a href="{{ url('nav_index') }}">2.4 Możliwość nawigacji</a>
+                                                    <ul style="margin-left: 2em;">
+                                                        <li><a href="{{ url('nav_index') }}#2_4_1">Kryterium sukcesu 2.4.1 Możliwość pominięcia bloków (Poziom A)</a></li>
+                                                        <li><a href="{{ url('nav_index') }}#2_4_2">Kryterium sukcesu 2.4.2 Tytuły stron (Poziom A)</a></li>
+                                                        <li><a href="{{ url('nav_index') }}#2_4_3">Kryterium sukcesu 2.4.3 Kolejność fokusu (Poziom A)</a></li>
+                                                        <li><a href="{{ url('nav_index') }}#2_4_4">Kryterium sukcesu 2.4.4 Cel łącza (w kontekście) (Poziom A)</a></li>
+                                                        <li><a href="{{ url('nav_index') }}#2_4_5">Kryterium sukcesu 2.4.5 Wiele dróg (Poziom AA)</a></li>
+                                                        <li><a href="{{ url('nav_index') }}#2_4_6">Kryterium sukcesu 2.4.6 Nagłówki i etykiety (Poziom AA)</a></li>
+                                                        <li><a href="{{ url('nav_index') }}#2_4_7">Kryterium sukcesu 2.4.7 Widoczny fokus (Poziom AA)</a></li>
+                                                        <li><a href="{{ url('nav_index') }}#2_4_8">Kryterium sukcesu 2.4.8 Lokalizacja (Poziom AAA)</a></li>
+                                                        <li><a href="{{ url('nav_index') }}#2_4_9">Kryterium sukcesu 2.4.9 Cel łącza (z samego łącza) (Poziom AAA)</a></li>
+                                                        <li><a href="{{ url('nav_index') }}#2_4_10">Kryterium sukcesu 2.4.10 Nagłówki sekcji (Poziom AAA)</a></li>
+                                                    </ul>
                                                 </li>
                                                 <li>
                                                     <a href="{{ url('inputs_index') }}">2.5 Metody obsługi</a>
+                                                    <ul style="margin-left: 2em;">
+                                                        <li><a href="{{ url('inputs_index') }}#2_5_1">Kryterium sukcesu 2.5.1 Gesty dotykowe (Poziom A)</a></li>
+                                                        <li><a href="{{ url('inputs_index') }}#2_5_2">Kryterium sukcesu 2.5.2 Rezygnacja ze wskazania (Poziom A)</a></li>
+                                                        <li><a href="{{ url('inputs_index') }}#2_5_3">Kryterium sukcesu 2.5.3 Etykieta w nazwie (Poziom A)</a></li>
+                                                        <li><a href="{{ url('inputs_index') }}#2_5_4">Kryterium sukcesu 2.5.4 Aktywowanie ruchem (Poziom A)</a></li>
+                                                        <li><a href="{{ url('inputs_index') }}#2_5_5">Kryterium sukcesu 2.5.5 Rozmiar celu dotykowego (Poziom AAA)</a></li>
+                                                        <li><a href="{{ url('inputs_index') }}#2_5_6">Kryterium sukcesu 2.5.6 Równoległy mechanizm wprowadzania danych (Poziom AAA)</a></li>
+                                                    </ul>
                                                 </li>
                                             </ul>
                                         </li>
                                         <li>
                                             Zrozumiałość
-                                            <ul>
+                                            <ul style="margin-left: 2em;">
                                                 <li>
                                                     <a href="{{ url('read_index') }}">3.1 Możliwość odczytania</a>
+                                                    <ul style="margin-left: 2em;">
+                                                        <li><a href="{{ url('read_index') }}#3_1_1">Kryterium sukcesu 3.1.1 Język strony (Poziom A)</a></li>
+                                                        <li><a href="{{ url('read_index') }}#3_1_2">Kryterium sukcesu 3.1.2 Język części (Poziom AA)</a></li>
+                                                        <li><a href="{{ url('read_index') }}#3_1_3">Kryterium sukcesu 3.1.3 Nietypowe słowa (Poziom AAA)</a></li>
+                                                        <li><a href="{{ url('read_index') }}#3_1_4">Kryterium sukcesu 3.1.4 Skróty (Poziom AAA)</a></li>
+                                                        <li><a href="{{ url('read_index') }}#3_1_5">Kryterium sukcesu 3.1.5 Poziom umiejętności czytania (Poziom AAA)</a></li>
+                                                        <li><a href="{{ url('read_index') }}#3_1_6">Kryterium sukcesu 3.1.6 Wymowa (Poziom AAA)</a></li>
+                                                    </ul>
                                                 </li>
                                                 <li>
                                                     <a href="{{ url('predict_index') }}">3.2 Przewidywalność</a>
+                                                    <ul style="margin-left: 2em;">
+                                                        <li><a href="{{ url('predict_index') }}#3_2_1">Kryterium sukcesu 3.2.1 Po otrzymaniu fokusu (Poziom A)</a></li>
+                                                        <li><a href="{{ url('predict_index') }}#3_2_2">Kryterium sukcesu 3.2.2 Podczas wprowadzania danych (Poziom A)</a></li>
+                                                        <li><a href="{{ url('predict_index') }}#3_2_3">Kryterium sukcesu 3.2.3 Spójna nawigacja (Poziom AA)</a></li>
+                                                        <li><a href="{{ url('predict_index') }}#3_2_4">Kryterium sukcesu 3.2.4 Spójna identyfikacja (Poziom AA)</a></li>
+                                                        <li><a href="{{ url('predict_index') }}#3_2_5">Kryterium sukcesu 3.2.5 Zmiana na żądanie (Poziom AAA)</a></li>
+                                                    </ul>
                                                 </li>
                                                 <li>
                                                     <a href="{{ url('help_index') }}">3.3 Pomoc przy wprowadzaniu informacji</a>
+                                                    <ul style="margin-left: 2em;">
+                                                        <li><a href="{{ url('help_index') }}#3_3_1">Kryterium sukcesu 3.3.1 Identyfikacja błędu (Poziom A)</a></li>
+                                                        <li><a href="{{ url('help_index') }}#3_3_2">Kryterium sukcesu 3.3.2 Etykiety lub instrukcje (Poziom A)</a></li>
+                                                        <li><a href="{{ url('help_index') }}#3_3_3">Kryterium sukcesu 3.3.3 Sugestie korekty błędów (Poziom AA)</a></li>
+                                                        <li><a href="{{ url('help_index') }}#3_3_4">Kryterium sukcesu 3.3.4 Zapobieganie błędom (prawnym, finansowym, w danych) (Poziom AA)</a></li>
+                                                        <li><a href="{{ url('help_index') }}#3_3_5">Kryterium sukcesu 3.3.5 Pomoc (Poziom AAA)</a></li>
+                                                        <li><a href="{{ url('help_index') }}#3_3_6">Kryterium sukcesu 3.3.6 Zapobieganie błędom (wszystkim) (Poziom AAA)</a></li>
+                                                    </ul>
                                                 </li>
                                             </ul>
                                         </li>
                                         <li>
                                             Solidność
-                                            <ul>
+                                            <ul style="margin-left: 2em;">
                                                 <li>
                                                     <a href="{{ url('compatible_index') }}">4.1 Kompatybilność</a>
+                                                    <ul style="margin-left: 2em;">
+                                                        <li><a href="{{ url('compatible_index') }}#4_1_1">Kryterium sukcesu 4.1.1 Poprawność kodu (Poziom A)</a></li>
+                                                        <li><a href="{{ url('compatible_index') }}#4_1_2">Kryterium sukcesu 4.1.2 Nazwa, rola, wartość (Poziom A)</a></li>
+                                                        <li><a href="{{ url('compatible_index') }}#4_1_3">Kryterium sukcesu 4.1.3 Komunikaty o stanie (Poziom AA)</a></li>
+                                                    </ul>
                                                 </li>
                                             </ul>
                                         </li>
                                     </ul>
                                 </li>
-                                <li>Checklista wytycznych WCAG 2.1</li>
+                                <li><a href="{{ url('WCAG_checklist_index') }}">Checklista wytycznych WCAG 2.1</a></li>
                             </ul>
                         </li>
                         <li><a href="{{ url('opinie_index') }}">Opinie</a></li>

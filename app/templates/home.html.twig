@@ -7,47 +7,40 @@
 
 {% block body %}
     {% include 'header.html.twig' %}
-{#    <div id="back">#}
-{#        <h1>Dowiedz się więcej</br> o dostępności stron internetowych</h1>#}
-{#    </div>#}
     <main id="main" class="page">
-        <article id="target" style="padding-block-end: 5em;">
-            <h1 style="font-size: 2.6em;">Cel serwisu</h1>
-            <p>
-                Chciałam, aby każdy użytkowników Internetu mógł zapoznać się z terminem<br/>dostępności i powiązanymi informacjami. Założeniem było przestawienie Tobie informacji<br/>w sposób przejrzysty.
-            </p>
-            <br/>
-            <p>
-                Na pewno znajdziesz coś dla siebie – serwis poświęcony jest osobom, które chcą przeczytać<br/>o dostępności stron internetowych, jak i twórcom, którzy chcą zapoznać się z postawionymi wymaganiami. Tutaj jednak przedstawione są w sposób wizualny.
-            </p>
-        </article>
-        <article id="beginning">
+        <section id="target">
+            <h1 class="header-margin-cut">Cel serwisu</h1>
+            <div class="center-section-size">
+                <p>
+                    Chciałam, aby każdy użytkowników Internetu mógł zapoznać się z terminem dostępności <br/>i powiązanymi informacjami. Założeniem było przestawienie Tobie informacji w sposób przejrzysty.
+                </p>
+                <p>
+                    Na pewno znajdziesz coś dla siebie. Nie ważne, czy tylko ciekawi cię tematyka dostępności stron internetowych, czy jesteś twórcą takich stron.
+                </p>
+            </div>
+        </section>
+        <section id="beginning">
             <div class="content-left">
-                <h2>Wstęp do dostępności</h2>
+                <h2 class="header-margin-cut">Wstęp do dostępności</h2>
                 <p>
-                    Internet rozwija się bardzo szybko. Także serwisy zmieniają się z czasem – od strony wizualnej, jak i technicznej. Z usług nie korzystamy już tylko poprzez programy komputerowe, ale również z poziomu przeglądarki.
+                    Internet rozwija się bardzo szybko. Także serwisy zmieniają <br/>się z czasem – od strony wizualnej, jak i technicznej. Z usług <br/>nie korzystamy już tylko poprzez programy komputerowe, ale również z poziomu przeglądarki.
                 </p>
-                <br/>
-                <p>
-                    Dlatego tak ważne jest, aby tworzyć dostępne strony, przeznaczone dla różnych użytkowników. Serwis zaprojektowany w ten sposób, mogą używać osoby: niepełnosprawne, starsze,
-                    <b class="important-text">z udogodnień skorzystają także osoby pełnosprawne.</b>
-                    <!-- <ul>
-                        <li>niepełnosprawne,</li>
-                        <li>starsze,</li>
-                        <li><b class="important-text">z udogodnień skorzystają także osoby pełnosprawne.</b></li>
-                    </ul> -->
+                <p class="list-glue">
+                    Dlatego tak ważne jest, aby tworzyć dostępne strony, przeznaczone dla różnych użytkowników. <br/>Serwis zaprojektowany w ten sposób, mogą używać osoby:
                 </p>
-                <br/>
+                <ul>
+                    <li>niepełnosprawne,</li>
+                    <li>starsze,</li>
+                    <li><b>z udogodnień skorzystają także osoby pełnosprawne.</b></li>
+                </ul>
                 <p>
                     <span class="data">
-                        W samej Polsce żyje 3 mln osób z potwierdzoną niepełnosprawnością. W rzeczywistości jest ich więcej, nawet 7 mln.
+                        W samej Polsce żyje 3 mln osób z potwierdzoną niepełnosprawnością. W rzeczywistości <br/>jest ich więcej, nawet 7 mln.
                     </span>
                 </p>
-                <br/>
                 <p>
                     Widzisz zatem, że projektowanie stron pod kątem dostępności pozwala na dotarcie do większej liczby odbiorców – także potencjalnych klientów.
                 </p>
-                <br/>
                 <p class="full-width">
                     <b class="important-text">
                         Każdy może tworzyć strony, które sprawią, że Internet stanie się bardziej inkluzywnym miejscem.
@@ -55,26 +48,23 @@
                 </p>
             </div>
             <img src="{{ asset('img/disabled_lesson.jpg') }}" class="image" alt="Mężczyzna i niewidząca dziewczynka siedzą przed laptopem."/>
-        </article>
-        <article id="how-to-use">
-            <!-- <div class="content-right"> -->
-            <div>
-                <h2 style="margin-top: 0;">Jak korzystać z serwisu</h2>
+        </section>
+        <section id="how-to-use">
+                <h2 class="header-margin-cut">Jak korzystać z serwisu</h2>
                 <div class="btn-description">
-                    <p>
-                        Jeśli chcesz przeczytać więcej o dostępności w Internecie, przejdź do strefy czytelnika. Znajdziesz tam informacje<br/>o dostępności stron, wytycznych WCAG czy typach niepełnosprawności, jakie mogą mieć osoby, które używają Internetu.
+                    <p class="content-left">
+                        Jeśli chcesz przeczytać więcej o dostępności w Internecie, przejdź do strefy czytelnika. Znajdziesz tam informacje <br/>o dostępności stron, wytycznych WCAG czy typach niepełnosprawności, jakie mogą mieć osoby, które <br/>używają Internetu.
                     </p>
-                    <button><a href="{{ url('czytelnik_index') }}">Przejdź do strefy czytelnika</a></button>
+                    <a href="{{ url('czytelnik_index') }}">Przejdź do strefy czytelnika</a>
                 </div>
                 <div class="btn-description">
-                    <p>
+                    <p class="content-left">
                         Jesteś twórcą stron i chcesz dowiedzieć się, na czym polegają wytyczne WCAG 2.1? Dobrze trafiłeś – w strefie twórcy znajdziesz najważniejsze informacje i interaktywne przykłady.
                         Przy tworzeniu własnych stron możesz skorzystać z checklisty WCAG 2.1, która pozwoli śledzić spełnione kryteria.
                     </p>
-                    <button><a href="{{ url('tworca_index') }}">Przejdź do strefy twórcy</a></button>
+                    <a href="{{ url('tworca_index') }}">Przejdź do strefy twórcy</a>
                 </div>
-            </div>
-        </article>
+        </section>
     </main>
     {% include 'footer.html.twig' %}
 

@@ -2,7 +2,6 @@
 
 {% block body %}
     <a id="skip-link" href="#main">Przejdź do głównej zawartości</a>
-{#    <header style="position: -webkit-sticky; position: sticky; top: 0;">#}
     <header>
         <div id="user-actions">
             <a href="{{ url('home_index') }}">
@@ -22,7 +21,6 @@
 
                     <li id="register" class="button-style"><a href="{{ url('app_logout') }}">Wyloguj</a></li>
                 {% else %}
-                    {# {{ url('app_register') }} #}
                     <li id="login" class="button-style"><a href="{{ url('app_register') }}">Zarejestruj</a></li>
 
                     <li id="register" class="button-style"><a href="{{ url('app_login') }}">Zaloguj</a></li>

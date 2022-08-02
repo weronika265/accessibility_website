@@ -352,7 +352,7 @@ class wcagController extends AbstractController
      * @return \Symfony\Component\HttpFoundation\Response HTTP response
      *
      * @Route(
-     *     "/Solidnosc/3_3",
+     *     "/Solidnosc/4_1",
      *     methods={"GET"},
      *     name="compatible_index",
      * )
