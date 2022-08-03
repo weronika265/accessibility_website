@@ -4,6 +4,17 @@
     Logowanie
 {% endblock %}
 
+{#{% block stylesheets %}#}
+{#    <style>#}
+{#        footer {#}
+{#            position: absolute;#}
+{#            left: 0;#}
+{#            bottom: 0;#}
+{#            width: 100%;#}
+{#        }#}
+{#    </style>#}
+{#{% endblock %}#}
+
 {% block body %}
     <div id="user-actions">
         <a href="{{ url('home_index') }}">
@@ -29,15 +40,15 @@
             <h2>Logowanie</h2>
             {# dac h1 #}
 
-            <label for="email">Email</label><span class="inline-form-text" style="margin-left: 3em;">Nie masz konta? <strong><a href="{{ url('app_register') }}">Zarejestruj się</a></strong> </span><br/>
+            <label for="email">Email</label> <span class="inline-form-text" style="margin-left: 3em;">Nie masz konta? <strong><a href="{{ url('app_register') }}">Zarejestruj się</a></strong> </span><br/>
             <input type="email" value="{{ last_username }}" id="email" name="email" autocomplete="email" required autofocus/><br/>
-            <label for="password">Hasło</label><span id="show" class="inline-form-text" style="margin-left: 11.5em; cursor: pointer;"><i class='fa fa-eye' style="margin-right:0.3em;"></i>Pokaż hasło</span><br/>
+            <label for="password">Hasło</label><span id="show" class="inline-form-text"><i class='fa fa-eye' style="margin-right: 0.3em;"></i>Pokaż hasło</span><br/>
             <input type="password" id="password" name="password" style="margin-bottom: 0.5em;" autocomplete="current-password" required/><br/>
 {#            <span class="inline-form-text qst-style">Zapomniałeś hasła?</span><br/>#}
             <input type="hidden" name="_csrf_token"
                    value="{{ csrf_token('authenticate') }}"
             />
-            <input type="submit" value="Zaloguj się" class="submit-btn-space"/>
+            <input type="submit" value="Zaloguj się" class="submit-btn"/>
         </form>
     </div>
     {% include 'footer.html.twig' %}

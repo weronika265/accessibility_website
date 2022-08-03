@@ -1,0 +1,125 @@
+/* --- Main styles --- */
+html,
+body {
+    scroll-behavior: smooth;
+    margin: 0;
+}
+h1, h2 {
+    font-family: "DM Sans", sans-serif;
+}
+h1 {
+    font-size: 3rem;
+    text-align: center;
+    padding-top: 1.5em;
+}
+h2 {
+    font-size: 2.4em;
+}
+p:not(#info p, #author p), ul, a {
+    font-family: "Varta", sans-serif;
+    font-size: 1.2em;
+    font-weight: 400;
+}
+p ~ ul {
+    margin-top: 0;
+}
+p.list-glue {
+    margin-bottom: 0;
+}
+a {
+    color: black;
+}
+a:hover {
+    font-weight: bold;
+}
+
+
+/* --- scroll button --- */
+#scroll-btn {
+    position: fixed;
+    display: none;
+    right: 25px;
+    bottom: 25px;
+    border-radius: 50%;
+    border: none;
+    background-color: #57a8eb;
+    padding: 30px;
+    cursor: pointer;
+}
+#arrow {
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    left: 25px;
+    bottom: 20px;
+    border-width: 2.5px 0 0 2.5px;
+    border-style: solid;
+    border-color: white;
+    transform: rotate(45deg);
+    background-clip: content-box;
+}
+
+
+/* --- a11y button --- */
+#a11y-options {
+    position: fixed;
+    right: 0;
+    top: 350px;
+    z-index: 999;
+    background-color: rgba(225, 225, 225);
+    border: 1px solid rgb(194, 193, 193);
+    border-radius: 8px 0 0 8px;
+    padding: 40px 2px 40px 2px;
+}
+#a11y-options img {
+    width: 50px;
+    height: 50px;
+}
+#a11y-options:hover {
+    cursor: pointer;
+}
+#a11y-options-expanded {
+    position: fixed;
+    display: none;
+    right: 0;
+    top: 280px;
+    width: 180px;
+    height: auto;
+    z-index: 999;
+    font-family: "Varta", sans-serif;
+    font-weight: bold;
+    color: black;
+    background-color: rgba(225, 225, 225);
+    border: 1px solid rgb(194, 193, 193);
+    border-radius: 8px 0 0 8px;
+}
+#a11y-options-expanded button {
+    font-size: 1em;
+    background-color: transparent;
+    border: none;
+    padding: 0.5em;
+    cursor: pointer;
+}
+.a11y-options-space {
+    margin: 1em;
+}
+
+
+/* --- Komunikaty --- */
+/* TODO: dodać animację zanikania wiadomości */
+.alert {
+    position: absolute;
+    top: 2em;
+    left: 0;
+    right: 0;
+    max-width: 500px;
+    font-family: "Varta", sans-serif;
+    font-size: 1.2em;
+    text-align: center;
+    background-color: #dde6e8;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1em;
+    border-radius: 10px;
+    border: 2px solid #545454;
+}

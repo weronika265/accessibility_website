@@ -473,7 +473,6 @@ span.inline-form-text strong a {
 /* Footer nieresponsywny - naprawić */
 #reg-log form {
     margin-left: 0;
-
 }
 
 #a11y-options {
@@ -847,99 +846,99 @@ input::-webkit-inner-spin-button {
     margin: 0;
 }
 
-/*.opinions-disabled {*/
-/*    color: blue;*/
-/*    text-decoration: underline;*/
-/*    cursor: pointer;*/
-/*}*/
-/*.opinions-disabled:hover {*/
-/*    font-weight: bold;*/
-/*}*/
+.opinions-disabled {
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.opinions-disabled:hover {
+    font-weight: bold;
+}
 
-/*.comments-enabled, .opinions-enabled {*/
-/*    display: none;*/
-/*}*/
-/*.comments-close, .opinions-close {*/
-/*    display: inline-block;*/
-/*    color: blue;*/
-/*    text-decoration: underline;*/
-/*    cursor: pointer;*/
-/*}*/
+.comments-enabled, .opinions-enabled {
+    display: none;
+}
+.comments-close, .opinions-close {
+    display: inline-block;
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+}
 
 
 /* RESPONSIVE */
-/*@media screen and (max-width: 1000px) {*/
-/*    nav {*/
-/*        display: none;*/
-/*    }*/
-/*}*/
-/*@media screen and (max-width: 1140px) {*/
-/*    #beginning {*/
-/*        flex-flow: column-reverse;*/
-/*        align-items: center;*/
-/*        margin-left: 0;*/
-/*        width: auto;*/
-/*        max-width: 1100px;*/
-/*    }*/
-/*    .btn-description {*/
-/*        flex-wrap: wrap;*/
-/*        flex-direction: column;*/
-/*        align-items: flex-start;*/
-/*    }*/
-/*    #how-to-use {*/
-/*        justify-content: normal;*/
-/*        margin-bottom: 20px;*/
-/*        padding-right: 5em;*/
-/*        padding-left: 5em;*/
-/*        display: block;*/
-/*    }*/
-/*    .content-left {*/
-/*        width: auto;*/
-/*        padding-right: 5em;*/
-/*        padding-left: 5em;*/
-/*        display: block;*/
-/*    }*/
-/*}*/
-/*@media screen and (max-width: 570px) {*/
-/*    .btn-description p {*/
-/*        margin-right: 0;*/
-/*    }*/
-/*    #how-to-use p {*/
-/*        margin-bottom: 0.5em;*/
-/*    }*/
-/*    #user-actions {*/
-/*        padding-left: 0;*/
-/*        padding-right: 0;*/
-/*    }*/
-/*    #target {*/
-/*        margin-left: unset;*/
-/*        margin-right: unset;*/
-/*        padding-right: 5em;*/
-/*        padding-left: 5em;*/
-/*    }*/
-/*}*/
-/*@media screen and (max-width: 400px) {*/
-/*    .image {*/
-/*        max-width: 100%;*/
-/*        height: auto;*/
-/*    }*/
-/*}*/
-/*@media screen and (max-width: 460px) {*/
-/*    #reg-log, #reg-log form {*/
-/*        max-width: 100%;*/
-/*        height: auto;*/
-/*        border: none;*/
-/*    }*/
-/*    input {*/
-/*        max-width: 100%;*/
-/*        height: auto;*/
-/*    }*/
-/*}*/
+@media screen and (max-width: 1000px) {
+    nav {
+        display: none;
+    }
+}
+@media screen and (max-width: 1140px) {
+    #beginning {
+        flex-flow: column-reverse;
+        align-items: center;
+        margin-left: 0;
+        width: auto;
+        max-width: 1100px;
+    }
+    .btn-description {
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    #how-to-use {
+        justify-content: normal;
+        margin-bottom: 20px;
+        padding-right: 5em;
+        padding-left: 5em;
+        display: block;
+    }
+    .content-left {
+        width: auto;
+        padding-right: 5em;
+        padding-left: 5em;
+        display: block;
+    }
+}
+@media screen and (max-width: 570px) {
+    .btn-description p {
+        margin-right: 0;
+    }
+    #how-to-use p {
+        margin-bottom: 0.5em;
+    }
+    #user-actions {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    #target {
+        margin-left: unset;
+        margin-right: unset;
+        padding-right: 5em;
+        padding-left: 5em;
+    }
+}
+@media screen and (max-width: 400px) {
+    .image {
+        max-width: 100%;
+        height: auto;
+    }
+}
+@media screen and (max-width: 460px) {
+    #reg-log, #reg-log form {
+        max-width: 100%;
+        height: auto;
+        border: none;
+    }
+    input {
+        max-width: 100%;
+        height: auto;
+    }
+}
 
-/**:focus {*/
-/*    outline: black;*/
-/*    */
-/*}*/
+*:focus {
+    outline: black;
+
+}
 
 /* ADMIN */
 div.opinions-enabled, div.comments-enabled {

@@ -45,14 +45,14 @@
 {#            <input type="submit" value="Zarejestruj się" class="submit-btn-space"/>#}
 {#        </form>#}
         {{ form_start(registrationForm) }}
-        <span class="inline-form-text" style="float: right; margin-top: 1.2em;">Masz już konto? <strong><a href="{{ url('app_login') }}">Zaloguj się</a></strong> </span><br/>
+        <span class="inline-form-text" id="account-prompt">Masz już konto? <strong><a href="{{ url('app_login') }}">Zaloguj się</a></strong> </span><br/>
         {{ form_row(registrationForm.email) }}
         {{ form_row(registrationForm.username) }}
-{#        <span class="inline-form-text" style="margin-left: 11.5em; cursor: pointer;"><i class='fa fa-eye' style="margin-right:0.3em;"></i>Pokaż hasło</span><br/>#}
+{#        <span class="inline-form-text" id="show"><i class='fa fa-eye' style="margin-right: 0.3em;"></i>Pokaż hasło</span><br/>#}
         {{ form_row(registrationForm.plainPassword, {
             label: 'Hasło'
         }) }}
-        <input type="submit" value="Zarejestruj się" class="submit-btn-space" style="margin-left: 1.5em;"/>
+        <input type="submit" value="Zarejestruj się" class="submit-btn" style="margin-left: 1.5em;"/>
         {{ form_end(registrationForm) }}
     </div>
     {% include 'footer.html.twig' %}

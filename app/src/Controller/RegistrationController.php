@@ -25,7 +25,7 @@ class RegistrationController extends AbstractController
      * @return Response
      *
      * @Route(
-     *     "/register",
+     *     "/rejestracja",
      *     methods={"GET", "POST"},
      *     name="app_register",
      * )
