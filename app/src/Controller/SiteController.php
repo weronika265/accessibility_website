@@ -50,41 +50,23 @@ class SiteController extends AbstractController
         );
     }
 
-    /**
-     * Strona Dla twórcy.
-     *
-     * @return \Symfony\Component\HttpFoundation\Response HTTP response
-     *
-     * @Route(
-     *     "/tworca",
-     *     methods={"GET"},
-     *     name="tworca_index",
-     * )
-     */
-    public function tworca(): Response
-    {
-        return $this->render(
-            'tworca.html.twig',
-        );
-    }
-
-    /**
-     * Kontakt.
-     *
-     * @return \Symfony\Component\HttpFoundation\Response HTTP response
-     *
-     * @Route(
-     *     "/kontakt",
-     *     methods={"GET"},
-     *     name="kontakt_index",
-     * )
-     */
-    public function kontakt(): Response
-    {
-        return $this->render(
-            'kontakt.html.twig',
-        );
-    }
+//    /**
+//     * Kontakt.
+//     *
+//     * @return \Symfony\Component\HttpFoundation\Response HTTP response
+//     *
+//     * @Route(
+//     *     "/kontakt",
+//     *     methods={"GET"},
+//     *     name="kontakt_index",
+//     * )
+//     */
+//    public function kontakt(): Response
+//    {
+//        return $this->render(
+//            'kontakt.html.twig',
+//        );
+//    }
 
     /**
      * Informacja o stronie.
@@ -104,40 +86,21 @@ class SiteController extends AbstractController
         );
     }
 
-
     /**
-     * Rejestracja.
+     * Mapa serwisu.
      *
      * @return \Symfony\Component\HttpFoundation\Response HTTP response
      *
      * @Route(
-     *     "/rejestracja",
+     *     "/mapa_serwisu",
      *     methods={"GET"},
-     *     name="rejestracja_index",
+     *     name="mapa_serwisu_index",
      * )
      */
-    public function rejestracja(): Response
+    public function mapa_serwisu(): Response
     {
         return $this->render(
-            'rejestracja.html.twig',
-        );
-    }
-
-    /**
-     * Logowanie.
-     *
-     * @return \Symfony\Component\HttpFoundation\Response HTTP response
-     *
-     * @Route(
-     *     "/logowanie",
-     *     methods={"GET"},
-     *     name="logowanie_index",
-     * )
-     */
-    public function logowanie(): Response
-    {
-        return $this->render(
-            'logowanie.html.twig',
+            'mapa_serwisu.html.twig',
         );
     }
 }

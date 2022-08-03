@@ -1,28 +1,40 @@
-{% extends 'base.html.twig' %}
+{#{% extends 'base.html.twig' %}#}
 
 {% block body %}
-    <a id="skip-link" href="#main" tabindex="4">Przejdź do głównej zawartości</a>
-{#    <header style="position: -webkit-sticky; position: sticky; top: 0;">#}
+    <a id="skip-link" href="#main">Przejdź do głównej zawartości</a>
     <header>
         <div id="user-actions">
             <a href="{{ url('home_index') }}">
                 <img
                         id="logo"
                         src="{{ asset('img/logo_flat.png')}}"
-                        alt="Logo strony - strona dostępności z emblematem 6 łez w kolorach tęczy."
+                        alt="Logo serwisu."
                 />
             </a>
             <ul>
-                <li id="login" class="button-style" tabindex="5"><a href="{{ url('rejestracja_index') }}">Zarejestruj</a></li>
-                <li id="register" class="button-style" tabindex="6"><a href="{{ url('logowanie_index') }}">Zaloguj</a></li>
+                {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                    {% if is_granted('ROLE_ADMIN') %}
+                        <li id="login" class="button-style"><a href="{{ url('admin_index') }}">Panel administratora</a></li>
+                    {% else %}
+                        <li id="login" class="button-style"><a href="{{ url('user_index') }}">Moje konto</a></li>
+                    {% endif %}
+
+                    <li id="register" class="button-style"><a href="{{ url('app_logout') }}">Wyloguj</a></li>
+                {% else %}
+                    <li id="login" class="button-style"><a href="{{ url('app_register') }}">Zarejestruj</a></li>
+
+                    <li id="register" class="button-style"><a href="{{ url('app_login') }}">Zaloguj</a></li>
+                {% endif %}
             </ul>
         </div>
         <nav>
             <ul>
-                <li class="button-style" tabindex="1"><a href="{{ url('czytelnik_index') }}">Strefa czytelnika</a></li>
-                <li class="button-style" tabindex="2"><a href="{{ url('tworca_index') }}">Strefa twórcy</a></li>
-                <li class="button-style" tabindex="3"><a href="{{ url('kontakt_index') }}">Kontakt</a></li>
+                <li class="button-style"><a href="{{ url('czytelnik_index') }}">Strefa czytelnika</a></li>
+                <li class="button-style"><a href="{{ url('tworca_index') }}">Strefa twórcy</a></li>
+                <li class="button-style"><a href="{{ url('opinie_index') }}">Opinie</a></li>
+{#                <li class="button-style"><a href="{{ url('projekt_info_index') }}">Informacja o projekcie</a></li>#}
             </ul>
         </nav>
     </header>
 {% endblock %}
+{# TODO: zmienić style login, register, bo są na odwrót #}

@@ -1,40 +1,51 @@
 {% extends 'base.html.twig' %}
+{#??#}
 
 {% block body %}
     <footer>
         <div id="info">
             <img
                     src="{{ asset('img/logo_short.png') }}"
-                    alt="Emblemat strony - 6 łez w kolorach tęczy."
+                    alt=""
                     id="logo2"
             />
             <p><a href="{{ url('projekt_info_index') }}">Informacja o projekcie</a></p>
-            <!-- <div id="contact_info">
-                    <p>Informacje kontaktowe</p>
-                    <div class="indent">
-                        <p>Telefon</p>
-                        <p>Adres</p>
-                    </div>
-                </div>
-                <div id="socials">
-                    <p>Znajdź nas w mediach</p>
-                    <div class="indent"></div>
-                </div> -->
+            <p><a href="{{ url('mapa_serwisu_index') }}">Mapa serwisu</a></p>
         </div>
         <div id="author">
             <p>Weronika Ruszel | Elektroniczne Przetwarzanie Informacji | 2022</p>
         </div>
     </footer>
-    <span id="a11y-options" style="cursor: pointer;" onclick="displayA11y">
-        <img
-                src="{{ asset('img/accessibility.png') }}"
-                alt="Człowieczek – oznaczenie dostępności."
-        />
-{#        <div id="a11y-options-extended"></div>#}
-    </span>
+    <button aria-label="Przejdź na górę strony" id="scroll-btn" tabindex="0"><span id="arrow"></span></button>
 
+    <div role="button">
+        <div aria-label="Opcje dostępności" tabindex="0" id="a11y-options"><img src="{{ asset('img/accessibility.png') }}" alt=""/></div>
+        <div id="a11y-options-expanded">
+            <div class="a11y-options-space">
+                Kontrast strony<br/>
+                <button aria-label="Normalny kontrast" id="contrast-std"><i class='fa fa-circle-o' style="font-size: 25px;"></i></button>
+                <button aria-label="Wysoki kontrast" id="contrast-high"><i class="fa fa-lg fa-adjust" style="font-size: 25px;"></i></button>
+            </div>
+            <div class="a11y-options-space">
+                Odstęp między literami<br/>
+                <button aria-label="Standardowy odstęp" id="space-std"><i class='fa fa-text-width' style="font-size: 15px;"></i></button>
+                <button aria-label="Duży odstęp" id="space-big"><i class='fa fa-text-width' style="font-size: 20px;"></i></button>
+                <button aria-label="Bardzo duży odstęp" id="space-bigger"><i class='fa fa-text-width' style="font-size: 30px;"></i></button>
+            </div>
+            <div class="a11y-options-space">
+                Wielkość fontu<br/>
+                <button aria-label="Normalna wielkość" id="font-small"><i class="fa fa-font" style="font-size: 15px;"></i></button>
+                <button aria-label="Duża wielkość" id="font-std"><i class="fa fa-font" style="font-size: 20px;"></i></button>
+                <button aria-label="Bardzo duża wielkość" id="font-big"><i class="fa fa-font" style="font-size: 25px;"></i></button>
+            </div>
+        </div>
+    </div>
+
+    {#??#}
     {% block javascripts %}
-        {{ parent() }}
+        <script>
+            {{ parent() }}
+        </script>
     {% endblock %}
 
 {% endblock %}
