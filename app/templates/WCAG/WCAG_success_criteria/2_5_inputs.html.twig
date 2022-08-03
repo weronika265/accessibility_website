@@ -1,0 +1,239 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    2.5 Metody obsługi
+{% endblock %}
+
+{% block body %}
+    {% include 'header.html.twig' %}
+    {% include 'sidebar.html.twig' %}
+    <main id="main" class="page">
+        <div style="margin-left: 15em;">
+            <h1>Wytyczna 2.5 Metody obsługi</h1>
+            <p class="txt-format-main">
+                Ułatwiaj użytkownikom obsługę funkcji za pomocą różnych sposobów poza klawiaturą.
+            </p>
+            <div id="table-of-content">
+                <h2>Spis treści</h2>
+                <ul>
+                    <li><a href="#2_5_1">Kryterium sukcesu 2.5.1 Gesty dotykowe (Poziom A)</a></li>
+                    <li><a href="#2_5_2">Kryterium sukcesu 2.5.2 Rezygnacja ze wskazania (Poziom A)</a></li>
+                    <li><a href="#2_5_3">Kryterium sukcesu 2.5.3 Etykieta w nazwie (Poziom A)</a></li>
+                    <li><a href="#2_5_4">Kryterium sukcesu 2.5.4 Aktywowanie ruchem (Poziom A)</a></li>
+                    <li><a href="#2_5_5">Kryterium sukcesu 2.5.5 Rozmiar celu dotykowego (Poziom AAA)</a></li>
+                    <li><a href="#2_5_6">Kryterium sukcesu 2.5.6 Równoległy mechanizm wprowadzania danych (Poziom AAA)</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 id="2_5_1">Kryterium sukcesu 2.5.1 Gesty dotykowe (Poziom A)</h3>
+                <p class="txt-format">
+                    Operacje na stronie, które są obsługiwane przez gesty:
+                    <ul>
+                        <li>wielopunktowe – aktywowane przez jednoczesne wciśnięcie kilku punktów (gest powiększania przez „uszczypnięcie” ekranu dwoma palcami);</li>
+                        <li>oparte na ścieżce – aktywowane przez ciągłość ruchu (gest przesuwania, rysowanie kształtu),</li>
+                    </ul>
+                    muszą być również obsługiwane przez <b>gesty jednopunktowe</b>.
+                </p>
+                <p class="txt-format">
+                    Wyjątkiem są elementy, których obsługa przy użyciu gestów wielopunktowych lub opartych na ścieżce jest kluczowa (np. wprowadzanie podpisu).
+                </p>
+                <p class="txt-format">
+                    <b>Gesty jednopunktowe</b> to gesty, w których ważny jest tylko początek i koniec, na przykład:
+                    <ul>
+                        <li>przemieszczanie elementu z jednego miejsca w drugie;</li>
+                        <li>dwukrotne naciśnięcie elementu palcem.</li>
+                    </ul>
+                </p>
+
+            {# TODO: wrzucić do listy na górze #}
+                <p class="txt-format">
+                    Gesty jednopunktowe poszerzają zakres obsługiwanych urządzeń i technologii, np. o:
+                    <ul>
+                        <li>wskaźniki ekranu przyczepiane do głowy użytkownika,</li>
+                        <li>systemy do korzystania z urządzenia przy użyciu wzroku,</li>
+                        <li>oprogramowanie do obsługi urządzenia za pomocą mowy.</li>
+                    </ul>
+                </p>
+                <p class="txt-format">
+                    Użytkownicy mają różne umiejętności i możliwości, jeśli chodzi o korzystanie z urządzeń.
+                    Część z nich nie może wykonywać bardziej skomplikowanych lub precyzyjnych ruchów.
+                    Przez to woli używać gestów klikania niż np. przeciągania palcem.
+                </p>
+                <p class="txt-format">
+                    Gesty jednopunktowe:<br/>
+                    <video width="320" height="240" controls>
+                        <source src="{{ asset('img/2_5_1_jedno.mp4') }}" type="video/mp4">
+                        Twoja przeglądarka nie wspiera elementów wideo.
+                    </video><br/>
+                    Źródło grafik: Mapy Google<br/><br/>
+                    Gesty wielopunktowe:<br/>
+                    <video width="320" height="240" controls>
+                        <source src="{{ asset('img/2_5_1_wielo.mp4') }}" type="video/mp4">
+                        Twoja przeglądarka nie wspiera elementów wideo.
+                    </video><br/>
+                    Źródło grafik: Mapy Google
+                </p>
+            {# ----------------------- #}
+            </div>
+            <div>
+                <h3 id="2_5_2">Kryterium sukcesu 2.5.2 Rezygnacja ze wskazania (Poziom A)</h3>
+                <p class="txt-format">
+                    Kiedy zawartość na stronie jest wywoływana przez dotyk jednopunktowy, musi być spełnione przynajmniej jedno z poniższych:
+                <ul>
+                    <li>Samo wciśnięcie nie aktywuje żadnego zdarzenia. Do aktywacji dochodzi dopiero po zwolnieniu nacisku;</li>
+                    <li>
+                        Aktywacja zależy od zwolnienia nacisku i w każdym momencie można ją przerwać lub cofnąć skutki aktywacji.
+                        Aktywację możesz zazwyczaj przerwać przez przesunięcie palca z pola aktywacji i zwolnienie nacisku.
+                    </li>
+                    <li>Przy zwolnieniu nacisku zdarzenie zostaje cofnięte do domyślnego stanu. Przykładem jest menu, które aktywuje się przy wciśnięciu, a znika po
+                        zwolnieniu nacisku;</li>
+                    <li>
+                        Wciśnięcie jest niezbędne do aktywacji zdarzenia. Jest to ważne w emulatorach klawiatury i w aplikacjach takich jak symulacja klawiszy
+                        pianina. To naturalne działanie wymienionych narzędzi. Nadpisanie takiego sposobu działania może stać się nieintuicyjne dla odbiorcy.
+                    </li>
+                </ul>
+                </p>
+                <p class="txt-format">
+                    Odpowiednia obsługa gestów sprawia, że użytkownik będzie popełniał mniej błędów, kiedy korzysta z różnych urządzeń, np. opartych na
+                    ekranie dotykowym. Umożliwisz mu zrezygnowanie z akcji, gdy naciśnie zły przycisk.
+                    <video width="320" height="240" controls>
+                        <source src="{{ asset('img/2_5_2.mp4') }}" type="video/mp4">
+                        Twoja przeglądarka nie wspiera elementów wideo.
+                    </video><br/>
+                </p>
+            </div>
+            <div>
+                <h3 id="2_5_3">Kryterium sukcesu 2.5.3 Etykieta w nazwie (Poziom A)</h3>
+                <p class="txt-format">
+                    Kiedy komponent interfejsu użytkownika ma widoczną tekstową etykietę (często &lt;label&gt;),
+                    zachowaj spójność między nią a nazwą komponentu.
+                </p>
+                <p class="txt-format">
+                    Nazwa komponentu to treść, która nie jest widoczna dla użytkownika. Jest jednak odczytywana przez różne technologie, w tym technologie asystujące.
+                </p>
+                <p class="txt-format">
+                    Najlepszą praktyką jest opisanie tak samo etykiety i nazwy komponentu.
+                </p>
+                <p class="txt-format">
+                    <video width="320" height="240" controls>
+                        <source src="{{ asset('img/2_5_3.mp4') }}" type="video/mp4">
+                        Twoja przeglądarka nie wspiera elementów wideo.
+                    </video><br/>
+                </p>
+                <p class="txt-format">
+                    <label>Email<input type="email" name="email"/></label>
+                    <pre>
+                        <code>
+                            &lt;label&gt;Email&lt;input type="email" name="email"/&gt;&lt;/label&gt;
+                        </code>
+                    </pre>
+                </p>
+                <p class="txt-format">
+                    <button type="button" aria-label="Kup produkt">Kup</button>
+                    <pre>
+                        <code>
+                            &lt;button type="button" aria-label="Kup produkt"&gt;Kup&lt;/button&gt;
+                        </code>
+                    </pre>
+                </p>
+                <p class="txt-format">
+                    Dzięki podobnemu nazewnictwu użytkownicy będą rozumieli komponenty interfejsu w ten sam sposób.
+                    Są to zarówno osoby widzące, jak i niewidzące.
+                </p>
+                <p class="txt-format">
+                    <i class='fa fa-arrow-right' style="font-size: 20px; margin-right: 0.3em;"></i>Użytkownicy mogą używać sterowania głosem, żeby przemieszczać się po stronie.
+                    Etykiety pozwalają im wybierać elementy za pomocą komend słownych: menu, przycisk, link i inne.
+                </p>
+                <p class="txt-format">
+{#                    TODO: check czy poprawnie, czy o to chodzi #}
+                    <i class='fa fa-arrow-right' style="font-size: 20px; margin-right: 0.3em;"></i>Wiele osób z niepełnosprawnościami używa czytników tekstu.
+                    Czytniki odczytują nazwę, która jest widoczna na jego etykiecie obiektu.
+                </p>
+                <p class="txt-format">
+                    <strong>WAŻNE</strong><br/>
+                    Komponenty, które nie zawierają opisu wizualnego, nie muszą go posiadać.
+
+{#                    TODO: sprawdzić, czy się zagadza i może dodać inny przykład #}
+                    Wystarczy, że będą nazwane dla oprogramowania, np. przez nadanie atrybutu name.
+                </p>
+            </div>
+            <div>
+                <h3 id="2_5_4">Kryterium sukcesu 2.5.4 Aktywowanie ruchem (Poziom A)</h3>
+                <p class="txt-format">
+                    Funkcjonalności na stronie mogą być używane za pomocą gestów. Musisz dostarczyć alternatywę dla takiego sposobu sterowania, to znaczy dodać:
+                    <ul>
+                        <li>komponenty interfejsu, które pełnią te same funkcje co sterowanie gestami;</li>
+                        <li>możliwość wyłączenia obsługi gestów.</li>
+                    </ul>
+                </p>
+                <p class="txt-format">
+                    Wyjątkiem są:
+                    <ul>
+                        <li>gesty, które dotyczą technologii asystujących;</li>
+                        <li>gesty kluczowe dla działania funkcjonalności (np. krokomierz).</li>
+                    </ul>
+                    <img style="width: 300px; height: auto;" src="{{ asset('img/2_5_4a.jpg') }}" />
+                </p>
+                <p class="txt-format">
+                    Urządzenia zawierają różne czujniki (np. żyroskop, akcelerometr), które dodają nowe funkcjonalności do urządzenia. Użytkownik może m.in.:
+                    <ul>
+                        <li>obracać widok ekranu przez przechylenie urządzenia do orientacji pionowej lub poziomej;</li>
+                        <li>anulować operację przez potrząśnięcie urządzeniem;</li>
+                        <li>wykonać zrzut ekranu przez przeciągnięcie palcami po ekranie urządzenia.</li>
+                    </ul>
+                    <img style="width: 250px; height: auto;" src="{{ asset('img/2_5_4b.jpg') }}" />
+                </p>
+                <p class="txt-format">
+                    Pamiętaj, że część osób nie może wykonać takich gestów lub robi to z trudnością.
+                    Niektórzy mogą przez przypadek włączyć funkcjonalność, np. w wyniku niekontrolowanego drżenie rąk.
+                </p>
+            </div>
+            <div>
+                <h3 id="2_5_5">Kryterium sukcesu 2.5.5 Rozmiar celu dotykowego (Poziom AAA)</h3>
+                <p class="txt-format">
+                    Rozmiar celu dotykowego musi wynosić minimum 44px x 44px. <strong>Cel dotykowy</strong> to obszar lub element na stronie, który reaguje na akcję
+                    ze strony użytkownika, np. kliknięcie.
+                    Nie jest to jednak wymagane, gdy:
+                <ul>
+                    <li>Inny element na tej samej stronie wynosi minimum 44px x 44px i pełni tę samą funkcję;</li>
+                    <li>Element znajduje się w środku tekstu lub jest jego częścią (np. link w tekście);</li>
+                    <li>Autor nie może zmodyfikować elementu, ponieważ jest zależny od ustawień programu;</li>
+                    <li>Taki sposób prezentacji jest ważny, a zmiany mogą prowadzić do innego działania treści.</li>
+                </ul>
+                </p>
+                <p class="txt-format">
+                    Minimalny rozmiar przycisku:<br/>
+                    <input type="button" style="width: 44px; height: 44px;"/>
+                </p>
+                <p class="txt-format">
+                    Obszar dotykowy elementu ma być tyle duży, aby każdy użytkownik mógł bez kłopotu nacisnąć element.
+                    Odpowiednia wielkość obszaru pozwala na swobodne używanie strony na różnych urządzeniach.
+                </p>
+            </div>
+            <div>
+                <h3 id="2_5_6">Kryterium sukcesu 2.5.6 Równoległy mechanizm wprowadzania danych (Poziom AAA)</h3>
+                <p class="txt-format">
+                    Strona internetowa nie może ograniczać urządzeń i technologii, które można użyć na stronie.
+                    Pozwól użytkownikowi wybrać technologie, a także bez problemu je zamieniać. Są to m.in.:
+                <ul>
+                    <li>klawiatura,</li>
+                    <li>mysz,</li>
+                    <li>wskaźnik ekranu,</li>
+                    <li>nawigacja głosowa,</li>
+                    <li>urządzenie mobilne.</li>
+                </ul>
+                </p>
+                <p class="txt-format">
+                    Można ograniczyć obsługiwane technologie, kiedy jest to:
+                    <ul>
+                        <li>istotne, np. aplikacja do nauki szybkiego pisania na klawiaturze;</li>
+                        <li>wymagane do zapewnienia bezpieczeństwa treści;</li>
+                        <li>wymagane do przestrzegania ustawień użytkownika.</li>
+                    </ul>
+                </p>
+            </div>
+        </div>
+        </div>
+    </main>
+    {% include 'footer.html.twig' %}
+{% endblock %}

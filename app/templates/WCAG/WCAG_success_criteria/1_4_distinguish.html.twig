@@ -1,0 +1,493 @@
+{% extends 'base.html.twig' %}
+{# skonfigurowane include, zeby nie zchodzic ponizej templates? #}
+{# zrobic normalne style #}
+{# poprawic sidebar, zeby byl accessible #}
+{# cos nie dziala grafika a11y #}
+{% block title %}
+    1.4 Rozróżnialność
+{% endblock %}
+
+{% block body %}
+    {% include 'header.html.twig' %}
+    {% include 'sidebar.html.twig' %}
+    <main id="main" class="page">
+        <div style="margin-left: 15em;">
+            <h1>Wytyczna 1.4 Rozróżnialność</h1>
+            <p class="txt-format-main">Ułatwiaj oglądanie i słuchanie treści oraz oddzielanie informacji od tła.</p>
+            <div id="table-of-content">
+                <h2>Spis treści</h2>
+                <ul>
+                    <li><a href="#1_4_1">Kryterium sukcesu 1.4.1 Użycie koloru (Poziom A)</a></li>
+                    <li><a href="#1_4_2">Kryterium sukcesu 1.4.2 Kontrola odtwarzania dźwięku (Poziom A)</a></li>
+                    <li><a href="#1_4_3">Kryterium sukcesu 1.4.3 Kontrast (minimalny) (Poziom AA)</a></li>
+                    <li><a href="#1_4_4">Kryterium sukcesu 1.4.4 Zmiana rozmiaru tekstu (Poziom AA)</a></li>
+                    <li><a href="#1_4_5">Kryterium sukcesu 1.4.5 Obrazy tekstu (Poziom AA)</a></li>
+                    <li><a href="#1_4_6">Kryterium sukcesu 1.4.6 Kontrast (wzmocniony) (Poziom AAA)</a></li>
+                    <li><a href="#1_4_7">Kryterium sukcesu 1.4.7 Niska głośność lub bez dźwięków w tle (Poziom AAA)</a></li>
+                    <li><a href="#1_4_8">Kryterium sukcesu 1.4.8 Prezentacja wizualna (Poziom AAA)</a></li>
+                    <li><a href="#1_4_9">Kryterium sukcesu 1.4.9 Obrazy tekstu (bez wyjątków) (Poziom AAA)</a></li>
+                    <li><a href="#1_4_10">Kryterium sukcesu 1.4.10 Dopasowanie do ekranu (Poziom AA)</a></li>
+                    <li><a href="#1_4_11">Kryterium sukcesu 1.4.11 Kontrast elementów nietekstowych (Poziom AA)</a></li>
+                    <li><a href="#1_4_12">Kryterium sukcesu 1.4.12 Odstępy w tekście (Poziom AA)</a></li>
+                    <li><a href="#1_4_13">Kryterium sukcesu 1.4.13 Treść spod kursora lub fokusu (Poziom AA)</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 id="1_4_1">Kryterium sukcesu 1.4.1 Użycie koloru (Poziom A)</h3>
+                <p class="txt-format">
+                    Kiedy przekazujesz lub wyróżniasz informacje na stronie, <b>nie polegaj tylko na kolorze</b>.<br/>
+                    Część osób ma trudności z rozpoznawaniem barw lub wcale ich nie rozpoznaje.
+                    Jeśli informacje przekazujesz tylko za pomocą koloru, takie osoby mogą nie rozumieć polecenia lub nie mogą go wykonać.<br/>
+                </p>
+                <p>
+                    Przykład złego użycia koloru do przekazania ważnej informacji:
+                <div>
+                    <label style="color: red;">Imię<input type="text"/></label><br/>
+                    <label style="color: red;">Nazwisko<input type="text"/></label><br/>
+                    <label style="color: red;">Adres<input type="text"/></label><br/>
+                    <label>Wiek<input type="text"/></label><br/>
+                </div>
+                </p>
+                <p>
+                    Przykład poprawny:
+                <div>
+                    Pola oznaczone znakiem „*” są wymagane.<br/>
+                    <label style="color: red;">*Imię<input type="text"/></label><br/>
+                    <label style="color: red;">*Nazwisko<input type="text"/></label><br/>
+                    <label style="color: red;">*Adres<input type="text"/></label><br/>
+                    <label>Wiek<input type="text"/></label><br/>
+
+                </div>
+                </p>
+                <p class="txt-format">
+                    <b>WAŻNE</b><br/>
+                    Jeśli używasz koloru do podkreślenia elementu, kolor musi mieć inny odcień i jasność. Kontrast wyróżnionego elementu
+                    musi wynosić minimum 3:1 w stosunku do reszty treści.
+                </p>
+            </div>
+            <div>
+                <h3 id="1_4_2">Kryterium sukcesu 1.4.2 Kontrola odtwarzania dźwięku (Poziom A)</h3>
+                <p class="txt-format">
+                    Jeśli na stronie zamieszczone jest nagranie, które włącza się po załadowaniu strony i trwa dłużej niż 3 sekundy,
+                    musisz umożliwić:
+                <ul>
+                    <li>wyłączenie takiego nagrania</li>
+                    LUB
+                    <li>ściszenie dźwięku na stronie, niezależnie od głośności systemu.</li>
+                </ul>
+                <b>Uwaga</b><br/>
+                Kiedy nie zastosujesz się do kryterium, reszta treści też nie będzie dostępna.<br/>
+                Spójrz na taką sytuację: użytkownik korzysta z technologii asystujących (czytniki tekstu, treści) do poruszania się po stronie.
+                Jeśli po odwiedzeniu strony użytkownik usłyszy dźwięk z nagrania, ścieżka audio nagrania i dźwięk z czytnika treści będą się nachodziły.
+                Użytkownik będzie miał wtedy problem ze zrozumieniem, jaką informację przekazuje mu czytnik.<br/>
+                </p>
+                <p class="txt-format">
+                    Zmiana głośności nagrania powinna być niezależna od głośności systemu. To sprawi, że zmiana głośności nagrania nie zmieni głośności używanego czytnika.
+                </p>
+                <p class="txt-format">
+                    <b>WAŻNE</b>
+                    Najlepiej, aby nagranie było domyślnie wyłączone. Wtedy użytkownik może zdecydować, czy chce włączyć odtwarzacz.<br/>
+                    Możesz oczywiście zadecydować, że nagranie będzie włączało się po załadowaniu strony.
+                    Pomyśl jednak – czy nie irytuje Cię, kiedy ładujesz stronę i nie wiesz, skąd pochodzi odtwarzany dźwięk?
+                </p>
+                Nagranie zgodne z kryterium<br/>
+                <video width="320" height="240" controls>
+                    <source src="{{ asset('img/1_4_2_dobry.mp4') }}" type="video/mp4" />
+                    Twoja przeglądarka nie wspiera elementów wideo.
+                </video>
+                <br/>
+                Nagranie niezgodne z kryterium<br/>
+                <video width="320" height="240" controls>
+                    <source src="{{ asset('img/1_4_2_zly.mp4') }}" type="video/mp4" />
+                    Twoja przeglądarka nie wspiera elementów wideo.
+                </video>
+            </div>
+            <div>
+                <h3 id="1_4_3">Kryterium sukcesu 1.4.3 Kontrast (minimalny) (Poziom AA)</h3>
+                <p class="txt-format">
+                    Tekst do czytania lub który jest częścią grafiki (obrazy tekstu), musi mieć kontrast przynajmniej 4.5:1.
+                    Wyjątkami są:
+                <ul>
+                    <li>Duży tekst (18px lub pogrubiony 16px) i obrazy zawierające duży tekst muszą mieć kontrast przynajmniej 3:1.</li>
+                    <li>Tekst w treści czysto dekoracyjnej, nieaktywnych i niewidocznych elementach interfejsu.</li>
+                    <li>Logotyp – nazwa marki w formie tekstowej.</li>
+                </ul>
+                Mały tekst:<br/>
+                <img src="{{ asset('img/small_4_5.png') }}" /><br/>
+                Duży tekst:<br/>
+                <img src="{{ asset('img/big_3_1.png') }}" /><br/>
+                </p>
+                    <p class="txt-format">
+                        Odpowiedni kontrast na stronie pozwala osobom z problemami ze wzrokiem swobodniej korzystać z zawartości.
+                        Mogą to być m.in.:
+                    <ul>
+                        <li>osoby niedowidzące, którym łatwiej jest odczytać tekst kontrastujący z tłem;</li>
+                        <li>osoby ze ślepotą barw. Mogą one mieć problemy z poprawnym rozpoznawaniem jasności barw.</li>
+                    </ul>
+                </p>
+                <p class="txt-format">
+                    Niektóre grafiki zawierają tekst, który jest istotny dla odbiorcy. Tekst w tego rodzaju treściach należy:
+                <ul>
+                    <li>dołączyć osobno w postaci normalnego tekstu i nanieść na grafikę</li>
+                    albo
+                    <li>zamiast osobnego tekstu tworzyć grafiki w większych rozdzielczościach.</li>
+                </ul>
+                Dobrą praktyką jest dodawanie tekstu osobno. Wtedy znacznie łatwiej zmienisz kontrast między elementami strony a tłem.<br/>
+                Natomiast jeśli powiększasz zawartość z tekstem, tekst nie straci na czytelności.
+                </p>
+            </div>
+            <div>
+                <h3 id="1_4_4">Kryterium sukcesu 1.4.4 Zmiana rozmiaru tekstu (Poziom AA)</h3>
+                <p class="txt-format">
+                    Pozwól użytkownikowi powiększyć tekst do 200%, bez potrzeby użycia dodatkowych technologii.
+                    Powiększona zawartość ma być tak samo funkcjonalna, jak przy domyślnym widoku.<br/>
+                    Kryterium nie dotyczy:
+                    <ul>
+                        <li>napisów do nagrań,</li>
+                        <li>tekstu, który jest częścią grafiki.</li>
+                    </ul>
+                </p>
+                <p class="txt-format">
+                    Spraw, aby użytkownik mógł powiększyć zawartość przy użyciu opcji <i>zoom</i> w przeglądarce lub przycisków na stronie.<br/>
+                    Zaprogramowane przyciski powinny umożliwiać zmianę wielkości czcionki, a także odległości w tekście.
+                </p>
+                <p class="txt-format">
+                    Pamiętaj o zaprojektowaniu strony tak, aby przy powiększaniu zawartość nie „rozjeżdżała się”.
+                </p>
+                <p class="txt-format">
+                    Możliwość powiększenia zawartości jest bardzo pomocna dla osób, które słabo widzą.
+                </p>
+                <strong id="txt-example">Tekst do powiększenia</strong><br/>
+                <button id="zoom-txt-btn" style="cursor: pointer;">Powiększ napis wyżej</button>
+                <button id="reset-btn" style="cursor: pointer;"><i class="fa fa-rotate-left"></i></button>
+                <br/>
+                <strong>Spróbuj powiększyć stronę ('Ctrl' + '+') do wartości 200%. Zobacz, że strona jest nadal czytelna.</strong>
+            </div>
+            <div>
+                <h3 id="1_4_5">Kryterium sukcesu 1.4.5 Obrazy tekstu (Poziom AA)</h3>
+                <p class="txt-format">
+                    Napisy na grafikach powinny być osobno dodanym tekstem.
+                    Nie dotyczy to grafik z tekstem, gdzie:
+                <ul>
+                    <li>grafika może być dostosowana przez użytkownika (zmiana wielkości, kontrastu),</li>
+                    <li>tekst na grafice jest ważny do jej zrozumienia (np. logotyp, zrzut ekranu, wykres).</li>
+                </ul>
+                Dzięki rozwiązaniu użytkownicy nie muszą polegać na tekście sformatowanym przez autora. Odbiorca może zmieniać czcionce:
+                <ul>
+                    <li>krój,</li>
+                    <li>kolor,</li>
+                    <li>wyrównanie,</li>
+                    <li>odstępy międzyliterowe i międzywyrazowe.</li>
+                </ul>
+                </p>
+                <p class="txt-format">
+                    Osoby, które mają słaby wzrok lub problemy z czytaniem podziękują Ci za tę funkcjonalność.
+                    Niektóre opcje pisma są dla takich użytkowników trudne do odczytania i zmienia się je według upodobań.
+                </p>
+                <img src="{{ asset('img/1_4_5_tekst.png') }}" /><br/>
+                <div class="inside">
+                    <img src="{{ asset('img/1_4_5.png') }}" />
+                    <div class="txt-inside">TESTOWY&nbsp;<br/>TEKST</div>
+                </div>
+            </div>
+            <div>
+                <h3 id="1_4_6">Kryterium sukcesu 1.4.6 Kontrast (wzmocniony) (Poziom AAA)</h3>
+                <p class="txt-format">
+                    Jest to modyfikacja kryterium <a href="#1_4_3">1.4.3 Kontrast (minimalny)</a>.<br/>
+                    W tym przypadku kontrast musi być większy i wynosić przynajmniej 7:1.<br/>
+                    Duży tekst i obrazy zawierające duży tekst muszą mieć kontrast przynajmniej 4.5:1.
+                </p>
+                <p>
+                    Mały tekst:<br/>
+                    <img src="{{ asset('img/small_7_1.png') }}" /><br/>
+                    Duży tekst:<br/>
+                    <img src="{{ asset('img/big_4_5.png') }}" /><br/>
+                </p>
+            </div>
+            <div>
+                <h3 id="1_4_7">Kryterium sukcesu 1.4.7 Niska głośność lub bez dźwięków w tle (Poziom AAA)</h3>
+                <p class="txt-format">
+                    Materiały tylko audio, które:
+                <ol>
+                    <li>zawierają mowę na pierwszym planie,</li>
+                    <li>nie są dźwiękową wersją testu CAPTCHA,</li>
+                    <li>nie są nagraniem o charakterze muzycznym (np. śpiew),</li>
+                </ol>
+                muszą spełniać co najmniej jedno z założeń:
+                <ul>
+                    <li>nagranie nie zawiera dźwięków w tle,</li>
+                    <li>dźwięki w tle można wyłączyć,</li>
+                    <li>głośność tła jest przynajmniej 20dB (4x) niższa od dźwięków mowy na pierwszym planie. Wyjątkiem są okazyjne, jedno- lub dwusekundowe dźwięki tła.</li>
+                </ul>
+                </p>
+                <p class="txt-format">
+                    Dzięki kryterium osoby, które słabo słyszą, mogą łatwiej oddzielić mowę od dźwięków tła.
+                </p>
+            </div>
+            <div>
+                <h3 id="1_4_8">Kryterium sukcesu 1.4.8 Prezentacja wizualna (Poziom AAA)</h3>
+                <p class="txt-format">
+                    Podczas tworzenia zawartości tekstowej na stronie, zastosuj się do kilku zasad:
+                <ul>
+                    <li>Kolor tekstu i kolor tła mogą być zmieniane przez użytkownika.</li>
+                    <li>Szerokość bloków nie przekracza 80 znaków (40 w przypadku alfabetów: chińskiego, japońskiego i koreańskiego).</li>
+                    <li>Tekst nie jest wyjustowany (wyrównany do lewego i prawego marginesu).</li>
+                    <li>Zachowaj odpowiednie odstępy między wierszami.</li>
+                    <li>Tekst można powiększyć do 200% bez potrzeby przewijania ekranu w poziomie.</li>
+                </ul>
+                </p>
+                <p class="txt-format">
+                    Wymienione techniki pomagają szerokiej grupie odbiorców zapoznać się z treścią strony.
+                    Użytkownikowi będzie trudniej przeglądać zawartość, jeśli jest wyświetlana w sposób nieprzystępny.
+                </p>
+                <p class="txt-format">
+                    <i>Zamiana kolorów na pierwszym planie i w tle</i><br/>
+                    Część osób inaczej postrzega barwy, np. nie rozpoznaje barwy czerwonej. Jeśli taki użytkownik może zmienić wyświetlane kolory, dostosuje je do własnych potrzeb.
+                    <img src="{{ asset('img/1_4_8_bg.jpg') }}" style="width: 472px; height: auto;"/>
+                </p>
+                <p class="txt-format">
+                    <i>Bloki tekstu są szerokie na maksymalnie 80 znaków (40 w przypadku alfabetów: chińskiego, japońskiego i koreańskiego).</i><br/>
+                    Część użytkowników ma trudność z czytaniem długich bloków tekstu. Ich skrócenie pozwala na łatwiejsze śledzenie kolejnych linii tekstu.<br/>
+                    Dla alfabetu chińskiego, japońskiego i koreańskiego maksymalna liczba znaków jest mniejsza, ponieważ znaki w tych językach są szersze.
+                    <img src="{{ asset('img/1_4_8_size.jpg') }}" style="width: 650px; height: auto;"/>
+                </p>
+                <p class="txt-format">
+                    <i>Tekst nie jest wyjustowany</i><br/>
+                    Tekst wyrównany do lewej i prawej strony trudniej się czyta. Efekt justowania może spowodować, że
+                    odstępy między literami staną się nieregularne, za duże lub za małe.
+                    <img src="{{ asset('img/1_4_8_center.jpg') }}" style="width: 515px; height: auto;"/>
+                </p>
+                <p class="txt-format">
+                    <i>Powiększanie ekranu bez przewijania w poziomie</i><br/>
+                    Musisz umożliwić powiększenie strony, nie blokuj tej opcji w kodzie!<br/>
+                    Przy powiększaniu zawartość musi zwijać się do następnych linijek, aby użytkownik nie musiał przesuwać zawartości poziomo.
+                    <img src="{{ asset('img/1_4_8_scroll.jpg') }}" style="width: 500px; height: auto;"/>
+                </p>
+            </div>
+            <div>
+                <h3 id="1_4_9">Kryterium sukcesu 1.4.9 Obrazy tekstu (bez wyjątków) (Poziom AAA)</h3>
+                <p class="txt-format">
+                    Jest to rozszerzenie kryterium <a href="#1_4_5">1.4.5 Obrazy tekstu</a>.
+                    Obrazów z tekstem używaj tylko, kiedy ten sposób prezentacji jest ważny lub czysto dekoracyjny.
+                    W reszcie przypadków do grafik dodawaj osobny tekst, aby użytkownik mógł go modyfikować w zależności od potrzeb.<br/>
+                    Tekst „zlany” z grafiką nie zawsze może zostać odczytany przez odbiorcę. Ten sposób prezentacji może być kłopotliwy dla osób, które:<br/>
+                    <ul>
+                        <li>nie widzą i używają czytnika tekstu,</li>
+                        <li>mają problem z czytaniem niektórych krojów czcionek.</li>
+                    </ul>
+                </p>
+            </div>
+            <div>
+                {# TODO: DODAĆ SCREEN STRONY - RESPONSYWNOŚĆ #}
+                <h3 id="1_4_10">Kryterium sukcesu 1.4.10 Dopasowanie do ekranu (Poziom AA)</h3>
+                <p class="txt-format">
+                    Strona nie może tracić na czytelności i funkcjonalności. Nie trzeba jej przesuwać w poziomie, nawet przy powiększeniu 400% w rozdzielczości 720p.
+                </p>
+                <p class="txt-format">
+                    Wyjątkiem są elementy, które mogą wymagać przewijania w pionie i poziomie, takie jak mapy.
+                </p>
+                <p class="txt-format">
+                    Zawartość strony powiększona do 400% powinna zawijać się do jednej pionowej kolumny.
+                </p>
+                <p class="txt-format">
+                    Powiększenie strony jest bardzo ważne. Pozwala osobom niewidzącym i niedowidzącym czytać tekst, który po dostosowaniu jest wystarczająco duży.<br/>
+                </p>
+                <p class="txt-format">
+                    Najlepszym sposobem, aby zastosować się do kryterium, jest podejście responsywne do tworzenia stron.<br/>
+                    Dzięki responywności Twoja strona będzie odpowiednio dostosowywać się do wielkości ekranu odbiorcy.<br/>
+                    Część zawartości może zmieniać wygląd i ułożenie przy mniejszych ekranach, np. zwijane menu na urządzeniach mobilnych.<br/>
+                    <strong>Powiększ aktualną stronę i zobacz, jak się zachowuje.</strong>
+                </p>
+            </div>
+            <div>
+                <h3 id="1_4_11">Kryterium sukcesu 1.4.11 Kontrast elementów nietekstowych (Poziom AA)</h3>
+                <p class="txt-format">
+                    Kontrast między pobliskimi elementami powinien wynosić przynajmniej 3:1. Podlegają temu:
+                {# TODO: usunąć ??? #}
+                <ul>
+                    <li>
+                        Informacje wizualne, które identyfikują komponenty interfejsu użytkownika i informują o ich stanach.
+                        Wyjątkiem są nieaktywne elementy i elementy, nad których wyglądem twórca nie ma kontroli.
+                    </li>
+                    <li>
+                        Części grafiki, bez których użytkownik nie zrozumie treści całej grafiki. Nie dotyczy to elementów graficznych, których domyślny kontrast jest ważny dla zrozumienia przekazu.
+                    </li>
+                </ul>
+                </p>
+                <p class="txt-format">
+                    Treści o słabym kontraście są znacznie mniej czytelne. Jeśli zastosujesz się do kryterium, tworzone przez Ciebie treści
+                    będą bardziej dostępne dla osób, które słabo widzą lub nie postrzegają poprawnie barw. Odbiorcy nie przeoczą ważnych treści.
+                </p>
+                <p class="txt-format">
+                    Skorzystają również osoby, które używają urządzenia przy silnym nasłonecznieniu, gdzie elementy strony są słabiej widoczne.
+                </p>
+                <p class="txt-format">
+                    Pamiętaj o takiej zawartości jak:
+                </p>
+                <p class="txt-format">
+                    <i>Aktywne elementy interfejsu użytkownika</i><br/>
+                    Elementy, z którymi użytkownik może wejść w interakcję.
+                    Zwróć uwagę na stan zawartości, taki jak wybór elementu i jego fokus.<br/>
+                    <button style="background-color: #612776; color: white; cursor: pointer;">Przycisk o odpowiednim kontraście</button>
+                </p>
+                <p class="txt-format">
+                    <i>Granice obiektów na stronie</i><br/>
+                    Kiedy na stronie dodasz element interaktywny, zaznacz go w jakikolwiek sposób. Na przykład, kiedy przycisk nie ma tła, użyj obwódki o odpowiednim kontraście.<br/>
+                    <button style="background-color: transparent; color: #612776; border: 3px solid #612776; cursor: pointer;">Cały interaktywny element jest widoczny</button>
+                </p>
+                <p class="txt-format">
+                    <i>Obiekty graficzne</i><br/>
+                    Zadbaj o odpowiedni kontrast grafiki, jeśli za jej pomocą przekazujesz ważne informacje.<br/><br/>
+                    Prawidłowo wykonany wykres:<br/>
+                    <img src="{{ asset('img/wykres_dobry.png') }}" style="width: 600px; height: auto;"/><br/>
+                    Źle wykonany wykres:<br/>
+                    <img src="{{ asset('img/wykres_zly.png') }}" style="width: 600px; height: auto;"/>
+                </p>
+            </div>
+            <div>
+                <h3 id="1_4_12">Kryterium sukcesu 1.4.12 Odstępy w tekście (Poziom AA)</h3>
+                <p class="txt-format">
+                    Pozwól użytkownikowi zmieniać parametry tekstu na stronie.
+                    Pamiętaj jednak, że strona nie może utracić funkcjonalności lub być mniej czytelna.
+                </p>
+                <p class="txt-format">
+                Wytyczne dla tekstu na stronie:
+                <ul>
+                    <li>Wysokość linii (odstęp między wierszami) wynosi przynajmniej 1.5-krotności rozmiaru czcionki;</li>
+                    <li>Odstęp między akapitami jest przynajmniej 2x większy od rozmiaru czcionki;</li>
+                    <li>Odstępy między literami (tracking) wynoszą przynajmniej 0.12-krotności rozmiaru czcionki;</li>
+                    <li>Odstępy między wyrazami to co najmniej 0.16 wielkości czcionki.</li>
+                </ul>
+                </p>
+                <p class="txt-format" style="background-color: lightgray;">
+                    <span id="txt2-example">
+                        Przykładowy tekst do zmiany odstępów.
+                        Przykładowy tekst do zmiany odstępów.
+                        Przykładowy tekst do zmiany odstępów.
+                    </span>
+                    <button id="line-height" style="cursor: pointer;">Wysokość linii</button>
+                    <button id="letter-space" style="cursor: pointer;">Odstępy między literami</button>
+                    <button id="word-space" style="cursor: pointer;">Odstępy między wyrazami</button>
+                    <button id="reset-space" style="cursor: pointer;"><i class="fa fa-rotate-left"></i></button>
+                </p>
+                <p class="txt-format">
+                    Kiedy dodasz opcję dostosowania tekstu, pomożesz m.in. osobom, które mają trudności z czytaniem.
+                </p>
+            </div>
+            <div>
+                <h3 id="1_4_13">Kryterium sukcesu 1.4.13 Treść spod kursora lub fokusu (Poziom AA)</h3>
+                <p class="txt-format">
+                    Część tworzonych przez Ciebie treści będzie pojawiać się po najechaniu myszą lub uzyskaniu fokusu. Po usunięciu wskaźnika treści te będą znikać.
+                </p>
+                <p class="txt-format">
+                    Jeśli nad zachowaniem takich treści masz kontrolę, muszą one spełniać poniższe warunki:
+                <ul>
+                    <li>Dodatkowa treść może być odrzucona bez przesuwania myszy lub fokusu klawiatury.
+                        Wyjątkiem są elementy, które:
+                        <ul>
+                            <li>informują o błędach we wprowadzanej treści,</li>
+                            <li>nie przesłaniają innej treści,</li>
+                            <li>nie zastępują innej treści.</li>
+                        </ul>
+                        Aby nie przesłonić treści, umieść zawartości w miejscu, gdzie nie będzie nachodziła na inną ważną zawartość.
+                        Możesz też pozwolić, żeby użytkownik odrzucił ją przy użyciu klawisza, np. ESCAPE;<br/>
+                        <div id="hover-esc" style="background-color: lightgray; width: 8em; padding: 1em;">
+                            Treść usuniesz przez naciśnięcie klawisza ESC
+                            <span id="tooltip">Wiadomość w okienku</span>
+                        </div>
+                    </li>
+                    <li>Dodatkowa zawartość nie znika, kiedy użytkownik przesuwa po niej myszą;</li>
+                    <li>Dodatkowa zawartość jest widoczna do czasu, kiedy użytkownik:
+                        <ul>
+                            <li>usunie wskaźnik ze źródła jej wyzwalania lub fokusu,</li>
+                            <li>odrzuci zawartość,</li>
+                            <li>zawartość nie będzie już istotna.</li>
+                        </ul>
+                    </li>
+                </ul>
+                </p>
+            </div>
+        </div>
+        </div>
+    </main>
+    {% include 'footer.html.twig' %}
+
+    {# 1.4.4 #}
+    <script>
+        const test_elem = document.getElementById('txt-example');
+        const zoom_txt_btn = document.getElementById('zoom-txt-btn');
+        const reset_btn = document.getElementById('reset-btn');
+
+        zoom_txt_btn.addEventListener('click', () => {
+            test_elem.style.fontSize = '1.5em';
+        });
+        reset_btn.addEventListener('click', () => {
+            test_elem.style.fontSize = '1em';
+        });
+    </script>
+
+    {# 1.4.12 #}
+    <script>
+        const test_elem2 = document.getElementById('txt2-example');
+        const line_height = document.getElementById('line-height');
+        const letter_space = document.getElementById('letter-space');
+        const word_space = document.getElementById('word-space');
+        const reset_space = document.getElementById('reset-space');
+        let lh = false;
+        let ps = false;
+        let ls = false;
+        let ws = false;
+
+        reset_space.addEventListener('click', () => {
+            test_elem2.style.lineHeight = 'normal';
+            test_elem2.style.letterSpacing = 'normal';
+            test_elem2.style.wordSpacing = 'normal';
+        });
+        line_height.addEventListener('click', () => {
+            if (!lh) {
+                test_elem2.style.lineHeight = '1.5em';
+                lh = true;
+            }
+            else {
+                test_elem2.style.lineHeight = 'normal';
+                lh = false;
+            }
+        });
+        letter_space.addEventListener('click', () => {
+            if (!ls) {
+                test_elem2.style.letterSpacing = '0.12em';
+                ls = true;
+            }
+            else {
+                test_elem2.style.letterSpacing = 'normal';
+                ls = false;
+            }
+        });
+        word_space.addEventListener('click', () => {
+            if (!ws) {
+                test_elem2.style.wordSpacing = '0.16em';
+                ws = true;
+            }
+            else {
+                test_elem2.style.wordSpacing = 'normal';
+                ws = false;
+            }
+        });
+    </script>
+
+    {# 1.4.13 #}
+    <script>
+        const hover_esc = document.getElementById('hover-esc');
+        const tooltip = document.getElementById('tooltip');
+        // tooltip.style.visibility = 'visible';
+        window.onkeydown = function(e) {
+            if (e.key === 'Escape') {
+                tooltip.style.visibility = 'hidden';
+            }
+        }
+        window.onmouseout = function(e) {
+            tooltip.style.visibility = 'visible';
+        }
+    </script>
+
+{% endblock %}

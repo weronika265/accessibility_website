@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+{# skonfigurowane include, zeby nie zchodzic ponizej templates? #}
+{# zrobic normalne style #}
+{# poprawic sidebar, zeby byl accessible #}
+{# cos nie dziala grafika a11y #}
+{% block title %}
+    Dla twórcy
+{% endblock %}
+
+{% block body %}
+    {% include 'header.html.twig' %}
+    {% include 'sidebar.html.twig' %}
+    <main id="main" class="page">
+        <div style="margin-left: 15em;">
+            <h1>Moduł dedykowany twórcom</h1>
+            <p class="txt-format">
+                W tym module strony znajdziesz przydatne informacje. Pomogą Ci w tworzeniu bardziej dostępnych treści internetowych.
+            </p>
+            <p class="txt-format">
+                Główną częścią modułu jest poradnik o wytycznych WCAG 2.1. Znajdziesz tam opisy wytycznych, a co najważniejsze – opis problemów z przykładami.
+            </p>
+            <p class="txt-format">
+                Opisane zostały 4 zasady dokumentu WCAG 2.1:
+            <ol>
+                <li>Postrzegalność – Treści na stronie przedstawiaj w sposób dostrzegalny dla różnych zmysłów.</li>
+                <li>Funkcjonalność – Zapewnij, aby użytkownik mógł obsługiwać elementów interfejsu, bez względu na używane narzędzia.</li>
+                <li>Zrozumiałość – Zadbaj, aby treści na stronie były zrozumiałe.</li>
+                <li>Solidność – Twórz treści, które programy użytkownika, w tym technologie asystujące, mogą być skutecznie odczytać.</li>
+            </ol>
+            </p>
+            <p class="txt-format">
+                Dodatkowo możesz posłużyć się Checklistą WCAG 2.1, aby zobaczyć, w jakim stopniu spełniasz wytyczne dokumentu.<br/>
+            </p><br/>
+            <p class="txt-format">
+            <h3>UWAGA</h3>
+            W związku ze specyfiką tego modułu część treści może nie jest dostępna.
+            </p>
+        </div>
+        </div>
+
+        <!-- Każdy li, np. 4.1 włącza stronę z table of content z "głębszymi" kryteriami -->
+        <!-- Dodać komentarze z możliwością wyboru kryterium? + pole w tabeli w bazie?  -->
+    </main>
+    {% include 'footer.html.twig' %}
+{% endblock %}

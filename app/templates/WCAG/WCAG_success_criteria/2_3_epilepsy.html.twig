@@ -1,0 +1,127 @@
+{% extends 'base.html.twig' %}
+{# skonfigurowane include, zeby nie zchodzic ponizej templates? #}
+{# zrobic normalne style #}
+{# poprawic sidebar, zeby byl accessible #}
+{# cos nie dziala grafika a11y #}
+{% block title %}
+    2.3 Ataki padaczki
+{% endblock %}
+
+{% block body %}
+    {% include 'header.html.twig' %}
+    {% include 'sidebar.html.twig' %}
+    <main id="main" class="page">
+        <div style="margin-left: 15em;">
+            <h1>Wytyczna 2.3 Ataki padaczki</h1>
+            <p class="txt-format-main">
+                Prezentuj treść tak, aby nie wywoływała napadów padaczkowych.
+            </p>
+            <div id="table-of-content">
+                <h2>Spis treści</h2>
+                <ul>
+                    <li><a href="#2_3_1">Kryterium sukcesu 2.3.1 Trzy błyski lub wartości poniżej progu (Poziom A)</a></li>
+                    <li><a href="#2_3_2">Kryterium sukcesu 2.3.2 Trzy błyski (Poziom AAA)</a></li>
+                    <li><a href="#2_3_3">Kryterium sukcesu 2.3.3 Animacja po interakcji (Poziom AAA)</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 id="2_3_1">Kryterium sukcesu 2.3.1 Trzy błyski lub wartości poniżej progu (Poziom A)</h3>
+                <p class="txt-format">
+                    Błyskające treści nie mogą:
+                    <ul>
+                        <li>
+                            błyskać częściej niż 3 razy na sekundę,
+                        </li>
+                        LUB
+                        <li>
+                            przekraczać wartości granicznych dla:
+                            <ul>
+                                <li>rozmiaru,</li>
+                                <li>jasności.</li>
+                            </ul>
+                        </li>
+                    </ul><br/>
+                </p>
+                <p class="txt-format">
+                    <strong>OSTRZEŻENIE</strong><br/>
+                    Poniższe przykłady mogą wywołać atak padaczki.<br/><br/>
+                    Światło białe:<br/>
+                    <video width="320" height="240" controls>
+                        <source src="{{ asset('img/2_3_1.mp4') }}" type="video/mp4" />
+                        Twoja przeglądarka nie wspiera elementów wideo.
+                    </video><br/><br/>
+                    Światło czerwone:<br/>
+                    <video width="320" height="240" controls>
+                        <source src="{{ asset('img/2_3_1_red.mp4') }}" type="video/mp4" />
+                        Twoja przeglądarka nie wspiera elementów wideo.
+                    </video><br/><br/>
+                    Błysk spełniający kryterium:<br/>
+                    <video width="320" height="240" controls>
+                        <source src="{{ asset('img/2_3_1_dobry.mp4') }}" type="video/mp4" />
+                        Twoja przeglądarka nie wspiera elementów wideo.
+                    </video><br/><br/>
+                    <strong>UWAGA</strong><br/>
+                    Jeśli nie zastosujesz się do tego kryterium, strona będzie niedostępna dla części osób.<br/>
+                </p>
+                <p class="txt-format">
+                    Strony, które zawierają treści błyskające 3 razy na sekundę lub częściej, mogą wywoływać ataki padaczki fotogennej.<br/>
+                    Użytkownicy są jeszcze bardziej czuli na błyski czerwonego światła.<br/>
+                </p>
+            </div>
+            <div>
+                <h3 id="2_3_2">Kryterium sukcesu 2.3.2 Trzy błyski (Poziom AAA)</h3>
+                <p class="txt-format">
+                    Kryterium ogranicza jeszcze bardziej parametry błysków w porównaniu do <a style="color: blue;" href="#2_3_1">Kryterium sukcesu 2.3.1 Trzy błyski lub wartości poniżej progu (Poziom A)</a>.<br/>
+                    Sprawia to, że ograniczenia dotyczą nawet 1 piksela ekranu.<br/>
+                </p>
+            </div>
+            <div>
+                <h3 id="2_3_3">Kryterium sukcesu 2.3.3 Animacja po interakcji (Poziom AAA)</h3>
+                <p class="txt-format">
+                    Kiedy użytkownik wchodzi w interakcję z animowanymi elementami, pozwól mu wyłączyć wszelkie animacje.<br/><br/>
+                    <input type="button" value="Prześlij" id="inter-anim" /><br/>
+
+                    Wyjątkiem są animacje, które stanową ważną częścią pokazywanej treści.
+                </p>
+                <p class="txt-format">
+                    Część użytkowników źle reaguje na ruch pojawiający się na stronie i może odczuwać:
+                <ul>
+                    <li>dezorientację,</li>
+                    <li>zawroty głowy,</li>
+                    <li>ból głowy,</li>
+                    <li>mdłości.</li>
+                </ul>
+                </p>
+                <p class="txt-format">
+                    Co możesz zrobić, aby zapobiegać takim reakcjom:
+                <ul>
+                    <li>twórz tylko potrzebne animacje,</li>
+                    <li>pozwól użytkownikowi wyłączyć animacje,</li>
+                    <li>jeśli animujesz całą stronę, np. jej przesuwanie, rób to w sposób odpowiedzialny. Nie skupiaj się jedynie na efekcie wizualnym.</li>
+                </ul>
+                </p>
+            </div>
+        </div>
+        </div>
+    </main>
+    {% include 'footer.html.twig' %}
+
+    <script>
+        const sub_btn = document.getElementById('inter-anim');
+        let enabled = false;
+
+        sub_btn.onclick = function() {
+            if (!enabled) {
+                enabled = true;
+                sub_btn.style.animation = 'inter 5s';
+                sub_btn.value = "Przesłano";
+            }
+            else {
+                enabled = false;
+                sub_btn.style.animation = 'none';
+                sub_btn.value = "Prześlij";
+            }
+        }
+    </script>
+
+{% endblock %}

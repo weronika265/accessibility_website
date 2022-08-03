@@ -1,0 +1,67 @@
+{% block title %}
+    2.4.3 Przykład
+{% endblock %}
+
+<style>
+    button {
+        margin: 0.8em;
+        cursor: pointer;
+    }
+</style>
+
+<h1>Przykład do kryterium sukcesu 2.4.3 Kolejność fokusu</h1>
+<h2>Kolejność naciskania przycisków jest tutaj ważna.</h2>
+<main>
+    <button type="button" id="btn1" tabindex="1">Przycisk 1</button><br/>
+    <button type="button" id="btn4" tabindex="4">Przycisk 4</button><br/>
+    <button type="button" id="btn2" tabindex="2">Przycisk 2</button><br/>
+    <button type="button" id="btn3" tabindex="3">Przycisk 3</button><br/>
+{#    <button type="button" id="btn3" tabindex="5" name="reset"><i class="fa fa-rotate-left"></i></button><br/>#}
+    <button type="button" id="reset-btn" tabindex="5" name="reset">Reset</button><br/>
+    <span id="txt-success"></span><br/>
+</main>
+<a href="{{ url('nav_index') }}#2_4_3">Powrót do kryteriów sukcesu</a>
+
+<script>
+    const message = document.getElementById('txt-success');
+    const btn1 = document.getElementById('btn1');
+    const btn2 = document.getElementById('btn2');
+    const btn3 = document.getElementById('btn3');
+    const btn4 = document.getElementById('btn4');
+    const reset = document.getElementById('reset-btn');
+
+    let btn_combination = '';
+    let click_num = 0;
+
+    btn1.onclick = function() {
+        btn_combination += '1';
+        click_num += 1;
+    }
+    btn2.onclick = function() {
+        btn_combination += '2';
+        click_num += 1;
+    }
+    btn3.onclick = function() {
+        btn_combination += '3';
+        click_num += 1;
+    }
+    btn4.onclick = function() {
+        btn_combination += '4';
+        click_num += 1;
+    }
+    reset.onclick = function() {
+        btn_combination = '';
+        click_num = 0;
+        message.textContent = '';
+    }
+
+    window.onclick = function() {
+        if (click_num === 4 && btn_combination === '1234') {
+            message.textContent = 'Prawidłowa kolejność!';
+            btn_combination = '';
+        }
+        else if (click_num > 4) {
+            message.textContent = '';
+        }
+    }
+</script>

@@ -1,0 +1,11 @@
+{% include 'default/_form.html.twig' with {
+    page_title: 'Zaakceptuj opinię',
+    page_title_param: {'%id%': opinion.id},
+    attr: {
+        method: 'PUT',
+        action: url('opinion_accept', {'id': opinion.id}),
+    },
+    form: form,
+    submit_label: 'Zaakceptuj opinię'|trans,
+    back_to_list_path: 'admin_index',
+} %}

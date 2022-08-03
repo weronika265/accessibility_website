@@ -1,0 +1,183 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    Panel administratora
+{% endblock %}
+
+{% block body %}
+    {% include 'header.html.twig' %}
+    <main id="main" class="page">
+
+        <article>
+            <h2>Dostępne opinie o serwisie</h2>
+            {% if pagination_opinions is defined and pagination_opinions.items|length %}
+                <div class="indent" style="flex-wrap: wrap;">
+                    <button class="message-action-space opinions-edit">
+                        Zarządzaj dostępnymi opiniami
+                    </button>
+                    <button class="message-action-space opinions-close">
+                        Zamknij
+                    </button>
+                    {% for opinion in pagination_opinions.items %}
+                        {% if not opinion.is_accepted %}
+                            <section id="opinions" class="opinion">
+                                <span class="user-info">{{ opinion.author.username }}, {{ opinion.date|date('Y/m/d') }}</span>
+                                <div style="display: flex;">
+                                    <div class="message-style" style="margin-top: 0.2em;">
+                                        {{ opinion.message }}
+                                    </div>
+{#                                    <div class="message-action-space opinions-edit">#}
+{#                                        Edytuj#}
+{#                                    </div>#}
+                                    <div class="message-action-space opinions-enabled">
+                                        <a href="{{ url('opinion_accept', {id: opinion.id}) }}" onclick="return confirm('Czy na pewno chcesz zaakceptować opinię?')" class="message-action-accept" data-id="{{ opinion.id }}">Zaakceptuj</a>
+                                        <a href="{{ url('opinion_delete', {id: opinion.id}) }}" onclick="return confirm('Czy na pewno chcesz usunąć opinię?')" class="message-action-delete" data-id="{{ opinion.id }}">Odrzuć</a>
+{#                                        <div class="message-action-space opinions-close">#}
+{#                                            Zamknij#}
+{#                                        </div>#}
+                                    </div>
+                                </div>
+{#                                <form method="post">#}
+{#                                    <input type="button" id="akceptuj" name="akceptuj" value="Akceptuj" style="cursor: pointer; background-color: lightgreen;"/>#}
+{#                                    <input type="button" id="odrzuc" name="odrzuc" value="Odrzuć" style="cursor: pointer; background-color: lightcoral;"/>#}
+{#                                </form>#}
+
+{# !!! CURRENT #}
+{#                                {{ form_start(form) }}#}
+{#                                {{ form_widget(form) }}#}
+{#                                <div class="form-group row float-sm-right">#}
+{#                                    <input type="button" id="akceptuj" name="akceptuj" value="Akceptuj" style="cursor: pointer; background-color: lightgreen;"/>#}
+{#                                    <input type="submit" id="odrzuc" name="odrzuc" value="Odrzuć" style="cursor: pointer; background-color: lightcoral;"/>#}
+{#                                </div>#}
+{#                                {{ form_end(form) }}#}
+{# !!! CURRENT #}
+
+{#                                <form method="post">#}
+{#                                    <input type="button" id="odrzuc" name="odrzuc" value="Odrzuć" style="cursor: pointer; background-color: lightcoral;"/>#}
+{#                                </form>#}
+                            </section>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            {% else %}
+                <div>
+                    {{ 'Brak opinii do zmoderowania' }}
+                </div>
+            {% endif %}
+            <div>
+                {{ knp_pagination_render(pagination_opinions) }}
+            </div>
+        </article>
+
+        <article>
+            <h2>Dostępne komentarze</h2>
+            {% if pagination_comments is defined and pagination_comments.items|length %}
+                <div class="indent" style="flex-wrap: wrap;">
+                    <button class="message-action-space comments-edit">
+                        Zarządzaj dostępnymi komentarzami
+                    </button>
+                    <button class="message-action-space comments-close">
+                        Zamknij
+                    </button>
+                    {% for comment in pagination_comments.items %}
+                        {% if not comment.is_accepted %}
+                            <section id="opinions" class="opinion">
+                                <span class="user-info">{{ comment.author.username }}, {{ comment.date|date('Y/m/d') }}</span>
+                                <div style="display: flex;">
+                                    <div class="message-style">
+                                        {{ comment.message }}
+                                    </div>
+{#                                    <div class="message-action-space comments-edit">#}
+{#                                        Edytuj#}
+{#                                    </div>#}
+                                    <div class="message-action-space comments-enabled">
+                                        <a href="{{ url('comment_accept', {id: comment.id}) }}" onclick="return confirm('Czy na pewno chcesz zaakceptować komentarz?')" class="message-action-accept" data-id="{{ comment.id }}">Zaakceptuj</a>
+                                        <a href="{{ url('comment_delete', {id: comment.id}) }}" onclick="return confirm('Czy na pewno chcesz usunąć komentarz?')" class="message-action-delete" data-id="{{ comment.id }}">Odrzuć</a>
+{#                                        <div class="message-action-space comments-close">#}
+{#                                            Zamknij#}
+{#                                        </div>#}
+                                    </div>
+                                </div>
+                            </section>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            {% else %}
+                <div>
+                    {{ 'Brak komentarzy do zmoderowania' }}
+                </div>
+            {% endif %}
+            <div>
+                {{ knp_pagination_render(pagination_comments) }}
+            </div>
+        </article>
+
+    </main>
+    {% include 'footer.html.twig' %}
+
+    {% block javascripts %}
+        <script>
+            const opinions_enabled = document.querySelector('.opinions-enabled');
+            const opinions_edit = document.querySelector('.opinions-edit');
+            const opinions_close = document.querySelector('.opinions-close');
+            const comments_enabled = document.querySelector('.comments-enabled');
+            const comments_edit = document.querySelector('.comments-edit');
+            const comments_close = document.querySelector('.comments-close');
+
+            const opinions = $('.opinions-enabled:hidden');
+            const comments = $('.comments-enabled:hidden');
+
+            $(document).ready(function() {
+                opinions_edit.addEventListener('click', function () {
+                    opinions_edit.style.display = 'none';
+                    opinions_close.style.display = 'block';
+                    for(let i of opinions) {
+                        i.style.display = 'block';
+                    }
+                });
+                opinions_close.addEventListener('click', function () {
+                    opinions_edit.style.display = 'block';
+                    opinions_close.style.display = 'none';
+                    for(let i of opinions) {
+                        i.style.display = 'none';
+                    }
+                });
+
+                comments_edit.addEventListener('click', function () {
+                    comments_edit.style.display = 'none';
+                    comments_close.style.display = 'block';
+                    for(let i of comments) {
+                        i.style.display = 'block';
+                    }
+                });
+
+                comments_close.addEventListener('click', function () {
+                    comments_edit.style.display = 'block';
+                    comments_close.style.display = 'none';
+                    for(let i of comments) {
+                        i.style.display = 'none';
+                    }
+                });
+            });
+        </script>
+    {% endblock %}
+
+{#    {% block javascripts %}#}
+{#        <script>#}
+{#            const opinions = document.getElementById('opinions');#}
+{#            if(opinions) {#}
+{#                opinions.addEventListener('click', (e) => {#}
+{#                    if(e.target.className === 'delete-opinion') {#}
+{#                        if(confirm('Czy na pewno usunąć?')) {#}
+{#                            const id = e.target.getAttribute('data-id');#}
+
+{#                            fetch(`/article/delete/${id}`, {#}
+{#                                method: 'DELETE'#}
+{#                            }).then(res => window.location.reload())#}
+{#                        }#}
+{#                    }#}
+{#                });#}
+{#            }#}
+{#        </script>#}
+{#    {% endblock %}#}
+{% endblock %}

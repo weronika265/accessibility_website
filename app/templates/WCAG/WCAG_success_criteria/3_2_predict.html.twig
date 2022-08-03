@@ -1,0 +1,159 @@
+{% extends 'base.html.twig' %}
+{# skonfigurowane include, zeby nie zchodzic ponizej templates? #}
+{# zrobic normalne style #}
+{# poprawic sidebar, zeby byl accessible #}
+{# cos nie dziala grafika a11y #}
+{% block title %}
+    3.2 Przewidywalność
+{% endblock %}
+
+{% block body %}
+    {% include 'header.html.twig' %}
+    {% include 'sidebar.html.twig' %}
+    <main id="main" class="page">
+        <div style="margin-left: 15em;">
+            <h1>Wytyczna 3.2 Przewidywalność</h1>
+            <p class="txt-format-main">
+                Twórz strony internetowe tak, aby otwierały się, wyglądały i działały w sposób przewidywalny.
+            </p>
+            <div id="table-of-content">
+                <h2>Spis treści</h2>
+                <ul>
+                    <li><a href="#3_2_1">Kryterium sukcesu 3.2.1 Po otrzymaniu fokusu (Poziom A)</a></li>
+                    <li><a href="#3_2_2">Kryterium sukcesu 3.2.2 Podczas wprowadzania danych (Poziom A)</a></li>
+                    <li><a href="#3_2_3">Kryterium sukcesu 3.2.3 Spójna nawigacja (Poziom AA)</a></li>
+                    <li><a href="#3_2_4">Kryterium sukcesu 3.2.4 Spójna identyfikacja (Poziom AA)</a></li>
+                    <li><a href="#3_2_5">Kryterium sukcesu 3.2.5 Zmiana na żądanie (Poziom AAA)</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 id="3_2_1">Kryterium sukcesu 3.2.1 Po otrzymaniu fokusu (Poziom A)</h3>
+                <p class="txt-format">
+                    Kiedy element interfejsu użytkownika uzyska fokus, nie może dojść do nieoczekiwanej zmiany kontekstu (np. otwarcie nowego okna).
+                    Zmiana może nastąpić tylko po wyraźnym potwierdzeniu ze strony użytkownika. Na przykład jest to naciśnięcie wybranego klawisza (Spacja, Enter).
+                </p>
+                <p class="txt-format">
+                    Odbiorca nie będzie wtedy zaskoczony, kiedy uruchomi się nowy element lub funkcjonalność.
+                </p>
+                <p class="txt-format">
+                    Na stronie nie może dojść do sytuacji takich jak:
+                    <ul>
+                        <li>automatyczne wysłanie formularza po sfokusowaniu na przycisku wysyłania;</li>
+                        <li>otwarcie nowego okna lub skupienie na innej zawartości po sfokusowaniu na elemencie.</li>
+                    </ul>
+                </p>
+                <a href="{{ url('_3_2_1_dobry') }}" style="color: blue;">Dobry przykład</a><br/>
+                <a href="{{ url('_3_2_1_zly') }}" style="color: blue;">Zły przykład</a>
+            </div>
+            <div>
+                <h3 id="3_2_2">Kryterium sukcesu 3.2.2 Podczas wprowadzania danych (Poziom A)</h3>
+                <p class="txt-format">
+                    Kiedy odbiorca wprowadza dane, powiązane elementy nie mogą powodować automatycznej zmiany kontekstu
+                    (np. zmiana fokusu, otwarcie nowej zawartości, okien).
+                </p>
+                <p class="txt-format">
+                    Elementy interfejsu użytkownika, które przyjmują dane to m.in.:
+                    <ul>
+                        <li>pole formularza,</li>
+                        <li>pole checkbox,</li>
+                        <li>rozwijana lista z elementami do wyboru.</li>
+                    </ul>
+                </p>
+                <p class="txt-format">
+                    Kontekst może zmienić się automatycznie tylko w przypadku, gdy wcześniej powiadomisz o tym użytkownika.<br/>
+                    Przykładowo, nie możesz dopuścić do sytuacji, gdy użytkownik wypełnia formularz i nie zostanie powiadomiony o tym, że:
+                    <ul>
+                        <li>kolejne pole zostanie automatycznie podświetlone po wypełnieniu wcześniejszego pola;</li>
+                        <li>po wypełnieniu wszystkich pól formularz zostanie automatycznie wysłany.</li>
+                    </ul>
+                </p>
+                <p class="txt-format">
+                    Nieoczekiwane zmiany kontekstu mogą zaskoczyć użytkownika.
+                    Musisz pamiętać, że odbiorcami strony są również osoby, które:
+                    <ul>
+                        <li>mają kłopot z postrzeganiem zmian na stronie;</li>
+                        <li>rozpraszają się przez niespodziewane zamiany na stronie.</li>
+                    </ul>
+                    Pomyśl o osobie niewidomej, która odwiedza Twoją stronę. Kiedy nie powiadomisz jej o zmianie kontekstu na stronie, nie będzie ona wiedziała o zmianie.
+                </p>
+                <img src="{{ asset('img/3_2_2.jpg') }}" />
+            </div>
+            <div>
+                <h3 id="3_2_3">Kryterium sukcesu 3.2.3 Spójna nawigacja (Poziom AA)</h3>
+                <p class="txt-format">
+                    Nawigacja powtarzana na wielu stronach musi być taka sama, o ile nie zostanie dostosowana przez użytkownika.<br/><br/>
+                    Znajoma nawigacja powtarza się na innych stronach serwisu:<br/>
+                    <img style="width: 550px; height: auto;" src="{{ asset('img/3_2_3.jpg') }}" /><br/>
+                </p>
+                <p class="txt-format">
+                    Spójny i powtarzający się układ nawigacji jest bardziej zrozumiały i łatwiejszy do odnalezienia. Jest też bardzo pomocny dla osób, które:
+                    <ul>
+                        <li>mają niepełnosprawności natury intelektualnej, poznawczej;</li>
+                        <li>słabo widzą;</li>
+                        <li>nie widzą wcale.</li>
+                    </ul>
+                </p>
+            </div>
+            <div>
+                <h3 id="3_2_4">Kryterium sukcesu 3.2.4 Spójna identyfikacja (Poziom AA)</h3>
+                <p class="txt-format">
+                    Elementy na stronie, które pełnią tę samą funkcję powinny wyglądać tak samo i mieć spójnie nazewnictwo. Spójne nazewnictwo to m.in. taka sama:
+                    <ul>
+                        <li>widoczna nazwa na stronie,</li>
+                        <li>etykieta elementu,</li>
+                        <li>tekst alternatywny.</li>
+                    </ul>
+                </p>
+                <p class="txt-format">
+                    W ten sposób pozwolisz użytkownikowi szybko znaleźć elementy o tej samej funkcjonalności na różnych podstronach.
+                </p>
+                <p class="txt-format">
+                    Przyśpiesza to wyszukiwanie i nawigację, ponieważ odbiorca może szybko namierzyć wcześniej poznany element.
+                    Wystarczy, że odnajdzie element o tym samym wyglądzie lub opisie.
+                </p>
+                <p class="txt-format">
+                    Na przykład w tym serwisie<br/><br/>
+                    przyciski<br/>
+                    <button>Przycisk</button><br/><br/>
+                    i pola formularza<br/>
+                    <label>Pole formularza<input type="text" /></label>
+                    wyglądają podobnie.
+                </p>
+            </div>
+            <div>
+                <h3 id="3_2_5">Kryterium sukcesu 3.2.5 Zmiana na żądanie (Poziom AAA)</h3>
+                <p class="txt-format">
+                    Zmiana treści jest możliwa tylko przez działanie użytkownika lub można wyłączyć takie zmiany.
+                </p>
+                <p class="txt-format">
+                    Kryterium wymaga od Ciebie, abyś dał pełną kontrolę użytkownikowi na stronie.
+                    Na stronie nie mogą pojawić się działania niespodziewane, np.:
+                <ul>
+                    <li>automatyczne otwarcie nowego okna,</li>
+                    <li>niespodziewane pojawienie się okna z powiadomieniem,</li>
+                    <li>automatyczne wysłanie formularza po wypełnieniu wszystkich pól, bez zatwierdzenia przez użytkownika,</li>
+                    <li>automatyczne odświeżanie strony.</li>
+                </ul>
+                </p>
+                <p class="txt-format">
+                    Pozwól odbiorcy wyłączyć automatyczne zmiany treści na stronie.
+                    Niektóre funkcjonalności są pomocne dla użytkownika. Jednak to on musi zdecydować, czy funkcjonalność ma być aktywna, czy wyłączona.
+                </p>
+                <p class="txt-format">
+                    Kiedy zastosujesz się do kryterium, zmniejszysz prawdopodobieństwo, że zaskoczysz użytkownika przy pojawieniu się nowej zawartości na stronie.
+                </p>
+                <p class="txt-format">
+                    Pamiętaj też, że część odbiorców nie widzi i korzysta z czytników ekranu.
+                    Automatyczne odświeżenia strony i elementy, które pojawią się niespodziewanie, mogą być niezauważone przez te osoby.
+                </p>
+                <p class="txt-format" style="background-color: lightgray;">
+                    Przykład:<br/>
+                    Ta akcja wymaga odświeżenia strony.<br/>
+                    <button style="cursor: pointer;">Odśwież stronę</button>
+                </p>
+            </div>
+        </div>
+        </div>
+    </main>
+    {% include 'footer.html.twig' %}
+{% endblock %}

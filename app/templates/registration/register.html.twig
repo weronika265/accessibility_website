@@ -1,0 +1,80 @@
+{#{% extends 'base.html.twig' %}#}
+
+{#{% block title %}Register{% endblock %}#}
+
+{#{% block body %}#}
+{#    <h1>Register</h1>#}
+
+{#    {{ form_start(registrationForm) }}#}
+{#        {{ form_row(registrationForm.email) }}#}
+{#        {{ form_row(registrationForm.plainPassword, {#}
+{#            label: 'Password'#}
+{#        }) }}#}
+{#        {{ form_row(registrationForm.agreeTerms) }}#}
+
+{#        <button type="submit" class="btn">Register</button>#}
+{#    {{ form_end(registrationForm) }}#}
+{#{% endblock %}#}
+
+
+{% extends '/base.html.twig' %}
+
+{% block title %}
+    Rejestracja
+{% endblock %}
+
+{% block body %}
+    <div id="user-actions">
+        <a href="{{ url('home_index') }}">
+            <img
+                    id="logo"
+                    src="{{ asset('img/logo_flat.png')}}"
+                    alt="Logo strony - strona dostępności z emblematem 6 łez w kolorach tęczy."
+            />
+        </a>
+    </div>
+    <div id="reg-log" style="text-align: left;" class="register-custom">
+        <h2>Rejestracja</h2>
+        {# dac h1#}
+{#        <form>#}
+{#             TODO: Change email - add different class than in login#}
+{#            <label for="email">Email</label><span class="inline-form-text" style="margin-left: 3em;">Masz już konto? <strong><a href="{{ url('logowanie_index') }}">Zaloguj się</a></strong> </span><br/>#}
+{#            <input type="email" id="email" name="email"/><br/>#}
+{#            <label for="password">Hasło</label><span class="inline-form-text" style="margin-left: 11.5em;"><i class='fa fa-eye' style="margin-right:0.3em;"></i>Pokaż hasło</span><br/>#}
+{#            <input type="password" id="password" name="password"/><br/>#}
+{#            <input type="submit" value="Zarejestruj się" class="submit-btn-space"/>#}
+{#        </form>#}
+        {{ form_start(registrationForm) }}
+        <span class="inline-form-text" id="account-prompt">Masz już konto? <strong><a href="{{ url('app_login') }}">Zaloguj się</a></strong> </span><br/>
+        {{ form_row(registrationForm.email) }}
+        {{ form_row(registrationForm.username) }}
+{#        <span class="inline-form-text" id="show"><i class='fa fa-eye' style="margin-right: 0.3em;"></i>Pokaż hasło</span><br/>#}
+        {{ form_row(registrationForm.plainPassword, {
+            label: 'Hasło'
+        }) }}
+        <input type="submit" value="Zarejestruj się" class="submit-btn" style="margin-left: 1.5em;"/>
+        {{ form_end(registrationForm) }}
+    </div>
+    {% include 'footer.html.twig' %}
+
+{#    {% block javascripts %}#}
+{#        <script>#}
+{#            const passwd = document.querySelector('input#registration_form_plainPassword');#}
+{#            const showElem = document.getElementById('show');#}
+
+{#            function showPasswd() {#}
+{#                if (passwd.type === 'password') {#}
+{#                    passwd.type = 'text';#}
+{#                }#}
+{#                else {#}
+{#                    passwd.type = 'password';#}
+{#                }#}
+{#                console.log('x');#}
+{#            }#}
+
+{#            showElem.addEventListener('click', showPasswd);#}
+{#        </script>#}
+{#    {% endblock %}#}
+
+{% endblock %}
+{# Poprawic #}
