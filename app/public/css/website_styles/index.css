@@ -4,8 +4,9 @@
     flex-direction: column;
     flex-wrap: wrap;
     row-gap: 4.5em;
-    width: 100%;
+    /*width: 100%;*/
     height: auto;
+    /*margin: 0 1em;*/
 }
 .center-section-size {
     max-width: 800px;
@@ -72,11 +73,16 @@
         flex-flow: column;
         row-gap: 1em;
     }
-    .btn-description a {
+    .btn-description {
         flex-flow: column;
-        width: 216px;
+        align-items: center;
+        justify-content: center;
+        /*width: 216px;*/
         margin: 0 auto;
         /*max-width: 90%;*/
+    }
+    .btn-description a {
+        margin: 0 auto 1.5em;
     }
     .content-left {
         /*max-width: 90%;*/

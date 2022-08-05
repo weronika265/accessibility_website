@@ -63,8 +63,8 @@
                                         {{ comment.message }}
                                     </div>
                                     <div class="message-action-space comments-enabled">
-                                        <a href="{{ url('comment_accept', {id: comment.id}) }}" onclick="return confirm('Czy na pewno chcesz usunąć komentarz?')" class="message-action-accept" data-id="{{ comment.id }}">Zaakceptuj</a>
-                                        <a href="{{ url('comment_delete', {id: comment.id}) }}" onclick="return confirm('Czy na pewno chcesz usunąć komentarz?')" class="message-action-delete" data-id="{{ comment.id }}">Odrzuć</a>
+                                        <a href="{{ url('comment_accept', {id: comment.id}) }}" onclick="confirmation()" class="message-action-accept" data-id="{{ comment.id }}">Zaakceptuj</a>
+                                        <a href="{{ url('comment_delete', {id: comment.id}) }}" onclick="confirmation()" class="message-action-delete" data-id="{{ comment.id }}">Odrzuć</a>
                                     </div>
                                 </div>
                             </section>
