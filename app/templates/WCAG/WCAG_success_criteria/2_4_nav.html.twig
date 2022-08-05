@@ -10,10 +10,10 @@
 {% block body %}
     {% include 'header.html.twig' %}
     {% include 'sidebar.html.twig' %}
-    <main id="main" class="page">
-        <div style="margin-left: 15em;">
+    <main id="main" class="page reposition content-cut">
+        <div>
             <h1>Wytyczna 2.4 Możliwość nawigacji</h1>
-            <p class="txt-format-main">
+            <p>
                 Zapewnij użytkownikowi narzędzia pomagające w nawigacji, znalezieniu treści i określeniu, gdzie się aktualnie znajduje.
             </p>
             <div id="table-of-content">
@@ -33,119 +33,127 @@
             </div>
             <div>
                 <h3 id="2_4_1">Kryterium sukcesu 2.4.1 Możliwość pominięcia bloków (Poziom A)</h3>
-                <p class="txt-format">
+                <p>
                     Kiedy treści na podstronach powtarzają się, pozwól użytkownikowi je pominąć.
                 </p>
-                <p class="txt-format">
+                <p class="list-glue">
                     Na stronie zazwyczaj będzie się powtarzać:
+                </p>
                     <ul>
                         <li>menu główne,</li>
                         <li>sekcje z reklamami.</li>
                     </ul>
-                </p>
-                <p class="txt-format">
+                <p>
                     Użytkownik, który nie ma niepełnosprawności, może pominąć takie informacje wzrokiem.
                 </p>
-                <p class="txt-format">
+                <p>
                     Odbiorca niepełnosprawny może mieć jednak kłopot z pomijaniem bloków powtarzającej się treści.
                 </p>
-                <p class="txt-format">
-                    Osoby
+                <p class="list-glue">
+                    Osoby:
+                </p>
                     <ul>
                         <li>niewidzące, które korzystają z technologii asystujących;</li>
                         <li>używające tylko klawiatury,</li>
                     </ul>
+                <p class="list-glue">
                     aby przeczytać najważniejszą treść, musiałyby przemieścić się po wielu elementach strony.<br/>
                     W takiej sytuacji bardzo pomocny staje się link, który prowadzi do głównej treści.<br/>
                     <img src="{{ asset('img/2_4_1.jpg') }}" /><br/>
                     <b>Możesz zobaczyć, jak działa taki link:</b>
+                </p>
                     <ol>
                         <li>Kliknij myszą na samej górze strony,</li>
                         <li>Wciśnij klawisz Tab,</li>
                         <li>Wciśnij kombinację klawiszy 'Shift + 'Tab',</li>
                         <li>Po otrzymaniu fokusu, na widocznym linku wciśnij klawisz 'Enter'.</li>
                     </ol>
-                </p>
             </div>
             <div>
                 <h3 id="2_4_2">Kryterium sukcesu 2.4.2 Tytuły stron (Poziom A)</h3>
-                <p class="txt-format">
+                <p class="list-glue">
                     Każda podstrona ma zawierać niepowtarzający się tytuł. Tytuł opisuje i streszcza jej:
+                </p>
                     <ul>
                         <li>temat,</li>
                         <li>cel,</li>
                         <li>zawartość.</li>
                     </ul>
+                <p>
                     <img src="{{ asset('img/2_4_2.jpg') }}" /><br/>
+                </p>
                     <code>
                         &lt;title&gt;2.4 Możliwość nawigacji&lt;/title&gt;
                     </code>
-                </p>
-                <p class="txt-format">
+                <p>
                     Osoby, które mają problem z pamięcią, podczas przeglądania mogą poczuć się zagubione.
                     Tytuły pozwalają szybko zorientować się w obecnym położeniu na stronie.
                 </p>
-                <p class="txt-format">
+                <p>
                     Technologie asystujące czytają użytkownikom tytuły strony. Takie osoby mogą zdecydować, czy otwarta strona zawiera szukaną treść.
                 </p>
             </div>
             <div>
                 <h3 id="2_4_3">Kryterium sukcesu 2.4.3 Kolejność fokusu (Poziom A)</h3>
-                <p class="txt-format">
-                    Kiedy
+                <p class="list-glue">
+                    Kiedy:
+                </p>
                     <ol>
                         <li>użytkownik do przemieszczania się po stronie używa klawiatury;</li>
                         <li>kolejność czytania zawartości jest ważna,</li>
-                </ol>
+                    </ol>
+                <p>
                     ustal odpowiednią kolejność fokusu na stronie.
                 </p>
-                <p class="txt-format">
+                <p>
                     Kolejność możesz narzucić przez użycie atrybutu <i>tabindex</i> w znaczniku HTML elementu.
                 </p>
-                <p class="txt-format">
+                <p>
                     Odpowiednia kolejność pozwala użytkownikowi na zapoznanie się z treścią w logicznej kolejności.
                 </p>
-                <p class="txt-format">
+                <p>
                     Nie trzeba jej zawsze ustawiać, jednak warto przetestować stronę i zobaczyć, czy nawigacja jest zrozumiała i zgodna z naszą wizją.
                 </p>
-                <p class="txt-format">
+                <p class="list-glue">
                     Odpowiednia kolejność sprawi, że:
+                </p>
                     <ul>
                         <li>odbiorca nie będzie zdezorientowany przez niestandardowy układ treści;</li>
                         <li>użytkownik nie będzie korzystał ze strony w sposób nieprzewidziany;</li>
                         <li>niewidomi użytkownicy mogą wyobrazić sobie stronę jako przewidywalną całość.</li>
                     </ul>
-                </p>
                 <p>
                     <a href="{{ url('_2_4_3_example') }}" style="color: blue;">Przykład</a><br/>
                 </p>
             </div>
             <div>
                 <h3 id="2_4_4">Kryterium sukcesu 2.4.4 Cel łącza (w kontekście) (Poziom A)</h3>
-                <p class="txt-format">
+                <p class="list-glue">
                     Cel linku ma wynikać z jego:
+                </p>
                     <ul>
                         <li>treści,</li>
                         <li>kontekstu, w którym został umieszczony.</li>
                     </ul>
+                <p class="list-glue">
                     Nie uwzględnia to łączy, gdzie:
+                </p>
                     <ul>
                         <li>mimo opisu, cel łącza nadal nie będzie zrozumiały;</li>
                         <li>łącze zawiera informacje, które powinny zostać tajemnicą do czasu otwarcia.</li>
                     </ul>
-                </p>
-                <p class="txt-format">
+                <p>
                     Odpowiedni opis linku pozwala określić, dokąd on prowadzi.
                     Użytkownicy, którzy korzystają z czytników treści, mogą zdecydować, czy chcą odwiedzić link, czy go pominąć.
                 </p>
-                <p class="txt-format">
+                <p>
                     Linki mogą zostać umieszczone w kontekście (blok tekstu, element listy, komórka w tabeli).
                     Jeśli jest to tekst, link powinien znajdować się na końcu treści.
                 </p>
-                <p class="txt-format">
+                <p>
                     Kiedy link prowadzi do aplikacji lub dokumentu, wystarczy, że link opiszesz nazwą tej aplikacji lub dokumentu.
                 </p>
-                <p class="txt-format">
+                <p>
                     Warto zachować spójność w nazewnictwie tytułów stron i linków, które do tych stron prowadzą.
                 </p>
                 <p>
@@ -156,115 +164,113 @@
             </div>
             <div>
                 <h3 id="2_4_5">Kryterium sukcesu 2.4.5 Wiele dróg (Poziom AA)</h3>
-                <p class="txt-format">
+                <p>
                     Istnieje wiele dróg, aby dostać się do konkretnej podstrony w serwisie internetowym lub aplikacji.<br/>
                     Nie dotyczy to sytuacji, kiedy strona jest wynikiem operacji lub jednym z jej etapów.<br/>
                     <img src="{{ asset('img/rozne_miejsca.jpg') }}" style="width: 300px; height: auto;" />
                 </p>
-                <p class="txt-format">
+                <p class="list-glue">
                     Jeśli zaprojektujesz serwis w powyższy sposób, odbiorcy będą mogli z niego korzystać według własnych potrzeb.
                     Użytkownik może używać różnych narzędzi i sposobów przeglądania, takich jak:
-                <ul>
-                    <li>wyszukiwarka treści na stronie,</li>
-                    <li>mapa serwisu, która umożliwia przegląd treści,</li>
-                    <li>przeglądanie podstron w celu zrozumienia budowy serwisu.</li>
-                </ul>
-                <img src="{{ asset('img/searchbar.jpg') }}" style="width: 250px; height: auto;" />
                 </p>
-                <p class="txt-format">
+                    <ul>
+                        <li>wyszukiwarka treści na stronie,</li>
+                        <li>mapa serwisu, która umożliwia przegląd treści,</li>
+                        <li>przeglądanie podstron w celu zrozumienia budowy serwisu.</li>
+                    </ul>
+                    <img src="{{ asset('img/searchbar.jpg') }}" style="width: 250px; height: auto;" />
+                <p class="list-glue">
                     Musisz pamiętać, że część zawartości nie będzie ogólnodostępna i żadne łącze nie będzie do niej prowadziło. Może być to np.:
+                </p>
                 <ul>
                     <li>podsumowanie zamówienia w sklepie internetowym;</li>
                     <li>potwierdzenie transakcji w aplikacji banku.</li>
                 </ul>
-                </p>
             </div>
             <div>
                 <h3 id="2_4_6">Kryterium sukcesu 2.4.6 Nagłówki i etykiety (Poziom AA)</h3>
-                <p class="txt-format">
+                <p>
                     Nagłówki i etykiety na stronie mają opisywać wyświetlaną zawartość. Najlepiej użyć pojedynczych słów lub krótkich opisów.
                 </p>
-                <p class="txt-format">
                     <pre>
-                    <code>
-                        &lt;h1&gt;Nowy plac zabaw&lt;/h1&gt;
-                        &lt;p&gt;W dniu 21 kwietnia odbędzie się oficjalne otwarcie nowego placu zabaw.&lt;/p&gt;
-                        &lt;h3&gt;Atrakcje&lt;/h3&gt;
-                        &lt;p&gt;Podczas uroczystości wystąpią młode talenty z pobliskich szkół.&lt;/p&gt;
-                    </code>
+                        <code>
+                            &lt;h1&gt;Nowy plac zabaw&lt;/h1&gt;
+                            &lt;p&gt;W dniu 21 kwietnia odbędzie się oficjalne otwarcie nowego placu zabaw.&lt;/p&gt;
+                            &lt;h3&gt;Atrakcje&lt;/h3&gt;
+                            &lt;p&gt;Podczas uroczystości wystąpią młode talenty z pobliskich szkół.&lt;/p&gt;
+                        </code>
                     </pre>
-                </p>
-                <p class="txt-format">
+                <p>
                     <label for="email">Email</label>
                     <input type="email" name="email" id="email">
-                <pre>
-                    <code>
-                        &lt;label for="email"&gt;Email&lt;/label&gt;
-                        &lt;input type="email" name="email" id="email"/&gt;
-                    </code>
-                    </pre>
                 </p>
-                <p class="txt-format">
+                    <pre>
+                        <code>
+                            &lt;label for="email"&gt;Email&lt;/label&gt;
+                            &lt;input type="email" name="email" id="email"/&gt;
+                        </code>
+                    </pre>
+                <p>
                     Dzięki opisom użytkownik rozumie, co zawiera strona i jak została rozmieszczona treść.<br/>
                     Jasne oznaczenie treści pozwala na jej łatwiejsze odnalezienie.
                 </p>
             </div>
             <div>
                 <h3 id="2_4_7">Kryterium sukcesu 2.4.7 Widoczny fokus (Poziom AA)</h3>
-                <p class="txt-format">
+                <p>
                     Kiedy użytkownik korzysta z klawiatury do nawigacji po stronie, fokus klawiatury musi być zawsze widoczny.
                 </p>
-                <p class="txt-format">
+                <p>
                     Widoczny fokus pozwala użytkownikowi zorientować się, w którym miejscu na stronie się znajduje.
                 </p>
-                <p class="txt-format">
+                <p>
                     Fokus umożliwia także zrozumienie roli elementów, np. podświetlone pole formularza informuje, że można wprowadzić tekst.
                 </p>
                 <img src="{{ asset('img/2_4_7.jpg') }}">
             </div>
             <div>
                 <h3 id="2_4_8">Kryterium sukcesu 2.4.8 Lokalizacja (Poziom AAA)</h3>
-                <p class="txt-format">
+                <p class="list-glue">
                     Pokaż użytkownikowi, gdzie znajduje się na stronie. Dzięki informacji o obecnym położeniu:
+                </p>
                     <ul>
                         <li>użytkownikowi trudniej się „zgubić”;</li>
                         <li>łatwiej zrozumieć strukturę strony;</li>
                         <li>można szybko przemieszczać się między powiązanymi podstronami.</li>
                     </ul>
-                </p>
-                <p class="txt-format">
+                <p>
                     Lokalizowanie użytkownika jest bardzo przydatne, kiedy znajdujemy się na rozbudowanej stronie.
                 </p>
-                <p class="txt-format">
+                <p>
                     Funkcjonalność jest też dużym ułatwieniem dla osoby z deficytem uwagi. Takiemu odbiorcy trudniej skupić się na zadaniu.
                     Bez pomocy może poczuć się zdezorientowany, kiedy dłużej przegląda rozbudowaną stronę.
                 </p>
-                <p class="txt-format">
+                <p>
                     Jednym ze sposobów na pokazanie obecnej lokalizacji na stronie jest <b>menu okruszkowe</b>. Wyświetla ono ścieżkę odwiedzanych podstron.
                     <img src="{{ asset('img/breadcrumb.jpg') }}" style="width: 250px; height: auto;" />
                 </p>
-                <p class="txt-format">
+                <p>
                     Standardem jest także możliwość powrotu do strony głównej po kliknięciu logo na górze strony.
 {#                    TODO: dodać przykład? #}
                 </p>
             </div>
             <div>
                 <h3 id="2_4_9">Kryterium sukcesu 2.4.9 Cel łącza (z samego łącza) (Poziom AAA)</h3>
-                <p class="txt-format">
+                <p>
                     Cel łącza musi być zrozumiały z jego opisu, a nie z kontekstu, w jakim się znajduje.
                     Jeśli cel łącza wynika z kontekstu, nadal musisz dołączyć jego opis.
                 </p>
-                <p class="txt-format">
+                <p class="list-glue">
                     Nie uwzględnia to łączy, gdzie:
+                </p>
                     <ul>
                         <li>mimo opisu, cel łącza nadal nie będzie zrozumiały;</li>
                         <li>łącze zawiera informacje, które powinny zostać tajemnicą do czasu otwarcia.</li>
                     </ul>
-                </p>
-                <p class="txt-format">
+                <p>
                     Jest to rozszerzenie <a style="color: blue;" href="#2_4_4">Kryterium sukcesu 2.4.4 Cel łącza (w kontekście) (Poziom A)</a>.
                 </p>
-                <p class="txt-format">
+                <p>
                     Linki, które prowadzą do tej samej treści, powinny być tak samo nazwane.
                 </p>
                 <p>
@@ -275,16 +281,16 @@
             </div>
             <div>
                 <h3 id="2_4_10">Kryterium sukcesu 2.4.10 Nagłówki sekcji (Poziom AAA)</h3>
-                <p class="txt-format">
+                <p>
                     Używaj nagłówków do organizowania treści i oznaczania sekcji* na stronie.
                 </p>
-                <p class="txt-format">
+                <p>
                     Nagłówki pozwalają łatwiej nawigować po stronie. W sposób widoczny oznaczają zmianę tematu oraz wprowadzają w powiązaną treść.
                 </p>
-                <p class="txt-format">
+                <p>
                     Dzięki nagłówkom czytelnik może wcześniej zobaczyć, czego będzie dotyczył tekst i czy chce go przeczytać.
                 </p>
-                <p class="txt-format">
+                <p>
                     *Sekcje dzielą treści na mniejsze, logicznie powiązane bloki.
                 </p>
                 <p>
@@ -310,7 +316,6 @@
                     </code>
                 </pre>
             </div>
-        </div>
         </div>
     </main>
     {% include 'footer.html.twig' %}

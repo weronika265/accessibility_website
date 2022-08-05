@@ -10,10 +10,10 @@
 {% block body %}
     {% include 'header.html.twig' %}
     {% include 'sidebar.html.twig' %}
-    <main id="main" class="page">
-        <div style="margin-left: 15em;">
+    <main id="main" class="page reposition content-cut">
+        <div>
             <h1>Wytyczna 2.2 Wystarczający czas</h1>
-            <p class="txt-format-main">Zapewnij użytkownikom wystarczająco dużo czasu na przeczytanie i skorzystanie z treści.</p>
+            <p>Zapewnij użytkownikom wystarczająco dużo czasu na przeczytanie i skorzystanie z treści.</p>
             <div id="table-of-content">
                 <h2>Spis treści</h2>
                 <ul>
@@ -27,95 +27,104 @@
             </div>
             <div>
                 <h3 id="2_2_1">Kryterium sukcesu 2.2.1 Dostosowanie czasu (Poziom A)</h3>
-                <p class="txt-format">
+                <p class="list-glue">
                     Część treści na stronie może mieć ograniczenia czasowe, na przykład:
+                </p>
                     <ul>
                         <li>limit czasu na dokończenie zamówienia;</li>
                         <li>częstotliwość automatycznego odświeżania strony.</li>
                     </ul>
+                <p class="list-glue">
                     Muszą one spełnić przynajmniej jeden z warunków:
-                <ul>
-                    <li>można wyłączyć limit czasowy lub zatrzymać zegar;</li>
-                    <li>można swobodnie dostosować limit czasowy (minimum 10x więcej niż domyślny limit),</li>
-                    <li>
-                        przed upływem czasu użytkownik otrzymuje komunikat i ma przynajmniej 20 sekund na przedłużenie limitu. Przedłużenie
-                        czasu to minimum 10x więcej niż domyślny limit;
-                    </li>
-                    <li>limit czasowy jest związany z wydarzeniem na żywo, więc nie da się go zmienić,</li>
-                    <li>limit czasowy jest istotny i jego zmiana unieważniałaby czynność;</li>
-                    <li>limit czasowy przekracza 20 godzin.</li>
-                </ul>
-                Zmiana limitu czasu pozwala na wykonanie czynności w czasie odpowiednim dla każdego użytkownika.<br/>
-                Część użytkowników potrzebuje więcej czasu na przeczytanie tekstu. Niektórzy wolniej rozpoznają strukturę strony.
-                To np. osoby, które nie widzą i korzystają z technologii asystujących.<br/>
-                <img src="{{ asset('img/2_2_1_stop.jpg') }}" style="max-width: 300px; width: 400px; height: auto;" /><br/>
-                <img src="{{ asset('img/2_2_1_extend.jpg') }}" style="max-width: 500px; width: 500px; height: auto;" />
+                </p>
+                    <ul>
+                        <li>można wyłączyć limit czasowy lub zatrzymać zegar;</li>
+                        <li>można swobodnie dostosować limit czasowy (minimum 10x więcej niż domyślny limit),</li>
+                        <li>
+                            przed upływem czasu użytkownik otrzymuje komunikat i ma przynajmniej 20 sekund na przedłużenie limitu. Przedłużenie
+                            czasu to minimum 10x więcej niż domyślny limit;
+                        </li>
+                        <li>limit czasowy jest związany z wydarzeniem na żywo, więc nie da się go zmienić,</li>
+                        <li>limit czasowy jest istotny i jego zmiana unieważniałaby czynność;</li>
+                        <li>limit czasowy przekracza 20 godzin.</li>
+                    </ul>
+                <p>
+                    Zmiana limitu czasu pozwala na wykonanie czynności w czasie odpowiednim dla każdego użytkownika.<br/>
+                    Część użytkowników potrzebuje więcej czasu na przeczytanie tekstu. Niektórzy wolniej rozpoznają strukturę strony.
+                    To np. osoby, które nie widzą i korzystają z technologii asystujących.
+                    <img src="{{ asset('img/2_2_1_stop.jpg') }}" style="max-width: 300px; width: 400px; height: auto;" /><br/>
+                    <img src="{{ asset('img/2_2_1_extend.jpg') }}" style="max-width: 500px; width: 500px; height: auto;" />
                 </p>
             </div>
             <div>
                 <h3 id="2_2_2">Kryterium sukcesu 2.2.2 Pauza, zatrzymanie, ukrycie (Poziom A)</h3>
 {#                TODO: sprawdzić, czy wszystko ok #}
-                <p class="txt-format">
+                <p class="list-glue">
                     <u>Treści, które:</u>
-                        <ul>
-                            <li>poruszają się,</li>
-                            <li>migoczą,</li>
-                            <li>przesuwają,</li>
-                            <li>aktualizują się lub włączają automatycznie,</li>
-                            <li>trwają powyżej 5 sekund,</li>
-                            <li>pokazywane są równolegle z innymi treściami,</li>
-                        </ul>
-                    użytkownik może wstrzymać, zatrzymać lub wyłączyć, jeśli taki sposób prezentacji nie wpływa istotnie na odbiór.<br/><br/>
-
+                </p>
+                    <ul>
+                        <li>poruszają się,</li>
+                        <li>migoczą,</li>
+                        <li>przesuwają,</li>
+                        <li>aktualizują się lub włączają automatycznie,</li>
+                        <li>trwają powyżej 5 sekund,</li>
+                        <li>pokazywane są równolegle z innymi treściami,</li>
+                    </ul>
+                <p>
+                    użytkownik może wstrzymać, zatrzymać lub wyłączyć, jeśli taki sposób prezentacji nie wpływa istotnie na odbiór.
+                </p>
+                <p class="list-glue">
                     <u>Samoaktualizujące się treści, które:</u>
-                        <ul>
-                            <li>włączają się automatycznie</li>
-                            ORAZ
-                            <li>są przedstawiane równolegle z inną treścią,</li>
-                        </ul>
+                </p>
+                    <ul>
+                        <li>włączają się automatycznie</li>
+                        ORAZ
+                        <li>są przedstawiane równolegle z inną treścią,</li>
+                    </ul>
+                <p>
                     użytkownik może wstrzymać, zatrzymać, kontrolować częstotliwość ich aktualizacji, jeśli taki sposób prezentacji nie wpływa istotnie na odbiór.
                 </p>
-                <p class="txt-format">
+                <p class="list-glue">
                     Do treści spełniających te kryteria należą:
-                <ul>
-                    <li>poruszające się grafiki,</li>
-                    <li>animacje,</li>
-                    <li>automatycznie odświeżające się informacje, np. o pogodzie, kursach walut,</li>
-                    <li>reklamy, których zawartość sama się przełącza.</li>
-                </ul>
+                </p>
+                    <ul>
+                        <li>poruszające się grafiki,</li>
+                        <li>animacje,</li>
+                        <li>automatycznie odświeżające się informacje, np. o pogodzie, kursach walut,</li>
+                        <li>reklamy, których zawartość sama się przełącza.</li>
+                    </ul>
                 <div id="rect-anim"></div><br/>
                 <input type="button" id="disable-anim" value="Wyłącz animację" />
-                </p>
-                <p class="txt-format">
+                <p class="list-glue">
                     Jeśli treść porusza się, część użytkowników może mieć:
-                <ul>
-                    <li>trudność w skupieniu się na treści,</li>
-                    <li>za mało czasu na przeczytanie treści.</li>
-                </ul>
                 </p>
+                    <ul>
+                        <li>trudność w skupieniu się na treści,</li>
+                        <li>za mało czasu na przeczytanie treści.</li>
+                    </ul>
             </div>
             <div>
                 <h3 id="2_2_3">Kryterium sukcesu 2.2.3 Bez ograniczeń czasowych (Poziom AAA)</h3>
 {#                TODO: ok? #}
-                <p class="txt-format">
+                <p>
                     Twórz zawartość, która nie jest ograniczona czasowo.
                 </p>
-                <p class="txt-format">
-                Kryterium wymusza, aby cała zawartość na stronie nie była ograniczana czasowo. Wyjątkiem są wydarzeń na żywo.
+                <p>
+                    Kryterium wymusza, aby cała zawartość na stronie nie była ograniczana czasowo. Wyjątkiem są wydarzeń na żywo.
                 </p>
                 <img src="{{ asset('img/2_2_3.jpg') }}" style="width: 220px; height: auto;" />
             </div>
             <div>
                 <h3 id="2_2_4">Kryterium sukcesu 2.2.4 Przerywanie (Poziom AAA)</h3>
-                <p class="txt-format">
+                <p class="list-glue">
                     Dodatkowe powiadomienia i informacje mogą zostać odroczone lub wyłączone. Dotyczy to treści, które nie ogłaszają sytuacji wyjątkowych.<br/>
                     Sytuacją wyjątkową są m.in.:
+                </p>
                     <ul>
                         <li>rządowe wiadomości o niebezpieczeństwie, takie jak klęska żywiołowa, ewakuacja;</li>
                         <li>utrata danych, brak połączenia internetowego, wylogowanie użytkownika.</li>
                     </ul>
-                </p>
-                <p class="txt-format">
+                <p>
                     Wyłączenie lub odroczenie informacji pozwala skupić się na czytanej treści.<br/>
                     <video width="320" height="240" controls>
                         <source src="{{ asset('img/2_2_4.mp4') }}" type="video/mp4" />
@@ -126,29 +135,29 @@
             </div>
             <div>
                 <h3 id="2_2_5">Kryterium sukcesu 2.2.5 Ponowne potwierdzenie autentyczności (Poziom AAA)</h3>
-                <p class="txt-format">
+                <p>
                     Kiedy sesja autoryzowana przez użytkownika kończy się lub zakończyła, użytkownik może ją kontynuować bez utraty danych.
                     Wystarczy, że zautoryzuje się ponownie.
                 </p>
-                <p class="txt-format">
+                <p class="list-glue">
                     Kryterium sukcesu pozwala na dokończenie czynności, która:
+                </p>
                     <ul>
                         <li>wymaga autoryzacji przez użytkownika;</li>
                         <li>zawiera zabezpieczenia wylogowujące użytkownika, np. limit nieaktywności.</li>
                     </ul>
-                </p>
-                <p class="txt-format">
+                <p class="list-glue">
                 Przykładami są:
+                </p>
                     <ul>
                         <li>transakcja za zamówienie w sklepie internetowych,</li>
                         <li>aplikacja internetowa do wypełniana dokumentów rządowych,</li>
                         <li>ankieta, która wymaga zalogowania się przez użytkownika.</li>
                     </ul>
-                </p>
-                <p class="txt-format">
+                <p>
                     Część użytkowników potrzebuje więcej czasu na wykonanie czynności. Odbiorca może wolniej czytać lub mieć różne ograniczenia ruchowe.
                 </p>
-                <p class="txt-format">
+                <p>
                     Ważne, aby użytkownik po zakończeniu sesji autoryzacji nie utracił wprowadzanych danych i mógł kontynuować ich wprowadzanie.
                     Jedyne, co powinien zrobić, to ponownie potwierdzić swoją tożsamość.<br/>
                     <img src="{{ asset('img/2_2_5.jpg') }}" style="width: 400px; height: auto;"/>
@@ -156,23 +165,22 @@
             </div>
             <div>
                 <h3 id="2_2_6">Kryterium sukcesu 2.2.6 Ostrzeżenie o limicie czasu (Poziom AAA)</h3>
-                <p class="txt-format">
+                <p>
                     Bezczynność użytkownika może spowodować utratę danych. W takim przypadku użytkownik musi być wcześniej poinformowany o czasie, po którym dane zostaną usunięte.
                 </p>
-                <p class="txt-format">
-                Wyjątkiem jest sytuacja, kiedy dane są przechowywane przez ponad 20 godzin od ostatniej aktywności użytkownika.
-                    <img src="{{ asset('img/2_2_6.jpg') }}" type="video/mp4" style="width: 400px; height: auto;"/>
+                <p>
+                    Wyjątkiem jest sytuacja, kiedy dane są przechowywane przez ponad 20 godzin od ostatniej aktywności użytkownika.
+                    <img src="{{ asset('img/2_2_6.jpg') }}" style="width: 400px; height: auto;"/>
                 </p>
-                <p class="txt-format">
+                <p>
                     Użytkownicy zazwyczaj robią przerwy w trakcie wykonywania dłuższego zadania.<br/>
                     Część użytkowników, np. z zaburzeniami poznawczymi, może mieć problem z długotrwałym skupieniem uwagi. Wypełnianie formularzy, zamówienie biletu lotniczego, może być dla nich wyzwaniem.
                 </p>
-                <p class="txt-format">
+                <p>
                     Najlepiej zostawić dane wypełnione przez użytkownika przez okres około 20 godzin od ostatniej aktywności użytkownika.<br/>
                     Jeśli nie jest to możliwe, musisz powiadomić użytkownika o czasie, po którym dane zostaną usunięte.
                 </p>
             </div>
-        </div>
         </div>
     </main>
     {% include 'footer.html.twig' %}

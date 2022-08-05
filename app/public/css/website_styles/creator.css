@@ -1,5 +1,29 @@
 /* --- Strefa twórcy --- */
-
+.content-cut {
+    max-width: 1000px;
+}
+.content-cut h1 {
+    text-align: start;
+}
+.compare {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2em 10em;
+    margin: 0.5em 0 4em;
+}
+@media screen and (max-width: 640px) {
+    .compare {
+        flex-direction: column;
+    }
+}
+.list-arrow {
+    font-size: 20px;
+    margin-right: 0.3em;
+}
+h3 {
+    margin-top: 2em;
+}
 /* --- Checklista WCAG 2.1 --- */
 legend {
     font-size: 2em;

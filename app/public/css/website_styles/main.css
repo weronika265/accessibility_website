@@ -4,6 +4,11 @@ body {
     scroll-behavior: smooth;
     margin: 0;
 }
+/*body {*/
+/*    font-family: "Varta", sans-serif;*/
+/*    font-size: 1.3em;*/
+/*    font-weight: 400;*/
+/*}*/
 h1, h2, h3 {
     font-family: "DM Sans", sans-serif;
 }

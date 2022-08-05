@@ -10,10 +10,10 @@
 {% block body %}
     {% include 'header.html.twig' %}
     {% include 'sidebar.html.twig' %}
-    <main id="main" class="page">
-        <div style="margin-left: 15em;">
+    <main id="main" class="page reposition content-cut">
+        <div>
             <h1>Wytyczna 2.3 Ataki padaczki</h1>
-            <p class="txt-format-main">
+            <p>
                 Prezentuj treść tak, aby nie wywoływała napadów padaczkowych.
             </p>
             <div id="table-of-content">
@@ -26,8 +26,9 @@
             </div>
             <div>
                 <h3 id="2_3_1">Kryterium sukcesu 2.3.1 Trzy błyski lub wartości poniżej progu (Poziom A)</h3>
-                <p class="txt-format">
+                <p class="list-glue">
                     Błyskające treści nie mogą:
+                </p>
                     <ul>
                         <li>
                             błyskać częściej niż 3 razy na sekundę,
@@ -40,9 +41,8 @@
                                 <li>jasności.</li>
                             </ul>
                         </li>
-                    </ul><br/>
-                </p>
-                <p class="txt-format">
+                    </ul>
+                <p>
                     <strong>OSTRZEŻENIE</strong><br/>
                     Poniższe przykłady mogą wywołać atak padaczki.<br/><br/>
                     Światło białe:<br/>
@@ -63,45 +63,44 @@
                     <strong>UWAGA</strong><br/>
                     Jeśli nie zastosujesz się do tego kryterium, strona będzie niedostępna dla części osób.<br/>
                 </p>
-                <p class="txt-format">
+                <p>
                     Strony, które zawierają treści błyskające 3 razy na sekundę lub częściej, mogą wywoływać ataki padaczki fotogennej.<br/>
                     Użytkownicy są jeszcze bardziej czuli na błyski czerwonego światła.<br/>
                 </p>
             </div>
             <div>
                 <h3 id="2_3_2">Kryterium sukcesu 2.3.2 Trzy błyski (Poziom AAA)</h3>
-                <p class="txt-format">
+                <p>
                     Kryterium ogranicza jeszcze bardziej parametry błysków w porównaniu do <a style="color: blue;" href="#2_3_1">Kryterium sukcesu 2.3.1 Trzy błyski lub wartości poniżej progu (Poziom A)</a>.<br/>
                     Sprawia to, że ograniczenia dotyczą nawet 1 piksela ekranu.<br/>
                 </p>
             </div>
             <div>
                 <h3 id="2_3_3">Kryterium sukcesu 2.3.3 Animacja po interakcji (Poziom AAA)</h3>
-                <p class="txt-format">
+                <p>
                     Kiedy użytkownik wchodzi w interakcję z animowanymi elementami, pozwól mu wyłączyć wszelkie animacje.<br/><br/>
                     <input type="button" value="Prześlij" id="inter-anim" /><br/>
 
                     Wyjątkiem są animacje, które stanową ważną częścią pokazywanej treści.
                 </p>
-                <p class="txt-format">
+                <p class="list-glue">
                     Część użytkowników źle reaguje na ruch pojawiający się na stronie i może odczuwać:
-                <ul>
-                    <li>dezorientację,</li>
-                    <li>zawroty głowy,</li>
-                    <li>ból głowy,</li>
-                    <li>mdłości.</li>
-                </ul>
                 </p>
-                <p class="txt-format">
+                    <ul>
+                        <li>dezorientację,</li>
+                        <li>zawroty głowy,</li>
+                        <li>ból głowy,</li>
+                        <li>mdłości.</li>
+                    </ul>
+                <p class="list-glue">
                     Co możesz zrobić, aby zapobiegać takim reakcjom:
-                <ul>
-                    <li>twórz tylko potrzebne animacje,</li>
-                    <li>pozwól użytkownikowi wyłączyć animacje,</li>
-                    <li>jeśli animujesz całą stronę, np. jej przesuwanie, rób to w sposób odpowiedzialny. Nie skupiaj się jedynie na efekcie wizualnym.</li>
-                </ul>
                 </p>
+                    <ul>
+                        <li>twórz tylko potrzebne animacje,</li>
+                        <li>pozwól użytkownikowi wyłączyć animacje,</li>
+                        <li>jeśli animujesz całą stronę, np. jej przesuwanie, rób to w sposób odpowiedzialny. Nie skupiaj się jedynie na efekcie wizualnym.</li>
+                    </ul>
             </div>
-        </div>
         </div>
     </main>
     {% include 'footer.html.twig' %}

@@ -10,10 +10,10 @@
 {% block body %}
     {% include 'header.html.twig' %}
     {% include 'sidebar.html.twig' %}
-    <main id="main" class="page">
-        <div style="margin-left: 15em;">
+    <main id="main" class="page reposition content-cut">
+        <div>
             <h1>Wytyczna 3.3 Pomoc przy wprowadzaniu informacji</h1>
-            <p class="txt-format-main">
+            <p>
                 Pomagaj użytkownikom unikać błędów i je korygować.
             </p>
             <div id="table-of-content">
@@ -29,55 +29,55 @@
             </div>
             <div>
                 <h3 id="3_3_1">Kryterium sukcesu 3.3.1 Identyfikacja błędu (Poziom A)</h3>
-                <p class="txt-format">
+                <p class="list-glue">
                     Jeśli zostanie wykryty błąd we wprowadzanych danych (niewypełnione lub błędne dane):
+                </p>
                     <ul>
                         <li>zostanie wskazany błędny element,</li>
                         <li>wyświetli się tekstowy opis błędu.</li>
                     </ul>
-                </p>
-                <p class="txt-format">
+                <p>
                     Kiedy wskażesz błędy we wprowadzanych danych, użytkownik może się z nimi zapoznać i poprawić źle wypełnione pola.
                 </p>
-                <p class="txt-format">
+                <p class="list-glue">
                     Informuj użytkownika o błędach:
+                </p>
                     <ul>
                         <li>w trakcie wprowadzania danych,</li>
                         <li>kiedy wysyła formularz. Użytkownik zostanie cofnięty do wcześniej wypełnionego formularza z oznaczonymi błędnymi danymi.</li>
                     </ul>
-                </p>
-                <p>
+                <p class="list-glue">
                     Jeśli nie wypełnisz jednego z pól, pojawi się komunikat o znalezionym błędzie:
+                </p>
                     <form>
                         * Pola wymagane<br/>
                         <label>*Imię<input type="text" required></label><br/>
                         <label>*Nazwisko<input type="text" required></label><br/>
                         <input type="submit" value="Prześlij"/>
                     </form>
-                </p>
             </div>
             <div>
                 <h3 id="3_3_2">Kryterium sukcesu 3.3.2 Etykiety lub instrukcje (Poziom A)</h3>
-                <p class="txt-format">
+                <p>
                     Do pól formularzy dołącz etykiety lub instrukcje.
                     Mają one być krótkie i przekazywać najważniejsze informacje.
                 </p>
-                <p class="txt-format">
+                <p class="list-glue">
                     Etykiety i instrukcje dla pól pozwolą:
+                </p>
                     <ul>
                         <li>zrozumieć wymagane dane i cel formularza;</li>
                         <li>ograniczyć błędy;</li>
                         <li>zmniejszyć czas potrzebny na poprawne przesłanie formularza.</li>
                     </ul>
-                </p>
-                <p class="txt-format">
+                <p class="list-glue">
                     Korzystaj z rozwiązań, które uwzględniają technologie asystujące. Wiele programów może informować użytkownika o:
                     {#                TODO: dodać, jak technologie asystujące to wyświetlają? #}
+                </p>
                     <ul>
                         <li>typie przyjmowanej wartości przez pole,</li>
                         <li>przedziale wartości możliwych do wybrania w polu formularza (np. rok, kwota).</li>
                     </ul>
-                </p>
                 <form>
                     <span style="background-color: lightgray;"><u>Instrukcja</u>: Wszystkie pola oznaczone * są wymagane</span><br/>
                     <label>*Pierwsze imię<input type="text" required></label><br/>
@@ -89,18 +89,19 @@
             </div>
             <div>
                 <h3 id="3_3_3">Kryterium sukcesu 3.3.3 Sugestie korekty błędów (Poziom AA)</h3>
-                <p class="txt-format">
+                <p>
                     Jeśli na stronie zostanie automatycznie wykryty błąd we wprowadzanych danych, użytkownik powinien otrzymać sugestię poprawy błędu.
                 </p>
-                <p class="txt-format">
+                <p class="list-glue">
                     Wyjątkiem są sugestie, które mogłyby:
+                </p>
                     <ul>
                         <li>zagrozić bezpieczeństwu treści;</li>
                         <li>zmienić cel treści.</li>
                     </ul>
-                </p>
-                <p>
+                <p class="list-glue">
                     Pole zostało błędnie wypełnione:
+                </p>
                     <div style="border: 1px solid black;">
                         <label>Kod pocztowy<input type="number" /></label>
                         <div style="background-color: orangered;">
@@ -108,8 +109,7 @@
                         </div>
                         <input type="submit" value="Prześlij"/>
                     </div>
-                </p>
-                <p class="txt-format">
+                <p>
                     Użytkownik czasem nie wie, jakie dane wprowadzić do pola formularza.
                     Może dojść do sytuacji, kiedy poprawia dane do skutku lub ostatecznie rezygnuje z wypełniania.
                     Kiedy pokażesz sugestie poprawy błędów, użytkownik będzie mógł zrozumieć cel pola i poprawnie go wypełnić.
@@ -117,63 +117,60 @@
             </div>
             <div>
                 <h3 id="3_3_4">Kryterium sukcesu 3.3.4 Zapobieganie błędom (prawnym, finansowym, w danych) (Poziom AA)</h3>
-                <p class="txt-format">
+                <p class="list-glue">
                     Strony mogą powodować zobowiązania prawne lub na których użytkownik:
+                </p>
                     <ul>
                         <li>przeprowadza transakcje finansowe,</li>
                         <li>udziela odpowiedzi na testy,</li>
                         <li>zmienia bądź usuwa dane, które są pod jego kontrolą.</li>
                     </ul>
-                </p>
-                <p class="txt-format">
+                <p class="list-glue">
                     W takich sytuacjach zapewnij, aby użytkownik mógł:
+                </p>
                     <ul>
                         <li>wycofać wprowadzane dane;</li>
                         <li>poprawić dane, które będą sprawdzane pod kątem błędów;</li>
                         <li>sprawdzić, poprawić i potwierdzić informacje przed wysłaniem.</li>
                     </ul>
-                </p>
-                <p class="txt-format">
+                <p>
                     W ten sposób ograniczysz popełniane poważnych błędów podczas wypełniania danych.
                     Jest to ważne, ponieważ kiedy zatwierdzasz dane, wielu nie można już wycofać.
                 </p>
-                <p class="txt-format">
+                <p>
                     Za przykład weźmy transakcję w banku. Dzięki zabezpieczeniom użytkownik może poprawić informacje podczas wykonywania transakcji lub z niej zrezygnować.
                 </p>
             </div>
             <div>
                 <h3 id="3_3_5">Kryterium sukcesu 3.3.5 Pomoc (Poziom AAA)</h3>
-                <p class="txt-format">
+                <p>
                     Zapewnij użytkownikowi pomoc kontekstową, która pomaga w wypełnianiu kolejnych pól formularzy.<br/>
                     Musisz zadbać, aby była łatwo dostępna.
                 </p>
-                <p class="txt-format">
+                <p>
                     Pomoc kontekstowa zawiera tekst, który dostarcza informacji o aktualnie wykonywanej czynności.
                 </p>
-                <p class="txt-format">
+                <p>
                     <strong>WAŻNE</strong><br/>
                     Informacja kontekstowa jest potrzebna w sytuacji, kiedy etykieta pola nie opisuje wystarczająco jego celu.
                 </p>
-                <p class="txt-format">
-                    <label>Kod pocztowy<input type="number" placeholder="00-000"/></label>
                     <div>
-                        <label for="client-num">Numer klienta (16 cyfr)</label><br/>
+                        <label>Kod pocztowy<input type="number" placeholder="00-000"/></label><br/>
+                        <label for="client-num">Numer klienta (16 cyfr)</label>
                         <input id="client-num" type="number"/>
                         <span style="color: blue; font-weight: bold; position: relative; cursor: pointer;">Gdzie go znajdę?</span>
                     </div>
-                </p>
             </div>
             <div>
                 <h3 id="3_3_6">Kryterium sukcesu 3.3.6 Zapobieganie błędom (wszystkim) (Poziom AAA)</h3>
-                <p class="txt-format">
+                <p>
                     Kryterium jest rozszerzeniem <a href="#3_3_4">Kryterium sukcesu 3.3.4 Zapobieganie błędom (prawnym, finansowym, w danych) (Poziom AA)</a>, które
                     uwzględnia konkretne przypadki zapobiegania błędom.
                 </p>
-                <p class="txt-format">
+                <p>
                     To kryterium ma zapewnić, że podczas wypełniania <b>każdego</b> formularza można sprawdzić, modyfikować i wycofać dane.
                 </p>
             </div>
-        </div>
         </div>
     </main>
     {% include 'footer.html.twig' %}

@@ -11,11 +11,10 @@
     {% include 'header.html.twig' %}
     {% include 'sidebar.html.twig' %}
 
-    <main id="main">
-{#        <div style="margin-left: 15em;">#}
+    <main id="main" class="page reposition content-cut">
         <div>
             <h1>Wytyczna 1.1 Alternatywa tekstowa</h1>
-            <p class="txt-format-main">
+            <p class="list-glue">
                 Zapewnij tekstowe zamienniki wszystkich treści nietekstowych, aby można je było zamienić na inne formy, np.:
             </p>
                 <ul>
@@ -33,7 +32,7 @@
             </div>
             <div>
                 <h3 id="1_1_1">Kryterium sukcesu 1.1.1 Treść nietekstowa (Poziom A)</h3>
-                <p class="txt-format">
+                <p class="list-glue">
                     Do elementów, które nie są tekstem, musisz dodać tekstową alternatywę.
                     Tekst ma opisywać:
                 </p>
@@ -44,17 +43,25 @@
                 <p>
                     Tekst alternatywny jest rozpoznawany przez technologie asystujące: czytniki tekstu, czytniki Braille'a. Mogą one przeczytać zawartość użytkownikowi.
                 </p>
-                <p>
-                    <p>
-                        Grafika wyświetlana: <img src="{{ asset('img/thumbs-up.png') }}" alt="Kciuk uniesiony w górę." style="width: 250px; height: 250px;"/><br/><br/>
-                        Grafika niewyświetlana: <img src="" alt="Kciuk uniesiony w górę." style="width: 250px; height: auto;"/><br/><br/>
-                        <code>
-                            &lt;img src="thumbs-up.png" alt="Kciuk uniesiony w górę." /&gt;
-                        </code>
-                    </p>
-                </p>
-            </div>
-            </div>
+                <div style="text-align: center;">
+                    <code>
+                        &lt;img src="thumbs-up.png" alt="Kciuk uniesiony w górę." /&gt;
+                    </code>
+                </div>
+                <div class="compare">
+                    <div>
+                        <p style="margin-bottom: 2em;">
+                            Grafika wyświetlana:
+                        </p>
+                            <img src="{{ asset('img/thumbs-up.png') }}" alt="Kciuk uniesiony w górę." style="max-width: 250px;"/>
+                    </div>
+                    <div style="align-items: flex-start;">
+                        <p>
+                            Grafika niewyświetlana:
+                        </p>
+                            <img src="" alt="Kciuk uniesiony w górę." style="max-width: 250px; margin-bottom: 2em;"/><br/>
+                    </div>
+                </div>
         </div>
         <!-- Każdy li, np. 4.1 włącza stronę z table of content z "głębszymi" kryteriami -->
         <!-- Dodać komentarze z możliwością wyboru kryterium? + pole w tabeli w bazie?  -->
