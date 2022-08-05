@@ -13,14 +13,15 @@
 
 {#    <main id="main" class="page"></main>#}
 
-    <main style="margin-left: 20em;">
-        <h1>Checklista wytycznych WCAG 2.1</h1>
-        <p class="txt-format-main">
-            <!-- Zrobić tak lub pole zaznaczone i strzałka prowadząca dalej - nie tak lepiej? -->
-        </p>
+{#    <main style="margin-left: 20em;">#}
+    <main id="main" class="page reposition">
+        <h1 style="text-align: start;">Checklista wytycznych WCAG 2.1</h1>
+{#        <p class="txt-format-main">#}
+{#            <!-- Zrobić tak lub pole zaznaczone i strzałka prowadząca dalej - nie tak lepiej? -->#}
+{#        </p>#}
         <div>
             <fieldset>
-                <legend id="scA">Kryteria sukcesu - Poziom A</legend>
+                <legend id="scA">Kryteria sukcesu – Poziom A</legend>
                 <!-- <h2 id="scA">Kryteria sukcesu - Poziom A</h2> -->
                 {# target="_blank" ? #}
                 <label><input type="checkbox" name="scA"/><a href="{{ url('alt-txt_index') }}#1_1_1">Kryterium sukcesu 1.1.1 Treść nietekstowa</a></label><br/>
@@ -58,7 +59,7 @@
         </div>
         <div>
             <fieldset>
-                <legend id="scAA">Kryteria sukcesu - Poziom AA</legend>
+                <legend id="scAA">Kryteria sukcesu – Poziom AA</legend>
                 <!-- <h2 id="scAA">Kryteria sukcesu - Poziom AA</h2> -->
                 <label><input type="checkbox" name="scAA"/><a href="{{ url('multimedia_index') }}#1_2_4">Kryterium sukcesu 1.2.4 Napisy rozszerzone (na żywo)</a></label><br/>
                 <label><input type="checkbox" name="scAA"/><a href="{{ url('multimedia_index') }}#1_2_5">Kryterium sukcesu 1.2.5 Audiodeskrypcja (nagranie)</a></label><br/>
@@ -85,7 +86,7 @@
         </div>
         <div>
             <fieldset>
-                <legend id="scAAA">Kryteria sukcesu - Poziom AAA</legend>
+                <legend id="scAAA">Kryteria sukcesu – Poziom AAA</legend>
                 <!-- <h2 id="scAAA">Kryteria sukcesu - Poziom AAA</h2> -->
                 <label><input type="checkbox" name="scAAA"/><a href="{{ url('multimedia_index') }}#1_2_6">Kryterium sukcesu 1.2.6 Język migowy (nagranie)</a></label><br/>
                 <label><input type="checkbox" name="scAAA"/><a href="{{ url('multimedia_index') }}#1_2_7">Kryterium sukcesu 1.2.7 Rozszerzona audiodeskrypcja (nagranie)</a></label><br/>
@@ -156,7 +157,7 @@
                         completedA = true;
                         headerA.style.textDecoration = 'line-through';
                         successA.textContent = 'Spełniono kryteria dla poziomu A.';
-                        successA.style.backgroundColor = 'yellow';
+                        successA.style.backgroundColor = '#ebe84b';
                     }
                     else if (checkboxA !== checkedA_count) {
                         completedA = false;
@@ -168,7 +169,7 @@
                         completedAA = true;
                         headerAA.style.textDecoration = 'line-through';
                         successAA.textContent = 'Spełniono kryteria dla poziomu AA.';
-                        successAA.style.backgroundColor = 'yellow';
+                        successAA.style.backgroundColor = '#ebe84b';
                     }
                     else if (completedA === false || checkboxAA !== checkedAA_count) {
                         completedAA = false;
@@ -180,7 +181,7 @@
                         completedAAA = true;
                         headerAAA.style.textDecoration = 'line-through';
                         successAAA.textContent = 'Spełniono kryteria dla poziomu AAA.';
-                        successAAA.style.backgroundColor = 'yellow';
+                        successAAA.style.backgroundColor = '#ebe84b';
                     }
                     else if (completedAA === false || checkboxAAA !== checkedAAA_count) {
                         completedAAA = false;

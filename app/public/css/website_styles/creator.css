@@ -1,0 +1,15 @@
+/* --- Strefa twórcy --- */
+
+/* --- Checklista WCAG 2.1 --- */
+legend {
+    font-size: 2em;
+    font-weight: bold;
+    font-family: "Varta", sans-serif;
+}
+fieldset {
+    max-width: 1000px;
+    margin-bottom: 1em;
+}
+fieldset label a {
+    font-size: 1.3em;
+}

@@ -1,0 +1,76 @@
+/* --- opinions, admin, user subpages --- */
+.reposition {
+    margin-left: 26vw;
+    row-gap: 1em;
+}
+@media screen and (max-width: 2144px) {
+    .reposition {
+        margin-left: 20vw;
+    }
+}
+@media screen and (max-width: 1392px) {
+    .reposition {
+        margin-left: 10vw;
+    }
+}
+@media screen and (max-width: 942px) {
+    .reposition {
+        margin-left: 3vw;
+    }
+}
+.reposition h2 {
+    margin-bottom: 0;
+}
+button.opinions-edit, button.comments-edit, button.opinions-close, button.comments-close, .opinion {
+    font-family: 'Varta', serif;
+    font-size: 1.1em;
+}
+button.opinions-edit, button.comments-edit, button.opinions-close, button.comments-close {
+    background-color: #969696;
+    border-radius: 5px;
+    border: none;
+    padding: 0.7em;
+    margin-bottom: 0.5em;
+    cursor: pointer;
+}
+div.opinions-enabled, div.comments-enabled, button.opinions-close, button.comments-close {
+    display: none;
+    cursor: pointer;
+}
+.user-info, button.opinions-edit:hover, button.comments-edit:hover, button.opinions-close:hover, button.comments-close:hover {
+    font-weight: bold;
+}
+#opinions {
+    margin-bottom: 0.8em;
+}
+.comments-enabled, .opinions-enabled {
+    display: none;
+}
+.message-style:nth-child(2n) {
+    background-color: #4A9CE0;
+    border-radius: 10px;
+    padding: 0.5em 1em;
+}
+.message-style {
+    background-color: #4A9CE0;
+    border-radius: 10px;
+    margin-bottom: 0.5em;
+    padding: 0.5em 1em;
+    margin-top: 0.2em
+}
+.message-action-space {
+    margin-top: 0.7em;
+    margin-left: 0.5em;
+}
+.message-action-accept {
+    background-color: #2d782d;
+    padding: 0.5em;
+    border-radius: 5px;
+    color: #f3f3f3;
+}
+.message-action-delete {
+    background-color: #7a2121;
+    padding: 0.5em;
+    border-radius: 5px;
+    color: #f3f3f3;
+}

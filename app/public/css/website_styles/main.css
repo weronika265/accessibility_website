@@ -4,7 +4,7 @@ body {
     scroll-behavior: smooth;
     margin: 0;
 }
-h1, h2 {
+h1, h2, h3 {
     font-family: "DM Sans", sans-serif;
 }
 h1 {
@@ -15,12 +15,16 @@ h1 {
 h2 {
     font-size: 2.4em;
 }
-p:not(#info p, #author p), ul, a {
+h3 {
+    font-weight: bold;
+    font-size: 1.4em;
+}
+p:not(#info p, #author p), a, ul, ol {
     font-family: "Varta", sans-serif;
     font-size: 1.2em;
     font-weight: 400;
 }
-p ~ ul {
+p ~ ul, p ~ ol {
     margin-top: 0;
 }
 p.list-glue {
@@ -32,7 +36,11 @@ a {
 a:hover {
     font-weight: bold;
 }
-
+textarea, input {
+    font-family: "Varta", sans-serif;
+    font-size: 1em;
+    font-weight: 400;
+}
 
 /* --- scroll button --- */
 #scroll-btn {
@@ -123,3 +131,7 @@ a:hover {
     border-radius: 10px;
     border: 2px solid #545454;
 }
+/* TODO: znaleźć w innych miejscach i prawdopodobnie usunąć */
+/*.indent {*/
+/*    */
+/*}*/

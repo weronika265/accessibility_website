@@ -1,0 +1,13 @@
+/* --- Strefa czytelnika --- */
+.bg-list-clear {
+    background-color: rgb(166, 208, 244, 0.8);
+    padding: 1em;
+}
+.list-clear-set {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 0.5em 1em;
+    list-style-type: none;
+}

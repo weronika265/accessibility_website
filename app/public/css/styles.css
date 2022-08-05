@@ -5,4 +5,6 @@
 @import url('website_styles/footer.css');
 @import url('website_styles/index.css');
 @import url('website_styles/login_register.css');
-@import url('website_styles/opinions.css');
+@import url('website_styles/opinions_admin_user.css');
+@import url('website_styles/reader.css');
+@import url('website_styles/creator.css');

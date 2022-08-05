@@ -6,33 +6,15 @@
 
 {% block body %}
     {% include 'header.html.twig' %}
-    <main id="main" class="page">
-{#        <h2>Skontaktuj się</h2>#}
-{#        <form>#}
-{#            <div class="align-left" style="padding: 0; flex-wrap: wrap;">#}
-{#                <div class="space-right">#}
-{#                    <label for="name">Imię</label><br/>#}
-{#                    <input type="text" id="name" name="name"/><br/>#}
-{#                    <label for="email">Email</label><br/>#}
-{#                    <input type="email" id="email" name="email"/><br/>#}
-{#                    <label for="subject">Temat wiadomości</label><br/>#}
-{#                    <input type="text" id="subject" name="subject"/><br/>#}
-{#                </div>#}
-{#                <div>#}
-{#                    <label for="message">Treść wiadomości</label><br/>#}
-{#                    <textarea id="message" name="message" rows="14" cols="35"></textarea><br/>#}
-{#                </div>#}
-{#            </div>#}
-{#            <input type="submit" value="Wyślij" class="center-item-send" style="padding: 0.5em 3em;"/>#}
-{#        </form>#}
+    <main id="main" class="page reposition">
             <h2>Opinie o serwisie</h2>
             {% if pagination is defined and pagination.items|length %}
-                <div class="indent" style="flex-wrap: wrap;">
+                <div>
                     {% for opinion in pagination.items %}
                         {% if opinion.is_accepted %}
-                            <section class="opinion">
+                            <section id="opinions" class="opinion">
                                 <span class="user-info">{{ opinion.author.username }}, {{ opinion.date|date('Y/m/d') }}</span>
-                                <div class="message-style">
+                                <div class="message-style" style="max-width: 550px;">
                                     {{ opinion.message }}
                                 </div>
                             </section>
@@ -47,52 +29,16 @@
             <div>
                 {{ knp_pagination_render(pagination) }}
             </div>
-{#            <form>#}
-{#                <label for="opinion-field">Treść opinii</label><br/>#}
-{#                <textarea id="opinion-field" name="opinion-field" rows="10" cols="70"></textarea><br/>#}
-{#                <input type="submit" value="Dodaj opinię" class="center-item-opinion" style="padding: 0.5em 3em; margin-top: 1em;"/>#}
-{#            </form>#}
-
-
-{#            {{ form_start(form) }}#}
-{#            {{ form_label(form.message) }}#}
-{#            {{ form_widget(form) }}#}
-{#                <div>#}
-{#                    <input type="submit" value="Dodaj opinię" class="center-item-opinion" style="padding: 0.5em 3em; margin-top: 1em;"/>#}
-{#                </div>#}
-{#            {{ form_end(form) }}#}
 
             {% if is_granted('IS_AUTHENTICATED_FULLY') %}
                 {{ form_start(form) }}
                     <div>{{ form_label(form.message) }}</div>
                     <div>{{ form_widget(form.message, { 'attr': {'rows' : '6', 'cols' : '60'} } ) }}</div>
                     <div>
-                        <input type="submit" value="{{ 'Dodaj opinię' }}" class="center-item-opinion" style="padding: 0.5em 3em; margin-top: 1em; cursor: pointer;"/>
+                        <input type="submit" value="{{ 'Dodaj opinię' }}" class="submit-btn" />
                     </div>
                 {{ form_end(form) }}
             {% endif %}
-
-
-{#                <section class="opinion">#}
-{#                    <inline class="user-info">Tomasz, 16.02.2022</inline>#}
-{#                    <div class="message-style">#}
-{#                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.#}
-{#                    </div>#}
-{#                </section>#}
-{#                <section class="opinion">#}
-{#                    <inline class="user-info">Tomasz, 16.02.2022</inline>#}
-{#                    <div class="message-style">#}
-{#                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.#}
-{#                    </div>#}
-{#                </section>#}
-{#                <section class="opinion">#}
-{#                    <inline class="user-info">Tomasz, 16.02.2022</inline>#}
-{#                    <div class="message-style">#}
-{#                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.#}
-{#                    </div>#}
-{#                </section>#}
-{#            </div>#}
-
     </main>
     {% include 'footer.html.twig' %}
 {% endblock %}

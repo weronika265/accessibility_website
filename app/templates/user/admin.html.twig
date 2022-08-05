@@ -6,14 +6,13 @@
 
 {% block body %}
     {% include 'header.html.twig' %}
-    <main id="main" class="page">
-
+    <main id="main" class="page reposition">
         <article>
-            <h2>Dostępne opinie o serwisie</h2>
+            <h2>Nowe opinie o serwisie</h2>
             {% if pagination_opinions is defined and pagination_opinions.items|length %}
-                <div class="indent" style="flex-wrap: wrap;">
+                <div>
                     <button class="message-action-space opinions-edit">
-                        Zarządzaj dostępnymi opiniami
+                        Zarządzaj nowymi opiniami
                     </button>
                     <button class="message-action-space opinions-close">
                         Zamknij
@@ -23,38 +22,14 @@
                             <section id="opinions" class="opinion">
                                 <span class="user-info">{{ opinion.author.username }}, {{ opinion.date|date('Y/m/d') }}</span>
                                 <div style="display: flex;">
-                                    <div class="message-style" style="margin-top: 0.2em;">
+                                    <div class="message-style">
                                         {{ opinion.message }}
                                     </div>
-{#                                    <div class="message-action-space opinions-edit">#}
-{#                                        Edytuj#}
-{#                                    </div>#}
                                     <div class="message-action-space opinions-enabled">
-                                        <a href="{{ url('opinion_accept', {id: opinion.id}) }}" onclick="return confirm('Czy na pewno chcesz zaakceptować opinię?')" class="message-action-accept" data-id="{{ opinion.id }}">Zaakceptuj</a>
-                                        <a href="{{ url('opinion_delete', {id: opinion.id}) }}" onclick="return confirm('Czy na pewno chcesz usunąć opinię?')" class="message-action-delete" data-id="{{ opinion.id }}">Odrzuć</a>
-{#                                        <div class="message-action-space opinions-close">#}
-{#                                            Zamknij#}
-{#                                        </div>#}
+                                        <a href="{{ url('opinion_accept', {id: opinion.id}) }}" onclick="confirmation()" class="message-action-accept" data-id="{{ opinion.id }}">Zaakceptuj</a>
+                                        <a href="{{ url('opinion_delete', {id: opinion.id}) }}" onclick="confirmation()" class="message-action-delete" data-id="{{ opinion.id }}">Odrzuć</a>
                                     </div>
                                 </div>
-{#                                <form method="post">#}
-{#                                    <input type="button" id="akceptuj" name="akceptuj" value="Akceptuj" style="cursor: pointer; background-color: lightgreen;"/>#}
-{#                                    <input type="button" id="odrzuc" name="odrzuc" value="Odrzuć" style="cursor: pointer; background-color: lightcoral;"/>#}
-{#                                </form>#}
-
-{# !!! CURRENT #}
-{#                                {{ form_start(form) }}#}
-{#                                {{ form_widget(form) }}#}
-{#                                <div class="form-group row float-sm-right">#}
-{#                                    <input type="button" id="akceptuj" name="akceptuj" value="Akceptuj" style="cursor: pointer; background-color: lightgreen;"/>#}
-{#                                    <input type="submit" id="odrzuc" name="odrzuc" value="Odrzuć" style="cursor: pointer; background-color: lightcoral;"/>#}
-{#                                </div>#}
-{#                                {{ form_end(form) }}#}
-{# !!! CURRENT #}
-
-{#                                <form method="post">#}
-{#                                    <input type="button" id="odrzuc" name="odrzuc" value="Odrzuć" style="cursor: pointer; background-color: lightcoral;"/>#}
-{#                                </form>#}
                             </section>
                         {% endif %}
                     {% endfor %}
@@ -70,11 +45,11 @@
         </article>
 
         <article>
-            <h2>Dostępne komentarze</h2>
+            <h2>Nowe komentarze</h2>
             {% if pagination_comments is defined and pagination_comments.items|length %}
-                <div class="indent" style="flex-wrap: wrap;">
+                <div class="indent">
                     <button class="message-action-space comments-edit">
-                        Zarządzaj dostępnymi komentarzami
+                        Zarządzaj nowymi komentarzami
                     </button>
                     <button class="message-action-space comments-close">
                         Zamknij
@@ -87,15 +62,9 @@
                                     <div class="message-style">
                                         {{ comment.message }}
                                     </div>
-{#                                    <div class="message-action-space comments-edit">#}
-{#                                        Edytuj#}
-{#                                    </div>#}
                                     <div class="message-action-space comments-enabled">
-                                        <a href="{{ url('comment_accept', {id: comment.id}) }}" onclick="return confirm('Czy na pewno chcesz zaakceptować komentarz?')" class="message-action-accept" data-id="{{ comment.id }}">Zaakceptuj</a>
+                                        <a href="{{ url('comment_accept', {id: comment.id}) }}" onclick="return confirm('Czy na pewno chcesz usunąć komentarz?')" class="message-action-accept" data-id="{{ comment.id }}">Zaakceptuj</a>
                                         <a href="{{ url('comment_delete', {id: comment.id}) }}" onclick="return confirm('Czy na pewno chcesz usunąć komentarz?')" class="message-action-delete" data-id="{{ comment.id }}">Odrzuć</a>
-{#                                        <div class="message-action-space comments-close">#}
-{#                                            Zamknij#}
-{#                                        </div>#}
                                     </div>
                                 </div>
                             </section>
@@ -111,7 +80,6 @@
                 {{ knp_pagination_render(pagination_comments) }}
             </div>
         </article>
-
     </main>
     {% include 'footer.html.twig' %}
 
@@ -159,25 +127,11 @@
                     }
                 });
             });
+
+            function confirmation() {
+                return confirm('Czy na pewno chcesz zaakceptować komentarz?');
+            }
         </script>
     {% endblock %}
 
-{#    {% block javascripts %}#}
-{#        <script>#}
-{#            const opinions = document.getElementById('opinions');#}
-{#            if(opinions) {#}
-{#                opinions.addEventListener('click', (e) => {#}
-{#                    if(e.target.className === 'delete-opinion') {#}
-{#                        if(confirm('Czy na pewno usunąć?')) {#}
-{#                            const id = e.target.getAttribute('data-id');#}
-
-{#                            fetch(`/article/delete/${id}`, {#}
-{#                                method: 'DELETE'#}
-{#                            }).then(res => window.location.reload())#}
-{#                        }#}
-{#                    }#}
-{#                });#}
-{#            }#}
-{#        </script>#}
-{#    {% endblock %}#}
 {% endblock %}
