@@ -21,7 +21,7 @@
                         {% if not opinion.is_accepted %}
                             <section id="opinions" class="opinion">
                                 <span class="user-info">{{ opinion.author.username }}, {{ opinion.date|date('Y/m/d') }}</span>
-                                <div style="display: flex;">
+                                <div class="message-lined">
                                     <div class="message-style">
                                         {{ opinion.message }}
                                     </div>
@@ -58,7 +58,7 @@
                         {% if not comment.is_accepted %}
                             <section id="opinions" class="opinion">
                                 <span class="user-info">{{ comment.author.username }}, {{ comment.date|date('Y/m/d') }}</span>
-                                <div style="display: flex;">
+                                <div class="message-lined">
                                     <div class="message-style">
                                         {{ comment.message }}
                                     </div>
@@ -100,7 +100,9 @@
                     opinions_edit.style.display = 'none';
                     opinions_close.style.display = 'block';
                     for(let i of opinions) {
-                        i.style.display = 'block';
+                        i.style.display = 'flex';
+                        i.style.alignItems = 'center';
+                        i.style.columnGap = '0.2em';
                     }
                 });
                 opinions_close.addEventListener('click', function () {
@@ -115,7 +117,9 @@
                     comments_edit.style.display = 'none';
                     comments_close.style.display = 'block';
                     for(let i of comments) {
-                        i.style.display = 'block';
+                        i.style.display = 'flex';
+                        i.style.alignItems = 'center';
+                        i.style.columnGap = '0.2em';
                     }
                 });
 

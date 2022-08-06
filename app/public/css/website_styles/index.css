@@ -58,9 +58,6 @@
 /* TODO: dodać hamburgera */
 /* --- Strona główna (responsive) --- */
 @media screen and (max-width: 1043px) {
-    nav {
-        display: none;
-    }
     /* #main ? */
     .page {
         /* margin rozjeżdża stronę przy powiększaniu a11y */

@@ -22,7 +22,6 @@
     margin: 0;
 }
 #logo2 {
-    width: 87.4px;
-    height: auto;
+    max-width: 87.4px;
     margin: 0.7em 0;
 }

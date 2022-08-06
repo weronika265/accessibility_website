@@ -11,20 +11,22 @@
     {% include 'header.html.twig' %}
     {% include 'sidebar.html.twig' %}
     <main id="main" class="page reposition content-cut">
-        <div>
+        <article>
             <h1>Wytyczna 4.1 Kompatybilność</h1>
-            <p>
-                Twórz treści solidnie, aby mogły być skutecznie interpretowane przez różne programy użytkownika, w tym technologie wspomagające.
-            </p>
-            <div id="table-of-content">
-                <h2>Spis treści</h2>
-                <ul>
-                    <li><a href="#4_1_1">Kryterium sukcesu 4.1.1 Poprawność kodu (Poziom A)</a></li>
-                    <li><a href="#4_1_2">Kryterium sukcesu 4.1.2 Nazwa, rola, wartość (Poziom A)</a></li>
-                    <li><a href="#4_1_3">Kryterium sukcesu 4.1.3 Komunikaty o stanie (Poziom AA)</a></li>
-                </ul>
-            </div>
-            <div>
+            <section>
+                <p>
+                    Twórz treści solidnie, aby mogły być skutecznie interpretowane przez różne programy użytkownika, w tym technologie wspomagające.
+                </p>
+                <div id="table-of-content">
+                    <h2>Spis treści</h2>
+                    <ul>
+                        <li><a href="#4_1_1">Kryterium sukcesu 4.1.1 Poprawność kodu (Poziom A)</a></li>
+                        <li><a href="#4_1_2">Kryterium sukcesu 4.1.2 Nazwa, rola, wartość (Poziom A)</a></li>
+                        <li><a href="#4_1_3">Kryterium sukcesu 4.1.3 Komunikaty o stanie (Poziom AA)</a></li>
+                    </ul>
+                </div>
+            </section>
+            <section>
                 <h3 id="4_1_1">Kryterium sukcesu 4.1.1 Poprawność kodu (Poziom A)</h3>
                 <p class="list-glue">
                     Dla języka znaczników (np. HTML):
@@ -58,8 +60,8 @@
                 <p>
                     czytnik nie będzie mógł poprawnie przekazać informacji o stronie.
                 </p>
-            </div>
-            <div>
+            </section>
+            <section>
                 <h3 id="4_1_2">Kryterium sukcesu 4.1.2 Nazwa, rola, wartość (Poziom A)</h3>
                 <p class="list-glue">
                     Część elementów interfejsu użytkownika nie jest zgodna ze standardem języka znaczników. Są to m.in.:
@@ -111,8 +113,8 @@
                             &lt;button aria-label="Zresetuj"&gt;&lt;/button&gt;
                         </code>
                     </pre>
-            </div>
-            <div>
+            </section>
+            <section>
                 <h3 id="4_1_3">Kryterium sukcesu 4.1.3 Komunikaty o stanie (Poziom AA)</h3>
                 <p>
                     Komunikaty o stanie, które pojawiają się na stronie, nie mogą wymuszać fokusu.
@@ -177,8 +179,8 @@
                         Twoja przeglądarka nie wspiera elementów wideo.
                     </video>
                 </p>
-            </div>
-        </div>
+            </section>
+        </article>
     </main>
     {% include 'footer.html.twig' %}
 {% endblock %}

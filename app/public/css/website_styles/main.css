@@ -46,6 +46,28 @@ textarea, input {
     font-size: 1em;
     font-weight: 400;
 }
+.reposition {
+    margin-left: 26vw;
+    row-gap: 1em;
+}
+@media screen and (max-width: 2144px) {
+    .reposition {
+        margin-left: 20vw;
+    }
+}
+@media screen and (max-width: 1392px) {
+    .reposition {
+        margin-left: 10vw;
+    }
+}
+@media screen and (max-width: 942px) {
+    .reposition {
+        margin-left: 3vw;
+    }
+}
+.reposition h2 {
+     margin-bottom: 0;
+ }
 
 /* --- scroll button --- */
 #scroll-btn {

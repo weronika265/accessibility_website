@@ -11,22 +11,24 @@
     {% include 'header.html.twig' %}
     {% include 'sidebar.html.twig' %}
     <main id="main" class="page reposition content-cut">
-        <div>
+        <article>
             <h1>Wytyczna 3.2 Przewidywalność</h1>
-            <p>
-                Twórz strony internetowe tak, aby otwierały się, wyglądały i działały w sposób przewidywalny.
-            </p>
-            <div id="table-of-content">
-                <h2>Spis treści</h2>
-                <ul>
-                    <li><a href="#3_2_1">Kryterium sukcesu 3.2.1 Po otrzymaniu fokusu (Poziom A)</a></li>
-                    <li><a href="#3_2_2">Kryterium sukcesu 3.2.2 Podczas wprowadzania danych (Poziom A)</a></li>
-                    <li><a href="#3_2_3">Kryterium sukcesu 3.2.3 Spójna nawigacja (Poziom AA)</a></li>
-                    <li><a href="#3_2_4">Kryterium sukcesu 3.2.4 Spójna identyfikacja (Poziom AA)</a></li>
-                    <li><a href="#3_2_5">Kryterium sukcesu 3.2.5 Zmiana na żądanie (Poziom AAA)</a></li>
-                </ul>
-            </div>
-            <div>
+            <section>
+                <p>
+                    Twórz strony internetowe tak, aby otwierały się, wyglądały i działały w sposób przewidywalny.
+                </p>
+                <div id="table-of-content">
+                    <h2>Spis treści</h2>
+                    <ul>
+                        <li><a href="#3_2_1">Kryterium sukcesu 3.2.1 Po otrzymaniu fokusu (Poziom A)</a></li>
+                        <li><a href="#3_2_2">Kryterium sukcesu 3.2.2 Podczas wprowadzania danych (Poziom A)</a></li>
+                        <li><a href="#3_2_3">Kryterium sukcesu 3.2.3 Spójna nawigacja (Poziom AA)</a></li>
+                        <li><a href="#3_2_4">Kryterium sukcesu 3.2.4 Spójna identyfikacja (Poziom AA)</a></li>
+                        <li><a href="#3_2_5">Kryterium sukcesu 3.2.5 Zmiana na żądanie (Poziom AAA)</a></li>
+                    </ul>
+                </div>
+            </section>
+            <section>
                 <h3 id="3_2_1">Kryterium sukcesu 3.2.1 Po otrzymaniu fokusu (Poziom A)</h3>
                 <p>
                     Kiedy element interfejsu użytkownika uzyska fokus, nie może dojść do nieoczekiwanej zmiany kontekstu (np. otwarcie nowego okna).
@@ -44,8 +46,8 @@
                     </ul>
                 <a href="{{ url('_3_2_1_dobry') }}" style="color: blue;">Dobry przykład</a><br/>
                 <a href="{{ url('_3_2_1_zly') }}" style="color: blue;">Zły przykład</a>
-            </div>
-            <div>
+            </section>
+            <section>
                 <h3 id="3_2_2">Kryterium sukcesu 3.2.2 Podczas wprowadzania danych (Poziom A)</h3>
                 <p>
                     Kiedy odbiorca wprowadza dane, powiązane elementy nie mogą powodować automatycznej zmiany kontekstu
@@ -77,8 +79,8 @@
                     </ul>
                     Pomyśl o osobie niewidomej, która odwiedza Twoją stronę. Kiedy nie powiadomisz jej o zmianie kontekstu na stronie, nie będzie ona wiedziała o zmianie.
                 <img src="{{ asset('img/3_2_2.jpg') }}" />
-            </div>
-            <div>
+            </section>
+            <section>
                 <h3 id="3_2_3">Kryterium sukcesu 3.2.3 Spójna nawigacja (Poziom AA)</h3>
                 <p>
                     Nawigacja powtarzana na wielu stronach musi być taka sama, o ile nie zostanie dostosowana przez użytkownika.<br/><br/>
@@ -93,8 +95,8 @@
                         <li>słabo widzą;</li>
                         <li>nie widzą wcale.</li>
                     </ul>
-            </div>
-            <div>
+            </section>
+            <section>
                 <h3 id="3_2_4">Kryterium sukcesu 3.2.4 Spójna identyfikacja (Poziom AA)</h3>
                 <p class="list-glue">
                     Elementy na stronie, które pełnią tę samą funkcję powinny wyglądać tak samo i mieć spójnie nazewnictwo. Spójne nazewnictwo to m.in. taka sama:
@@ -119,8 +121,8 @@
                     <label>Pole formularza<input type="text" /></label>
                     wyglądają podobnie.
                 </p>
-            </div>
-            <div>
+            </section>
+            <section>
                 <h3 id="3_2_5">Kryterium sukcesu 3.2.5 Zmiana na żądanie (Poziom AAA)</h3>
                 <p>
                     Zmiana treści jest możliwa tylko przez działanie użytkownika lub można wyłączyć takie zmiany.
@@ -151,8 +153,8 @@
                     Ta akcja wymaga odświeżenia strony.<br/>
                     <button style="cursor: pointer;">Odśwież stronę</button>
                 </p>
-            </div>
-        </div>
+            </section>
+        </article>
     </main>
     {% include 'footer.html.twig' %}
 {% endblock %}

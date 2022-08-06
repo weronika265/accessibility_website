@@ -11,24 +11,26 @@
     {% include 'header.html.twig' %}
     {% include 'sidebar.html.twig' %}
     <main id="main" class="page reposition content-cut">
-        <div>
+        <article>
             <h1>Wytyczna 1.2 Multimedia</h1>
-            <p>Zapewnij rozwiązania alternatywne dla zawartości audio i wideo.</p>
-            <div id="table-of-content">
-                <h2>Spis treści</h2>
-                <ul>
-                    <li><a href="#1_2_1">Kryterium sukcesu 1.2.1 Tylko audio lub tylko wideo (nagranie) (poziom A)</a></li>
-                    <li><a href="#1_2_2">Kryterium sukcesu 1.2.2 Napisy rozszerzone (nagranie) (poziom A)</a></li>
-                    <li><a href="#1_2_3">Kryterium sukcesu 1.2.3 Audiodeskrypcja lub alternatywa tekstowa dla mediów (nagranie) (poziom A)</a></li>
-                    <li><a href="#1_2_4">Kryterium sukcesu 1.2.4 Napisy rozszerzone (na żywo) (poziom AA)</a></li>
-                    <li><a href="#1_2_5">Kryterium sukcesu 1.2.5 Audiodeskrypcja (nagranie) (poziom AA)</a></li>
-                    <li><a href="#1_2_6">Kryterium sukcesu 1.2.6 Język migowy (nagranie) (poziom AAA)</a></li>
-                    <li><a href="#1_2_7">Kryterium sukcesu 1.2.7 Rozszerzona audiodeskrypcja (nagranie) (poziom AAA)</a></li>
-                    <li><a href="#1_2_8">Kryterium sukcesu 1.2.8 Alternatywa dla mediów (nagranie) (poziom AAA)</a></li>
-                    <li><a href="#1_2_9">Kryterium sukcesu 1.2.9 Tylko audio (na żywo) (poziom AAA)</a></li>
-                </ul>
-            </div>
-            <div>
+            <section>
+                <p>Zapewnij rozwiązania alternatywne dla zawartości audio i wideo.</p>
+                <div id="table-of-content">
+                    <h2>Spis treści</h2>
+                    <ul>
+                        <li><a href="#1_2_1">Kryterium sukcesu 1.2.1 Tylko audio lub tylko wideo (nagranie) (poziom A)</a></li>
+                        <li><a href="#1_2_2">Kryterium sukcesu 1.2.2 Napisy rozszerzone (nagranie) (poziom A)</a></li>
+                        <li><a href="#1_2_3">Kryterium sukcesu 1.2.3 Audiodeskrypcja lub alternatywa tekstowa dla mediów (nagranie) (poziom A)</a></li>
+                        <li><a href="#1_2_4">Kryterium sukcesu 1.2.4 Napisy rozszerzone (na żywo) (poziom AA)</a></li>
+                        <li><a href="#1_2_5">Kryterium sukcesu 1.2.5 Audiodeskrypcja (nagranie) (poziom AA)</a></li>
+                        <li><a href="#1_2_6">Kryterium sukcesu 1.2.6 Język migowy (nagranie) (poziom AAA)</a></li>
+                        <li><a href="#1_2_7">Kryterium sukcesu 1.2.7 Rozszerzona audiodeskrypcja (nagranie) (poziom AAA)</a></li>
+                        <li><a href="#1_2_8">Kryterium sukcesu 1.2.8 Alternatywa dla mediów (nagranie) (poziom AAA)</a></li>
+                        <li><a href="#1_2_9">Kryterium sukcesu 1.2.9 Tylko audio (na żywo) (poziom AAA)</a></li>
+                    </ul>
+                </div>
+            </section>
+            <section>
                 (wszędzie – nie trzeba się stosować, jeśli ta forma jest alternatywą do tekstu na stronie i jest to widocznie oznaczone?)
                 <h3 id="1_2_1">Kryterium sukcesu 1.2.1 Tylko audio lub tylko wideo (nagranie) (poziom A)</h3>
                 <p>
@@ -60,8 +62,8 @@
                 <p>
                     <span style="background-color: lightgray;">Jest to próbne nagranie audio. Nie każda osoba może je usłyszeć. Przez to dołączono tekst, który przedstawia nagranie w formie pisemnej.</span>
                 </p>
-            </div>
-            <div>
+            </section>
+            <section>
                 <h3 id="1_2_2">Kryterium sukcesu 1.2.2 Napisy rozszerzone (nagranie) (poziom A)</h3>
                 <p class="list-glue">
                     Multimedia, które zawierają i obraz, i dźwięk (media zsynchronizowane), muszą zawierać <strong>napisy rozszerzone</strong>.
@@ -78,11 +80,11 @@
                 <p class="list-glue">
                     Istnieją dwa rodzaje napisów rozszerzonych:
                 </p>
-                    <ul>
+                    <ul class="compare">
                         <li>
                             Napisy zamknięte – CC (Closed Caption)<br/>
                             Napisy, które da się wyłączyć w nagraniu:<br/>
-                            <video width="320" height="240" controls>
+                            <video controls>
                                 <source src="{{ asset('img/1_2_2_CC.mp4') }}" type="video/mp4">
                                 <track src="{{ asset('img/1_2_2_video_subtitles.vtt') }}" kind="subtitles" srclang="pl" label="Polski" />
                                 Twoja przeglądarka nie wspiera elementów wideo.
@@ -91,7 +93,7 @@
                         <li>
                             Napisy otwarte – OC (Open Caption).<br/>
                             Napisy, których nie da się wyłączyć w nagraniu:<br/>
-                            <video width="320" height="240" controls>
+                            <video controls>
                                 <source src="{{ asset('img/1_2_2_OC.mp4') }}" type="video/mp4" />
                                 Twoja przeglądarka nie wspiera elementów wideo.
                             </video>
@@ -104,8 +106,8 @@
                 <p>
                     <strong>WAŻNE! Napisy nie powinny zasłaniać ważnych elementów w nagraniu.</strong>
                 </p>
-            </div>
-            <div>
+            </section>
+            <section>
                 <h3 id="1_2_3">Kryterium sukcesu 1.2.3 Audiodeskrypcja lub alternatywa tekstowa dla mediów (nagranie) (poziom A)</h3>
                 <p class="list-glue">
                     W przypadku nagrań audio-wideo, dla części wideo musisz:
@@ -141,23 +143,23 @@
                     Taki sposób prezentacji wideo pozwala zapoznać się treścią nie tylko osobom z problemami ze słuchem.
                     Użytkownicy, którzy nie widzą dobrze lub z trudnością rozpoznają obrazy, też zyskają na tym ułatwieniu.
                 </p>
-            </div>
-            <div>
+            </section>
+            <section>
                 <h3 id="1_2_4">Kryterium sukcesu 1.2.4 Napisy rozszerzone (na żywo) (poziom AA)</h3>
                 <p>
                     Jeśli nagranie audio-wideo jest nadawane na żywo, musi zawierać napisy rozszerzone.
                     Pozwoli to zapoznać się z treścią większej grupie osób.<br/>
-                    <img src="{{ asset('img/NiloferMerchant_2013-embed_live.jpg') }}" alt="" style="width: 576px; height: auto;" />
+{#                    <img src="{{ asset('img/NiloferMerchant_2013-embed_live.jpg') }}" alt="" style="width: 576px; height: auto;" />#}
                 </p>
-            </div>
-            <div>
+            </section>
+            <section>
                 <h3 id="1_2_5">Kryterium sukcesu 1.2.5 Audiodeskrypcja (nagranie) (poziom AA)</h3>
                 <p>
                     We <strong>wszystkich</strong> nagraniach audio-wideo, część wideo musi zawierać audiodeskrypcję.
                     Jest to rozszerzenie kryterium <a href="#1_2_3">1.2.3 Audiodeskrypcja lub alternatywa tekstowa dla mediów (nagranie).</a>
                 </p>
-            </div>
-            <div>
+            </section>
+            <section>
                 <h3 id="1_2_6">Kryterium sukcesu 1.2.6 Język migowy (nagranie) (poziom AAA)</h3>
                 <p>
                     Wszystkie multimedia, które zawierają audio i wideo, muszą być tłumaczone na język migowy.
@@ -166,9 +168,9 @@
                     Dla wielu osób, które nie słyszą od dziecka, język migowy jest językiem podstawowym oraz główną formą komunikacji.
                     Takie osoby mogą mieć problemy z rozumieniem tekstu pisanego. Multimedia tłumaczone na język migowy są dla nich dużym ułatwieniem.
                 </p>
-                <img src="{{ asset('img/migowy.jpg') }}" style="width: 507px; height: auto;"/>
-            </div>
-            <div>
+{#                <img src="{{ asset('img/migowy.jpg') }}" style="width: 507px; height: auto;"/>#}
+            </section>
+            <section>
                 <h3 id="1_2_7">Kryterium sukcesu 1.2.7 Rozszerzona audiodeskrypcja (nagranie) (poziom AAA)</h3>
                 <p>
                     Czasem przerwy między dialogami nie wystarczają, aby przekazać wszystkie dodatkowe informacje.
@@ -186,8 +188,8 @@
                     <source src="{{ asset('img/1_2_7.mp4') }}" type="video/mp4" />
                     Twoja przeglądarka nie wspiera elementów wideo.
                 </video>
-            </div>
-            <div>
+            </section>
+            <section>
                 <h3 id="1_2_8">Kryterium sukcesu 1.2.8 Alternatywa dla mediów (nagranie) (poziom AAA)</h3>
                 <p class="list-glue">
                     Musisz udostępnić alternatywę dla wszystkich treści audio i wideo na stronie.<br/>
@@ -203,9 +205,9 @@
                 <p>
                     Tekstowy opis multimediów sprawia, że każda osoba może zrozumieć nagranie ze szczegółami. Zrobi to przy użyciu technologii asystujących (czytnik tekstu, Braille'a).
                 </p>
-                <img src="{{ asset('img/1_2_8.png') }}" style="width: 620px; height: auto;">
-            </div>
-            <div>
+{#                <img src="{{ asset('img/1_2_8.png') }}" style="width: 620px; height: auto;">#}
+            </section>
+            <section>
                 <h3 id="1_2_9">Kryterium sukcesu 1.2.9 Tylko audio (na żywo) (poziom AAA)</h3>
                 <p class="list-glue">
                     Wytyczna wymaga, aby zawartość audio w transmisjach na żywo miała alternatywę w postaci tekstu.
@@ -216,9 +218,9 @@
                         <li>pomoc tłumacza, który tworzy transkrypcję transmisji w momencie nadawania,</li>
                         <li>jeśli przebieg transmisji jest zaplanowany, można dołączyć wcześniej przygotowany transkrypt.</li>
                     </ul>
-                <img src="{{ asset('img/1_2_9.png') }}" style="width: 620px; height: auto;">
-            </div>
-        </div>
+{#                <img src="{{ asset('img/1_2_9.png') }}" style="width: 620px; height: auto;">#}
+            </section>
+        </article>
     </main>
     {% include 'footer.html.twig' %}
 {% endblock %}

@@ -11,23 +11,25 @@
     {% include 'header.html.twig' %}
     {% include 'sidebar.html.twig' %}
     <main id="main" class="page reposition content-cut">
-        <div>
+        <article>
             <h1>Wytyczna 3.3 Pomoc przy wprowadzaniu informacji</h1>
-            <p>
-                Pomagaj użytkownikom unikać błędów i je korygować.
-            </p>
-            <div id="table-of-content">
-                <h2>Spis treści</h2>
-                <ul>
-                    <li><a href="#3_3_1">Kryterium sukcesu 3.3.1 Identyfikacja błędu (Poziom A)</a></li>
-                    <li><a href="#3_3_2">Kryterium sukcesu 3.3.2 Etykiety lub instrukcje (Poziom A)</a></li>
-                    <li><a href="#3_3_3">Kryterium sukcesu 3.3.3 Sugestie korekty błędów (Poziom AA)</a></li>
-                    <li><a href="#3_3_4">Kryterium sukcesu 3.3.4 Zapobieganie błędom (prawnym, finansowym, w danych) (Poziom AA)</a></li>
-                    <li><a href="#3_3_5">Kryterium sukcesu 3.3.5 Pomoc (Poziom AAA)</a></li>
-                    <li><a href="#3_3_6">Kryterium sukcesu 3.3.6 Zapobieganie błędom (wszystkim) (Poziom AAA)</a></li>
-                </ul>
-            </div>
-            <div>
+            <section>
+                <p>
+                    Pomagaj użytkownikom unikać błędów i je korygować.
+                </p>
+                <div id="table-of-content">
+                    <h2>Spis treści</h2>
+                    <ul>
+                        <li><a href="#3_3_1">Kryterium sukcesu 3.3.1 Identyfikacja błędu (Poziom A)</a></li>
+                        <li><a href="#3_3_2">Kryterium sukcesu 3.3.2 Etykiety lub instrukcje (Poziom A)</a></li>
+                        <li><a href="#3_3_3">Kryterium sukcesu 3.3.3 Sugestie korekty błędów (Poziom AA)</a></li>
+                        <li><a href="#3_3_4">Kryterium sukcesu 3.3.4 Zapobieganie błędom (prawnym, finansowym, w danych) (Poziom AA)</a></li>
+                        <li><a href="#3_3_5">Kryterium sukcesu 3.3.5 Pomoc (Poziom AAA)</a></li>
+                        <li><a href="#3_3_6">Kryterium sukcesu 3.3.6 Zapobieganie błędom (wszystkim) (Poziom AAA)</a></li>
+                    </ul>
+                </div>
+            </section>
+            <section>
                 <h3 id="3_3_1">Kryterium sukcesu 3.3.1 Identyfikacja błędu (Poziom A)</h3>
                 <p class="list-glue">
                     Jeśli zostanie wykryty błąd we wprowadzanych danych (niewypełnione lub błędne dane):
@@ -55,8 +57,8 @@
                         <label>*Nazwisko<input type="text" required></label><br/>
                         <input type="submit" value="Prześlij"/>
                     </form>
-            </div>
-            <div>
+            </section>
+            <section>
                 <h3 id="3_3_2">Kryterium sukcesu 3.3.2 Etykiety lub instrukcje (Poziom A)</h3>
                 <p>
                     Do pól formularzy dołącz etykiety lub instrukcje.
@@ -86,8 +88,8 @@
                     <label>*Email<input type="email"></label><br/>
                     <input type="submit" value="Prześlij"/>
                 </form>
-            </div>
-            <div>
+            </section>
+            <section>
                 <h3 id="3_3_3">Kryterium sukcesu 3.3.3 Sugestie korekty błędów (Poziom AA)</h3>
                 <p>
                     Jeśli na stronie zostanie automatycznie wykryty błąd we wprowadzanych danych, użytkownik powinien otrzymać sugestię poprawy błędu.
@@ -114,8 +116,8 @@
                     Może dojść do sytuacji, kiedy poprawia dane do skutku lub ostatecznie rezygnuje z wypełniania.
                     Kiedy pokażesz sugestie poprawy błędów, użytkownik będzie mógł zrozumieć cel pola i poprawnie go wypełnić.
                 </p>
-            </div>
-            <div>
+            </section>
+            <section>
                 <h3 id="3_3_4">Kryterium sukcesu 3.3.4 Zapobieganie błędom (prawnym, finansowym, w danych) (Poziom AA)</h3>
                 <p class="list-glue">
                     Strony mogą powodować zobowiązania prawne lub na których użytkownik:
@@ -140,8 +142,8 @@
                 <p>
                     Za przykład weźmy transakcję w banku. Dzięki zabezpieczeniom użytkownik może poprawić informacje podczas wykonywania transakcji lub z niej zrezygnować.
                 </p>
-            </div>
-            <div>
+            </section>
+            <section>
                 <h3 id="3_3_5">Kryterium sukcesu 3.3.5 Pomoc (Poziom AAA)</h3>
                 <p>
                     Zapewnij użytkownikowi pomoc kontekstową, która pomaga w wypełnianiu kolejnych pól formularzy.<br/>
@@ -160,8 +162,8 @@
                         <input id="client-num" type="number"/>
                         <span style="color: blue; font-weight: bold; position: relative; cursor: pointer;">Gdzie go znajdę?</span>
                     </div>
-            </div>
-            <div>
+            </section>
+            <section>
                 <h3 id="3_3_6">Kryterium sukcesu 3.3.6 Zapobieganie błędom (wszystkim) (Poziom AAA)</h3>
                 <p>
                     Kryterium jest rozszerzeniem <a href="#3_3_4">Kryterium sukcesu 3.3.4 Zapobieganie błędom (prawnym, finansowym, w danych) (Poziom AA)</a>, które
@@ -170,8 +172,8 @@
                 <p>
                     To kryterium ma zapewnić, że podczas wypełniania <b>każdego</b> formularza można sprawdzić, modyfikować i wycofać dane.
                 </p>
-            </div>
-        </div>
+            </section>
+        </article>
     </main>
     {% include 'footer.html.twig' %}
 {% endblock %}

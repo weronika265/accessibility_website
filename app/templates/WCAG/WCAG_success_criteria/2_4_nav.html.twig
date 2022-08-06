@@ -11,27 +11,29 @@
     {% include 'header.html.twig' %}
     {% include 'sidebar.html.twig' %}
     <main id="main" class="page reposition content-cut">
-        <div>
+        <article>
             <h1>Wytyczna 2.4 Możliwość nawigacji</h1>
-            <p>
-                Zapewnij użytkownikowi narzędzia pomagające w nawigacji, znalezieniu treści i określeniu, gdzie się aktualnie znajduje.
-            </p>
-            <div id="table-of-content">
-                <h2>Spis treści</h2>
-                <ul>
-                    <li><a href="#2_4_1">Kryterium sukcesu 2.4.1 Możliwość pominięcia bloków (Poziom A)</a></li>
-                    <li><a href="#2_4_2">Kryterium sukcesu 2.4.2 Tytuły stron (Poziom A)</a></li>
-                    <li><a href="#2_4_3">Kryterium sukcesu 2.4.3 Kolejność fokusu (Poziom A)</a></li>
-                    <li><a href="#2_4_4">Kryterium sukcesu 2.4.4 Cel łącza (w kontekście) (Poziom A)</a></li>
-                    <li><a href="#2_4_5">Kryterium sukcesu 2.4.5 Wiele dróg (Poziom AA)</a></li>
-                    <li><a href="#2_4_6">Kryterium sukcesu 2.4.6 Nagłówki i etykiety (Poziom AA)</a></li>
-                    <li><a href="#2_4_7">Kryterium sukcesu 2.4.7 Widoczny fokus (Poziom AA)</a></li>
-                    <li><a href="#2_4_8">Kryterium sukcesu 2.4.8 Lokalizacja (Poziom AAA)</a></li>
-                    <li><a href="#2_4_9">Kryterium sukcesu 2.4.9 Cel łącza (z samego łącza) (Poziom AAA)</a></li>
-                    <li><a href="#2_4_10">Kryterium sukcesu 2.4.10 Nagłówki sekcji (Poziom AAA)</a></li>
-                </ul>
-            </div>
-            <div>
+            <section>
+                <p>
+                    Zapewnij użytkownikowi narzędzia pomagające w nawigacji, znalezieniu treści i określeniu, gdzie się aktualnie znajduje.
+                </p>
+                <div id="table-of-content">
+                    <h2>Spis treści</h2>
+                    <ul>
+                        <li><a href="#2_4_1">Kryterium sukcesu 2.4.1 Możliwość pominięcia bloków (Poziom A)</a></li>
+                        <li><a href="#2_4_2">Kryterium sukcesu 2.4.2 Tytuły stron (Poziom A)</a></li>
+                        <li><a href="#2_4_3">Kryterium sukcesu 2.4.3 Kolejność fokusu (Poziom A)</a></li>
+                        <li><a href="#2_4_4">Kryterium sukcesu 2.4.4 Cel łącza (w kontekście) (Poziom A)</a></li>
+                        <li><a href="#2_4_5">Kryterium sukcesu 2.4.5 Wiele dróg (Poziom AA)</a></li>
+                        <li><a href="#2_4_6">Kryterium sukcesu 2.4.6 Nagłówki i etykiety (Poziom AA)</a></li>
+                        <li><a href="#2_4_7">Kryterium sukcesu 2.4.7 Widoczny fokus (Poziom AA)</a></li>
+                        <li><a href="#2_4_8">Kryterium sukcesu 2.4.8 Lokalizacja (Poziom AAA)</a></li>
+                        <li><a href="#2_4_9">Kryterium sukcesu 2.4.9 Cel łącza (z samego łącza) (Poziom AAA)</a></li>
+                        <li><a href="#2_4_10">Kryterium sukcesu 2.4.10 Nagłówki sekcji (Poziom AAA)</a></li>
+                    </ul>
+                </div>
+            </section>
+            <section>
                 <h3 id="2_4_1">Kryterium sukcesu 2.4.1 Możliwość pominięcia bloków (Poziom A)</h3>
                 <p>
                     Kiedy treści na podstronach powtarzają się, pozwól użytkownikowi je pominąć.
@@ -68,8 +70,8 @@
                         <li>Wciśnij kombinację klawiszy 'Shift + 'Tab',</li>
                         <li>Po otrzymaniu fokusu, na widocznym linku wciśnij klawisz 'Enter'.</li>
                     </ol>
-            </div>
-            <div>
+            </section>
+            <section>
                 <h3 id="2_4_2">Kryterium sukcesu 2.4.2 Tytuły stron (Poziom A)</h3>
                 <p class="list-glue">
                     Każda podstrona ma zawierać niepowtarzający się tytuł. Tytuł opisuje i streszcza jej:
@@ -92,8 +94,8 @@
                 <p>
                     Technologie asystujące czytają użytkownikom tytuły strony. Takie osoby mogą zdecydować, czy otwarta strona zawiera szukaną treść.
                 </p>
-            </div>
-            <div>
+            </section>
+            <section>
                 <h3 id="2_4_3">Kryterium sukcesu 2.4.3 Kolejność fokusu (Poziom A)</h3>
                 <p class="list-glue">
                     Kiedy:
@@ -125,8 +127,8 @@
                 <p>
                     <a href="{{ url('_2_4_3_example') }}" style="color: blue;">Przykład</a><br/>
                 </p>
-            </div>
-            <div>
+            </section>
+            <section>
                 <h3 id="2_4_4">Kryterium sukcesu 2.4.4 Cel łącza (w kontekście) (Poziom A)</h3>
                 <p class="list-glue">
                     Cel linku ma wynikać z jego:
@@ -161,8 +163,8 @@
                     W jednym z kryteriów dla wytycznej <i>2.3 Ataki padaczki</i>, użytkownik powinien mieć możliwość
                     <a style="color: blue;" href="{{ url('epilepsy_index') }}#2_3_3">wyłączenia animacji dla elementów interaktywnych.</a>
                 </p>
-            </div>
-            <div>
+            </section>
+            <section>
                 <h3 id="2_4_5">Kryterium sukcesu 2.4.5 Wiele dróg (Poziom AA)</h3>
                 <p>
                     Istnieje wiele dróg, aby dostać się do konkretnej podstrony w serwisie internetowym lub aplikacji.<br/>
@@ -186,8 +188,8 @@
                     <li>podsumowanie zamówienia w sklepie internetowym;</li>
                     <li>potwierdzenie transakcji w aplikacji banku.</li>
                 </ul>
-            </div>
-            <div>
+            </section>
+            <section>
                 <h3 id="2_4_6">Kryterium sukcesu 2.4.6 Nagłówki i etykiety (Poziom AA)</h3>
                 <p>
                     Nagłówki i etykiety na stronie mają opisywać wyświetlaną zawartość. Najlepiej użyć pojedynczych słów lub krótkich opisów.
@@ -214,8 +216,8 @@
                     Dzięki opisom użytkownik rozumie, co zawiera strona i jak została rozmieszczona treść.<br/>
                     Jasne oznaczenie treści pozwala na jej łatwiejsze odnalezienie.
                 </p>
-            </div>
-            <div>
+            </section>
+            <section>
                 <h3 id="2_4_7">Kryterium sukcesu 2.4.7 Widoczny fokus (Poziom AA)</h3>
                 <p>
                     Kiedy użytkownik korzysta z klawiatury do nawigacji po stronie, fokus klawiatury musi być zawsze widoczny.
@@ -227,8 +229,8 @@
                     Fokus umożliwia także zrozumienie roli elementów, np. podświetlone pole formularza informuje, że można wprowadzić tekst.
                 </p>
                 <img src="{{ asset('img/2_4_7.jpg') }}">
-            </div>
-            <div>
+            </section>
+            <section>
                 <h3 id="2_4_8">Kryterium sukcesu 2.4.8 Lokalizacja (Poziom AAA)</h3>
                 <p class="list-glue">
                     Pokaż użytkownikowi, gdzie znajduje się na stronie. Dzięki informacji o obecnym położeniu:
@@ -253,8 +255,8 @@
                     Standardem jest także możliwość powrotu do strony głównej po kliknięciu logo na górze strony.
 {#                    TODO: dodać przykład? #}
                 </p>
-            </div>
-            <div>
+            </section>
+            <section>
                 <h3 id="2_4_9">Kryterium sukcesu 2.4.9 Cel łącza (z samego łącza) (Poziom AAA)</h3>
                 <p>
                     Cel łącza musi być zrozumiały z jego opisu, a nie z kontekstu, w jakim się znajduje.
@@ -278,8 +280,8 @@
                     <a style="color: blue;" href="{{ url('epilepsy_index') }}#2_3_3">Kryterium sukcesu 2.3.3 Animacja po interakcji</a>
                     pozwala użytkownikowi na wyłączenie animacji elementów interaktywnych.
                 </p>
-            </div>
-            <div>
+            </section>
+            <section>
                 <h3 id="2_4_10">Kryterium sukcesu 2.4.10 Nagłówki sekcji (Poziom AAA)</h3>
                 <p>
                     Używaj nagłówków do organizowania treści i oznaczania sekcji* na stronie.
@@ -315,8 +317,8 @@
                         &lt;/section&gt;
                     </code>
                 </pre>
-            </div>
-        </div>
+            </section>
+        </article>
     </main>
     {% include 'footer.html.twig' %}
 {% endblock %}

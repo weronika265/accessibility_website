@@ -12,25 +12,27 @@
     {% include 'sidebar.html.twig' %}
 
     <main id="main" class="page reposition content-cut">
-        <div>
+        <article>
             <h1>Wytyczna 1.1 Alternatywa tekstowa</h1>
-            <p class="list-glue">
-                Zapewnij tekstowe zamienniki wszystkich treści nietekstowych, aby można je było zamienić na inne formy, np.:
-            </p>
-                <ul>
-                    <li>powiększony druk,</li>
-                    <li>Braille,</li>
-                    <li>mowa syntetyczna,</li>
-                    <li>symbole,</li>
-                    <li>prostszy język.</li>
-                </ul>
-            <div id="table-of-content">
-                <h2>Spis treści</h2>
-                <ul>
-                    <li><a href="#1_1_1">Kryterium sukcesu 1.1.1 Treść nietekstowa (Poziom A)</a></li>
-                </ul>
-            </div>
-            <div>
+            <section>
+                <p class="list-glue">
+                    Zapewnij tekstowe zamienniki wszystkich treści nietekstowych, aby można je było zamienić na inne formy, np.:
+                </p>
+                    <ul>
+                        <li>powiększony druk,</li>
+                        <li>Braille,</li>
+                        <li>mowa syntetyczna,</li>
+                        <li>symbole,</li>
+                        <li>prostszy język.</li>
+                    </ul>
+                <div id="table-of-content">
+                    <h2>Spis treści</h2>
+                    <ul>
+                        <li><a href="#1_1_1">Kryterium sukcesu 1.1.1 Treść nietekstowa (Poziom A)</a></li>
+                    </ul>
+                </div>
+            </section>
+            <section>
                 <h3 id="1_1_1">Kryterium sukcesu 1.1.1 Treść nietekstowa (Poziom A)</h3>
                 <p class="list-glue">
                     Do elementów, które nie są tekstem, musisz dodać tekstową alternatywę.
@@ -62,10 +64,11 @@
                             <img src="" alt="Kciuk uniesiony w górę." style="max-width: 250px; margin-bottom: 2em;"/><br/>
                     </div>
                 </div>
-        </div>
+            </section>
+        </article>
         <!-- Każdy li, np. 4.1 włącza stronę z table of content z "głębszymi" kryteriami -->
         <!-- Dodać komentarze z możliwością wyboru kryterium? + pole w tabeli w bazie?  -->
-        <div>
+        <article>
             <h2>Komentarze</h2>
             {% if pagination is defined and pagination.items|length %}
                 <div class="indent" style="flex-wrap: wrap;">
@@ -113,7 +116,7 @@
                 </div>
                 {{ form_end(form) }}
             {% endif %}
-        </div>
+        </article>
     </main>
     {% include 'footer.html.twig' %}
 {% endblock %}

@@ -11,21 +11,23 @@
     {% include 'header.html.twig' %}
     {% include 'sidebar.html.twig' %}
     <main id="main" class="page reposition content-cut">
-        <div>
+        <article>
             <h1>Wytyczna 2.2 Wystarczający czas</h1>
-            <p>Zapewnij użytkownikom wystarczająco dużo czasu na przeczytanie i skorzystanie z treści.</p>
-            <div id="table-of-content">
-                <h2>Spis treści</h2>
-                <ul>
-                    <li><a href="#2_2_1">Kryterium sukcesu 2.2.1 Dostosowanie czasu (Poziom A)</a></li>
-                    <li><a href="#2_2_2">Kryterium sukcesu 2.2.2 Pauza, zatrzymanie, ukrycie (Poziom A)</a></li>
-                    <li><a href="#2_2_3">Kryterium sukcesu 2.2.3 Bez ograniczeń czasowych (Poziom AAA)</a></li>
-                    <li><a href="#2_2_4">Kryterium sukcesu 2.2.4 Przerywanie (Poziom AAA)</a></li>
-                    <li><a href="#2_2_5">Kryterium sukcesu 2.2.5 Ponowne potwierdzenie autentyczności (Poziom AAA)</a></li>
-                    <li><a href="#2_2_6">Kryterium sukcesu 2.2.6 Ostrzeżenie o limicie czasu (Poziom AAA)</a></li>
-                </ul>
-            </div>
-            <div>
+            <section>
+                <p>Zapewnij użytkownikom wystarczająco dużo czasu na przeczytanie i skorzystanie z treści.</p>
+                <div id="table-of-content">
+                    <h2>Spis treści</h2>
+                    <ul>
+                        <li><a href="#2_2_1">Kryterium sukcesu 2.2.1 Dostosowanie czasu (Poziom A)</a></li>
+                        <li><a href="#2_2_2">Kryterium sukcesu 2.2.2 Pauza, zatrzymanie, ukrycie (Poziom A)</a></li>
+                        <li><a href="#2_2_3">Kryterium sukcesu 2.2.3 Bez ograniczeń czasowych (Poziom AAA)</a></li>
+                        <li><a href="#2_2_4">Kryterium sukcesu 2.2.4 Przerywanie (Poziom AAA)</a></li>
+                        <li><a href="#2_2_5">Kryterium sukcesu 2.2.5 Ponowne potwierdzenie autentyczności (Poziom AAA)</a></li>
+                        <li><a href="#2_2_6">Kryterium sukcesu 2.2.6 Ostrzeżenie o limicie czasu (Poziom AAA)</a></li>
+                    </ul>
+                </div>
+            </section>
+            <section>
                 <h3 id="2_2_1">Kryterium sukcesu 2.2.1 Dostosowanie czasu (Poziom A)</h3>
                 <p class="list-glue">
                     Część treści na stronie może mieć ograniczenia czasowe, na przykład:
@@ -55,8 +57,8 @@
                     <img src="{{ asset('img/2_2_1_stop.jpg') }}" style="max-width: 300px; width: 400px; height: auto;" /><br/>
                     <img src="{{ asset('img/2_2_1_extend.jpg') }}" style="max-width: 500px; width: 500px; height: auto;" />
                 </p>
-            </div>
-            <div>
+            </section>
+            <section>
                 <h3 id="2_2_2">Kryterium sukcesu 2.2.2 Pauza, zatrzymanie, ukrycie (Poziom A)</h3>
 {#                TODO: sprawdzić, czy wszystko ok #}
                 <p class="list-glue">
@@ -102,8 +104,8 @@
                         <li>trudność w skupieniu się na treści,</li>
                         <li>za mało czasu na przeczytanie treści.</li>
                     </ul>
-            </div>
-            <div>
+            </section>
+            <section>
                 <h3 id="2_2_3">Kryterium sukcesu 2.2.3 Bez ograniczeń czasowych (Poziom AAA)</h3>
 {#                TODO: ok? #}
                 <p>
@@ -113,8 +115,8 @@
                     Kryterium wymusza, aby cała zawartość na stronie nie była ograniczana czasowo. Wyjątkiem są wydarzeń na żywo.
                 </p>
                 <img src="{{ asset('img/2_2_3.jpg') }}" style="width: 220px; height: auto;" />
-            </div>
-            <div>
+            </section>
+            <section>
                 <h3 id="2_2_4">Kryterium sukcesu 2.2.4 Przerywanie (Poziom AAA)</h3>
                 <p class="list-glue">
                     Dodatkowe powiadomienia i informacje mogą zostać odroczone lub wyłączone. Dotyczy to treści, które nie ogłaszają sytuacji wyjątkowych.<br/>
@@ -132,8 +134,8 @@
                     </video>
                     Jest to bardzo istotne dla osób z deficytem uwagi. Tacy użytkownicy rozpraszają się łatwiej, kiedy na ekranie niespodziewanie pojawia się nowa treść.
                 </p>
-            </div>
-            <div>
+            </section>
+            <section>
                 <h3 id="2_2_5">Kryterium sukcesu 2.2.5 Ponowne potwierdzenie autentyczności (Poziom AAA)</h3>
                 <p>
                     Kiedy sesja autoryzowana przez użytkownika kończy się lub zakończyła, użytkownik może ją kontynuować bez utraty danych.
@@ -162,8 +164,8 @@
                     Jedyne, co powinien zrobić, to ponownie potwierdzić swoją tożsamość.<br/>
                     <img src="{{ asset('img/2_2_5.jpg') }}" style="width: 400px; height: auto;"/>
                 </p>
-            </div>
-            <div>
+            </section>
+            <section>
                 <h3 id="2_2_6">Kryterium sukcesu 2.2.6 Ostrzeżenie o limicie czasu (Poziom AAA)</h3>
                 <p>
                     Bezczynność użytkownika może spowodować utratę danych. W takim przypadku użytkownik musi być wcześniej poinformowany o czasie, po którym dane zostaną usunięte.
@@ -180,8 +182,8 @@
                     Najlepiej zostawić dane wypełnione przez użytkownika przez okres około 20 godzin od ostatniej aktywności użytkownika.<br/>
                     Jeśli nie jest to możliwe, musisz powiadomić użytkownika o czasie, po którym dane zostaną usunięte.
                 </p>
-            </div>
-        </div>
+            </section>
+        </article>
     </main>
     {% include 'footer.html.twig' %}
 

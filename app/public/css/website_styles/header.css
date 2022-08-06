@@ -8,7 +8,6 @@
     transform: translateY(0%);
 }
 ul, a,
-#register,
 .button-style,
 input[type=submit] {
     font-size: 1.2rem;
@@ -16,18 +15,19 @@ input[type=submit] {
 }
 #user-actions {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-around;
     background-color: #1e7dcc;
     padding: 1em 13em;
 }
-#user-actions ul #login {
+#user-actions ul #admin_panel, #user-actions ul #acc, #user-actions ul #register, #user-actions ul #hamb {
     background-color: transparent;
 }
 #user-actions li, nav li {
     display: inline-block;
 }
-#register,
+#login,
+#logout,
+#hamb,
 .button-style,
 input[type=submit] {
     text-align: center;
@@ -36,20 +36,114 @@ input[type=submit] {
     border-radius: 90px;
     padding: 0.8em 3em;
 }
-nav {
+#user-actions ul #hamb {
+    display: none;
+    cursor: pointer;
+}
+button#close-hamb {
+    display: none;
+}
+nav#desktop {
     display: flex;
-    flex-wrap: wrap;
     align-content: center;
     justify-content: space-around;
     background-color: #f5f5f5;
 }
-nav li {
+nav#desktop li {
     width: 7em;
     margin: 0.8em 2em;
+    box-shadow: 2px 2px 10px #b0b0b0;
+}
+#mobile {
+   display: none;
 }
 #logo {
     display: inline;
     width: 180px;
     height: auto;
     padding-top: 0.5em;
+}
+/* --- header (responsive) --- */
+/* TODO: spróbować zmniejszyć zmianę przez modyfikację odstępów i wielkości zdjęcia */
+@media screen and (max-width: 1107px) {
+    #desktop{
+        display: none;
+    }
+    #mobile {
+        display: block;
+        position: relative;
+        width: 100%;
+        margin-top: 30px;
+    }
+    #mobile ul {
+        margin-top: 3.2em;
+    }
+    #mobile li {
+        display: block;
+        text-decoration: none;
+        padding: 0.4em;
+        transition: 0.5s;
+    }
+    #mobile li a {
+        color: white;
+    }
+    #hamb {
+        font-size: 1.1em;
+    }
+    #hamb, #close-hamb {
+        background-color: transparent;
+        border: none;
+    }
+    /* TODO: poprawić, żeby lepiej to wyglądało? */
+    button#close-hamb {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 1.6em;
+        color: white;
+        cursor: pointer;
+        margin-top: 1em;
+        margin-right: 5em;
+    }
+    .overlay {
+        z-index: 1;
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 0;
+        background-color: #0957a7;
+        overflow-x: hidden;
+        transition: 0.5s;
+    }
+    #user-actions {
+        align-items: center;
+        padding: 1em 0;
+    }
+    #user-actions ul {
+        padding: 0;
+    }
+    nav#desktop, #user-actions ul #register, #user-actions ul #logout {
+        display: none;
+    }
+    #user-actions ul #login, #user-actions ul #admin_panel, #user-actions ul #acc, #user-actions ul #hamb {
+        background-color: transparent;
+        padding: 0;
+        /* TODO: usunąć box-shadow z inline style i dodać do pliku .css */
+        /*box-shadow: transparent;*/
+    }
+    #user-actions ul #login, #user-actions ul #admin_panel, #user-actions ul #acc {
+        margin-right: 2em;
+    }
+    #user-actions ul #hamb {
+        z-index: 999;
+        display: inline-block;
+    }
+    /* TODO: usunąć czy zostawić? */
+    /*header {*/
+    /*    top: 0;*/
+    /*    position: sticky;*/
+    /*}*/
+/*    TODO: najlepiej mniejszy nagłówek zrobić */
 }
