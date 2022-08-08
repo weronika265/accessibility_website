@@ -17,24 +17,162 @@
         flex-direction: column;
     }
 }
-.list-arrow {
-    font-size: 20px;
-    margin-right: 0.3em;
+.compare-mm {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 5em;
 }
-h3 {
-    margin-top: 2em;
+@media screen and (max-width: 920px) {
+    .compare-mm {
+        flex-direction: column;
+        align-items: flex-start;
+        row-gap: 1em;
+    }
 }
+/* TODO: poprawić na responsive */
 video {
-    max-width: 320px;
-    height: auto;
+    max-width: 400px;
+}
+pre {
+    max-width: 450vw;
+    margin-top: 0;
+}
+@media screen and (max-width: 574px) {
+    pre {
+        max-width: 445px;
+    }
+}
+code {
+    font-size: 0.9rem;
+    display: block;
+    overflow: auto;
+    border: 1px solid #ccc;
+}
+p a {
+    text-decoration: underline;
+}
+.img-resp {
+    display: block;
+    max-width: 70%;
+    margin: 0 auto;
+}
+@media screen and (max-width: 887px) {
+    .img-resp {
+        max-width: 90%;
+    }
+}
+b.extra {
+    font-size: 1.3rem;
 }
 #table-of-content {
     border-radius: 12px;
     background-color: #62adec;
-    /*background-color: #4f9dde;*/
-    padding: 0.5em 2em 2em;
+    padding: 0.5em 2em 1.5em;
     box-shadow: 2px 2px 10px #b0b0b0;
 }
+#table-of-content li {
+    padding-bottom: 0.5em;
+}
+.list-arrow {
+    margin-right: 0.5em;
+}
+.spacing {
+    margin-bottom: 2.5em;
+}
+/* TODO: poprawić */
+.inside {
+    position: relative;
+}
+.txt-inside {
+    position: absolute;
+    top: 30%;
+    left: 23%;
+    font-size: 2.7em;
+    font-family: Arial, serif;
+}
+#hover-esc {
+    position: relative;
+    display: inline-block;
+}
+#hover-esc #tooltip {
+    position: absolute;
+    visibility: hidden;
+    width: 5em;
+    padding: 1em;
+    text-align: center;
+    z-index: 1;
+    bottom: 10%;
+    left: 100%;
+    opacity: 0;
+    background-color: white;
+    border: 2px solid black;
+}
+#hover-esc:hover #tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+#rect-anim {
+    position: relative;
+    width: 10em;
+    height: 6em;
+    background-color: #b93b3b;
+    border: 2px solid black;
+    animation: move 5s infinite;
+}
+@keyframes move {
+    0% {
+        left: 0;
+    }
+    50% {
+        left: calc(50% - 100px);
+    }
+    100% {
+        left: 0;
+    }
+}
+#inter-anim {
+    position: relative;
+    width: 6em;
+    height: 6em;
+    background-color: #30afa0;
+    border: 2px solid black;
+    animation: none;
+    /*animation: inter 5s;*/
+    cursor: pointer;
+}
+@keyframes inter {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+.tooltip .tooltip-content {
+    visibility: hidden;
+    width: 180px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    /*padding: 5px 0;*/
+    position: absolute;
+    left: -50%;
+    top: 100%;
+    z-index: 1;
+}
+.tooltip:hover .tooltip-content {
+    visibility: visible;
+}
+/*ol > li::marker {*/
+/*    font-weight: bold;*/
+/*}*/
 
 
 /* --- Checklista WCAG 2.1 --- */

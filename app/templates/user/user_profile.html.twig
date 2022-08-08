@@ -11,7 +11,7 @@
             <h2>Opinie o serwisie</h2>
             {% if pagination is defined and pagination.items|length %}
 {#                {% if is_granted('IS_AUTHENTICATED_FULLY') and is_granted('ROLE_USER') %}#}
-                <div class="indent" style="flex-wrap: wrap;">
+                <div style="flex-wrap: wrap;">
                     {% for opinion in pagination.items %}
                         {% if not opinion.is_accepted %}
                             <section id="opinions" class="opinion" style="background-color: lightgray; margin-bottom: 1.2em;">

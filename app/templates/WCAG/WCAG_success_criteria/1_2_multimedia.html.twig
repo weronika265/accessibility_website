@@ -18,53 +18,56 @@
                 <div id="table-of-content">
                     <h2>Spis treści</h2>
                     <ul>
-                        <li><a href="#1_2_1">Kryterium sukcesu 1.2.1 Tylko audio lub tylko wideo (nagranie) (poziom A)</a></li>
-                        <li><a href="#1_2_2">Kryterium sukcesu 1.2.2 Napisy rozszerzone (nagranie) (poziom A)</a></li>
-                        <li><a href="#1_2_3">Kryterium sukcesu 1.2.3 Audiodeskrypcja lub alternatywa tekstowa dla mediów (nagranie) (poziom A)</a></li>
-                        <li><a href="#1_2_4">Kryterium sukcesu 1.2.4 Napisy rozszerzone (na żywo) (poziom AA)</a></li>
-                        <li><a href="#1_2_5">Kryterium sukcesu 1.2.5 Audiodeskrypcja (nagranie) (poziom AA)</a></li>
-                        <li><a href="#1_2_6">Kryterium sukcesu 1.2.6 Język migowy (nagranie) (poziom AAA)</a></li>
-                        <li><a href="#1_2_7">Kryterium sukcesu 1.2.7 Rozszerzona audiodeskrypcja (nagranie) (poziom AAA)</a></li>
-                        <li><a href="#1_2_8">Kryterium sukcesu 1.2.8 Alternatywa dla mediów (nagranie) (poziom AAA)</a></li>
-                        <li><a href="#1_2_9">Kryterium sukcesu 1.2.9 Tylko audio (na żywo) (poziom AAA)</a></li>
+                        <li><a href="#1_2_1">Kryterium sukcesu 1.2.1 Tylko audio lub tylko wideo (nagranie) – Poziom A</a></li>
+                        <li><a href="#1_2_2">Kryterium sukcesu 1.2.2 Napisy rozszerzone (nagranie) – Poziom A</a></li>
+                        <li><a href="#1_2_3">Kryterium sukcesu 1.2.3 Audiodeskrypcja lub alternatywa tekstowa dla mediów (nagranie) – Poziom A</a></li>
+                        <li><a href="#1_2_4">Kryterium sukcesu 1.2.4 Napisy rozszerzone (na żywo) – Poziom AA</a></li>
+                        <li><a href="#1_2_5">Kryterium sukcesu 1.2.5 Audiodeskrypcja (nagranie) – Poziom AA</a></li>
+                        <li><a href="#1_2_6">Kryterium sukcesu 1.2.6 Język migowy (nagranie) – Poziom AAA</a></li>
+                        <li><a href="#1_2_7">Kryterium sukcesu 1.2.7 Rozszerzona audiodeskrypcja (nagranie) – Poziom AAA</a></li>
+                        <li><a href="#1_2_8">Kryterium sukcesu 1.2.8 Alternatywa dla mediów (nagranie) – Poziom AAA</a></li>
+                        <li><a href="#1_2_9">Kryterium sukcesu 1.2.9 Tylko audio (na żywo) – Poziom AAA</a></li>
                     </ul>
                 </div>
             </section>
             <section>
-                (wszędzie – nie trzeba się stosować, jeśli ta forma jest alternatywą do tekstu na stronie i jest to widocznie oznaczone?)
-                <h3 id="1_2_1">Kryterium sukcesu 1.2.1 Tylko audio lub tylko wideo (nagranie) (poziom A)</h3>
+                <h3 id="1_2_1">Kryterium sukcesu 1.2.1 Tylko audio lub tylko wideo (nagranie) – Poziom A</h3>
                 <p>
                     Do mediów tylko z dźwiękiem lub tylko obrazem musisz dołączyć alternatywę. Alternatywny sposób prezentacji ma przedstawiać tę samą treść.
                 </p>
-                <p>
-                    <i class="fa fa-arrow-right list-arrow"></i>W przypadku nagrania tylko wideo są to napisy lub audiodeskrypcja.<br/><br/>
-                    Napisy:
+                <p style="margin-bottom: 0;">
+                    <i class="fa fa-arrow-right list-arrow"></i><b>W przypadku nagrania tylko wideo są to napisy lub audiodeskrypcja.</b>
                 </p>
-                    <video width="320" height="240" controls>
-                        <source src="{{ asset('img/1_2_1_video.mp4') }}" type="video/mp4" />
-                        <track src="{{ asset('img/1_2_1_video_subtitles.vtt') }}" kind="subtitles" srclang="pl" label="Polski" />
-                        Twoja przeglądarka nie wspiera elementów wideo.
-                    </video>
+                    <div class="compare-mm spacing" style="margin-top: 0;">
+                        <div>
+                            <p>Napisy:</p>
+                            <video controls>
+                                <source src="{{ asset('img/1_2_1_video.mp4') }}" type="video/mp4" />
+                                <track src="{{ asset('img/1_2_1_video_subtitles.vtt') }}" kind="subtitles" srclang="pl" label="Polski" />
+                                Twoja przeglądarka nie wspiera elementów wideo.
+                            </video>
+                        </div>
+                        <div>
+                            <p>Audiodeskrypcja:</p>
+                            <audio controls>
+                                <source src="{{ asset('img/1_2_1_video_trans.mp3') }}" type="audio/mpeg" />
+                                Twoja przeglądarka nie wspiera elementów audio.
+                            </audio>
+                        </div>
+                    </div>
                 <p>
-                    Audiodeskrypcja:
-                </p>
-                    <audio controls>
-                        <source src="{{ asset('img/1_2_1_video_trans.mp3') }}" type="audio/mpeg" />
-                        Twoja przeglądarka nie wspiera elementów audio.
-                    </audio>
-                <p>
-                    <i class="fa fa-arrow-right list-arrow"></i>W przypadku nagrania tylko audio jest to alternatywa tekstowa.
+                    <i class="fa fa-arrow-right list-arrow"></i><b>W przypadku nagrania tylko audio jest to alternatywa tekstowa.</b>
                 </p>
                     <audio controls>
                         <source src="{{ asset('img/1_2_1_audio.mp3') }}" type="audio/mpeg" />
                         Twoja przeglądarka nie wspiera elementów audio.
                     </audio>
-                <p>
-                    <span style="background-color: lightgray;">Jest to próbne nagranie audio. Nie każda osoba może je usłyszeć. Przez to dołączono tekst, który przedstawia nagranie w formie pisemnej.</span>
+                <p style="margin-top: 0.2em;">
+                    <span><i>Jest to próbne nagranie audio. Nie każda osoba może je usłyszeć. Przez to dołączono tekst, który przedstawia nagranie w formie pisemnej.</i></span>
                 </p>
             </section>
             <section>
-                <h3 id="1_2_2">Kryterium sukcesu 1.2.2 Napisy rozszerzone (nagranie) (poziom A)</h3>
+                <h3 id="1_2_2">Kryterium sukcesu 1.2.2 Napisy rozszerzone (nagranie) – Poziom A</h3>
                 <p class="list-glue">
                     Multimedia, które zawierają i obraz, i dźwięk (media zsynchronizowane), muszą zawierać <strong>napisy rozszerzone</strong>.
                     Jest to tekst pokazywany równocześnie z obrazem. Opisuje on wszystkie treści dźwiękowe niezbędne do zrozumienia przekazu.
@@ -80,35 +83,42 @@
                 <p class="list-glue">
                     Istnieją dwa rodzaje napisów rozszerzonych:
                 </p>
-                    <ul class="compare">
-                        <li>
-                            Napisy zamknięte – CC (Closed Caption)<br/>
-                            Napisy, które da się wyłączyć w nagraniu:<br/>
-                            <video controls>
-                                <source src="{{ asset('img/1_2_2_CC.mp4') }}" type="video/mp4">
-                                <track src="{{ asset('img/1_2_2_video_subtitles.vtt') }}" kind="subtitles" srclang="pl" label="Polski" />
-                                Twoja przeglądarka nie wspiera elementów wideo.
-                            </video>
-                        </li>
-                        <li>
-                            Napisy otwarte – OC (Open Caption).<br/>
-                            Napisy, których nie da się wyłączyć w nagraniu:<br/>
-                            <video controls>
-                                <source src="{{ asset('img/1_2_2_OC.mp4') }}" type="video/mp4" />
-                                Twoja przeglądarka nie wspiera elementów wideo.
-                            </video>
-                        </li>
-                    </ul>
+                <div class="compare-mm spacing" style="margin-top: 0;">
+                    <div>
+                        <p>
+                            <i class="fa fa-arrow-right list-arrow"></i>
+                            <b>Napisy zamknięte</b> – CC (Closed Caption)<br/>
+                            Napisy, które da się wyłączyć w nagraniu:
+                        </p>
+                        <video controls>
+                            <source src="{{ asset('img/1_2_2_CC.mp4') }}" type="video/mp4">
+                            <track src="{{ asset('img/1_2_2_video_subtitles.vtt') }}" kind="subtitles" srclang="pl" label="Polski" />
+                            Twoja przeglądarka nie wspiera elementów wideo.
+                        </video>
+                    </div>
+                    <div>
+                        <p>
+                            <i class="fa fa-arrow-right list-arrow"></i>
+                            <b>Napisy otwarte</b> – OC (Open Caption).<br/>
+                            Napisy, których nie da się wyłączyć w nagraniu:
+                        </p>
+                        <video controls>
+                            <source src="{{ asset('img/1_2_2_OC.mp4') }}" type="video/mp4" />
+                            Twoja przeglądarka nie wspiera elementów wideo.
+                        </video>
+                    </div>
+                </div>
                 <p>
                     Napisy rozszerzone pozwalają osobom z problemami ze słuchem zapoznać się z treścią strony.
                     <!-- Dodać jako osobne info, komu to pomaga? -->
                 </p>
                 <p>
-                    <strong>WAŻNE! Napisy nie powinny zasłaniać ważnych elementów w nagraniu.</strong>
+                    <b class="extra">WAŻNE!</b><br/>
+                    Napisy nie powinny zasłaniać ważnych elementów w nagraniu.
                 </p>
             </section>
             <section>
-                <h3 id="1_2_3">Kryterium sukcesu 1.2.3 Audiodeskrypcja lub alternatywa tekstowa dla mediów (nagranie) (poziom A)</h3>
+                <h3 id="1_2_3">Kryterium sukcesu 1.2.3 Audiodeskrypcja lub alternatywa tekstowa dla mediów (nagranie) – Poziom A</h3>
                 <p class="list-glue">
                     W przypadku nagrań audio-wideo, dla części wideo musisz:
                 </p>
@@ -117,50 +127,54 @@
                     lub
                     <li>dołączyć audiodeskrypcję.</li>
                 </ol>
-                <p>
-                    a. Tekst dołączony do nagrania ma opisywać wszystko, co dzieje się na nagraniu – także dialogi.
-                    Użytkownik będzie mógł zapoznać się z całością pokazywanej treści, np. dowiedzieć się o mimice aktorów w filmie.
-                </p>
-                <video width="320" height="240" controls>
-                    <source src="{{ asset('img/1_2_3_alt_txt.mp4') }}" type="video/mp4" />
-                    Twoja przeglądarka nie wspiera elementów wideo.
-                </video>
-                <p class="list-glue">
-                    b. Audiodeskrypcja dołączona do nagrania ma opisywać elementy pozadialogowe, kiedy dialogi nie są słyszalne.
-                    Opis dźwiękowy opisuje np.:
-                </p>
-                    <ul>
-                        <li>wygląd otoczenia,</li>
-                        <li>zmiany w scenie,</li>
-                        <li>działania postaci,</li>
-                        <li>napisy widoczne na nagraniu.</li>
-                    </ul>
-                <video width="320" height="240" controls>
-                    <source src="{{ asset('img/1_2_3_adesc.mp4') }}" type="video/mp4" />
-                    Twoja przeglądarka nie wspiera elementów wideo.
-                </video>
+                <div class="spacing">
+                    <p>
+                        <b>Ad a.</b> Tekst dołączony do nagrania ma opisywać wszystko, co dzieje się na nagraniu – także dialogi.
+                        Użytkownik będzie mógł zapoznać się z całością pokazywanej treści, np. dowiedzieć się o mimice aktorów w filmie.
+                    </p>
+                    <video controls>
+                        <source src="{{ asset('img/1_2_3_alt_txt.mp4') }}" type="video/mp4" />
+                        Twoja przeglądarka nie wspiera elementów wideo.
+                    </video>
+                </div>
+                <div class="spacing">
+                    <p class="list-glue">
+                        <b>Ad b.</b> Audiodeskrypcja dołączona do nagrania ma opisywać elementy pozadialogowe, kiedy dialogi nie są słyszalne.
+                        Opis dźwiękowy opisuje np.:
+                    </p>
+                        <ul>
+                            <li>wygląd otoczenia,</li>
+                            <li>zmiany w scenie,</li>
+                            <li>działania postaci,</li>
+                            <li>napisy widoczne na nagraniu.</li>
+                        </ul>
+                    <video controls>
+                        <source src="{{ asset('img/1_2_3_adesc.mp4') }}" type="video/mp4" />
+                        Twoja przeglądarka nie wspiera elementów wideo.
+                    </video>
+                </div>
                 <p>
                     Taki sposób prezentacji wideo pozwala zapoznać się treścią nie tylko osobom z problemami ze słuchem.
                     Użytkownicy, którzy nie widzą dobrze lub z trudnością rozpoznają obrazy, też zyskają na tym ułatwieniu.
                 </p>
             </section>
             <section>
-                <h3 id="1_2_4">Kryterium sukcesu 1.2.4 Napisy rozszerzone (na żywo) (poziom AA)</h3>
+                <h3 id="1_2_4">Kryterium sukcesu 1.2.4 Napisy rozszerzone (na żywo) – Poziom AA</h3>
                 <p>
                     Jeśli nagranie audio-wideo jest nadawane na żywo, musi zawierać napisy rozszerzone.
                     Pozwoli to zapoznać się z treścią większej grupie osób.<br/>
-{#                    <img src="{{ asset('img/NiloferMerchant_2013-embed_live.jpg') }}" alt="" style="width: 576px; height: auto;" />#}
                 </p>
+                    <img src="{{ asset('img/NiloferMerchant_2013-embed_live.jpg') }}" alt="Transmisja na żywo z napisami rozszerzonymi" class="img-resp" />
             </section>
             <section>
-                <h3 id="1_2_5">Kryterium sukcesu 1.2.5 Audiodeskrypcja (nagranie) (poziom AA)</h3>
+                <h3 id="1_2_5">Kryterium sukcesu 1.2.5 Audiodeskrypcja (nagranie) – Poziom AA</h3>
                 <p>
                     We <strong>wszystkich</strong> nagraniach audio-wideo, część wideo musi zawierać audiodeskrypcję.
-                    Jest to rozszerzenie kryterium <a href="#1_2_3">1.2.3 Audiodeskrypcja lub alternatywa tekstowa dla mediów (nagranie).</a>
+                    Jest to rozszerzenie <a href="#1_2_3">Kryterium sukcesu 1.2.3 Audiodeskrypcja lub alternatywa tekstowa dla mediów (nagranie).</a>
                 </p>
             </section>
             <section>
-                <h3 id="1_2_6">Kryterium sukcesu 1.2.6 Język migowy (nagranie) (poziom AAA)</h3>
+                <h3 id="1_2_6">Kryterium sukcesu 1.2.6 Język migowy (nagranie) – Poziom AAA</h3>
                 <p>
                     Wszystkie multimedia, które zawierają audio i wideo, muszą być tłumaczone na język migowy.
                 </p>
@@ -168,10 +182,10 @@
                     Dla wielu osób, które nie słyszą od dziecka, język migowy jest językiem podstawowym oraz główną formą komunikacji.
                     Takie osoby mogą mieć problemy z rozumieniem tekstu pisanego. Multimedia tłumaczone na język migowy są dla nich dużym ułatwieniem.
                 </p>
-{#                <img src="{{ asset('img/migowy.jpg') }}" style="width: 507px; height: auto;"/>#}
+                <img src="{{ asset('img/migowy.jpg') }}" alt="Screen nagrania z tłumaczem migowym." class="img-resp"/>
             </section>
             <section>
-                <h3 id="1_2_7">Kryterium sukcesu 1.2.7 Rozszerzona audiodeskrypcja (nagranie) (poziom AAA)</h3>
+                <h3 id="1_2_7">Kryterium sukcesu 1.2.7 Rozszerzona audiodeskrypcja (nagranie) – Poziom AAA</h3>
                 <p>
                     Czasem przerwy między dialogami nie wystarczają, aby przekazać wszystkie dodatkowe informacje.
                     Przez to nagranie musi zawierać rozszerzoną audiodeskrypcję.
@@ -184,13 +198,13 @@
                 <p>
                     Osoba, która korzysta z tej formy pomocy, zapozna się ze wszystkimi ważnymi informacjami z części wideo nagrania.
                 </p>
-                <video width="320" height="240" controls>
+                <video controls>
                     <source src="{{ asset('img/1_2_7.mp4') }}" type="video/mp4" />
                     Twoja przeglądarka nie wspiera elementów wideo.
                 </video>
             </section>
             <section>
-                <h3 id="1_2_8">Kryterium sukcesu 1.2.8 Alternatywa dla mediów (nagranie) (poziom AAA)</h3>
+                <h3 id="1_2_8">Kryterium sukcesu 1.2.8 Alternatywa dla mediów (nagranie) – Poziom AAA</h3>
                 <p class="list-glue">
                     Musisz udostępnić alternatywę dla wszystkich treści audio i wideo na stronie.<br/>
                     Zrobisz to przy użyciu tekstu przygotowanego do nagrania. Tekst ma opisywać całą zawartość (widoczną i słyszalną) i zawiera:
@@ -205,10 +219,10 @@
                 <p>
                     Tekstowy opis multimediów sprawia, że każda osoba może zrozumieć nagranie ze szczegółami. Zrobi to przy użyciu technologii asystujących (czytnik tekstu, Braille'a).
                 </p>
-{#                <img src="{{ asset('img/1_2_8.png') }}" style="width: 620px; height: auto;">#}
+                <img src="{{ asset('img/1_2_8.png') }}" alt="" class="img-resp">
             </section>
             <section>
-                <h3 id="1_2_9">Kryterium sukcesu 1.2.9 Tylko audio (na żywo) (poziom AAA)</h3>
+                <h3 id="1_2_9">Kryterium sukcesu 1.2.9 Tylko audio (na żywo) – Poziom AAA</h3>
                 <p class="list-glue">
                     Wytyczna wymaga, aby zawartość audio w transmisjach na żywo miała alternatywę w postaci tekstu.
                     Kryterium możesz spełnić na różne sposoby:
@@ -218,7 +232,7 @@
                         <li>pomoc tłumacza, który tworzy transkrypcję transmisji w momencie nadawania,</li>
                         <li>jeśli przebieg transmisji jest zaplanowany, można dołączyć wcześniej przygotowany transkrypt.</li>
                     </ul>
-{#                <img src="{{ asset('img/1_2_9.png') }}" style="width: 620px; height: auto;">#}
+                <img src="{{ asset('img/1_2_9.png') }}" alt="" class="img-resp">
             </section>
         </article>
     </main>
