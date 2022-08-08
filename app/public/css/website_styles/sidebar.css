@@ -1,0 +1,37 @@
+.content {
+    /*display: flex;*/
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+#navbar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: fixed;
+}
+
+.navbar-wcag-content ul {
+    list-style-type: none;
+}
+.subnav-content ul {
+    background-color: lightgray;
+}
+
+.subnav, .subnav-content, .navbar-wcag-content {
+    display: none;
+}
+.navbar-wcag:hover .subnav, .subnav:hover .subnav-content, .subnav:focus .subnav-content,
+.navbar-wcag:hover .navbar-wcag-content, .navbar-wcag:focus .navbar-wcag-content {
+    display: flex;
+    /* focus-within? */
+}
+
+.btn-creator-style button {
+    border: none;
+    background-color: lightblue;
+    padding: 2em;
+    /* border-bottom: 1px solid black; */
+    width: 10em;
+    text-align: left;
+    border-radius: 10px;
+}

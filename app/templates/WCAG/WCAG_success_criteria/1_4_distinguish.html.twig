@@ -42,23 +42,33 @@
                     Jeśli informacje przekazujesz tylko za pomocą koloru, takie osoby mogą nie rozumieć polecenia lub nie mogą go wykonać.<br/>
                 </p>
                 <p>
-                    Przykład złego użycia koloru do przekazania ważnej informacji:
+                    <u>Przykład złego użycia koloru do przekazania ważnej informacji:</u>
                 </p>
-                <div>
-                    <label style="color: red;">Imię<input type="text"/></label><br/>
-                    <label style="color: red;">Nazwisko<input type="text"/></label><br/>
-                    <label style="color: red;">Adres<input type="text"/></label><br/>
-                    <label>Wiek<input type="text"/></label>
+                <div class="input-grp">
+                    <label style="color: red;" for="name">Imię</label><br/>
+                    <input type="text" id="name"/><br/>
+                    <label style="color: red;" for="surname">Nazwisko</label><br/>
+                    <input type="text" id="surname"/><br/>
+                    <label style="color: red;" for="address">Adres</label><br/>
+                    <input type="text" id="address"/><br/>
+                    <label for="age">Wiek</label><br/>
+                    <input type="text" id="age"/>
                 </div>
                 <p>
-                    Przykład poprawny:
+                    <u>Przykład poprawny:</u>
                 </p>
-                <div>
-                    Pola oznaczone znakiem „*” są wymagane.<br/>
-                    <label style="color: red;">*Imię<input type="text"/></label><br/>
-                    <label style="color: red;">*Nazwisko<input type="text"/></label><br/>
-                    <label style="color: red;">*Adres<input type="text"/></label><br/>
-                    <label>Wiek<input type="text"/></label>
+                <div class="input-grp">
+                    <p>
+                        Pola oznaczone znakiem „*” są wymagane.<br/>
+                    </p>
+                    <label style="color: red;" for="name">*Imię</label><br/>
+                    <input type="text" id="name"/><br/>
+                    <label style="color: red;" for="surname">*Nazwisko</label><br/>
+                    <input type="text" id="surname"/><br/>
+                    <label style="color: red;" for="address">*Adres</label><br/>
+                    <input type="text" id="address"/><br/>
+                    <label for="age">Wiek</label><br/>
+                    <input type="text" id="age"/>
                 </div>
                 <p>
                     <b>WAŻNE</b><br/>
@@ -78,7 +88,7 @@
                         <li>ściszenie dźwięku na stronie, niezależnie od głośności systemu.</li>
                     </ul>
                 <p>
-                    <b>Uwaga</b><br/>
+                    <b>UWAGA</b><br/>
                     Kiedy nie zastosujesz się do kryterium, reszta treści też nie będzie dostępna.<br/>
                     Spójrz na taką sytuację: użytkownik korzysta z technologii asystujących (czytniki tekstu, treści) do poruszania się po stronie.
                     Jeśli po odwiedzeniu strony użytkownik usłyszy dźwięk z nagrania, ścieżka audio nagrania i dźwięk z czytnika treści będą się nachodziły.
@@ -93,17 +103,26 @@
                     Możesz oczywiście zadecydować, że nagranie będzie włączało się po załadowaniu strony.
                     Pomyśl jednak – czy nie irytuje Cię, kiedy ładujesz stronę i nie wiesz, skąd pochodzi odtwarzany dźwięk?
                 </p>
-                Nagranie zgodne z kryterium<br/>
-                <video width="320" height="240" controls>
-                    <source src="{{ asset('img/1_4_2_dobry.mp4') }}" type="video/mp4" />
-                    Twoja przeglądarka nie wspiera elementów wideo.
-                </video>
-                <br/>
-                Nagranie niezgodne z kryterium<br/>
-                <video width="320" height="240" controls>
-                    <source src="{{ asset('img/1_4_2_zly.mp4') }}" type="video/mp4" />
-                    Twoja przeglądarka nie wspiera elementów wideo.
-                </video>
+                <div class="compare-mm spacing">
+                    <div>
+                        <p>
+                            Nagranie zgodne z kryterium
+                        </p>
+                        <video controls>
+                            <source src="{{ asset('img/1_4_2_dobry.mp4') }}" type="video/mp4" />
+                            Twoja przeglądarka nie wspiera elementów wideo.
+                        </video>
+                    </div>
+                    <div>
+                        <p>
+                            Nagranie niezgodne z kryterium
+                        </p>
+                        <video controls>
+                            <source src="{{ asset('img/1_4_2_zly.mp4') }}" type="video/mp4" />
+                            Twoja przeglądarka nie wspiera elementów wideo.
+                        </video>
+                    </div>
+                </div>
             </section>
             <section>
                 <h3 id="1_4_3">Kryterium sukcesu 1.4.3 Kontrast (minimalny) – Poziom AA</h3>
@@ -116,10 +135,14 @@
                         <li>Tekst w treści czysto dekoracyjnej, nieaktywnych i niewidocznych elementach interfejsu.</li>
                         <li>Logotyp – nazwa marki w formie tekstowej.</li>
                     </ul>
-                Mały tekst:<br/>
-                <img src="{{ asset('img/small_4_5.png') }}" /><br/>
-                Duży tekst:<br/>
-                <img src="{{ asset('img/big_3_1.png') }}" /><br/>
+                <p>
+                    Mały tekst:<br/>
+                    <img src="{{ asset('img/small_4_5.png') }}" alt="Tekst napisany małą czcionką na kontrastowym, ciemnoniebieskim tle." style="max-width: 400px;" /><br/>
+                </p>
+                <p>
+                    Duży tekst:<br/>
+                    <img src="{{ asset('img/big_3_1.png') }}" alt="Tekst napisany dużą czcionką na kontrastowym, ciemnoniebieskim tle." /><br/>
+                </p>
                 <p class="list-glue">
                     Odpowiedni kontrast na stronie pozwala osobom z problemami ze wzrokiem swobodniej korzystać z zawartości.
                     Mogą to być m.in.:
@@ -162,11 +185,16 @@
                 <p>
                     Możliwość powiększenia zawartości jest bardzo pomocna dla osób, które słabo widzą.
                 </p>
-                <strong id="txt-example">Tekst do powiększenia</strong><br/>
-                <button id="zoom-txt-btn" style="cursor: pointer;">Powiększ napis powyżej</button>
-                <button id="reset-btn" style="cursor: pointer;"><i class="fa fa-rotate-left"></i></button>
-                <br/>
-                <strong>Spróbuj powiększyć stronę ('Ctrl' + '+') do wartości 200%. Zobacz, że strona jest nadal czytelna.</strong>
+                <div style="margin-top: 2em;">
+                    <p>
+                        <strong id="txt-example">Tekst do powiększenia</strong><br/>
+                    </p>
+                    <button id="zoom-txt-btn">Powiększ napis powyżej</button>
+                    <button id="reset-btn"><i class="fa fa-rotate-left"></i></button>
+                    <p>
+                        <strong>Spróbuj powiększyć stronę ('Ctrl' + '+') do wartości 200%. Zobacz, że strona jest nadal czytelna.</strong>
+                    </p>
+                </div>
             </section>
             <section>
                 <h3 id="1_4_5">Kryterium sukcesu 1.4.5 Obrazy tekstu – Poziom AA</h3>
@@ -191,24 +219,26 @@
                     Osoby, które mają słaby wzrok lub problemy z czytaniem podziękują Ci za tę funkcjonalność.
                     Niektóre opcje pisma są dla takich użytkowników trudne do odczytania i zmienia się je według upodobań.
                 </p>
-                <img src="{{ asset('img/1_4_5_tekst.png') }}" /><br/>
+                <img src="{{ asset('img/1_4_5_tekst.png') }}" alt="Zielony kwadrat z napisem 'Testowy tekst'." class="img-resp" /><br/>
                 <div class="inside">
-                    <img src="{{ asset('img/1_4_5.png') }}" />
+                    <img src="{{ asset('img/1_4_5.png') }}" alt="Zielony kwadrat." class="img-resp" />
                     <div class="txt-inside">TESTOWY&nbsp;<br/>TEKST</div>
                 </div>
             </section>
             <section>
                 <h3 id="1_4_6">Kryterium sukcesu 1.4.6 Kontrast (wzmocniony) – Poziom AAA</h3>
                 <p>
-                    Jest to modyfikacja kryterium <a href="#1_4_3">1.4.3 Kontrast (minimalny)</a>.<br/>
+                    Jest to modyfikacja <a href="#1_4_3">Kryterium sukcesu 1.4.3 Kontrast (minimalny)</a>.<br/>
                     W tym przypadku kontrast musi być większy i wynosić przynajmniej 7:1.<br/>
                     Duży tekst i obrazy zawierające duży tekst muszą mieć kontrast przynajmniej 4.5:1.
                 </p>
                 <p>
                     Mały tekst:<br/>
-                    <img src="{{ asset('img/small_7_1.png') }}" /><br/>
+                    <img src="{{ asset('img/small_7_1.png') }}" alt="Tekst napisany małą czcionką na kontrastowym, ciemnoniebieskim tle o wzmocnionym kontraście." style="max-width: 400px;"/>
+                </p>
+                <p>
                     Duży tekst:<br/>
-                    <img src="{{ asset('img/big_4_5.png') }}" /><br/>
+                    <img src="{{ asset('img/big_4_5.png') }}" alt="Tekst napisany dużą czcionką na kontrastowym, ciemnoniebieskim tle o wzmocnionym kontraście."/>
                 </p>
             </section>
             <section>
@@ -250,33 +280,33 @@
                     Użytkownikowi będzie trudniej przeglądać zawartość, jeśli jest wyświetlana w sposób nieprzystępny.
                 </p>
                 <p>
-                    <i>Zamiana kolorów na pierwszym planie i w tle</i><br/>
+                    <u>Zamiana kolorów na pierwszym planie i w tle</u><br/>
                     Część osób inaczej postrzega barwy, np. nie rozpoznaje barwy czerwonej. Jeśli taki użytkownik może zmienić wyświetlane kolory, dostosuje je do własnych potrzeb.
-                    <img src="{{ asset('img/1_4_8_bg.jpg') }}" style="width: 472px; height: auto;"/>
+                    <img src="{{ asset('img/1_4_8_bg.jpg') }}" alt="Porównanie zmiany kolorów tekstu i tła. Od góry: czarny tekst, białe tło; żółty tekst, czarne tło; biały tekst, niebieskie tło." class="img-resp" />
                 </p>
                 <p>
-                    <i>Bloki tekstu są szerokie na maksymalnie 80 znaków (40 w przypadku alfabetów: chińskiego, japońskiego i koreańskiego).</i><br/>
+                    <u>Bloki tekstu są szerokie na maksymalnie 80 znaków (40 w przypadku alfabetów: chińskiego, japońskiego i koreańskiego).</u><br/>
                     Część użytkowników ma trudność z czytaniem długich bloków tekstu. Ich skrócenie pozwala na łatwiejsze śledzenie kolejnych linii tekstu.<br/>
-                    Dla alfabetu chińskiego, japońskiego i koreańskiego maksymalna liczba znaków jest mniejsza, ponieważ znaki w tych językach są szersze.
-                    <img src="{{ asset('img/1_4_8_size.jpg') }}" style="width: 650px; height: auto;"/>
+                    Dla alfabetu chińskiego, japońskiego i koreańskiego maksymalna liczba znaków jest mniejsza, ponieważ znaki w tych językach są szersze.<br/>
+                    <img src="{{ asset('img/1_4_8_size.jpg') }}" alt="Blok tekstu ze strzałką na górze: 'maksymalnie 80 znaków'. " class="img-resp" />
                 </p>
                 <p>
-                    <i>Tekst nie jest wyjustowany</i><br/>
+                    <u>Tekst nie jest wyjustowany</u><br/>
                     Tekst wyrównany do lewej i prawej strony trudniej się czyta. Efekt justowania może spowodować, że
-                    odstępy między literami staną się nieregularne, za duże lub za małe.
-                    <img src="{{ asset('img/1_4_8_center.jpg') }}" style="width: 515px; height: auto;"/>
+                    odstępy między literami staną się nieregularne, za duże lub za małe.<br/>
+                    <img src="{{ asset('img/1_4_8_center.jpg') }}" alt="2 bloki tekstu. Jeden poprawnie wyrównany do lewej, drugi wyjustowany." class="img-resp" />
                 </p>
                 <p>
-                    <i>Powiększanie ekranu bez przewijania w poziomie</i><br/>
+                    <u>Powiększanie ekranu bez przewijania w poziomie</u><br/>
                     Musisz umożliwić powiększenie strony, nie blokuj tej opcji w kodzie!<br/>
-                    Przy powiększaniu zawartość musi zwijać się do następnych linijek, aby użytkownik nie musiał przesuwać zawartości poziomo.
-                    <img src="{{ asset('img/1_4_8_scroll.jpg') }}" style="width: 500px; height: auto;"/>
+                    Przy powiększaniu zawartość musi zwijać się do następnych linijek, aby użytkownik nie musiał przesuwać zawartości poziomo.<br/>
+                    <img src="{{ asset('img/1_4_8_scroll.jpg') }}" alt="Przykład strony z przewijaniem w poziomie." class="img-resp" />
                 </p>
             </section>
             <section>
                 <h3 id="1_4_9">Kryterium sukcesu 1.4.9 Obrazy tekstu (bez wyjątków) – Poziom AAA</h3>
                 <p class="list-glue">
-                    Jest to rozszerzenie kryterium <a href="#1_4_5">1.4.5 Obrazy tekstu</a>.
+                    Jest to rozszerzenie <a href="#1_4_5">Kryterium sukcesu 1.4.5 Obrazy tekstu</a>.
                     Obrazów z tekstem używaj tylko, kiedy ten sposób prezentacji jest ważny lub czysto dekoracyjny.
                     W reszcie przypadków do grafik dodawaj osobny tekst, aby użytkownik mógł go modyfikować w zależności od potrzeb.<br/>
                     Tekst „zlany” z grafiką nie zawsze może zostać odczytany przez odbiorcę. Ten sposób prezentacji może być kłopotliwy dla osób, które:<br/>
@@ -333,25 +363,27 @@
                 <p>
                     Pamiętaj o takiej zawartości jak:
                 </p>
-                <p>
-                    <i>Aktywne elementy interfejsu użytkownika</i><br/>
-                    Elementy, z którymi użytkownik może wejść w interakcję.
-                    Zwróć uwagę na stan zawartości, taki jak wybór elementu i jego fokus.<br/>
-                    <button style="background-color: #612776; color: white; cursor: pointer;">Przycisk o odpowiednim kontraście</button>
-                </p>
-                <p>
-                    <i>Granice obiektów na stronie</i><br/>
-                    Kiedy na stronie dodasz element interaktywny, zaznacz go w jakikolwiek sposób. Na przykład, kiedy przycisk nie ma tła, użyj obwódki o odpowiednim kontraście.<br/>
-                    <button style="background-color: transparent; color: #612776; border: 3px solid #612776; cursor: pointer;">Cały interaktywny element jest widoczny</button>
-                </p>
-                <p>
-                    <i>Obiekty graficzne</i><br/>
-                    Zadbaj o odpowiedni kontrast grafiki, jeśli za jej pomocą przekazujesz ważne informacje.<br/><br/>
-                    Prawidłowo wykonany wykres:<br/>
-                    <img src="{{ asset('img/wykres_dobry.png') }}" style="width: 600px; height: auto;"/><br/>
-                    Źle wykonany wykres:<br/>
-                    <img src="{{ asset('img/wykres_zly.png') }}" style="width: 600px; height: auto;"/>
-                </p>
+                <div id="elements-contrast-examples">
+                    <p>
+                        <u>Aktywne elementy interfejsu użytkownika</u><br/>
+                        Elementy, z którymi użytkownik może wejść w interakcję.
+                        Zwróć uwagę na stan zawartości, taki jak wybór elementu i jego fokus.<br/>
+                        <button class="btn-example2" style="background-color: #612776; color: white;">Przycisk o odpowiednim kontraście</button>
+                    </p>
+                    <p>
+                        <u>Granice obiektów na stronie</u><br/>
+                        Kiedy na stronie dodasz element interaktywny, zaznacz go w jakikolwiek sposób. Na przykład, kiedy przycisk nie ma tła, użyj obwódki o odpowiednim kontraście.<br/>
+                        <button class="btn-example2" style="background-color: transparent; color: #612776; border: 3px solid #612776;">Cały interaktywny element jest widoczny</button>
+                    </p>
+                    <p>
+                        <u>Obiekty graficzne</u><br/>
+                        Zadbaj o odpowiedni kontrast grafiki, jeśli za jej pomocą przekazujesz ważne informacje.<br/>
+                        <i>Prawidłowo wykonany wykres:</i><br/>
+                        <img src="{{ asset('img/wykres_dobry.png') }}" alt="Przykład wykresu o odpowiednim kontraście." class="img-resp" /><br/>
+                        <i>Źle wykonany wykres:</i><br/>
+                        <img src="{{ asset('img/wykres_zly.png') }}" alt="Przykład wykresu o za słabym kontraście." class="img-resp" />
+                    </p>
+                </div>
             </section>
             <section>
                 <h3 id="1_4_12">Kryterium sukcesu 1.4.12 Odstępy w tekście – Poziom AA</h3>
@@ -374,10 +406,11 @@
                         Przykładowy tekst do zmiany odstępów.
                         Przykładowy tekst do zmiany odstępów.
                     </span>
-                    <button id="line-height" style="cursor: pointer;">Wysokość linii</button>
-                    <button id="letter-space" style="cursor: pointer;">Odstępy między literami</button>
-                    <button id="word-space" style="cursor: pointer;">Odstępy między wyrazami</button>
-                    <button id="reset-space" style="cursor: pointer;"><i class="fa fa-rotate-left"></i></button>
+                    <br/>
+                    <button id="line-height">Wysokość linii</button>
+                    <button id="letter-space" >Odstępy między literami</button>
+                    <button id="word-space">Odstępy między wyrazami</button>
+                    <button id="reset-space"><i class="fa fa-rotate-left"></i></button>
                 </p>
                 <p>
                     Kiedy dodasz opcję dostosowania tekstu, pomożesz m.in. osobom, które mają trudności z czytaniem.
@@ -401,7 +434,7 @@
                                 </ul>
                             Aby nie przesłonić treści, umieść zawartości w miejscu, gdzie nie będzie nachodziła na inną ważną zawartość.
                             Możesz też pozwolić, żeby użytkownik odrzucił ją przy użyciu klawisza, np. ESCAPE;<br/>
-                            <div id="hover-esc" style="background-color: lightgray; width: 8em; padding: 1em;">
+                            <div id="hover-esc" style="background-color: lightgray; width: 8em; padding: 1em; margin-bottom: 1em">
                                 Treść usuniesz przez naciśnięcie klawisza ESC
                                 <span id="tooltip">Wiadomość w okienku</span>
                             </div>

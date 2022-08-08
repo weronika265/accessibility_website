@@ -1,26 +1,35 @@
+{% extends 'base.html.twig' %}
+
 {% block title %}
     1.4.3 Zły przykład
 {% endblock %}
 
-<style>
-    .container {
-        display: flex;
-        max-width: 1000px;
-    }
-    .item {
-        background-color: aqua;
-        padding: 2em 8em;
-        margin: 2em;
-        font-size: 1em;
-        width: 4em;
-        height: 6em;
-    }
-</style>
+{% block stylesheets %}
+    <style>
+        .container {
+            display: flex;
+            max-width: 1000px;
+        }
+        .item {
+            background-color: aqua;
+            padding: 2em 8em;
+            margin: 2em;
+            font-size: 1em;
+            width: 4em;
+            height: 6em;
+        }
+    </style>
+{% endblock %}
 
-<div class="container">
-    <div class="item">Treść elementu 1</div>
-    <div class="item">Treść elementu 2</div>
-    <div class="item">Treść elementu 3</div>
-    <div class="item">Treść elementu 4</div>
-</div>
-<a href="{{ url('adapt_index') }}#1_3_4">Powrót do kryteriów sukcesu</a>
+{% block body %}
+    <h1>Przykład do kryterium sukcesu 2.1.2 Bez pułapki na klawiaturę</h1>
+    <main>
+        <div class="container">
+            <div class="item">Treść elementu 1</div>
+            <div class="item">Treść elementu 2</div>
+            <div class="item">Treść elementu 3</div>
+            <div class="item">Treść elementu 4</div>
+        </div>
+        <a href="{{ url('adapt_index') }}#1_3_4">Powrót do kryteriów sukcesu</a>
+    </main>
+{% endblock %}

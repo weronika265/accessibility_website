@@ -61,7 +61,7 @@
                 <p class="list-glue">
                     aby przeczytać najważniejszą treść, musiałyby przemieścić się po wielu elementach strony.<br/>
                     W takiej sytuacji bardzo pomocny staje się link, który prowadzi do głównej treści.<br/>
-                    <img src="{{ asset('img/2_4_1.jpg') }}" /><br/>
+                    <img src="{{ asset('img/2_4_1.jpg') }}" alt="Podświetlony przycisk 'Przejdź do głównej zawartości'." style="margin-top: 1em;" /><br/>
                     <b>Możesz zobaczyć, jak działa taki link:</b>
                 </p>
                     <ol>
@@ -81,9 +81,7 @@
                         <li>cel,</li>
                         <li>zawartość.</li>
                     </ul>
-                <p>
-                    <img src="{{ asset('img/2_4_2.jpg') }}" /><br/>
-                </p>
+                    <img src="{{ asset('img/2_4_2.jpg') }}" alt="Otwarta karta w przeglądarce." style="margin-bottom: 1em;" />
                     <code>
                         &lt;title&gt;2.4 Możliwość nawigacji&lt;/title&gt;
                     </code>
@@ -125,7 +123,7 @@
                         <li>niewidomi użytkownicy mogą wyobrazić sobie stronę jako przewidywalną całość.</li>
                     </ul>
                 <p>
-                    <a href="{{ url('_2_4_3_example') }}" style="color: blue;">Przykład</a><br/>
+                    <a href="{{ url('_2_4_3_example') }}">Przykład</a><br/>
                 </p>
             </section>
             <section>
@@ -161,7 +159,7 @@
                 <p>
                     Przykładowo:<br/>
                     W jednym z kryteriów dla wytycznej <i>2.3 Ataki padaczki</i>, użytkownik powinien mieć możliwość
-                    <a style="color: blue;" href="{{ url('epilepsy_index') }}#2_3_3">wyłączenia animacji dla elementów interaktywnych.</a>
+                    <a href="{{ url('epilepsy_index') }}#2_3_3">wyłączenia animacji dla elementów interaktywnych.</a>
                 </p>
             </section>
             <section>
@@ -169,8 +167,8 @@
                 <p>
                     Istnieje wiele dróg, aby dostać się do konkretnej podstrony w serwisie internetowym lub aplikacji.<br/>
                     Nie dotyczy to sytuacji, kiedy strona jest wynikiem operacji lub jednym z jej etapów.<br/>
-                    <img src="{{ asset('img/rozne_miejsca.jpg') }}" style="width: 300px; height: auto;" />
                 </p>
+                    <img src="{{ asset('img/rozne_miejsca.jpg') }}" alt="Strzałki poprowadzone między ikonami plików internetowych. Pokazanie przechodzenia między plikami." class="center-img" style="width: 300px; height: auto;" />
                 <p class="list-glue">
                     Jeśli zaprojektujesz serwis w powyższy sposób, odbiorcy będą mogli z niego korzystać według własnych potrzeb.
                     Użytkownik może używać różnych narzędzi i sposobów przeglądania, takich jak:
@@ -180,7 +178,7 @@
                         <li>mapa serwisu, która umożliwia przegląd treści,</li>
                         <li>przeglądanie podstron w celu zrozumienia budowy serwisu.</li>
                     </ul>
-                    <img src="{{ asset('img/searchbar.jpg') }}" style="width: 250px; height: auto;" />
+                    <img src="{{ asset('img/searchbar.jpg') }}" alt="Pole wyszukiwania z ikoną lupy."  class="center-img" style="width: 250px; height: auto;" />
                 <p class="list-glue">
                     Musisz pamiętać, że część zawartości nie będzie ogólnodostępna i żadne łącze nie będzie do niej prowadziło. Może być to np.:
                 </p>
@@ -194,22 +192,22 @@
                 <p>
                     Nagłówki i etykiety na stronie mają opisywać wyświetlaną zawartość. Najlepiej użyć pojedynczych słów lub krótkich opisów.
                 </p>
-                    <pre>
+                    <pre id="code-example">
                         <code>
-                            &lt;h1&gt;Nowy plac zabaw&lt;/h1&gt;
-                            &lt;p&gt;W dniu 21 kwietnia odbędzie się oficjalne otwarcie nowego placu zabaw.&lt;/p&gt;
-                            &lt;h3&gt;Atrakcje&lt;/h3&gt;
-                            &lt;p&gt;Podczas uroczystości wystąpią młode talenty z pobliskich szkół.&lt;/p&gt;
+&lt;h1&gt;Nowy plac zabaw&lt;/h1&gt;
+&lt;p&gt;W dniu 21 kwietnia odbędzie się oficjalne otwarcie nowego placu zabaw.&lt;/p&gt;
+&lt;h3&gt;Atrakcje&lt;/h3&gt;
+&lt;p&gt;Podczas uroczystości wystąpią młode talenty z pobliskich szkół.&lt;/p&gt;
                         </code>
                     </pre>
-                <p>
-                    <label for="email">Email</label>
+                <p style="margin-bottom: 0;">
+                    <label for="email">Email</label><br/>
                     <input type="email" name="email" id="email">
                 </p>
                     <pre>
                         <code>
-                            &lt;label for="email"&gt;Email&lt;/label&gt;
-                            &lt;input type="email" name="email" id="email"/&gt;
+&lt;label for="email"&gt;Email&lt;/label&gt;&lt;br/&gt;
+&lt;input type="email" name="email" id="email"/&gt;
                         </code>
                     </pre>
                 <p>
@@ -228,7 +226,7 @@
                 <p>
                     Fokus umożliwia także zrozumienie roli elementów, np. podświetlone pole formularza informuje, że można wprowadzić tekst.
                 </p>
-                <img src="{{ asset('img/2_4_7.jpg') }}">
+                <img src="{{ asset('img/2_4_7.jpg') }}" alt="Przycisk z fokusem i przycisk bez fokusu.">
             </section>
             <section>
                 <h3 id="2_4_8">Kryterium sukcesu 2.4.8 Lokalizacja – Poziom AAA</h3>
@@ -249,8 +247,8 @@
                 </p>
                 <p>
                     Jednym ze sposobów na pokazanie obecnej lokalizacji na stronie jest <b>menu okruszkowe</b>. Wyświetla ono ścieżkę odwiedzanych podstron.
-                    <img src="{{ asset('img/breadcrumb.jpg') }}" style="width: 250px; height: auto;" />
                 </p>
+                    <img src="{{ asset('img/breadcrumb.jpg') }}" style="width: 250px; height: auto;" alt="Menu okruszkowe: Strona główna/ Książki / Reportaż."/>
                 <p>
                     Standardem jest także możliwość powrotu do strony głównej po kliknięciu logo na górze strony.
 {#                    TODO: dodać przykład? #}
@@ -270,14 +268,14 @@
                         <li>łącze zawiera informacje, które powinny zostać tajemnicą do czasu otwarcia.</li>
                     </ul>
                 <p>
-                    Jest to rozszerzenie <a style="color: blue;" href="#2_4_4">Kryterium sukcesu 2.4.4 Cel łącza (w kontekście) – Poziom A</a>.
+                    Jest to rozszerzenie <a href="#2_4_4">Kryterium sukcesu 2.4.4 Cel łącza (w kontekście)</a>.
                 </p>
                 <p>
                     Linki, które prowadzą do tej samej treści, powinny być tak samo nazwane.
                 </p>
                 <p>
                     Przykładowo:<br/>
-                    <a style="color: blue;" href="{{ url('epilepsy_index') }}#2_3_3">Kryterium sukcesu 2.3.3 Animacja po interakcji</a>
+                    <a href="{{ url('epilepsy_index') }}#2_3_3">Kryterium sukcesu 2.3.3 Animacja po interakcji</a>
                     pozwala użytkownikowi na wyłączenie animacji elementów interaktywnych.
                 </p>
             </section>
@@ -295,26 +293,28 @@
                 <p>
                     *Sekcje dzielą treści na mniejsze, logicznie powiązane bloki.
                 </p>
-                <p>
-                <h1>Najważniejsza część</h1>
-                <section>Treść powiązana z nagłówkiem &lt;h1&gt;.</section>
-                <h2>Mniej ważna część</h2>
-                <section>
-                    Treść powiązana z nagłówkiem &lt;h2&gt;.
-                        <h3>Jeszcze mniej ważna część</h3>
-                        <section>Treść powiązana z nagłówkiem &lt;h3&gt;.</section>
-                </section>
-                </p>
+                <div>
+                    <h1 style="padding-top: 0; margin-top: 0;">Główny nagłówek treści</h1>
+                    <section>
+                        <h2>Mniej ważny blok treści</h2>
+                        <p>Treść powiązana z głównym nagłówkiem.</p>
+                    </section>
+                    <section>
+                        <h2>Mniej ważny blok treści</h2>
+                        <p>Treść powiązana z głównym nagłówkiem.</p>
+                    </section>
+                </div>
                 <pre>
                     <code>
-                        &lt;h1&gt;Najważniejsza część&lt;/h1&gt;
-                        &lt;section&gt;Treść powiązana z nagłówkiem &lt;h1&gt;.&lt;/section&gt;
-                        &lt;h2&gt;Mniej ważna część&lt;/h2&gt;
-                        &lt;section&gt;
-                            Treść powiązana z nagłówkiem &lt;h2&gt;.
-                            &lt;h3&gt;Jeszcze mniej ważna część&lt;/h3&gt;
-                            &lt;section&gt;Treść powiązana z nagłówkiem &lt;h3&gt;.&lt;/section&gt;
-                        &lt;/section&gt;
+    &lt;h1&gt;Główny nagłówek treści&lt;/h1&gt;
+&lt;section&gt;
+    &lt;h2&gt;Mniej ważny blok treści&lt;/h2&gt;
+    &lt;p&gt;Treść powiązana z głównym nagłówkiem.&lt;/p&gt;
+&lt;/section&gt;
+&lt;section&gt;
+    &lt;h2&gt;Mniej ważny blok treści&lt;/h2&gt;
+    &lt;p&gt;Treść powiązana z głównym nagłówkiem&gt;.&lt;/p&gt;
+&lt;/section&gt;
                     </code>
                 </pre>
             </section>

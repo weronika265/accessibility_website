@@ -1,11 +1,17 @@
+{% extends 'base.html.twig' %}
+
 {% block title %}
     3.2.1 Zły przykład
 {% endblock %}
 
-<h1>Przykład do kryterium sukcesu 3.2.1 Po otrzymaniu fokusu</h1>
-<h2>Zmiana kontekstu przy fokusie</h2>
-<p>Kiedy link uzyska fokus, przejdziesz do strony głównej strona główna.</p>
+{% block body %}
+        <h1>Przykład do kryterium sukcesu 3.2.1 Po otrzymaniu fokusu</h1>
+        <h2>Zmiana kontekstu przy fokusie</h2>
+    <main>
+        <p>Kiedy link uzyska fokus, przejdziesz do strony głównej strona główna.</p>
 
-<a href="{{ url('home_index') }}#3_2_1" onfocus="click()" id="test">Przejdź do strony głównej</a><br/><br/>
+        <a href="{{ url('home_index') }}#3_2_1" onfocus="click()" id="test">Przejdź do strony głównej</a><br/><br/>
 
-<a href="{{ url('predict_index') }}#3_2_1">Powrót do kryteriów sukcesu</a>
+        <a href="{{ url('predict_index') }}#3_2_1">Powrót do kryteriów sukcesu</a>
+    </main>
+{% endblock %}

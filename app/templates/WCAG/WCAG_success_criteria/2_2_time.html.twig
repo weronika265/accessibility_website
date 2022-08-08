@@ -36,6 +36,7 @@
                         <li>limit czasu na dokończenie zamówienia;</li>
                         <li>częstotliwość automatycznego odświeżania strony.</li>
                     </ul>
+                    <img src="{{ asset('img/2_2_1_stop.jpg') }}" alt="Godzina z ikoną zatrzymania czasu." class="center-img" style="max-width: 300px;" />
                 <p class="list-glue">
                     Muszą one spełnić przynajmniej jeden z warunków:
                 </p>
@@ -54,9 +55,8 @@
                     Zmiana limitu czasu pozwala na wykonanie czynności w czasie odpowiednim dla każdego użytkownika.<br/>
                     Część użytkowników potrzebuje więcej czasu na przeczytanie tekstu. Niektórzy wolniej rozpoznają strukturę strony.
                     To np. osoby, które nie widzą i korzystają z technologii asystujących.
-                    <img src="{{ asset('img/2_2_1_stop.jpg') }}" style="max-width: 300px; width: 400px; height: auto;" /><br/>
-                    <img src="{{ asset('img/2_2_1_extend.jpg') }}" style="max-width: 500px; width: 500px; height: auto;" />
                 </p>
+                    <img src="{{ asset('img/2_2_1_extend.jpg') }}" alt="Ikona zegara ze strzałką, która pokazuje przedłużenie czasu o 10 razy." class="center-img" style="max-width: 400px;" />
             </section>
             <section>
                 <h3 id="2_2_2">Kryterium sukcesu 2.2.2 Pauza, zatrzymanie, ukrycie – Poziom A</h3>
@@ -95,7 +95,7 @@
                         <li>automatycznie odświeżające się informacje, np. o pogodzie, kursach walut,</li>
                         <li>reklamy, których zawartość sama się przełącza.</li>
                     </ul>
-                <div id="rect-anim"></div><br/>
+                <div id="rect-anim" style="margin-top: 2em;"></div><br/>
                 <input type="button" id="disable-anim" value="Wyłącz animację" />
                 <p class="list-glue">
                     Jeśli treść porusza się, część użytkowników może mieć:
@@ -114,7 +114,7 @@
                 <p>
                     Kryterium wymusza, aby cała zawartość na stronie nie była ograniczana czasowo. Wyjątkiem są wydarzeń na żywo.
                 </p>
-                <img src="{{ asset('img/2_2_3.jpg') }}" style="width: 220px; height: auto;" />
+                <img src="{{ asset('img/2_2_3.jpg') }}" alt="Przekreślona ikona zegara." class="center-img" style="max-width: 250px;" />
             </section>
             <section>
                 <h3 id="2_2_4">Kryterium sukcesu 2.2.4 Przerywanie – Poziom AAA</h3>
@@ -126,14 +126,18 @@
                         <li>rządowe wiadomości o niebezpieczeństwie, takie jak klęska żywiołowa, ewakuacja;</li>
                         <li>utrata danych, brak połączenia internetowego, wylogowanie użytkownika.</li>
                     </ul>
-                <p>
-                    Wyłączenie lub odroczenie informacji pozwala skupić się na czytanej treści.<br/>
-                    <video width="320" height="240" controls>
+                <div>
+                    <p>
+                        Wyłączenie lub odroczenie informacji pozwala skupić się na czytanej treści.
+                    </p>
+                    <video class="center-vid" controls>
                         <source src="{{ asset('img/2_2_4.mp4') }}" type="video/mp4" />
                         Twoja przeglądarka nie wspiera elementów wideo.
                     </video>
-                    Jest to bardzo istotne dla osób z deficytem uwagi. Tacy użytkownicy rozpraszają się łatwiej, kiedy na ekranie niespodziewanie pojawia się nowa treść.
-                </p>
+                    <p>
+                        Jest to bardzo istotne dla osób z deficytem uwagi. Tacy użytkownicy rozpraszają się łatwiej, kiedy na ekranie niespodziewanie pojawia się nowa treść.
+                    </p>
+                </div>
             </section>
             <section>
                 <h3 id="2_2_5">Kryterium sukcesu 2.2.5 Ponowne potwierdzenie autentyczności – Poziom AAA</h3>
@@ -161,9 +165,9 @@
                 </p>
                 <p>
                     Ważne, aby użytkownik po zakończeniu sesji autoryzacji nie utracił wprowadzanych danych i mógł kontynuować ich wprowadzanie.
-                    Jedyne, co powinien zrobić, to ponownie potwierdzić swoją tożsamość.<br/>
-                    <img src="{{ asset('img/2_2_5.jpg') }}" style="width: 400px; height: auto;"/>
+                    Jedyne, co powinien zrobić, to ponownie potwierdzić swoją tożsamość.
                 </p>
+                    <img src="{{ asset('img/2_2_5.jpg') }}" alt="Panel finalizacji zamówienia w sklepie z komunikatem: 'Twoja sesja wygasła, aby sfinalizować zamówienie, zaloguj się ponownie. Zaloguj.'." class="img-resp" />
             </section>
             <section>
                 <h3 id="2_2_6">Kryterium sukcesu 2.2.6 Ostrzeżenie o limicie czasu – Poziom AAA</h3>
@@ -172,8 +176,8 @@
                 </p>
                 <p>
                     Wyjątkiem jest sytuacja, kiedy dane są przechowywane przez ponad 20 godzin od ostatniej aktywności użytkownika.
-                    <img src="{{ asset('img/2_2_6.jpg') }}" style="width: 400px; height: auto;"/>
                 </p>
+                    <img src="{{ asset('img/2_2_6.jpg') }}" alt="Formularz z komunikatem: Po 10 minutach nieaktywności formularz zostanie zresetowany. Jeśli nie chcesz utracić postępu, kontynuuj wypełnianie." class="img-resp" />
                 <p>
                     Użytkownicy zazwyczaj robią przerwy w trakcie wykonywania dłuższego zadania.<br/>
                     Część użytkowników, np. z zaburzeniami poznawczymi, może mieć problem z długotrwałym skupieniem uwagi. Wypełnianie formularzy, zamówienie biletu lotniczego, może być dla nich wyzwaniem.

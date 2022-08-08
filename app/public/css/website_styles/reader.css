@@ -1,4 +1,6 @@
 /* --- Strefa czytelnika --- */
+
+/* --- lista --- */
 .bg-list-clear {
     background-color: rgb(166, 208, 244, 0.8);
     padding: 1em;
@@ -10,4 +12,42 @@
     flex-wrap: wrap;
     gap: 0.5em 1em;
     list-style-type: none;
+}
+
+/* --- content --- */
+.starter {
+    margin-top: 3em;
+}
+.text-to-left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*flex-flow: row-reverse;*/
+    column-gap: 5em;
+}
+.text-to-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row-reverse;
+    column-gap: 5em;
+}
+@media screen and (max-width: 1150px) {
+    .text-to-left, .text-to-right {
+        flex-direction: column;
+    }
+}
+.text-centered {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.text-to-left div, .text-to-right div, .text-centered div {
+    max-width: 500px;
+}
+.center-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

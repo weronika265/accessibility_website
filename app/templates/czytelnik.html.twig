@@ -6,12 +6,9 @@
 
 {% block body %}
     {% include 'header.html.twig' %}
-    <main id="main">
-        <!-- sticky, appears on scrolling -->
+    <main id="main" {# class="page" #}>
         <div class="bg-list-clear" style="position: sticky; top: 0;">
             <ul class="list-clear-set">
-
-                {# !!!! Odstęp między header a listą  + smooth scrolling !!!! #}
                 <li><a href="#dostepnosc">Dostępność stron internetowych</a></li>
                 <li><a href="#regulacje">Regulacje prawne</a></li>
                 <li><a href="#rodzaje">Rodzaje niepełnosprawności</a></li>
@@ -21,61 +18,70 @@
                 <li><a href="#wiecej">Co więcej na stronie</a></li>
             </ul>
         </div>
-        <article id="dostepnosc">
-            <!-- h1 ?? + dodać do section -->
-            <h2 class="center-text" style="background-color: #2880C9; padding-top: 1em; padding-bottom: 1em; margin: 0;">Dostępność stron internetowych</h2>
-            <!-- <hr/> -->
-            <!-- <div class="content-left"> -->
-            <section class="align-left-reader" style="background-color: #2880C9;">
+        <article id="dostepnosc" class="starter">
+            <div class="center-column" style="background: #5b7b9a">
+            <h2>Dostępność stron internetowych</h2>
+            <section class="text-to-left">
                 <div>
                     <p>
-                        Dostępność stron internetowych (eng. web accessibility) jest ważną, choć często pomijaną częścią projektów stron. Zakłada, że dostęp do przekazywanych informacji jest taki sam, bez względu na:
+                        Dostępność stron internetowych (ang. web accessibility) jest ważną, choć często pomijaną częścią projektów stron.
+                        Zakłada, że każdy ma równy dostęp do informacji, bez względu na:
                     </p>
                     <ul>
                         <li>niepełnosprawności,</li>
                         <li>sposób korzystania z Internetu,</li>
-                        <li>umiejętności, </li>
+                        <li>umiejętności,</li>
                         <li>wiek.</li>
                     </ul>
                 </div>
-                <img src="{{ asset('img/disabled_lesson.jpg') }}" class="image img-space" alt="Mężczyzna, który tłumaczy coś niewidzącej dziewczynce. Siedzą przy laptopie."/>
+                <img src="{{ asset('img/disabled_lesson.jpg') }}" alt=""/>
             </section>
-            <section class="align-right-reader" style="background-color: rgb(40, 128, 201, 0.4)">
-                <div>
-                    <p>
-                        Dostępność stron nie zawsze jest traktowana poważnie. Wiele osób uznaje, że wystarczy dodać tekst alternatywy do obrazów lub szybko zmodyfikować stronę po jej ukończeniu.
-                        Prawda jest zupełnie inna – podczas projektowania musimy zastosować różne zabiegi, które uwzględnią nie tylko „standardowego” odbiorcę, ale także użytkownika, który m.in.:
-                    </p>
-                    <ul>
-                        <li>nie korzysta z myszy,</li>
-                        <li>używa czytnika teksu, </li>
-                        <li>ma dysleksję lub wady wzroku, takie jak niedowidzenie lub daltonizm.</li>
-                    </ul>
+            </div>
+            <section style="background: #1e7dcc;">
+                <div class="center-column">
+                    <h3>Dostępność cyfrowa w projektach</h3>
+                    <div class="text-to-right">
+                        <div>
+                            <p>
+                                Dostępność stron często nie jest wystarczająco uwzględniana w projektach.
+                                Wiele twórców uznaje, że wystarczy dodać niewielkie modyfikacje na koniec projektu, aby strona stała się dostępna cyfrowo.
+                            </p>
+                            <p>
+                                Prawda jest zupełnie inna – podczas projektowania stron musimy zastosować różne zabiegi, które
+                                uwzględnią nie tylko „standardowego” odbiorcę, ale także użytkownika, który m.in.:
+                            </p>
+                            <ul>
+                                <li>nie korzysta z myszy,</li>
+                                <li>używa czytnika teksu, </li>
+                                <li>ma dysleksję lub wady wzroku, takie jak niedowidzenie lub daltonizm.</li>
+                            </ul>
+                            <p>
+                                Wprowadzenie elementów, których celem jest polepszenie dostępności, w początkowych
+                                fazach projektu nie jest problemem. W końcowej fazie – już tak, i są to kosztowne inwestycje.
+                            </p>
+                            <p>
+                                <strong>
+                                    Niestosowanie się do zasad może prowadzić do konsekwencji prawnych.
+                                </strong>
+                            </p>
+                        </div>
+                        <img src="{{ asset('img/disabled_lesson.jpg') }}" alt="Mężczyzna, który tłumaczy coś niewidzącej dziewczynce. Siedzą przy laptopie."/>
+                    </div>
                 </div>
-                <img src="{{ asset('img/disabled_lesson.jpg') }}" class="image img-space" alt="Mężczyzna, który tłumaczy coś niewidzącej dziewczynce. Siedzą przy laptopie."/>
             </section>
-            <section class="align-top-reader" style="background-color: rgb(195, 195, 195, 0.4)">
-                <div>
+            <section class="text-centered" style="background: #4A9CE0">
+                <h3>World Wide Web Consortium</h3>
+                <div class="text-centered">
                     <p>
-                        Wprowadzenie elementów, których celem jest polepszenie dostępności, w początkowych fazach projektu nie są problemem.  W końcowej fazie – już tak, i są to inwestycje kosztowne.
+                        Istnieją grupy, które pracują nad równym traktowaniem użytkowników sieci. Nie tylko szerzą świadomość o dostępności
+                        cyfrowej, ale także pokazują, że to istotna część dobrze zaprojektowanej strony.
+                    </p>
+                    <img src="{{ asset('img/disabled_lesson.jpg') }}" alt=""/>
+                    <p>
+                        Jedną z głównych instytucji jest World Wide Web Consortium (W3C). <strong>World Wide Web Consortium</strong> jest organizacją, która ustala standardy WWW: HTML, CSS i nie tylko.
                     </p>
                     <p>
-                        Internet nie jest miejscem idealnym, ale istnieją grupy, które pracują nad równym traktowaniem użytkowników sieci. Zajmują się one nie tylko szerzeniem świadomości o dostępności, ale także pokazaniem, że jest to istotny element dobrze zaprojektowanych stron.
-                    </p>
-                </div>
-                <img src="{{ asset('img/disabled_lesson.jpg') }}" class="image" alt="Mężczyzna, który tłumaczy coś niewidzącej dziewczynce. Siedzą przy laptopie."/>
-            </section>
-            <section class="centered-unaligned-reader" style="background-color: rgb(40, 128, 201, 0.4)">
-                <div>
-                    <p>
-                        Jedną z głównych instytucji jest World Wide Web Consortium (W3C), które stworzyło listę oficjalnych zaleceń dla inkluzywnych stron – dokument Web Content Accessibility Guidelines (WCAG), w obecnej wersji 2.1.
-                    </p>
-                    <p>
-                        Musisz wiedzieć, że niestosowanie się do zasad może prowadzić do konsekwencji prawnych.
-                    </p>
-                    <br/>
-                    <p>
-                        Dzięki zaleceniom znacznie łatwiej zrozumiesz i wprowadzisz na własnej stronie elementy, które sprawią, że korzystanie z niej przyniesie korzyści szerokiej grupie odwiedzających.
+                        Organizacja ta stworzyła listę oficjalnych zaleceń dla projektów stron dostępnych cyfrowo – dokument Web Content Accessibility Guidelines (WCAG), w obecnej wersji 2.1.
                     </p>
                 </div>
             </section>

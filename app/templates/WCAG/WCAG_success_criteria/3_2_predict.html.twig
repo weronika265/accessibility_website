@@ -44,8 +44,10 @@
                         <li>automatyczne wysłanie formularza po sfokusowaniu na przycisku wysyłania;</li>
                         <li>otwarcie nowego okna lub skupienie na innej zawartości po sfokusowaniu na elemencie.</li>
                     </ul>
-                <a href="{{ url('_3_2_1_dobry') }}" style="color: blue;">Dobry przykład</a><br/>
-                <a href="{{ url('_3_2_1_zly') }}" style="color: blue;">Zły przykład</a>
+                <p>
+                    <a href="{{ url('_3_2_1_dobry') }}">Dobry przykład</a><br/>
+                    <a href="{{ url('_3_2_1_zly') }}">Zły przykład</a>
+                </p>
             </section>
             <section>
                 <h3 id="3_2_2">Kryterium sukcesu 3.2.2 Podczas wprowadzania danych – Poziom A</h3>
@@ -77,16 +79,18 @@
                         <li>mają kłopot z postrzeganiem zmian na stronie;</li>
                         <li>rozpraszają się przez niespodziewane zamiany na stronie.</li>
                     </ul>
+                <p>
                     Pomyśl o osobie niewidomej, która odwiedza Twoją stronę. Kiedy nie powiadomisz jej o zmianie kontekstu na stronie, nie będzie ona wiedziała o zmianie.
-                <img src="{{ asset('img/3_2_2.jpg') }}" />
+                </p>
+                <img src="{{ asset('img/3_2_2.jpg') }}" alt="Wypełnionego formularz. Opis: Formularz wysłany automatycznie po wypełnieniu wszystkich pól." class="img-resp" />
             </section>
             <section>
                 <h3 id="3_2_3">Kryterium sukcesu 3.2.3 Spójna nawigacja – Poziom AA</h3>
                 <p>
                     Nawigacja powtarzana na wielu stronach musi być taka sama, o ile nie zostanie dostosowana przez użytkownika.<br/><br/>
-                    Znajoma nawigacja powtarza się na innych stronach serwisu:<br/>
-                    <img style="width: 550px; height: auto;" src="{{ asset('img/3_2_3.jpg') }}" /><br/>
+                    Znajoma nawigacja powtarza się na innych stronach serwisu:
                 </p>
+                    <img src="{{ asset('img/3_2_3.jpg') }}" alt="Główna nawigacja serwisu." class="img-resp" /><br/>
                 <p class="list-glue">
                     Spójny i powtarzający się układ nawigacji jest bardziej zrozumiały i łatwiejszy do odnalezienia. Jest też bardzo pomocny dla osób, które:
                 </p>
@@ -114,6 +118,7 @@
                     Wystarczy, że odnajdzie element o tym samym wyglądzie lub opisie.
                 </p>
                 <p>
+{#                    TODO: dodać wygląd odpowieni #}
                     Na przykład w tym serwisie<br/><br/>
                     przyciski<br/>
                     <button>Przycisk</button><br/><br/>
@@ -151,7 +156,7 @@
                 <p class="txt-format" style="background-color: lightgray;">
                     Przykład:<br/>
                     Ta akcja wymaga odświeżenia strony.<br/>
-                    <button style="cursor: pointer;">Odśwież stronę</button>
+                    <button class="btn-example2">Odśwież stronę</button>
                 </p>
             </section>
         </article>

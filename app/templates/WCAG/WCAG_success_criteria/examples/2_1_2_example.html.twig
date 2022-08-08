@@ -1,14 +1,20 @@
+{% extends 'base.html.twig' %}
+
 {% block title %}
     2.1.2 Przykład
 {% endblock %}
 
-<h1>Przykład do kryterium sukcesu 2.1.2 Bez pułapki na klawiaturę</h1>
-<h2>Formularz</h2>
-<p><i>Pole numer 2</i> blokuje dalszą nawigację przy użyciu klawiatury.</p>
-<form>
-    <label for="field1">Pole numer 1</label><input type="text" id="field1" name="field1"><br>
-    <label for="field2">Pole numer 2</label><input type="text" id="field2" name="field2" onblur="this.focus();"><br>
-    <label for="field3">Pole numer 3</label><input type="text" id="field3" name="field3"><br>
-    <input type="submit" value="Wyślij" disabled>
-</form>
-<a href="{{ url('keyboard_index') }}#2_1_2">Powrót do kryteriów sukcesu</a>
+{% block body %}
+        <h1>Przykład do kryterium sukcesu 2.1.2 Bez pułapki na klawiaturę</h1>
+        <h2>Formularz</h2>
+    <main>
+        <p><i>Pole numer 2</i> blokuje dalszą nawigację przy użyciu klawiatury.</p>
+        <form>
+            <label for="field1">Pole numer 1</label><input type="text" id="field1" name="field1"><br>
+            <label for="field2">Pole numer 2</label><input type="text" id="field2" name="field2" onblur="this.focus();"><br>
+            <label for="field3">Pole numer 3</label><input type="text" id="field3" name="field3"><br>
+            <input type="submit" value="Wyślij" disabled>
+        </form>
+        <a href="{{ url('keyboard_index') }}#2_1_2">Powrót do kryteriów sukcesu</a>
+    </main>
+{% endblock %}

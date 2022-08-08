@@ -49,12 +49,16 @@
                         <li>kiedy wysyła formularz. Użytkownik zostanie cofnięty do wcześniej wypełnionego formularza z oznaczonymi błędnymi danymi.</li>
                     </ul>
                 <p class="list-glue">
-                    Jeśli nie wypełnisz jednego z pól, pojawi się komunikat o znalezionym błędzie:
+                    <u>Jeśli nie wypełnisz jednego z pól, pojawi się komunikat o znalezionym błędzie:</u>
+                </p>
+                <p style="margin-bottom: 0;">
+                    * Pole wymagane
                 </p>
                     <form>
-                        * Pola wymagane<br/>
-                        <label>*Imię<input type="text" required></label><br/>
-                        <label>*Nazwisko<input type="text" required></label><br/>
+                        <label for="name">*Imię</label><br/>
+                        <input type="text" id="name" required><br/>
+                        <label for="surname">*Nazwisko</label><br/>
+                        <input type="text" id="surname" required><br/>
                         <input type="submit" value="Prześlij"/>
                     </form>
             </section>
@@ -80,12 +84,16 @@
                         <li>typie przyjmowanej wartości przez pole,</li>
                         <li>przedziale wartości możliwych do wybrania w polu formularza (np. rok, kwota).</li>
                     </ul>
+                <p style="margin-bottom: 0;">
+                    <u>Instrukcja</u>: Wszystkie pola oznaczone symbolem „*” są wymagane.
+                </p>
                 <form>
-                    <span style="background-color: lightgray;"><u>Instrukcja</u>: Wszystkie pola oznaczone * są wymagane</span><br/>
-                    <label>*Pierwsze imię<input type="text" required></label><br/>
-                    <label>*Drugie Imię<input type="text" required></label><br/>
-                    <label>*Nazwisko<input type="text"></label><br/>
-                    <label>*Email<input type="email"></label><br/>
+                    <label for="name">*Pierwsze imię</label><br/>
+                    <input type="text" id="name" required><br/>
+                    <label for="surname">*Nazwisko</label><br/>
+                    <input type="text" id="surname" required><br/>
+                    <label for="email">*Email</label><br/>
+                    <input type="email" id="email" required><br/>
                     <input type="submit" value="Prześlij"/>
                 </form>
             </section>
@@ -102,12 +110,17 @@
                         <li>zmienić cel treści.</li>
                     </ul>
                 <p class="list-glue">
-                    Pole zostało błędnie wypełnione:
+                    <u>Pole zostało błędnie wypełnione:</u>
                 </p>
-                    <div style="border: 1px solid black;">
-                        <label>Kod pocztowy<input type="number" /></label>
-                        <div style="background-color: orangered;">
-                            Upewnij się, że kod zawiera 5 cyfr.
+                    <div>
+                        <p>
+                            <label style="font-weight: bold;" for="postal">Kod pocztowy</label><br/>
+                            <input type="number" id="postal"/>
+                        </p>
+                        <div style="background-color: #ef6531;">
+                            <p>
+                                Upewnij się, że kod zawiera 5 cyfr.
+                            </p>
                         </div>
                         <input type="submit" value="Prześlij"/>
                     </div>
@@ -157,16 +170,19 @@
                     Informacja kontekstowa jest potrzebna w sytuacji, kiedy etykieta pola nie opisuje wystarczająco jego celu.
                 </p>
                     <div>
-                        <label>Kod pocztowy<input type="number" placeholder="00-000"/></label><br/>
-                        <label for="client-num">Numer klienta (16 cyfr)</label>
-                        <input id="client-num" type="number"/>
-                        <span style="color: blue; font-weight: bold; position: relative; cursor: pointer;">Gdzie go znajdę?</span>
+                        <form>
+                            <label for="postal">Kod pocztowy</label><br/>
+                            <input type="number" id="postal" placeholder="00-000" /><br/>
+                            <label for="client-num">Numer klienta (16 cyfr)</label><br/>
+                            <input id="client-num" type="number" />
+                            <span style="color: blue; font-weight: bold; position: relative; cursor: pointer;">Gdzie go znajdę?</span>
+                        </form>
                     </div>
             </section>
             <section>
                 <h3 id="3_3_6">Kryterium sukcesu 3.3.6 Zapobieganie błędom (wszystkim) – Poziom AAA</h3>
                 <p>
-                    Kryterium jest rozszerzeniem <a href="#3_3_4">Kryterium sukcesu 3.3.4 Zapobieganie błędom (prawnym, finansowym, w danych) – Poziom AA</a>, które
+                    Kryterium jest rozszerzeniem <a href="#3_3_4">Kryterium sukcesu 3.3.4 Zapobieganie błędom (prawnym, finansowym, w danych)</a>, które
                     uwzględnia konkretne przypadki zapobiegania błędom.
                 </p>
                 <p>

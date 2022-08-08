@@ -67,7 +67,7 @@
 {#                    </fieldset>#}
 {#                </div>#}
                 <p style="margin-bottom: 0">
-                    Jak czytnik widzi i odczytuje elementy strony:
+                    <u>Jak czytnik widzi i odczytuje elementy strony:</u>
                 </p>
 {#                TODO: zrobić responsive -> przez bootstrap? #}
                 <pre>
@@ -132,8 +132,10 @@
                 </p>
                 <p>
                     Dzięki kolejności określonej programowo, użytkownicy z różnymi problemami mogą zapoznać się z treścią w sposób zamierzony przez twórcę.
-                    <a href="{{ url('_1_3_2_dobry') }}">Dobra implementacja</a>
-                    <a href="{{ url('_1_3_2_zly') }}">Zła implementacja</a><br/>
+                </p>
+                <p>
+                    <a href="{{ url('_1_3_2_dobry') }}">Dobra implementacja</a><br/>
+                    <a href="{{ url('_1_3_2_zly') }}">Zła implementacja</a>
                 </p>
             </div>
             <div>
@@ -163,12 +165,14 @@
                     W takim przypadku użytkownik technologii asystujących zrozumie to jako treść, która pojawiła się wcześniej lub później.
                 </p>
                 <p>
-                    <b>ŹLE</b> Aby przejść dalej, wciśnij okrągły przycisk w kolorze zielonym, który znajduje się po lewej <br/>
-                    <button style="border-radius: 50px; width: 5em; height: 5em; background-color: green; cursor: pointer;">Kliknij mnie</button>
+                    <b>ŹLE</b><br/>
+                    Aby przejść dalej, wciśnij okrągły przycisk w kolorze zielonym, który znajduje się po lewej
+                    <button class="btn-example" style="margin-left: 0.5em;">Kliknij mnie</button>
                 </p>
                 <p>
-                    <b>DOBRZE</b> Aby przejść dalej, kliknij poniższy przycisk<br/>
-                    <button style="border-radius: 50px; background-color: green; cursor: pointer;">Etap II: Wypełnianie danych adresowych</button>
+                    <b>DOBRZE</b><br/>
+                    Aby przejść dalej, kliknij poniższy przycisk<br/>
+                    <button class="btn-example">Etap II: Wypełnianie danych adresowych</button>
                 </p>
             </div>
             <div>
@@ -183,6 +187,7 @@
                 </p>
                 <p>
                     <a href="{{ url('_1_3_4_dobry') }}">Dobra implementacja</a>
+                    <br/>
                     <a href="{{ url('_1_3_4_zly') }}">Zła implementacja</a><br/>
                     <strong>Zły i dobry przykład z rotate – wciśnij F12 i ikonę - instrukcja</strong>
                 </p>
@@ -202,29 +207,40 @@
                     Dzięki określeniu celu pól, użytkownikowi jest znacznie łatwiej wypełniać formularze.<br/>
                 </p>
                 <p>
-                    Podstawowym sposobem na określenie celu formularza jest dodanie atrybutu 'type' do pola formularza &lt;input&gt;.<br/>
-                    Pole hasła:<br/>
-                    <input type="password"><br/>
+                    Podstawowym sposobem na określenie celu formularza jest dodanie atrybutu 'type' do pola formularza &lt;input&gt;.
+                </p>
+                    <div>
+                        <p>
+                            <label for="passwd">Pole hasła:</label><br/>
+                            <input type="password" id="passwd">
+                        </p>
+                    </div>
                     <code>
                         &lt;input type="password"&gt;
                     </code>
-                </p>
-                <p>
+                <p class="list-glue" style="margin-top: 2em;">
                     Aby jeszcze dokładniej określić cel pola, trzeba skorzystać z atrybutu 'autocomplete'. Ten atrybut pozwala na dookreślenie znaczenia pola,
                     np. imienia (pierwsze, drugie, użytkownika) + wymienić inne?.<br/>
-                    Atrybut 'autocomplete' pozwala także wypełnić pola wcześniej zapamiętanymi danymi. Jest to dużym ułatwieniem, również dla osób, które (:)
-                    mają problem z pamięcią lub wypełniają formularze w obcym języku – funkcjonalność ta działa niezależnie od języka strony.
-                    Pole email z autouzupełnianiem:<br/>
-                    <input type="email" name="email"><br/>
+                    Atrybut 'autocomplete' pozwala także wypełnić pola wcześniej zapamiętanymi danymi. Jest to dużym ułatwieniem, również dla osób, które:
+                </p>
+                    <ul>
+                        <li>mają problem z pamięcią,</li>
+                        <li>wypełniają formularze w obcym języku – funkcjonalność ta działa niezależnie od języka strony.</li>
+                    </ul>
+                    <div>
+                        <p>
+                            <label for="email1">Pole email z autouzupełnianiem:</label><br/>
+                            <input type="email" name="email" id="email1"><br/>
+                        </p>
+                    </div>
                     <code>
                         &lt;input type="email" name="email"&gt;
                     </code>
-                </p>
-                <p>
+                <p style="margin-top: 2em;">
                     Technologie asystujące dla zdefiniowanych pól mogą wyświetlać ikony, które dla części użytkowników są lepiej zrozumiałe niż tekst.<br/>
                     Są to osoby z zaburzeniami poznawczymi, którym jest trudno czytać tekst oraz osoby mające dysleksję lub nieumiejące czytać.<br/>
-                    <i class="fa fa-envelope"></i>
-                    <input type="email" name="email"><br/>
+                    <label for="email2"><i class="fa fa-envelope"></i></label>
+                    <input type="email" name="email" id="email2"><br/>
                 </p>
             </div>
             <div>
@@ -247,27 +263,29 @@
                 </p>
                 <ul>
                     <li>
-                        informacja, do czego służy link (odnośnik do logowania, strony głównej),
-                        <div>
-                            <a href="#" style="color: blue;">Pobierz raport ludności w Polsce na rok 2020</a><br/>
-                            <a href="#" style="color: blue;">Wyświetl książkę online (i grafika książki)</a>
-                        </div>
+                        Informacja, do czego służy link (odnośnik do logowania, strony głównej):
+                        <p style="margin-top: 0;">
+                            <a href="#">Pobierz raport ludności w Polsce na rok 2020</a><br/>
+                            <a href="#">Wyświetl książkę online (i grafika książki)</a>
+                        </p>
                     </li>
                     <li>
-                        oznaczone obszary na stronie – użytkownik może je pomijać lub wyłączać.
-                            <code style="all: unset;">
-                                &lt;header&gt;&lt;/header&gt;<br/>
-                                &nbsp;&lt;nav&gt;&lt;/nav&gt;<br/>
-                                &lt;main&gt;<br/>
-                                &lt;article&gt;<br/>
-                                &lt;section>&lt;/section&gt;<br/>
-                                &lt;section>&lt;/section&gt;<br/>
-                                &lt;/article&gt;<br/>
-                                &lt;aside&lt;/aside&gt;<br/>
-                                &lt;/main&gt;<br/>
-                                &lt;footer>&lt;/footer&gt;<br/>
+                        Oznaczone obszary na stronie – użytkownik może je pomijać lub wyłączać:
+                        <pre>
+                            <code>
+&lt;header&gt;&lt;/header&gt;
+&lt;nav&gt;&lt;/nav&gt;
+&lt;main&gt;
+    &lt;article&gt;
+        &lt;section>&lt;/section&gt;
+        &lt;section>&lt;/section&gt;
+    &lt;/article&gt;
+    &lt;aside&lt;/aside&gt;
+&lt;/main&gt;
+&lt;footer>&lt;/footer&gt;
                             </code>
-                            <img src="{{ asset('img/html_struct.png') }}" style="width: 300px; height: auto;" />
+                        </pre>
+                        <img src="{{ asset('img/html_struct.png') }}" alt="Oznaczenie obszarów na stronie, kolejno: header, nav, main z article podzielonym na 3 sections i aside, footer." class="img-resp-vert" />
                     </li>
                 </ul>
                 <strong>Jak czytnik czyta landmarks</strong>

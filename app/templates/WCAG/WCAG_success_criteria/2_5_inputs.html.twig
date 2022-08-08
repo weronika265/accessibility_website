@@ -42,7 +42,7 @@
                     Wyjątkiem są elementy, których obsługa przy użyciu gestów wielopunktowych lub opartych na ścieżce jest kluczowa (np. wprowadzanie podpisu).
                 </p>
                 <p class="list-glue">
-                    <b>Gesty jednopunktowe</b> to gesty, w których ważny jest tylko początek i koniec, na przykład:
+                    Gesty jednopunktowe to gesty, w których ważny jest tylko początek i koniec, na przykład:
                 </p>
                     <ul>
                         <li>przemieszczanie elementu z jednego miejsca w drugie;</li>
@@ -63,20 +63,24 @@
                     Część z nich nie może wykonywać bardziej skomplikowanych lub precyzyjnych ruchów.
                     Przez to woli używać gestów klikania niż np. przeciągania palcem.
                 </p>
-                <p>
-                    Gesty jednopunktowe:<br/>
-                    <video width="320" height="240" controls>
-                        <source src="{{ asset('img/2_5_1_jedno.mp4') }}" type="video/mp4">
-                        Twoja przeglądarka nie wspiera elementów wideo.
-                    </video><br/>
-                    Źródło grafik: Mapy Google<br/><br/>
-                    Gesty wielopunktowe:<br/>
-                    <video width="320" height="240" controls>
-                        <source src="{{ asset('img/2_5_1_wielo.mp4') }}" type="video/mp4">
-                        Twoja przeglądarka nie wspiera elementów wideo.
-                    </video><br/>
-                    Źródło grafik: Mapy Google
-                </p>
+                <div class="compare-mm">
+                    <p>
+                        Gesty jednopunktowe:<br/>
+                        <video controls>
+                            <source src="{{ asset('img/2_5_1_jedno.mp4') }}" type="video/mp4">
+                            Twoja przeglądarka nie wspiera elementów wideo.
+                        </video><br/>
+                        Źródło grafik: Mapy Google
+                    </p>
+                    <p>
+                        Gesty wielopunktowe:<br/>
+                        <video controls>
+                            <source src="{{ asset('img/2_5_1_wielo.mp4') }}" type="video/mp4">
+                            Twoja przeglądarka nie wspiera elementów wideo.
+                        </video><br/>
+                        Źródło grafik: Mapy Google
+                    </p>
+                </div>
             {# ----------------------- #}
             </section>
             <section>
@@ -100,7 +104,7 @@
                 <p>
                     Odpowiednia obsługa gestów sprawia, że użytkownik będzie popełniał mniej błędów, kiedy korzysta z różnych urządzeń, np. opartych na
                     ekranie dotykowym. Umożliwisz mu zrezygnowanie z akcji, gdy naciśnie zły przycisk.
-                    <video width="320" height="240" controls>
+                    <video class="center-vid" controls>
                         <source src="{{ asset('img/2_5_2.mp4') }}" type="video/mp4">
                         Twoja przeglądarka nie wspiera elementów wideo.
                     </video><br/>
@@ -119,23 +123,24 @@
                     Najlepszą praktyką jest opisanie tak samo etykiety i nazwy komponentu.
                 </p>
                 <p>
-                    <video width="320" height="240" controls>
+                    <video class="center-vid" controls>
                         <source src="{{ asset('img/2_5_3.mp4') }}" type="video/mp4">
                         Twoja przeglądarka nie wspiera elementów wideo.
                     </video><br/>
                 </p>
                 <p>
-                    <label>Email<input type="email" name="email"/></label>
+                    <label for="email" style="font-weight: bold;">Email</label><br/>
+                    <input type="email" name="email" id="email"/>
                 </p>
                     <pre>
                         <code>
-                            &lt;label&gt;Email&lt;input type="email" name="email"/&gt;&lt;/label&gt;
+&lt;label&gt;Email&lt;input type="email" name="email"/&gt;&lt;/label&gt;
                         </code>
                     </pre>
-                    <button type="button" aria-label="Kup produkt">Kup</button>
+                    <button class="btn-example2" aria-label="Kup produkt">Kup</button>
                     <pre>
                         <code>
-                            &lt;button type="button" aria-label="Kup produkt"&gt;Kup&lt;/button&gt;
+&lt;button aria-label="Kup produkt"&gt;Kup&lt;/button&gt;
                         </code>
                     </pre>
                 <p>
@@ -143,12 +148,12 @@
                     Są to zarówno osoby widzące, jak i niewidzące.
                 </p>
                 <p>
-                    <i class='fa fa-arrow-right' style="font-size: 20px; margin-right: 0.3em;"></i>Użytkownicy mogą używać sterowania głosem, żeby przemieszczać się po stronie.
+                    <i class='fa fa-arrow-right list-arrow'></i>Użytkownicy mogą używać sterowania głosem, żeby przemieszczać się po stronie.
                     Etykiety pozwalają im wybierać elementy za pomocą komend słownych: menu, przycisk, link i inne.
                 </p>
                 <p>
 {#                    TODO: check czy poprawnie, czy o to chodzi #}
-                    <i class='fa fa-arrow-right' style="font-size: 20px; margin-right: 0.3em;"></i>Wiele osób z niepełnosprawnościami używa czytników tekstu.
+                    <i class='fa fa-arrow-right list-arrow'></i>Wiele osób z niepełnosprawnościami używa czytników tekstu.
                     Czytniki odczytują nazwę, która jest widoczna na jego etykiecie obiektu.
                 </p>
                 <p>
@@ -175,7 +180,7 @@
                         <li>gesty, które dotyczą technologii asystujących;</li>
                         <li>gesty kluczowe dla działania funkcjonalności (np. krokomierz).</li>
                     </ul>
-                    <img style="width: 300px; height: auto;" src="{{ asset('img/2_5_4a.jpg') }}" />
+                    <img src="{{ asset('img/2_5_4a.jpg') }}" alt="Grafika ręki dotykającej telefonu." class="center-img" style="width: 300px;" />
                 <p class="list-glue">
                     Urządzenia zawierają różne czujniki (np. żyroskop, akcelerometr), które dodają nowe funkcjonalności do urządzenia. Użytkownik może m.in.:
                 </p>
@@ -184,7 +189,7 @@
                         <li>anulować operację przez potrząśnięcie urządzeniem;</li>
                         <li>wykonać zrzut ekranu przez przeciągnięcie palcami po ekranie urządzenia.</li>
                     </ul>
-                    <img style="width: 250px; height: auto;" src="{{ asset('img/2_5_4b.jpg') }}" />
+                    <img src="{{ asset('img/2_5_4b.jpg') }}" alt="Grafika z obrotem telefonu." class="center-img" style="width: 250px;" />
                 <p>
                     Pamiętaj, że część osób nie może wykonać takich gestów lub robi to z trudnością.
                     Niektórzy mogą przez przypadek włączyć funkcjonalność, np. w wyniku niekontrolowanego drżenie rąk.
@@ -204,7 +209,7 @@
                         <li>Taki sposób prezentacji jest ważny, a zmiany mogą prowadzić do innego działania treści.</li>
                     </ul>
                 <p>
-                    Minimalny rozmiar przycisku:<br/>
+                    <u>Minimalny rozmiar przycisku:</u><br/>
                     <input type="button" style="width: 44px; height: 44px;"/>
                 </p>
                 <p>

@@ -12,21 +12,21 @@ parameters:
 {% block javascripts %}
     <script>
         const alert = document.querySelector('.alert');
-        alert.style.opacity = 1;
+/*        alert.style.opacity = 1;
 
         function fade_message() {
             alert.style.opacity -= 1;
-        }
+        }*/
         function hide_message() {
             alert.style.display = 'none';
         }
 
         if(alert.style['display'] !== 'none') {
-            if (alert.style['opacity'] !== 0) {
-                // setTimeout(hide_message, 5000);
-                setInterval(fade_message, 500);
-            }
-            hide_message();
+            // if (alert.style['opacity'] !== 0) {
+                setTimeout(hide_message, 5000);
+                // setInterval(fade_message, 500);
+            // }
+            // hide_message();
         }
     </script>
 {% endblock %}
