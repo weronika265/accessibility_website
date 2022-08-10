@@ -6,7 +6,7 @@
 
 {% block body %}
     {% include 'header.html.twig' %}
-    <main id="main" {# class="page" #}>
+    <main id="main">
         <div class="bg-list-clear" style="position: sticky; top: 0;">
             <ul class="list-clear-set">
                 <li><a href="#dostepnosc">Dostępność stron internetowych</a></li>
@@ -18,43 +18,43 @@
                 <li><a href="#wiecej">Co więcej na stronie</a></li>
             </ul>
         </div>
-        <article id="dostepnosc" class="starter">
-            <div class="center-column" style="background: #5b7b9a">
-            <h2>Dostępność stron internetowych</h2>
-            <section class="text-to-left">
-                <div>
-                    <p>
-                        Dostępność stron internetowych (ang. web accessibility) jest ważną, choć często pomijaną częścią projektów stron.
-                        Zakłada, że każdy ma równy dostęp do informacji, bez względu na:
-                    </p>
-                    <ul>
-                        <li>niepełnosprawności,</li>
-                        <li>sposób korzystania z Internetu,</li>
-                        <li>umiejętności,</li>
-                        <li>wiek.</li>
-                    </ul>
-                </div>
-                <img src="{{ asset('img/disabled_lesson.jpg') }}" alt=""/>
-            </section>
+        <article id="dostepnosc">
+            <div style="background-color: #2880C9;">
+                <h2 class="header-center">Dostępność stron internetowych</h2>
+                <div class="divisor"></div>
+                <section class="topic-page-center">
+                    <div class="content-rest">
+                        <p class="list-glue">
+                            Dostępność stron internetowych (ang. web accessibility) jest ważną, choć często pomijaną częścią projektów stron.
+                            Zakłada, że każdy ma równy dostęp do informacji, bez względu na:
+                        </p>
+                            <ul>
+                                <li>niepełnosprawności,</li>
+                                <li>sposób korzystania z Internetu,</li>
+                                <li>umiejętności,</li>
+                                <li>wiek.</li>
+                            </ul>
+                    </div>
+                    <img src="{{ asset('img/disabled_lesson.jpg') }}" alt=""/>
+                </section>
             </div>
-            <section style="background: #1e7dcc;">
-                <div class="center-column">
+            <section class="topic-center" style="background-color: rgba(40,129,201,0.4);">
                     <h3>Dostępność cyfrowa w projektach</h3>
-                    <div class="text-to-right">
-                        <div>
+                    <div class="text-right">
+                        <div class="content-rest">
                             <p>
                                 Dostępność stron często nie jest wystarczająco uwzględniana w projektach.
                                 Wiele twórców uznaje, że wystarczy dodać niewielkie modyfikacje na koniec projektu, aby strona stała się dostępna cyfrowo.
                             </p>
-                            <p>
+                            <p class="list-glue">
                                 Prawda jest zupełnie inna – podczas projektowania stron musimy zastosować różne zabiegi, które
                                 uwzględnią nie tylko „standardowego” odbiorcę, ale także użytkownika, który m.in.:
                             </p>
-                            <ul>
-                                <li>nie korzysta z myszy,</li>
-                                <li>używa czytnika teksu, </li>
-                                <li>ma dysleksję lub wady wzroku, takie jak niedowidzenie lub daltonizm.</li>
-                            </ul>
+                                <ul>
+                                    <li>nie korzysta z myszy,</li>
+                                    <li>używa czytnika teksu, </li>
+                                    <li>ma dysleksję lub wady wzroku, takie jak niedowidzenie lub daltonizm.</li>
+                                </ul>
                             <p>
                                 Wprowadzenie elementów, których celem jest polepszenie dostępności, w początkowych
                                 fazach projektu nie jest problemem. W końcowej fazie – już tak, i są to kosztowne inwestycje.
@@ -67,11 +67,10 @@
                         </div>
                         <img src="{{ asset('img/disabled_lesson.jpg') }}" alt="Mężczyzna, który tłumaczy coś niewidzącej dziewczynce. Siedzą przy laptopie."/>
                     </div>
-                </div>
             </section>
-            <section class="text-centered" style="background: #4A9CE0">
+            <section class="text-center" style="background-color: rgba(194,194,194,0.4);">
                 <h3>World Wide Web Consortium</h3>
-                <div class="text-centered">
+                <div class="content-rest">
                     <p>
                         Istnieją grupy, które pracują nad równym traktowaniem użytkowników sieci. Nie tylko szerzą świadomość o dostępności
                         cyfrowej, ale także pokazują, że to istotna część dobrze zaprojektowanej strony.
@@ -85,6 +84,694 @@
                     </p>
                 </div>
             </section>
+        </article>
+        <article id="regulacje">
+            <div style="background-color: #8F67D0;">
+                <h2 class="header-center">Regulacje prawne</h2>
+                <div class="divisor"></div>
+                <section class="topic-page-center">
+                    <div class="content-rest">
+                        <img src="{{ asset('img/disabled_lesson.jpg') }}" alt=""/>
+                        <p>
+                            W prawie unijnym, a także polskim, strony internetowe muszą być projektowane pod kątem dostępności.
+                            Dotyczy to przede wszystkim jednostek sektora publicznego.
+                        </p>
+                        <p>
+                            Główny dokument, który reguluje dostępność cyfrową w Polsce to
+                            <u>Ustawa z dnia 4 kwietnia 2019 r. o dostępności cyfrowej stron internetowych i aplikacji mobilnych podmiotów publicznych</u>.
+                        </p>
+                    </div>
+                </section>
+            </div>
+            <section class="topic-center" style="background-color: rgba(145,105,209,0.4);">
+                <h3>Cele ustawy</h3>
+                <div class="text-left">
+                    <div class="content-rest">
+                        <p>
+                            Ustawa narzuca, aby serwisy internetowe i aplikacje mobilne były zgodne ze
+                            Standardem WCAG – Web Content Accessibility Guidelines.
+                            Strony podmiotów publicznych muszą spełniać wytyczne przynajmniej na poziomie AA.
+
+                        </p>
+                        <p>
+                            Na stronie musi być też umieszczona <u>deklaracja dostępności</u>.
+                        </p>
+                        <p class="list-glue">
+                            W ustawie opisano także:
+                        </p>
+                            <ul>
+                                <li>zasady nadzoru dostępności cyfrowej,</li>
+                                <li>podejmowane działania w przypadku, kiedy strona nie jest dostępna cyfrowo.</li>
+                            </ul>
+                    </div>
+                    <img src="{{ asset('img/disabled_lesson.jpg') }}" alt="Mężczyzna, który tłumaczy coś niewidzącej dziewczynce. Siedzą przy laptopie."/>
+                </div>
+            </section>
+            <section class="topic-center" style="background-color: rgba(194,194,194,0.4);">
+                <h3>Strona niedostępna cyfrowo – możliwe konsekwencje</h3>
+                <div class="text-right">
+                    <div class="content-rest">
+                        <p>
+                            Strona podmiotu publicznego może nie spełniać części wymaganych kryteriów dostępności.
+                            Wtedy każda osoba może złożyć <b>skargę o braku dostępności</b>.
+                            Jeśli w ciągu 7 dni podmiot nie poprawi strony bez podania powodu, skargę można złożyć do
+                            Prezesa Państwowego Funduszu Rehabilitacyjnego Osób Niepełnosprawnych (PFRON).
+
+                        </p>
+                        <p>
+                            <b>PFRON</b> to polski organ administracji publicznej, który pomaga osobom niepełnosprawnym.
+                            Wspiera ich rehabilitację, pomaga w zatrudnieniu oraz w życiu w społeczeństwie.
+
+                        </p>
+                        <p>
+                            Skargi rozpatrzone pozytywnie zmuszają właściciela do poprawy dostępności serwisu.
+                            Jeśli tego nie zrobi, w zależności od przyczyny kary wynoszą do 5000 zł lub 10 000 zł.
+
+                        </p>
+                    </div>
+                    <img src="{{ asset('img/disabled_lesson.jpg') }}" alt="Mężczyzna, który tłumaczy coś niewidzącej dziewczynce. Siedzą przy laptopie."/>
+                </div>
+            </section>
+            <section class="topic-center" style="background-color: rgba(145,105,209,0.4);">
+                <h3>Które elementy strony podmiotu publicznego muszą być dostępne</h3>
+                <div class="text-left">
+                    <ul class="content-rest">
+                        <li>strona podmiotu w Biuletynie Informacji Publicznej,</li>
+                        <li>dane kontaktowe oraz link do strony w Biuletynie Informacji Publicznej,</li>
+                        <li>narzędzia do kontaktu z podmiotem (np. formularz kontaktowy),</li>
+                        <li>nawigacja,</li>
+                        <li>deklaracja dostępności,</li>
+                        <li>informacje o sytuacjach kryzysowych i bezpieczeństwie publicznym,</li>
+                        <li>dokumenty urzędowe oraz wzory umów lub wzory innych dokumentów, które są przeznaczone do zaciągania zobowiązań cywilnoprawnych.</li>
+                    </ul>
+                    <img src="{{ asset('img/disabled_lesson.jpg') }}" alt="Mężczyzna, który tłumaczy coś niewidzącej dziewczynce. Siedzą przy laptopie."/>
+                </div>
+            </section>
+            <section class="topic-center" style="background-color: rgba(194,194,194,0.4);">
+                <h3>Jakie zasoby nie muszą być dostępne</h3>
+                <div class="text-right">
+                    <ul class="content-rest">
+                        <li>multimedia nadawane na żywo,</li>
+                        <li>multimedia udostępnione przed 23 września 2020 r.,</li>
+                        <li>dokumenty tekstowe, tekstowo-graficzne, prezentacje multimedialne i arkusze kalkulacyjne udostępnione przed 23 września 2018 r.
+                            Nie uwzględnia się zasobów, które są wymagane do realizacji bieżących zadań podmiotu publicznego,</li>
+                        <li>mapy, które nie służą do nawigacji,</li>
+                        <li>treści od innych podmiotów,</li>
+                        <li>treści, które prezentują niektóre dzieła sztuki i zabytki,</li>
+                        <li>treści z internetu i ekstranetu, które nie były aktualizowane po 23 września 2019 r.</li>
+                    </ul>
+                    <img src="{{ asset('img/disabled_lesson.jpg') }}" alt="Mężczyzna, który tłumaczy coś niewidzącej dziewczynce. Siedzą przy laptopie."/>
+                </div>
+            </section>
+            <section class="text-center" style="background-color: rgba(145,105,209,0.4);">
+                <h3>Dostęp alternatywny</h3>
+                <div class="content-rest">
+                    <img src="{{ asset('img/disabled_lesson.jpg') }}" alt=""/>
+                    <p class="list-glue">
+                        Podmiot publiczny nie zawsze może zapewnić dostępność cyfrową na stronie. Wtedy musi zapewnić dostęp alternatywny. <br/>
+                        Jest to:
+                    </p>
+                        <ul>
+                            <li>kontakt przez telefon, pocztę lub mail,</li>
+                            <li>kontakt ze wsparciem tłumacza języka migowego,</li>
+                            <li>kontakt ze wsparciem tłumacza-przewodnika.</li>
+                        </ul>
+                </div>
+            </section>
+{#            TODO: zrobić! #}
+            <section class="text-center" style="background-color: rgba(194,194,194,0.4);">
+                <h3>Co powinna zawierać deklaracja dostępności</h3>
+                <div class="content-rest">
+                    <p>
+                        Deklaracja dostępności powinna zawierać kilka elementów określonych w … . Elementy, które powinieneś umieścić w swojej deklaracji, znajdziesz w (nazwa dokumentu) / przykładowa deklaracja dostępności.
+                        (załącznik pdf’a?)
+                    </p>
+                </div>
+            </section>
+        </article>
+        <article id="rodzaje">
+            <div style="background-color: #BD6161;">
+                <h2 class="header-center">Rodzaje niepełnosprawności</h2>
+                <div class="divisor"></div>
+                <section class="topic-page-center">
+                    <div class="content-rest">
+                        <p>
+                            Użytkownicy sieci mogą zmagać się z różnymi niepełnosprawnościami.
+                            W samej Polsce jest to duży odsetek – prawnie potwierdzoną niepełnosprawność ma ponad 3 mln osób.
+                        </p>
+                        <p>
+                            Każda z tych osób chce swobodnie korzystać z zasobów sieciowych.
+                            Formy niepełnosprawności, które wpływają na korzystanie z zasobów cyfrowych, można dzielić według różnych kryteriów.
+                            Tutaj formy niepełnosprawności podzielono na 4 główne grupy.
+                        </p>
+                    </div>
+                    <img src="{{ asset('img/disabled_lesson.jpg') }}" alt=""/>
+                </section>
+            </div>
+            <section class="topic-center" style="background-color: rgba(189,96,96,0.4);">
+                <h3>Wzrok</h3>
+                <div class="text-right">
+                    <div class="content-rest">
+                        <p>
+                            Osoby z problemami ze wzrokiem napotykają wiele przeszkód, kiedy korzystają ze stron internetowych.
+                        </p>
+                        <p>
+                            Użytkownicy słabowidzący zazwyczaj zmieniają elementy strony, aby była łatwiejsza w czytaniu.
+                        </p>
+                        <p>
+                            Wiele z nich jednak nie widzi wcale – korzysta z Internetu bez przekazu wizualnego.
+                            Niestety, strony internetowe skupiają się głównie na takim sposobie przekazywania informacji.
+                        </p>
+                        <p>
+                            Jeśli jednak strona jest zaprojektowana zgodnie z wytycznymi, także te osoby mogą swobodnie zapoznać się z przekazywaną treścią.
+                        </p>
+                    </div>
+                    <img src="{{ asset('img/disabled_lesson.jpg') }}" alt="Mężczyzna, który tłumaczy coś niewidzącej dziewczynce. Siedzą przy laptopie."/>
+                </div>
+            </section>
+            <section class="text-center" style="background-color: rgba(194,194,194,0.4);">
+                <h4>Ślepota</h4>
+                <div class="content-rest">
+                    <p>
+                        Osoby niewidome spotyka najwięcej przeszkód, ponieważ podczas przeglądania strony nie używają wzroku.
+                        Aby odczytać zawartość, ta grupa odbiorców korzysta z czytników ekranu lub czytników Braille’a.
+                    </p>
+                    <img src="{{ asset('img/disabled_lesson.jpg') }}" alt=""/>
+                    <p class="list-glue">
+                        Częste problemy:
+                    </p>
+                        <ul>
+                            <li>obrazy nie zawierają tekstu alternatywnego,</li>
+                            <li>strona nie jest obsługiwana przy użyciu klawiatury,</li>
+                            <li>linki nie opisują swojej funkcji lub treści, do której prowadzą,</li>
+                            <li>strona ze zbyt dużą ilością zawartości,</li>
+                            <li>limit czasu na wykonanie zadania,</li>
+                            <li>elementy oparte na percepcji wzrokowej,</li>
+                            <li>powtarzające się elementy na stronie, których nie można pominąć,</li>
+                            <li>formularze o złej strukturze.</li>
+                        </ul>
+                </div>
+            </section>
+            <section class="text-center" style="background-color: rgba(189,96,96,0.4);">
+                <h4>Słaby wzrok</h4>
+                <div class="content-rest">
+                    <p class="list-glue">
+                        W tej grupie znajdują się osoby, które cierpią na:
+                    </p>
+                        <ul>
+                            <li>krótkowzroczność,</li>
+                            <li>dalekowzroczność,</li>
+                            <li>astygmatyzm,</li>
+                        </ul>
+                    <p class="list-glue">
+                        a także osoby, które tracą wzrok przez schorzenia takie jak:
+                    </p>
+                        <ul>
+                            <li>jaskra,</li>
+                            <li>zaćma,</li>
+                            <li>zwyrodnienie plamki żółtej,</li>
+                            <li>retinopatia cukrzycowa.</li>
+                        </ul>
+                    <p>
+                        Użytkownik, który słabo widzi, często powiększa czcionkę tekstu lub kontrast strony, aby łatwiej przeglądać treść.
+                        Jak osoba niewidoma, taki odbiorca może używać czytnika ekranu.
+                    </p>
+                    <img src="{{ asset('img/disabled_lesson.jpg') }}" alt=""/>
+                    <p class="list-glue">
+                        Częste problemy:
+                    </p>
+                        <ul>
+                            <li>Strony trudne w używaniu po zmianie wielkości liter,</li>
+                            <li>Słaby kontrast między tłem a tekstem,</li>
+                            <li>Tekst zapisany w obrazie, którego nie odczyta czytnik,</li>
+                            <li>Niezrozumiałe formularze,</li>
+                            <li>Nie da się zmienić wielkości liter,</li>
+                            <li>Słabej jakości zdjęcia, których jakość pogarsza się przy powiększeniu.</li>
+                        </ul>
+                </div>
+            </section>
+            <section class="text-center" style="background-color: rgba(194,194,194,0.4);">
+                <h4>Ślepota barw</h4>
+                <div class="content-rest">
+                    <img src="{{ asset('img/disabled_lesson.jpg') }}" alt=""/>
+                    <p>
+                        Osoby ze ślepotą barw najczęściej nie rozpoznają konkretnej barwy lub nie mogą rozróżnić niektórych barw od siebie.
+                        Związane jest to z brakiem niektórych czopków – komórek siatkówki oka.
+                    </p>
+                    <p>
+                        Normalne widzenie barw, zwane jest trichromancją. Każdy czopek jest czuły na jedną z trzech częstotliwości
+                        światła: czerwoną, zieloną lub niebieską. Do ślepoty barw dochodzi, kiedy w oku brakuje czopków, które są czułe na konkretną barwę.
+                    </p>
+                    <img src="{{ asset('img/disabled_lesson.jpg') }}" alt=""/>
+                    <p class="list-glue">
+                        Wyróżniamy różne rodzaje ślepoty kolorów:
+                    </p>
+                        <ul>
+                            <li>Protanopia – osoba nie rozpoznaje barwy czerwonej. Odcienie różu są postrzegane jako niebieskie, a ciemniejsze czerwienie łatwo mylone z czernią.</li>
+                            <li>Deuteranopia – osoba nie rozpoznaje barwy zielonej. Odcienie czerwieni są mylone z zielenią.</li>
+                            <li>Tritanopia – osoba nie rozpoznaje barwy niebieskiej. Odcienie zieleni są mylone z niebieskimi i fioletowe z żółtymi.</li>
+                            <li>Monochromatyzm – osoba nie rozpoznaje barw. Jest to najrzadszy typ ślepoty kolorów. Wzrok takich osób jest bardziej wrażliwy na światło, przez co noszą przyciemnione okulary.</li>
+                        </ul>
+                    <img src="{{ asset('img/disabled_lesson.jpg') }}" alt=""/>
+                    <p>
+                        Należy zadbać o dobry kontrast strony, aby osoby z różnym rodzajem ślepoty barw mogły odróżnić kolory od siebie.
+                        Natomiast informacje nie mogą być przekazywane tylko za pomocą koloru.
+                    </p>
+                    <p class="list-glue">
+                        Częste problemy:
+                    </p>
+                        <ul>
+                            <li>Paleta kolorów i obrazy na stronie nie mają wystarczającego kontrastu;</li>
+                            <li>Elementy strony i informacje są oznaczone za pomocą koloru.</li>
+                        </ul>
+                </div>
+            </section>
+            <section class="topic-center" style="background-color: rgba(179,102,102,0.6);">
+                <h3>Słuch – głuchota i słaby słuch</h3>
+                <div class="text-right">
+                    <div class="content-rest">
+                        <p>
+                            Dla osób z problemami ze słuchem Internet jest bardzo przydatnym narzędziem.
+                            Taki odbiorca może czytać napisy w filmach, co nie wymaga zmysłu słuchu. Może też rozmawiać z innymi przy użyciu komunikatorów tekstowych.
+                        </p>
+                        <p>
+                            Największą przeszkodą dla tych osób są multimedia, które zawierają dźwięk.
+                            Jeśli multimedia bez dźwięku nie mają alternatywnej wersji, takie osoby nie mogą się z nimi zapoznać.
+                        </p>
+                        <p>
+                            Warto pamiętać, że ludzie mogą zarówno nie słyszeć od urodzenia, jak i stracić słuch w trakcie życia.
+                            Osoby, które nie słyszą od urodzenia, często nie znają języka mówionego i pisanego.
+                            Język, którym się posługują to język migowy danego kraju.
+                            Sprawia to, że alternatywny sposób przekazywania informacji musi być dostosowany dla różnych odbiorców.
+                        </p>
+                        <p class="list-glue">
+                            Częste problemy:
+                        </p>
+                            <ul>
+                                <li>Treść dźwiękowa bez napisów lub transkrypcji,</li>
+                                <li>Słaba jakość napisów i transkrypcji,</li>
+                                <li>Multimedia bez tłumaczenia w języku migowym,</li>
+                                <li>Powiadomienia oparte na dźwięku.</li>
+                            </ul>
+                    </div>
+                    <img src="{{ asset('img/disabled_lesson.jpg') }}" alt="Mężczyzna, który tłumaczy coś niewidzącej dziewczynce. Siedzą przy laptopie."/>
+                </div>
+            </section>
+            <section class="topic-center" style="background-color: rgba(209,88,88,0.6);">
+                <h3>Upośledzenie ruchowe</h3>
+                <div class="text-right">
+                    <div class="content-rest">
+                        <p>
+                            Problem z poruszaniem się ma różne przyczyny.
+                            Część z nich to: porażenie mózgowe, choroba Parkinsona, a także uszkodzenia mózgu lub kręgosłupa.
+                            Powodują one problemy, takie jak drganie mięśni, spowolnienie ruchowe lub paraliż.
+                        </p>
+                        <p>
+                            Zaburzenia ruchowe mogą być też nabyte. Praca fizyczna, praca przed komputerem, często prowadzą do poważnych problemów zdrowotnych.
+                        </p>
+                        <p>
+                            Osoba niepełnosprawna może używać alternatywy do myszy, telefonu czy klawiatury.
+                            Niektórzy polegają tylko na sterowaniu głosem, wzrokiem lub innych technologiach.
+                        </p>
+                        <p class="list-glue">
+                            Częste problemy:
+                        </p>
+                            <ul>
+                                <li>Za małe elementy do naciśnięcia,</li>
+                                <li>Nie można użyć klawiatury do przemieszczania się po stronie,</li>
+                                <li>Obsługa tylko za pomocą myszy,</li>
+                                <li>Limity czasowe na wykonanie czynności</li>
+                                <li>Wymagana precyzja do klikania interaktywnych elementów.</li>
+                            </ul>
+                    </div>
+                    <img src="{{ asset('img/disabled_lesson.jpg') }}" alt="Mężczyzna, który tłumaczy coś niewidzącej dziewczynce. Siedzą przy laptopie."/>
+                </div>
+            </section>
+            <section class="topic-center" style="background-color: rgba(237,161,161,0.6);">
+                <h3>Zaburzenia poznawcze</h3>
+                <div class="text-right">
+                    <div class="content-rest">
+                        <p>
+                            Zaburzenia poznawcze to różnorodna grupa. W zależności od zaburzenia użytkownik będzie napotykał inne trudności na stronach internetowych.
+                            Na przykład jedna osoba może mieć problem w czytaniu, inna w uzupełnianiu danych w formularzu.
+                        </p>
+                        <p class="list-glue">
+                            Problemy, jakie mogą napotkać osoby z zaburzeniami poznawczymi:
+                        </p>
+                            <ul>
+                                <li>Pamięć – użytkownik nie pamięta, jak trafił na stronę lub co chciał zrobić.</li>
+                                <li>Uwaga – trudność w skupieniu uwagi na dłużej, np. podczas czytania lub wyszukiwania.</li>
+                                <li>Przetwarzanie tekstu – trudność w rozumieniu tekstu mówionego i pisanego.</li>
+                                <li>Przetwarzanie wizualne – trudność w rozumieniu informacji wizualnych, obrazów i ikon.</li>
+                            </ul>
+                    </div>
+                    <img src="{{ asset('img/disabled_lesson.jpg') }}" alt="Mężczyzna, który tłumaczy coś niewidzącej dziewczynce. Siedzą przy laptopie."/>
+                </div>
+                <div class="text-right">
+                    <div class="content-rest">
+                        <p>
+                            Osoby z <strong>deficytem uwagi (ADHD, ADD)</strong> mają problem z długotrwałym skupieniem uwagi, a w przypadku ADHD z nadaktywnością.
+                            Często potrzebują więcej czasu na wykonanie czynności, ponieważ jest im trudniej skupić się na zadaniu.
+                            Nie radzą sobie dobrze z długimi formularzami i skomplikowanymi instrukcjami.
+                        </p>
+                        <p>
+                            Osoby z <strong>dysleksją</strong> mają trudności w czytaniu i rozumieniu słów i znaków.
+                            Aby ułatwić sobie czytanie, zmieniają kontrast strony i korzystają ze specjalnych czcionek.
+                            Dużym ułatwieniem są nagrania audio i filmy, gdzie tekst jest czytany dla nas.
+                        </p>
+                        <p>
+                            Osoby z <strong>zaburzeniem</strong> równowagi zazwyczaj źle znoszą ruch na stronie, taki jak animacja.
+                            Animacje mogą powodować zawroty głowy i zaburzenia widzenia.
+                            Kontrola animacji jest dla tych osób ważna, powinno dać się wyłączyć animacje.
+                        </p>
+                    </div>
+                        <img src="{{ asset('img/disabled_lesson.jpg') }}" alt="Mężczyzna, który tłumaczy coś niewidzącej dziewczynce. Siedzą przy laptopie."/>
+                </div>
+                <div class="text-center">
+                    <div class="content-rest">
+                        <p>
+                            Problem animacji dotyczy też osób z padaczką. Są one dodatkowo narażone
+                            na ataki padaczkowe, jeśli na stronie umieszczone są elementy, które szybko migają.
+                        </p>
+                        <p class="list-glue">
+                            Częste problemy:
+                        </p>
+                            <ul>
+                                <li>Trudny język,</li>
+                                <li>Dużo zawartości na stronie,</li>
+                                <li>Długie zdania lub akapity,</li>
+                                <li>Mało czasu na wykonanie zadania na stronie,</li>
+                                <li>Strona nie ma struktury, np. nagłówków i podziału tekstu.</li>
+                            </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="topic-center" style="background-color: rgba(201,167,167,0.6);">
+                <h3>Kto jeszcze skorzysta na stronach dostępnych cyfrowo</h3>
+                <div class="text-right">
+                    <div class="content-rest">
+                        <p>
+                            Ze stron internetowych dostępnych cyfrowo skorzystają wszyscy, nie tylko osoby niepełnosprawne.
+                            Strony zaprojektowane w ten sposób są wygodniejsze w obsłudze, ponieważ uwzględniają różne potrzeby użytkowników.
+                        </p>
+                        <p class="list-glue">
+                            Sytuacje, w których ludzie skorzystają z dostępnych cyfrowo stron:
+                        </p>
+                            <ul>
+                                <li>przeglądanie strony na urządzeniu innym niż komputer (telefon, telewizor),</li>
+                                <li>wolne połączenie Internetowe,</li>
+                                <li>zbyt głośne otoczenie lub otoczenie, w którym trzeba zachować ciszę,</li>
+                                <li>zepsuta mysz,</li>
+                                <li>stare oprogramowanie systemu lub przeglądarki.</li>
+                            </ul>
+                    </div>
+                    <img src="{{ asset('img/disabled_lesson.jpg') }}" alt="Mężczyzna, który tłumaczy coś niewidzącej dziewczynce. Siedzą przy laptopie."/>
+                </div>
+            </section>
+        </article>
+        <article id="technologie">
+            <div style="background-color: #D4964D;">
+                <h2 class="header-center">Technologie asystujące</h2>
+                <div class="divisor"></div>
+                <section class="topic-page-center">
+                    <div class="content-rest">
+                        <img src="{{ asset('img/disabled_lesson.jpg') }}" alt=""/>
+                        <p>
+                            Technologie asystujące to grupa technologii i urządzeń, która umożliwia
+                            lub pomaga osobom niepełnosprawnym korzystać z zasobów cyfrowych.
+                            Niektóre technologie są już zainstalowane na komputerze, inne trzeba pobrać lub kupić.
+                            Kilka na pewno znasz, to klawiatura i asystent głosowy.
+                        </p>
+                        <p class="list-glue">
+                            <b>Nie myl pojęcia technologii asystującej z technologią adaptywną.</b>
+                            Obie mają pomagać lub umożliwiać osobom niepełnosprawnym wykonywanie czynności, jednak:
+                        </p>
+                        <ul>
+                            <li>Technologia adaptywna jest tworzona z myślą o osobach niepełnosprawnych.</li>
+                            <li>Technologia asystywna może dodatkowo pomóc osobom z tymczasowymi urazami. Są to np. kule ortopedyczne.</li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+            <section class="text-center" style="background-color: rgba(212,148,76,0.6);">
+                <h3>Czy wiedziałeś, że wiadomości tekstowe i mailowe stworzono dla osób niesłyszących?</h3>
+                <div class="content-rest">
+                    <p>
+                        Francuski inżynier <strong>Matti Makkonen</strong> i jego zespół stworzył usługę <strong>SMS</strong>, aby pomagać osobom niesłyszącym.
+                        Wiadomości miały pozwolić na łatwą komunikację między osobami z problemami ze słuchem.
+                        Okazało się jednak, że wiadomości tekstowe są lepszych rozwiązaniem od innych technologii.
+                        Z usług SMS nadal korzystamy, a wiadomości tekstowe zostaną z nami jeszcze długo.
+                    </p>
+                    <p>
+                        <strong>Vinton Cerf</strong>, amerykański informatyk i jeden z ojców Internetu, należał do grupy twórców usługi <strong>email</strong>.
+                        Jednym z założeń usługi było ułatwienie komunikacji osobom niesłyszącym.
+                        Cerf jako osoba z wadą słuchu, chciał także rozmawiać z niesłyszącą żoną, kiedy był w pracy.
+                    </p>
+                </div>
+            </section>
+            <section class="topic-center" style="background-color: rgba(194,194,194,0.6);">
+                <h3>Czytnik ekranu</h3>
+                <div class="text-right">
+                    <div class="content-rest">
+                        <p>
+                            Czytniki ekranu to technologie, które często są już zainstalowane na komputerze. Czytają one tekst, który znajduje się na ekranie urządzenia.
+                        </p>
+                    </div>
+                    <img src="{{ asset('img/disabled_lesson.jpg') }}" alt="Mężczyzna, który tłumaczy coś niewidzącej dziewczynce. Siedzą przy laptopie."/>
+                </div>
+            </section>
+            <section class="topic-center" style="background-color: rgba(212,148,76,0.6);">
+                <h3>Powiększenie ekranu</h3>
+                <div class="text-left">
+                    <div class="content-rest">
+                        <p>
+                            Powiększenie ekranu pozwala na zwiększanie tekstu lub grafiki.
+                            Działa inaczej niż zwykłe powiększanie. Technologia sprawia, że powiększony
+                            zostaje fragment ekranu. Działa jak powiększanie za pomocą lupy.
+                        </p>
+                    </div>
+                    <img src="{{ asset('img/disabled_lesson.jpg') }}" alt="Mężczyzna, który tłumaczy coś niewidzącej dziewczynce. Siedzą przy laptopie."/>
+                </div>
+            </section>
+            <section class="topic-center" style="background-color: rgba(194,194,194,0.6);">
+                <h3>Czytnik tekstu</h3>
+                <div class="text-right">
+                    <div class="content-rest">
+                        <p>
+                            Czytniki tekstu czytają tylko tekst na stronie i omijają elementy takie jak nawigacja.
+                            Czytniki tekstu używają osoby z różnymi niepełnosprawnościami, np. przez osoby niewidome, dyslektycy.
+                        </p>
+                    </div>
+                    <img src="{{ asset('img/disabled_lesson.jpg') }}" alt="Mężczyzna, który tłumaczy coś niewidzącej dziewczynce. Siedzą przy laptopie."/>
+                </div>
+            </section>
+            <section class="topic-center" style="background-color: rgba(212,148,76,0.6);">
+                <h3>Oprogramowanie do rozpoznawania mowy</h3>
+                <div class="text-left">
+                    <div class="content-rest">
+                        <p>
+                            Z oprogramowania korzystają osoby, które nie mogą wprowadzać informacji rękami.
+                            Użytkownik może napisać wiadomość, kliknąć odnośnik w menu strony lub link za pomocą komendy głosowej.
+                        </p>
+                    </div>
+                    <img src="{{ asset('img/disabled_lesson.jpg') }}" alt="Mężczyzna, który tłumaczy coś niewidzącej dziewczynce. Siedzą przy laptopie."/>
+                </div>
+            </section>
+            <section class="topic-center" style="background-color: rgba(194,194,194,0.6);">
+                <h3>Wskaźnik</h3>
+                <div class="text-right">
+                    <div class="content-rest">
+                        <p>
+                            Urządzenie przyczepione do głowy. Używane przez osoby, które nie mogą używać rąk.
+                            Wskaźnik służy do naciskania klawiszy na klawiaturze, elementów w telefonie.
+                        </p>
+                    </div>
+                    <img src="{{ asset('img/disabled_lesson.jpg') }}" alt="Mężczyzna, który tłumaczy coś niewidzącej dziewczynce. Siedzą przy laptopie."/>
+                </div>
+            </section>
+            <section class="topic-center" style="background-color: rgba(212,148,76,0.6);">
+                <h3>Czytnik Braille’a</h3>
+                <div class="text-left">
+                    <div class="content-rest">
+                        <p>
+                            Czytnik umożliwia przeczytanie wyświetlanego tekstu w języku Braille’a.
+                            Użytkownik dotyka plastikowe szpilki, które wyskakują, aby formować kolejne litery do przeczytania.
+                        </p>
+                    </div>
+                    <img src="{{ asset('img/disabled_lesson.jpg') }}" alt="Mężczyzna, który tłumaczy coś niewidzącej dziewczynce. Siedzą przy laptopie."/>
+                </div>
+            </section>
+        </article>
+        <article id="wcag">
+            <div style="background-color: #DAD33E;">
+                <h2 class="header-center">Dokument WCAG</h2>
+                <div class="divisor"></div>
+                <section class="topic-page-center">
+                    <div class="content-rest">
+                        <p>
+                            Dokument Web Accessibility Content Guidelines (WCAG) to zbiór wytycznych, które pomagają twórcom w projektowaniu stron dla osób z niepełnosprawnościami.
+                        </p>
+                        <p>
+                            Dokument publikowany jest przez <strong>Web Accessibility Initiative</strong> (WAI), który jest
+                            częścią <strong>World Wide Web Consortium</strong> (W3C). World Wide Web Consortium
+                            jest organizacją, która ustala standardy WWW: HTML, CSS i nie tylko.
+                        </p>
+                    </div>
+                    <img src="{{ asset('img/disabled_lesson.jpg') }}" alt=""/>
+                </section>
+            </div>
+            <section class="topic-center" style="background-color: rgba(217,209,61,0.6);">
+                <h3>Historia Web Content Accessibility Guidelines</h3>
+                <div class="text-right">
+                    <div class="content-rest">
+                        <p>
+                            <u>WCAG 1.0</u><br/>
+                            5 maja 1999 roku Web Accessibility Initiative uchwala standard WCAG (po polsku Wytyczne dostępności stron internetowych).
+                            Jest to jedna z pierwszych prób udokumentowania technik projektowania dla zawartości dostępnej cyfrowo.
+                            Ta wersja dokumentu skupia się głównie na języku HTML.
+                        </p>
+                        <p>
+                            <u>WCAG 2.0</u><br/>
+                            Kolejna wersja wydana 11 grudnia 2008 roku. Skupiła się na uwzględnieniu większej liczby dostępnych technologii.
+                            Wprowadzono też cztery główne zasady: postrzegalność, funkcjonalność, zrozumiałość i solidność.
+                            Jest do obecny standard, odświeżany do kolejnych wersji.
+                        </p>
+                        <p>
+                            <u>WCAG 2.1 (aktualna)</u><br/>
+                            Wersja wydana 5 czerwca 2018 roku wprowadza aktualizacje, aby dostosować się do rozwoju sieci i technologii.
+                            <b>Jest to obecna używana wersja dokumentu</b>. Wprowadza dodatkowe kryteria, m.in.
+                            dla urządzeń mobilnych i dla osób z problemami ze wzrokiem.
+                        </p>
+                    </div>
+                    <img src="{{ asset('img/disabled_lesson.jpg') }}" alt="Mężczyzna, który tłumaczy coś niewidzącej dziewczynce. Siedzą przy laptopie."/>
+                </div>
+            </section>
+            <section class="topic-center" style="background-color: rgba(194,194,194,0.6);">
+                <h3>Struktura dokumentu</h3>
+                <div class="text-left">
+                    <div class="content-rest">
+                        <p class="list-glue">
+                            Dokument WCAG 2.1 bazuje na <b>4 zasadach</b>:
+                        </p>
+                            <ul>
+                                <li>Postrzegalność – zawartość strony jest odbierana za pomocą różnych zmysłów. Osoby pozbawione jednego ze zmysłów nadal swobodnie korzystają ze strony.</li>
+                                <li>Funkcjonalność – z zawartości można korzystać nie tylko przy pomocy klawiatury lub myszy. Pamiętaj, że wiele osób niepełnosprawnych używa innych urządzeń do nawigacji po stronie.</li>
+                                <li>Zrozumiałość – treść i działanie strony są zrozumiałe dla użytkowników, np. z dysleksją.</li>
+                                <li>Solidność (w prawie polskim i unijnym to Kompatybilność) – zawartość spełnia standardy WWW. Obsługiwana jest przez różne programy: czytniki, przeglądarki.</li>
+                            </ul>
+                        <p>
+                            Zasady grupują <u>wytyczne</u>, które wskazują rozwiązania problemów napotykanych na stronach internetowych. Dokument zawiera ich 13.
+                        </p>
+                    </div>
+                    <img src="{{ asset('img/disabled_lesson.jpg') }}" alt="Mężczyzna, który tłumaczy coś niewidzącej dziewczynce. Siedzą przy laptopie."/>
+                </div>
+            </section>
+            <section class="topic-center" style="background-color: rgba(217,209,61,0.6);">
+                <h3>Kryteria sukcesu</h3>
+                <div class="text-right">
+                    <div class="content-rest">
+                        <p class="list-glue">
+                            W wytycznych znajdują się <strong>kryteria sukcesu</strong>. Pozwalają
+                            one sprawdzić, czy zaprojektowana strona uwzględnia potrzeby użytkowników, takie jak:
+                        </p>
+                            <ul>
+                                <li>użycie klawiatury,</li>
+                                <li>odpowiedni kontrast,</li>
+                                <li>jasny opis elementów,</li>
+                                <li>podpowiedzi przy wypełnianiu formularzy.</li>
+                            </ul>
+                        <p class="list-glue">
+                            Kryteria sukcesu zawierają techniki, które pomagają spełnić kryterium. Są to techniki:
+                        </p>
+                            <ul>
+                                <li>Wystarczające – skuteczne sposoby, które pozwolą spełnić kryterium,</li>
+                                <li>Pomocnicze – pomocne sposoby na stworzenie strony dla jak najszerszej grupy odbiorców,</li>
+                                <li>Defekty – opisują problemy, które tworzą bariery dla użytkownika lub uniemożliwiają spełnienie kryterium.</li>
+                            </ul>
+                    </div>
+                    <img src="{{ asset('img/disabled_lesson.jpg') }}" alt="Mężczyzna, który tłumaczy coś niewidzącej dziewczynce. Siedzą przy laptopie."/>
+                </div>
+            </section>
+            <section class="topic-center" style="background-color: rgba(194,194,194,0.6);">
+                <h3>Kryteria sukcesu – poziomy </h3>
+                <div class="text-left">
+                    <div class="content-rest">
+                        <p class="list-glue">
+                            Każde kryterium ma poziom, który określa dostępność strony. W dokumencie WCAG 2.1 to 3 poziomy zgodności:
+                        </p>
+                            <ul>
+                                <li>
+                                    Poziom A – najniższy poziom zgodności. Problemy, które muszą zostać rozwiązane, aby niepełnosprawni
+                                    użytkownicy mogli swobodnie korzystać ze strony. To m.in. tekst alternatywny, bez którego osoby niewidzące nie zrozumieją zawartości obrazka.
+                                </li>
+                                <li>
+                                    Poziom AA – problemy, które powinny zostać rozwiązane. Niespełnienie ich sprawia, że część użytkowników może mieć
+                                    problem z dostępem lub korzystaniem z zawartości. <b>Jest to poziom, który muszą spełniać strony i aplikacje podmiotów publicznych.</b>
+                                    Opisuje to <u>ustawa o dostępności cyfrowej</u>.
+                                <li>
+                                    Poziom AAA – problemy, które mogą zostać rozwiązane. Jeśli zostaną rozwiązane, strona
+                                    usuwa większość możliwych przeszkód na stronie. Trudno osiągnąć wymagania na tym poziomie, niewiele stron je spełnia.
+                                </li>
+                            </ul>
+                    </div>
+                    <img src="{{ asset('img/disabled_lesson.jpg') }}" alt="Mężczyzna, który tłumaczy coś niewidzącej dziewczynce. Siedzą przy laptopie."/>
+                </div>
+            </section>
+        </article>
+        <article id="aria">
+            <div style="background-color: #55AF5A;">
+                <h2 class="header-center">WAI-ARIA</h2>
+                <div class="divisor"></div>
+                <section class="topic-page-center">
+                    <div class="content-rest">
+                        <p>
+                            WAI-ARIA (Web Accessibility Initiative-Accessible Rich Internet Applications) to uzupełnienie standardu HTML5.
+                            Jest odpowiedzią na rozwój stron, które stają się bardziej interaktywne.
+                        </p>
+                        <p>
+                            WAI-ARIA pozwala urządzeniom przekazać więcej informacji o stronie.
+                            Ułatwia też tworzenie własnych elementów dostępnych cyfrowo.
+                            Często stosuje się go do tworzenia interaktywnych funkcjonalności z użyciem języka JavaScript i AJAX.
+                        </p>
+                    </div>
+                    <img src="{{ asset('img/disabled_lesson.jpg') }}" alt=""/>
+                </section>
+            </div>
+            <section class="topic-center" style="background-color: rgba(86,176,91,0.6);">
+                <h3>Atrybuty ARIA</h3>
+                <div class="text-right">
+                    <div class="content-rest">
+                        <p>
+                            <strong>Role</strong> zmieniają znaczenie standardowych znaczników. Opisują elementy na stronie, czym są i co robią.
+                            Mogą informować o pasku postępu, wyskakującym oknie, funkcji elementu zbudowanego z jednego lub kilku znaczników HTML.
+                        </p>
+                        <p>
+                            <strong>Statusy</strong> opisują obecne właściwości elementu, które mogą ulec zmianie (np. czy jest nieaktywny, zaznaczony).
+                        </p>
+                        <p>
+                            <strong>Właściwości</strong> nadają elementom dodatkowe znaczenie, np. wymagane pole formularza. Zazwyczaj się nie zmieniają.
+                        </p>
+                    </div>
+                    <img src="{{ asset('img/disabled_lesson.jpg') }}" alt="Mężczyzna, który tłumaczy coś niewidzącej dziewczynce. Siedzą przy laptopie."/>
+                </div>
+            </section>
+        </article>
+        <article id="wiecej">
+            <div style="background-color: #C3C3C3;">
+                <h2 class="header-center">Co więcej na stronie</h2>
+                <div class="divisor"></div>
+                <section class="topic-page-center">
+                    <div class="content-rest">
+                        <p>
+                            Jesteś twórcą stron internetowych? Chcesz dowiedzieć się więcej o projektowaniu dostępnych stron?
+                            Może po prostu ciekawi cię tematyka WCAG? Przejdź do Strefy twórcy.
+                        </p>
+                        <p>
+                            Strona Ci się spodobała? Może chcesz zostawić opinię? Przejdź do strony z opiniami.
+                        </p>
+                    </div>
+                </section>
+            </div>
         </article>
     </main>
     {% include 'footer.html.twig' %}

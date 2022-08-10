@@ -1,37 +1,70 @@
-.content {
-    /*display: flex;*/
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-#navbar {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+nav#sidebar {
+    height: 100%;
+    width: 190px;
     position: fixed;
+    z-index: 1;
+    top: 255px;
+    left: 0;
+    overflow-x: hidden;
 }
-
-.navbar-wcag-content ul {
-    list-style-type: none;
-}
-.subnav-content ul {
-    background-color: lightgray;
-}
-
-.subnav, .subnav-content, .navbar-wcag-content {
+#sidebar-btn-mobile {
     display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    bottom: 0;
+    padding: 0.5em 1em;
+    background-color: #b7cfe5;
+    font-family: "Varta", sans-serif;
+    font-size: 1.1em;
+    border-top-right-radius: 10px;
 }
-.navbar-wcag:hover .subnav, .subnav:hover .subnav-content, .subnav:focus .subnav-content,
-.navbar-wcag:hover .navbar-wcag-content, .navbar-wcag:focus .navbar-wcag-content {
-    display: flex;
-    /* focus-within? */
+@media screen and (max-width: 1392px) {
+    nav#sidebar {
+        display: none;
+    }
+    #sidebar-btn-mobile {
+        display: block;
+    }
 }
-
-.btn-creator-style button {
-    border: none;
-    background-color: lightblue;
-    padding: 2em;
-    /* border-bottom: 1px solid black; */
-    width: 10em;
-    text-align: left;
-    border-radius: 10px;
+nav#sidebar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.main-item {
+    background-color: #2680d0;
+    padding: 0.5em;
+}
+.main-item:first-child {
+    border-top-right-radius: 10px;
+}
+.main-item:last-child {
+    border-bottom-right-radius: 10px;
+}
+nav#sidebar ul ul {
+    list-style-type: none;
+    margin: 0;
+}
+nav#sidebar > li {
+    display: block;
+}
+#wcag-list-content {
+    background-color: #ababab;
+    padding: 0;
+    margin: 0;
+}
+#perceivable, #operable, #understandable, #robust {
+    padding: 0.2em 0.5em;
+    cursor: pointer;
+}
+#perceivable-items, #operable-items, #understandable-items, #robust-items {
+    display: none;
+    width: 100%;
+    padding: 1em;
+    background-color: #ababab;
+}
+#perceivable:hover, #operable:hover, #understandable:hover, #robust:hover {
+    width: 100%;
+    background-color: #5b7b9a;
 }

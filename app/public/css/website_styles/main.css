@@ -9,7 +9,7 @@ body {
 /*    font-size: 1.3em;*/
 /*    font-weight: 400;*/
 /*}*/
-h1, h2, h3 {
+h1, h2, h3, h4 {
     font-family: "DM Sans", sans-serif;
 }
 h1 {
@@ -26,6 +26,9 @@ h3 {
     margin-left: 0.3em;
     font-weight: bold;
     font-size: 1.8em;
+}
+h4 {
+    font-size: 1.35em;
 }
 p:not(#info p, #author p), a, ul, ol {
     font-family: "Varta", sans-serif;
