@@ -57,6 +57,9 @@
     column-gap: 3em;
     padding-bottom: 1.5em;
 }
+.img-reader-size {
+    max-width: 400px;
+}
 /*#regulacje section:nth-child(odd) {*/
 /*    background-color: rgba(194,194,194,0.4);*/
 /*}*/
