@@ -128,7 +128,7 @@ $(document).ready(function() {
 scrollBtn = document.getElementById('scroll-btn');
 
 window.onscroll = function() {
-    if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+    if (document.body.scrollTop > 3000 || document.documentElement.scrollTop > 3000) {
         scrollBtn.style.display = 'block';
     }
     else {
@@ -149,10 +149,14 @@ scrollBtn.addEventListener('keydown', function(e) {
     }
 });
 
-
-/* -- hamburger menu -- */
+/* --- hamburger menu --- */
+/*
 const hamb = document.getElementById('hamb');
+const closeHamb = document.getElementById('close-hamb');
 
 hamb.addEventListener('click', () => {
-   document.body.style.backgroundColor = 'red';
+    document.getElementById("myNav").style.width = "45%";
 });
+closeHamb.addEventListener('click', () => {
+    document.getElementById("myNav").style.width = "0%";
+});*/

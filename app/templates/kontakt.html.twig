@@ -22,8 +22,9 @@
                     {% endfor %}
                 </div>
             {% else %}
+{#                TOD: .page -> row gap psuje #}
                 <div>
-                    {{ 'Brak opinii' }}
+                    <p>{{ 'Brak opinii' }}</p>
                 </div>
             {% endif %}
             <div>
@@ -41,4 +42,8 @@
             {% endif %}
     </main>
     {% include 'footer.html.twig' %}
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
 {% endblock %}

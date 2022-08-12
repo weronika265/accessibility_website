@@ -1,4 +1,4 @@
-{% extends 'base.html.twig' %}
+{#{% extends 'base.html.twig' %}#}
 
 {% block body %}
     <nav aria-label="Creator sidebar" id="sidebar">
@@ -46,6 +46,8 @@
     </nav>
 
     <button id="sidebar-btn-mobile">Menu boczne</button>
+{% endblock %}
+{# TODO: sidebar ma być przy main tag?? #}
 
 {#    TODO: poprawić, bo po hover już nie podświetla ponownie i zamykać poprzednie po naciśnięciu innej zasady -> + zamykać inne po naciśnięciu jednej z pozycji z zasad #}
     {% block javascripts %}
@@ -156,6 +158,3 @@
             // }
         </script>
     {% endblock %}
-
-{% endblock %}
-{# TODO: sidebar ma być przy main tag?? #}

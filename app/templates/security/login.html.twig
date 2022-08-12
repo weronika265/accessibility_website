@@ -4,17 +4,6 @@
     Logowanie
 {% endblock %}
 
-{#{% block stylesheets %}#}
-{#    <style>#}
-{#        footer {#}
-{#            position: absolute;#}
-{#            left: 0;#}
-{#            bottom: 0;#}
-{#            width: 100%;#}
-{#        }#}
-{#    </style>#}
-{#{% endblock %}#}
-
 {% block body %}
     <div id="user-actions">
         <a href="{{ url('home_index') }}">
@@ -52,8 +41,10 @@
         </form>
     </div>
     {% include 'footer.html.twig' %}
+{% endblock %}
 
     {% block javascripts %}
+        {{ parent() }}
         <script>
             const passwd = document.getElementById('password');
             const showElem = document.getElementById('show');
@@ -71,4 +62,3 @@
         </script>
     {% endblock %}
 
-{% endblock %}

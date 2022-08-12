@@ -86,7 +86,7 @@
                 </div>
             {% else %}
                 <div>
-                    {{ 'Brak opinii' }}
+                    <p>{{ 'Brak opinii' }}</p>
                 </div>
             {% endif %}
             <div>
@@ -119,4 +119,8 @@
         </article>
     </main>
     {% include 'footer.html.twig' %}
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
 {% endblock %}

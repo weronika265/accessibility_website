@@ -26,22 +26,22 @@ class OpinionFixtures extends AbstractBaseFixtures
      */
     public function loadData(): void
     {
-        if (null === $this->manager || null === $this->faker) {
-            return;
-        }
-
-        $this->createMany(5, 'opinions', function (int $i) {
-            $opinion = new Opinion();
-            $opinion->setMessage($this->faker->sentence);
-            $opinion->setDate(\DateTimeImmutable::createFromMutable($this->faker->dateTimeBetween($startDate = '-1 years', $endDate = '+1 years', $timezone = null)));
-            $opinion->setIsAccepted(false);
-            $author = $this->getRandomReference('users');
-            $opinion->setAuthor($author);
-
-            return $opinion;
-        });
-
-        $this->manager->flush();
+//        if (null === $this->manager || null === $this->faker) {
+//            return;
+//        }
+//
+//        $this->createMany(5, 'opinions', function (int $i) {
+//            $opinion = new Opinion();
+//            $opinion->setMessage($this->faker->sentence);
+//            $opinion->setDate(\DateTimeImmutable::createFromMutable($this->faker->dateTimeBetween($startDate = '-1 years', $endDate = '+1 years', $timezone = null)));
+//            $opinion->setIsAccepted(false);
+//            $author = $this->getRandomReference('users');
+//            $opinion->setAuthor($author);
+//
+//            return $opinion;
+//        });
+//
+//        $this->manager->flush();
     }
 
     /**

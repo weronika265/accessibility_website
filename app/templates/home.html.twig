@@ -12,10 +12,10 @@
             <h1 class="header-margin-cut">Cel serwisu</h1>
             <div class="center-section-size">
                 <p>
-                    Chciałam, aby każdy użytkowników Internetu mógł zapoznać się z terminem dostępności <br/>i powiązanymi informacjami. Założeniem było przestawienie Tobie informacji w sposób przejrzysty.
+                    Chciałam, aby każdy użytkowników Internetu mógł zapoznać się z terminem dostępności <br/>i powiązanymi tematami. Założeniem było przestawienie Tobie informacji przy pomocy nie tylko tekstu, ale też grafik i przykładów.
                 </p>
                 <p>
-                    Na pewno znajdziesz coś dla siebie. Nie ważne, czy tylko ciekawi cię tematyka dostępności stron internetowych, czy jesteś twórcą takich stron.
+                    Na pewno znajdziesz coś dla siebie. Nie ważne, czy tylko ciekawi Cię tematyka dostępności stron internetowych, czy jesteś twórcą takich stron.
                 </p>
             </div>
         </section>
@@ -60,18 +60,15 @@
                 <div class="btn-description">
                     <p class="content-left">
                         Jesteś twórcą stron i chcesz dowiedzieć się, na czym polegają wytyczne WCAG 2.1? Dobrze trafiłeś – w strefie twórcy znajdziesz najważniejsze informacje i interaktywne przykłady.
-                        Przy tworzeniu własnych stron możesz skorzystać z checklisty WCAG 2.1, która pozwoli śledzić spełnione kryteria.
+                        Przy tworzeniu własnych stron możesz skorzystać z checklisty WCAG 2.1, która pomoże śledzić spełnione kryteria.
                     </p>
                     <a href="{{ url('tworca_index') }}" style="box-shadow: 2px 2px 10px #b0b0b0;">Przejdź do strefy twórcy</a>
                 </div>
         </section>
     </main>
     {% include 'footer.html.twig' %}
+{% endblock %}
 
-    {% block javascripts %}
-        <script>
-            {{ parent() }}
-        </script>
-    {% endblock %}
-
+{% block javascripts %}
+        {{ parent() }}
 {% endblock %}

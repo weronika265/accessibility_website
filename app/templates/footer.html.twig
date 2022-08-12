@@ -1,6 +1,3 @@
-{% extends 'base.html.twig' %}
-{#??#}
-
 {% block body %}
     <footer>
         <div id="info">
@@ -16,9 +13,9 @@
             <p>Weronika Ruszel | Elektroniczne Przetwarzanie Informacji | 2022</p>
         </div>
     </footer>
-    <button aria-label="Przejdź na górę strony" id="scroll-btn" tabindex="0"><span id="arrow"></span></button>
+    <button aria-label="Przejdź na górę strony" id="scroll-btn" tabindex="0"><span id="arrow"></span><span style="position: absolute; bottom: 15px; right: 5px;">Do góry</span></button>
 
-    <div role="button">
+    <div role="menu">
         <div aria-label="Opcje dostępności" tabindex="0" id="a11y-options"><img src="{{ asset('img/accessibility.png') }}" alt=""/></div>
         <div id="a11y-options-expanded">
             <div class="a11y-options-space">
@@ -40,12 +37,4 @@
             </div>
         </div>
     </div>
-
-    {#??#}
-    {% block javascripts %}
-        <script>
-            {{ parent() }}
-        </script>
-    {% endblock %}
-
 {% endblock %}

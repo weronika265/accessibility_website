@@ -24,13 +24,13 @@ class ContentFixtures extends AbstractBaseFixtures
      */
     public function loadData(): void
     {
-        $this->createMany(13, 'content', function (int $i) {
-            $content = new Content();
-            $content->setCategory($this->faker->word);
-
-            return $content;
-        });
-
-        $this->manager->flush();
+//        $this->createMany(13, 'content', function (int $i) {
+//            $content = new Content();
+//            $content->setCategory($this->faker->word);
+//
+//            return $content;
+//        });
+//
+//        $this->manager->flush();
     }
 }

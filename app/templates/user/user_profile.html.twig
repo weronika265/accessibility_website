@@ -25,7 +25,7 @@
                 </div>
             {% else %}
                 <div>
-                    {{ 'Brak opinii do zmoderowania' }}
+                    <p>{{ 'Brak opinii do zmoderowania' }}</p>
                 </div>
             {% endif %}
             <div>
@@ -34,4 +34,8 @@
         </article>
     </main>
     {% include 'footer.html.twig' %}
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
 {% endblock %}

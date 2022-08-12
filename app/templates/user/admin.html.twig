@@ -26,8 +26,8 @@
                                         {{ opinion.message }}
                                     </div>
                                     <div class="message-action-space opinions-enabled">
-                                        <a href="{{ url('opinion_accept', {id: opinion.id}) }}" onclick="confirmation()" class="message-action-accept" data-id="{{ opinion.id }}">Zaakceptuj</a>
-                                        <a href="{{ url('opinion_delete', {id: opinion.id}) }}" onclick="confirmation()" class="message-action-delete" data-id="{{ opinion.id }}">Odrzuć</a>
+                                        <a href="{{ url('opinion_accept', {id: opinion.id}) }}" onclick="confirmation_opinion()" class="message-action-accept" data-id="{{ opinion.id }}">Zaakceptuj</a>
+                                        <a href="{{ url('opinion_delete', {id: opinion.id}) }}" onclick="confirmation_opinion()" class="message-action-delete" data-id="{{ opinion.id }}">Odrzuć</a>
                                     </div>
                                 </div>
                             </section>
@@ -36,7 +36,7 @@
                 </div>
             {% else %}
                 <div>
-                    {{ 'Brak opinii do zmoderowania' }}
+                    <p>{{ 'Brak opinii do zmoderowania' }}</p>
                 </div>
             {% endif %}
             <div>
@@ -63,8 +63,8 @@
                                         {{ comment.message }}
                                     </div>
                                     <div class="message-action-space comments-enabled">
-                                        <a href="{{ url('comment_accept', {id: comment.id}) }}" onclick="confirmation()" class="message-action-accept" data-id="{{ comment.id }}">Zaakceptuj</a>
-                                        <a href="{{ url('comment_delete', {id: comment.id}) }}" onclick="confirmation()" class="message-action-delete" data-id="{{ comment.id }}">Odrzuć</a>
+                                        <a href="{{ url('comment_accept', {id: comment.id}) }}" onclick="confirmation_comment()" class="message-action-accept" data-id="{{ comment.id }}">Zaakceptuj</a>
+                                        <a href="{{ url('comment_delete', {id: comment.id}) }}" onclick="confirmation_comment()" class="message-action-delete" data-id="{{ comment.id }}">Odrzuć</a>
                                     </div>
                                 </div>
                             </section>
@@ -73,7 +73,7 @@
                 </div>
             {% else %}
                 <div>
-                    {{ 'Brak komentarzy do zmoderowania' }}
+                    <p>{{ 'Brak komentarzy do zmoderowania' }}</p>
                 </div>
             {% endif %}
             <div>
@@ -82,60 +82,63 @@
         </article>
     </main>
     {% include 'footer.html.twig' %}
+{% endblock %}
 
-    {% block javascripts %}
-        <script>
-            const opinions_enabled = document.querySelector('.opinions-enabled');
-            const opinions_edit = document.querySelector('.opinions-edit');
-            const opinions_close = document.querySelector('.opinions-close');
-            const comments_enabled = document.querySelector('.comments-enabled');
-            const comments_edit = document.querySelector('.comments-edit');
-            const comments_close = document.querySelector('.comments-close');
+{% block javascripts %}
+    {{ parent() }}
+    <script>
+        const opinions_enabled = document.querySelector('.opinions-enabled');
+        const opinions_edit = document.querySelector('.opinions-edit');
+        const opinions_close = document.querySelector('.opinions-close');
+        const comments_enabled = document.querySelector('.comments-enabled');
+        const comments_edit = document.querySelector('.comments-edit');
+        const comments_close = document.querySelector('.comments-close');
 
-            const opinions = $('.opinions-enabled:hidden');
-            const comments = $('.comments-enabled:hidden');
+        const opinions = $('.opinions-enabled:hidden');
+        const comments = $('.comments-enabled:hidden');
 
-            $(document).ready(function() {
-                opinions_edit.addEventListener('click', function () {
-                    opinions_edit.style.display = 'none';
-                    opinions_close.style.display = 'block';
-                    for(let i of opinions) {
-                        i.style.display = 'flex';
-                        i.style.alignItems = 'center';
-                        i.style.columnGap = '0.2em';
-                    }
-                });
-                opinions_close.addEventListener('click', function () {
-                    opinions_edit.style.display = 'block';
-                    opinions_close.style.display = 'none';
-                    for(let i of opinions) {
-                        i.style.display = 'none';
-                    }
-                });
-
-                comments_edit.addEventListener('click', function () {
-                    comments_edit.style.display = 'none';
-                    comments_close.style.display = 'block';
-                    for(let i of comments) {
-                        i.style.display = 'flex';
-                        i.style.alignItems = 'center';
-                        i.style.columnGap = '0.2em';
-                    }
-                });
-
-                comments_close.addEventListener('click', function () {
-                    comments_edit.style.display = 'block';
-                    comments_close.style.display = 'none';
-                    for(let i of comments) {
-                        i.style.display = 'none';
-                    }
-                });
+        $(document).ready(function() {
+            opinions_edit.addEventListener('click', function () {
+                opinions_edit.style.display = 'none';
+                opinions_close.style.display = 'block';
+                for(let i of opinions) {
+                    i.style.display = 'flex';
+                    i.style.alignItems = 'center';
+                    i.style.columnGap = '0.2em';
+                }
+            });
+            opinions_close.addEventListener('click', function () {
+                opinions_edit.style.display = 'block';
+                opinions_close.style.display = 'none';
+                for(let i of opinions) {
+                    i.style.display = 'none';
+                }
             });
 
-            function confirmation() {
-                return confirm('Czy na pewno chcesz zaakceptować komentarz?');
-            }
-        </script>
-    {% endblock %}
+            comments_edit.addEventListener('click', function () {
+                comments_edit.style.display = 'none';
+                comments_close.style.display = 'block';
+                for(let i of comments) {
+                    i.style.display = 'flex';
+                    i.style.alignItems = 'center';
+                    i.style.columnGap = '0.2em';
+                }
+            });
 
+            comments_close.addEventListener('click', function () {
+                comments_edit.style.display = 'block';
+                comments_close.style.display = 'none';
+                for(let i of comments) {
+                    i.style.display = 'none';
+                }
+            });
+        });
+
+        function confirmation_opinion() {
+            return confirm('Czy na pewno chcesz zaakceptować opinię?');
+        }
+        function confirmation_comment() {
+            return confirm('Czy na pewno chcesz zaakceptować komentarz?');
+        }
+    </script>
 {% endblock %}

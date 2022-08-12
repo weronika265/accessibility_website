@@ -779,17 +779,19 @@
     {% include 'footer.html.twig' %}
 
 {#    TODO: dodać do ogólnych skryptów #}
-    {% block javascripts %}
-        <!-- F’in sweet Webflow Hacks -->
-        <script>
-            // set a short timeout before taking action
-            // to allow hash to be set
-            setTimeout(()=>{
-                // uses HTML5 history API to manipulate the location bar
-                history.replaceState('', document.title, window.location.origin + window.location.pathname + window.location.search);
-            }, 5); // 5 millisecond timeout in this case
-        </script>
 
-    {% endblock %}
+{% endblock %}
+
+{% block javascripts %}
+    <script>
+        {{ parent() }}
+    <!-- F’in sweet Webflow Hacks -->
+        // set a short timeout before taking action
+        // to allow hash to be set
+        setTimeout(()=>{
+            // uses HTML5 history API to manipulate the location bar
+            history.replaceState('', document.title, window.location.origin + window.location.pathname + window.location.search);
+        }, 5); // 5 millisecond timeout in this case
+    </script>
 
 {% endblock %}
