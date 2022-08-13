@@ -43,7 +43,7 @@
                         <li>jaka jest funkcja elementu.</li>
                     </ul>
                 <p>
-                    Tekst alternatywny jest rozpoznawany przez technologie asystujące: czytniki tekstu, czytniki Braille'a. Mogą one przeczytać zawartość użytkownikowi.
+                    Tekst alternatywny jest rozpoznawany przez technologie asystujące: czytniki tekstu, czytniki Braille'a. Mogą one przeczytać wprowadzony tekst użytkownikowi.
                 </p>
                 <div style="text-align: center;">
                     <code>
@@ -112,7 +112,7 @@
                 <div>{{ form_label(form.message) }}</div>
                 <div>{{ form_widget(form.message, { 'attr': {'rows' : '6', 'cols' : '60'} } ) }}</div>
                 <div>
-                    <input type="submit" value="{{ 'Dodaj komentarz' }}" class="center-item-opinion" style="padding: 0.5em 3em; margin-top: 1em; cursor: pointer;"/>
+                    <input type="submit" value="{{ 'Dodaj komentarz' }}" class="submit-btn"/>
                 </div>
                 {{ form_end(form) }}
             {% endif %}

@@ -35,55 +35,58 @@
                         <li>
                             błyskać częściej niż 3 razy na sekundę,
                         </li>
-                        LUB
+                        lub
                         <li>
-                            przekraczać wartości granicznych dla:
-                            <ul>
-                                <li>rozmiaru,</li>
-                                <li>jasności.</li>
-                            </ul>
+                            <u><a target="_blank" href="https://www.w3.org/WAI/WCAG21/Understanding/three-flashes-or-below-threshold.html#dfn-general-flash-and-red-flash-thresholds">przekraczać wartości granicznych dla błysków</a></u>.
                         </li>
                     </ul>
                 <p>
                     <strong>OSTRZEŻENIE</strong><br/>
-                    Poniższe przykłady mogą wywołać atak padaczki.<br/><br/>
-                    Światło białe:<br/>
-                    <video width="320" height="240" controls>
-                        <source src="{{ asset('img/2_3_1.mp4') }}" type="video/mp4" />
-                        Twoja przeglądarka nie wspiera elementów wideo.
-                    </video><br/><br/>
-                    Światło czerwone:<br/>
-                    <video width="320" height="240" controls>
-                        <source src="{{ asset('img/2_3_1_red.mp4') }}" type="video/mp4" />
-                        Twoja przeglądarka nie wspiera elementów wideo.
-                    </video><br/><br/>
-                    Błysk spełniający kryterium:<br/>
-                    <video width="320" height="240" controls>
-                        <source src="{{ asset('img/2_3_1_dobry.mp4') }}" type="video/mp4" />
-                        Twoja przeglądarka nie wspiera elementów wideo.
-                    </video><br/><br/>
+                    Poniższe przykłady mogą wywołać atak padaczki.
+                </p>
+                <div>
+                    <p>
+                        Światło białe:<br/>
+                        <video width="320" height="240" controls>
+                            <source src="{{ asset('img/2_3_1.mp4') }}" type="video/mp4" />
+                            Twoja przeglądarka nie wspiera elementów wideo.
+                        </video><br/><br/>
+                        Światło czerwone:<br/>
+                        <video width="320" height="240" controls>
+                            <source src="{{ asset('img/2_3_1_red.mp4') }}" type="video/mp4" />
+                            Twoja przeglądarka nie wspiera elementów wideo.
+                        </video><br/><br/>
+                        Błysk, który spełnia kryterium:<br/>
+                        <video width="320" height="240" controls>
+                            <source src="{{ asset('img/2_3_1_dobry.mp4') }}" type="video/mp4" />
+                            Twoja przeglądarka nie wspiera elementów wideo.
+                        </video>
+                    </p>
+                </div>
+                <p>
                     <strong>UWAGA</strong><br/>
-                    Jeśli nie zastosujesz się do tego kryterium, strona będzie niedostępna dla części osób.<br/>
+                    Jeśli nie zastosujesz się do tego kryterium, strona będzie niedostępna dla części osób.
                 </p>
                 <p>
-                    Strony, które zawierają treści błyskające 3 razy na sekundę lub częściej, mogą wywoływać ataki padaczki fotogennej.<br/>
-                    Użytkownicy są jeszcze bardziej czuli na błyski czerwonego światła.<br/>
+                    Strony, które zawierają treści błyskające 3 razy na sekundę lub częściej, mogą wywoływać ataki padaczki fotogennej.
+                    Użytkownicy są jeszcze bardziej czuli na błyski czerwonego światła.
                 </p>
             </section>
             <section>
                 <h3 id="2_3_2">Kryterium sukcesu 2.3.2 Trzy błyski – Poziom AAA</h3>
                 <p>
-                    Kryterium ogranicza jeszcze bardziej parametry błysków w porównaniu do <a href="#2_3_1">Kryterium sukcesu 2.3.1 Trzy błyski lub wartości poniżej progu</a>.<br/>
-                    Sprawia to, że ograniczenia dotyczą nawet 1 piksela ekranu.<br/>
+                    Kryterium ogranicza jeszcze bardziej parametry błysków w porównaniu do <a href="#2_3_1">Kryterium sukcesu 2.3.1 Trzy błyski lub wartości poniżej progu</a>.
+                    Sprawia to, że ograniczenia dotyczą nawet 1 piksela ekranu.
                 </p>
             </section>
             <section>
                 <h3 id="2_3_3">Kryterium sukcesu 2.3.3 Animacja po interakcji – Poziom AAA</h3>
                 <p>
-                    Kiedy użytkownik wchodzi w interakcję z animowanymi elementami, pozwól mu wyłączyć wszelkie animacje.<br/><br/>
-                    <input type="button" value="Prześlij" id="inter-anim" /><br/>
-
-                    Wyjątkiem są animacje, które stanową ważną częścią pokazywanej treści.
+                    Kiedy użytkownik wchodzi w interakcję z animowanymi elementami, pozwól mu wyłączyć wszelkie animacje.
+                </p>
+                    <input type="button" value="Prześlij" id="inter-anim" />
+                <p>
+                    Wyjątkiem są animacje, które są ważną częścią pokazywanej treści.
                 </p>
                 <p class="list-glue">
                     Część użytkowników źle reaguje na ruch pojawiający się na stronie i może odczuwać:

@@ -31,10 +31,7 @@
                 <h3 id="1_3_1">Kryterium sukcesu 1.3.1 Informacje i relacje – Poziom A</h3>
                 <p>
                     Struktura strony, jej zawartość i relacje pomiędzy elementami mają być przedstawione w formie tekstowej lub są
-                    <strong>określone programowo</strong>. Oznacza to, że mają być obsługiwane przez technologie asystujące.
-                </p>
-                <p>
-                    Zazwyczaj treści określone programowo są lepsze od tekstu.
+                    <strong>określone programowo</strong>. Oznacza to, że mają być obsługiwane przez technologie asystujące. Zazwyczaj treści określone programowo są lepsze od tekstu.
                 </p>
                 <p>
                     Ten sposób prezentacji pozwala zrozumieć treść zarówno w przypadku, kiedy ktoś widzi stronę, jak i jej nie widzi (osoby niewidome).<br/>
@@ -42,7 +39,7 @@
                     Inni będą kierowali się oznaczeniem „*” lub „Wymagane”.
                 </p>
                 <p>
-                    Część użytkowników będzie oglądać stronę, a inne osoby będą rozumiały ją przez układ list, nagłówków, akapitów.<br/>
+                    Część osób będzie oglądać stronę, a inni będą rozumieli ją przez układ list, nagłówków, akapitów.
                 </p>
 {#                <p>#}
 {#                    Jak stronę będzie widział czytnik:#}
@@ -131,7 +128,7 @@
                     W przeciwnym przypadku część użytkowników może nie zrozumieć przekazu, przez złą kolejność odczytywania zawartości.
                 </p>
                 <p>
-                    Dzięki kolejności określonej programowo, użytkownicy z różnymi problemami mogą zapoznać się z treścią w sposób zamierzony przez twórcę.
+                    Dzięki kolejności określonej programowo, użytkownicy z różnymi niepełnosprawnościami mogą zapoznać się z treścią w sposób zamierzony przez twórcę.
                 </p>
                 <p>
                     <a href="{{ url('_1_3_2_dobry') }}">Dobra implementacja</a><br/>
@@ -141,7 +138,7 @@
             <div>
                 <h3 id="1_3_3">Kryterium sukcesu 1.3.3 Właściwości zmysłowe – Poziom A</h3>
                 <p class="list-glue">
-                    Instrukcje, które pozwalają zrozumieć cel i sposób korzystania z treści strony, nie opierają się tylko na właściwościach zmysłowych.
+                    Instrukcje, które pozwalają zrozumieć cel i sposób korzystania z treści na stronie, nie opierają się tylko na właściwościach zmysłowych.
                     Właściwości zmysłowe to np.:
                 </p>
                 <ul>
@@ -152,9 +149,9 @@
                     <li>dźwięk.</li>
                 </ul>
                 <p>
-                    Część osób nie rozpoznaje kolorów lub używa z technologii asystujących, które korzystają ze struktury strony i ją „czytają”.
-                    Taki użytkownik nie będzie widział kształtu czy położenia elementu na stronie.
-                    Przez to nie będzie mógł go zlokalizować, co ogranicza funkcjonalności dostępne na stronie.
+                    Część osób nie rozpoznaje kolorów lub używa technologii asystujących, które analizują strukturę strony i „czytają” ją użytkownikowi.
+                    Taki odbiorca najczęściej nie widzi kształtu czy położenia elementu na stronie i nie będzie mógł go zlokalizować.
+                    Ogranicza to funkcjonalności dostępne dla użytkownika na stronie.
                 </p>
                 <p>
                     Kryterium nie dotyczy narzędzi fizycznych, takich jak klawiatura z klawiszami strzałek.
@@ -166,7 +163,7 @@
                 </p>
                 <p>
                     <b>ŹLE</b><br/>
-                    Aby przejść dalej, wciśnij okrągły przycisk w kolorze zielonym, który znajduje się po lewej
+                    Aby przejść dalej, wciśnij okrągły przycisk w kolorze zielonym, który znajduje się po prawej
                     <button class="btn-example" style="margin-left: 0.5em;">Kliknij mnie</button>
                 </p>
                 <p>
@@ -176,12 +173,13 @@
                 </p>
             </div>
             <div>
+{#                TODO: POPRAWIĆ #}
                 <h3 id="1_3_4">Kryterium sukcesu 1.3.4 Orientacja – Poziom AA</h3>
                 <p>
-                    Zawartość strony ma być wyświetlana zarówno w orientacji pionowej, jak i poziomej.
+                    Zawartość strony ma być poprawnie wyświetlana zarówno w orientacji pionowej, jak i poziomej.
                 </p>
                 <p>
-                    Wyjątkiem są sytuacje, kiedy orientacja urządzenia jest ważna. Przykładem jest aplikacja do odczytywania nut.
+                    Wyjątkiem są sytuacje, kiedy orientacja urządzenia jest ważna. Przykład to aplikacja do odczytywania nut.
                     W orientacji pionowej użytkownik będzie miał problem z odczytywaniem i nawigowaniem po kolejnych stronach z nutami.
                     <strong>+ Grafika pion-poziom</strong>
                 </p>
@@ -199,15 +197,21 @@
 {#                    Technologie wspomagające odczytują i przedstawiają pola formularzy i ich cel, kiedy:#}
                 </p>
                     <ul>
-                        <li>pole w formularzu służy celowi, który jest opisany w <i>Przeznaczenie pól danych w komponentach interfejsu użytkowników</i> w dokumencie WCAG 2.1,</li> (dołączyć listę rozwijaną/ link/ to i to)
+                        <li>
+                            pole w formularzu służy celowi, który jest opisany w
+                            <u>
+                                <a target="_blank" href="https://www.w3.org/Translations/WCAG21-pl/#input-purposes">Przeznaczenie pól danych w komponentach interfejsu użytkowników</a>
+                            </u>
+                            w dokumencie WCAG 2.1,
+                        </li>
                         oraz
-                        <li>użyta technologia pozwala na odczytanie celu pól w formularzach. CHECK!!!</li>
+                        <li>użyta technologia pozwala na określenie typu pól w formularzach, czyli np. język znaczników HTML.</li>
                     </ul>
                 <p>
-                    Dzięki określeniu celu pól, użytkownikowi jest znacznie łatwiej wypełniać formularze.<br/>
+                    Dzięki określeniu typu pól, użytkownikowi jest znacznie łatwiej wypełniać formularze.
                 </p>
                 <p>
-                    Podstawowym sposobem na określenie celu formularza jest dodanie atrybutu 'type' do pola formularza &lt;input&gt;.
+                    Podstawowym sposobem na określenie celu pola formularza &lt;input&gt; jest dodanie do niego atrybutu 'type'.
                 </p>
                     <div>
                         <p>
@@ -219,8 +223,8 @@
                         &lt;input type="password"&gt;
                     </code>
                 <p class="list-glue" style="margin-top: 2em;">
-                    Aby jeszcze dokładniej określić cel pola, trzeba skorzystać z atrybutu 'autocomplete'. Ten atrybut pozwala na dookreślenie znaczenia pola,
-                    np. imienia (pierwsze, drugie, użytkownika) + wymienić inne?.<br/>
+                    Aby jeszcze dokładniej określić cel pola, trzeba skorzystać z atrybutu 'autocomplete'. Atrybut ten pozwala na dookreślenie znaczenia pola,
+                    np. imię: pierwsze, drugie lub użytkownika.<br/>
                     Atrybut 'autocomplete' pozwala także wypełnić pola wcześniej zapamiętanymi danymi. Jest to dużym ułatwieniem, również dla osób, które:
                 </p>
                     <ul>
@@ -237,10 +241,10 @@
                         &lt;input type="email" name="email"&gt;
                     </code>
                 <p style="margin-top: 2em;">
-                    Technologie asystujące dla zdefiniowanych pól mogą wyświetlać ikony, które dla części użytkowników są lepiej zrozumiałe niż tekst.<br/>
-                    Są to osoby z zaburzeniami poznawczymi, którym jest trudno czytać tekst oraz osoby mające dysleksję lub nieumiejące czytać.<br/>
+                    Technologie asystujące dla zdefiniowanych pól mogą wyświetlać ikony, które dla części użytkowników są lepiej zrozumiałe od tekstu.
+                    Są to osoby z zaburzeniami poznawczymi, którym jest trudno czytać tekst oraz osoby z dysleksją lub nieumiejące czytać.<br/>
                     <label for="email2"><i class="fa fa-envelope"></i></label>
-                    <input type="email" name="email" id="email2"><br/>
+                    <input type="email" name="email" id="email2">
                 </p>
             </div>
             <div>
@@ -251,22 +255,24 @@
                     <ul>
                         <li>komponenty interfejsu użytkownika (przyciski, linki, pola formularzy),</li>
                         <li>ikony,</li>
-                        <li>obszary kluczowe.</li>
+                        <li>obszary kluczowe (regiony), takie jak &lt;header&gt;, &lt;footer&gt;, &lt;article&gt;.</li>
                     </ul>
                 <p>
                     Dzięki temu technologie asystujące mogą przekazać informacje o przeznaczeniu elementów strony.
                     Kiedy element jest opisany, użytkownik może zdecydować, w jaki sposób informacje będą przekazywane.
-                    Istnieje wiele możliwości: modyfikacja w postaci dodania znajomego słownictwa, skrótów klawiszowych oprogramowania lub spersonalizowanych ikon.
+                    Istnieje wiele możliwości: modyfikacja w postaci dodania znajomego słownictwa, skrótów klawiszowych lub spersonalizowanych ikon.
                 </p>
                 <p class="list-glue">
-                    Treść musi być oznaczona w taki sposób, aby technologie wspomagające mogły określić, co przedstawia/ jej cel. Może to być m.in.:
+                    Treść musi być oznaczona w taki sposób, aby technologie wspomagające mogły określić, co przedstawia.<br/>
+                    Może być to m.in.:
                 </p>
                 <ul>
                     <li>
                         Informacja, do czego służy link (odnośnik do logowania, strony głównej):
                         <p style="margin-top: 0;">
-                            <a href="#">Pobierz raport ludności w Polsce na rok 2020</a><br/>
-                            <a href="#">Wyświetl książkę online (i grafika książki)</a>
+                            <a style="cursor: pointer;">Pobierz raport ludności w Polsce na rok 2020</a><br/>
+{#                            TODO: dodać zdj książki #}
+                            <a style="cursor: pointer;">Wyświetl książkę online [załączona grafika książki]</a>
                         </p>
                     </li>
                     <li>
@@ -288,7 +294,6 @@
                         <img src="{{ asset('img/html_struct.png') }}" alt="Oznaczenie obszarów na stronie, kolejno: header, nav, main z article podzielonym na 3 sections i aside, footer." class="img-resp-vert" />
                     </li>
                 </ul>
-                <strong>Jak czytnik czyta landmarks</strong>
             </div>
         </article>
 

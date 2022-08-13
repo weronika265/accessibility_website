@@ -89,15 +89,23 @@ textarea, input {
 }
 #arrow {
     position: absolute;
-    height: 10px;
-    width: 10px;
-    left: 25px;
-    bottom: 30px;
+    height: 7px;
+    width: 7px;
+    left: 26px;
+    bottom: 34px;
     border-width: 2.5px 0 0 2.5px;
     border-style: solid;
     border-color: white;
     transform: rotate(45deg);
     background-clip: content-box;
+}
+#scroll-txt {
+    position: absolute;
+    right: 6px;
+    bottom: 13px;
+    font-family: "Varta", sans-serif;
+    font-size: 1.1em;
+    color: white;
 }
 
 
@@ -168,3 +176,11 @@ textarea, input {
 /*.indent {*/
 /*    */
 /*}*/
+
+
+/* --- High Contrast --- */
+body.contrasty {
+    background-color: black;
+    color: yellow;
+    /*filter: invert(100%);*/
+}
