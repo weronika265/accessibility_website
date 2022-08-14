@@ -45,16 +45,16 @@
                     Informuj użytkownika o błędach:
                 </p>
                     <ul>
-                        <li>w trakcie wprowadzania danych,</li>
+                        <li>w trakcie wprowadzania danych;</li>
                         <li>kiedy wysyła formularz. Użytkownik zostanie cofnięty do wcześniej wypełnionego formularza z oznaczonymi błędnymi danymi.</li>
                     </ul>
-                <p class="list-glue">
+                <p class="list-glue" style="margin-top: 1.5em;">
                     <u>Jeśli nie wypełnisz jednego z pól, pojawi się komunikat o znalezionym błędzie:</u>
                 </p>
                 <p style="margin-bottom: 0;">
                     * Pole wymagane
                 </p>
-                    <form>
+                    <form onsubmit="return false;">
                         <label for="name">*Imię</label><br/>
                         <input type="text" id="name" required><br/>
                         <label for="surname">*Nazwisko</label><br/>
@@ -72,8 +72,8 @@
                     Etykiety i instrukcje dla pól pozwolą:
                 </p>
                     <ul>
-                        <li>zrozumieć wymagane dane i cel formularza;</li>
-                        <li>ograniczyć błędy;</li>
+                        <li>zrozumieć wymagane dane i cel formularza,</li>
+                        <li>ograniczyć błędy,</li>
                         <li>zmniejszyć czas potrzebny na poprawne przesłanie formularza.</li>
                     </ul>
                 <p class="list-glue">
@@ -84,16 +84,14 @@
                         <li>typie przyjmowanej wartości przez pole,</li>
                         <li>przedziale wartości możliwych do wybrania w polu formularza (np. rok, kwota).</li>
                     </ul>
-                <p style="margin-bottom: 0;">
+                <p style="margin-top: 1.5em; margin-bottom: 0;">
                     <u>Instrukcja</u>: Wszystkie pola oznaczone symbolem „*” są wymagane.
                 </p>
-                <form>
-                    <label for="name">*Pierwsze imię</label><br/>
+                <form onsubmit="return false;">
+                    <label for="name">*Pierwsze imię</label> <span style="font-family: 'Varta', sans-serif;"><- konkretne imię</span><br/>
                     <input type="text" id="name" required><br/>
                     <label for="surname">*Nazwisko</label><br/>
                     <input type="text" id="surname" required><br/>
-                    <label for="email">*Email</label><br/>
-                    <input type="email" id="email" required><br/>
                     <input type="submit" value="Prześlij"/>
                 </form>
             </section>
@@ -109,21 +107,21 @@
                         <li>zagrozić bezpieczeństwu treści;</li>
                         <li>zmienić cel treści.</li>
                     </ul>
-                <p class="list-glue">
-                    <u>Pole zostało błędnie wypełnione:</u>
-                </p>
-                    <div>
+                <div style="margin: 2.3em 0;">
+                    <p>
+                        <u>Pole zostało błędnie wypełnione:</u>
+                    </p>
+                    <p>
+                        <label style="font-weight: bold;" for="postal">Kod pocztowy</label><br/>
+                        <input type="number" id="postal"/>
+                    </p>
+                    <div style="background-color: #ef6531;">
                         <p>
-                            <label style="font-weight: bold;" for="postal">Kod pocztowy</label><br/>
-                            <input type="number" id="postal"/>
+                            Upewnij się, że kod zawiera 5 cyfr i ma format 99-999.
                         </p>
-                        <div style="background-color: #ef6531;">
-                            <p>
-                                Upewnij się, że kod zawiera 5 cyfr.
-                            </p>
-                        </div>
-                        <input type="submit" value="Prześlij"/>
                     </div>
+                    <input type="submit" value="Prześlij"/>
+                </div>
                 <p>
                     Użytkownik czasem nie wie, jakie dane wprowadzić do pola formularza.
                     Może dojść do sytuacji, kiedy poprawia dane do skutku lub ostatecznie rezygnuje z wypełniania.
@@ -159,7 +157,7 @@
             <section>
                 <h3 id="3_3_5">Kryterium sukcesu 3.3.5 Pomoc – Poziom AAA</h3>
                 <p>
-                    Zapewnij użytkownikowi pomoc kontekstową, która pomaga w wypełnianiu kolejnych pól formularzy.<br/>
+                    Zapewnij użytkownikowi pomoc kontekstową, która pomaga w wypełnianiu kolejnych pól formularzy.
                     Musisz zadbać, aby była łatwo dostępna.
                 </p>
                 <p>
@@ -172,7 +170,7 @@
                     <div>
                         <form>
                             <label for="postal">Kod pocztowy</label><br/>
-                            <input type="number" id="postal" placeholder="00-000" /><br/>
+                            <input type="number" id="postal" placeholder="99-999" /><br/>
                             <label for="client-num">Numer klienta (16 cyfr)</label><br/>
                             <input id="client-num" type="number" />
                             <span style="color: blue; font-weight: bold; position: relative; cursor: pointer;">Gdzie go znajdę?</span>

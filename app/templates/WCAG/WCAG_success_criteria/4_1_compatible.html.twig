@@ -53,11 +53,11 @@
                     Technologie asystujące, takie jak czytniki ekranu, prezentują użytkownikowi stronę przez odczytanie jej struktury.
                     Jeśli strona nie jest odpowiednio zbudowana, np. zawiera:
                 </p>
-                    <ul>
+                    <ul style="margin-bottom: 0;">
                         <li>niedomknięte znaczniki,</li>
                         <li>błędnie zagnieżdżone elementy,</li>
                     </ul>
-                <p>
+                <p style="margin-top: 0;">
                     czytnik nie będzie mógł poprawnie przekazać informacji o stronie.
                 </p>
             </section>
@@ -139,46 +139,50 @@
                 <p>
                     Kiedy komunikat nie uzyska automatycznego fokusu, użytkownik nie musi zatrzymywać pracy, aby go wyłączyć.
                 </p>
-                <p>
-                    <strong>WAŻNE</strong><br/>
-                    Jeśli komunikat o stanie nie jest odpowiednio oznaczony, nie zostanie odczytany przez technologie asystujące.
-                    Osoby, które nie widzą, nie będą wiedziały o istnieniu takiego komunikatu.
-                </p>
-                <p>
-                    Wiadomość bez powiadomienia użytkownika:<br/>
-                    <video controls>
-                        <source src="{{ asset('img/4_1_3_noalert.mp4') }}" type="video/mp4" />
-                        Twoja przeglądarka nie wspiera elementów wideo.
-                    </video>
-                </p>
-                    <pre>
-                        <code>
-&lt;div&gt;
-    Utworzono Opinię. Czekaj na zatwierdzenie przez administratora.
-&lt;/div&gt;
-                        </code>
-                    </pre>
-                <p>
-                    Wiadomość z powiadomieniem użytkownika:<br/>
-                    <video controls>
-                        <source src="{{ asset('img/4_1_3_alert.mp4') }}" type="video/mp4" />
-                        Twoja przeglądarka nie wspiera elementów wideo.
-                    </video>
-                </p>
-                    <pre>
-                        <code>
-&lt;div role="alert"&gt;
-    Utworzono Opinię. Czekaj na zatwierdzenie przez administratora.
-&lt;/div&gt;
-                        </code>
-                    </pre>
-                <p>
+                <p style="margin-bottom: 1.5em;">
                     Wiadomość nie uzyskuje fokusu:<br/>
                     <video controls>
                         <source src="{{ asset('img/4_1_3_fokus.mp4') }}" type="video/mp4" />
                         Twoja przeglądarka nie wspiera elementów wideo.
                     </video>
                 </p>
+                <p>
+                    <strong>WAŻNE</strong><br/>
+                    Jeśli komunikat o stanie nie jest odpowiednio oznaczony, nie zostanie odczytany przez technologie asystujące.
+                    Osoby, które nie widzą, nie będą wiedziały o pojawieniu się takiego komunikatu.
+                </p>
+                <div>
+                    <p>
+                        Wiadomość z powiadomieniem użytkownika:<br/>
+                        <video controls>
+                            <source src="{{ asset('img/4_1_3_alert.mp4') }}" type="video/mp4" />
+                            Twoja przeglądarka nie wspiera elementów wideo.
+                        </video>
+                    </p>
+                    <pre>
+                            <code>
+&lt;div role="alert"&gt;
+    Utworzono Opinię. Czekaj na zatwierdzenie przez administratora.
+&lt;/div&gt;
+                            </code>
+                        </pre>
+                </div>
+                <div>
+                    <p>
+                        Wiadomość bez powiadomienia użytkownika:<br/>
+                        <video controls>
+                            <source src="{{ asset('img/4_1_3_noalert.mp4') }}" type="video/mp4" />
+                            Twoja przeglądarka nie wspiera elementów wideo.
+                        </video>
+                    </p>
+                        <pre>
+                            <code>
+&lt;div&gt;
+    Utworzono Opinię. Czekaj na zatwierdzenie przez administratora.
+&lt;/div&gt;
+                            </code>
+                        </pre>
+                </div>
             </section>
         </article>
     </main>

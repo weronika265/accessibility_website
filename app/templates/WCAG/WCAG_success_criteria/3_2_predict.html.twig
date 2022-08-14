@@ -30,20 +30,17 @@
             </section>
             <section>
                 <h3 id="3_2_1">Kryterium sukcesu 3.2.1 Po otrzymaniu fokusu – Poziom A</h3>
-                <p>
-                    Kiedy element interfejsu użytkownika uzyska fokus, nie może dojść do nieoczekiwanej zmiany kontekstu (np. otwarcie nowego okna).
-                    Zmiana może nastąpić tylko po wyraźnym potwierdzeniu ze strony użytkownika. Na przykład jest to naciśnięcie wybranego klawisza (Spacja, Enter).
-                </p>
-                <p>
-                    Odbiorca nie będzie wtedy zaskoczony, kiedy uruchomi się nowy element lub funkcjonalność.
-                </p>
                 <p class="list-glue">
-                    Na stronie nie może dojść do sytuacji takich jak:
+                    Kiedy element interfejsu użytkownika uzyska fokus, nie może dojść do nieoczekiwanej zmiany kontekstu, czyli do sytuacji takich jak:
                 </p>
                     <ul>
                         <li>automatyczne wysłanie formularza po sfokusowaniu na przycisku wysyłania;</li>
-                        <li>otwarcie nowego okna lub skupienie na innej zawartości po sfokusowaniu na elemencie.</li>
+                        <li>otwarcie nowego okna lub skupienie na innej zawartości po sfokusowaniu na powiązanym elemencie.</li>
                     </ul>
+                <p>
+                    Zmiana może nastąpić tylko po wyraźnym potwierdzeniu ze strony użytkownika. Na przykład jest to naciśnięcie wybranego klawisza (Spacja, Enter).
+                    Odbiorca nie będzie wtedy zaskoczony, kiedy uruchomi się nowy element lub funkcjonalność.
+                </p>
                 <p>
                     <a href="{{ url('_3_2_1_dobry') }}">Dobry przykład</a><br/>
                     <a href="{{ url('_3_2_1_zly') }}">Zły przykład</a>
@@ -71,6 +68,7 @@
                         <li>kolejne pole zostanie automatycznie podświetlone po wypełnieniu wcześniejszego pola;</li>
                         <li>po wypełnieniu wszystkich pól formularz zostanie automatycznie wysłany.</li>
                     </ul>
+                <img src="{{ asset('img/3_2_2.jpg') }}" alt="Wypełnionego formularz. Opis: Formularz wysłany automatycznie po wypełnieniu wszystkich pól." class="img-resp" />
                 <p class="list-glue">
                     Nieoczekiwane zmiany kontekstu mogą zaskoczyć użytkownika.
                     Musisz pamiętać, że odbiorcami strony są również osoby, które:
@@ -82,17 +80,18 @@
                 <p>
                     Pomyśl o osobie niewidomej, która odwiedza Twoją stronę. Kiedy nie powiadomisz jej o zmianie kontekstu na stronie, nie będzie ona wiedziała o zmianie.
                 </p>
-                <img src="{{ asset('img/3_2_2.jpg') }}" alt="Wypełnionego formularz. Opis: Formularz wysłany automatycznie po wypełnieniu wszystkich pól." class="img-resp" />
             </section>
             <section>
                 <h3 id="3_2_3">Kryterium sukcesu 3.2.3 Spójna nawigacja – Poziom AA</h3>
                 <p>
-                    Nawigacja powtarzana na wielu stronach musi być taka sama, o ile nie zostanie dostosowana przez użytkownika.<br/><br/>
-                    Znajoma nawigacja powtarza się na innych stronach serwisu:
+                    Nawigacja powtarzana na wielu stronach musi być taka sama, o ile nie zostanie dostosowana przez użytkownika.
                 </p>
-                    <img src="{{ asset('img/3_2_3.jpg') }}" alt="Główna nawigacja serwisu." class="img-resp" /><br/>
+                <p>
+                    Globalna nawigacja powtarza się na innych podstronach serwisu. Jej wygląd się nie zmienia:
+                </p>
+                    <img src="{{ asset('img/3_2_3.jpg') }}" alt="Główna nawigacja serwisu." class="img-resp" />
                 <p class="list-glue">
-                    Spójny i powtarzający się układ nawigacji jest bardziej zrozumiały i łatwiejszy do odnalezienia. Jest też bardzo pomocny dla osób, które:
+                    Spójny i powtarzający się układ nawigacji jest bardziej zrozumiały, łatwiejszy do odnalezienia i używania. Jest też bardzo pomocny dla osób, które:
                 </p>
                     <ul>
                         <li>mają niepełnosprawności natury intelektualnej, poznawczej;</li>
@@ -112,8 +111,6 @@
                     </ul>
                 <p>
                     W ten sposób pozwolisz użytkownikowi szybko znaleźć elementy o tej samej funkcjonalności na różnych podstronach.
-                </p>
-                <p>
                     Przyśpiesza to wyszukiwanie i nawigację, ponieważ odbiorca może szybko namierzyć wcześniej poznany element.
                     Wystarczy, że odnajdzie element o tym samym wyglądzie lub opisie.
                 </p>
@@ -123,7 +120,7 @@
                     przyciski<br/>
                     <button>Przycisk</button><br/><br/>
                     i pola formularza<br/>
-                    <label>Pole formularza<input type="text" /></label>
+                    <label>Pole formularza<input type="text" /></label><br/>
                     wyglądają podobnie.
                 </p>
             </section>
@@ -143,8 +140,8 @@
                         <li>automatyczne odświeżanie strony.</li>
                     </ul>
                 <p>
-                    Pozwól odbiorcy wyłączyć automatyczne zmiany treści na stronie.
-                    Niektóre funkcjonalności są pomocne dla użytkownika. Jednak to on musi zdecydować, czy funkcjonalność ma być aktywna, czy wyłączona.
+                    Pozwól odbiorcy wyłączyć automatyczne zmiany treści na stronie.<br/>
+                    Niektóre funkcjonalności mogą być pomocne dla użytkownika. Jednak to on musi zdecydować, czy funkcjonalność ma być aktywna, czy wyłączona.
                 </p>
                 <p>
                     Kiedy zastosujesz się do kryterium, zmniejszysz prawdopodobieństwo, że zaskoczysz użytkownika przy pojawieniu się nowej zawartości na stronie.
@@ -156,7 +153,7 @@
                 <p class="txt-format" style="background-color: lightgray;">
                     Przykład:<br/>
                     Ta akcja wymaga odświeżenia strony.<br/>
-                    <button class="btn-example2">Odśwież stronę</button>
+                    <button class="btn-example2" onClick="window.location.reload();">Odśwież stronę</button>
                 </p>
             </section>
         </article>

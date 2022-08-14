@@ -41,7 +41,7 @@
                     <li>czytnik ekranu.</li>
                 </ul>
                 <p>
-                    Język strony określisz przez użycie atrybutu <i>lang</i> dla znacznika &lt;html&gt;:
+                    Język strony określisz przez użycie atrybutu 'lang' dla znacznika &lt;html&gt;:
                 </p>
                 <pre>
                         <code>
@@ -54,14 +54,14 @@
                     </pre>
                 <p>
                     Przykładem jest strona w języku francuskim. Kiedy ma ustalony domyślny język francuski, treść strony
-                    będzie również wymawiana po francusku, nie np. po angielsku.
+                    będzie również wymawiana po francusku, a nie np. po angielsku.
                 </p>
                 <p class="list-glue">
                     Kiedy strona obsługuje kilka języków, jako główny wybierz język:
                 </p>
                 <ul>
                     <li>najczęściej używany przez użytkowników</li>
-                    LUB
+                    lub
                     <li>w którym treść strony jest najbardziej kompletna.</li>
                 </ul>
             </section>
@@ -69,7 +69,7 @@
                 <h3 id="3_1_2">Kryterium sukcesu 3.1.2 Język części – Poziom AA</h3>
                 <p>
                     Niektóre fragmenty tekstu lub frazy są napisane w innym języku niż w języku całej strony.
-                    W takiej sytuacji musisz określić ich poprawny język, jeśli jest to niezbędne dla poprawnego
+                    W takiej sytuacji musisz określić poprawny język tej części tekstu, jeśli jest to niezbędne dla poprawnego
                     odczytania i zrozumienia zawartości.
                 </p>
                 <p class="list-glue">
@@ -91,7 +91,7 @@ Christopher wziął bagietkę ze stoiska i powiedział głośno: &lt;span lang="
                         </code>
                     </pre>
                 <p>
-                    Kiedy określisz język części tekstu, technologie asystujące mogą go poprawnie odczytać i wyświetlić.<br/>
+                    Kiedy określisz język części tekstu, technologie asystujące mogą go poprawnie odczytać i wyświetlić.
                     Pamiętaj jednak, że niektóre słowa są zapożyczone z innych języków. Wtedy nie musisz określać ich
                     języka (np. <i>fast food</i>).
                 </p>
@@ -104,8 +104,7 @@ Christopher wziął bagietkę ze stoiska i powiedział głośno: &lt;span lang="
                 </p>
                 <p>
                     Osobom z niektórymi niepełnosprawnościami jest trudno zrozumieć słowa, które są użyte w nietypowy
-                    sposób.<br/>
-                    Mogą mieć problem z wywnioskowaniem znaczenia słowa zarówno w kontekście, jak i bez niego.
+                    sposób. Mogą mieć problem z wywnioskowaniem znaczenia słowa zarówno w kontekście, jak i bez niego.
                 </p>
                 <p class="list-glue">
                     Nietypowe słowa możesz objaśnić na różne sposoby:
@@ -121,7 +120,7 @@ Christopher wziął bagietkę ze stoiska i powiedział głośno: &lt;span lang="
                     <li><i>Mamy problem z naszą sąsiadką. Drzemy z nią koty (drzeć koty – być z kimś w konflikcie,
                             kłócić się), od kiedy pamiętam.</i></li>
                     <li><i>Na Pawle ciężko polegać, niczego nie traktuje poważnie. Z niego to zawsze była straszna
-                            szaławiła (szaławiła – mężczyzna lubiący zabawę, lekkoduch).</i></li>
+                            szaławiła (szaławiła – lekkoduch, osoba lubiąca zabawę).</i></li>
                 </ul>
                 <img src="{{ asset('img/3_1_3.jpg') }}" alt="Przykładowy słownik z definicjami niezrozumiałych słów." class="img-resp"/>
             </section>
@@ -148,11 +147,11 @@ Christopher wziął bagietkę ze stoiska i powiedział głośno: &lt;span lang="
                         systemie Windows.
                     </li>
                     <li>
-                        <b>Wyświetlenie znaczenia skrótu w utworzonym elemencie <i>tooltip</i>:</b><br/>
+                        <b>Wyświetlenie znaczenia skrótu w utworzonym elemencie 'tooltip':</b><br/>
+                        <div class="tooltip">JAWS <span class="tooltip-content">Job Access with Speech</span></div>
+                        to czytnik ekranu, który współpracuje z różnymi aplikacjami systemu Windows.
                     </li>
                 </ul>
-                <div class="tooltip">JAWS <span class="tooltip-content">Job Access with Speech</span></div>
-                to czytnik ekranu, który współpracuje z różnymi aplikacjami w systemie Windows.
             </section>
             <section>
                 <h3 id="3_1_5">Kryterium sukcesu 3.1.5 Poziom umiejętności czytania – Poziom AAA</h3>
@@ -163,7 +162,7 @@ Christopher wziął bagietkę ze stoiska i powiedział głośno: &lt;span lang="
                 </p>
                 <ul>
                     <li>treść wyjaśniającą tekst</li>
-                    LUB
+                    lub
                     <li>alternatywną wersję tekstu, którą może przeczytać osoba na poziomie gimnazjum.</li>
                 </ul>
                 <p class="list-glue">
@@ -177,13 +176,18 @@ Christopher wziął bagietkę ze stoiska i powiedział głośno: &lt;span lang="
                     <li>trudność ze skupieniem się przez dłuższą ilość czasu, np. osoby z ADHD, ADD.</li>
                 </ul>
                 <p class="list-glue">
-                    {#                    TODO: dodać info #}
                     Co możesz zrobić, aby język na stronie był prostszy:
                 </p>
                 <ul>
-                    <li></li>
+                    <li>Twórz krótkie zdania, do 20 wyrazów;</li>
+                    <li>Używaj krótkich, znanych wyrażeń;</li>
+                    <li>Przyjmij perspektywę odbiorcy;</li>
+                    <li>Staraj się zwracać bezpośrednio do czytelnika;</li>
+                    <li>Pisz o najważniejszych informacjach na początku;</li>
+                    <li>Używaj nagłówków;</li>
+                    <li>Dziel tekst na akapity ze śródtytułami;</li>
+                    <li>Używaj list i tabel do organizowania informacji i danych.</li>
                 </ul>
-                Dodatkowe informacje znajdziesz ... <strong>Dokończyć</strong>
             </section>
             <section>
                 <h3 id="3_1_6">Kryterium sukcesu 3.1.6 Wymowa – Poziom AAA</h3>
@@ -208,7 +212,7 @@ Christopher wziął bagietkę ze stoiska i powiedział głośno: &lt;span lang="
                 <ul>
                     <li>zmienić dwuznaczne słowo na inne,</li>
                     <li>dołączyć wymowę dwuznacznego słowa, np. w nawiasie po słowie,</li>
-                    <li>dodać słownik z wymową niektórych słów,</li>
+                    <li>dodać słownik z wymową dwuznacznych słów,</li>
                     <li>dodać plik dźwiękowy z wymową słowa.</li>
                 </ul>
                 <div>
