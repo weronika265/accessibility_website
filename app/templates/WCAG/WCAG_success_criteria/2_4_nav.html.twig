@@ -45,23 +45,21 @@
                         <li>menu główne,</li>
                         <li>sekcje z reklamami.</li>
                     </ul>
-                <p>
-                    Użytkownik, który nie ma niepełnosprawności, może pominąć takie informacje wzrokiem.
-                </p>
-                <p>
-                    Odbiorca niepełnosprawny może mieć jednak kłopot z pomijaniem bloków powtarzającej się treści.
-                </p>
                 <p class="list-glue">
+                    Użytkownik, który nie ma niepełnosprawności, pomija takie informacje wzrokiem.
+                    Odbiorca niepełnosprawny może mieć jednak kłopot z pomijaniem bloków powtarzającej się treści.<br/>
                     Osoby:
                 </p>
-                    <ul>
+                    <ul style="margin-bottom: 0;">
                         <li>niewidzące, które korzystają z technologii asystujących;</li>
                         <li>używające tylko klawiatury,</li>
                     </ul>
-                <p class="list-glue">
+                <p style="margin-top: 0;">
                     aby przeczytać najważniejszą treść, musiałyby przemieścić się po wielu elementach strony.<br/>
-                    W takiej sytuacji bardzo pomocny staje się link, który prowadzi do głównej treści.<br/>
-                    <img src="{{ asset('img/2_4_1.jpg') }}" alt="Podświetlony przycisk 'Przejdź do głównej zawartości'." style="margin-top: 1em;" /><br/>
+                    W takiej sytuacji bardzo pomocny staje się link, który prowadzi do głównej treści:
+                </p>
+                <img src="{{ asset('img/2_4_1.jpg') }}" alt="Podświetlony przycisk 'Przejdź do głównej zawartości'." style="margin-top: 1em;" />
+                <p class="list-glue">
                     <b>Możesz zobaczyć, jak działa taki link:</b>
                 </p>
                     <ol>
@@ -81,6 +79,7 @@
                         <li>cel,</li>
                         <li>zawartość.</li>
                     </ul>
+                {# TODO: zmienić na 'Wytyczna...' #}
                     <img src="{{ asset('img/2_4_2.jpg') }}" alt="Otwarta karta w przeglądarce." style="margin-bottom: 1em;" />
                     <code>
                         &lt;title&gt;2.4 Możliwość nawigacji&lt;/title&gt;
@@ -90,7 +89,7 @@
                     Tytuły pozwalają szybko zorientować się w obecnym położeniu na stronie.
                 </p>
                 <p>
-                    Technologie asystujące czytają użytkownikom tytuły strony. Takie osoby mogą zdecydować, czy otwarta strona zawiera szukaną treść.
+                    Technologie asystujące czytają użytkownikom tytuły stron. Takie osoby mogą zdecydować, czy otwarta strona zawiera szukaną treść.
                 </p>
             </section>
             <section>
@@ -98,20 +97,18 @@
                 <p class="list-glue">
                     Kiedy:
                 </p>
-                    <ol>
-                        <li>użytkownik do przemieszczania się po stronie używa klawiatury;</li>
+                    <ol style="margin-bottom: 0;">
+                        <li>użytkownik do przemieszczania się po stronie może używać klawiatury;</li>
                         <li>kolejność czytania zawartości jest ważna,</li>
                     </ol>
-                <p>
+                <p style="margin-top: 0;">
                     ustal odpowiednią kolejność fokusu na stronie.
                 </p>
                 <p>
-                    Kolejność możesz narzucić przez użycie atrybutu <i>tabindex</i> w znaczniku HTML elementu.
+                    Kolejność możesz narzucić przez użycie atrybutu 'tabindex' w znaczniku HTML elementu.
                 </p>
                 <p>
                     Odpowiednia kolejność pozwala użytkownikowi na zapoznanie się z treścią w logicznej kolejności.
-                </p>
-                <p>
                     Nie trzeba jej zawsze ustawiać, jednak warto przetestować stronę i zobaczyć, czy nawigacja jest zrozumiała i zgodna z naszą wizją.
                 </p>
                 <p class="list-glue">
@@ -123,7 +120,7 @@
                         <li>niewidomi użytkownicy mogą wyobrazić sobie stronę jako przewidywalną całość.</li>
                     </ul>
                 <p>
-                    <a href="{{ url('_2_4_3_example') }}">Przykład</a><br/>
+                    <a href="{{ url('_2_4_3_example') }}">Przykład</a>
                 </p>
             </section>
             <section>
@@ -147,35 +144,34 @@
                     Użytkownicy, którzy korzystają z czytników treści, mogą zdecydować, czy chcą odwiedzić link, czy go pominąć.
                 </p>
                 <p>
-                    Linki mogą zostać umieszczone w kontekście (blok tekstu, element listy, komórka w tabeli).
-                    Jeśli jest to tekst, link powinien znajdować się na końcu treści.
+                    Linki mogą zostać umieszczone w kontekście (blok tekstu, element listy, komórka w tabeli).<br/>
+                    <i class="fa fa-arrow-right list-arrow"></i>Jeśli jest to tekst, link powinien znajdować się na końcu treści.<br/>
+                    <i class="fa fa-arrow-right list-arrow"></i>Kiedy link prowadzi do aplikacji lub dokumentu, wystarczy, że link opiszesz nazwą tej aplikacji lub dokumentu.
                 </p>
                 <p>
-                    Kiedy link prowadzi do aplikacji lub dokumentu, wystarczy, że link opiszesz nazwą tej aplikacji lub dokumentu.
-                </p>
-                <p>
-                    Warto zachować spójność w nazewnictwie tytułów stron i linków, które do tych stron prowadzą.
-                </p>
-                <p>
-                    Przykładowo:<br/>
+                    Przykład:<br/>
                     W jednym z kryteriów dla wytycznej <i>2.3 Ataki padaczki</i>, użytkownik powinien mieć możliwość
                     <a href="{{ url('epilepsy_index') }}#2_3_3">wyłączenia animacji dla elementów interaktywnych.</a>
+                </p>
+                <p>
+                    Warto zachować spójność w nazewnictwie <a href="#2_4_2">tytułów stron</a> i linków, które prowadzą do tych stron.
+                    Linki, które prowadzą do tej samej treści, powinny być tak samo nazwane.
                 </p>
             </section>
             <section>
                 <h3 id="2_4_5">Kryterium sukcesu 2.4.5 Wiele dróg – Poziom AA</h3>
                 <p>
                     Istnieje wiele dróg, aby dostać się do konkretnej podstrony w serwisie internetowym lub aplikacji.<br/>
-                    Nie dotyczy to sytuacji, kiedy strona jest wynikiem operacji lub jednym z jej etapów.<br/>
+                    Nie dotyczy to sytuacji, kiedy strona jest wynikiem operacji lub jednym z jej etapów.
                 </p>
                     <img src="{{ asset('img/rozne_miejsca.jpg') }}" alt="Strzałki poprowadzone między ikonami plików internetowych. Pokazanie przechodzenia między plikami." class="center-img" style="width: 300px; height: auto;" />
                 <p class="list-glue">
-                    Jeśli zaprojektujesz serwis w powyższy sposób, odbiorcy będą mogli z niego korzystać według własnych potrzeb.
+                    Jeśli zastosujesz się do wytycznej, odbiorcy będą mogli korzystać ze strony według własnych potrzeb.
                     Użytkownik może używać różnych narzędzi i sposobów przeglądania, takich jak:
                 </p>
                     <ul>
                         <li>wyszukiwarka treści na stronie,</li>
-                        <li>mapa serwisu, która umożliwia przegląd treści,</li>
+                        <li><u><a href="{{ url('mapa_serwisu_index') }}">mapa serwisu</a></u>, która umożliwia przegląd treści,</li>
                         <li>przeglądanie podstron w celu zrozumienia budowy serwisu.</li>
                     </ul>
                     <img src="{{ asset('img/searchbar.jpg') }}" alt="Pole wyszukiwania z ikoną lupy."  class="center-img" style="width: 250px; height: auto;" />
@@ -184,7 +180,8 @@
                 </p>
                 <ul>
                     <li>podsumowanie zamówienia w sklepie internetowym;</li>
-                    <li>potwierdzenie transakcji w aplikacji banku.</li>
+                    <li>potwierdzenie transakcji w aplikacji banku;</li>
+                    <li>konto użytkownika po zalogowaniu.</li>
                 </ul>
             </section>
             <section>
@@ -194,9 +191,9 @@
                 </p>
                     <pre id="code-example">
                         <code>
-&lt;h1&gt;Nowy plac zabaw&lt;/h1&gt;
+<b>&lt;h1&gt;Nowy plac zabaw&lt;/h1&gt;</b>
 &lt;p&gt;W dniu 21 kwietnia odbędzie się oficjalne otwarcie nowego placu zabaw.&lt;/p&gt;
-&lt;h3&gt;Atrakcje&lt;/h3&gt;
+<b>&lt;h3&gt;Atrakcje&lt;/h3&gt;</b>
 &lt;p&gt;Podczas uroczystości wystąpią młode talenty z pobliskich szkół.&lt;/p&gt;
                         </code>
                     </pre>
@@ -206,13 +203,13 @@
                 </p>
                     <pre>
                         <code>
-&lt;label for="email"&gt;Email&lt;/label&gt;&lt;br/&gt;
+<b>&lt;label for="email"&gt;Email&lt;/label&gt;</b>&lt;br/&gt;
 &lt;input type="email" name="email" id="email"/&gt;
                         </code>
                     </pre>
                 <p>
-                    Dzięki opisom użytkownik rozumie, co zawiera strona i jak została rozmieszczona treść.<br/>
-                    Jasne oznaczenie treści pozwala na jej łatwiejsze odnalezienie.
+                    Dzięki opisom użytkownik rozumie, co zawiera strona i jak została rozmieszczona treść.
+                    Jasne oznaczenie treści pozwala też łatwiej ją odnaleźć.
                 </p>
             </section>
             <section>
@@ -239,14 +236,12 @@
                         <li>można szybko przemieszczać się między powiązanymi podstronami.</li>
                     </ul>
                 <p>
-                    Lokalizowanie użytkownika jest bardzo przydatne, kiedy znajdujemy się na rozbudowanej stronie.
-                </p>
-                <p>
+                    Lokalizowanie użytkownika jest bardzo przydatne, kiedy znajduje się na rozbudowanej stronie.
                     Funkcjonalność jest też dużym ułatwieniem dla osoby z deficytem uwagi. Takiemu odbiorcy trudniej skupić się na zadaniu.
                     Bez pomocy może poczuć się zdezorientowany, kiedy dłużej przegląda rozbudowaną stronę.
                 </p>
                 <p>
-                    Jednym ze sposobów na pokazanie obecnej lokalizacji na stronie jest <b>menu okruszkowe</b>. Wyświetla ono ścieżkę odwiedzanych podstron.
+                    Jednym ze sposobów na pokazanie obecnej lokalizacji na stronie jest <b>menu okruszkowe</b>. Wyświetla ono ścieżkę odwiedzanych podstron:
                 </p>
                     <img src="{{ asset('img/breadcrumb.jpg') }}" style="width: 250px; height: auto;" alt="Menu okruszkowe: Strona główna/ Książki / Reportaż."/>
                 <p>
@@ -271,9 +266,6 @@
                     Jest to rozszerzenie <a href="#2_4_4">Kryterium sukcesu 2.4.4 Cel łącza (w kontekście)</a>.
                 </p>
                 <p>
-                    Linki, które prowadzą do tej samej treści, powinny być tak samo nazwane.
-                </p>
-                <p>
                     Przykładowo:<br/>
                     <a href="{{ url('epilepsy_index') }}#2_3_3">Kryterium sukcesu 2.3.3 Animacja po interakcji</a>
                     pozwala użytkownikowi na wyłączenie animacji elementów interaktywnych.
@@ -291,29 +283,29 @@
                     Dzięki nagłówkom czytelnik może wcześniej zobaczyć, czego będzie dotyczył tekst i czy chce go przeczytać.
                 </p>
                 <p>
-                    *Sekcje dzielą treści na mniejsze, logicznie powiązane bloki.
+                    *Sekcje &lt;section&gt; dzielą treści na mniejsze, logicznie powiązane bloki.
                 </p>
                 <div>
                     <h1 style="padding-top: 0; margin-top: 0;">Główny nagłówek treści</h1>
                     <section>
-                        <h2>Mniej ważny blok treści</h2>
-                        <p>Treść powiązana z głównym nagłówkiem.</p>
+                        <h2>Mniej ważny blok treści 1</h2>
+                        <p>Treść powiązana z głównym nagłówkiem i blokiem treści 1.</p>
                     </section>
                     <section>
-                        <h2>Mniej ważny blok treści</h2>
-                        <p>Treść powiązana z głównym nagłówkiem.</p>
+                        <h2>Mniej ważny blok treści 2</h2>
+                        <p>Treść powiązana z głównym nagłówkiem i blokiem treści 2.</p>
                     </section>
                 </div>
                 <pre>
                     <code>
     &lt;h1&gt;Główny nagłówek treści&lt;/h1&gt;
 &lt;section&gt;
-    &lt;h2&gt;Mniej ważny blok treści&lt;/h2&gt;
-    &lt;p&gt;Treść powiązana z głównym nagłówkiem.&lt;/p&gt;
+    &lt;h2&gt;Mniej ważny blok treści 1&lt;/h2&gt;
+    &lt;p&gt;Treść powiązana z głównym nagłówkiem i blokiem treści 1.&lt;/p&gt;
 &lt;/section&gt;
 &lt;section&gt;
-    &lt;h2&gt;Mniej ważny blok treści&lt;/h2&gt;
-    &lt;p&gt;Treść powiązana z głównym nagłówkiem&gt;.&lt;/p&gt;
+    &lt;h2&gt;Mniej ważny blok treści2&lt;/h2&gt;
+    &lt;p&gt;Treść powiązana z głównym nagłówkiem i blokiem treści 2.&lt;/p&gt;
 &lt;/section&gt;
                     </code>
                 </pre>

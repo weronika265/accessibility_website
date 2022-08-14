@@ -150,7 +150,16 @@ textarea, input {
     cursor: pointer;
 }
 .a11y-options-space {
-    margin: 1em;
+    margin: 1.5em 1em;
+}
+.a11y-options-space span {
+    font-weight: normal;
+}
+.a11y-options-space button {
+    border-radius: 10px;
+}
+button#contrast-std, button#space-std, button#font-std, .active-a11y  {
+    background-color: rgba(4, 116, 191, 0.3);
 }
 
 
@@ -183,4 +192,7 @@ body.contrasty {
     background-color: black;
     color: yellow;
     /*filter: invert(100%);*/
+}
+span.data.contrasty {
+    background-color: #282828;
 }

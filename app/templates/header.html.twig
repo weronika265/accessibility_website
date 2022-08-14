@@ -14,8 +14,8 @@
                 {% if is_granted('IS_AUTHENTICATED_FULLY') %}
                     {% if is_granted('ROLE_ADMIN') %}
                         <li id="admin_panel" class="button-style"><a href="{{ url('admin_index') }}">Panel administratora</a></li>
-                    {% else %}
-                        <li id="acc" class="button-style"><a href="{{ url('user_index') }}">Moje konto</a></li>
+{#                    {% else %}#}
+{#                        <li id="acc" class="button-style"><a href="{{ url('user_index') }}">Moje konto</a></li>#}
                     {% endif %}
 
                     <li id="logout" class="button-style" style="box-shadow: 2px 2px 10px #296fa8;"><a href="{{ url('app_logout') }}">Wyloguj</a></li>

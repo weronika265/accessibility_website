@@ -31,11 +31,11 @@
                 <p class="list-glue">
                     Operacje na stronie, które są obsługiwane przez gesty:
                 </p>
-                        <ul>
+                        <ul style="margin-bottom: 0;">
                             <li>wielopunktowe – aktywowane przez jednoczesne wciśnięcie kilku punktów (gest powiększania przez „uszczypnięcie” ekranu dwoma palcami);</li>
                             <li>oparte na ścieżce – aktywowane przez ciągłość ruchu (gest przesuwania, rysowanie kształtu),</li>
                         </ul>
-                <p>
+                <p style="margin-top: 0;">
                     muszą być również obsługiwane przez <b>gesty jednopunktowe</b>.
                 </p>
                 <p>
@@ -48,8 +48,6 @@
                         <li>przemieszczanie elementu z jednego miejsca w drugie;</li>
                         <li>dwukrotne naciśnięcie elementu palcem.</li>
                     </ul>
-
-            {# TODO: wrzucić do listy na górze #}
                 <p class="list-glue">
                     Gesty jednopunktowe poszerzają zakres obsługiwanych urządzeń i technologii, np. o:
                 </p>
@@ -81,7 +79,6 @@
                         Źródło grafik: Mapy Google
                     </p>
                 </div>
-            {# ----------------------- #}
             </section>
             <section>
                 <h3 id="2_5_2">Kryterium sukcesu 2.5.2 Rezygnacja ze wskazania – Poziom A</h3>
@@ -89,13 +86,13 @@
                     Kiedy zawartość na stronie jest wywoływana przez dotyk jednopunktowy, musi być spełnione przynajmniej jedno z poniższych:
                 </p>
                     <ul>
-                        <li>Samo wciśnięcie nie aktywuje żadnego zdarzenia. Do aktywacji dochodzi dopiero po zwolnieniu nacisku;</li>
+                        <li>Samo wciśnięcie nie aktywuje żadnego zdarzenia. Do aktywacji dochodzi dopiero po zwolnieniu nacisku.</li>
                         <li>
                             Aktywacja zależy od zwolnienia nacisku i w każdym momencie można ją przerwać lub cofnąć skutki aktywacji.
                             Aktywację możesz zazwyczaj przerwać przez przesunięcie palca z pola aktywacji i zwolnienie nacisku.
                         </li>
                         <li>Przy zwolnieniu nacisku zdarzenie zostaje cofnięte do domyślnego stanu. Przykładem jest menu, które aktywuje się przy wciśnięciu, a znika po
-                            zwolnieniu nacisku;</li>
+                            zwolnieniu nacisku.</li>
                         <li>
                             Wciśnięcie jest niezbędne do aktywacji zdarzenia. Jest to ważne w emulatorach klawiatury i w aplikacjach takich jak symulacja klawiszy
                             pianina. To naturalne działanie wymienionych narzędzi. Nadpisanie takiego sposobu działania może stać się nieintuicyjne dla odbiorcy.
@@ -104,11 +101,11 @@
                 <p>
                     Odpowiednia obsługa gestów sprawia, że użytkownik będzie popełniał mniej błędów, kiedy korzysta z różnych urządzeń, np. opartych na
                     ekranie dotykowym. Umożliwisz mu zrezygnowanie z akcji, gdy naciśnie zły przycisk.
+                </p>
                     <video class="center-vid" controls>
                         <source src="{{ asset('img/2_5_2.mp4') }}" type="video/mp4">
                         Twoja przeglądarka nie wspiera elementów wideo.
                     </video><br/>
-                </p>
             </section>
             <section>
                 <h3 id="2_5_3">Kryterium sukcesu 2.5.3 Etykieta w nazwie – Poziom A</h3>
@@ -122,12 +119,10 @@
                 <p>
                     Najlepszą praktyką jest opisanie tak samo etykiety i nazwy komponentu.
                 </p>
-                <p>
                     <video class="center-vid" controls>
                         <source src="{{ asset('img/2_5_3.mp4') }}" type="video/mp4">
                         Twoja przeglądarka nie wspiera elementów wideo.
                     </video><br/>
-                </p>
                 <p>
                     <label for="email" style="font-weight: bold;">Email</label><br/>
                     <input type="email" name="email" id="email"/>
