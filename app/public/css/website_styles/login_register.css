@@ -60,7 +60,6 @@ input[type=submit]:hover {
     content: "\A";
     white-space: pre;
 }
-/* TODO: Fix it smh? */
 span#account-prompt {
     float: right;
     margin-top: 1.2em;

@@ -1,23 +1,28 @@
 nav#sidebar {
     height: 100%;
-    width: 190px;
+    width: 12.6em;
     position: fixed;
     z-index: 1;
     top: 255px;
     left: 0;
     overflow-x: hidden;
+    /*overflow-y: auto;*/
+    /*background-color: rgb(105, 160, 209);*/
 }
 #sidebar-btn-mobile {
     display: none;
     position: fixed;
-    z-index: 1;
+    z-index: 999;
     left: 0;
     bottom: 0;
     padding: 0.5em 1em;
-    background-color: #b7cfe5;
     font-family: "Varta", sans-serif;
     font-size: 1.1em;
+    /*background-color: #b7cfe5;*/
+    background-color: rgb(105, 160, 209);
     border-top-right-radius: 10px;
+    box-shadow: 2px 2px 10px #b7cfe5;
+    border: none;
     cursor: pointer;
 }
 @media screen and (max-width: 1392px) {
@@ -67,5 +72,5 @@ nav#sidebar > li {
 }
 #perceivable:hover, #operable:hover, #understandable:hover, #robust:hover {
     width: 100%;
-    background-color: #5b7b9a;
+    background-color: #888888;
 }

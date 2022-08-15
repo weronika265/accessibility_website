@@ -54,8 +54,6 @@
 }
 
 
-/* TODO: poprawić, żeby było super + wrzucić a11y przy btn scroll (usunąć btn scroll?) */
-/* TODO: dodać hamburgera */
 /* --- Strona główna (responsive) --- */
 @media screen and (max-width: 1043px) {
     /* #main ? */

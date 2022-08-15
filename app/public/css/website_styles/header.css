@@ -64,7 +64,7 @@ nav#desktop li {
     padding-top: 0.5em;
 }
 /* --- header (responsive) --- */
-/* TODO: spróbować zmniejszyć zmianę przez modyfikację odstępów i wielkości zdjęcia */
+/* TODO: spróbować zwiększyć max-width przez modyfikację odstępów i wielkości zdjęcia */
 @media screen and (max-width: 1107px) {
     #desktop{
         display: none;
@@ -94,7 +94,6 @@ nav#desktop li {
         background-color: transparent;
         border: none;
     }
-    /* TODO: poprawić, żeby lepiej to wyglądało? */
     button#close-hamb {
         display: block;
         position: absolute;
@@ -130,7 +129,6 @@ nav#desktop li {
     #user-actions ul #login, #user-actions ul #admin_panel, #user-actions ul #acc, #user-actions ul #hamb {
         background-color: transparent;
         padding: 0;
-        /* TODO: usunąć box-shadow z inline style i dodać do pliku .css */
         /*box-shadow: transparent;*/
     }
     #user-actions ul #login, #user-actions ul #admin_panel, #user-actions ul #acc {
@@ -140,10 +138,8 @@ nav#desktop li {
         z-index: 999;
         display: inline-block;
     }
-    /* TODO: usunąć czy zostawić? */
     /*header {*/
     /*    top: 0;*/
     /*    position: sticky;*/
     /*}*/
-/*    TODO: najlepiej mniejszy nagłówek zrobić */
 }

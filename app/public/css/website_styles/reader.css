@@ -66,3 +66,21 @@
 /*#regulacje section:nth-child(even) {*/
 /*    background-color: rgba(145,105,209,0.4);*/
 /*}*/
+
+/* --- Responsive content -> columns ---*/
+@media screen and (max-width: 1043px) {
+    .topic-page-center, .topic-center, .text-center, .text-left, .text-right  {
+        flex-direction: column;
+        column-gap: 0;
+        /*padding: 0 1em;*/
+    }
+}
+@media screen and (max-width: 630px) {
+    .header-center {
+        max-width: 320px;
+        margin: 0 auto 1em;
+    }
+    .content-rest {
+        max-width: 450px;
+    }
+}

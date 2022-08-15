@@ -86,6 +86,7 @@ textarea, input {
     background-color: #57a8eb;
     padding: 30px;
     cursor: pointer;
+    /*box-shadow: 2px 2px 10px #b7cfe5;*/
 }
 #arrow {
     position: absolute;
@@ -161,10 +162,31 @@ textarea, input {
 button#contrast-std, button#space-std, button#font-std, .active-a11y  {
     background-color: rgba(4, 116, 191, 0.3);
 }
+/* TODO: przenieść całe na dół? */
+@media screen and (max-width: 1145px) {
+/*    #a11y-options {
+        background-color: rgba(224, 224, 224, 0.5);
+    }
+    #a11y-options img {
+        opacity: 0.7;
+    }*/
+
+/*    #a11y-options {
+        position: fixed;
+        right: 30px;
+        top: 1170px;
+        z-index: 999;
+        background-color: rgba(225, 225, 225);
+        border: 1px solid rgb(194, 193, 193);
+        width: 50px;
+        height: 50px;
+        border-radius: 50px;
+        padding: 0;
+    }*/
+}
 
 
 /* --- Komunikaty --- */
-/* TODO: dodać animację zanikania wiadomości */
 .alert {
     position: absolute;
     top: 2em;
@@ -181,10 +203,6 @@ button#contrast-std, button#space-std, button#font-std, .active-a11y  {
     border-radius: 10px;
     border: 2px solid #545454;
 }
-/* TODO: znaleźć w innych miejscach i prawdopodobnie usunąć */
-/*.indent {*/
-/*    */
-/*}*/
 
 
 /* --- High Contrast --- */
@@ -193,6 +211,24 @@ body.contrasty {
     color: yellow;
     /*filter: invert(100%);*/
 }
-span.data.contrasty {
+body.contrasty span.data, body.contrasty nav#desktop {
     background-color: #282828;
+}
+body.contrasty #user-actions, body.contrasty #info, body.contrasty .message-style {
+    background-color: #111111;
+}
+body.contrasty #user-actions a, body.contrasty #info a, body.contrasty li.button-style a, body.contrasty .btn-description a {
+    color: white;
+}
+body.contrasty li.button-style, body.contrasty .btn-description a {
+    background-color: #0e0e0e;
+}
+body.contrasty div#author p {
+    background-color: #0c0c0c;
+}
+body.contrasty p a, body.contrasty ul a, body.contrasty ol a {
+    color: yellow;
+}
+body.contrasty :focus {
+    border: 5px solid #1aebff;
 }

@@ -30,7 +30,6 @@
         row-gap: 1em;
     }
 }
-/* TODO: poprawić na responsive */
 video {
     max-width: 400px;
 }
@@ -130,7 +129,6 @@ b.extra {
 #elements-contrast-examples p {
     margin-bottom: 1.5em;
 }
-/* TODO: poprawić */
 .inside {
     position: relative;
 }

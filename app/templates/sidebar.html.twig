@@ -47,9 +47,9 @@
 
     <button id="sidebar-btn-mobile">Menu boczne</button>
 {% endblock %}
-{# TODO: sidebar ma być przy main tag?? #}
 
 {#    TODO: poprawić, bo po hover już nie podświetla ponownie i zamykać poprzednie po naciśnięciu innej zasady -> + zamykać inne po naciśnięciu jednej z pozycji z zasad #}
+{# TODO: coś się psuje przy menu, 1-2 głównie #}
     {% block javascripts %}
         <script>
             const wcagList = document.getElementById('sidebar');
@@ -70,7 +70,7 @@
             let clicked_perceivable = false;
             perceivable.addEventListener('click', function() {
                 if(clicked_perceivable === false) {
-                    perceivable.style.backgroundColor = '#5b7b9a';
+                    perceivable.style.backgroundColor = 'rgba(117,117,117,0.95)';
                     perceivableItems.style.display = 'block';
                     clicked_perceivable = true;
 
@@ -87,7 +87,7 @@
             let clicked_operable = false;
             operable.addEventListener('click', function() {
                 if(clicked_operable === false) {
-                    operable.style.backgroundColor = '#5b7b9a';
+                    operable.style.backgroundColor = 'rgba(117,117,117,0.95)';
                     operableItems.style.display = 'block';
                     clicked_operable = true;
 
@@ -104,7 +104,7 @@
             let clicked_understandable = false;
             understandable.addEventListener('click', function() {
                 if(clicked_understandable === false) {
-                    understandable.style.backgroundColor = '#5b7b9a';
+                    understandable.style.backgroundColor = 'rgba(117,117,117,0.95)';
                     understandableItems.style.display = 'block';
                     clicked_understandable = true;
 
@@ -121,7 +121,7 @@
             let clicked_robust = false;
             robust.addEventListener('click', function() {
                 if(clicked_robust === false) {
-                    robust.style.backgroundColor = '#5b7b9a';
+                    robust.style.backgroundColor = 'rgba(117,117,117,0.95)';
                     robustItems.style.display = 'block';
                     clicked_robust = true;
 
@@ -143,7 +143,7 @@
                 }
                 else if (wcagList.style.display === 'block') {
                     wcagList.style.display = 'none';
-                    btnMobile.textContent = 'Otwórz menu';
+                    btnMobile.textContent = 'Menu boczne';
                 }
             });
 

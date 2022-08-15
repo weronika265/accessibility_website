@@ -41,7 +41,6 @@ a {
 a:link, a:visited {
     color: black;
 }
-/* TODO: animate whole button */
 a:hover {
     color: black;
     -webkit-text-stroke: 0.7px black;
@@ -441,7 +440,6 @@ form {
 span.inline-form-text strong a {
     color: #207ECC;
 }
-/* TODO: hover color not working - another style interfering? */
 /*.inline-form-text strong a:hover {*/
 /*    color: #207ECC;*/
 /*}*/
@@ -669,7 +667,6 @@ body.contrasty .message-action-delete {
     flex-wrap: wrap;
 }
 ul {
-    /* TODO: sprawdzić, czy ok */
     /*list-style-type: none;*/
     margin: 0;
     padding: 0;
