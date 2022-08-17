@@ -41,12 +41,12 @@
     column-gap: 3.5em;
     max-width: 900px;
 }
-.btn-description a {
+.btn-description a, #btn {
     text-align: center;
     height: 1.3em;
     border-radius: 90px;
     background-color: #4a9ce0;
-    margin-top: 40px;
+    margin: 0 auto;
     padding: 1.1em 2.2em;
 }
 .header-margin-cut {

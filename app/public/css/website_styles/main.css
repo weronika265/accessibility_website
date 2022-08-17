@@ -220,7 +220,7 @@ body.contrasty #user-actions, body.contrasty #info, body.contrasty .message-styl
 body.contrasty #user-actions a, body.contrasty #info a, body.contrasty li.button-style a, body.contrasty .btn-description a {
     color: white;
 }
-body.contrasty li.button-style, body.contrasty .btn-description a {
+body.contrasty li.button-style, body.contrasty .btn-description a, body.contrasty #login, body.contrasty #btn {
     background-color: #0e0e0e;
 }
 body.contrasty div#author p {
@@ -231,4 +231,7 @@ body.contrasty p a, body.contrasty ul a, body.contrasty ol a {
 }
 body.contrasty :focus {
     border: 5px solid #1aebff;
+}
+body.contrasty #btn a {
+    color: yellow;
 }
