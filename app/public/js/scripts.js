@@ -191,6 +191,16 @@ scrollBtn.addEventListener('keydown', function(e) {
     }
 });
 
+
+    <!-- F’in sweet Webflow Hacks -->
+    // set a short timeout before taking action
+    // to allow hash to be set
+    setTimeout(()=>{
+    // uses HTML5 history API to manipulate the location bar
+    history.replaceState('', document.title, window.location.origin + window.location.pathname + window.location.search);
+}, 5); // 5 millisecond timeout in this case
+
+
 /* --- hamburger menu --- */
 /*
 const hamb = document.getElementById('hamb');

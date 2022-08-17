@@ -115,12 +115,12 @@
                     Wystarczy, że odnajdzie element o tym samym wyglądzie lub opisie.
                 </p>
                 <p>
-{#                    TODO: dodać wygląd odpowieni #}
-                    Na przykład w tym serwisie<br/><br/>
-                    przyciski<br/>
-                    <button>Przycisk</button><br/><br/>
-                    i pola formularza<br/>
-                    <label>Pole formularza<input type="text" /></label><br/>
+                    Na przykład w tym serwisie główne<br/><br/>
+                    przyciski:<br/>
+                    <input type="submit" value="Przycisk" style="border: none;"><br/><br/>
+                    i pola formularza:<br/>
+                    <label for="in"><b>Pole formularza:</b></label><br/>
+                    <input type="text" id="in"/><br/>
                     wyglądają podobnie.
                 </p>
             </section>
@@ -150,7 +150,7 @@
                     Pamiętaj też, że część odbiorców nie widzi i korzysta z czytników ekranu.
                     Automatyczne odświeżenia strony i elementy, które pojawią się niespodziewanie, mogą być niezauważone przez te osoby.
                 </p>
-                <p class="txt-format" style="background-color: lightgray;">
+                <p class="txt-format">
                     Przykład:<br/>
                     Ta akcja wymaga odświeżenia strony.<br/>
                     <button class="btn-example2" onClick="window.location.reload();">Odśwież stronę</button>

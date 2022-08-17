@@ -7,7 +7,7 @@
 {% block body %}
     {% include 'header.html.twig' %}
     <main id="main" class="page reposition">
-            <h2>Opinie o serwisie</h2>
+            <h1 class="h1-reformat">Opinie o serwisie</h1>
             {% if pagination is defined and pagination.items|length %}
                 <div>
                     {% for opinion in pagination.items %}

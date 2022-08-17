@@ -16,12 +16,12 @@ span.inline-form-text {
 span.inline-form-text strong a {
     font-family: 'DM Sans', serif;
     font-size: 1.1em;
-    color: #207ECC;
+    color: #164f7e;
     font-weight: bold;
 }
 span.inline-form-text strong a:hover {
     font-weight: bolder;
-    color: #1b4d77;
+    color: black;
 }
 span#show {
     margin-left: 11em;

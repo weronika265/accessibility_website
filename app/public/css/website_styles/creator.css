@@ -163,6 +163,7 @@ b.extra {
 #hover-esc:hover #tooltip {
     visibility: visible;
     opacity: 1;
+    color: black;
 }
 #rect-anim {
     position: relative;
@@ -239,4 +240,10 @@ fieldset {
 }
 fieldset label a {
     font-size: 1.3em;
+}
+
+/* --- Przykłady --- */
+.ex-header {
+    text-align: left;
+    margin-left: 0.5em;
 }

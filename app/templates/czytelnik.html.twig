@@ -7,6 +7,7 @@
 {% block body %}
     {% include 'header.html.twig' %}
     <main id="main">
+        <h1 aria-hidden="false" style="display: none;">Strefa czytelnika</h1>
         <div class="bg-list-clear" style="position: sticky; top: 0;">
             <ul class="list-clear-set">
                 <li><a href="#dostepnosc">Dostępność stron internetowych</a></li>
@@ -75,7 +76,7 @@
                         Istnieją grupy, które pracują nad równym traktowaniem użytkowników sieci. Nie tylko szerzą świadomość o dostępności
                         cyfrowej, ale także pokazują, że to istotna część dobrze zaprojektowanej strony.
                     </p>
-                    <a target="_blank" href="https://www.w3.org/"><img src="{{ asset('img/w3c_home.png') }}" alt="" style="display: block; width: 160px; margin: 0 auto;" /></a>
+                    <a target="_blank" href="https://www.w3.org/"><img src="{{ asset('img/w3c_home.png') }}" alt="Logo World Wide Web Consortium" style="display: block; width: 160px; margin: 0 auto;" /></a>
                     <p>
                         Jedną z głównych instytucji jest World Wide Web Consortium (W3C). <strong>World Wide Web Consortium</strong> jest organizacją, która ustala standardy WWW: HTML, CSS i nie tylko.
                     </p>
@@ -200,8 +201,7 @@
                         </ul>
                 </div>
             </section>
-{#            TODO: zrobić! #}
-            <section class="text-center" style="background-color: rgba(194,194,194,0.4);">
+{#            <section class="text-center" style="background-color: rgba(194,194,194,0.4);">
                 <h3>Co powinna zawierać deklaracja dostępności</h3>
                 <div class="content-rest">
                     <p>
@@ -209,7 +209,7 @@
                         (załącznik pdf’a?)
                     </p>
                 </div>
-            </section>
+            </section>#}
         </article>
         <article id="rodzaje">
             <div style="background-color: #BD6161;">
@@ -599,7 +599,11 @@
                             Użytkownik dotyka plastikowe szpilki, które wyskakują, aby formować kolejne litery do przeczytania.
                         </p>
                     </div>
-                    <img src="{{ asset('img/braille.jpg') }}" alt="" class="img-reader-size"/>
+                    <div style="text-align: center; font-family: 'Varta', sans-serif; font-size: 1.2em;">
+                        <img src="{{ asset('img/braille.jpg') }}" alt="" class="img-reader-size"/>
+                        <span style="display: block; text-align: center;"><i>Zdjęcie pt. „<a href="https://pressbooks.ulib.csuohio.edu/accessibility/">refreshable_braille_keyboard”</a><br/>
+                        autorstwa Heather Caprette, MFA <br/>opublikowane na licencji <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>.</i></span>
+                    </div>
                 </div>
             </section>
         </article>
@@ -625,21 +629,20 @@
                 <h3>Historia Web Content Accessibility Guidelines</h3>
                 <div class="text-right">
                     <div class="content-rest">
-                        <p>
-{#                            TODO: dać w <span> i kolor a nie <u> #}
-                            <u>WCAG 1.0</u><br/>
+                        <p class="WCAG-emph">
+                            <span>WCAG 1.0</span><br/>
                             5 maja 1999 roku Web Accessibility Initiative uchwala standard WCAG (po polsku Wytyczne dostępności stron internetowych).
                             Jest to jedna z pierwszych prób udokumentowania technik projektowania dla zawartości dostępnej cyfrowo.
                             Ta wersja dokumentu skupia się głównie na języku HTML.
                         </p>
-                        <p>
-                            <u>WCAG 2.0</u><br/>
+                        <p class="WCAG-emph">
+                            <span>WCAG 2.0</span><br/>
                             Kolejna wersja wydana 11 grudnia 2008 roku. Skupiła się na uwzględnieniu większej liczby dostępnych technologii.
                             Wprowadzono też cztery główne zasady: postrzegalność, funkcjonalność, zrozumiałość i solidność.
                             Jest do obecny standard, odświeżany do kolejnych wersji.
                         </p>
-                        <p>
-                            <u>WCAG 2.1 (aktualna)</u><br/>
+                        <p class="WCAG-emph">
+                            <span>WCAG 2.1 (aktualna)</span><br/>
                             Wersja wydana 5 czerwca 2018 roku wprowadza aktualizacje, aby dostosować się do rozwoju sieci i technologii.
                             <b>Jest to obecna używana wersja dokumentu</b>. Wprowadza dodatkowe kryteria, m.in.
                             dla urządzeń mobilnych i dla osób z problemami ze wzrokiem.
@@ -778,20 +781,8 @@
     </main>
     {% include 'footer.html.twig' %}
 
-{#    TODO: dodać do ogólnych skryptów #}
-
 {% endblock %}
 
 {% block javascripts %}
         {{ parent() }}
-    <script>
-    <!-- F’in sweet Webflow Hacks -->
-        // set a short timeout before taking action
-        // to allow hash to be set
-        setTimeout(()=>{
-            // uses HTML5 history API to manipulate the location bar
-            history.replaceState('', document.title, window.location.origin + window.location.pathname + window.location.search);
-        }, 5); // 5 millisecond timeout in this case
-    </script>
-
 {% endblock %}

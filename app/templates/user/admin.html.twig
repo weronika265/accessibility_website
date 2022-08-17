@@ -7,6 +7,7 @@
 {% block body %}
     {% include 'header.html.twig' %}
     <main id="main" class="page reposition">
+        <h1 class="h1-reformat" style="font-size: 3em; margin-bottom: 0">Panel administratora</h1>
         <article>
             <h2>Nowe opinie o serwisie</h2>
             {% if pagination_opinions is defined and pagination_opinions.items|length %}
@@ -26,8 +27,8 @@
                                         {{ opinion.message }}
                                     </div>
                                     <div class="message-action-space opinions-enabled">
-                                        <a href="{{ url('opinion_accept', {id: opinion.id}) }}" onclick="confirmation_opinion()" class="message-action-accept" data-id="{{ opinion.id }}">Zaakceptuj</a>
-                                        <a href="{{ url('opinion_delete', {id: opinion.id}) }}" onclick="confirmation_opinion()" class="message-action-delete" data-id="{{ opinion.id }}">Odrzuć</a>
+                                        <a href="{{ url('opinion_accept', {id: opinion.id}) }}" {#onclick="confirmation_opinion()"#} class="message-action-accept" data-id="{{ opinion.id }}">Zaakceptuj</a>
+                                        <a href="{{ url('opinion_delete', {id: opinion.id}) }}" {#onclick="confirmation_opinion()"#} class="message-action-delete" data-id="{{ opinion.id }}">Odrzuć</a>
                                     </div>
                                 </div>
                             </section>
@@ -63,8 +64,8 @@
                                         {{ comment.message }}
                                     </div>
                                     <div class="message-action-space comments-enabled">
-                                        <a href="{{ url('comment_accept', {id: comment.id}) }}" onclick="confirmation_comment()" class="message-action-accept" data-id="{{ comment.id }}">Zaakceptuj</a>
-                                        <a href="{{ url('comment_delete', {id: comment.id}) }}" onclick="confirmation_comment()" class="message-action-delete" data-id="{{ comment.id }}">Odrzuć</a>
+                                        <a href="{{ url('comment_accept', {id: comment.id}) }}" {#onclick="confirmation_comment()"#} class="message-action-accept" data-id="{{ comment.id }}">Zaakceptuj</a>
+                                        <a href="{{ url('comment_delete', {id: comment.id}) }}" {#onclick="confirmation_comment()"#} class="message-action-delete" data-id="{{ comment.id }}">Odrzuć</a>
                                     </div>
                                 </div>
                             </section>
@@ -134,11 +135,11 @@
             });
         });
 
-        function confirmation_opinion() {
-            return confirm('Czy na pewno chcesz zaakceptować opinię?');
-        }
-        function confirmation_comment() {
-            return confirm('Czy na pewno chcesz zaakceptować komentarz?');
-        }
+        // function confirmation_opinion() {
+        //     return confirm('Czy na pewno chcesz zaakceptować opinię?');
+        // }
+        // function confirmation_comment() {
+        //     return confirm('Czy na pewno chcesz zaakceptować komentarz?');
+        // }
     </script>
 {% endblock %}

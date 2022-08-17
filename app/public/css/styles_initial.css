@@ -362,7 +362,7 @@ input:not(input[type=submit], input[type=checkbox]) {
     padding-right: 1em;
     margin-bottom: 2em;
 }
-input[type=checkbox] {
+label input[type=checkbox] {
     width: 3em;
     height: 2em;
     margin: 1em 0;
@@ -727,6 +727,7 @@ Z podmenu ma się później zrobić kolumna */
 .txt-format {
     margin-left: 1em;
     max-width: 40%;
+    background-color: lightgray;
 }
 fieldset {
     border: none;

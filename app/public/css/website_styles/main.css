@@ -52,6 +52,11 @@ textarea, input {
     font-size: 1em;
     font-weight: 400;
 }
+.h1-reformat {
+    font-size: 2.4em;
+    text-align: left;
+    padding: 0;
+}
 .reposition {
     margin-left: 26vw;
     row-gap: 1em;
@@ -74,6 +79,10 @@ textarea, input {
 .reposition h2 {
      margin-bottom: 0;
  }
+input[type=checkbox] {
+    width: 22px;
+    height: 22px;
+}
 
 /* --- scroll button --- */
 #scroll-btn {
@@ -83,7 +92,7 @@ textarea, input {
     bottom: 25px;
     border-radius: 50%;
     border: none;
-    background-color: #57a8eb;
+    background-color: #175a93;
     padding: 30px;
     cursor: pointer;
     /*box-shadow: 2px 2px 10px #b7cfe5;*/
@@ -162,7 +171,6 @@ textarea, input {
 button#contrast-std, button#space-std, button#font-std, .active-a11y  {
     background-color: rgba(4, 116, 191, 0.3);
 }
-/* TODO: przenieść całe na dół? */
 @media screen and (max-width: 1145px) {
 /*    #a11y-options {
         background-color: rgba(224, 224, 224, 0.5);
@@ -211,6 +219,12 @@ body.contrasty {
     color: yellow;
     /*filter: invert(100%);*/
 }
+body.contrasty #user-actions ul #hamb {
+    color: white;
+}
+body.contrasty .overlay {
+    background-color: #212121;
+}
 body.contrasty span.data, body.contrasty nav#desktop {
     background-color: #282828;
 }
@@ -220,7 +234,7 @@ body.contrasty #user-actions, body.contrasty #info, body.contrasty .message-styl
 body.contrasty #user-actions a, body.contrasty #info a, body.contrasty li.button-style a, body.contrasty .btn-description a {
     color: white;
 }
-body.contrasty li.button-style, body.contrasty .btn-description a, body.contrasty #login, body.contrasty #btn {
+body.contrasty li.button-style, body.contrasty .btn-description a, body.contrasty #login, body.contrasty #logout, body.contrasty #btn, body.contrasty .submit-btn, body.contrasty div#table-of-content {
     background-color: #0e0e0e;
 }
 body.contrasty div#author p {
@@ -234,4 +248,68 @@ body.contrasty :focus {
 }
 body.contrasty #btn a {
     color: yellow;
+}
+body.contrasty .inline-form-text a, body.contrasty .submit-btn {
+    color: yellow;
+}
+body.contrasty .inline-form-text:hover, body.contrasty .submit-btn:hover, body.contrasty input:hover {
+    background-color: #0c0c0c;
+    color: yellow;
+}
+body.contrasty input#email, body.contrasty input#password, body.contrasty input#registration_form_email, body.contrasty input#registration_form_username, body.contrasty input#registration_form_plainPassword, body.contrasty input, body.contrasty textarea {
+    background-color: #111111;
+    color: yellow;
+}
+body.contrasty p.txt-format, body.contrasty p#txt2-example {
+    background-color: #212121;
+}
+body.contrasty .txt-inside {
+    color: black;
+}
+body.contrasty div#hover-esc {
+    background-color: #1a1a1a;
+}
+
+/* --- reader high contrast --- */
+body.contrasty .bg-list-clear {
+    background-color: rgba(13, 13, 13, 0.8);
+}
+
+/* --- side menu creator contrast --- */
+body.contrasty #sidebar-btn-mobile, body.contrasty .main-item {
+    background-color: #0e0e0e;
+    color: white;
+}
+body.contrasty .main-item {
+    color: yellow;
+}
+body.contrasty #wcag-list-content {
+    background-color: #212121;
+}
+body.contrasty #perceivable-items, body.contrasty #operable-items, body.contrasty #understandable-items, body.contrasty #robust-items {
+    background-color: #3b3b3b;
+}
+body.contrasty #perceivable:hover, body.contrasty #operable:hover, body.contrasty #understandable:hover, body.contrasty #robust:hover {
+    background-color: #2d2d2d;
+}
+
+/* --- admin contrast --- */
+body.contrasty .message-action-accept {
+    background-color: #d9d9d9;
+    color: black;
+}
+body.contrasty .message-action-delete {
+    background-color: #adadad;
+    color: black;
+}
+
+/* --- scroll btn contrast */
+body.contrasty #scroll-btn {
+    background-color: white;
+}
+body.contrasty #arrow {
+    border-color: black;
+}
+body.contrasty #scroll-txt {
+    color: black;
 }
