@@ -60,6 +60,18 @@
 .img-reader-size {
     max-width: 400px;
 }
+.img-reader-centered {
+    display: block;
+    margin: 0 auto;
+}
+.img-resp-reader {
+    max-width: 150%;
+}
+@media screen and (max-width: 1030px) {
+    .img-resp-reader {
+        max-width: 100%;
+    }
+}
 p.WCAG-emph span {
     background-color: rgba(158, 153, 63, 0.35);
 }

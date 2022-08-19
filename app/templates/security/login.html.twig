@@ -23,11 +23,10 @@
 
             {% if app.user %}
                 <div class="mb-3">
-                    Jesteś zalogowany jako {{ app.user.username }}, <a href="{{ path('app_logout') }}">Logout</a>
+                    Jesteś zalogowany jako {{ app.user.username }}, <a href="{{ path('app_logout') }}">Wyloguj</a>
                 </div>
             {% endif %}
-            <h1 class="h1-reformat">Logowanie</h1>
-            {# dac h1 #}
+            <h2 class="h1-reformat" style="text-align: center;">Logowanie</h2>
 
             <label for="email">Email</label> <span class="inline-form-text" style="margin-left: 3em;">Nie masz konta? <strong><a href="{{ url('app_register') }}">Zarejestruj się</a></strong> </span><br/>
             <input type="email" value="{{ last_username }}" id="email" name="email" autocomplete="email" required autofocus/><br/>

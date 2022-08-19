@@ -43,6 +43,30 @@ p.list-glue {
 }
 a {
     color: black;
+    padding: 0.5em;
+    margin: -0.5em;
+}
+p a:visited, ol li a {
+    color: #4a3d5d;
+}
+a.button-style, li.button-style a {
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+}
+a.button-style:hover, li.button-style:hover, #login:hover, #logout:hover, #reader:hover, #creator:hover {
+    background-color: #4096dc;
+}
+a.button-style {
+    padding: 1em;
+    margin: -1em;
+}
+a:active, button:active, input[type=button]:active, input[type=submit]:active {
+    text-decoration: underline;
+}
+li.button-style a {
+    padding: 1em 3em;
+    margin: -1em -3em;
 }
 a:hover {
     font-weight: bold;
@@ -97,6 +121,9 @@ input[type=checkbox] {
     cursor: pointer;
     /*box-shadow: 2px 2px 10px #b7cfe5;*/
 }
+#scroll-btn:hover {
+    background-color: #104a79;
+}
 #arrow {
     position: absolute;
     height: 7px;
@@ -129,6 +156,9 @@ input[type=checkbox] {
     border: 1px solid rgb(194, 193, 193);
     border-radius: 8px 0 0 8px;
     padding: 40px 2px 40px 2px;
+}
+#a11y-options:hover {
+    background-color: rgb(217, 217, 217);
 }
 #a11y-options img {
     width: 50px;
