@@ -49,7 +49,7 @@
                         <li>kiedy wysyła formularz. Użytkownik zostanie cofnięty do wcześniej wypełnionego formularza z oznaczonymi błędnymi danymi.</li>
                     </ul>
                 <p class="list-glue" style="margin-top: 1.5em;">
-                    <u>Jeśli nie wypełnisz jednego z pól, pojawi się komunikat o znalezionym błędzie:</u>
+                    <b>Jeśli nie wypełnisz jednego z pól, pojawi się komunikat o znalezionym błędzie:</b>
                 </p>
                 <p style="margin-bottom: 0;">
                     * Pole wymagane
@@ -84,13 +84,13 @@
                         <li>przedziale wartości możliwych do wybrania w polu formularza (np. rok, kwota).</li>
                     </ul>
                 <p style="margin-top: 1.5em; margin-bottom: 0;">
-                    <u>Instrukcja</u>: Wszystkie pola oznaczone symbolem „*” są wymagane.
+                    <b>Instrukcja</b>: Wszystkie pola oznaczone symbolem „*” są wymagane.
                 </p>
                 <form onsubmit="return false;">
-                    <label for="name">*Pierwsze imię</label> <span style="font-family: 'Varta', sans-serif;"><- konkretne imię</span><br/>
-                    <input type="text" id="name" required><br/>
-                    <label for="surname">*Nazwisko</label><br/>
-                    <input type="text" id="surname" required><br/>
+                    <label for="name2">*Pierwsze imię</label> <span style="font-family: 'Varta', sans-serif;"><- konkretne imię</span><br/>
+                    <input type="text" id="name2" required><br/>
+                    <label for="surname2">*Nazwisko</label><br/>
+                    <input type="text" id="surname2" required><br/>
                     <input type="submit" value="Prześlij"/>
                 </form>
             </section>
@@ -108,7 +108,7 @@
                     </ul>
                 <div style="margin: 2.3em 0;">
                     <p>
-                        <u>Pole zostało błędnie wypełnione:</u>
+                        <b>Pole zostało błędnie wypełnione:</b>
                     </p>
                     <p>
                         <label style="font-weight: bold;" for="postal">Kod pocztowy</label><br/>
@@ -168,8 +168,8 @@
                 </p>
                     <div>
                         <form>
-                            <label for="postal">Kod pocztowy</label><br/>
-                            <input type="number" id="postal" placeholder="99-999" /><br/>
+                            <label for="postal2">Kod pocztowy</label><br/>
+                            <input type="number" id="postal2" placeholder="99-999" /><br/>
                             <label for="client-num">Numer klienta (16 cyfr)</label><br/>
                             <input id="client-num" type="number" />
                             <span style="color: blue; font-weight: bold; position: relative; cursor: pointer;">Gdzie go znajdę?</span>

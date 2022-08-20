@@ -5,6 +5,14 @@
     background-color: rgb(166, 208, 244, 0.8);
     padding: 1em;
 }
+@media screen and (max-width: 632px) {
+    .bg-list-clear {
+        padding: 0.4em;
+    }
+    .bg-list-clear a {
+        font-size: 0.8em;
+    }
+}
 .list-clear-set {
     display: flex;
     align-items: center;
@@ -98,4 +106,91 @@ p.WCAG-emph span {
     .content-rest {
         max-width: 450px;
     }
+}
+
+/* --- czytelnik kolory article/ section + kontrast --- */
+.reader-gray {
+    background-color: rgba(194,194,194,0.4);
+}
+body.contrasty .reader-gray {
+    background-color: rgba(26, 26, 26, 0.4);
+}
+
+.dostepnosc-main {
+    background-color: #2880C9;
+}
+.dostepnosc-sub {
+    background-color: rgba(40,129,201,0.4);
+}
+body.contrasty .dostepnosc-main {
+    background-color: #0d3042;
+}
+body.contrasty .dostepnosc-sub {
+    background-color: rgba(13, 47, 66, 0.4);
+}
+
+.regulacje-main {
+    background-color: #8F67D0;
+}
+.regulacje-sub {
+    background-color: rgba(145,105,209,0.4);
+}
+body.contrasty .regulacje-main {
+    background-color: #392549;
+}
+body.contrasty .regulacje-sub {
+    background-color: rgba(61, 44, 82, 0.4);
+}
+
+.rodzaje-main {
+    background-color: #BD6161;
+}
+body.contrasty .rodzaje-main {
+    background-color: #693232;
+}
+
+.technologie-main {
+    background-color: #D4964D;
+}
+.technologie-sub {
+    background-color: rgba(212,148,76,0.6);
+}
+body.contrasty .technologie-main {
+    background-color: #3a2d16;
+}
+body.contrasty .technologie-sub {
+    background-color: rgba(37, 27, 13, 0.6);
+}
+
+.wcag-main {
+    background-color: #DAD33E;
+}
+.wcag-sub {
+    background-color: rgba(217,209,61,0.6);
+}
+body.contrasty .wcag-main {
+    background-color: #444111;
+}
+body.contrasty .wcag-sub {
+    background-color: rgba(33, 31, 9, 0.6);
+}
+
+.aria-main {
+    background-color: #55AF5A;
+}
+.aria-sub {
+    background-color: rgba(86,176,91,0.6);
+}
+body.contrasty .aria-main {
+    background-color: #1b361b;
+}
+body.contrasty .aria-sub {
+    background-color: rgba(21, 42, 22, 0.6);
+}
+
+.wiecej-main {
+    background-color: #C3C3C3;
+}
+body.contrasty .wiecej-main {
+    background-color: #000000;
 }

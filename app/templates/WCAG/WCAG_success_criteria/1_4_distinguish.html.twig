@@ -14,7 +14,9 @@
         <article>
             <h1>Wytyczna 1.4 Rozróżnialność</h1>
             <section>
-                <p>Ułatwiaj oglądanie i słuchanie treści oraz oddzielanie informacji od tła.</p>
+                <p>
+                    Ułatwiaj oglądanie i słuchanie treści oraz oddzielanie informacji od tła.
+                </p>
                 <div id="table-of-content">
                     <h2>Spis treści</h2>
                     <ul>
@@ -42,9 +44,9 @@
                     Jeśli informacje przekazujesz tylko za pomocą koloru, takie osoby mogą nie rozumieć polecenia lub nie mogą go wykonać.
                 </p>
                 <p>
-                    <u>Przykład złego użycia koloru do przekazania ważnej informacji:</u>
+                    <b>Przykład złego użycia koloru do przekazania ważnej informacji:</b>
                 </p>
-                <div class="input-grp">
+                <form class="input-grp">
                     <label style="color: red;" for="name">Imię</label><br/>
                     <input type="text" id="name"/><br/>
                     <label style="color: red;" for="surname">Nazwisko</label><br/>
@@ -53,23 +55,23 @@
                     <input type="text" id="address"/><br/>
                     <label for="age">Wiek</label><br/>
                     <input type="text" id="age"/>
-                </div>
+                </form>
                 <p>
-                    <u>Przykład poprawny:</u>
+                    <b>Przykład poprawny:</b>
                 </p>
-                <div class="input-grp">
+                <form class="input-grp">
                     <p>
                         Pola oznaczone znakiem „*” są wymagane.<br/>
                     </p>
-                    <label style="color: red;" for="name">*Imię</label><br/>
-                    <input type="text" id="name"/><br/>
-                    <label style="color: red;" for="surname">*Nazwisko</label><br/>
-                    <input type="text" id="surname"/><br/>
-                    <label style="color: red;" for="address">*Adres</label><br/>
-                    <input type="text" id="address"/><br/>
-                    <label for="age">Wiek</label><br/>
-                    <input type="text" id="age"/>
-                </div>
+                    <label style="color: red;" for="name2">*Imię</label><br/>
+                    <input type="text" id="name2"/><br/>
+                    <label style="color: red;" for="surname2">*Nazwisko</label><br/>
+                    <input type="text" id="surname2"/><br/>
+                    <label style="color: red;" for="address2">*Adres</label><br/>
+                    <input type="text" id="address2"/><br/>
+                    <label for="age2">Wiek</label><br/>
+                    <input type="text" id="age2"/>
+                </form>
                 <p>
                     <b>WAŻNE</b><br/>
                     Jeśli używasz koloru do podkreślenia elementu, treść w tym kolorze musi mieć inny odcień i jasność w porównaniu do reszty zawartości.
@@ -106,7 +108,7 @@
                 <div class="compare-mm spacing">
                     <div>
                         <p>
-                            Nagranie zgodne z kryterium:
+                            Nagranie zgodne z kryterium, nie włącza się automatycznie po załadowaniu strony:
                         </p>
                         <video controls>
                             <source src="{{ asset('img/1_4_2_dobry.mp4') }}" type="video/mp4" />
@@ -115,7 +117,7 @@
                     </div>
                     <div>
                         <p>
-                            Nagranie niezgodne z kryterium:
+                            Nagranie niezgodne z kryterium, włącza się automatycznie po załadowaniu strony:
                         </p>
                         <video controls>
                             <source src="{{ asset('img/1_4_2_zly.mp4') }}" type="video/mp4" />
@@ -190,7 +192,7 @@
                         <strong id="txt-example">Tekst do powiększenia</strong>
                     </p>
                     <button id="zoom-txt-btn">Powiększ napis powyżej</button>
-                    <button id="reset-btn"><i class="fa fa-rotate-left"></i></button>
+                    <button aria-label="Resetuj" id="reset-btn"><i class="fa fa-rotate-left"></i></button>
                     <p>
                         <strong>Spróbuj powiększyć stronę ('Ctrl' + '+') do wartości 200%. Zobacz, że strona jest nadal czytelna.</strong>
                     </p>
@@ -248,7 +250,7 @@
                 </p>
                     <ol>
                         <li>zawierają mowę na pierwszym planie,</li>
-                        <li>nie są dźwiękową wersją <u><a target="_blank" href="https://support.google.com/a/answer/1217728?hl=pl">testu CAPTCHA</a></u>,</li>
+                        <li>nie są dźwiękową wersją <b><a target="_blank" href="https://support.google.com/a/answer/1217728?hl=pl">testu CAPTCHA</a></b>,</li>
                         <li>nie są nagraniem o charakterze muzycznym (np. śpiew),</li>
                     </ol>
                 <p class="list-glue">
@@ -280,24 +282,24 @@
                     Użytkownikowi będzie trudniej przeglądać zawartość, jeśli jest wyświetlana w sposób nieprzystępny.
                 </p>
                 <p>
-                    <u>Zamiana kolorów na pierwszym planie i w tle</u><br/>
+                    <b>Zamiana kolorów na pierwszym planie i w tle</b><br/>
                     Część osób inaczej postrzega barwy, np. nie rozpoznaje barwy czerwonej. Jeśli taki użytkownik może zmienić wyświetlane kolory, dostosuje je do własnych potrzeb.
                     <img src="{{ asset('img/1_4_8_bg.jpg') }}" alt="Porównanie zmiany kolorów tekstu i tła. Od góry: czarny tekst, białe tło; żółty tekst, czarne tło; biały tekst, niebieskie tło." class="img-resp" />
                 </p>
                 <p>
-                    <u>Bloki tekstu są szerokie na maksymalnie 80 znaków (40 w przypadku alfabetów: chińskiego, japońskiego i koreańskiego).</u><br/>
+                    <b>Bloki tekstu są szerokie na maksymalnie 80 znaków (40 w przypadku alfabetów: chińskiego, japońskiego i koreańskiego).</b><br/>
                     Część użytkowników ma trudność z czytaniem długich bloków tekstu. Ich skrócenie pozwala na łatwiejsze śledzenie kolejnych linii tekstu.<br/>
                     Dla alfabetu chińskiego, japońskiego i koreańskiego maksymalna liczba znaków jest mniejsza, ponieważ znaki w tych językach są szersze.<br/>
                     <img src="{{ asset('img/1_4_8_size.jpg') }}" alt="Blok tekstu ze strzałką na górze: 'maksymalnie 80 znaków'. " class="img-resp" />
                 </p>
                 <p>
-                    <u>Tekst nie jest wyjustowany</u><br/>
+                    <b>Tekst nie jest wyjustowany</b><br/>
                     Tekst wyrównany do lewej i prawej strony trudniej się czyta. Efekt justowania może spowodować, że
                     odstępy między literami staną się nieregularne, za duże lub za małe.<br/>
                     <img src="{{ asset('img/1_4_8_center.jpg') }}" alt="2 bloki tekstu. Jeden poprawnie wyrównany do lewej, drugi wyjustowany." class="img-resp" />
                 </p>
                 <p>
-                    <u>Powiększanie ekranu bez przewijania w poziomie</u><br/>
+                    <b>Powiększanie ekranu bez przewijania w poziomie</b><br/>
                     Musisz umożliwić powiększenie strony, nie blokuj tej opcji w kodzie!<br/>
                     Przy powiększaniu zawartość musi zwijać się do następnych linijek, aby użytkownik nie musiał przesuwać zawartości w poziomie.<br/>
                     <img src="{{ asset('img/1_4_8_scroll.jpg') }}" alt="Przykład strony z przewijaniem w poziomie." class="img-resp" />
@@ -361,18 +363,18 @@
                 </p>
                 <div id="elements-contrast-examples">
                     <p>
-                        <u>Aktywne elementy interfejsu użytkownika</u><br/>
+                        <b>Aktywne elementy interfejsu użytkownika</b><br/>
                         Elementy, z którymi użytkownik może wejść w interakcję.
                         Zwróć uwagę na stan zawartości, taki jak wybór elementu i jego fokus.<br/>
                         <button class="btn-example2" style="background-color: #612776; color: white;">Przycisk o odpowiednim kontraście</button>
                     </p>
                     <p>
-                        <u>Granice obiektów na stronie</u><br/>
+                        <b>Granice obiektów na stronie</b><br/>
                         Kiedy na stronie dodasz element interaktywny, zaznacz go w jakikolwiek sposób. Na przykład, kiedy przycisk nie ma tła, użyj obwódki o odpowiednim kontraście.<br/>
                         <button class="btn-example2" style="background-color: transparent; color: #612776; border: 3px solid #612776;">Cały interaktywny element jest widoczny</button>
                     </p>
                     <p>
-                        <u>Obiekty graficzne</u><br/>
+                        <b>Obiekty graficzne</b><br/>
                         Zadbaj o odpowiedni kontrast grafiki, jeśli za jej pomocą przekazujesz ważne informacje.<br/>
                         <i>Prawidłowo wykonany wykres:</i><br/>
                         <img src="{{ asset('img/wykres_dobry.png') }}" alt="Przykład wykresu o odpowiednim kontraście." class="img-resp" /><br/>
@@ -396,7 +398,7 @@
                         <li>Odstępy między literami (tracking) wynoszą przynajmniej 0.12-krotności rozmiaru czcionki;</li>
                         <li>Odstępy między wyrazami to co najmniej 0.16 wielkości czcionki.</li>
                     </ul>
-                <p style="background-color: lightgray; color: black;">
+                <p style="background-color: lightgray; color: black; max-width: 400px; margin: 0 auto;">
                     <span id="txt2-example">
                         Przykładowy tekst do zmiany odstępów.
                         Przykładowy tekst do zmiany odstępów.
@@ -406,7 +408,7 @@
                     <button id="line-height">Wysokość linii</button>
                     <button id="letter-space" >Odstępy między literami</button>
                     <button id="word-space">Odstępy między wyrazami</button>
-                    <button id="reset-space"><i class="fa fa-rotate-left"></i></button>
+                    <button aria-label="Resetuj" id="reset-space"><i class="fa fa-rotate-left"></i></button>
                 </p>
                 <p>
                     Kiedy dodasz opcję dostosowania tekstu, pomożesz m.in. osobom, które mają trudności z czytaniem.

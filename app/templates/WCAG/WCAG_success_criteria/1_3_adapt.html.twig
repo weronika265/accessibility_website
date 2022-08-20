@@ -14,7 +14,9 @@
         <article>
             <h1>Wytyczna 1.3 Możliwość adaptacji</h1>
             <section>
-                <p>Twórz treści, które mogą być prezentowane na różne sposoby, bez utraty informacji czy struktury.</p>
+                <p>
+                    Twórz treści, które mogą być prezentowane na różne sposoby, bez utraty informacji czy struktury.
+                </p>
                 <div id="table-of-content">
                     <h2>Spis treści</h2>
                     <ul>
@@ -63,9 +65,13 @@
 {#                        <label>Element checkbox 3 i jego opis<input type="checkbox"/></label>#}
 {#                    </fieldset>#}
 {#                </div>#}
-                <p style="margin-bottom: 0">
-                    <u>Jak czytnik widzi i odczytuje elementy strony:</u>
+                <p style="margin-bottom: 1em;">
+                    <b>Jak czytnik widzi i odczytuje elementy strony:</b>
                 </p>
+                <video controls>
+                    <source src="{{ asset('img/1_3_1.mp4') }}" type="video/mp4" />
+                    Twoja przeglądarka nie wspiera elementów wideo.
+                </video>
                 <pre>
                     <code>
 &lt;h1&gt;Główny nagłówek&lt;/h1&gt;
@@ -97,10 +103,6 @@
 &lt;/p>
                     </code>
                 </pre>
-                <video controls>
-                    <source src="{{ asset('img/1_3_1.mp4') }}" type="video/mp4" />
-                    Twoja przeglądarka nie wspiera elementów wideo.
-                </video>
 {#                <div style="border: 2px solid red;">#}
 {#                    Jak widzi stronę użytkownik bez problemów ze wzrokiem#}
 {#                </div>#}
@@ -181,9 +183,7 @@
                     W orientacji pionowej użytkownik będzie miał problem z odczytywaniem i nawigowaniem po kolejnych stronach z nutami.
                 </p>
                 <p>
-                    Podczas korzystania z przykładów należy przyjąć, że widok poziomy to standardowe okno przeglądarki, a pionowy to okno skurczone.
-                </p>
-                <p>
+                    Podczas korzystania z przykładów należy przyjąć, że widok poziomy to standardowe okno przeglądarki, a pionowy to okno skurczone.<br/>
                     <a href="{{ url('_1_3_4_dobry') }}">Dobra implementacja</a>
                     <br/>
                     <a href="{{ url('_1_3_4_zly') }}">Zła implementacja</a><br/>
@@ -198,9 +198,7 @@
                     <ul>
                         <li>
                             pole w formularzu służy celowi, który jest opisany w
-                            <u>
-                                <a target="_blank" href="https://www.w3.org/Translations/WCAG21-pl/#input-purposes">Przeznaczenie pól danych w komponentach interfejsu użytkowników</a>
-                            </u>
+                            <a target="_blank" href="https://www.w3.org/Translations/WCAG21-pl/#input-purposes"><u>Przeznaczenie pól danych w komponentach interfejsu użytkowników</u></a>
                             w dokumencie WCAG 2.1,
                         </li>
                         oraz

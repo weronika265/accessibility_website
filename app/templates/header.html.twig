@@ -24,7 +24,7 @@
 
                     <li id="login" class="button-style" style="box-shadow: 2px 2px 10px #296fa8;"><a href="{{ url('app_login') }}">Zaloguj</a></li>
                 {% endif %}
-                <li><button aria-label="Otwórz menu" id="hamb"><i class='fa fa-navicon'></i></button></li>
+                <li><button aria-label="Otwórz menu" id="hamb" style="padding: 0.7em;" aria-expanded="false"><i class='fa fa-navicon'></i></button></li>
             </ul>
         </div>
         <nav aria-label="Main" id="desktop">
@@ -35,7 +35,7 @@
 {#                <li class="button-style"><a href="{{ url('projekt_info_index') }}">Informacja o projekcie</a></li>#}
             </ul>
         </nav>
-        <div id="myNav" class="overlay">
+        <div id="myNav" class="overlay" aria-hidden="true">
             <button aria-label="Zamknij menu" id="close-hamb"><i class='fa fa-close'></i></button>
             <nav id="mobile">
                 <ul>
@@ -56,12 +56,21 @@
     <script>
         const hamb = document.getElementById('hamb');
         const closeHamb = document.getElementById('close-hamb');
+        const nav = document.getElementById("myNav");
 
         hamb.addEventListener('click', () => {
-            document.getElementById("myNav").style.width = "45%";
+            hamb.ariaExpanded = 'true';
+            nav.style.width = "45%";
+            nav.style.visibility = 'visible';
+            nav.ariaExpanded = 'true';
+            nav.ariaHidden = 'false';
         });
         closeHamb.addEventListener('click', () => {
-            document.getElementById("myNav").style.width = "0%";
+            hamb.ariaExpanded = 'false';
+            nav.style.width = "0%";
+            nav.style.visibility = 'hidden';
+            nav.ariaExpanded = 'false';
+            nav.ariaHidden = 'true';
         });
     </script>
 {% endblock %}

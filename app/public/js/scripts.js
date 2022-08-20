@@ -8,11 +8,13 @@ function a11yMenu() {
     if (!expanded) {
         a11yButton.style.transform = 'translateX(-180px)';
         a11yButtonExpanded.style.display = 'block';
+        a11yButton.ariaExpanded = 'true';
         expanded = true;
     }
     else if (expanded) {
         a11yButton.style.transform = 'translateX(0px)';
         a11yButtonExpanded.style.display = 'none';
+        a11yButton.ariaExpanded = 'false';
         expanded = false;
     }
 }
@@ -212,3 +214,8 @@ hamb.addEventListener('click', () => {
 closeHamb.addEventListener('click', () => {
     document.getElementById("myNav").style.width = "0%";
 });*/
+
+
+/* --- side menu creator --- */
+
+

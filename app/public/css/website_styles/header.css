@@ -87,6 +87,10 @@ nav#desktop li {
     #mobile li a {
         color: white;
     }
+    #user-actions a {
+        margin: 0;
+        padding: 0;
+    }
     #hamb {
         font-size: 1.1em;
     }
@@ -106,7 +110,7 @@ nav#desktop li {
         margin-right: 5em;
     }
     .overlay {
-        z-index: 1;
+        z-index: 5;
         position: fixed;
         top: 0;
         right: 0;
@@ -115,6 +119,7 @@ nav#desktop li {
         background-color: #0957a7;
         overflow-x: hidden;
         transition: 0.5s;
+        visibility: hidden;
     }
     #user-actions {
         align-items: center;

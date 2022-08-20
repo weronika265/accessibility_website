@@ -112,8 +112,10 @@ input[type=checkbox] {
 #scroll-btn {
     position: fixed;
     display: none;
-    right: 25px;
-    bottom: 25px;
+/*    right: 25px;
+    bottom: 25px;*/
+    right: 10px;
+    bottom: 10px;
     border-radius: 50%;
     border: none;
     background-color: #175a93;
@@ -202,25 +204,26 @@ button#contrast-std, button#space-std, button#font-std, .active-a11y  {
     background-color: rgba(4, 116, 191, 0.3);
 }
 @media screen and (max-width: 1145px) {
-/*    #a11y-options {
+    #a11y-options {
         background-color: rgba(224, 224, 224, 0.5);
     }
     #a11y-options img {
         opacity: 0.7;
-    }*/
-
-/*    #a11y-options {
+    }
+    #a11y-options {
         position: fixed;
-        right: 30px;
-        top: 1170px;
+/*        right: 30px;
+        top: 1170px;*/
         z-index: 999;
         background-color: rgba(225, 225, 225);
         border: 1px solid rgb(194, 193, 193);
         width: 50px;
         height: 50px;
-        border-radius: 50px;
+        /*border-radius-: 50px;*/
+        -moz-border-radius-topleft: 50px;
+        -moz-border-radius-bottomleft: 50px;
         padding: 0;
-    }*/
+    }
 }
 
 
@@ -307,20 +310,20 @@ body.contrasty .bg-list-clear {
 
 /* --- side menu creator contrast --- */
 body.contrasty #sidebar-btn-mobile, body.contrasty .main-item {
-    background-color: #0e0e0e;
+    background-color: #282828;
     color: white;
 }
 body.contrasty .main-item {
     color: yellow;
 }
 body.contrasty #wcag-list-content {
-    background-color: #212121;
+    background-color: #2a2a2a;
 }
 body.contrasty #perceivable-items, body.contrasty #operable-items, body.contrasty #understandable-items, body.contrasty #robust-items {
-    background-color: #3b3b3b;
+    background-color: #1e1e1e;
 }
 body.contrasty #perceivable:hover, body.contrasty #operable:hover, body.contrasty #understandable:hover, body.contrasty #robust:hover {
-    background-color: #2d2d2d;
+    background-color: #6b6b6b;
 }
 
 /* --- admin contrast --- */

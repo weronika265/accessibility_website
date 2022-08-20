@@ -1,6 +1,6 @@
 nav#sidebar {
     height: 100%;
-    width: 12.6em;
+    width: 13em;
     position: fixed;
     z-index: 1;
     top: 255px;
@@ -15,7 +15,7 @@ nav#sidebar {
     z-index: 999;
     left: 0;
     bottom: 0;
-    padding: 0.5em 1em;
+    padding: 0.6em 1em;
     font-family: "Varta", sans-serif;
     font-size: 1.1em;
     /*background-color: #b7cfe5;*/
@@ -61,16 +61,22 @@ nav#sidebar > li {
     margin: 0;
 }
 #perceivable, #operable, #understandable, #robust {
+    width: 13em;
+    font-family: "Varta", sans-serif;
+    font-size: 1em;
+    text-align: left;
+    background-color: #b9b9b9;
     padding: 0.2em 0.5em;
+    border: none;
     cursor: pointer;
 }
 #perceivable-items, #operable-items, #understandable-items, #robust-items {
     display: none;
-    width: 100%;
-    padding: 1em;
-    background-color: #ababab;
+    width: 13em;
+    background-color: #9d9d9d;
 }
 #perceivable:hover, #operable:hover, #understandable:hover, #robust:hover {
-    width: 100%;
-    background-color: #888888;
+    width: 13em;
+    background-color: rgba(134, 164, 191, 0.6);
+    font-weight: bold;
 }

@@ -4,23 +4,6 @@
     Kryterium sukcesu 1.3.4 zły przykład
 {% endblock %}
 
-{% block stylesheets %}
-    <style>
-        .container {
-            display: flex;
-            max-width: 1000px;
-        }
-        .item {
-            background-color: aqua;
-            padding: 2em 8em;
-            margin: 2em;
-            font-size: 1em;
-            width: 4em;
-            height: 6em;
-        }
-    </style>
-{% endblock %}
-
 {% block body %}
     <h1 class="ex-header">Przykład do kryterium sukcesu 1.3.4 Orientacja</h1>
     <main style="padding: 1em;">
@@ -31,6 +14,6 @@
             <div class="item">Treść elementu 3</div>
             <div class="item">Treść elementu 4</div>
         </div>
-        <a href="{{ url('adapt_index') }}#1_3_4">Powrót do kryteriów sukcesu</a>
+        <a href="{{ url('adapt_index') }}#1_3_4"><u>Powrót do kryteriów sukcesu</u></a>
     </main>
 {% endblock %}
