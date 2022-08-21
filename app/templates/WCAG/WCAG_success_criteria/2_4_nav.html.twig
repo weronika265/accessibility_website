@@ -150,7 +150,7 @@
                 <p>
                     Przykład:<br/>
                     W jednym z kryteriów dla wytycznej <i>2.3 Ataki padaczki</i>, użytkownik powinien mieć możliwość
-                    <a href="{{ url('epilepsy_index') }}#2_3_3">wyłączenia animacji dla elementów interaktywnych.</a>
+                    <a href="{{ url('epilepsy_index', {id: 7}) }}#2_3_3">wyłączenia animacji dla elementów interaktywnych.</a>
                 </p>
                 <p>
                     Warto zachować spójność w nazewnictwie <a href="#2_4_2">tytułów stron</a> i linków, które prowadzą do tych stron.
@@ -266,7 +266,7 @@
                 </p>
                 <p>
                     Przykładowo:<br/>
-                    <a href="{{ url('epilepsy_index') }}#2_3_3">Kryterium sukcesu 2.3.3 Animacja po interakcji</a>
+                    <a href="{{ url('epilepsy_index', {id: 7}) }}#2_3_3">Kryterium sukcesu 2.3.3 Animacja po interakcji</a>
                     pozwala użytkownikowi na wyłączenie animacji elementów interaktywnych.
                 </p>
             </section>
@@ -311,7 +311,7 @@
             </section>
         </article>
         <article>
-            <h2>Komentarze</h2>
+            <h2 class="comment-header-spacing">Komentarze</h2>
             {% if pagination is defined and pagination.items|length %}
                 <div style="flex-wrap: wrap;">
                     {% for comment in pagination.items %}
@@ -336,7 +336,7 @@
 
             {% if is_granted('IS_AUTHENTICATED_FULLY') %}
                 {{ form_start(form) }}
-                <div>{{ form_label(form.message) }}</div>
+                <div class="comment-field-spacing">{{ form_label(form.message) }}</div>
                 <div>{{ form_widget(form.message, { 'attr': {'rows' : '6', 'cols' : '60'} } ) }}</div>
                 <div>
                     <input type="submit" value="{{ 'Dodaj komentarz' }}" class="submit-btn"/>

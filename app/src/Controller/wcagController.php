@@ -93,6 +93,7 @@ class wcagController extends AbstractController
 
 //    KRYTERIA
 
+
 //    setCategory()
     /**
      * 1.1 Alternatywa tekstowa
@@ -109,20 +110,14 @@ class wcagController extends AbstractController
      *     name="alt-txt_index",
      * )
      */
-    public function altTxt(Request $request, CommentRepository $commentRepository, ContentRepository $contentRepository, PaginatorInterface $paginator, $id): Response
+    public function altTxt(Request $request, CommentRepository $commentRepository, ContentRepository $contentRepository, PaginatorInterface $paginator, $id/*, $_route*/): Response
     {
-//        $comments = $commentRepository->queryAll();
-
         $pagination = $paginator->paginate(
             $commentRepository->queryAll(),
             $request->query->getInt('page', 1),
             CommentRepository::PAGINATOR_ITEMS_PER_PAGE
         );
 
-//        $content = $this->contentRepository->findOneById(11);
-
-//        $content_id = $request->query->get('id');
-//        $content = $this->getDoctrine()->getRepository(Content::class)->find($content_id);
         $content = $contentRepository->find($id);
 
         $user = $this->getUser();
@@ -130,9 +125,6 @@ class wcagController extends AbstractController
         $comment->setAuthor($user);
         $comment->setContent($content);
 
-//        $comment->setContent($contentRepository->findOneById($content_id));
-
-//        $comment->setContent($content_name); // w setContent musi byc obiekt Content (czyli w zmiennej $content_name)
         $form = $this->createForm(CommentType::class, $comment);
         $form->handleRequest($request);
 
@@ -143,6 +135,8 @@ class wcagController extends AbstractController
 
             return $this->redirectToRoute('alt-txt_index', array('id' => $id));
         }
+
+//        dump($_route);
 
         return $this->render(
             'WCAG/WCAG_success_criteria/1_1_alt-txt.html.twig',
@@ -156,6 +150,10 @@ class wcagController extends AbstractController
     /**
      * 1.2 Multimedia
      *
+     * @param Request $request HTTP request
+     * @param CommentRepository $commentRepository Comment repository
+     * @param ContentRepository $contentRepository Content repository
+     *
      * @return \Symfony\Component\HttpFoundation\Response HTTP response
      *
      * @Route(
@@ -166,7 +164,6 @@ class wcagController extends AbstractController
      */
     public function multimedia(Request $request, CommentRepository $commentRepository, ContentRepository $contentRepository, PaginatorInterface $paginator, $id): Response
     {
-
         $pagination = $paginator->paginate(
             $commentRepository->queryAll(),
             $request->query->getInt('page', 1),
@@ -188,7 +185,7 @@ class wcagController extends AbstractController
 
             $this->addFlash('success', 'Utworzono Komentarz. Czekaj na zatwierdzenie przez administratora.');
 
-            return $this->redirectToRoute('alt-txt_index', array('id' => $id));
+            return $this->redirectToRoute('multimedia_index', array('id' => $id));
         }
 
         return $this->render(
@@ -203,6 +200,10 @@ class wcagController extends AbstractController
     /**
      * 1.3 Możliwość adaptacji
      *
+     * @param Request $request HTTP request
+     * @param CommentRepository $commentRepository Comment repository
+     * @param ContentRepository $contentRepository Content repository
+     *
      * @return \Symfony\Component\HttpFoundation\Response HTTP response
      *
      * @Route(
@@ -211,15 +212,47 @@ class wcagController extends AbstractController
      *     name="adapt_index",
      * )
      */
-    public function adapt(): Response
+    public function adapt(Request $request, CommentRepository $commentRepository, ContentRepository $contentRepository, PaginatorInterface $paginator, $id): Response
     {
+        $pagination = $paginator->paginate(
+            $commentRepository->queryAll(),
+            $request->query->getInt('page', 1),
+            CommentRepository::PAGINATOR_ITEMS_PER_PAGE
+        );
+
+        $content = $contentRepository->find($id);
+
+        $user = $this->getUser();
+        $comment = new Comment();
+        $comment->setAuthor($user);
+        $comment->setContent($content);
+
+        $form = $this->createForm(CommentType::class, $comment);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $this->save($comment);
+
+            $this->addFlash('success', 'Utworzono Komentarz. Czekaj na zatwierdzenie przez administratora.');
+
+            return $this->redirectToRoute('adapt_index', array('id' => $id));
+        }
+
         return $this->render(
             'WCAG/WCAG_success_criteria/1_3_adapt.html.twig',
+            [
+                'pagination' => $pagination,
+                'form' => $form->createView(),
+            ]
         );
     }
 
     /**
      * 1.4 Rozróżnialność
+     *
+     * @param Request $request HTTP request
+     * @param CommentRepository $commentRepository Comment repository
+     * @param ContentRepository $contentRepository Content repository
      *
      * @return \Symfony\Component\HttpFoundation\Response HTTP response
      *
@@ -229,15 +262,47 @@ class wcagController extends AbstractController
      *     name="distinguish_index",
      * )
      */
-    public function distinguish(): Response
+    public function distinguish(Request $request, CommentRepository $commentRepository, ContentRepository $contentRepository, PaginatorInterface $paginator, $id): Response
     {
+        $pagination = $paginator->paginate(
+            $commentRepository->queryAll(),
+            $request->query->getInt('page', 1),
+            CommentRepository::PAGINATOR_ITEMS_PER_PAGE
+        );
+
+        $content = $contentRepository->find($id);
+
+        $user = $this->getUser();
+        $comment = new Comment();
+        $comment->setAuthor($user);
+        $comment->setContent($content);
+
+        $form = $this->createForm(CommentType::class, $comment);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $this->save($comment);
+
+            $this->addFlash('success', 'Utworzono Komentarz. Czekaj na zatwierdzenie przez administratora.');
+
+            return $this->redirectToRoute('distinguish_index', array('id' => $id));
+        }
+
         return $this->render(
             'WCAG/WCAG_success_criteria/1_4_distinguish.html.twig',
+            [
+                'pagination' => $pagination,
+                'form' => $form->createView(),
+            ]
         );
     }
 
     /**
      * 2.1 Dostępność z klawiatury
+     *
+     * @param Request $request HTTP request
+     * @param CommentRepository $commentRepository Comment repository
+     * @param ContentRepository $contentRepository Content repository
      *
      * @return \Symfony\Component\HttpFoundation\Response HTTP response
      *
@@ -247,15 +312,47 @@ class wcagController extends AbstractController
      *     name="keyboard_index",
      * )
      */
-    public function keyboard(): Response
+    public function keyboard(Request $request, CommentRepository $commentRepository, ContentRepository $contentRepository, PaginatorInterface $paginator, $id): Response
     {
+        $pagination = $paginator->paginate(
+            $commentRepository->queryAll(),
+            $request->query->getInt('page', 1),
+            CommentRepository::PAGINATOR_ITEMS_PER_PAGE
+        );
+
+        $content = $contentRepository->find($id);
+
+        $user = $this->getUser();
+        $comment = new Comment();
+        $comment->setAuthor($user);
+        $comment->setContent($content);
+
+        $form = $this->createForm(CommentType::class, $comment);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $this->save($comment);
+
+            $this->addFlash('success', 'Utworzono Komentarz. Czekaj na zatwierdzenie przez administratora.');
+
+            return $this->redirectToRoute('keyboard_index', array('id' => $id));
+        }
+
         return $this->render(
             'WCAG/WCAG_success_criteria/2_1_keyboard.html.twig',
+            [
+                'pagination' => $pagination,
+                'form' => $form->createView(),
+            ]
         );
     }
 
     /**
      * 2.2 Wystarczający czas
+     *
+     * @param Request $request HTTP request
+     * @param CommentRepository $commentRepository Comment repository
+     * @param ContentRepository $contentRepository Content repository
      *
      * @return \Symfony\Component\HttpFoundation\Response HTTP response
      *
@@ -265,15 +362,47 @@ class wcagController extends AbstractController
      *     name="time_index",
      * )
      */
-    public function time(): Response
+    public function time(Request $request, CommentRepository $commentRepository, ContentRepository $contentRepository, PaginatorInterface $paginator, $id): Response
     {
+        $pagination = $paginator->paginate(
+            $commentRepository->queryAll(),
+            $request->query->getInt('page', 1),
+            CommentRepository::PAGINATOR_ITEMS_PER_PAGE
+        );
+
+        $content = $contentRepository->find($id);
+
+        $user = $this->getUser();
+        $comment = new Comment();
+        $comment->setAuthor($user);
+        $comment->setContent($content);
+
+        $form = $this->createForm(CommentType::class, $comment);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $this->save($comment);
+
+            $this->addFlash('success', 'Utworzono Komentarz. Czekaj na zatwierdzenie przez administratora.');
+
+            return $this->redirectToRoute('time_index', array('id' => $id));
+        }
+
         return $this->render(
             'WCAG/WCAG_success_criteria/2_2_time.html.twig',
+            [
+                'pagination' => $pagination,
+                'form' => $form->createView(),
+            ]
         );
     }
 
     /**
      * 2.3 Ataki padaczki
+     *
+     * @param Request $request HTTP request
+     * @param CommentRepository $commentRepository Comment repository
+     * @param ContentRepository $contentRepository Content repository
      *
      * @return \Symfony\Component\HttpFoundation\Response HTTP response
      *
@@ -283,15 +412,47 @@ class wcagController extends AbstractController
      *     name="epilepsy_index",
      * )
      */
-    public function epilepsy(): Response
+    public function epilepsy(Request $request, CommentRepository $commentRepository, ContentRepository $contentRepository, PaginatorInterface $paginator, $id): Response
     {
+        $pagination = $paginator->paginate(
+            $commentRepository->queryAll(),
+            $request->query->getInt('page', 1),
+            CommentRepository::PAGINATOR_ITEMS_PER_PAGE
+        );
+
+        $content = $contentRepository->find($id);
+
+        $user = $this->getUser();
+        $comment = new Comment();
+        $comment->setAuthor($user);
+        $comment->setContent($content);
+
+        $form = $this->createForm(CommentType::class, $comment);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $this->save($comment);
+
+            $this->addFlash('success', 'Utworzono Komentarz. Czekaj na zatwierdzenie przez administratora.');
+
+            return $this->redirectToRoute('epilepsy_index', array('id' => $id));
+        }
+
         return $this->render(
             'WCAG/WCAG_success_criteria/2_3_epilepsy.html.twig',
+            [
+                'pagination' => $pagination,
+                'form' => $form->createView(),
+            ]
         );
     }
 
     /**
      * 2.4 Możliwość nawigacji
+     *
+     * @param Request $request HTTP request
+     * @param CommentRepository $commentRepository Comment repository
+     * @param ContentRepository $contentRepository Content repository
      *
      * @return \Symfony\Component\HttpFoundation\Response HTTP response
      *
@@ -301,15 +462,47 @@ class wcagController extends AbstractController
      *     name="nav_index",
      * )
      */
-    public function nav(): Response
+    public function nav(Request $request, CommentRepository $commentRepository, ContentRepository $contentRepository, PaginatorInterface $paginator, $id): Response
     {
+        $pagination = $paginator->paginate(
+            $commentRepository->queryAll(),
+            $request->query->getInt('page', 1),
+            CommentRepository::PAGINATOR_ITEMS_PER_PAGE
+        );
+
+        $content = $contentRepository->find($id);
+
+        $user = $this->getUser();
+        $comment = new Comment();
+        $comment->setAuthor($user);
+        $comment->setContent($content);
+
+        $form = $this->createForm(CommentType::class, $comment);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $this->save($comment);
+
+            $this->addFlash('success', 'Utworzono Komentarz. Czekaj na zatwierdzenie przez administratora.');
+
+            return $this->redirectToRoute('nav_index', array('id' => $id));
+        }
+
         return $this->render(
             'WCAG/WCAG_success_criteria/2_4_nav.html.twig',
+            [
+                'pagination' => $pagination,
+                'form' => $form->createView(),
+            ]
         );
     }
 
     /**
      * 2.5 Metody obsługi
+     *
+     * @param Request $request HTTP request
+     * @param CommentRepository $commentRepository Comment repository
+     * @param ContentRepository $contentRepository Content repository
      *
      * @return \Symfony\Component\HttpFoundation\Response HTTP response
      *
@@ -319,15 +512,47 @@ class wcagController extends AbstractController
      *     name="inputs_index",
      * )
      */
-    public function inputs(): Response
+    public function inputs(Request $request, CommentRepository $commentRepository, ContentRepository $contentRepository, PaginatorInterface $paginator, $id): Response
     {
+        $pagination = $paginator->paginate(
+            $commentRepository->queryAll(),
+            $request->query->getInt('page', 1),
+            CommentRepository::PAGINATOR_ITEMS_PER_PAGE
+        );
+
+        $content = $contentRepository->find($id);
+
+        $user = $this->getUser();
+        $comment = new Comment();
+        $comment->setAuthor($user);
+        $comment->setContent($content);
+
+        $form = $this->createForm(CommentType::class, $comment);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $this->save($comment);
+
+            $this->addFlash('success', 'Utworzono Komentarz. Czekaj na zatwierdzenie przez administratora.');
+
+            return $this->redirectToRoute('inputs_index', array('id' => $id));
+        }
+
         return $this->render(
             'WCAG/WCAG_success_criteria/2_5_inputs.html.twig',
+            [
+                'pagination' => $pagination,
+                'form' => $form->createView(),
+            ]
         );
     }
 
     /**
      * 3.1 Możliwość odczytania
+     *
+     * @param Request $request HTTP request
+     * @param CommentRepository $commentRepository Comment repository
+     * @param ContentRepository $contentRepository Content repository
      *
      * @return \Symfony\Component\HttpFoundation\Response HTTP response
      *
@@ -337,15 +562,47 @@ class wcagController extends AbstractController
      *     name="read_index",
      * )
      */
-    public function read(): Response
+    public function read(Request $request, CommentRepository $commentRepository, ContentRepository $contentRepository, PaginatorInterface $paginator, $id): Response
     {
+        $pagination = $paginator->paginate(
+            $commentRepository->queryAll(),
+            $request->query->getInt('page', 1),
+            CommentRepository::PAGINATOR_ITEMS_PER_PAGE
+        );
+
+        $content = $contentRepository->find($id);
+
+        $user = $this->getUser();
+        $comment = new Comment();
+        $comment->setAuthor($user);
+        $comment->setContent($content);
+
+        $form = $this->createForm(CommentType::class, $comment);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $this->save($comment);
+
+            $this->addFlash('success', 'Utworzono Komentarz. Czekaj na zatwierdzenie przez administratora.');
+
+            return $this->redirectToRoute('read_index', array('id' => $id));
+        }
+
         return $this->render(
             'WCAG/WCAG_success_criteria/3_1_read.html.twig',
+            [
+                'pagination' => $pagination,
+                'form' => $form->createView(),
+            ]
         );
     }
 
     /**
      * 3.2 Przewidywalność
+     *
+     * @param Request $request HTTP request
+     * @param CommentRepository $commentRepository Comment repository
+     * @param ContentRepository $contentRepository Content repository
      *
      * @return \Symfony\Component\HttpFoundation\Response HTTP response
      *
@@ -355,15 +612,47 @@ class wcagController extends AbstractController
      *     name="predict_index",
      * )
      */
-    public function predict(): Response
+    public function predict(Request $request, CommentRepository $commentRepository, ContentRepository $contentRepository, PaginatorInterface $paginator, $id): Response
     {
+        $pagination = $paginator->paginate(
+            $commentRepository->queryAll(),
+            $request->query->getInt('page', 1),
+            CommentRepository::PAGINATOR_ITEMS_PER_PAGE
+        );
+
+        $content = $contentRepository->find($id);
+
+        $user = $this->getUser();
+        $comment = new Comment();
+        $comment->setAuthor($user);
+        $comment->setContent($content);
+
+        $form = $this->createForm(CommentType::class, $comment);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $this->save($comment);
+
+            $this->addFlash('success', 'Utworzono Komentarz. Czekaj na zatwierdzenie przez administratora.');
+
+            return $this->redirectToRoute('predict_index', array('id' => $id));
+        }
+
         return $this->render(
             'WCAG/WCAG_success_criteria/3_2_predict.html.twig',
+            [
+                'pagination' => $pagination,
+                'form' => $form->createView(),
+            ]
         );
     }
 
     /**
      * 3.3 Pomoc przy wprowadzaniu informacji
+     *
+     * @param Request $request HTTP request
+     * @param CommentRepository $commentRepository Comment repository
+     * @param ContentRepository $contentRepository Content repository
      *
      * @return \Symfony\Component\HttpFoundation\Response HTTP response
      *
@@ -373,15 +662,47 @@ class wcagController extends AbstractController
      *     name="help_index",
      * )
      */
-    public function help(): Response
+    public function help(Request $request, CommentRepository $commentRepository, ContentRepository $contentRepository, PaginatorInterface $paginator, $id): Response
     {
+        $pagination = $paginator->paginate(
+            $commentRepository->queryAll(),
+            $request->query->getInt('page', 1),
+            CommentRepository::PAGINATOR_ITEMS_PER_PAGE
+        );
+
+        $content = $contentRepository->find($id);
+
+        $user = $this->getUser();
+        $comment = new Comment();
+        $comment->setAuthor($user);
+        $comment->setContent($content);
+
+        $form = $this->createForm(CommentType::class, $comment);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $this->save($comment);
+
+            $this->addFlash('success', 'Utworzono Komentarz. Czekaj na zatwierdzenie przez administratora.');
+
+            return $this->redirectToRoute('help_index', array('id' => $id));
+        }
+
         return $this->render(
             'WCAG/WCAG_success_criteria/3_3_help.html.twig',
+            [
+                'pagination' => $pagination,
+                'form' => $form->createView(),
+            ]
         );
     }
 
     /**
      * 4.1 Kompatybilność
+     *
+     * @param Request $request HTTP request
+     * @param CommentRepository $commentRepository Comment repository
+     * @param ContentRepository $contentRepository Content repository
      *
      * @return \Symfony\Component\HttpFoundation\Response HTTP response
      *
@@ -391,10 +712,38 @@ class wcagController extends AbstractController
      *     name="compatible_index",
      * )
      */
-    public function compatible(): Response
+    public function compatible(Request $request, CommentRepository $commentRepository, ContentRepository $contentRepository, PaginatorInterface $paginator, $id): Response
     {
+        $pagination = $paginator->paginate(
+            $commentRepository->queryAll(),
+            $request->query->getInt('page', 1),
+            CommentRepository::PAGINATOR_ITEMS_PER_PAGE
+        );
+
+        $content = $contentRepository->find($id);
+
+        $user = $this->getUser();
+        $comment = new Comment();
+        $comment->setAuthor($user);
+        $comment->setContent($content);
+
+        $form = $this->createForm(CommentType::class, $comment);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $this->save($comment);
+
+            $this->addFlash('success', 'Utworzono Komentarz. Czekaj na zatwierdzenie przez administratora.');
+
+            return $this->redirectToRoute('compatible_index', array('id' => $id));
+        }
+
         return $this->render(
             'WCAG/WCAG_success_criteria/4_1_compatible.html.twig',
+            [
+                'pagination' => $pagination,
+                'form' => $form->createView(),
+            ]
         );
     }
 

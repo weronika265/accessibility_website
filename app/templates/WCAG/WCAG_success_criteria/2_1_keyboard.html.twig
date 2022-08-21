@@ -101,7 +101,7 @@
             </section>
         </article>
         <article>
-            <h2>Komentarze</h2>
+            <h2 class="comment-header-spacing">Komentarze</h2>
             {% if pagination is defined and pagination.items|length %}
                 <div style="flex-wrap: wrap;">
                     {% for comment in pagination.items %}
@@ -126,7 +126,7 @@
 
             {% if is_granted('IS_AUTHENTICATED_FULLY') %}
                 {{ form_start(form) }}
-                <div>{{ form_label(form.message) }}</div>
+                <div class="comment-field-spacing">{{ form_label(form.message) }}</div>
                 <div>{{ form_widget(form.message, { 'attr': {'rows' : '6', 'cols' : '60'} } ) }}</div>
                 <div>
                     <input type="submit" value="{{ 'Dodaj komentarz' }}" class="submit-btn"/>

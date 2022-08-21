@@ -97,42 +97,47 @@
 
         const opinions = $('.opinions-enabled:hidden');
         const comments = $('.comments-enabled:hidden');
-
         $(document).ready(function() {
-            opinions_edit.addEventListener('click', function () {
-                opinions_edit.style.display = 'none';
-                opinions_close.style.display = 'block';
-                for(let i of opinions) {
-                    i.style.display = 'flex';
-                    i.style.alignItems = 'center';
-                    i.style.columnGap = '0.2em';
-                }
-            });
-            opinions_close.addEventListener('click', function () {
-                opinions_edit.style.display = 'block';
-                opinions_close.style.display = 'none';
-                for(let i of opinions) {
-                    i.style.display = 'none';
-                }
-            });
+            if(opinions.length) {
+                opinions_edit.addEventListener('click', function () {
+                    if (opinions) {
+                        opinions_edit.style.display = 'none';
+                        opinions_close.style.display = 'block';
+                        for (let i of opinions) {
+                            i.style.display = 'flex';
+                            i.style.alignItems = 'center';
+                            i.style.columnGap = '0.2em';
+                        }
+                    }
+                });
+                opinions_close.addEventListener('click', function () {
+                    opinions_edit.style.display = 'block';
+                    opinions_close.style.display = 'none';
+                    for (let i of opinions) {
+                        i.style.display = 'none';
+                    }
+                });
+            }
 
-            comments_edit.addEventListener('click', function () {
-                comments_edit.style.display = 'none';
-                comments_close.style.display = 'block';
-                for(let i of comments) {
-                    i.style.display = 'flex';
-                    i.style.alignItems = 'center';
-                    i.style.columnGap = '0.2em';
-                }
-            });
+            if(comments.length) {
+                comments_edit.addEventListener('click', function () {
+                    comments_edit.style.display = 'none';
+                    comments_close.style.display = 'block';
+                    for (let i of comments) {
+                        i.style.display = 'flex';
+                        i.style.alignItems = 'center';
+                        i.style.columnGap = '0.2em';
+                    }
+                });
 
-            comments_close.addEventListener('click', function () {
-                comments_edit.style.display = 'block';
-                comments_close.style.display = 'none';
-                for(let i of comments) {
-                    i.style.display = 'none';
-                }
-            });
+                comments_close.addEventListener('click', function () {
+                    comments_edit.style.display = 'block';
+                    comments_close.style.display = 'none';
+                    for (let i of comments) {
+                        i.style.display = 'none';
+                    }
+                });
+            }
         });
 
         // function confirmation_opinion() {

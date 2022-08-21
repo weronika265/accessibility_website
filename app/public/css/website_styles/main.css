@@ -161,13 +161,11 @@ input[type=checkbox] {
 }
 #a11y-options:hover {
     background-color: rgb(217, 217, 217);
+    cursor: pointer;
 }
 #a11y-options img {
     width: 50px;
     height: 50px;
-}
-#a11y-options:hover {
-    cursor: pointer;
 }
 #a11y-options-expanded {
     position: fixed;
@@ -243,6 +241,7 @@ button#contrast-std, button#space-std, button#font-std, .active-a11y  {
     padding: 1em;
     border-radius: 10px;
     border: 2px solid #545454;
+    z-index: 999;
 }
 
 
@@ -356,6 +355,9 @@ body.contrasty #a11y-options, body.contrasty #a11y-options-expanded {
 }
 body.contrasty .a11y-options-space, body.contrasty .a11y-options-space i {
     color: yellow;
+}
+body.contrasty #a11y-options:hover {
+    background-color: black;
 }
 
 /* --- Komunikaty contrast --- */

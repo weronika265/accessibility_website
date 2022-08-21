@@ -140,7 +140,7 @@ nav#desktop li {
         margin-right: 2em;
     }
     #user-actions ul #hamb {
-        z-index: 999;
+        z-index: 900;
         display: inline-block;
     }
     /*header {*/
