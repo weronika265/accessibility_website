@@ -12,6 +12,7 @@ use Faker\Generator;
 use InvalidArgumentException;
 use LogicException;
 
+
 /**
  * Class AbstractBaseFixtures.
  *

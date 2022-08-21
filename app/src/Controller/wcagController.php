@@ -104,12 +104,12 @@ class wcagController extends AbstractController
      * @return Response HTTP response
      *
      * @Route(
-     *     "/Postrzegalnosc/1_1",
+     *     "/Postrzegalnosc/1_1/{id}",
      *     methods={"GET", "POST"},
      *     name="alt-txt_index",
      * )
      */
-    public function altTxt(Request $request, CommentRepository $commentRepository, ContentRepository $contentRepository, PaginatorInterface $paginator): Response
+    public function altTxt(Request $request, CommentRepository $commentRepository, ContentRepository $contentRepository, PaginatorInterface $paginator, $id): Response
     {
 //        $comments = $commentRepository->queryAll();
 
@@ -122,9 +122,13 @@ class wcagController extends AbstractController
 //        $content = $this->contentRepository->findOneById(11);
 
 //        $content_id = $request->query->get('id');
+//        $content = $this->getDoctrine()->getRepository(Content::class)->find($content_id);
+        $content = $contentRepository->find($id);
+
         $user = $this->getUser();
         $comment = new Comment();
         $comment->setAuthor($user);
+        $comment->setContent($content);
 
 //        $comment->setContent($contentRepository->findOneById($content_id));
 
@@ -137,7 +141,7 @@ class wcagController extends AbstractController
 
             $this->addFlash('success', 'Utworzono Komentarz. Czekaj na zatwierdzenie przez administratora.');
 
-            return $this->redirectToRoute('alt-txt_index');
+            return $this->redirectToRoute('alt-txt_index', array('id' => $id));
         }
 
         return $this->render(
@@ -155,15 +159,44 @@ class wcagController extends AbstractController
      * @return \Symfony\Component\HttpFoundation\Response HTTP response
      *
      * @Route(
-     *     "/Postrzegalnosc/1_2",
-     *     methods={"GET"},
+     *     "/Postrzegalnosc/1_2/{id}",
+     *     methods={"GET", "POST"},
      *     name="multimedia_index",
      * )
      */
-    public function multimedia(): Response
+    public function multimedia(Request $request, CommentRepository $commentRepository, ContentRepository $contentRepository, PaginatorInterface $paginator, $id): Response
     {
+
+        $pagination = $paginator->paginate(
+            $commentRepository->queryAll(),
+            $request->query->getInt('page', 1),
+            CommentRepository::PAGINATOR_ITEMS_PER_PAGE
+        );
+
+        $content = $contentRepository->find($id);
+
+        $user = $this->getUser();
+        $comment = new Comment();
+        $comment->setAuthor($user);
+        $comment->setContent($content);
+
+        $form = $this->createForm(CommentType::class, $comment);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $this->save($comment);
+
+            $this->addFlash('success', 'Utworzono Komentarz. Czekaj na zatwierdzenie przez administratora.');
+
+            return $this->redirectToRoute('alt-txt_index', array('id' => $id));
+        }
+
         return $this->render(
             'WCAG/WCAG_success_criteria/1_2_multimedia.html.twig',
+            [
+                'pagination' => $pagination,
+                'form' => $form->createView(),
+            ]
         );
     }
 
@@ -173,8 +206,8 @@ class wcagController extends AbstractController
      * @return \Symfony\Component\HttpFoundation\Response HTTP response
      *
      * @Route(
-     *     "/Postrzegalnosc/1_3",
-     *     methods={"GET"},
+     *     "/Postrzegalnosc/1_3/{id}",
+     *     methods={"GET", "POST"},
      *     name="adapt_index",
      * )
      */
@@ -191,8 +224,8 @@ class wcagController extends AbstractController
      * @return \Symfony\Component\HttpFoundation\Response HTTP response
      *
      * @Route(
-     *     "/Postrzegalnosc/1_4",
-     *     methods={"GET"},
+     *     "/Postrzegalnosc/1_4/{id}",
+     *     methods={"GET", "POST"},
      *     name="distinguish_index",
      * )
      */
@@ -209,8 +242,8 @@ class wcagController extends AbstractController
      * @return \Symfony\Component\HttpFoundation\Response HTTP response
      *
      * @Route(
-     *     "/Funkcjonalnosc/2_1",
-     *     methods={"GET"},
+     *     "/Funkcjonalnosc/2_1/{id}",
+     *     methods={"GET", "POST"},
      *     name="keyboard_index",
      * )
      */
@@ -227,8 +260,8 @@ class wcagController extends AbstractController
      * @return \Symfony\Component\HttpFoundation\Response HTTP response
      *
      * @Route(
-     *     "/Funkcjonalnosc/2_2",
-     *     methods={"GET"},
+     *     "/Funkcjonalnosc/2_2/{id}",
+     *     methods={"GET", "POST"},
      *     name="time_index",
      * )
      */
@@ -245,8 +278,8 @@ class wcagController extends AbstractController
      * @return \Symfony\Component\HttpFoundation\Response HTTP response
      *
      * @Route(
-     *     "/Funkcjonalnosc/2_3",
-     *     methods={"GET"},
+     *     "/Funkcjonalnosc/2_3/{id}",
+     *     methods={"GET", "POST"},
      *     name="epilepsy_index",
      * )
      */
@@ -263,8 +296,8 @@ class wcagController extends AbstractController
      * @return \Symfony\Component\HttpFoundation\Response HTTP response
      *
      * @Route(
-     *     "/Funkcjonalnosc/2_4",
-     *     methods={"GET"},
+     *     "/Funkcjonalnosc/2_4/{id}",
+     *     methods={"GET", "POST"},
      *     name="nav_index",
      * )
      */
@@ -281,8 +314,8 @@ class wcagController extends AbstractController
      * @return \Symfony\Component\HttpFoundation\Response HTTP response
      *
      * @Route(
-     *     "/Funkcjonalnosc/2_5",
-     *     methods={"GET"},
+     *     "/Funkcjonalnosc/2_5/{id}",
+     *     methods={"GET", "POST"},
      *     name="inputs_index",
      * )
      */
@@ -299,8 +332,8 @@ class wcagController extends AbstractController
      * @return \Symfony\Component\HttpFoundation\Response HTTP response
      *
      * @Route(
-     *     "/Zrozumialosc/3_1",
-     *     methods={"GET"},
+     *     "/Zrozumialosc/3_1/{id}",
+     *     methods={"GET", "POST"},
      *     name="read_index",
      * )
      */
@@ -317,8 +350,8 @@ class wcagController extends AbstractController
      * @return \Symfony\Component\HttpFoundation\Response HTTP response
      *
      * @Route(
-     *     "/Zrozumialosc/3_2",
-     *     methods={"GET"},
+     *     "/Zrozumialosc/3_2/{id}",
+     *     methods={"GET", "POST"},
      *     name="predict_index",
      * )
      */
@@ -335,8 +368,8 @@ class wcagController extends AbstractController
      * @return \Symfony\Component\HttpFoundation\Response HTTP response
      *
      * @Route(
-     *     "/Zrozumialosc/3_3",
-     *     methods={"GET"},
+     *     "/Zrozumialosc/3_3/{id}",
+     *     methods={"GET", "POST"},
      *     name="help_index",
      * )
      */
@@ -353,8 +386,8 @@ class wcagController extends AbstractController
      * @return \Symfony\Component\HttpFoundation\Response HTTP response
      *
      * @Route(
-     *     "/Solidnosc/4_1",
-     *     methods={"GET"},
+     *     "/Solidnosc/4_1/{id}",
+     *     methods={"GET", "POST"},
      *     name="compatible_index",
      * )
      */

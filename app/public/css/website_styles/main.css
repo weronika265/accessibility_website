@@ -357,3 +357,8 @@ body.contrasty #a11y-options, body.contrasty #a11y-options-expanded {
 body.contrasty .a11y-options-space, body.contrasty .a11y-options-space i {
     color: yellow;
 }
+
+/* --- Komunikaty contrast --- */
+body.contrasty .alert {
+    background-color: black;
+}

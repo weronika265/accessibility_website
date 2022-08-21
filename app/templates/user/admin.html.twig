@@ -58,7 +58,7 @@
                     {% for comment in pagination_comments.items %}
                         {% if not comment.is_accepted %}
                             <section id="opinions" class="opinion">
-                                <span class="user-info">{{ comment.author.username }}, {{ comment.date|date('Y/m/d') }}</span>
+                                <span class="user-info">{{ comment.author.username }}, {{ comment.date|date('Y/m/d') }}. Miejsce: {{ comment.content.category }}</span>
                                 <div class="message-lined">
                                     <div class="message-style">
                                         {{ comment.message }}
