@@ -64,7 +64,7 @@ nav#desktop li {
     padding-top: 0.5em;
 }
 /* --- header (responsive) --- */
-/* TODO: spróbować zwiększyć max-width przez modyfikację odstępów i wielkości zdjęcia */
+/* spróbować zwiększyć max-width przez modyfikację odstępów i wielkości zdjęcia */
 @media screen and (max-width: 1107px) {
     #desktop{
         display: none;

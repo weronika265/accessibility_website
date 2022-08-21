@@ -121,11 +121,12 @@ class wcagController extends AbstractController
 
 //        $content = $this->contentRepository->findOneById(11);
 
+//        $content_id = $request->query->get('id');
         $user = $this->getUser();
         $comment = new Comment();
         $comment->setAuthor($user);
 
-//        $comment->setContent($content);
+//        $comment->setContent($contentRepository->findOneById($content_id));
 
 //        $comment->setContent($content_name); // w setContent musi byc obiekt Content (czyli w zmiennej $content_name)
         $form = $this->createForm(CommentType::class, $comment);
@@ -143,7 +144,7 @@ class wcagController extends AbstractController
             'WCAG/WCAG_success_criteria/1_1_alt-txt.html.twig',
             [
                 'pagination' => $pagination,
-                'form' => $form->createView()
+                'form' => $form->createView(),
             ]
         );
     }

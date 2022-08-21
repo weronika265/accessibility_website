@@ -319,6 +319,9 @@ body.contrasty .main-item {
 body.contrasty #wcag-list-content {
     background-color: #2a2a2a;
 }
+/*body.contrasty #perceivable, body.contrasty #operable, body.contrasty #understandable, body.contrasty #robust {*/
+/*    background-color: #a9a9a9;*/
+/*}*/
 body.contrasty #perceivable-items, body.contrasty #operable-items, body.contrasty #understandable-items, body.contrasty #robust-items {
     background-color: #1e1e1e;
 }
@@ -345,4 +348,12 @@ body.contrasty #arrow {
 }
 body.contrasty #scroll-txt {
     color: black;
+}
+
+/* --- a11y menu contrast --- */
+body.contrasty #a11y-options, body.contrasty #a11y-options-expanded {
+    background-color: #131313;
+}
+body.contrasty .a11y-options-space, body.contrasty .a11y-options-space i {
+    color: yellow;
 }
