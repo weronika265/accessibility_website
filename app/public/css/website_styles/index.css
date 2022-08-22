@@ -35,7 +35,7 @@
     border-radius: 20px;
     margin-top: 0.5em;
 }
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 430px) {
     .image {
         max-width: 100%;
     }

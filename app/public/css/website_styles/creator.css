@@ -85,12 +85,21 @@ p > input {
     display: block;
     max-width: 40%;
 }
+.img-smaller {
+    display: block;
+    max-width: 300px;
+}
 @media screen and (max-width: 887px) {
     .img-resp {
         max-width: 90%;
     }
     .img-resp-vert {
         max-width: 60%;
+    }
+}
+@media screen and (max-width: 440px) {
+    .img-smaller {
+        max-width: 80%;
     }
 }
 b.extra {
@@ -169,11 +178,16 @@ b.extra {
 #hover-esc {
     position: relative;
     display: inline-block;
+    background-color: lightgray;
+    color: black;
+    width: 8em;
+    padding: 1em;
+    margin-bottom: 1em;
 }
 #hover-esc #tooltip {
     position: absolute;
     visibility: hidden;
-    width: 5em;
+    width: 6em;
     padding: 1em;
     text-align: center;
     z-index: 1;
@@ -187,6 +201,14 @@ b.extra {
     visibility: visible;
     opacity: 1;
     color: black;
+}
+@media screen and (max-width: 480px) {
+    #hover-esc #tooltip {
+        display: none;
+    }
+    .txt-inside {
+        font-size: 2em;
+    }
 }
 #rect-anim {
     position: relative;
@@ -245,6 +267,21 @@ b.extra {
 }
 .tooltip:hover .tooltip-content {
     visibility: visible;
+}
+#wymowa audio {
+    max-width: 90%;
+}
+
+@media screen and (max-width: 340px) {
+    #smaller-h1-3_2 {
+        font-size: 2.3em;
+    }
+    #smaller-h1-3_2 + h2 {
+        font-size: 2em;
+    }
+    #smaller-h1-4_1 {
+        font-size: 2.5em;
+    }
 }
 /*ol > li::marker {*/
 /*    font-weight: bold;*/

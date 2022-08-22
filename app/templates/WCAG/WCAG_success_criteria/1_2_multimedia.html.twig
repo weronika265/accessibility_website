@@ -49,7 +49,7 @@
                                 Twoja przeglądarka nie wspiera elementów wideo.
                             </video>
                         </div>
-                        <div>
+                        <div id="wymowa">
                             <p>Audiodeskrypcja:</p>
                             <audio controls>
                                 <source src="{{ asset('img/1_2_1_video_trans.mp3') }}" type="audio/mpeg" />
@@ -60,7 +60,7 @@
                 <p>
                     <i class="fa fa-arrow-right list-arrow"></i><b>W przypadku nagrania tylko audio jest to alternatywa tekstowa.</b>
                 </p>
-                    <audio controls>
+                    <audio controls style="max-width: 90%;">
                         <source src="{{ asset('img/1_2_1_audio.mp3') }}" type="audio/mpeg" />
                         Twoja przeglądarka nie wspiera elementów audio.
                     </audio>

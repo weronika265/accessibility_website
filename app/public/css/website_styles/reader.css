@@ -107,6 +107,27 @@ p.WCAG-emph span {
         max-width: 450px;
     }
 }
+@media screen and (max-width: 480px) {
+    .img-reader-size {
+        max-width: 80%;
+    }
+    article#rodzaje h2 {
+        font-size: 2.1rem;
+    }
+    .content-rest {
+        max-width: 300px;
+    }
+}
+@media screen and (max-width: 480px) {
+/*    .header-center {
+        max-width: 280px;
+        margin: 0 auto 1em;
+    }
+    .content-rest {
+        max-width: 300px;
+    }*/
+}
+
 
 /* --- czytelnik kolory article/ section + kontrast --- */
 .reader-gray {

@@ -66,5 +66,11 @@ span#account-prompt {
 }
 
 @media screen and (max-width: 460px) {
-
+    #reg-log {
+        max-width: 90%;
+        box-shadow: none;
+    }
+    span.inline-form-text strong a {
+        font-size: 1em;
+    }
 }
