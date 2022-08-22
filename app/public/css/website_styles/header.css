@@ -19,7 +19,7 @@ input[type=submit] {
     background-color: #1e7dcc;
     padding: 1em 13em;
 }
-#user-actions ul #admin_panel, #user-actions ul #acc, #user-actions ul #register, #user-actions ul #hamb {
+#user-actions ul #admin_panel_desktop, #admin_panel_mobile, #user-actions ul #acc, #user-actions ul #register, #user-actions ul #hamb {
     background-color: transparent;
 }
 #user-actions li, nav li {
@@ -41,6 +41,9 @@ input[type=submit] {
     cursor: pointer;
 }
 button#close-hamb {
+    display: none;
+}
+#mobile ul #admin_panel_mobile {
     display: none;
 }
 nav#desktop {
@@ -131,12 +134,12 @@ nav#desktop li {
     nav#desktop, #user-actions ul #register, #user-actions ul #logout {
         display: none;
     }
-    #user-actions ul #login, #user-actions ul #admin_panel, #user-actions ul #acc, #user-actions ul #hamb {
+    #user-actions ul #login, #user-actions ul #admin_panel_desktop, #admin_panel_mobile, #user-actions ul #acc, #user-actions ul #hamb {
         background-color: transparent;
         padding: 0;
         /*box-shadow: transparent;*/
     }
-    #user-actions ul #login, #user-actions ul #admin_panel, #user-actions ul #acc {
+    #user-actions ul #login, #user-actions ul #admin_panel_desktop, #admin_panel_mobile, #user-actions ul #acc {
         margin-right: 2em;
     }
     #user-actions ul #hamb {
@@ -147,4 +150,14 @@ nav#desktop li {
     /*    top: 0;*/
     /*    position: sticky;*/
     /*}*/
+}
+
+@media screen and (max-width: 490px) {
+    #user-actions ul #admin_panel_desktop {
+        display: none;
+    }
+
+    #mobile ul #admin_panel_mobile {
+        display: block;
+    }
 }

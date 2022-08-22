@@ -33,6 +33,17 @@
 video {
     max-width: 400px;
 }
+@media screen and (max-width: 440px) {
+    video {
+        max-width: 85%;
+    }
+    pre, code {
+        max-width: 90vw;
+    }
+    input {
+        max-width: 80%;
+    }
+}
 pre {
     max-width: 450vw;
     margin-top: 0;
@@ -121,10 +132,22 @@ b.extra {
     font-size: 1rem;
     cursor: pointer;
 }
-.btn-example2 {
+.btn-example2, #btn-example2-1, #btn-example2-2 {
     font-size: 1rem;
     padding: 1em;
     cursor: pointer;
+}
+#btn-example2-1 {
+    background-color: #612776;
+    color: white;
+}
+#btn-example2-2 {
+    background-color: transparent;
+    color: #612776;
+    border: 3px solid #612776;
+}
+#btn-example2-1:hover, #btn-example2-2:hover {
+    background-color: black;
 }
 #elements-contrast-examples p {
     margin-bottom: 1.5em;

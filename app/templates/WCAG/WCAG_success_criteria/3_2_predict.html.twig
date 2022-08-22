@@ -49,7 +49,7 @@
             <section>
                 <h3 id="3_2_2">Kryterium sukcesu 3.2.2 Podczas wprowadzania danych – Poziom A</h3>
                 <p>
-                    Kiedy odbiorca wprowadza dane, powiązane elementy nie mogą powodować automatycznej zmiany kontekstu
+                    Podczas wprowadzania danych do elementów interfejsu użytkownika, które przyjmują dane, nie może dojść do automatycznej zmiany kontekstu
                     (np. zmiana fokusu, otwarcie nowej zawartości, okien).
                 </p>
                 <p class="list-glue">
@@ -91,13 +91,8 @@
                 </p>
                     <img src="{{ asset('img/3_2_3.jpg') }}" alt="Główna nawigacja serwisu." class="img-resp" />
                 <p class="list-glue">
-                    Spójny i powtarzający się układ nawigacji jest bardziej zrozumiały, łatwiejszy do odnalezienia i używania. Jest też bardzo pomocny dla osób, które:
+                    Spójny i powtarzający się układ nawigacji jest bardziej zrozumiały, łatwiejszy do odnalezienia i używania.
                 </p>
-                    <ul>
-                        <li>mają niepełnosprawności natury intelektualnej, poznawczej;</li>
-                        <li>słabo widzą;</li>
-                        <li>nie widzą wcale.</li>
-                    </ul>
             </section>
             <section>
                 <h3 id="3_2_4">Kryterium sukcesu 3.2.4 Spójna identyfikacja – Poziom AA</h3>
@@ -106,8 +101,8 @@
                 </p>
                     <ul>
                         <li>widoczna nazwa na stronie,</li>
-                        <li>etykieta elementu,</li>
-                        <li>tekst alternatywny.</li>
+                        <li><a href="{{ url('inputs_index', {id: 9}) }}#2_5_3"><u>etykieta elementu,</u></a></li>
+                        <li><a href="{{ url('alt-txt_index', {id: 1}) }}#1_1_1"><u>tekst alternatywny.</u></a></li>
                     </ul>
                 <p>
                     W ten sposób pozwolisz użytkownikowi szybko znaleźć elementy o tej samej funkcjonalności na różnych podstronach.
@@ -134,9 +129,9 @@
                     Na stronie nie mogą pojawić się działania niespodziewane, np.:
                 </p>
                     <ul>
-                        <li>automatyczne otwarcie nowego okna,</li>
-                        <li>niespodziewane pojawienie się okna z powiadomieniem,</li>
-                        <li>automatyczne wysłanie formularza po wypełnieniu wszystkich pól, bez zatwierdzenia przez użytkownika,</li>
+                        <li>automatyczne otwarcie nowego okna;</li>
+                        <li>niespodziewane pojawienie się okna z powiadomieniem;</li>
+                        <li>automatyczne wysłanie formularza po wypełnieniu wszystkich pól, bez wcześniejszego zatwierdzenia przez użytkownika;</li>
                         <li>automatyczne odświeżanie strony.</li>
                     </ul>
                 <p>

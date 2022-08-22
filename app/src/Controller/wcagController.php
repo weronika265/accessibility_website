@@ -131,7 +131,7 @@ class wcagController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $this->save($comment);
 
-            $this->addFlash('success', 'Utworzono Komentarz. Czekaj na zatwierdzenie przez administratora.');
+            $this->addFlash('success', 'Utworzono komentarz. Czekaj na zatwierdzenie przez administratora.');
 
             return $this->redirectToRoute('alt-txt_index', array('id' => $id));
         }
@@ -183,7 +183,7 @@ class wcagController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $this->save($comment);
 
-            $this->addFlash('success', 'Utworzono Komentarz. Czekaj na zatwierdzenie przez administratora.');
+            $this->addFlash('success', 'Utworzono komentarz. Czekaj na zatwierdzenie przez administratora.');
 
             return $this->redirectToRoute('multimedia_index', array('id' => $id));
         }
@@ -233,7 +233,7 @@ class wcagController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $this->save($comment);
 
-            $this->addFlash('success', 'Utworzono Komentarz. Czekaj na zatwierdzenie przez administratora.');
+            $this->addFlash('success', 'Utworzono komentarz. Czekaj na zatwierdzenie przez administratora.');
 
             return $this->redirectToRoute('adapt_index', array('id' => $id));
         }
@@ -283,7 +283,7 @@ class wcagController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $this->save($comment);
 
-            $this->addFlash('success', 'Utworzono Komentarz. Czekaj na zatwierdzenie przez administratora.');
+            $this->addFlash('success', 'Utworzono komentarz. Czekaj na zatwierdzenie przez administratora.');
 
             return $this->redirectToRoute('distinguish_index', array('id' => $id));
         }
@@ -333,7 +333,7 @@ class wcagController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $this->save($comment);
 
-            $this->addFlash('success', 'Utworzono Komentarz. Czekaj na zatwierdzenie przez administratora.');
+            $this->addFlash('success', 'Utworzono komentarz. Czekaj na zatwierdzenie przez administratora.');
 
             return $this->redirectToRoute('keyboard_index', array('id' => $id));
         }
@@ -383,7 +383,7 @@ class wcagController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $this->save($comment);
 
-            $this->addFlash('success', 'Utworzono Komentarz. Czekaj na zatwierdzenie przez administratora.');
+            $this->addFlash('success', 'Utworzono komentarz. Czekaj na zatwierdzenie przez administratora.');
 
             return $this->redirectToRoute('time_index', array('id' => $id));
         }
@@ -433,7 +433,7 @@ class wcagController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $this->save($comment);
 
-            $this->addFlash('success', 'Utworzono Komentarz. Czekaj na zatwierdzenie przez administratora.');
+            $this->addFlash('success', 'Utworzono komentarz. Czekaj na zatwierdzenie przez administratora.');
 
             return $this->redirectToRoute('epilepsy_index', array('id' => $id));
         }
@@ -483,7 +483,7 @@ class wcagController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $this->save($comment);
 
-            $this->addFlash('success', 'Utworzono Komentarz. Czekaj na zatwierdzenie przez administratora.');
+            $this->addFlash('success', 'Utworzono komentarz. Czekaj na zatwierdzenie przez administratora.');
 
             return $this->redirectToRoute('nav_index', array('id' => $id));
         }
@@ -533,7 +533,7 @@ class wcagController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $this->save($comment);
 
-            $this->addFlash('success', 'Utworzono Komentarz. Czekaj na zatwierdzenie przez administratora.');
+            $this->addFlash('success', 'Utworzono komentarz. Czekaj na zatwierdzenie przez administratora.');
 
             return $this->redirectToRoute('inputs_index', array('id' => $id));
         }
@@ -583,7 +583,7 @@ class wcagController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $this->save($comment);
 
-            $this->addFlash('success', 'Utworzono Komentarz. Czekaj na zatwierdzenie przez administratora.');
+            $this->addFlash('success', 'Utworzono komentarz. Czekaj na zatwierdzenie przez administratora.');
 
             return $this->redirectToRoute('read_index', array('id' => $id));
         }
@@ -633,7 +633,7 @@ class wcagController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $this->save($comment);
 
-            $this->addFlash('success', 'Utworzono Komentarz. Czekaj na zatwierdzenie przez administratora.');
+            $this->addFlash('success', 'Utworzono komentarz. Czekaj na zatwierdzenie przez administratora.');
 
             return $this->redirectToRoute('predict_index', array('id' => $id));
         }
@@ -683,7 +683,7 @@ class wcagController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $this->save($comment);
 
-            $this->addFlash('success', 'Utworzono Komentarz. Czekaj na zatwierdzenie przez administratora.');
+            $this->addFlash('success', 'Utworzono komentarz. Czekaj na zatwierdzenie przez administratora.');
 
             return $this->redirectToRoute('help_index', array('id' => $id));
         }
@@ -733,7 +733,7 @@ class wcagController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $this->save($comment);
 
-            $this->addFlash('success', 'Utworzono Komentarz. Czekaj na zatwierdzenie przez administratora.');
+            $this->addFlash('success', 'Utworzono komentarz. Czekaj na zatwierdzenie przez administratora.');
 
             return $this->redirectToRoute('compatible_index', array('id' => $id));
         }

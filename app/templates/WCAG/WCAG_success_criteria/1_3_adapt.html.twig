@@ -33,12 +33,12 @@
                 <h3 id="1_3_1">Kryterium sukcesu 1.3.1 Informacje i relacje – Poziom A</h3>
                 <p>
                     Struktura strony, jej zawartość i relacje pomiędzy elementami mają być przedstawione w formie tekstowej lub są
-                    <strong>określone programowo</strong>. Oznacza to, że mają być obsługiwane przez technologie asystujące. Zazwyczaj treści określone programowo są lepsze od tekstu.
+                    <strong>określone programowo</strong>. Oznacza to, że mają być odczytywane oraz wyświetlane przez programy użytkownika, w tym przeglądarki i technologie asystujące. Zazwyczaj treści określone programowo są lepsze od tekstu.
                 </p>
                 <p>
                     Ten sposób prezentacji pozwala zrozumieć treść zarówno w przypadku, kiedy ktoś widzi stronę, jak i jej nie widzi (osoby niewidome).<br/>
                     Przykładowo, część użytkowników ważne informacje będzie szukać po kolorze czerwonym.
-                    Inni będą kierowali się oznaczeniem „*” lub „Wymagane”.
+                    Inni będą kierowali się oznaczeniem „*” lub podkreśleniem słów.
                 </p>
                 <p>
                     Część osób będzie oglądać stronę, a inni będą rozumieli ją przez układ list, nagłówków, akapitów.
@@ -152,11 +152,11 @@
                 <p>
                     Część osób nie rozpoznaje kolorów lub używa technologii asystujących, które analizują strukturę strony i „czytają” ją użytkownikowi.
                     Taki odbiorca najczęściej nie widzi kształtu czy położenia elementu na stronie i nie będzie mógł go zlokalizować.
-                    Ogranicza to funkcjonalności dostępne dla użytkownika na stronie.
+                    Ogranicza to funkcjonalności dostępne dla użytkownika.
                 </p>
                 <p>
                     Kryterium nie dotyczy narzędzi fizycznych, takich jak klawiatura z klawiszami strzałek.
-                    Jeśli interakcja na stronie wiąże się z naciśnięciem konkretnego klawisza, treść strony powinna powiadomić o tym użytkownika.
+                    Jeśli interakcja na stronie wiąże się z naciśnięciem konkretnego klawisza, treść strony powinna powiadamiać o tym użytkownika.
                 </p>
                 <p>
                     Możesz stosować wyrażenia takie jak „poniżej” i „powyżej”, kiedy kolejność treści na stronie jest ustalona i odwołanie do niej jednoznaczne.
@@ -164,7 +164,7 @@
                 </p>
                 <p>
                     <b>ŹLE</b><br/>
-                    Aby przejść dalej, wciśnij okrągły przycisk w kolorze zielonym, który znajduje się po prawej
+                    Aby przejść dalej, wciśnij okrągły przycisk w kolorze zielonym, który znajduje się po prawej.
                     <button class="btn-example" style="margin-left: 0.5em;">Kliknij mnie</button>
                 </p>
                 <p>
@@ -193,15 +193,13 @@
                 <h3 id="1_3_5">Kryterium sukcesu 1.3.5 Określenie pożądanej wartości – Poziom AA</h3>
                 <p class="list-glue">
                     Pola formularzy i ich cel są odczytywane i przedstawiane przez technologie wspomagające, kiedy:
-{#                    Technologie wspomagające odczytują i przedstawiają pola formularzy i ich cel, kiedy:#}
                 </p>
                     <ul>
                         <li>
                             pole w formularzu służy celowi, który jest opisany w
                             <a target="_blank" href="https://www.w3.org/Translations/WCAG21-pl/#input-purposes"><u>Przeznaczenie pól danych w komponentach interfejsu użytkowników</u></a>
-                            w dokumencie WCAG 2.1,
+                            w dokumencie WCAG 2.1; oraz
                         </li>
-                        oraz
                         <li>użyta technologia pozwala na określenie typu pól w formularzach, czyli np. język znaczników HTML.</li>
                     </ul>
                 <p>
@@ -222,7 +220,7 @@
                 <p class="list-glue" style="margin-top: 2em;">
                     Aby jeszcze dokładniej określić cel pola, trzeba skorzystać z atrybutu 'autocomplete'. Atrybut ten pozwala na dookreślenie znaczenia pola,
                     np. imię: pierwsze, drugie lub użytkownika.<br/>
-                    Atrybut 'autocomplete' pozwala także wypełnić pola wcześniej zapamiętanymi danymi. Jest to dużym ułatwieniem, również dla osób, które:
+                    Atrybut 'autocomplete' pozwala także wypełnić pola konkretnymi, wcześniej zapamiętanymi danymi. Jest to dużym ułatwieniem, również dla osób, które:
                 </p>
                     <ul>
                         <li>mają problem z pamięcią,</li>
@@ -230,12 +228,12 @@
                     </ul>
                     <div>
                         <p>
-                            <label for="email1">Pole email z autouzupełnianiem:</label><br/>
-                            <input type="email" name="email" id="email1"><br/>
+                            <label for="familyName">Pole nazwiska (rodowego) z autouzupełnianiem:</label><br/>
+                            <input type="text" name="familyName" id="familyName" autocomplete="family-name"><br/>
                         </p>
                     </div>
                     <code>
-                        &lt;input type="email" name="email"&gt;
+                        &lt;input type="text" autocomplete="family-name"&gt;
                     </code>
                 <p style="margin-top: 2em;">
                     Technologie asystujące dla zdefiniowanych pól mogą wyświetlać ikony, które dla części użytkowników są lepiej zrozumiałe od tekstu.
@@ -255,7 +253,7 @@
                         <li>obszary kluczowe (regiony), takie jak &lt;header&gt;, &lt;footer&gt;, &lt;article&gt;.</li>
                     </ul>
                 <p>
-                    Dzięki temu technologie asystujące mogą przekazać informacje o przeznaczeniu elementów strony.
+                    Technologie asystujące będą wtedy mogły przekazać informacje o przeznaczeniu elementów strony.
                     Kiedy element jest opisany, użytkownik może zdecydować, w jaki sposób informacje będą przekazywane.
                     Istnieje wiele możliwości: modyfikacja w postaci dodania znajomego słownictwa, skrótów klawiszowych lub spersonalizowanych ikon.
                 </p>
@@ -265,14 +263,16 @@
                 </p>
                 <ul>
                     <li>
-                        Informacja, do czego służy link (odnośnik do logowania, strony głównej):
+                        Informacja, do czego służy link:
                         <p style="margin-top: 0;">
                             <a style="cursor: pointer;">Pobierz raport ludności w Polsce na rok 2020</a><br/>
                             <a style="cursor: pointer;">Wyświetl książkę online</a>
                         </p>
                     </li>
                     <li>
-                        Oznaczone obszary na stronie – użytkownik może je pomijać lub wyłączać:
+                        Oznaczenie obszarów na stronie – użytkownik może je pomijać lub wyłączać:
+                    </li>
+                </ul>
                         <pre>
                             <code>
 &lt;header&gt;&lt;/header&gt;
@@ -281,15 +281,14 @@
     &lt;article&gt;
         &lt;section>&lt;/section&gt;
         &lt;section>&lt;/section&gt;
+        &lt;section>&lt;/section&gt;
     &lt;/article&gt;
     &lt;aside&lt;/aside&gt;
 &lt;/main&gt;
 &lt;footer>&lt;/footer&gt;
                             </code>
                         </pre>
-                        <img src="{{ asset('img/html_struct.png') }}" alt="Oznaczenie obszarów na stronie, kolejno: header, nav, main z article podzielonym na 3 sections i aside, footer." class="img-resp-vert" />
-                    </li>
-                </ul>
+                        <img src="{{ asset('img/html_struct.png') }}" alt="" class="img-resp-vert" />
             </div>
         </article>
         <article>

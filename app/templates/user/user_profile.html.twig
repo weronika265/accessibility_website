@@ -15,7 +15,7 @@
                     {% for opinion in pagination.items %}
                         {% if not opinion.is_accepted %}
                             <section id="opinions" class="opinion" style="background-color: lightgray; margin-bottom: 1.2em;">
-                                <inline class="user-info">{{ opinion.author.username }}, {{ opinion.date|date('Y/m/d') }}</inline>
+                                <span class="user-info">{{ opinion.author.username }}, {{ opinion.date|date('Y/m/d') }}</span>
                                 <div class="message-style">
                                     {{ opinion.message }}
                                 </div>

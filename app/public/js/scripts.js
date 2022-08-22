@@ -1,4 +1,3 @@
-// FIX TO DRY :/
 /* -- a11y menu -- */
 const a11yButton = document.getElementById('a11y-options');
 const a11yButtonExpanded = document.getElementById('a11y-options-expanded');
@@ -18,7 +17,7 @@ function a11yMenu() {
         expanded = false;
     }
 }
-// dodac anulowanie przez Esc
+
 a11yButton.addEventListener('click', a11yMenu);
 a11yButton.addEventListener('keydown', function(e) {
     if (e.code === 'Space' || e.code === 'Enter') {
@@ -27,7 +26,8 @@ a11yButton.addEventListener('keydown', function(e) {
     }
 });
 
-/* -- a11y options contrast + doprogramowac klawiature do opcji -- */
+
+/* -- a11y options contrast -- */
 let theme = localStorage.getItem('theme') || 'standard';
 const stdContrast = document.getElementById('contrast-std');
 const highContrast = document.getElementById('contrast-high');
@@ -38,9 +38,7 @@ stdContrast.addEventListener('click', () => {
     document.querySelector('body').classList.remove('contrasty');
     contrastInfo.textContent = 'Normalny kontrast';
     stdContrast.style.backgroundColor = 'rgba(4, 116, 191, 0.3)'
-    // highContrast.classList.remove('active-a11y');
     highContrast.style.backgroundColor = 'transparent';
-    // stdContrast.classList.add('active-a11y');
     theme = 'standard'
     localStorage.setItem('theme', theme);
 });
@@ -48,10 +46,8 @@ stdContrast.addEventListener('click', () => {
 highContrast.addEventListener('click', () => {
     document.querySelector('body').classList.add('contrasty');
     contrastInfo.textContent = 'Wysoki kontrast';
-    highContrast.style.backgroundColor = 'rgba(4, 116, 191, 0.3)'
-    // stdContrast.classList.remove('active-a11y');
+    highContrast.style.backgroundColor = 'rgba(4, 116, 191, 0.3)';
     stdContrast.style.backgroundColor = 'transparent';
-    // highContrast.classList.add('active-a11y');
     theme = 'contrasty';
     localStorage.setItem('theme', theme);
 });
@@ -69,7 +65,8 @@ if (theme === 'standard') {
     contrastInfo.textContent = 'Normalny kontrast';
 }
 
-/* -- a11y options font size + doprogramowac klawiature do opcji + poprawic, zeby sie zapisywalo w sesji -- */
+
+/* -- a11y options font size -- */
 let fontSize = localStorage.getItem('fontSize') || 'standard';
 const stdFont = document.getElementById('font-std');
 const smallFont = document.getElementById('font-small');
@@ -128,13 +125,14 @@ $(document).ready(function() {
     }
 });
 
-/* -- a11y options font space + doprogramowac klawiature do opcji + zgodnie z WCAG 2.1 + poprawic, zeby sie zapisywalo w sesji -- */
+
+/* -- a11y options font space -- */
 const stdSpace = document.getElementById('space-std');
 const bigSpace = document.getElementById('space-big');
 const biggerSpace = document.getElementById('space-bigger');
 const html_tag = document.getElementsByTagName('html');
 const SpaceInfo = document.getElementById('space-info');
-// letter-spacing, line-height, word-spacing
+
 $(document).ready(function() {
     $(stdSpace).click(function() {
         $(html_tag).css('line-height', 'normal');

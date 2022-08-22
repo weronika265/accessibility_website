@@ -13,7 +13,7 @@
             <ul>
                 {% if is_granted('IS_AUTHENTICATED_FULLY') %}
                     {% if is_granted('ROLE_ADMIN') %}
-                        <li id="admin_panel" class="button-style"><a href="{{ url('admin_index') }}">Panel administratora</a></li>
+                        <li id="admin_panel_desktop" class="button-style"><a href="{{ url('admin_index') }}">Panel administratora</a></li>
 {#                    {% else %}#}
 {#                        <li id="acc" class="button-style"><a href="{{ url('user_index') }}">Moje konto</a></li>#}
                     {% endif %}
@@ -32,20 +32,23 @@
                 <li class="button-style"><a href="{{ url('czytelnik_index') }}">Strefa czytelnika</a></li>
                 <li class="button-style"><a href="{{ url('tworca_index') }}">Strefa twórcy</a></li>
                 <li class="button-style"><a href="{{ url('opinie_index') }}">Opinie</a></li>
-{#                <li class="button-style"><a href="{{ url('projekt_info_index') }}">Informacja o projekcie</a></li>#}
             </ul>
         </nav>
         <div id="myNav" class="overlay" aria-hidden="true">
             <button aria-label="Zamknij menu" id="close-hamb"><i class='fa fa-close'></i></button>
             <nav id="mobile">
                 <ul>
+                    {% if is_granted('ROLE_ADMIN') %}
+                        <li id="admin_panel_mobile" style="margin-bottom: 1em;"><a href="{{ url('admin_index') }}">Panel administratora</a></li>
+                        {#                    {% else %}#}
+                        {#                        <li id="acc" class="button-style"><a href="{{ url('user_index') }}">Moje konto</a></li>#}
+                    {% endif %}
                     <li><a href="{{ url('czytelnik_index') }}">Strefa czytelnika</a></li>
                     <li><a href="{{ url('tworca_index') }}">Strefa twórcy</a></li>
                     <li><a href="{{ url('opinie_index') }}">Opinie</a></li>
                     {% if is_granted('IS_AUTHENTICATED_FULLY') %}
                         <li style="margin-top: 1em;"><a href="{{ url('app_logout') }}">Wyloguj</a></li>
                     {% endif %}
-                    {#                <li class="button-style"><a href="{{ url('projekt_info_index') }}">Informacja o projekcie</a></li>#}
                 </ul>
             </nav>
         </div>
@@ -58,9 +61,10 @@
         const closeHamb = document.getElementById('close-hamb');
         const nav = document.getElementById("myNav");
 
+
         hamb.addEventListener('click', () => {
             hamb.ariaExpanded = 'true';
-            nav.style.width = "45%";
+            nav.style.width = "60%";
             nav.style.visibility = 'visible';
             nav.ariaExpanded = 'true';
             nav.ariaHidden = 'false';

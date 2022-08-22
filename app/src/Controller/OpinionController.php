@@ -95,7 +95,7 @@ class OpinionController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $this->opinionService->save($opinion);
 
-            $this->addFlash('success', 'Utworzono Opinię. Czekaj na zatwierdzenie przez administratora.');
+            $this->addFlash('success', 'Utworzono opinię. Czekaj na zatwierdzenie przez administratora.');
 
             return $this->redirectToRoute('opinie_index');
         }
