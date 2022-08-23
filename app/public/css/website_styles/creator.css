@@ -155,7 +155,7 @@ b.extra {
     color: #612776;
     border: 3px solid #612776;
 }
-#btn-example2-1:hover, #btn-example2-2:hover {
+#btn-example2-1:hover {
     background-color: black;
 }
 #elements-contrast-examples p {

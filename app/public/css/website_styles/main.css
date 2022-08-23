@@ -239,7 +239,17 @@ button#contrast-std, button#space-std, button#font-std, .active-a11y  {
         padding: 0;
     }
 }
-
+@media screen and (max-height: 955px) {
+    #a11y-options {
+        right: 0;
+        top: 170px;
+    }
+    #a11y-options-expanded {
+        right: 0;
+        top: 100px;
+    }
+}
+/* Przycisk o 70px wyżej */
 
 /* --- Komunikaty --- */
 .alert {
