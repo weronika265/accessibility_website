@@ -50,14 +50,14 @@ class CommentRepository extends ServiceEntityRepository
     {
         return $this->getOrCreateQueryBuilder()
 //                ->select('comment');
-            ->orderBy('comment.date', 'DESC');
+            ->orderBy('comment.date', 'ASC');
     }
 
     public function queryIf(): QueryBuilder
     {
         return $this->getOrCreateQueryBuilder()
 //                ->select('comment');
-            ->orderBy('comment.date', 'DESC');
+            ->orderBy('comment.date', 'ASC');
     }
 
     /**

@@ -87,7 +87,8 @@ $(document).ready(function() {
     });
 
     $(smallFont).click(function() {
-        $('html').css('font-size', '0.7em');
+        // $('html').css('font-size', '0.7em');
+        $('html').css('font-size', '0.85em');
         stdFont.style.backgroundColor = 'transparent';
         smallFont.style.backgroundColor = 'rgba(4, 116, 191, 0.3)';
         bigFont.style.backgroundColor = 'transparent';
@@ -97,7 +98,8 @@ $(document).ready(function() {
     });
 
     $(bigFont).click(function() {
-        $('html').css('font-size', '1.3em');
+        // $('html').css('font-size', '1.3em');
+        $('html').css('font-size', '1.2em');
         stdFont.style.backgroundColor = 'transparent';
         smallFont.style.backgroundColor = 'transparent';
         bigFont.style.backgroundColor = 'rgba(4, 116, 191, 0.3)';
@@ -114,13 +116,15 @@ $(document).ready(function() {
 
     if (fontSize === 'small') {
         $(smallFont).click(function() {
-            $('html').css('font-size', '0.7em');
+            $('html').css('font-size', '0.85em');
+            // $('html').css('font-size', '0.7em');
         });
     }
 
     if (fontSize === 'big') {
         $(bigFont).click(function() {
-            $('html').css('font-size', '1.3em');
+            $('html').css('font-size', '1.2em');
+            // $('html').css('font-size', '1.3em');
         });
     }
 });
@@ -145,9 +149,12 @@ $(document).ready(function() {
     });
 
     $(bigSpace).click(function() {
-        $(html_tag).css('line-height', '1.5em');
+/*        $(html_tag).css('line-height', '1.5em');
         $(html_tag).css('letter-spacing', '0.12em');
-        $(html_tag).css('word-spacing', '0.16em');
+        $(html_tag).css('word-spacing', '0.16em');*/
+        $(html_tag).css('line-height', '1.5em');
+        $(html_tag).css('letter-spacing', '0.10em');
+        $(html_tag).css('word-spacing', '0.10em');
         stdSpace.style.backgroundColor = 'transparent';
         bigSpace.style.backgroundColor = 'rgba(4, 116, 191, 0.3)';
         biggerSpace.style.backgroundColor = 'transparent';
@@ -155,9 +162,12 @@ $(document).ready(function() {
     });
 
     $(biggerSpace).click(function() {
-        $(html_tag).css('line-height', '2em');
+/*        $(html_tag).css('line-height', '2em');
         $(html_tag).css('letter-spacing', '0.24em');
-        $(html_tag).css('word-spacing', '0.32em');
+        $(html_tag).css('word-spacing', '0.32em');*/
+        $(html_tag).css('line-height', '1.8em');
+        $(html_tag).css('letter-spacing', '0.13em');
+        $(html_tag).css('word-spacing', '0.16em');
         stdSpace.style.backgroundColor = 'transparent';
         bigSpace.style.backgroundColor = 'transparent';
         biggerSpace.style.backgroundColor = 'rgba(4, 116, 191, 0.3)';
