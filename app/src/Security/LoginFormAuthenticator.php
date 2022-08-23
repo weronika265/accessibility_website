@@ -49,6 +49,20 @@ class LoginFormAuthenticator extends AbstractLoginFormAuthenticator
     }
 
     /**
+     * Does the authenticator support the given Request?
+     *
+     * If this returns false, the authenticator will be skipped.
+     *
+     * @param Request $request HTTP request
+     *
+     * @return bool Result
+     */
+    public function supports(Request $request): bool
+    {
+        return 'app_login' === $request->attributes->get('_route')
+            && $request->isMethod('POST');
+    }
+    /**
      * Create a passport for the current request.
      *
      * The passport contains the user, credentials and any additional information

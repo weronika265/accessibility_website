@@ -9,6 +9,11 @@ nav#sidebar {
     /*overflow-y: auto;*/
     /*background-color: rgb(105, 160, 209);*/
 }
+@media screen and (max-height: 955px) {
+    nav#sidebar {
+        top: 160px;
+    }
+}
 #sidebar-btn-mobile {
     display: none;
     position: fixed;

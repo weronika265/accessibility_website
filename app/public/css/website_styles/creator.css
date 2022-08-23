@@ -136,6 +136,10 @@ b.extra {
     margin: 0.5em 0;
     cursor: pointer;
 }
+/*.img-of-txt {
+    text-align: center;
+    font-weight: bold;
+}*/
 #txt-example, #zoom-txt-btn, #reset-btn, #line-height, #letter-space, #word-space, #reset-space {
     padding: 1em;
     font-size: 1rem;

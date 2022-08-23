@@ -7,10 +7,15 @@
 }
 @media screen and (max-width: 632px) {
     .bg-list-clear {
-        padding: 0.4em;
+        padding: 0.1em;
+        gap: 0.2em;
+        font-size: 1.2em;
     }
     .bg-list-clear a {
         font-size: 0.8em;
+    }
+    .list-clear-set {
+        gap: 0.2em;
     }
 }
 .list-clear-set {

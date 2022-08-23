@@ -25,6 +25,9 @@ input[type=submit] {
 #user-actions li, nav li {
     display: inline-block;
 }
+#login, #logout {
+    box-shadow: 2px 2px 10px #296fa8;
+}
 #login,
 #logout,
 #hamb,
@@ -145,6 +148,9 @@ nav#desktop li {
     #user-actions ul #hamb {
         z-index: 900;
         display: inline-block;
+    }
+    #login, #logout {
+        box-shadow: none;
     }
     /*header {*/
     /*    top: 0;*/

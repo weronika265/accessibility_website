@@ -18,11 +18,11 @@
 {#                        <li id="acc" class="button-style"><a href="{{ url('user_index') }}">Moje konto</a></li>#}
                     {% endif %}
 
-                    <li id="logout" class="button-style" style="box-shadow: 2px 2px 10px #296fa8;"><a href="{{ url('app_logout') }}">Wyloguj</a></li>
+                    <li id="logout" class="button-style"><a href="{{ url('app_logout') }}">Wyloguj</a></li>
                 {% else %}
                     <li id="register" class="button-style"><a href="{{ url('app_register') }}">Zarejestruj</a></li>
 
-                    <li id="login" class="button-style" style="box-shadow: 2px 2px 10px #296fa8;"><a href="{{ url('app_login') }}">Zaloguj</a></li>
+                    <li id="login" class="button-style"><a href="{{ url('app_login') }}">Zaloguj</a></li>
                 {% endif %}
                 <li><button aria-label="Otwórz menu" id="hamb" style="padding: 0.7em;" aria-expanded="false"><i class='fa fa-navicon'></i></button></li>
             </ul>
