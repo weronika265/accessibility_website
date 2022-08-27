@@ -64,7 +64,9 @@ span#account-prompt {
     float: right;
     margin-top: 1.2em;
 }
-
+#register-submit-btn {
+    margin-left: 3em;
+}
 @media screen and (max-width: 460px) {
     #reg-log {
         max-width: 90%;
@@ -72,5 +74,8 @@ span#account-prompt {
     }
     span.inline-form-text strong a {
         font-size: 1em;
+    }
+    #register-submit-btn {
+        margin-left: 1em;
     }
 }

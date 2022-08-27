@@ -264,6 +264,10 @@ Christopher wziął bagietkę ze stoiska i powiedział głośno: &lt;span lang="
                     <input type="submit" value="{{ 'Dodaj komentarz' }}" class="submit-btn"/>
                 </div>
                 {{ form_end(form) }}
+            {% else %}
+                <p>
+                    <a href="{{ url('app_login') }}">Zaloguj się</a>, aby dodać komentarz.
+                </p>
             {% endif %}
         </article>
     </main>

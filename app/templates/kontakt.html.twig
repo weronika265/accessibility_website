@@ -6,7 +6,7 @@
 
 {% block body %}
     {% include 'header.html.twig' %}
-    <main id="main" class="page reposition" style="row-gap: 1.5em;">
+    <main id="main" class="page reposition-oth" style="row-gap: 0.5em;">
             <h1 class="h1-reformat">Opinie o serwisie</h1>
             {% if pagination is defined and pagination.items|length %}
                 <div>
@@ -38,6 +38,10 @@
                         <input type="submit" value="{{ 'Dodaj opinię' }}" class="submit-btn" />
                     </div>
                 {{ form_end(form) }}
+            {% else %}
+                <p>
+                    <a href="{{ url('app_login') }}">Zaloguj się</a>, aby dodać opinię.
+                </p>
             {% endif %}
     </main>
     {% include 'footer.html.twig' %}

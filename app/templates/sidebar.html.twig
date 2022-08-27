@@ -4,10 +4,10 @@
     <nav aria-label="Creator sidebar" id="sidebar">
         <ul>
             <li id="wcag-list">
-                <div class="main-item" tabindex="0">Wytyczne WCAG 2.1</div>
+                <div class="main-item" tabindex="0"><a href="{{ url('tworca_index') }}">Wytyczne WCAG 2.1</a></div>
                 <ul id="wcag-list-content">
                     <li>
-                        <button id="perceivable" aria-expanded="false">Postrzegalność</button>
+                        <button id="perceivable" aria-expanded="false">Postrzegalność<i class='fa fa-angle-down' style="margin-left: 0.5em;"></i></button>
                             <ul id="perceivable-items" style="padding-left: 0.2em;">
                                 <li><a href="{{ url('alt-txt_index', {id: 1}) }}">1.1 Alternatywa tekstowa</a></li>
                                 <li><a href="{{ url('multimedia_index', {id: 2}) }}">1.2 Multimedia</a></li>
@@ -16,7 +16,7 @@
                             </ul>
                     </li>
                     <li>
-                        <button id="operable" aria-expanded="false">Funkcjonalność</button>
+                        <button id="operable" aria-expanded="false">Funkcjonalność<i class='fa fa-angle-down' style="margin-left: 0.5em;"></i></button>
                             <ul id="operable-items" style="padding-left: 0.2em;">
                                 <li><a href="{{ url('keyboard_index', {id: 5}) }}">2.1 Dostępność <br/>z klawiatury</a></li>
                                 <li><a href="{{ url('time_index', {id: 6}) }}">2.2 Wystarczający czas</a></li>
@@ -26,7 +26,7 @@
                             </ul>
                     </li>
                     <li>
-                        <button id="understandable" aria-expanded="false">Zrozumiałość</button>
+                        <button id="understandable" aria-expanded="false">Zrozumiałość<i class='fa fa-angle-down' style="margin-left: 0.5em;"></i></button>
                             <ul id="understandable-items" style="padding-left: 0.2em;">
                                 <li><a href="{{ url('read_index', {id: 10}) }}">3.1 Możliwość odczytania</a></li>
                                 <li><a href="{{ url('predict_index', {id: 11}) }}">3.2 Przewidywalność</a></li>
@@ -34,7 +34,7 @@
                             </ul>
                     </li>
                     <li>
-                        <button id="robust" aria-expanded="false">Solidność</button>
+                        <button id="robust" aria-expanded="false">Solidność<i class='fa fa-angle-down' style="margin-left: 0.5em;"></i></button>
                             <ul id="robust-items" style="padding-left: 0.2em;">
                                 <li><a href="{{ url('compatible_index', {id: 13}) }}">4.1 Kompatybilność</a></li>
                             </ul>
@@ -63,12 +63,18 @@
             const understandableItems = document.getElementById('understandable-items');
             const robust = document.getElementById('robust');
             const robustItems = document.getElementById('robust-items');
+            const perceivableArrow = document.querySelector('#perceivable .fa-angle-down');
+            const operableArrow = document.querySelector('#operable .fa-angle-down');
+            const understandableArrow = document.querySelector('#understandable .fa-angle-down');
+            const robustArrow = document.querySelector('#robust .fa-angle-down');
 
             // let wcagItems = [perceivableItems, operableItems, understandableItems, robustItems];}
 
             let clicked_perceivable = false;
             perceivable.addEventListener('click', function() {
                 if(clicked_perceivable === false) {
+                    perceivableArrow.classList.remove('fa-angle-down');
+                    perceivableArrow.classList.add('fa-angle-up');
                     perceivable.ariaExpanded = 'true';
                     perceivable.style.backgroundColor = '#86a3bf';
                     perceivableItems.style.display = 'block';
@@ -89,6 +95,8 @@
                     understandable.style.backgroundColor = '#b9b9b9';
                     robust.style.backgroundColor = '#b9b9b9';*/
                 else {
+                    perceivableArrow.classList.add('fa-angle-down');
+                    perceivableArrow.classList.remove('fa-angle-up');
                     perceivable.ariaExpanded = 'false';
                     perceivable.style.backgroundColor = '#b9b9b9';
                     perceivableItems.style.display = 'none';
@@ -98,12 +106,16 @@
             let clicked_operable = false;
             operable.addEventListener('click', function() {
                 if(clicked_operable === false) {
+                    operableArrow.classList.remove('fa-angle-down');
+                    operableArrow.classList.add('fa-angle-up');
                     operable.ariaExpanded = 'true';
                     operable.style.backgroundColor = '#86a3bf';
                     operableItems.style.display = 'block';
                     clicked_operable = true;
                 }
                 else {
+                    operableArrow.classList.add('fa-angle-down');
+                    operableArrow.classList.remove('fa-angle-up');
                     operable.ariaExpanded = 'false';
                     operable.style.backgroundColor = '#b9b9b9';
                     operableItems.style.display = 'none';
@@ -113,12 +125,16 @@
             let clicked_understandable = false;
             understandable.addEventListener('click', function() {
                 if(clicked_understandable === false) {
+                    understandableArrow.classList.remove('fa-angle-down');
+                    understandableArrow.classList.add('fa-angle-up');
                     understandable.ariaExpanded = 'true';
                     understandable.style.backgroundColor = '#86a3bf';
                     understandableItems.style.display = 'block';
                     clicked_understandable = true;
                 }
                 else {
+                    understandableArrow.classList.add('fa-angle-down');
+                    understandableArrow.classList.remove('fa-angle-up');
                     understandable.ariaExpanded = 'false';
                     understandable.style.backgroundColor = '#b9b9b9';
                     understandableItems.style.display = 'none';
@@ -128,12 +144,16 @@
             let clicked_robust = false;
             robust.addEventListener('click', function() {
                 if(clicked_robust === false) {
+                    robustArrow.classList.remove('fa-angle-down');
+                    robustArrow.classList.add('fa-angle-up');
                     robust.ariaExpanded = 'true';
                     robust.style.backgroundColor = '#86a3bf';
                     robustItems.style.display = 'block';
                     clicked_robust = true;
                 }
                 else {
+                    robustArrow.classList.add('fa-angle-down');
+                    robustArrow.classList.remove('fa-angle-up');
                     robust.ariaExpanded = 'false';
                     robust.style.backgroundColor = '#b9b9b9';
                     robustItems.style.display = 'none';
