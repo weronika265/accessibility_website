@@ -18,6 +18,19 @@
         gap: 0.2em;
     }
 }
+@media screen and (max-height: 700px) {
+    .bg-list-clear {
+        padding: 0.1em;
+        gap: 0.2em;
+        font-size: 1em;
+    }
+    .bg-list-clear a {
+        font-size: 0.85em;
+    }
+    .list-clear-set {
+        gap: 0.2em;
+    }
+}
 .list-clear-set {
     display: flex;
     align-items: center;

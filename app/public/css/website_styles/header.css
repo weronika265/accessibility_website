@@ -73,7 +73,7 @@ nav#desktop li {
 }
 /* --- header (responsive) --- */
 /* spróbować zwiększyć max-width przez modyfikację odstępów i wielkości zdjęcia */
-@media screen and (max-width: 1107px) {
+@media screen and (max-width: 1050px) {
     #desktop{
         display: none;
     }

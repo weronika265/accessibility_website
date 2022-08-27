@@ -10,9 +10,19 @@ nav#sidebar {
     /*overflow-y: auto;*/
     /*background-color: rgb(105, 160, 209);*/
 }
-@media screen and (max-height: 945px) and (max-width: 1107px) {
+@media screen and (max-height: 945px) and (max-width: 1050px) {
     nav#sidebar {
         top: 215px;
+    }
+}
+@media screen and (max-height: 560px) {
+    nav#sidebar {
+        top: 75px;
+    }
+}
+@media screen and (max-height: 330px) {
+    nav#sidebar {
+        top: 0px;
     }
 }
 #sidebar-btn-mobile {
